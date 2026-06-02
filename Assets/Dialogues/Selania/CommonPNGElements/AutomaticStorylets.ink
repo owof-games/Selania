@@ -13,6 +13,33 @@
 
 *******************************************/
 {
+    //Apertura della discarica
+        - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump && openingPlacesPause <= 0:
+            -> open_the_dump
+
+    //Boccale dalla strega
+        - grimoire_thirdChar hasnt grimWitchThirdChar && ((grimoire_thirdChar has grimThirdCharMentor) or (grimoire_thirdChar has grimFirstThirdChar) or (thirdChar_firstCharRage == true)) && witch_thirdCharSummoned == false:
+        //Step uno: sposto Boccale al dump e tutti gli altri altrove
+                ~ move_entity(ThirdCharacter, Dump)
+            {
+                - entity_location(FifthCharacter) == Dump:
+                    ~ move_entity(FifthCharacter, Pond)
+            }
+            {
+                - entity_location(FirstCharacter) == Dump:
+                    ~ move_entity(FirstCharacter, Pond)
+            }
+            {
+                - entity_location(SecondCharacter) == Dump:
+                    ~ move_entity(SecondCharacter, Pond)
+            }
+        //Step due: la strega ci invita a raggiungerla.
+        {charTag(TheWitch, "{witch_state()}")}:             Chiediamo a {player_name} di raggiungerci al pozzo, abbiamo bisogno della sua intermediazione.
+
+        //Step tre: attivo il blocco per evitare che Boccale venga randomizzato fino a quando non gli abbiamo parlato, e che la frase sopra venga ripetuta di nuovo.
+            ~ witch_thirdCharSummoned = true
+
+
     //Invito allo stagno per aprire la cucina
     - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) != Pond && player_accessiblePlaces hasnt Kitchen && openingPlacesPause <= 0:
 
@@ -73,9 +100,6 @@
         - are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest && grimoire_thirdChar hasnt grimThirdOpenNest:
             -> open_the_nest
 
-    //Apertura della discarica
-        - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump && openingPlacesPause <= 0:
-            -> open_the_dump
 }
 
 /*******************************************
@@ -86,9 +110,12 @@
 
 {
 
-    //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con lei
+    //Tra PNG e la strega
         - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && grimoire_fifthChar hasnt grimMentorWitchOne:
             -> the_witch_and_the_mentor
+
+        - are_two_entities_together (ThirdCharacter, PG) && are_two_entities_together(TheWitch, PG) && grimoire_thirdChar hasnt grimWitchThirdChar:
+            -> the_witch_and_the_men
     
     //Tra PNG
         //Chiacchiere tra Riccio e Chitarra

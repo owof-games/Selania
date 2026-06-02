@@ -581,6 +581,21 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimThirdCharMentor 
         }
 
+        {   
+            //Il .forward è fondamentale o mi compare la situazione anche se non ho fatto la scelta
+            - the_witch_and_the_men.forward && grimoire_thirdChar hasnt grimWitchThirdChar:
+                ~ grimoire_thirdChar += grimWitchThirdChar
+                ~ grimoire_witch += grimWitchThirdChar
+        }
+        {   
+            //Il .end è sia se dono che no il mio corpo a Strega.
+            - the_witch_and_the_men.end && witch_thirdCharSummoned == true:
+                //In questo modo Boccale può riprendere a girellare
+                ~ witch_thirdCharSummoned = false
+                //E lo spostiamo al pond, dove potrebbe esserci almeno un'altra personaggia, così favoriamo la possibilità di una conversazione a due
+                ~ move_entity(ThirdCharacter, Pond)
+        }
+
         {
             - frog_and_third_char_chit_chat && grimoire_thirdChar hasnt grimThirdCharFranco:
                 ~ grimoire_thirdChar += grimThirdCharFranco

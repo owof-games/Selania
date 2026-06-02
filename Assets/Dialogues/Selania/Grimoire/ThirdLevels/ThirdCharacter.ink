@@ -67,6 +67,11 @@
     }
 
     {
+        - grimoire_thirdChar has grimWitchThirdChar:
+            ~ grimWitchThirdChar_text()     
+    }
+
+    {
         - grimoire_thirdChar has grimThirdOpenNest:
 
     }

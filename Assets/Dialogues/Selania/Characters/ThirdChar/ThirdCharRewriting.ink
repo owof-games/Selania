@@ -231,7 +231,12 @@
         - grimoire_thirdChar has grimThirdCharMentor:
         {charTag(PG, "neutral")}:                               Come ti ha detto {charNameFive} quando avete discusso: le cose che proviamo sono vere.
                                                                 E in qualche modo cercheranno di uscire, rischiando di fare e farci del male.
-        }                 
+        }
+        {
+        - grimoire_thirdChar has grimWitchThirdChar:
+        {charTag(PG, "neutral")}:                               E {witch_actualName} ti ha già detto che ci sono altre strade, altre possibilità.
+                                                                E che ognuna può portarti nella vita di qualcuno capace di apprezzarti per come sei.        
+        }                
 
             //Riduco di uno il livello di inchiostro nel caso in cui non fosse vuoto.
             {

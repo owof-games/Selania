@@ -69,8 +69,13 @@
     }
 
     {
-     - grimoire_fifthChar has grimMentorWitchOne:
+        - grimoire_fifthChar has grimMentorWitchOne:
             ~ grimMentorWitchOne_text()
+    }
+
+    {
+        - grimoire_witch has grimWitchThirdChar:
+            ~ grimWitchThirdChar_text()     
     }
 
     

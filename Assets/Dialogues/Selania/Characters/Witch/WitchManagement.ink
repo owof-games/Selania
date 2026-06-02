@@ -19,6 +19,9 @@
     LIST witch_possibleNames = (Luna), (Strega), (Radice), (Fiamma), (Parola)
     VAR witch_actualName = ()
 
+//Altre variabili
+    //Boccale "convocato" alla discarica per la queerizzazione
+    VAR witch_thirdCharSummoned = false
 
 
 

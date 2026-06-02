@@ -44,6 +44,8 @@
 
 
 
+
+
 === function grimSecondCharMentorOne_text()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -97,6 +99,17 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {charNameThree} ha provato a spiegare a Franco le regole di un gioco, il <i>fantacalcio</i>, ma Franco si è trovato un po' confuso dalle regole, soprattutto quelle che posso creare disagio alle altre persone, o precludere l'accesso alla pizza. Man mano la conversazione si è spostata sul tema della competizione, e {charNameThree} ha coinvolto anche {player_name}.
+
+
+=== function grimWitchThirdChar_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    Abbiamo chiesto in prestito il corpo di {player_name} per poter parlare con {charNameThree}. Abbiamo deciso di spiegare a {charNameThree} che nella situazione attuale potrebbe sentirsi bloccato, perché da una parte gli amici che ha chiedono a {charNameThree} di essere come loro o di rimanere solo, mentre dall'altra persone come {charNameOne} dicono a {charNameThree} che è un mostro e basta. Ma noi crediamo che ci siano altre strade, se {charNameThree} è capace di ascoltare la propria natura, e ognuna di queste strade può portare nuove persone vicine.
+
 
 
 

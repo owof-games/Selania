@@ -264,6 +264,10 @@
                             ~ thirdChar_LibraryInvite = false
                             ~ movements_randomizable_characters += ThirdCharacter 
                     }
+
+                //Invito della strega
+                - witch_thirdCharSummoned == true:
+                    ~ movements_randomizable_characters -= ThirdCharacter 
                     
                 - else:
                     ~ movements_randomizable_characters += ThirdCharacter   
