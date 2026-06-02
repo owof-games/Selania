@@ -793,6 +793,11 @@
 
         + \ {charTag(PG, "neutral")}:                                           Quindi per te {charNameThree} un gioco è un gioco solo se c'è competizione?
                 -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Lo dici come se fossi un idiota.
+                                                                                Ma.          
+                }        
         {charTag(ThirdCharacter, "neutral")}:                                   ESATTO!
         {charTag(ThirdCharacter, "jester")}:                                    Un punto per {player_name}!
         {charTag(ThirdCharacter, "neutral")}:                                   Che poi non è che è per forza contro gli altri.
@@ -804,7 +809,13 @@
 
         + \ {charTag(PG, "neutral")}:                                           Competizione sì, ma il Merlo si è comprato sostanzialmente la vittoria così.
                 -> glyph_choice_manager(false, earthC)->
-        {charTag(ThirdCharacter, "bored")}:                                     Ma non sono io a doverti dire che la vita è ingiusta, vero {player_name}?
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "neutral")}:                           E dai vecio!
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:                           Sapevo non avresti capito.                       
+                }         
+        {charTag(ThirdCharacter, "bored")}:                                     Non sono io a doverti dire che la vita è ingiusta, vero {player_name}?
         {charTag(Franco, "neutral")}:                                           Le regole sono ingiuste, non la vita.
                                                                                 E le onde.
                                                                                 Le onde sono ingiuste.
@@ -812,6 +823,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Si gioca per vincere!
                 -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Mi fai quasi sentire stupido.                 
+                }        
         {charTag(Franco, "party")}:                                             E per la pizza.
         {charTag(ThirdCharacter, "jester")}:                                    Franchì fa parte di un campionato tutto suo, {player_name}!
                 {
@@ -830,6 +845,12 @@
         
         + \ {charTag(PG, "neutral")}:                                           Sono più a mio agio con le situazioni in cui si collabora.
                 -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Nessun ragazzo avrebbe detto una cosa del genere!
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:                           Ma che risposta è, vecio?                     
+                }        
         {charTag(ThirdCharacter, "neutral")}:                                   Allora ti piacerebbe la parte amministrativa, immagino.
                                                                                 Nella lega nostra ci sono tre persone che si aiutano per tenere l'app aggiornata e i vari punteggi.
         {charTag(ThirdCharacter, "bored")}:                                     Ognuno si fa male come gli pare.
@@ -837,6 +858,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Credo che il punto di Franco sia: se le regole danneggiano chi ha meno potere, vanno rotte.
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "neutral")}:                           Rieccoci con tutte le tue cose queer.                    
+                }        
         {charTag(Franco, "party")}:                                             Craaa!
                                                                                 Come mi capisci tu non mi capisce nessuno, {player_name}!
                                                                                 A parte i miei mariti.
@@ -940,6 +965,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Come hanno reagito i tuoi amici quando gli hai detto che era finita con Donatella?
                 -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                            Il vecio e le domande serie.                      
+                }        
         {charTag(ThirdCharacter, "bored")}:                                     Non è che gliel'ho esattamente detto.
                                                                                 È una cosa che hanno sentito in giro.
         {charTag(ThirdCharacter, "neutral")}:                                   A parte il Poggi.
@@ -952,6 +981,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Anche con le migliori intenzioni, ogni esperienza è personale, e ogni consiglio è un giudizio.
                 -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Mi sembra più un ragionamento da ragazzo.                 
+                }        
         {charTag(ThirdCharacter, "neutral")}:                                   Grazie {player_name}, grazie.
                                                                                 Sono uno che si fa i cazzi suoi, {charNameFive}.
                                                                                 Per cui non poi pensare che sai davvero qualcosa di me.
@@ -961,6 +994,10 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Fare invece che parlare, come il Poggi che ha tirato su il gruppo di calcetto quando stavi male.
                 -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Mi sembra più un ragionamento da ragazzo.                    
+                }        
         {charTag(ThirdCharacter, "neutral")}:                                   Esatto, {player_name}!
                                                                                 {charNameFive}, io non voglio che pensi che i miei amici sono degli idioti.
                                                                                 Ci sono a modo loro.
@@ -970,6 +1007,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Se le persone care non ci dicono le cose scomode, su cosa si basa allora la fiducia che gli diamo?
                 -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "neutral")}:                           Si vede che sei una ragazza, madonna se si vede!                    
+                }        
         {charTag(ThirdCharacter, "neutral")}:                                   Perché ci sono, sono lì a distrarci e farci ridere quando le cose non vanno.
                                                                                 O tirano su la cornetta quando li chiami e vengono a farsi una birretta con te.
         {charTag(ThirdCharacter, "bored")}:                                     E poi la fiducia è una cosa esagerata.
@@ -977,6 +1018,11 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Se ci mostriamo vulnerabili, le relazioni ci accrescono. Altrimenti rimaniamo per sempre la solita cosa, mentre il mondo cambia.
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "neutral")}:                           Magari funziona per voi non binary questa cosa.
+                                                                                Ma poi, mi dico.
+                }        
         {charTag(ThirdCharacter, "bored")}:                                     In 'sto posto deve essere tutto un lavoro?
                                                                                 Anche l'amicizia?
         {charTag(ThirdCharacter, "neutral")}:                                   Sul campo di calcetto si impara a lavorare di squadra.
@@ -1117,6 +1163,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Facciamogli fare qualcosa di pratico, {charNameThree}, come spalare un po' di fango in qualche rifugio per animali.
                 -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Sei un maschiaccio te mi sa.               
+                }        
         {charTag(SecondCharacter, "neutral")}:                                  Aiutiamo gli animali?
                                                                                 Non mi piace il fango, ma per gli animali posso farlo.
         {charTag(ThirdCharacter, "jester")}:                                    Così mi hai fregato {player_name}!
@@ -1124,6 +1174,10 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Un po' di stadio e di vita vera non ti farebbero male, {charNameTwo}. Pensa alla passione del tifo!
                 -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Sei un maschiaccio te mi sa.               
+                } 
                 {
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "neutral")}:                           Vi stupirò, ma l'idea di andare a vedere una partita non mi dispiace.
@@ -1143,6 +1197,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           A me l'idea del prociorso emoziona tantissimo. C'è posto anche per me sulla luna, {charNameTwo}?
                 -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "neutral")}:                           Ragazze.             
+                }  
         {charTag(SecondCharacter, "energy")}:                                   Sìììì!
                                                                                 E poi di faccio conoscere il cammaleo, un cammello con due teste di leone sulla schiena.
         {charTag(SecondCharacter, "neutral")}:                                  Sembra spaventoso ma in realtà vuole solo giocare.
@@ -1152,6 +1210,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           Cos'è tutta questa urgenza di mettere {charNameTwo} in una scatoletta, {charNameThree}?
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "bored")}:                             Mi scusi se non sono ancora decostruito.            
+                } 
         {charTag(ThirdCharacter, "bored")}:                                     Non è una scatoletta.
                                                                                 Ma il mondo là fuori è complicato.
                                                                                 E se ci vuoi davvero bene a questo bimbetto non gli servono altre favole.
@@ -1301,7 +1363,10 @@
         
         + \ {charTag(PG, "neutral")}:                                           Più che bravo o non bravo ragazzo, cosa stai facendo per superare questa situazione?
                 -> glyph_choice_manager(false, fireC)->                         
-        {charTag(ThirdCharacter, "neutral")}:                                   Posso anche apprezzare un taglio pratico, ma.        
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Posso anche apprezzare un taglio pratico, anche se non sei un ragazzo, dai.            
+                }              
         {charTag(ThirdCharacter, "bored")}:                                     Ad ascoltare la zia il mio inconscio o la carta astrale o Vanna Marchi o che ne so io mi hanno portato qui per farti fare a te questo lavoro, {player_name}.
         {charTag(FirstCharacter, "annoyed")}:                                   Ma sì, scarichiamo sempre su qualcun altro la colpa del lavoro che non stiamo facendo.
         {charTag(ThirdCharacter, "bored")}:                                     Sentila.
@@ -1309,6 +1374,10 @@
 
         + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se il dolore che provi fosse solo tuo e non un problema universale, varrebbe meno?
                 -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "jester")}:                            Che domande pese, {player_name}!          
+                } 
         {charTag(ThirdCharacter, "bored")}:                                     Ma perché non dovrebbe valere la stessa cosa per {charNameOne} e il suo odio verso gli uomini?
                                                                                 Non è solo un suo dolore, una sua sfiga, invece di farne un problema personale?
         {charTag(FirstCharacter, "annoyed")}:                                   Ora tiro giù tutti i santi.
@@ -1318,6 +1387,10 @@
                 
         + (aether) \ {charTag(PG, "neutral")}:                                  Credo che il punto di {charNameOne} sia: magari non te ne rendi conto, ma ragioni come un misogino.
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                            Certo che per te è tutto politico, {player_name}!            
+                } 
         {charTag(ThirdCharacter, "bored")}:                                     Eccola la vostra parola preferita.
                                                                                 Quella che blocca tutte le conversazioni.
                                                                                 Quella che rende tutti gli uomini colpevoli.
