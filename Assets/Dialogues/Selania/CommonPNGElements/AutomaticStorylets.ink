@@ -96,11 +96,11 @@
             -> first_second_chit_chat
 
         //Chiacchiere tra Riccio e PNG3
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar && grimoire_thirdChar has grimThirdCharTwo:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar && grimoire_thirdChar has grimThirdCharOne:
             -> third_second_chit_chat        
 
         //Chiacchiere tra Chitarra e PNG3
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstThirdChar && grimoire_thirdChar has grimThirdCharFour:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstThirdChar && grimoire_thirdChar has grimThirdCharTwo:
             -> third_first_chit_chat 
 
     
@@ -126,7 +126,7 @@
             -> frog_and_mentor_chit_chat
         
         //Chiacchiera tra PNG3 e Mentore
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_thirdChar has grimFirstCharFour && grimoire_thirdChar hasnt grimThirdCharMentor:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_thirdChar has grimThirdCharTwo && grimoire_thirdChar hasnt grimThirdCharMentor:
             -> third_mentor_chit_chat
 
     //Con PNG e Franco

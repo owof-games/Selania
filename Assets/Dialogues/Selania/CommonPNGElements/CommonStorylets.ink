@@ -336,7 +336,7 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
 
-                                                                                Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
+        {charTag(FirstCharacter, "neutral")}:                                   Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
                                                                                 Quando incontrerò un uomo come {charNameThree}, mi prenderò del tempo per spiegargli perché il suo comportamento è pericoloso.
                                                                                 Una volta.
                                                                                 Se non mi ascolta.
@@ -344,8 +344,9 @@
                                                                                 Se dice: "Eh, ma voi".
                                                                                 A quel punto per me è finita, e fa parte dei nemici.
                                                                                 Bona.
-                                                                                M: Il mondo allora sarà pieno di nemici, {charNameOne}.
-                                                                                Ma saprò anche distinguere tra chi ha voglia davvero di cambiare, e chi no.
+        {charTag(Mentor, "sad")}:                                               Il mondo allora sarà pieno di nemici, {charNameOne}.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma saprò anche distinguere tra chi ha voglia davvero di cambiare, e chi no.
+
         -> first_char_closing_storylet ->
         -> mentor_closing_storylet ->
         ->->
@@ -809,7 +810,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
         {charTag(Mentor, "sad")}:                                               Oh povera stella!
-                                                                                Ma quindi ti ha lasciato all'altare?
+                                                                                Ma quindi Donatella ti ha lasciato all'altare?
         {charTag(ThirdCharacter, "melanchonic")}:                               Sì.
         {charTag(ThirdCharacter, "neutral")}:                                   Cioè, non proprio.
                                                                                 Quando stavamo ancora preparando il matrimonio.
@@ -1004,8 +1005,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-        {charTag(ThirdCharacter, "angry")}:                                     Dio quanto odio te e questo cazzo di posto!
-                                                                                Non ce la fai proprio a non farti i cazzi miei, vero?
+        {charTag(ThirdCharacter, "angry")}:                                     Dio, non ce la fai proprio a non farti i cazzi miei, vero?
                 {
                 - thirdChar_firstCharRage == true:                              
                 {charTag(ThirdCharacter, "angry")}:                             Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
@@ -1022,7 +1022,7 @@
         {charTag(ThirdCharacter, "angry")}:                                     Dimmi che non è vero.
         {charTag(FirstCharacter, "neutral")}:                                   Non è vero.
         {charTag(ThirdCharacter, "bored")}:                                     Dona ha letteralmente fatto così.
-        {charTag(FirstCharacter, "neutral")}:                                   Da quello che hai raccontato, Donatella ti ha lasciato perché aveva bisogno di capire chi fosse, non per andare con un altro tipo.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma mi hai detto che Donatella ti ha lasciato "per trovare sé stessa", non per andare con un altro tipo.
                                                                                 Non è la stessa cosa, punto.
         {charTag(ThirdCharacter, "neutral")}:                                   Per te.
                                                                                 Per me lo è stato.
