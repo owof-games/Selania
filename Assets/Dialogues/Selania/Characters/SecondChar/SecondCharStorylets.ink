@@ -337,12 +337,12 @@
                                                                 Non ci parlo mica molto con le ragazze, siete strane.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "jester")}:                Ma non è parlare quello che ci devi fare con loro, Ricciolino!
+            {charTag(ThirdCharacter, "jester")}:                Ma non è parlare quello che ci devi fare con loro, fratellino!
             }                                                     
             {
-                - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:               Disse quello che prima stava studiando le sue stesse caccole.
-                {charTag(SecondCharacter, "neutral")}:              Volevo capire se si possono usare come colla!
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "annoyed")}:               Disse quello che prima stava studiando le sue stesse caccole.
+            {charTag(SecondCharacter, "neutral")}:              Volevo capire se si possono usare come colla!
             }            	  
         {charTag(SecondCharacter, "energy")}:                   Devo ancora capire se sei strana anche tu, {player_name}.
         {charTag(SecondCharacter, "neutral")}:                  Anche mamma è strana.
@@ -381,7 +381,7 @@
             {charTag(FifthCharacter, "sad")}:                   Solo io sono abbastanza vecchia da ricordare come va a finire questa storia?
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
-                {charTag(ThirdCharacter, "jester")}:            Siamo in due, vecia!
+                {charTag(ThirdCharacter, "jester")}:            Siamo in due, zia!
                 } 
         }
             -> three_continue
@@ -689,7 +689,7 @@
                                                                 Che rabbia.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "angry")}:                 Tuo padre si merita una regolata, Ricciolino!
+            {charTag(ThirdCharacter, "angry")}:                 Tuo padre si merita una regolata, fratellino!
             }                                                     
         {charTag(SecondCharacter, "neutral")}:                  Ma nonna dice che succede.
                                                                 Che i grandi fanno cose cattive senza saperlo.
@@ -778,7 +778,7 @@
                                                                 Ora però lasciami solo.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "jester")}:                Tu sei davvero strano, Ricciolino.
+            {charTag(ThirdCharacter, "jester")}:                Tu sei davvero strano, fratellino.
                                                                 Simpatico, ma strano.
             } 
             -> second_char_closing_storylet ->
@@ -1376,7 +1376,7 @@
                                                                 L'ho picchiato perché mi andava.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "jester")}:                Così si fa, Ricciolino!
+            {charTag(ThirdCharacter, "jester")}:                Così si fa, fratellino!
                                                                 Ma non prendertela col vecchio {charNameThree}!
 
             }                                                    

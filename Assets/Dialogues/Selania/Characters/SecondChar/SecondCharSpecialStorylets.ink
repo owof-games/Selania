@@ -13,7 +13,7 @@
                                                                 Mi ha fatto male!
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
-                {charTag(ThirdCharacter, "neutral")}:           La vecia? Cosa può aver mai fatto?     
+                {charTag(ThirdCharacter, "neutral")}:           La zia? Cosa può aver mai fatto?     
                 }                                                 
         
         - else: 
@@ -223,7 +223,7 @@
     {charTag(SecondCharacter, "melanchonic")}:                  I grandi non vedono mai certi problemi.
         {
         - are_two_entities_together(ThirdCharacter, PG):
-        {charTag(ThirdCharacter, "neutral")}:                   Ma perché c'abbiamo già i nostri casini, Ricciolino.
+        {charTag(ThirdCharacter, "neutral")}:                   Ma perché c'abbiamo già i nostri casini, fratellino.
         }
     {charTag(SecondCharacter, "neutral")}:                      Mi sa che dopo mi leggo qualcosa di nuovo!
     

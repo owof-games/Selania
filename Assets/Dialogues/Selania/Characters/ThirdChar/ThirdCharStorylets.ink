@@ -135,7 +135,7 @@
         
         + \ {charTag(PG, "neutral")}:                           {charNameTwo} cerca di capire ogni cosa di questo posto.
                 -> glyph_choice_manager(false, airC)->
-        {charTag(ThirdCharacter, "jester")}:                    Ricciolino è una sagoma proprio.
+        {charTag(ThirdCharacter, "jester")}:                    Il fratellino è una sagoma proprio.
         {charTag(ThirdCharacter, "neutral")}:                   C'ha una fissa per gli animali che fa quasi paura.
                                                                 Ma se ho capito bene mentre lui impara le cose tu lo aiuti con i suoi casini.
                                                                 Che non è roba da poco.
@@ -516,12 +516,12 @@
         {charTag(ThirdCharacter, "bored")}:                     Con questa logica dovrei appendere il cazzo al chiodo, non trovi?   
                                                                 //Check parolacce da parte di Mentore
                                                                 ~ fifthChar_slurDetectorFunction()
-                        {
-                        - are_two_entities_together(SecondCharacter, PG):
-                        {charTag(SecondCharacter, "energy")}:   Lo si può staccare?
-                        {charTag(ThirdCharacter, "jester")}:    A volte non sarebbe male Ricciolino!
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:           Lo si può staccare?
+                {charTag(ThirdCharacter, "jester")}:            A volte non sarebbe male, fratellino!
                                                                 Ma no, è solo un modo di dire.                                                               
-                        }                                                  
+                }                                                  
 
         + \ {charTag(PG, "neutral")}:                           Se vuoi essere felice non dovrebbe importarti così tanto il giudizio degli altri.
                 -> glyph_choice_manager(false, earthC)->

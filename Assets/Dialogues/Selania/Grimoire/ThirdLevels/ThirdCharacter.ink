@@ -45,10 +45,6 @@
 
     
     //Storylets speciali
-    {
-        - grimoire_thirdChar has grimThirdCharNovel:
-
-    }
 
     {
         - grimoire_thirdChar has grimThirdCharMentor:
@@ -58,7 +54,16 @@
     {
         - grimoire_thirdChar has grimThirdCharFranco:
             ~ grimThirdCharFranco_text()
+    }
 
+    {
+        - grimoire_thirdChar has grimSecondThirdChar:
+            ~ grimSecondThirdChar_text()
+    }
+
+    {
+        - grimoire_thirdChar has grimFirstThirdChar:
+            ~ grimFirstThirdChar_text()
     }
 
     {
@@ -71,6 +76,13 @@
 
 
     }
+
+    {
+        - grimoire_thirdChar has grimThirdCharNovel:
+
+    }
+
+    
 
     //Storylets condivisi DA INSERIRE
 

@@ -518,7 +518,7 @@
     {charTag(FifthCharacter, "hurry")}:                         Non posso certo dire che le persone qui non si diano da fare, ed è una bella cosa.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "jester")}:                Sono o non sono il migliore, vecia?
+            {charTag(ThirdCharacter, "jester")}:                Sono o non sono il migliore, zia?
             {charTag(FifthCharacter, "hurry")}:                 Sicuramente sei il più sfacciato, {charNameThree}.
             }
     {charTag(FifthCharacter, "neutral")}:                       Ho dei sentimenti contrastanti verso quello che si può fare su quella spiaggia.

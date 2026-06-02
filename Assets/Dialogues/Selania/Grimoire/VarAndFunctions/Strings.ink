@@ -38,8 +38,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-
-
+    {charNameOne} e {charNameThree} hanno litigato pesantemente attorno a Donatella, l'ex di {charNameThree}. Hanno discusso di cos'è un problema sistemico e cose no, con parole che non riporteremo. A fine discussione, {charNameOne} ha detto a{charNameThree} che non serve trasformare un problema personale in un problema strutturale per ricevere dalle altre persone cura e supporto. Ma che {charNameThree} deve chiedere aiuto.
 
 
 

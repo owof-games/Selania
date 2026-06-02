@@ -104,7 +104,7 @@
     - 0:
     {charTag(FifthCharacter, "neutral")}:       {charNameThree}! 
                                                 Controlla il tuo linguaggio per favore, non sai chi potrebbe sentirti, o ripetere quello che hai detto.
-    {charTag(ThirdCharacter, "neutral")}:       Hai ragione vecia, scusa.                                            
+    {charTag(ThirdCharacter, "neutral")}:       Hai ragione zia, scusa.                                            
 
     - 1:
     {charTag(FifthCharacter, "sorry")}:         {charNameThree}! 

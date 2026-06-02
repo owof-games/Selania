@@ -17,7 +17,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(ThirdCharacter, "neutral")}:                   La vecia diceva che questo è il momento in cui dovrei fare una confessione strappalacrime e stracciamaroni in cui ti dico che la mia vita è terribile.
+        {charTag(ThirdCharacter, "neutral")}:                   La zia diceva che questo è il momento in cui dovrei fare una confessione strappalacrime e stracciamaroni in cui ti dico che la mia vita è terribile.
         {charTag(ThirdCharacter, "melanchonic")}:               E che non so come andare avanti senza i tuoi consigli.
         {charTag(ThirdCharacter, "jester")}:                    Ma non è così.
         {charTag(ThirdCharacter, "neutral")}:                   Forse qui ci dovevo venire dopo il Covid.
@@ -26,12 +26,12 @@
                                                                 La mia tipa.
                                                                 Il mio giro di amici.
         {charTag(ThirdCharacter, "jester")}:                    E anche qui mi sono trovato bene con tutti.
-        {charTag(ThirdCharacter, "neutral")}:                   La vecia mi adora.
+        {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
             {
             - are_two_entities_together(FifthCharacter, PG):
             {charTag(Mentor, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
             }   
-        {charTag(ThirdCharacter, "neutral")}:                   Per {secondChar_storyStatus == story_storyStarted: Ricciolino|{charNameTwo}} sono come un secondo fratello.
+        {charTag(ThirdCharacter, "neutral")}:                   Per {secondChar_storyStatus == story_storyStarted: fratellino|{charNameTwo}} sono come un secondo fratello.
             {
             - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "neutral")}:              Uh.                          
@@ -161,9 +161,14 @@
         {charTag(PG, "neutral")}:                               Sicuramente sei innamorato di Ava.
                                                                 Ma nel frattempo mi hai parlato di più di Donatella che non di lei.
         {
-            - third_char_main_storylets.six.earth:              Quando abbiamo parlato del Poggi, hai detto che se lei non ti avesse lasciato a quest'ora tu e lui stareste giocando assieme ai vostri figli.
+        - third_char_main_storylets.six.earth:              
+                                                                Quando abbiamo parlato del Poggi, hai detto che se lei non ti avesse lasciato a quest'ora tu e lui stareste giocando assieme ai vostri figli.
         }                                                        
                                                                 Sei ancora arrabbiato, forse ti manca, forse c'è qualcosa da chiarire, ma il rancore è vivo.
+        {
+        - grimoire_thirdChar has grimFirstThirdChar:
+                                                                Basta vedere la violenza che è esplosa nella conversazione con {charNameOne}.    
+        }                                                        
 
         {
         - third_char_main_storylets.two.aether:
@@ -295,7 +300,7 @@
                                                                 Che merda frustrata che sei.                                                
                 }                                                                                                                                                                              
         {charTag(ThirdCharacter, "neutral")}:                   Bene.
-                                                                Ho fatto quello che la vecia mi ha chiesto di fare, per cui ora me ne posso andare.
+                                                                Ho fatto quello che la zia mi ha chiesto di fare, per cui ora me ne posso andare.
                                                                 Fanculo te.
                                                                 Fanculo lei.
                                                                 Fanculo questo posto.

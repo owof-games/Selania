@@ -131,6 +131,10 @@
                 {
                 - grimoire_firstChar has grimFirstCharMentorAboutThirdChar: 
                                                                 E quando hai parlato con {charNameFive} di {charNameThree}, ti sei detta comunque disponibile a mettere un poco delle tue energie a disposizione anche nel cambiare uomini di cui non ti fidi.
+                }
+                {
+                - grimoire_thirdChar has grimFirstThirdChar:
+                                                                Pensa poi alla passione con cui hai fatto una partaccia a {charNameThree} per difendere la sua ex compagna, e per fargli vedere in che modo giudica tutte le donne.
                 }                                                
                 
             + \ {charTag(PG, "neutral")}:                       Forse perché la tua stabilità è altrove: è con Talco.

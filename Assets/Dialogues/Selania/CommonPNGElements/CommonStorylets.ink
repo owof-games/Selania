@@ -115,7 +115,7 @@
     {charTag(SecondCharacter, "angry")}:                                E poi le rifanno.
         {
         - are_two_entities_together(ThirdCharacter, PG):
-        {charTag(ThirdCharacter, "neutral")}:                           Ma guarda quanto è saggio questo Ricciolino.
+        {charTag(ThirdCharacter, "neutral")}:                           Ma guarda quanto è saggio il mio fratellino!
         }
     {charTag(FifthCharacter, "hurry")}:                                 Ma io ci credo davvero, {charNameTwo}!
                                                                         Non ti voglio più far del male.
@@ -377,7 +377,8 @@
         -
 
         {charTag(FirstCharacter, "neutral")}:                                   Forse posso arrivare a una quadra con questa cosa, {charNameFive}.
-                                                                                Quando incontrerò un uomo come {charNameThree}, mi prenderò del tempo per spiegargli perché il suo comportamento è pericoloso.
+                                                                                Quando incontrerò un uomo come {charNameThree}, ma che non sia {charNameThree} perché già non lo tollero più.
+                                                                                Quando incontrerò un uomo come lui, mi prenderò del tempo per spiegargli perché il suo comportamento è pericoloso.
                                                                                 Una volta.
                                                                                 Se non mi ascolta.
                                                                                 Se accampa scuse.
@@ -848,7 +849,7 @@
                 {
                 - are_two_entities_together(FifthCharacter, PG): 
                 {charTag(Mentor, "hurry")}:                                     Siamo d'accordo con te, {charNameThree}.
-                {charTag(ThirdCharacter, "jester")}:                            Per fortuna che ci sei tu, vecia, a capirmi!           
+                {charTag(ThirdCharacter, "jester")}:                            Per fortuna che ci sei tu, zia, a capirmi!           
                 }                                                                                                                                        
         -
         {charTag(ThirdCharacter, "neutral")}:                                   Franchì, riprendiamo!
@@ -916,7 +917,7 @@
                 {charTag(FirstCharacter, "annoyed")}:                           Serio?
                 }  
         {charTag(Mentor, "neutral")}:                                           {charNameThree}, respira un attimo.
-        {charTag(ThirdCharacter, "angry")}:                                     Non mi dire cosa fare, vecia!
+        {charTag(ThirdCharacter, "angry")}:                                     Non mi dire cosa fare, zia!
         {charTag(Mentor, "bored")}:                                             BASTA!
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -925,7 +926,7 @@
         {charTag(Mentor, "neutral")}:                                           Ti ho fatto questa domanda perché ho vissuto momenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
                                                                                 E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.
                                                                                 Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
-        {charTag(ThirdCharacter, "bored")}:                                     Questo vale per te, vecia.
+        {charTag(ThirdCharacter, "bored")}:                                     Questo vale per te, zia.
         {charTag(ThirdCharacter, "neutral")}:                                   Magari lo capisco anche il tuo punto di vista.
                                                                                 E mi spiace se mi sono incazzato.
                                                                                 Ma te lo dico a te e lo dico a {player_name}.
@@ -1164,7 +1165,10 @@
         {charTag(ThirdCharacter, "bored")}:                                     Nooo, i pesci piccoli nooo!
         {charTag(ThirdCharacter, "jester")}:                                    Scherzo fratellino!
         {charTag(ThirdCharacter, "neutral")}:                                   Affare fatto.
-                                                                                Liberiamoci alla svelta di questo posto, e ci organizziamo!                                                                                                                                                
+                                                                                Liberiamoci alla svelta di questo posto, e ci organizziamo!
+        {charTag(SecondCharacter, "neutral")}:                                  Ma perché mi chiami sempre <i>fratellino</i>?
+        {charTag(ThirdCharacter, "neutral")}:                                   Perché mi stai simpatico!
+                                                                                E poi così sono il tuo fratellone, no?                                                                                                                                                                                                                                                  
 
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
@@ -1184,21 +1188,31 @@
                 {charTag(ThirdCharacter, "angry")}:                             Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.
                 {charTag(FirstCharacter, "annoyed")}:                           <i>Le pulci sull'età.</i>
                                                                                 Ci sei uscito che era minorenne, te ne rendi conto!?!
+                                                                                E so che il tuo cervellino non ci può arrivare, ma.
                 }
-        {charTag(FirstCharacter, "annoyed")}:                                   E sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
+        {charTag(FirstCharacter, "annoyed")}:                                   Sono cazzi miei se vai in giro a dire stronzate che mi riguardano.
         {charTag(ThirdCharacter, "bored")}:                                     Ma cosa ti riguarda cosa, egocentrica del cazzo?
-                                                                                Stavo solo parlando con Ricciolino!
-        {charTag(FirstCharacter, "annoyed")}:                                   Sì, dicendogli sostanzialmente che tutte le donne sono delle, ah, non me lo far dire.
-        {charTag(ThirdCharacter, "neutral")}:                                   Non ho detto quello.
+                                                                                Stavo solo parlando con {charNameTwo}!
+        {charTag(FirstCharacter, "annoyed")}:                                   Sì, dicendogli che tutte le donne sono delle troie.
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "sad")}:                                       {charNameOne}!
+                        {
+                        - fifthChar_slurDetector > 0:
+                                                                                Almeno tu con queste parolacce no, per favore!        
+                        }    
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Non mettermi in bocca parole che non ho detto, {charNameOne}!
         {charTag(FirstCharacter, "annoyed")}:                                   Ah no?
                                                                                 E allora tutto quel discorso sulle ragazze che ti smollano appena ne trovano un più bono o ricco o famoso?
         {charTag(ThirdCharacter, "angry")}:                                     Dimmi che non è vero.
         {charTag(FirstCharacter, "neutral")}:                                   Non è vero.
         {charTag(ThirdCharacter, "bored")}:                                     Dona ha letteralmente fatto così.
         {charTag(FirstCharacter, "neutral")}:                                   Ma mi hai detto che Donatella ti ha lasciato "per trovare sé stessa", non per andare con un altro tipo.
-                                                                                Non è la stessa cosa, punto.
-        {charTag(ThirdCharacter, "neutral")}:                                   Per te.
-                                                                                Per me lo è stato.
+        {charTag(ThirdCharacter, "angry")}:                                     "Un altro tipo" è sempre un altro cazzo.
+                                                                                        //Check parolacce da parte di Mentore
+                                                                                        ~ fifthChar_slurDetectorFunction()
+        {charTag(FirstCharacter, "neutral")}:                                   E anche se non fosse così.
         {charTag(ThirdCharacter, "melanchonic")}:                               È sparita dopo una vita assieme.
         {charTag(ThirdCharacter, "angry")}:                                     Mi ha trattato come spazzatura!
         {charTag(FirstCharacter, "neutral")}:                                   E quindi?
@@ -1208,17 +1222,32 @@
         {charTag(FirstCharacter, "neutral")}:                                   Io non l'ho fatto.
                                                                                 Mia madre non l'ha fatto.
                                                                                 Tua madre?
-        {charTag(ThirdCharacter, "angry")}:                                     Lascia fuori mia madre da questa roba.
+        {charTag(ThirdCharacter, "angry")}:                                     Lascia fuori mia mamma da questa roba.
         {charTag(FirstCharacter, "neutral")}:                                   Ce l'hai portata te nel momento in cui hai detto "Tutte le donne sono troie", no?
         {charTag(ThirdCharacter, "neutral")}:                                   E allora anche la roba di <i>Tutti gli uomini sono stupratori</i> che dite sempre voi, no?
                                                                                 Tuo padre è uno stupratore?
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "sad")}:                                       Siamo arrivate a questo?
+                        ~ change_entity_place(FifthCharacter)
+                }
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "angry")}:                            Sembrate mamma e papà!
+                        ~ change_entity_place(SecondCharacter)
+                }
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                                   Questo è troppo anche per il povero Franco.
+                        ~ move_entity(Franco, Safekeeping)
+                }                                                                 
         {charTag(FirstCharacter, "neutral")}:                                   Che sappia, no.
         {charTag(ThirdCharacter, "neutral")}:                                   Vedi che...
         {charTag(FirstCharacter, "neutral")}:                                   Ma so anche che quando i suoi amici fanno battute di merda sulle donne, battute tipo "Tutte le donne sono troie", lui se ne sta zitto e non dice nulla.
                                                                                 E quindi magari mio padre non ha mai fatto male a una donna.
                                                                                 Ma ha lasciato che qualcuno pensasse che fosse normale definirle <i>troie</i>.
                                                                                 Che essere <i>troie</i> sia un problema.
-                                                                                Un problema che rende una donna non più una persona ma una cosa da comperare.
+                                                                                Un problema che rende una donna non più una persona ma una cosa da comprare.
                                                                                 Qualcosa da usare.
         {charTag(ThirdCharacter, "neutral")}:                                   Io non ho mai trattato Dona come qualcosa da comprare.
         {charTag(FirstCharacter, "neutral")}:                                   Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
@@ -1249,25 +1278,54 @@
 
         + \ {charTag(PG, "neutral")}:                                           Qual è la cosa che capisci meno della scelta di Donatella?
                 -> glyph_choice_manager(false, airC)->
-        {charTag(FirstCharacter, "annoyed")}:                                   Questa è la cosa più importante, {player_name}?        
+        {charTag(FirstCharacter, "annoyed")}:                                   Questa è la cosa più importante, {player_name}?
+                                                                                Seriamente?
+        {charTag(ThirdCharacter, "neutral")}:                                   A cosa ti serve trovare te stessa se c'hai accanto una persona che ti conosce da praticamente metà della tua vita?
+                                                                                Non c'ha senso questa cosa.
+                                                                                Io ero lì per lei, per aiutarla a capire, non serviva che se ne andasse in Spagna!
+        {charTag(FirstCharacter, "neutral")}:                                   Il fatto che tu non capisca il perché mi fa provare quasi pena per te.
+                                                                                E stima per lei che è stata capace di andarsene.                                                                        
 
-        + \ {charTag(PG, "neutral")}:                                           In tutto questo ragionamento, la cosa per te importante è quindi essere un bravo ragazzo.
+        + \ {charTag(PG, "neutral")}:                                           {charNameOne}, stai parlando di cose astratte a una persona che ancora sanguina.
                 -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Ma una volta che ti dico che sei un bravo ragazzo, cosa cambia?
-                -> glyph_choice_manager(false, fireC)->                         
+        {charTag(FirstCharacter, "neutral")}:                                   Io.
+        {charTag(ThirdCharacter, "neutral")}:                                   No, lo dico io <i>io</i>.
+                                                                                Magari tu c'hai pure ragione.
+                                                                                Ma è come se in questo momento fossi su una barca che continua a imbarcare acqua.
+                                                                                E tu invece di aiutarmi a svuotarla sei qui a dirmi: "Non dovevi partire".
+                                                                                O "Forse era meglio se prima ci mettevi del catrame per coprire i buchi".
+                                                                                Magari poi a riva ti do pure ragione.
+        {charTag(ThirdCharacter, "bored")}:                                     Forse.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma ora voglio solo togliere l'acqua dalla barca. 
+
         
+        + \ {charTag(PG, "neutral")}:                                           Più che bravo o non bravo ragazzo, cosa stai facendo per superare questa situazione?
+                -> glyph_choice_manager(false, fireC)->                         
+        {charTag(ThirdCharacter, "neutral")}:                                   Posso anche apprezzare un taglio pratico, ma.        
+        {charTag(ThirdCharacter, "bored")}:                                     Ad ascoltare la zia il mio inconscio o la carta astrale o Vanna Marchi o che ne so io mi hanno portato qui per farti fare a te questo lavoro, {player_name}.
+        {charTag(FirstCharacter, "annoyed")}:                                   Ma sì, scarichiamo sempre su qualcun altro la colpa del lavoro che non stiamo facendo.
+        {charTag(ThirdCharacter, "bored")}:                                     Sentila.
+                                                                                Quella che passa il tempo a rompermi i maroni.                                   
+
         + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se il dolore che provi fosse solo tuo e non un problema universale, varrebbe meno?
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "bored")}:                                     Ma perché non dovrebbe valere la stessa cosa per {charNameOne} e il suo odio verso gli uomini?
                                                                                 Non è solo un suo dolore, una sua sfiga, invece di farne un problema personale?
-        {charTag(FirstCharacter, "annoyed")}:                                   Porco il gatto!
+        {charTag(FirstCharacter, "annoyed")}:                                   Ora tiro giù tutti i santi.
                                                                                 Perché tutte le donne uccise, violentate o malmenate dai compagni non sono un <i>mio</i> dolore, ma un problema strutturale.
                                                                                 Lo sono i problemi sul lavoro, l'attacco ai diritti riproduttivi.
-                                                                                Non è difficile, santissimo il cielo!                                                                          
+                                                                                Non è difficile, ammasso di testosterone che non sei altro!                                                                        
                 
-        + (aether) \ {charTag(PG, "neutral")}:                                  Magari non te ne rendi conto {charNameThree}, ma stai ragionando da misogino.
+        + (aether) \ {charTag(PG, "neutral")}:                                  Credo che il punto di {charNameOne} sia: magari non te ne rendi conto, ma ragioni come un misogino.
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Eccola la vostra parola preferita.
+                                                                                Quella che blocca tutte le conversazioni.
+                                                                                Quella che rende tutti gli uomini colpevoli.
+        {charTag(FirstCharacter, "annoyed")}:                                   Non la blocca, la apre!
+                                                                                Perché se non ammetti di avere un problema, non farai nulla per cambiare la situazione!
+        {charTag(ThirdCharacter, "bored")}:                                     Non ho nessun problema, signorina SonoMeglioDiTuttiVoi.
+        {charTag(FirstCharacter, "annoyed")}:                                   Non di tutti voi, ma di sicuro di te.
+
         -
 
         {charTag(FirstCharacter, "neutral")}:                                   {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
@@ -1276,11 +1334,12 @@
                         - aether:
                                                                                 E qui mi accodo a {player_name}.
                 }
-                                                                                Non serve trasformare un problema personale in un problema strutturale per meritare cura e supporto.
+                                                                                Non serve trasformare un problema personale in un problema strutturale per ricevere dalle altre persone cura e supporto.
                                                                                 Hai tutto il diritto di chiederlo.
         {charTag(FirstCharacter, "bored")}:                                     Non da me perché sinceramente fatico a sopportarti.
         {charTag(FirstCharacter, "neutral")}:                                   Ma chiedi aiuto.
                                                                                 Ne hai bisogno.
+                                                                                
 
     -> first_char_closing_storylet ->
     -> third_char_closing_storylet ->
@@ -1315,7 +1374,7 @@
         {charTag(Carla, "happy")}:                                      Non ho forse recitato benissimo?
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
-                {charTag(ThirdCharacter, "jester")}:                    Ricciolino, ti sei fatto proprio fregare da una capra!
+                {charTag(ThirdCharacter, "jester")}:                    Fratellino, ti sei fatto proprio fregare da una capra!
                 {charTag(Carla, "bored")}:                              Le ricordo che sono io a sanzionarla quando romperà le regole di questo luogo.
                 {charTag(ThirdCharacter, "bored")}:                     Non ho rotto nessunissima regola!
                 {charTag(Carla, "bored")}:                              Non ancora.  

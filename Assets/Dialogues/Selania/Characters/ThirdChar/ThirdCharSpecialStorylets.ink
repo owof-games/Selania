@@ -34,7 +34,7 @@
                                                                     Ma.
                                                                     C'è qualcosa di rilassante in questo posto, sotto questa tenda, vero?
                                                                     Una volta da piccolo mio papà doveva venire a prendermi dopo un allenamento.
-                                                                    Avevo più o meno l'età di Ricciolino.
+                                                                    Avevo più o meno l'età di {charNameTwo}.
                                                                     Ma pioveva così forte che ci ha messo una vita.
                                                                     Così mi sono messo sotto agli spalti, fermo, ad ascoltare la tempesta.
     {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
