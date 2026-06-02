@@ -1012,22 +1012,55 @@
         {charTag(SecondCharacter, "neutral")}:                                  Non gli piace il calcio.
         {charTag(SecondCharacter, "energy")}:                                   Però è bravissimo coi videogiochi.
                                                                                 A te piacciono i videogiochi?
-        {charTag(ThirdCharacter, "jester")}:                                    Allora ti ci porto io quando usciamo da qui, che dici?
+        {charTag(SecondCharacter, "neutral")}:                                  Fratellino, il mondo non è nei videogiochi, è fuori!
+        {charTag(ThirdCharacter, "jester")}:                                    E poi ero una schiappa a FIFA 2000!                                                               
+        {charTag(ThirdCharacter, "jester")}:                                    Senti a me: allo stadio ti ci porto io quando usciamo da qui, che dici?
                                                                                 Ci spariamo il derby!
-                                                                                Ci portiamo anche il Franchì, così ci si fa una giornata tra ragazzi.
+                                                                                Immagina: tu, io e il Franchì a urlare contro i milanisti.
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(FirstCharacter, "neutral")}:                           Inizio a prepararmi l'ugola!
+                {charTag(Franco, "question")}:                                  Ma cos'è un milanista?
+                                                                                È qualcosa che si mangia?
+                {charTag(ThirdCharacter, "jester")}:                            Sì Franchì, ce li mangeremo tutti!                                                                
+                }                                                                
+        {charTag(ThirdCharacter, "jester")}:                                    E poi ci facciamo una scorpacciata di patatine fritte al ritorno, per festeggiare.
+                                                                                Perché vinciamo di sicuro!
+        {charTag(SecondCharacter, "neutral")}:                                  Ti piacciono le patatine?                                                                        
         {charTag(SecondCharacter, "neutral")}:                                  Mh mh.
-        {charTag(ThirdCharacter, "neutral")}:                                   Ma ce l'hai una fidanzatina, Ricciolino?
-        {charTag(ThirdCharacter, "jester")}:                                    Alla tua età ero un latin lover, sai?
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "neutral")}:                                   {charNameThree}, questo bambino è palesemente a disagio.
+                        {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {charTag(FirstCharacter, "annoyed")}:                   Ma il nostro grande uomo non sembra rendersene conto.
+                        }
+                - else:
+                        {
+                        - are_two_entities_together(FirstCharacter, PG):
+                        {charTag(FirstCharacter, "annoyed")}:                   {charNameThree}: non ci vuole un genio per capire che {charNameTwo} è a disagio in questa conversazione.
+                        }                                                                        
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Allora conosco un posto perfetto, con trenta salse tra cui scegliere!
+                                                                                C'è anche un laghetto per la pesca, ti ci porto assieme al Franchì.
+                                                                                Sempre che non ci spaventa tutti i pesci.
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(FirstCharacter, "neutral")}:                           È mio sacro dovere proteggerli tutti dai pescatori!
+                                                                                E da zio Gracco.
+                }                                                                  
+         {charTag(ThirdCharacter, "neutral")}:                                   Sai pescare, fratellino?
         {charTag(SecondCharacter, "neutral")}:                                  No.
-        {charTag(ThirdCharacter, "jester")}:                                    Le ragazza fanno sempre le preziose, vero?
-        {charTag(SecondCharacter, "neutral")}:                                  No, è che a me mi piacciono di più gli animali.
-        {charTag(ThirdCharacter, "neutral")}:                                   Quali? Gli orsi? I lupi? I leoni?
+        {charTag(ThirdCharacter, "jester")}:                                    Sei proprio un ragazzo di città.
+        {charTag(SecondCharacter, "neutral")}:                                  Io sto in periferia, non in città.
+                                                                                E poi a me piacciono gli animali, non voglio fargli del male.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quali animali? Gli orsi? I lupi? I leoni?
         {charTag(SecondCharacter, "neutral")}:                                  No, preferisco quelli strani, come l'ornitorinco o l'aye-aye o l'uacari.
         {charTag(ThirdCharacter, "neutral")}:                                   Uacari?
         {charTag(SecondCharacter, "energy")}:                                   Ha la faccia tutta rossa.
                                                                                 Sembra sempre arrabbiato anche quando è tranquillo.
                                                                                 Un po' come te.
-        {charTag(ThirdCharacter, "jester")}:                                    Ehi, io non sono arrabbiato!                                                                       
+        {charTag(ThirdCharacter, "jester")}:                                    Ehi, io non sono arrabbiato!                                                                 
         {charTag(SecondCharacter, "energy")}:                                   Però il mio preferito l'ho inventato io, ed è il prociorso.
                                                                                 Ti protegge da un sacco di cose.
                                                                                 Sa camminare sulla luna.
@@ -1039,10 +1072,10 @@
                 }  
 
         {charTag(SecondCharacter, "emotional")}:                                Dormire col prociorso è bellissimo.
-        {charTag(ThirdCharacter, "neutral")}:                                   Uh, immagino.
-                                                                                Ma non sei un po' grande per queste fantasie?
+        {charTag(ThirdCharacter, "neutral")}:                                   Fratellino, ma non sei un po' grande per queste fantasie?
+                                                                                Non è il momento di diventare un ometto?
         {charTag(SecondCharacter, "neutral")}:                                  Uh.
-                                                                                {player_name}!
+        {charTag(ThirdCharacter, "neutral")}:                                   {player_name}!
                                                                         
 
                 {//Blocco per reazioni e commenti legati al genere.
@@ -1058,6 +1091,7 @@
                 }
                                                                         
         {charTag(ThirdCharacter, "neutral")}:                                   Dimmi: come aiutiamo questo giovanotto a diventare un uomo?
+                
                 {
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:                           Ma sei un meme?
@@ -1065,24 +1099,73 @@
                 }
         
         
-        + \ {charTag(PG, "neutral")}:                                           Con l'immaginazione che ha per me è già sulla giusta strada, no?
+        + \ {charTag(PG, "neutral")}:                                           Ma cos'è un uomo per te, {charNameThree}?
                 -> glyph_choice_manager(false, airC)->
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                           Hai preso la persona giusta per parlare di filosofia, proprio.
+                }          
+        {charTag(ThirdCharacter, "neutral")}:                                   Uno che sa tirarsi fuori dai suoi casini.
+                                                                                Che non ha paura di sporcarsi le mani.
+                                                                                Capace di sacrificarsi per il bene della propria famiglia.
+        {charTag(ThirdCharacter, "jester")}:                                    E tirare un pugno quando serve.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:                           Un paladino di D&D, non un essere umano.
+                }       
 
-        + \ {charTag(PG, "neutral")}:                                           Portandogli degli esempi solidi, modelli affidabili da cui partire.
+        + \ {charTag(PG, "neutral")}:                                           Facciamogli fare qualcosa di pratico, {charNameThree}, come spalare un po' di fango in qualche rifugio per animali.
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(SecondCharacter, "neutral")}:                                  Aiutiamo gli animali?
+                                                                                Non mi piace il fango, ma per gli animali posso farlo.
+        {charTag(ThirdCharacter, "jester")}:                                    Così mi hai fregato {player_name}!
+                                                                                Finisce che sgobbo anche il giorno libero!                                                                                
                 
-        + \ {charTag(PG, "neutral")}:                                           Non deve <i>diventare un uomo</i>, ma sé stesso.
+        + \ {charTag(PG, "neutral")}:                                           Un po' di stadio e di vita vera non ti farebbero male, {charNameTwo}. Pensa alla passione del tifo!
                 -> glyph_choice_manager(false, fireC)->
-        
-        + \ {charTag(PG, "neutral")}:                                           Non me ne avere, ma credo che partirei dal capire che è a disagio con questo discorso.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "neutral")}:                           Vi stupirò, ma l'idea di andare a vedere una partita non mi dispiace.
+                                                                                Quando ero piccola ci andavo con papà ogni tanto, non era male.
+                }  
+        {charTag(ThirdCharacter, "jester")}:                                    Mi spiace {charNameTwo}, ma siamo <>
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                                                                                in tre <>
+                - else:
+                                                                                in due <>                                                           
+                }
+                                                                                d'accordo sul piano!
+                                                                                Appena finisce questa roba ci si organizza per il derbiiii!
+        {charTag(SecondCharacter, "melanchonic")}:                              Posso darmi malato?                                                                        
+
+
+        + \ {charTag(PG, "neutral")}:                                           A me l'idea del prociorso emoziona tantissimo. C'è posto anche per me sulla luna, {charNameTwo}?
                 -> glyph_choice_manager(false, waterC)->
-        {charTag(SecondCharacter, "emotional")}:                                Già.
+        {charTag(SecondCharacter, "energy")}:                                   Sìììì!
+                                                                                E poi di faccio conoscere il cammaleo, un cammello con due teste di leone sulla schiena.
+        {charTag(SecondCharacter, "neutral")}:                                  Sembra spaventoso ma in realtà vuole solo giocare.
+        {charTag(SecondCharacter, "emotional")}:                                E se hai un laser lo inseguono lungo la casa in modo molto buffo.
+        {charTag(ThirdCharacter, "bored")}:                                     Pensavo di avere a che fare con un bambino, invece ne ho due.
+                                                                                Povero me.
 
-        + \ {charTag(PG, "neutral")}:                                           Perché non mi dici cos'è un uomo per te, {charNameThree}?
+        + \ {charTag(PG, "neutral")}:                                           Cos'è tutta questa urgenza di mettere {charNameTwo} in una scatoletta, {charNameThree}?
                 -> glyph_choice_manager(false, aetherC)->
-
+        {charTag(ThirdCharacter, "bored")}:                                     Non è una scatoletta.
+                                                                                Ma il mondo là fuori è complicato.
+                                                                                E se ci vuoi davvero bene a questo bimbetto non gli servono altre favole.
+        {charTag(ThirdCharacter, "neutral")}:                                   Gli serve capire come fare squadra, come stare con gli altri ragazzi.
+                                                                                Solo io mi rendo conto che questo ragazzino non sa stare con quelli della sua età?                                                                        
         -
-        
+        {charTag(SecondCharacter, "neutral")}:                                  Facciamo così.
+                                                                                Io vengo alla partita, se tu vieni con me all'acquario.
+        {charTag(SecondCharacter, "emotional")}:                                E ci facciamo spiegare dalle guida TUTTI i pesci.
+                                                                                Anche quelli piccolini che nessuno guarda mai.
+        {charTag(ThirdCharacter, "bored")}:                                     Nooo, i pesci piccoli nooo!
+        {charTag(ThirdCharacter, "jester")}:                                    Scherzo fratellino!
+        {charTag(ThirdCharacter, "neutral")}:                                   Affare fatto.
+                                                                                Liberiamoci alla svelta di questo posto, e ci organizziamo!                                                                                                                                                
+
     -> second_char_closing_storylet ->
     -> third_char_closing_storylet ->
     ->->

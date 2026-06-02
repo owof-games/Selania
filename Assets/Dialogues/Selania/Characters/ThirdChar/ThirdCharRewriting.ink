@@ -218,7 +218,7 @@
                                                                 Ma.
         }                                                        
                                                                 Hai perso il tuo principale confidente, il Poggi, e l'unica cosa che fai è aspettare, non tirare fuori il problema.
-                                                                Ma è evidente che ti manca.           
+                                                                Ma è evidente che ti manca.         
         -
 
                                                                 Davvero è una buona vita questa {charNameThree}?

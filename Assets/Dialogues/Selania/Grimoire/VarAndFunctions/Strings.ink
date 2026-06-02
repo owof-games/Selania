@@ -74,7 +74,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    
+    {charNameThree} ha deciso di coinvolgere {charNameTwo} nella sua passione per il calcio, invitando {charNameTwo} e Franco a vedere una partita tra la sua squadra preferita e il Milan. Durante la conversazione ha anche proposto di andare a pescare, cosa che ha agitato {charNameTwo}, perché non vuole fare del male a degli animali, e così {charNameTwo} ha spiegato a {charNameThree} cosa fa un prociorso, il suo animale preferito. {charNameThree} ha chiesto a {player_name} cosa dovrebbero fare per rendere {charNameTwo} "un uomo". Dopo la risposta di {player_name}, {charNameTwo} e {charNameThree} hanno trovato un accordo: {charNameTwo} andrà alla partita con {charNameThree}, mentre {charNameThree} andrà all'acquario con {charNameTwo}, e ascolteranno tutte le spiegazioni della guida sui pesci.  
 
 
 

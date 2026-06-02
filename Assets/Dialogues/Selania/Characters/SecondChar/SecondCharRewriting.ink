@@ -124,7 +124,7 @@
                                                             E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
         }
         {
-            - grimoire_secondChar has grimSecondCharKitchenOne:
+            - grimoire_secondChar has grimSecondCharKitchenOne or grimoire_secondChar has grimSecondThirdChar:
                                                             E poi hai il prociorso!
         } 
                 
@@ -305,6 +305,10 @@
             {
                 - grimoire_secondChar has grimSecondCharDog:
                                                             E ti sei esaltato quando hai incontrato il cane.
+            }
+            {
+            - grimoire_secondChar has grimSecondThirdChar:
+                                                            E hai raccontato a {charNameThree} del prociorso, e l'hai convinto a venire con te all'acquario.    
             }
             {
                 - grimoire_secondChar has grimSecondCharKitchenThree:
