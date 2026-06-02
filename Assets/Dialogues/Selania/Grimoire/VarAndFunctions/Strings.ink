@@ -87,6 +87,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
+    {charNameThree} e {charNameFive} si sono ritrovat3 a discutere di amicizia. Tutto è iniziato con {charNameThree} che ha raccontato a {charNameFive} di come Donatella, la sua ex, l'abbia lasciato poche settimane prima del matrimonio. A quel punto {charNameFive} ha chiesto a {charNameThree} se gli amici in qualche modo l'avevano messo in guardia, e {charNameThree} si è arrabbiato, chiedendo a {charNameFive} se i suoi amici devono fargli da babysitter. A quel punto ha iniziato a dire a {charNameFive} che qui "tutte si sentono ferite dal mondo, come se il mondo dovesse loro qualcosa", e {charNameFive} si è infuriata. Ha spiegato a {charNameThree} che gli ha fatto questa domanda perché a lei è successo che persone vicine le dicessero che un qualcosa le faceva male solo quando è stata capace di liberarsene da sola, e quella per lei non è amicizia. {charNameThree} ha chiesto scusa, ma ha anche detto a {charNameFive} che la sua idea dell'amicizia è passare il tempo assieme per distrarsi, non giudicarsi a vicenda. Dopo un commento di {player_name}, {charNameFive} ha detto a {charNameThree} che le cose che proviamo esistono, e se non le tiriamo fuori volontariamente troveranno un modo per uscire, spesso ferendo noi o gli altri.
+
 
 === function grimThirdCharFranco_text()
     ~ temp charNameOne = translator(firstChar_ActualName)

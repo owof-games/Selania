@@ -869,6 +869,15 @@
 
         {charTag(Mentor, "sad")}:                                               Oh povera stella!
                                                                                 Ma quindi Donatella ti ha lasciato all'altare?
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                        {
+                        - grimoire_firstChar has grimFirstThirdChar or grimFirstThirdChar has grimFirstCharMentorAboutThirdChar or thirdChar_firstCharRage == true:
+                        {charTag(FirstCharacter, "annoyed")}:                   Nope.
+                                                                                Basta con questa storia.
+                                ~ change_entity_place(FirstCharacter)     
+                        }
+                }                                                                
         {charTag(ThirdCharacter, "melanchonic")}:                               Sì.
         {charTag(ThirdCharacter, "neutral")}:                                   Cioè, non proprio.
                                                                                 Quando stavamo ancora preparando il matrimonio.
@@ -902,10 +911,18 @@
         {charTag(ThirdCharacter, "bored")}:                                     Fate come se il mondo vi dovesse qualcosa.
                                                                                 Beh: sveglia.
         {charTag(ThirdCharacter, "jester")}:                                    Non vi è dovuto nulla!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                           Serio?
+                }  
         {charTag(Mentor, "neutral")}:                                           {charNameThree}, respira un attimo.
         {charTag(ThirdCharacter, "angry")}:                                     Non mi dire cosa fare, vecia!
         {charTag(Mentor, "bored")}:                                             BASTA!
-        {charTag(Mentor, "neutral")}:                                           Ti ho fatto questa domanda perché ho vissuto omenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:                           Ma guarda un po' come perde la pazienza {charNameFive}!
+                }     
+        {charTag(Mentor, "neutral")}:                                           Ti ho fatto questa domanda perché ho vissuto momenti in cui le persone vicine mi hanno detto "Ma è ovvio che questa cosa ti stava facendo male" solo quando ho avuto il coraggio di venirne fuori da sola.
                                                                                 E volevo capire se i tuoi amici ci sono stati per te <i>prima</i> della fine della relazione con Dona, o solo quando la bomba è scoppiata.
                                                                                 Perché in quel caso ho imparato a mie spese che quella roba lì non è amicizia.
         {charTag(ThirdCharacter, "bored")}:                                     Questo vale per te, vecia.
@@ -914,23 +931,47 @@
                                                                                 Ma te lo dico a te e lo dico a {player_name}.
                                                                                 Io esco con le persone per distrarmi, non per pensare alle cose che non vanno.
                                                                                 E se uno mi viene a giudicare cose sulla mia vita senza che gliel'abbia chiesto, quello non è un mio amico.
-        {charTag(Mentor, "bored")}:                                             Punto.
-
+        {charTag(ThirdCharacter, "bored")}:                                     Punto.
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                                   E virgola!
+                }
 
         + \ {charTag(PG, "neutral")}:                                           Come hanno reagito i tuoi amici quando gli hai detto che era finita con Donatella?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Non è che gliel'ho esattamente detto.
+                                                                                È una cosa che hanno sentito in giro.
+        {charTag(ThirdCharacter, "neutral")}:                                   A parte il Poggi.
+                                                                                Che però c'è stato solo per dirmi due cose e bona.
+                                                                                Rocco mi ha stupito però.
+                                                                                Si è preso la sera libera dopo la partita e mi ha portato a ubriacarmi.
+        {charTag(ThirdCharacter, "jester")}:                                    Abbiamo parlato di Inter tutta la sera.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci voleva.
+
 
         + \ {charTag(PG, "neutral")}:                                           Anche con le migliori intenzioni, ogni esperienza è personale, e ogni consiglio è un giudizio.
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Grazie {player_name}, grazie.
+                                                                                Sono uno che si fa i cazzi suoi, {charNameFive}.
+                                                                                Per cui non poi pensare che sai davvero qualcosa di me.
+                                                                                E quindi quando uno apre bocca per darmi un consiglio sta solo dicendo una cosa su di lui, non su di me.
+        {charTag(ThirdCharacter, "bored")}:                                     E quella cosa se la può tenere per sé e bona.
+
                 
         + \ {charTag(PG, "neutral")}:                                           Fare invece che parlare, come il Poggi che ha tirato su il gruppo di calcetto quando stavi male.
                 -> glyph_choice_manager(false, fireC)->
-                                                                                Esatto, {player_name}!
+        {charTag(ThirdCharacter, "neutral")}:                                   Esatto, {player_name}!
+                                                                                {charNameFive}, io non voglio che pensi che i miei amici sono degli idioti.
+                                                                                Ci sono a modo loro.
+                                                                                Magari non il modo perfetto per te, ma per me lo è.
+        {charTag(Mentor, "neutral")}:                                           Non sono sicura di poterti credere fino in fondo, scusa.
+                                                                                Ma mi fiderò di te.                                                                        
 
         + \ {charTag(PG, "neutral")}:                                           Se le persone care non ci dicono le cose scomode, su cosa si basa allora la fiducia che gli diamo?
                 -> glyph_choice_manager(false, waterC)->
-        {charTag(ThirdCharacter, "neutral")}:                                   Sull'esserci.
-                                                                                E poi la fiducia è una cosa esagerata.
+        {charTag(ThirdCharacter, "neutral")}:                                   Perché ci sono, sono lì a distrarci e farci ridere quando le cose non vanno.
+                                                                                O tirano su la cornetta quando li chiami e vengono a farsi una birretta con te.
+        {charTag(ThirdCharacter, "bored")}:                                     E poi la fiducia è una cosa esagerata.
                                                                                 Niente e nessuno c'è per sempre, e alla fine ognuno pensa ai cazzi propri.
                 
         + \ {charTag(PG, "neutral")}:                                           Se ci mostriamo vulnerabili, le relazioni ci accrescono. Altrimenti rimaniamo per sempre la solita cosa, mentre il mondo cambia.
@@ -943,20 +984,11 @@
         {charTag(ThirdCharacter, "bored")}:                                     Si può crescere anche senza tirarsi i pipponi.
         -
 
-        {charTag(Mentor, "neutral")}:                                           Mi permetto però di dirti una cosa, {charNameFive}.
+        {charTag(Mentor, "neutral")}:                                           Mi permetto però di dirti una cosa, {charNameThree}.
                                                                                 Le cose che proviamo esistono, a prescindere che le comunichiamo o meno.
                                                                                 E se non le tiriamo fuori volontariamente, troveranno il loro modo di uscire.
         {charTag(Mentor, "sad")}:                                               Spesso facendo o facendoci del gran male.
-{
-        - are_two_entities_together(FirstCharacter, PG):
-        {
-        - grimoire_firstChar has grimFirstThirdChar:
-                {charTag(FirstCharacter, "annoyed")}:                           Commento infastidito di Chitarra.
 
-        - else:
-                {charTag(FirstCharacter, "neutral")}:                           Commento empatico di Chitarra.    
-        }
-}   
 
     -> mentor_closing_storylet ->
     -> third_char_closing_storylet ->

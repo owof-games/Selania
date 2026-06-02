@@ -51,6 +51,11 @@
     }
 
     {
+        - grimoire_thirdChar has grimThirdCharMentor:
+            ~ grimThirdCharMentor_text()
+    } 
+
+    {
         - grimoire_thirdChar has grimThirdCharFranco:
             ~ grimThirdCharFranco_text()
 

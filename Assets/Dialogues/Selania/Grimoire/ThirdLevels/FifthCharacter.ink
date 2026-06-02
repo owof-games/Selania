@@ -134,7 +134,7 @@
     }
 
     {
-        - grimoire_thirdChar has grimThirdCharMentor:
+        - grimoire_fifthChar has grimThirdCharMentor:
             ~ grimThirdCharMentor_text()
     } 
 

@@ -212,11 +212,21 @@
                                                                 Giova sembra solo uno stupido che si è sposato con una donna che non ama.
                                                                 Dario è nel gruppo solo perché esce con la cugina di Giova.
                                                                 E con Rocco, sembra che ci sia la possibilità di dirvi qualcosa di più, ma comunque non accade.
+        {
+        - grimoire_thirdChar has grimThirdCharMentor:
+        {charTag(PG, "neutral")}:                               Discutendo con {charNameFive} hai detto che cerchi un'amicizia del fare.
+                                                                Ma.
+        }                                                        
                                                                 Hai perso il tuo principale confidente, il Poggi, e l'unica cosa che fai è aspettare, non tirare fuori il problema.
                                                                 Ma è evidente che ti manca.           
         -
 
-                                                                Davvero è una buona vita questa {charNameThree}?                  
+                                                                Davvero è una buona vita questa {charNameThree}?
+        {
+        - grimoire_thirdChar has grimThirdCharMentor:
+        {charTag(PG, "neutral")}:                               Come ti ha detto {charNameFive} quando avete discusso: le cose che proviamo sono vere.
+                                                                E in qualche modo cercheranno di uscire, rischiando di fare e farci del male.
+        }                 
 
             //Riduco di uno il livello di inchiostro nel caso in cui non fosse vuoto.
             {
