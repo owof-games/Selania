@@ -143,6 +143,10 @@
         
         + \ {charTag(PG, "neutral")}:                           Per me ti sei arreso. L'unica cosa che ti appassiona è l'Inter.
             -> glyph_choice_manager(false, fireC)->
+        {
+        - grimoire_thirdChar has grimThirdCharFranco:
+        {charTag(PG, "neutral")}:                               E spiegare il fantacalcio a Franco.
+        }    
         {charTag(PG, "neutral")}:                               A lavoro ti sfruttano e non dici niente.
                                                                 Il tuo gruppo di calcetto ti dice cose terribili e non dici niente.
                                                                 Il tuo migliore amico ti ignora e non gli dici niente.
@@ -188,6 +192,11 @@
 
         + \ {charTag(PG, "neutral")}:                           Sono curios{player_pronoun has him:o|{player_pronoun has her:a|ə}}: perché sei in competizione con tutto, inclusi gli affetti?
                 -> glyph_choice_manager(false, airC)->
+        {
+        - grimoire_thirdChar has grimThirdCharFranco:
+        {charTag(PG, "neutral")}:                               Parlando con Franco di fantacalcio hai dimostrato la tua passione per la competitività.
+                                                                Ma serve anche nelle relazioni?
+        }          
         {charTag(PG, "neutral")}:                               Quando mi hai parlato dei tuoi compagni di calcetto hai messo in evidenza tutto quello che loro non hanno, e tu sì: chi una compagna, chi dei figli, chi denaro o successo.
                                                                 Idem col Poggi.
                                                                 Mentre quando mi hai parlato di Dona, sembra quasi che l'amore sia il premio che si riceve se si fanno le cose giuste, come non urlare contro chi ami, o non tradirla.
