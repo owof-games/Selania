@@ -52,6 +52,7 @@
 
     {
         - grimoire_thirdChar has grimThirdCharFranco:
+            ~ grimThirdCharFranco_text()
 
     }
 

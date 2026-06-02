@@ -746,7 +746,12 @@
 
         {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, mannaggia a te!
         {charTag(ThirdCharacter, "neutral")}:                                   Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
-                                                                                Partiamo da un euro e andiamo a salire.
+                {
+                - are_two_entities_together(SecondCharacter, PG): 
+                {charTag(SecondCharacter, "neutral")}:                          Basta calcioooooooooooooooooooooooo!
+                     ~ change_entity_place(SecondCharacter)     
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Partiamo da un euro e andiamo a salire.
         {charTag(Franco, "question")}:                                          Quindi i soldi vanno al giocatore?
                                                                                 Glieli mando con la carpa della sera?
         {charTag(ThirdCharacter, "bored")}:                                     No, vanno alla cassa per il premio finale, te l'ho detto anche prima!
@@ -755,6 +760,10 @@
         {charTag(Franco, "question")}:                                          E se non vince?
         {charTag(ThirdCharacter, "bored")}:                                     Se non vince perdi il premio.
         {charTag(Franco, "question")}:                                          Quindi paghi per perdere?
+                {
+                - are_two_entities_together(FirstCharacter, PG): 
+                {charTag(FirstCharacter, "curious")}:                           Lol, questa non me la perdo!
+                }
         {charTag(ThirdCharacter, "neutral")}:                                   No, paghi per giocare.
         {charTag(Franco, "party")}:                                             E dare dei soldi ai tuoi amici.
         {charTag(Franco, "question")}:                                          Ma non fai prima a darglieli direttamente se ne hanno bisogno?
@@ -766,7 +775,9 @@
         {charTag(ThirdCharacter, "jester")}:                                    Io non perdo, Franchì, non ti preoccupare!
         {charTag(ThirdCharacter, "bored")}:                                     Anche se da quando c'è il Merlo, quello si compra i giocatori migliori.
                                                                                 L'anno scorso quella merda ha speso un mese del mio stipendio per comprarsi il mondo.
-                                                                                C'aveva Lautaro Martinez e Douvikas, la merda.
+                                                                                        //Check parolacce da parte di Mentore
+                                                                                        ~ fifthChar_slurDetectorFunction()
+        {charTag(ThirdCharacter, "bored")}:                                     C'aveva Lautaro Martinez e Douvikas, maledetto.
         {charTag(Franco, "neutral")}:                                           Quindi non ti piace perdere.
         {charTag(Franco, "party")}:                                             Allora io non compro nessun giocatore e prendo una pizza per tutti.
         {charTag(ThirdCharacter, "bored")}:                                     Ma che c'entra la pizza?
@@ -786,7 +797,8 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Che poi non è che è per forza contro gli altri.
                                                                                 A lavoro se non c'è gente mi ammazzo di sudoku.
                                                                                 La soddisfazione quando batto i miei record, {player_name}!
-        {charTag(ThirdCharacter, "jester")}:                                    Mentre a calcetto o col fantacalcio è divertente prendere in giro i perdenti!                                                                
+        {charTag(ThirdCharacter, "neutral")}:                                   Mentre col calcio o il fantacalcio c'è anche un'altra cosa divertente.
+        {charTag(ThirdCharacter, "jester")}:                                    Prendere in giro i perdenti!                                                                
 
 
         + \ {charTag(PG, "neutral")}:                                           Competizione sì, ma il Merlo si è comprato sostanzialmente la vittoria così.
@@ -795,12 +807,16 @@
         {charTag(Franco, "neutral")}:                                           Le regole sono ingiuste, non la vita.
                                                                                 E le onde.
                                                                                 Le onde sono ingiuste.
-                                                                                Mii fanno sempre bere l'acqua se provo a nuotare.
+                                                                                Mi bagnano tutte le zampine quando prendo il sole!
 
         + \ {charTag(PG, "neutral")}:                                           Si gioca per vincere!
                 -> glyph_choice_manager(false, fireC)->
         {charTag(Franco, "party")}:                                             E per la pizza.
         {charTag(ThirdCharacter, "jester")}:                                    Franchì fa parte di un campionato tutto suo, {player_name}!
+                {
+                - are_two_entities_together(FirstCharacter, PG): 
+                {charTag(FirstCharacter, "affectionate")}:                      A me il campionato di Franco piace!
+                }
         {charTag(ThirdCharacter, "neutral")}:                                   Ma sono contento che noi due ci capiamo!
         {
         - thirdChar_recordedPlayerPronoun == him:
@@ -815,7 +831,7 @@
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Allora ti piacerebbe la parte amministrativa, immagino.
                                                                                 Nella lega nostra ci sono tre persone che si aiutano per tenere l'app aggiornata e i vari punteggi.
-        {charTag(ThirdCharacter, "bored")}:                                     Ognuno apprezza quel che apprezza, immagino.
+        {charTag(ThirdCharacter, "bored")}:                                     Ognuno si fa male come gli pare.
 
 
         + \ {charTag(PG, "neutral")}:                                           Credo che il punto di Franco sia: se le regole danneggiano chi ha meno potere, vanno rotte.
@@ -826,17 +842,19 @@
                                                                                 E i gemelli.
         {charTag(Franco, "neutral")}:                                           Quasi tutti.
                                                                                 Euforbo è spesso confuso.
-        -
-        {
-                - are_two_entities_together(FirstCharacter, PG):
+        {charTag(ThirdCharacter, "bored")}:                                     Non solo Euforbo.
+        {charTag(ThirdCharacter, "neutral")}:                                   E le regole servono per tenere un minimo di ordine.
+                                                                                Meglio una regola tristolina ma che non fa creare casini, che nessuna regola e solo casini.
                 {
-                - grimoire_firstChar has grimFirstThirdChar:
-                        {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+                - are_two_entities_together(FifthCharacter, PG): 
+                {charTag(Mentor, "hurry")}:                                     Siamo d'accordo con te, {charNameThree}.
+                {charTag(ThirdCharacter, "jester")}:                            Per fortuna che ci sei tu, vecia, a capirmi!           
+                }                                                                                                                                        
+        -
+        {charTag(ThirdCharacter, "neutral")}:                                   Franchì, riprendiamo!
+                                                                                Allora, ti consiglio almeno due ali decenti...
 
-                - else:
-                        {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
-                }
-        }
+
     -> third_char_closing_storylet ->
     ->->
 

@@ -88,6 +88,15 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
+=== function grimThirdCharFranco_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charNameThree} ha provato a spiegare a Franco le regole di un gioco, il <i>fantacalcio</i>, ma Franco si è trovato un po' confuso dalle regole, soprattutto quelle che posso creare disagio alle altre persone, o precludere l'accesso alla pizza. Man mano la conversazione si è spostata sul tema della competizione, e {charNameThree} ha coinvolto anche {player_name}.
+
 
 
 === function grimMentorWitchOne_text()
