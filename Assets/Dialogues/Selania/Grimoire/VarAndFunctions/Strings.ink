@@ -17,7 +17,7 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-    Discussione Mentore/Chitarra in merito a Boccale.
+    {charNameOne} e {charNameFive} hanno discusso su {charNameThree}. In particolare {charNameOne} è convinta che {charNameFive} sia troppo permissiva verso {charNameThree}, che {charNameOne} vede come "uno che passa il tempo a parlare di merda della ex". {charNameFive} è però convinta che le persone dicano cose terribili perché sono le cose che hanno imparato nel mondo in cui sono cresciute, e che parte del nostro lavoro è aiutarle a vedere il mondo in modo diverso, non solo la loro storia (e noi concordiamo con {charNameFive}). Dopo che {player_name} ha portato la sua prospettiva, la conversazione si è chiusa con {charNameOne} che ha detto che in futuro, se incontrerà un altro uomo come {charNameThree}, si prenderà la briga di spiegargli i problemi dei suoi comportamenti una volta, ma se quell'uomo non ascolterà o inventerà scuse, quell'uomo per {charNameOne} sarà un nemico.
 
 
 
