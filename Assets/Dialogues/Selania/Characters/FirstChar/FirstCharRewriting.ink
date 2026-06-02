@@ -128,6 +128,10 @@
                                                                 Con la tua musica.
                                                                 L'hai detto prima: è stato bello dire "no".
                                                                 Certe rinunce rendono potenti.
+                {
+                - grimoire_firstChar has grimFirstCharMentorAboutThirdChar: 
+                                                                E quando hai parlato con {charNameFive} di {charNameThree}, ti sei detta comunque disponibile a mettere un poco delle tue energie a disposizione anche nel cambiare uomini di cui non ti fidi.
+                }                                                
                 
             + \ {charTag(PG, "neutral")}:                       Forse perché la tua stabilità è altrove: è con Talco.
                 -> glyph_choice_manager(false, earthC)->
@@ -271,6 +275,10 @@
             + \ {charTag(PG, "neutral")}:                       È questione di numeri: nessunə salva il mondo da solə.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:                           È inevitabile, ma non è un fallimento.
+                {
+                - grimoire_firstChar has grimFirstCharMentorAboutThirdChar: 
+                                                                Come quando {charNameFive} ti ha parlato del bisogno di non lasciare indietro {charNameThree}, anche se non condividi il suo dolore.
+                }  
                 {
                     - grimoire_firstChar has grimFirstCharTwelve:
                                                                 Piuttosto, è un bene, me l'hai insegnato tu.
