@@ -99,42 +99,42 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
 
-    {charTag(Franco, "question")}:                  Franco si fa delle domande, ma non trova delle risposte.
-    {charTag(Franco, "neutral")}:                   Ed è strano girino, perché Franco ha sempre delle risposte.
-                                                    Anche se non sono sempre giuste.
+    {charTag(Franco, "question")}:                          Franco si fa delle domande, ma non trova delle risposte.
+    {charTag(Franco, "neutral")}:                           Ed è strano girino, perché Franco ha sempre delle risposte.
+                                                            Anche se non sono sempre giuste.
     {
     - frog_third_char_gift == thirdChar_giftedObject:
-                                                    Ho visto che hai dato a {charNameThree} il dono che ti ho consigliato, ma ha reagito male.
+                                                            Ho visto che hai dato a {charNameThree} il dono che ti ho consigliato, ma ha reagito male.
 
     - frog_third_char_ingredient == universalIngredient:
-                                                    Ho visto che cucinando con {charNameThree} hai aggiunto la Zandelia, che dovrebbe piacere a tutti, ma lui ha reagito male.
+                                                            Ho visto che cucinando con {charNameThree} hai aggiunto la Zandelia, che dovrebbe piacere a tutti, ma lui ha reagito male.
 
     - else:
-                                                    Ho visto che cucinando con {charNameThree} hai aggiunto l'ingrediente che ti ho consigliato, ma ha reagito male.                                                 
+                                                            Ho visto che cucinando con {charNameThree} hai aggiunto l'ingrediente che ti ho consigliato, ma ha reagito male.                                                 
     }                                                
-    {charTag(Franco, "neutral")}:                   Franco è triste per questa cosa, sai?
-                                                    Perché vuole davvero aiutare tutti.
-                                                    Ed è sicuro di aver dato a {player_name} il giusto consiglio.
+    {charTag(Franco, "neutral")}:                           Franco è triste per questa cosa, sai?
+                                                            Perché vuole davvero aiutare tutti.
+                                                            Ed è sicuro di aver dato a {player_name} il giusto consiglio.
         {
         - are_two_entities_together(ThirdCharacter, PG):
-        {charTag(ThirdCharacter, "jester")}:        Pensavi tu che mi leggevi con facilità, vero Franchì?
+        {charTag(ThirdCharacter, "jester")}:                Pensavi di avere davanti un libro aperto, vero Franchì?
         }                                            
         {
         - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "annoyed")}:       Franco, non ti crucciare: per sapere di cosa ha bisogno, {charNameThree} dovrebbe farsi delle domande.
-                                                    E non credo sia il suo forte.
+        {charTag(FirstCharacter, "annoyed")}:               Franco, non ti crucciare: per sapere di cosa ha bisogno, {charNameThree} dovrebbe farsi delle domande.
+                                                            E non credo sia il suo forte.
             {
             - are_two_entities_together(ThirdCharacter, PG):
-            {charTag(ThirdCharacter, "bored")}:     Almeno non sono la regina delle paranoie.
+            {charTag(ThirdCharacter, "bored")}:             Almeno non sono la regina delle paranoie.
             }                                          
         }                                            
-    {charTag(Franco, "question")}:                  Cosa è andato storto?
-    {charTag(Franco, "neutral")}:                   A parte il naso di zia Graaak.
-    {charTag(Franco, "reading")}:	                Franco indagherà su questa cosa, promesso.
-    {charTag(Franco, "neutral")}:                   Non il naso di zia Graaak, ovvio, ma quell'altra cosa.
-                                                    Quella.
-    {charTag(Franco, "question")}:                  Quale?                                                              
-    {charTag(Franco, "party")}:                     Ma ciao girino!
+    {charTag(Franco, "question")}:                          Cosa è andato storto?
+    {charTag(Franco, "neutral")}:                           A parte il naso di zia Graaak.
+    {charTag(Franco, "reading")}:	                        Franco indagherà su questa cosa, promesso.
+    {charTag(Franco, "neutral")}:                           Non il naso di zia Graaak, ovvio, ma quell'altra cosa.
+                                                            Quella.
+    {charTag(Franco, "question")}:                          Quale?                                                              
+    {charTag(Franco, "party")}:                             Ma ciao girino!
 
     ~ grimoire_franco += grimFrancoThirdIngredientFailure
 ->->

@@ -160,7 +160,10 @@
         - grimoire_thirdChar has grimThirdOpenNest:
                                                                 Dov'è la gioia che hai provato quando hai atteso quel giorno tuo padre sotto la pioggia dopo la partita?     
         }                                                        
-
+        {
+        - grimoire_franco has grimFrancoThirdIngredientFailure:
+                                                                Neanche il povero Franco è stato capace di capire di cosa hai davvero bisogno.   
+        }
 
 
 

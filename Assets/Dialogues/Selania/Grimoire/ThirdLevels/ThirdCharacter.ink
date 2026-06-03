@@ -132,14 +132,18 @@
 
     {
         - thirdChar_favouritesGifts has thirdChar_giftedObject:
-            {player_name} le ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> ed era entusiasta!
+            {player_name} gli ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> ed era entusiasta!
         
         - thirdChar_goodGifts has thirdChar_giftedObject:
-            {player_name} le ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
+            {player_name} gli ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
         
         - else:
-            {player_name} le ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
+            {player_name} gli ha donato <b><i>{ingredientTranslator(thirdChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
     
+    }
+    {
+        - grimoire_franco has grimFrancoThirdIngredientFailure:
+            Nonostante {player_name} abbia seguito i consigli di Franco, la reazione di {charNameThree} è stata negativa. Franco è rimasto stupito della cosa, e ha promesso di indagare sul perché, pur dimenticandosi quasi immediatamente del problema.
     }
         
 

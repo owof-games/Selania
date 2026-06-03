@@ -241,10 +241,31 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        {charTag(Documents, "writer_thirdChar")}:               {charNameThree}: Lettere random note da parte della personaggia <>
         {
         - grimoire_thirdChar has grimWitchThirdChar:
-                                                    Ci dice che la conversazione con {witch_actualName} gli è rimasta in testa come una brutta malattia, quando è tornato a casa, e sta continuando a farsi domande.   
+                                                                Ci dice che la conversazione con {witch_actualName} gli è rimasta in testa come una brutta malattia, quando è tornato a casa, e sta continuando a farsi domande.   
+        }
+        {
+        - grimoire_franco has grimFrancoThirdIngredientFailure:
+                                                                E che il consiglio di Franco era giusto, e che ha apprezzato <>
+                {
+                    - frog_third_char_gift == thirdChar_giftedObject:
+                        di aver ricevuto in dono {ingredientTranslator(thirdChar_giftedObject)}.
+                        Gli ha fatto capire che <>
+                            {
+                            - thirdChar_giftedObject == CardoAspinato:
+                                frase su Cardo Aspinato.
+                            - else:
+                                frase su Falsa Palude.    
+                            }
+                            Ma al momento non era pronto ad accogliere questa cosa.
+                            Forse manco ora, ma ci sto provando.
+
+                    - else:
+                        l'aggiunta in cucina di {ingredientTranslator(thirdChar_giftedObject)}.
+                        In quel momento ha avuto in ricordo buono su suo padre, 
+                }                                                
         }
         
 

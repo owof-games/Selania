@@ -18,6 +18,10 @@
         - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
             -> franco_intro
 
+        //Discrepanza tra dono a Boccale e sua reazione
+        - are_two_entities_together(PG, Franco) && (frog_third_char_gift == thirdChar_giftedObject or frog_third_char_ingredient == kitchen_thirdCharExtraIngredient or frog_third_char_ingredient == universalIngredient) && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
+            -> franco_third_ingredient_failure    
+
         - not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:
             -> franco_open_kitchen ->
 
