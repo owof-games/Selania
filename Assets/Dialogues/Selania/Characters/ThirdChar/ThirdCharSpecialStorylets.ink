@@ -40,7 +40,7 @@
     {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
     {charTag(ThirdCharacter, "neutral")}:                           Papà si è scusato tantissimo quando è arrivato.
     {charTag(ThirdCharacter, "bored")}:                             Tipico suo.
-    {charTag(ThirdCharacter, "neutral")}:                           Ma io quelle ore me le ricordo come il momento più bello della mia vita.
+    {charTag(ThirdCharacter, "neutral")}:                           Ma io quelle ore me le ricordo come uno dei momenti più belli della mia vita.
                                                                     E quando ho visto quei sassi lì.
                                                                     Boh.
                                                                     Credo di averli già visti, forse proprio quel giorno.
@@ -50,7 +50,7 @@
     {charTag(ThirdCharacter, "jester")}:                            Anche perché le mie sono tremende, vecio.
     {charTag(ThirdCharacter, "neutral")}:                           E quei sassi lì mi ricordano la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone.
                                                                     Non è male.
-                                                                    Comunque non credo che nessuno verrà a romperti {thirdChar_recordedPlayerPronoun has him:i coglioni|{thirdChar_recordedPlayerPronoun has her:le ovaie|i genitali}} in questo postaccio.
+                                                                    Comunque non credo che nessuno verrà a romperti le palle in questo postaccio.
     
     {
     - tutorial_ActivateTutorial == true:

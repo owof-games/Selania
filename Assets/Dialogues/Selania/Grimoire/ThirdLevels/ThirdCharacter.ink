@@ -77,12 +77,13 @@
 
     {
         - grimoire_thirdChar has grimThirdOpenNest:
+            ~ grimThirdOpenNest_text()
 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharKitchenAlone:
-
+            Dopo aver preparato dei toast bruciati, {charNameThree} ha raccontato a {player_name} della sua vita al bar dei genitori, delle scarse doti culinarie della madre e dei pic nic organizzati per il padre, dove la madre di {charNameThree} cucinava molte cose poco buone che il padre di {charNameThree} mangiava per rispetto, mentre {charNameThree} e la sorella mangiavano di nascosto patatine e pop corn recuperati nei giorni precedenti al bar di famiglia. Durante l'ultimo pic nic assieme, la mamma di {charNameThree} ha fatto trovare un cestino pieno di patatine e pop corn, raccontando che sapeva del loro trucchetto durante i vecchi pic nic. Per questo {charNameThree} ha lasciato in cucina in dono per {player_name} un set da pic nic.
 
     }
 

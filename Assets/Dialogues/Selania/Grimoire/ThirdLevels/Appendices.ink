@@ -275,6 +275,7 @@ La logica di comparsa delle appendici è:
     {
         - grimoire_appendices has grimThirdOpenNest:
         <i><b>Commento di {charNameThree}</i></b>
+            ~ grimThirdOpenNest_text()
     }
 
 /*************************

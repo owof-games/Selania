@@ -814,7 +814,12 @@
         {charTag(ThirdCharacter, "jester")}:                                    E quando abbiamo aperto il vecchio cestino, c'erano dentro solo patatine e pop corn.
                                                                                 Ci ha detto che aveva sempre saputo quello che combinavamo mia sorella e io.
                                                                                 E che lo riteneva un bel gesto d'amore.
-            {charTag(ThirdCharacter, "melanchonic")}:                           Non le sfuggiva mai nulla.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Non le sfuggiva mai nulla.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "sad")}:                               Non sto piangendo per questo idiota.
+                                                                                Non sto piangendo, no.    
+                }
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque ho trovato in giro un po' di roba e ho ricreato un set da pic nic.
                                                                                 Te l'ho lasciato in cucina.
         {charTag(ThirdCharacter, "jester")}:                                    Chi ci porteresti di noi?                                                                                                                                        
@@ -828,6 +833,14 @@
                 }
         {charTag(ThirdCharacter, "jester")}:                                    Credo uscirei più scemo di quello che già non sono a parlare troppo con Franco.
                                                                                 Però di sicuro te la spassi così!
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "party")}:                                     Preparo le cose per il karaoke!!!
+                                                                                E l'estintore.
+                                                                                E un paio di carpe d'emergenza, non si sa mai.
+                {charTag(Franco, "neutral")}:                                   Mi piace mangiare, tantissimo.
+                                                                                Ma l'ultima volta mi sono quasi soffocato con la mia stessa lingua.                                                                
+                }                                                                  
                                                                                     
 
         + \ {charTag(PG, "neutral")}:                                           Non sarebbe male andarci da sol{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} e rilassarmi un po'.
@@ -839,6 +852,12 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Ma vedi un po' te che {player_name} c'ha già le palle piene di noi!
         {charTag(ThirdCharacter, "jester")}:                                    Come non capirti.
                                                                                 Soprattutto dopo le paranoie di {charNameOne}.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                           Non è che sei come quei ragazzini fastidiosi delle medie, che quando c'hanno la crush passano il tempo a insultare la ragazzina che gli piace?
+                {charTag(ThirdCharacter, "jester")}:                            Ti piacerebbe.
+                {charTag(FirstCharacter, "annoyed")}:                           Preferirei farmi mangiare viva dalle giga libellule dello stagno.
+                }                                                                        
 
         + \ {charTag(PG, "neutral")}:                                           Ma te, ovvio, <i>vecio</i>!
                 -> glyph_choice_manager(false, fireC)->
@@ -863,6 +882,14 @@
         {charTag(ThirdCharacter, "jester")}:                                    Sono sorpreso che {charNameTwo} non abbia ancora dato fuoco a tutto!
         {charTag(ThirdCharacter, "neutral")}:                                   Una cucina sempre aperta, dell'acqua, la sua curiosità.
         {charTag(ThirdCharacter, "jester")}:                                    La prima volta che l'ho visto ho pensato che sarei morto qui.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                           Possiamo sempre risolvere questa mancanza.
+                }
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:                           Non ho ancora trovato l'elettricità però!
+                } 
 
 
         + \ {charTag(PG, "neutral")}:                                           Non mi spiace l'idea di farmi qualche trip politico bevendo con {charNameOne}!
@@ -879,7 +906,12 @@
                 {charTag(ThirdCharacter, "jester")}:                            Perché vecio, dopo questa sicuro che sei gay, dai!
                 }
         {charTag(ThirdCharacter, "neutral")}:                                   A bere del rosé.
-                                                                                E chiedervi come bruciare il patriarcato o stronzate del genere.                                                                       
+                                                                                E chiedervi come bruciare il patriarcato o stronzate del genere.
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:                           Hai appena descritto la mia serata ideale.
+                                                                                Quando vuoi ci sto, {player_name}!  
+                }                                                                                                                                     
         -
 
         {charTag(ThirdCharacter, "jester")}:                                    Comunque {charNameOne} mi diceva che il cibo che ha trovato è contato, per cui: zero pic nic per {player_name}.

@@ -152,6 +152,14 @@
                                                                 Il tuo migliore amico ti ignora e non gli dici niente.
                                                                 Detesti il tuo coinquilino e non gli dici niente.
                                                                 E mi hai parlato molto più della tua ex che di Ava.
+        {
+        - grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
+                                                                Il momento in cui sei stato più vivo, è quando mi hai parlato di tua mamma e dei pic nic.                                                    
+        }
+        {
+        - grimoire_thirdChar has grimThirdOpenNest:
+                                                                Dov'è la gioia che hai provato quando hai atteso quel giorno tuo padre sotto la pioggia dopo la partita?     
+        }                                                        
 
 
 

@@ -111,6 +111,14 @@
     Abbiamo chiesto in prestito il corpo di {player_name} per poter parlare con {charNameThree}. Abbiamo deciso di spiegare a {charNameThree} che nella situazione attuale potrebbe sentirsi bloccato, perché da una parte gli amici che ha chiedono a {charNameThree} di essere come loro o di rimanere solo, mentre dall'altra persone come {charNameOne} dicono a {charNameThree} che è un mostro e basta. Ma noi crediamo che ci siano altre strade, se {charNameThree} è capace di ascoltare la propria natura, e ognuna di queste strade può portare nuove persone vicine.
 
 
+=== function grimThirdOpenNest_text()
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    Aprendo a {player_name} il Nido, uno spiazzo piovo sulla spiaggia, {charNameThree} ha raccontato a {player_name} che non ama la pioggia, ma che ha un bel ricordo legato alla pioggia, quando da piccolo ha aspettato il padre per ore sotto gli spalti. E ascoltare la tempesta è stato uno dei momenti più belli della sua vita. {charNameThree} ha anche detto a {player_name} che i sassi del Nido li ha già visti, forse quel giorno stesso. Che la cosa che ama di più del suo lavoro è capire cosa dire alle persone quando non stanno bene, facendo sì che arrivino da sol3 alle loro risposte. E che quei sassi del Nido danno a {charNameThree} la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone. E poi {charNameThree} ha chiesto a {player_name} cosa pensa di lui. Quando {charNameThree} si è allontanato, abbiamo deciso di donare a {player_name} tre sigilli, con la speranza che {player_name} non ne faccia uso, ma anche con la consapevolezza che l'esperienza è il modo migliore per imparare.
 
 
 === function grimMentorWitchOne_text()
