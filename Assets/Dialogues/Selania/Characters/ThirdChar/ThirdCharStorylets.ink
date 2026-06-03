@@ -453,8 +453,8 @@
                 }                                                    
         {charTag(ThirdCharacter, "bored")}:                     Su quelle app è pieno di ragazzi più giovani, che magari ne sanno meno del mondo, ma non è quello che si vuole da una relazione vero?
         {charTag(ThirdCharacter, "neutral")}:                   Però con le clienti ogni tanto si riesce a scopare.
-                                                                //Check parolacce da parte di Mentore
-                                                                ~ fifthChar_slurDetectorFunction()                                                      
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()                                                      
                                                                 Unica regola: solo le turiste.
         {charTag(ThirdCharacter, "bored")}:                     Perché se me ne faccio una della frazione poi so come va a finire.
                                                                 Quando nasci e cresci nello stesso posto tutta la tua vita di merda è sulla bocca di tutti.

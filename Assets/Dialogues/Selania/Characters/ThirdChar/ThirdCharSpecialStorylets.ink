@@ -30,111 +30,176 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
 
-    {charTag(ThirdCharacter, "neutral")}:                           Non è che amo proprio proprio la pioggia.
-                                                                    Ma.
-                                                                    C'è qualcosa di rilassante in questo posto, sotto questa tenda, vero?
-                                                                    Una volta da piccolo mio papà doveva venire a prendermi dopo un allenamento.
-                                                                    Avevo più o meno l'età di {charNameTwo}.
-                                                                    Ma pioveva così forte che ci ha messo una vita.
-                                                                    Così mi sono messo sotto agli spalti, fermo, ad ascoltare la tempesta.
-    {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
-    {charTag(ThirdCharacter, "neutral")}:                           Papà si è scusato tantissimo quando è arrivato.
-    {charTag(ThirdCharacter, "bored")}:                             Tipico suo.
-    {charTag(ThirdCharacter, "neutral")}:                           Ma io quelle ore me le ricordo come uno dei momenti più belli della mia vita.
-                                                                    E quando ho visto quei sassi lì.
-                                                                    Boh.
-                                                                    Credo di averli già visti, forse proprio quel giorno.
-                                                                    Sai cos'è una cosa bella del mio lavoro?
-                                                                    Capire cosa dire alle persone quando stanno di merda.
-                                                                    Dirgli la cosa giusta, così che ci arrivano a soli a trovare le risposte.
-    {charTag(ThirdCharacter, "jester")}:                            Anche perché le mie sono tremende, vecio.
-    {charTag(ThirdCharacter, "neutral")}:                           E quei sassi lì mi ricordano la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone.
-                                                                    Non è male.
-                                                                    Comunque non credo che nessuno verrà a romperti le palle in questo postaccio.
-    
-    {
-    - tutorial_ActivateTutorial == true:
-    {charTag(ThirdCharacter, "jester")}:                            A parte Carla ovviamente!                                                                                                                                                                                                                                        
-    }
-    {charTag(ThirdCharacter, "neutral")}:                           Quindi ti faccio la domanda peggiore del mondo.
-                                                                    Per me.
-                                                                    Che idea ti sei fatt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} di me?
+        {charTag(ThirdCharacter, "neutral")}:                           Non è che amo proprio proprio la pioggia.
+                                                                        Ma.
+                                                                        C'è qualcosa di rilassante in questo posto, sotto questa tenda, vero?
+                                                                        Una volta da piccolo mio papà doveva venire a prendermi dopo un allenamento.
+                                                                        Avevo più o meno l'età di {charNameTwo}.
+                                                                        Ma pioveva così forte che ci ha messo una vita.
+                                                                        Così mi sono messo sotto agli spalti, fermo, ad ascoltare la tempesta.
+        {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
+        {charTag(ThirdCharacter, "neutral")}:                           Papà si è scusato tantissimo quando è arrivato.
+        {charTag(ThirdCharacter, "bored")}:                             Tipico suo.
+        {charTag(ThirdCharacter, "neutral")}:                           Ma io quelle ore me le ricordo come uno dei momenti più belli della mia vita.
+                                                                        E quando ho visto quei sassi lì.
+                                                                        Boh.
+                                                                        Credo di averli già visti, forse proprio quel giorno.
+                                                                        Sai cos'è una cosa bella del mio lavoro?
+                                                                        Capire cosa dire alle persone quando stanno di merda.
+                                                                        Dirgli la cosa giusta, così che ci arrivano a soli a trovare le risposte.
+        {charTag(ThirdCharacter, "jester")}:                            Anche perché le mie sono tremende, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                           E quei sassi lì mi ricordano la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone.
+                                                                        Non è male.
+                                                                        Comunque non credo che nessuno verrà a romperti le palle in questo postaccio.
 
-        + [Scelta aria] //Media
-            -> glyph_choice_manager(false, airC)->
-    
-        + [Scelta fuoco]
-            -> glyph_choice_manager(false, fireC)->
-     
-        + [Scelta spirito]//Negativa due (negativa come Non piace a lui, non che sia critica in assoluto)
-            -> glyph_choice_manager(false, aetherC)->
-    
-        + [Scelta terra]
-            -> glyph_choice_manager(false, earthC)->
-            
-        + [Scelta acqua] //Negativa uno
-            -> glyph_choice_manager(false, waterC)->
-        -    
-    
-    {charTag(ThirdCharacter, "neutral")}:                           Ti lascio al tuo nuovo giochino, {player_name}.
-                                                                    Magari così c'hai un buon ricordo di me quando me ne vado.
+                {
+                - tutorial_ActivateTutorial == true:
+                {charTag(ThirdCharacter, "jester")}:                    A parte Carla ovviamente!                                                                                                                                                                                                                                        
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Quindi ti faccio la domanda peggiore del mondo.
+                                                                        Per me.
+                                                                        Che idea ti sei fatt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} di me?
 
-        -> third_char_closing_storylet ->
+        + \ {charTag(PG, "neutral")}:                                   Cosa succede se non rispondo che sei un bravo ragazzo?
+                -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Che ti meno, vecio!
 
-    {charTag(TheWitch, "{witch_state()}")}:                         {player_name}.
-                                                                    Questo posto è potente.
-                                                                    E complesso.
-                                                                    Una parte di noi vorrebbe dire a {player_name} di andarsene subito.
-                                                                    Ma crediamo anche che l'esperienza sia la migliore maestra.
-                                                                    Abbiamo quindi deciso di donare a {player_name} tre <b>sigilli</b>.
-                                                                    Li troverà nel suo grimorio.
-                                                                    Sperando che {player_name} ricordi che non tutto quello che possediamo va utilizzato.
-                                                                    Se {player_name} vuole ancora parlarne con noi, ci trova come sempre alla discarica.       
+                - else:
+                {charTag(ThirdCharacter, "bored")}:                     L'ho detto giusto un paio di volte, dai!
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Tutti c'hanno le loro fisse.
+                                                                        Per lo meno non mi svendo la casa alle slot machines.
+                                                                        O passo il tempo a insultare gente online.
+        {charTag(ThirdCharacter, "jester")}:                            E poi sono un ragazzo d'oro, non serve che me lo dici tu!                                                                          
 
-        //Chiamiamo il primo, notifichiamo, ripetiamo  
-        ~ png_random_sigils_opener ()
-            {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
-            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            //Poi aggiorno il sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //E poi svuoto il nuovo sigillo
-            ~ nest_newSigilDiscovered = ()
+        + \ {charTag(PG, "neutral")}:                                   Sei un po' idiota ma mi stai simpatico!
+                -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Tra idioti ci capiamo, vecio!
 
-        ~ png_random_sigils_opener ()
-            {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
-            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            //Poi aggiorno il sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //E poi svuoto il nuovo sigillo
-            ~ nest_newSigilDiscovered = ()
-
-
-        ~ png_random_sigils_opener ()
-            {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
-            //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            ~ glyph_grimoireTripleSigilsUpdater()
-            //Poi aggiorno il sigillo principale
-            ~ glyph_grimoireMainSigilsUpdater()
-            //E poi svuoto il nuovo sigillo
-            ~ nest_newSigilDiscovered = ()
-
+                - else:
+                {charTag(ThirdCharacter, "bored")}:                     <i>Faccio</i> l'idiota, ma non lo sono.
+                                                                        Ti piace giudicare facile, vero? 
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Però è una cosa che mi diceva sempre anche mamma.
+                                                                        Secondo mia sorella è una cosa che ho iniziato a fare quando le cose in casa stavano andando male.
+        {charTag(ThirdCharacter, "jester")}:                            Inizi a fare il buffone per risolvere un problema, e finisci per fare il buffone per il resto della tua vita.                                                                      
         
-        //Parte subito la spiegazione sui sigilli di Carla
-        {
-            -  settings_gamerMode == true:
-                ~ move_entity(Carla, Library)
-                -> tutorial_carlaSigilsActivationStorylet
-            - else:
-                ->->
-        }
+        + {grimoire_thirdChar hasnt grimThirdCharFour}  \ {charTag(PG, "neutral")}:                             Tra gli appuntamenti che fai e gli amici che hai, non ho ancora capito come tratti le persone.
+            -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi ci avrei scommesso il culo che mi avresti detto qualcosa di pesante.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Non ho mai tradito la fiducia di nessuno.
+                                                                        Non spiffero in giro i cazzi degli altri.
+                                                                        Né li giudico se fanno scelte di merda.
+                                                                        Non prendo debiti.
+                                                                        E presto i soldi a chi è nei casini.
+                                                                        Non mi sembra una brutta cosa, no?            
+
+        + {grimoire_thirdChar has grimThirdCharFour}  \ {charTag(PG, "neutral")}:                               Non mi piace come parli della tua ex, dei tuoi appuntamenti e delle donne in generale.
+            -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi ci avrei scommesso il culo che mi avresti detto qualcosa di pesante.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Io le donne le rispetto.
+                                                                        Ma non sono sicuro che la cosa sia reciproca.
+                                                                        Però finisco sempre per passare per lo stronzo, perché ho la bocca troppo larga.
+        {charTag(ThirdCharacter, "bored")}:                             Magari a volte parlo troppo, ma non ho mai picchiato nessuna ragazza.            
+
+        + \ {charTag(PG, "neutral")}:                                   Non sei un filosofo, ma hai un tuo senso pratico.
+                -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Ah ah, grazie vecio!
+                - else:
+                {charTag(ThirdCharacter, "bored")}:                     Posso dire anche cose intelligenti.
+                                                                        Se la persona è interessante.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                           Però sì, ho un mio senso pratico.
+                                                                        Che non è una cosa che scegli di avere o meno, quando tuo papà si brucia tutto quello che avevate quando hai sedici anni.
+                                                                        Alla fine devi trovare il modo per sfangartela.         
+        {charTag(ThirdCharacter, "jester")}:                            Non sono venuto su così male, no?                
+
+        +  \ {charTag(PG, "neutral")}:                                  Ho l'impressione che dietro l'atteggiamento comico tu stia molto male.
+                -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "jester")}:                    Figurati se non tiravi fuori le cose da fighetta, figurati.
+                }
+
+        {charTag(ThirdCharacter, "melanchonic")}:                       Oh dio sì, sono tormentato.
+                                                                        La notte non dormo e soffro.
+                                                                        Soffro pensando a quanto lavoro sta facendo per me {player_name}!
+        {charTag(ThirdCharacter, "jester")}:                            Lavoro non richiesto.
+        {charTag(ThirdCharacter, "bored")}:                             E poi questa roba è la cosa più stupida e prevedibile sentita.
+                                                                        Tutti alla fine stanno male a questo mondo, {player_name}!                                                                
+        -    
+        
+        {charTag(ThirdCharacter, "neutral")}:                           Ti lascio al tuo nuovo giochino, {player_name}.
+                                                                        Magari così c'hai un buon ricordo di me quando me ne vado.
+
+            -> third_char_closing_storylet ->
+
+        {charTag(TheWitch, "{witch_state()}")}:                         {player_name}.
+                                                                        Questo posto è potente.
+                                                                        E complesso.
+                                                                        Una parte di noi vorrebbe dire a {player_name} di andarsene subito.
+                                                                        Ma crediamo anche che l'esperienza sia la migliore maestra.
+                                                                        Abbiamo quindi deciso di donare a {player_name} tre <b>sigilli</b>.
+                                                                        Li troverà nel suo grimorio.
+                                                                        Sperando che {player_name} ricordi che non tutto quello che possediamo va utilizzato.
+                                                                        Se {player_name} vuole ancora parlarne con noi, ci trova come sempre alla discarica.       
+
+            //Chiamiamo il primo, notifichiamo, ripetiamo  
+            ~ png_random_sigils_opener ()
+                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()
+
+            ~ png_random_sigils_opener ()
+                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()
+
+
+            ~ png_random_sigils_opener ()
+                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()
+
+            
+            //Parte subito la spiegazione sui sigilli di Carla
+            {
+                -  settings_gamerMode == true:
+                    ~ move_entity(Carla, Library)
+                    -> tutorial_carlaSigilsActivationStorylet
+                - else:
+                    ->->
+            }
         
         
 
