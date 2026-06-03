@@ -792,23 +792,98 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
     
-    {charTag(ThirdCharacter, "neutral")}:       Frase
-   
-            + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Prima mi son messo a sfornellare da solo.
+        {charTag(ThirdCharacter, "jester")}:                                    E stranamente sono vivo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ho fatto il piatto preferito di mia mamma.
+        {charTag(ThirdCharacter, "jester")}:                                    Toast bruciati!
+        {charTag(ThirdCharacter, "neutral")}:                                   In realtà i suoi non erano mai bruciati, ma sapeva preparare solo quelle cose da tavola fredda.
+                                                                                Sono cresciuto mangiando al bar, e per lo più erano panini, capresi, insalate col tonno.
+                                                                                Se buttava bene del riso freddo o della pasta al forno.
+        {charTag(ThirdCharacter, "jester")}:                                    Le lasagne quando nonna Carmen non aveva ancora perso tutte le rotelle.
+        {charTag(ThirdCharacter, "neutral")}:                                   Può sembrare una cosa brutta, ma in realtà per me era uno spasso stare al bar coi miei.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche perché non mi potevano controllare sempre.
+        {charTag(ThirdCharacter, "neutral")}:                                   C'era però una volta all'anno in cui mamma si impegnava a cucinare, ed era il compleanno di papà.
+                                                                                Iniziava due giorni prima a sfornellare torte dolci troppo dure.
+                                                                                Parmigiane troppo salate.
+        {charTag(ThirdCharacter, "jester")}:                                    E tartine col burro e uova di lompo che attiravano le vespe in un millisecondo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Per sopravvivere mia sorella e io iniziavamo a nasconderci negli zainetti pacchetti di patatine e popcorn che rubavamo al bar per una settimana.
+                                                                                E ce li mangiavamo mentre facevamo finta di giocare a nascondino o robe simili.
+                                                                                Papà invece stoicamente mangiava tutto, facendosi aiutare da litrate di aranciata.
+                                                                                Odio quel fallito, ma si impegnava in tutti i modi per non far sentire mai mamma sbagliata.
+                                                                                Una volta, quando ha scoperto che ormai non sarebbe più guarita, mamma ha organizzato un ultimo pic nic.
+        {charTag(ThirdCharacter, "jester")}:                                    E quando abbiamo aperto il vecchio cestino, c'erano dentro solo patatine e pop corn.
+                                                                                Ci ha detto che aveva sempre saputo quello che combinavamo mia sorella e io.
+                                                                                E che lo riteneva un bel gesto d'amore.
+            {charTag(ThirdCharacter, "melanchonic")}:                           Non le sfuggiva mai nulla.
+        {charTag(ThirdCharacter, "neutral")}:                                   Comunque ho trovato in giro un po' di roba e ho ricreato un set da pic nic.
+                                                                                Te l'ho lasciato in cucina.
+        {charTag(ThirdCharacter, "jester")}:                                    Chi ci porteresti di noi?                                                                                                                                        
 
-            + \ {charTag(PG, "neutral")}:         Cosa ti renderà più stabile? Da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)->
-                
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                    
-            + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-            -
     
+        + \ {charTag(PG, "neutral")}:                                           Franco, ho un sacco di domande da fargli, voglio capire come ragiona!
+                -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "jester")}:                            Sicuro avresti potuto fare una scelta migliore, tipo me!
+                }
+        {charTag(ThirdCharacter, "jester")}:                                    Credo uscirei più scemo di quello che già non sono a parlare troppo con Franco.
+                                                                                Però di sicuro te la spassi così!
+                                                                                    
+
+        + \ {charTag(PG, "neutral")}:                                           Non sarebbe male andarci da sol{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} e rilassarmi un po'.
+                -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "jester")}:                            Guarda che anche io so farti rilassare {player_name}!
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma vedi un po' te che {player_name} c'ha già le palle piene di noi!
+        {charTag(ThirdCharacter, "jester")}:                                    Come non capirti.
+                                                                                Soprattutto dopo le paranoie di {charNameOne}.
+
+        + \ {charTag(PG, "neutral")}:                                           Ma te, ovvio, <i>vecio</i>!
+                -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "jester")}:                            Pensavo avresti preferito chiacchierartela con una delle donne qui!
+
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            Grande, vecio, grande!
+                }
+        {charTag(ThirdCharacter, "jester")}:                                    Preparati perché ho un monologo in canna da quando sono qui.
+                                                                                Titolo: "Perché l'Inter è meglio di quella cloaca della Juve."
+        {charTag(ThirdCharacter, "neutral")}:                                   Svolgimento: "L'Inter non ha mai rubato scudetti."
+
+        + \ {charTag(PG, "neutral")}:                                           {charNameTwo}: c'è ancora il suo compleanno in sospeso da festeggiare.
+                -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "bored")}:                             Sono quasi offeso, vecio!
+                                                                                Sono l'unico altro uomo qui e tu passeresti invece il tempo con il fratellino?
+                }
+        {charTag(ThirdCharacter, "jester")}:                                    Sono sorpreso che {charNameTwo} non abbia ancora dato fuoco a tutto!
+        {charTag(ThirdCharacter, "neutral")}:                                   Una cucina sempre aperta, dell'acqua, la sua curiosità.
+        {charTag(ThirdCharacter, "jester")}:                                    La prima volta che l'ho visto ho pensato che sarei morto qui.
+
+
+        + \ {charTag(PG, "neutral")}:                                           Non mi spiace l'idea di farmi qualche trip politico bevendo con {charNameOne}!
+                -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "bored")}:                             Sono quasi offeso, vecio!
+                                                                                Preferisci quella nevrastenica a me!
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Immagino già il divertimento tra voi due.
+                                                                                A parlare male di tutti gli uomini che conoscete.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                            Perché vecio, dopo questa sicuro che sei gay, dai!
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   A bere del rosé.
+                                                                                E chiedervi come bruciare il patriarcato o stronzate del genere.                                                                       
+        -
+
+        {charTag(ThirdCharacter, "jester")}:                                    Comunque {charNameOne} mi diceva che il cibo che ha trovato è contato, per cui: zero pic nic per {player_name}.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma grazie per avermi ascoltato.
+
     -> third_char_closing_storylet ->
     ->->

@@ -1120,7 +1120,7 @@
                 {charTag(ThirdCharacter, "jester")}:            Quello con cui puoi parlare delle tipe ma anche fare un discorso serio, quel tipo di amico, hai presente?
                                                 
                 - else:
-                {charTag(ThirdCharacter, "neutral")}:           A noi ragazzi non piace parlare troppo delle proprie faccende.
+                {charTag(ThirdCharacter, "neutral")}:           Noi non siamo come voi che passate le ore a parlare di cose <i>intime</i> e a condividervi i segreti mentre vi fate i bigodini.
                                                                 Però si può stare assieme e fare qualcosa tipo il calcio e magari nel mentre la dici anche la cosa seria.
                                                                 E lui è quello a cui puoi dire la cosa seria.
                 {charTag(ThirdCharacter, "jester")}:            E poi cazzeggiare.
