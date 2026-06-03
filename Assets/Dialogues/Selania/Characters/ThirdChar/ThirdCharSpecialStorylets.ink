@@ -200,39 +200,112 @@
 
 
 === third_witch_follow_up
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    {
-    - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
-    {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
         {
-        - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "neutral")}:                       Volevo giusto segnarmi da qualche parte un'idea per una melodia.
-            ~ change_entity_place(FirstCharacter)
+        - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
+        {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "neutral")}:                       Volevo giusto segnarmi da qualche parte un'idea per una melodia.
+                ~ change_entity_place(FirstCharacter)
 
-        - are_two_entities_together(SecondCharacter, PG):
-        {charTag(SecondCharacter, "energy")}:                       È il momento per {charNameTwo} di scoprire un nuovo animale!
-            ~ change_entity_place(SecondCharacter)
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "energy")}:                       È il momento per {charNameTwo} di scoprire un nuovo animale!
+                ~ change_entity_place(SecondCharacter)
 
-        - are_two_entities_together(FifthCharacter, PG):
-        {charTag(Mentor, "sad")}:                                   Spero non sia niente di grave {charNameThree}.
-        {charTag(ThirdCharacter, "jester")}:                        Tranquilla zia, giusto un piccolo chiarimento tra me e {player_name}.
-        {charTag(Mentor, "neutral")}:                               A dopo allora!
-            ~ change_entity_place(FifthCharacter)
+            - are_two_entities_together(FifthCharacter, PG):
+            {charTag(Mentor, "sad")}:                                   Spero non sia niente di grave {charNameThree}.
+            {charTag(ThirdCharacter, "jester")}:                        Tranquilla zia, giusto un piccolo chiarimento tra me e {player_name}.
+            {charTag(Mentor, "neutral")}:                               A dopo allora!
+                ~ change_entity_place(FifthCharacter)
 
-        - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "neutral")}:                               Non fate caso a me.
-                                                                    Sto facendo i miei esercizi per sembrare serio.
-        {charTag(Franco, "reading")}:	                            Domani ci saranno i consigli di classe.                        
+            - are_two_entities_together(Franco, PG):
+            {charTag(Franco, "neutral")}:                               Non fate caso a me.
+                                                                        Sto facendo i miei esercizi per sembrare serio.
+            {charTag(Franco, "reading")}:	                            Domani ci saranno i consigli di classe.                        
 
+            }
         }
-    }
-   
+
+    {charTag(ThirdCharacter, "neutral")}:                               Cosa ha voluto dire prima quella tipa, quella che ha fatto la ventriloqua con le tue chiappe?
+
+
+    + \ {charTag(PG, "neutral")}:                                       Credo intendesse che sei su una strada che può solo ferirti, ma puoi ancora salvarti.
+            -> glyph_choice_manager(false, waterC)->
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == her:
+            {charTag(ThirdCharacter, "jester")}:                        Sei lo stereotipo della ragazza tutta presa dalle emozioni, {player_name}!                  
+            }  
+    {charTag(ThirdCharacter, "bored")}:                                 L'unica cosa che può ferirsi sono le mie palle.
+                                                                        Le mie gigantesche mastodontiche pienissime palle.
+                                                                        Massacrate da tutte le cose pesanti che avete il vizio di dire da queste parti.        
     
+    + \ {charTag(PG, "neutral")}:                                       Che puoi essere molte cose, non solo l'idea di uomo con cui sei stato cresciuto.
+            -> glyph_choice_manager(false, aetherC)->
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == they:
+            {charTag(ThirdCharacter, "jester")}:                        Poi vi arrabbiate se diciamo che voi trans pensate solo al genere!                 
+            }     
+    {charTag(ThirdCharacter, "neutral")}:                               Comunque puoi dire alla tua amica che è un lavoro che ho già fatto.
+                                                                        Sono cresciuto con l'idea che un uomo dovesse essere come quel fallito di mio padre.
+    {charTag(ThirdCharacter, "jester")}:                                E magari non sono così perfetto come ti può sembrare, {player_name}.
+    {charTag(ThirdCharacter, "neutral")}:                               Ma sono molto più uomo di quanto lui non sia mai stato.                                                                        
+    
+    + \ {charTag(PG, "neutral")}:                                       Che forse gli amici che hai non sono poi così grandi amici.
+            -> glyph_choice_manager(false, earthC)->
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun != him:
+            {charTag(ThirdCharacter, "bored")}:                         Attent{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} a come parli dei miei amici, {player_name}.
+            - else:
+            {charTag(ThirdCharacter, "jester")}:                        Vecio, apprezzo la sincerità, ma non parlare <i>così</i> male dei miei amici!
+            }
+    {charTag(ThirdCharacter, "jester")}:                                Non serviva una medium pazza per dirmi che i miei amici sono un po' coglioni.
+    {charTag(ThirdCharacter, "neutral")}:                               Ma sono quanto di meglio possa trovare in quel buco di periferia in cui vivo.
+                                                                        E hanno un gran cuore.
+    {charTag(ThirdCharacter, "jester")}:                                Anche se il più delle volte lo nascondono dietro litri di birra!
+    {charTag(TheWitch, witch_state())}:                                 <i>Una verità parziale {player_name} conduce a un disastro totale.</i>                                                                   
+
+    
+    + \ {charTag(PG, "neutral")}:                                       Cosa vorresti essere, se potessi essere tutto e chiunque?
+            -> glyph_choice_manager(false, airC)->
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun != him:
+            {charTag(ThirdCharacter, "bored")}:                         'ste domande da Cioè te le perdono solo perché se te, {player_name}.
+            - else:
+            {charTag(ThirdCharacter, "jester")}:                        Vecio, ma 'ste domande da Cioè? C'abbiamo dodici anni?
+            }
+    {charTag(ThirdCharacter, "jester")}:                                Prima alla medium psicopatica ho detto Elon Musk.
+                                                                        Ma io sono cento volte più bono anche così, a forma di bicchiere.
+    {charTag(ThirdCharacter, "neutral")}:                               Non c'ho voglia di essere qualcos'altro.
+                                                                        Ma due soldi in più per starmene in pace non mi farebbero schifo.
+                                                                        Insieme a un mondo che mi permetta di fare ancora il mio vecchio lavoro.
+    {charTag(ThirdCharacter, "jester")}:                                E una tipa vicina meno rompicoglioni di {charNameOne}!                                                                                                                                         
+    
+    + \ {charTag(PG, "neutral")}:                                       Di non incazzarti per quello che ti dice {charNameOne}, ha i suoi pregiudizi.
+            -> glyph_choice_manager(false, fireC)-> 
+            {//Blocco per reazioni e commenti legati al genere.
+            - thirdChar_recordedPlayerPronoun == her:
+            {charTag(ThirdCharacter, "bored")}:                         Dov'è la solidarietà femminile, {player_name}?
+            - thirdChar_recordedPlayerPronoun == they:
+            {charTag(ThirdCharacter, "bored")}:                         Ehi dai, non serve buttare già dal tetto così {charNameOne}!
+            - else:
+            {charTag(ThirdCharacter, "jester")}:                        C'ero arrivato da solo a quello, vecio.
+            }
+    {charTag(ThirdCharacter, "neutral")}:                               Però apprezzo che il fantasma con disturbo di personalità multiple si sia accorto che {charNameOne} mi ha preso un po' di mira.
+                                                                        Ma detto tra di noi: chi se ne frega?
+    {charTag(ThirdCharacter, "jester")}:                                Mi piace litigarci perché fa una faccia idiota quando si innervosisce.
+    {charTag(ThirdCharacter, "neutral")}:                               Ma se dovessi farmi il sangue amaro per ogni donna incazzata che mi dice che sono un coglione, sarei già morto da mo.
+    {charTag(TheWitch, witch_state())}:                                 <i>Rimaniamo sorprese e un po' deluse dalla risposta di {player_name}.</i>                                                                             
+    -
+    {charTag(ThirdCharacter, "neutral")}:                               C'è sempre qualcuno che vuole bene anche al più idiota del pianeta, se quell'idiota è sé stesso senza troppe maschere.
+                                                                        Il problema per me è che quella persona l'ho avuta vicina per una vita, e ora non mi parla più.
+    {charTag(ThirdCharacter, "jester")}:                                Ma vai a farti due passi ora {player_name}!
+                                                                        E cerca di non farti possedere di nuovo: c'avevi una faccia da idiota quando quella là se ne è andata dal tuo corpo!                                                                    
 
     -> third_char_closing_storylet ->
     ->-> 
