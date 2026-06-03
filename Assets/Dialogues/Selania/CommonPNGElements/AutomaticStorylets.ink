@@ -144,6 +144,7 @@
         //Su di loro
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && grimoire_firstChar has grimFirstCharThree && grimoire_firstChar hasnt grimFirstCharMentor:
             -> first_mentor_chit_chat
+        
         //In merito a Boccale
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && not are_two_entities_together(ThirdCharacter, PG) && grimoire_thirdChar has grimFourthCharThree && grimoire_firstChar hasnt grimFirstCharMentorAboutThirdChar:
             -> first_mentor_about_third_char

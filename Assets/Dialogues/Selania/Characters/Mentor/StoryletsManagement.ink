@@ -19,6 +19,20 @@
 
 === mentor_and_chars_related_storylets ===
 
+//Testi prioritari per la storia principale o le relazioni con l3 PNG
+    {
+       //Presentazione generale
+        - grimoire_appendices hasnt grimChoicesMentor:
+            -> tutorial_mentorTalkingChoiceRelationship 
+    }
+
+    //Third Char
+    {   
+        //Feedback
+        - grimoire_thirdChar hasnt grimThirdCharMentorFeedback  && thirdChar_storyStatus == story_storyPostal:
+            -> third_character_feedback           
+    }
+
     //Second char
     {    
 
@@ -36,18 +50,13 @@
 
     }
 
+//Testi di relazione con l3 png
+
     //First Char
     {   
         //Feedback
         - grimoire_firstChar hasnt grimFirstCharMentorFeedback && firstChar_storyStatus == story_storyPostal:
             -> first_character_feedback           
-    }
-
-    //Third Char
-    {   
-        //Feedback
-        - grimoire_thirdChar hasnt grimThirdCharMentorFeedback  && thirdChar_storyStatus == story_storyPostal:
-            -> third_character_feedback           
     }
 
     //Fourth Char
@@ -64,13 +73,10 @@
             -> fifth_character_feedback           
     }
 
-    //Tutorial
+
+//Tutorial secondari (più consigli che altro)
     {
         //Questi sono i tutorial che non devono partire in automatico, ma solo se le parliamo
-        //Presentazione generale
-        - grimoire_appendices hasnt grimChoicesMentor:
-            -> tutorial_mentorTalkingChoiceRelationship
-        
         //Info sulla non obbligatorietà dei minigames
         - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and grimoire_fifthChar hasnt grimMentorNotMandatory:
             -> about_not_mandatory_work    
@@ -109,6 +115,43 @@
         - not ending_demo && LIST_COUNT(story_endedStories) == 3:
             -> ending_demo
             
+    //Commenti sui luoghi aperti
+
+        //Sulla funzione della serra
+        - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
+            -> about_greenhouse
+            
+        //Sulla funzione della cucina
+        - player_accessiblePlaces has Kitchen && grimoire_fifthChar hasnt grimKitchenMentor:
+            -> about_kitchen
+        
+        //Sulla funzione del nido    
+        - player_accessiblePlaces has Nest && grimoire_appendices hasnt grimSigilsMentor:
+            -> about_nest    
+
+     //Commenti a situazioni, eventi o altro.
+        //Commento sul cane    
+        - grimoire_firstChar has grimFirstCharLetterOne && grimoire_secondChar has grimSecondCharLetterOne && grimoire_thirdChar has grimThirdCharLetterOne && grimoire_fifthChar hasnt grimMentorDog:
+            -> dog_mentor
+        
+        //Lettura Mentore
+        - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && grimoire_fifthChar hasnt grimMentorNovel:
+            -> a_story_of_transformation      
+
+    //Scene speciali
+        //Crescita olobino
+        - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoUno:
+            -> about_olobino
+
+        - about_olobino && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoDue:
+            -> again_about_olobino 
+
+        //Mentore esplode
+        // - are_two_entities_together(Mentor, PG) && LIST_COUNT(story_endedStories) == 3 and grimoire_fifthChar hasnt grimMentorRage:
+        //     -> mentor_rage
+
+
+
 
     //Storylets principali
         - grimoire_fifthChar hasnt grimMentorOne:
@@ -148,42 +191,6 @@
 
         // - not knowing_mentor_character.twelve && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
         //     -> knowing_mentor_character.twelve
- 
-
-    //Commenti sui luoghi aperti
-
-        //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
-            -> about_greenhouse
-            
-        //Sulla funzione della cucina
-        - player_accessiblePlaces has Kitchen && grimoire_fifthChar hasnt grimKitchenMentor:
-            -> about_kitchen
-        
-        //Sulla funzione del nido    
-        - player_accessiblePlaces has Nest && grimoire_appendices hasnt grimSigilsMentor:
-            -> about_nest    
-
-     //Commenti a situazioni, eventi o altro.
-        //Commento sul cane    
-        - grimoire_firstChar has grimFirstCharLetterOne && grimoire_secondChar has grimSecondCharLetterOne && grimoire_thirdChar has grimThirdCharLetterOne && grimoire_fifthChar hasnt grimMentorDog:
-            -> dog_mentor
-        
-        //Lettura Mentore
-        - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && grimoire_fifthChar hasnt grimMentorNovel:
-            -> a_story_of_transformation      
-
-    //Scene speciali
-        //Crescita olobino
-        - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoUno:
-            -> about_olobino
-
-        - about_olobino && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoDue:
-            -> again_about_olobino 
-
-        //Mentore esplode
-        // - are_two_entities_together(Mentor, PG) && LIST_COUNT(story_endedStories) == 3 and grimoire_fifthChar hasnt grimMentorRage:
-        //     -> mentor_rage
 
 
     //Niente da attivare:
