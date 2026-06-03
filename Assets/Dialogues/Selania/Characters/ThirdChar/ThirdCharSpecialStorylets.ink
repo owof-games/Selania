@@ -211,42 +211,126 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-    {charTag(ThirdCharacter, "neutral")}:       Racconto letto in biblioteca.
-    A racconto scelto, cambia anche logica in Special Storylets
-    Potrebbe aver senso il racconti di Maura, visto che lo percepirebbe come ostile (misandrico?)
-    - 
-            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                    -> glyph_choice_manager(false, waterC)->
-                
-                
-            + \ {charTag(PG, "neutral")}:               Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-                    -> glyph_choice_manager(false, aetherC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? da quali fondamenta parti?
-                    -> glyph_choice_manager(false, earthC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:               Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-                    -> glyph_choice_manager(false, airC)->
-                
-            
-            + \ {charTag(PG, "neutral")}:               Cosa vuoi? Come puoi cambiare questa situazione?
-                    -> glyph_choice_manager(false, fireC)-> 
-                
-            -
-            {
-                    - are_two_entities_together(FirstCharacter, PG):
-                    {
-                    - grimoire_firstChar has grimFirstThirdChar:
-                            {charTag(FirstCharacter, "annoyed")}:                   Commento infastidito di Chitarra.
+        {charTag(ThirdCharacter, "neutral")}:                           Non leggevo dall'ottantaquattro e sai una cosa {player_name}?
+        {charTag(ThirdCharacter, "angry")}:                             Non dovevo farlo nemmeno oggi.
+        {charTag(ThirdCharacter, "neutral")}:                           Ma il fratellino era così preso bene dall'aver aperto la biblioteca di merda che ho detto "Prendiamone uno a caso".
+                                                                        E il racconto a caso è stato quella roba piena di misandria che è <b>Polvere</b>.
+                                                                        So che l'hai letto anche tu.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                    Vecio: se mi dici che ti è piaciuto ti meno!
 
-                    - else:
-                            {charTag(FirstCharacter, "neutral")}:                   Commento empatico di Chitarra.    
-                    }
-            }    
-        -> third_char_closing_storylet ->
-        ->->
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "bored")}:                     E non dirmi che ti trovi d'accordo con lei o non sei la donna che pensavo tu fossi!
+
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:                   Ho paura a sapere cosa ne pensi.
+                }                                                                
+        {charTag(ThirdCharacter, "bored")}:                             Dico solo una cosa.
+                                                                        Se un uomo scrive una cosa del genere, così violenta verso gli uomini, lo bruciano sul rogo.
+                                                                        E invece quella robaccia è lì in biblioteca.
+                                                                        Una biblioteca dove può leggere anche il fratellino!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                   L'unica volta che ti preoccupi per {charNameTwo} guarda caso è per un racconto con una donna incazzata.
+                                                                        Non per tutte le parolacce che stai usando da quando sei qui, per dire.
+                        {
+                        - are_two_entities_together(FifthCharacter, PG) && fifthChar_slurDetector > 2:
+                        {charTag(Mentor, "neutral")}:                   Nonostante ti abbia già chiesto più volte di non dirle.                                                     
+                        }
+                }
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:                   A me quel racconto ha divertito tantissimo!
+                                                                        Soprattutto quando lei gli impedisce di scappare.
+                }
+    
+        + \ {charTag(PG, "neutral")}:                                   Capisco la tua frustrazione, ma lui ha ignorato tutti i <i>no</i> di lei: lei si sta proteggendo da lui.
+                -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "bored")}:                     Ovvio che vai subito a difendere anche altre donne immaginarie.
+                }
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "neutral")}:                           E per anni lei ha cercato di spiegargli le cose con calma, ma lui non l'ha mai ascoltata. 
+                }
+        {charTag(ThirdCharacter, "bored")}:                             Sembra la stessa logica di uno che spara preventivamente a un altro tizio solo perché potrebbe entrargli in casa a rubare.
+                                                                        Non ha senso questa roba.
+                                                                        Non è difesa.
+                                                                        Lui cerca di scappare.
+                                                                        Lei lo riacciuffa.
+                                                                        E ammette pure di essere pazza!
+        {charTag(ThirdCharacter, "jester")}:                            E tu stai qui a difenderla.
+        {charTag(ThirdCharacter, "bored")}:                             Io boh.             
+            
+        + \ {charTag(PG, "neutral")}:                                   Non puoi mettere sullo stesso piano i comportamenti di oppresso e oppressore.
+                -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                    Rido solo perché sei prevedibile, mi devi tirare fuori la cosa più astrusa possibile.
+                } 
+        {charTag(ThirdCharacter, "jester")}:                            Questa cosa è quasi tragicomica.
+        {charTag(ThirdCharacter, "neutral")}:                           Lei è lì gigante e pazza.
+        {charTag(ThirdCharacter, "jester")}:                            Lo dice anche lei che è pazza!
+        {charTag(ThirdCharacter, "bored")}:                             Ma no, per te lui è l'oppressore.
+                                                                        E lei l'oppressa.
+        {charTag(ThirdCharacter, "jester")}:                            Fai sembrare {charNameOne} normale quando ragioni così.                                                                
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "affectionate")}:              Ti lovvo {player_name}, non lo ascoltare.
+                {charTag(FirstCharacter, "curious")}:                   Non sa ancora quante cose non normali penso di lui!
+                }
+        
+        + \ {charTag(PG, "neutral")}:                                   Per quanto soddisfacente sul momento, nel lungo periodo la violenza non fa bene a nessuno.
+                -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                     Oh, non prendermi per pacifista ora!
+                } 
+        {charTag(ThirdCharacter, "neutral")}:                           Le relazioni sono un gran casino.
+                                                                        Però non è schiacciando un poveretto come se fosse un pistacchio che si risolve qualcosa.            
+        
+        + \ {charTag(PG, "neutral")}:                                   Per te è ingiustificata la rabbia di lei, o solo la violenza?
+                -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                     E rieccoci con le domande da Super Quark.
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                    E rieccoci con le domande da Super Quark.
+                                                                        Che palle, vecio!
+                } 
+        {charTag(ThirdCharacter, "bored")}:                             Non lo so.
+                                                                        Posso dirti che mi sta sul culo e bona?
+                                                                        Perché è tutta presa da sé.
+                                                                        Non si è manco chiesta come sta lui.
+                                                                        Ci gode pure a vederlo soffrire, la pazza.
+        {charTag(ThirdCharacter, "jester")}:                            Cosa cazzo dovrei giustificare o non giustificare del carattere di merda di questa tizia?    
+        
+        + \ {charTag(PG, "neutral")}:                                   La rabbia è un diritto di tutti, uomini e donne.
+                -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                     {player_name} ha scelto la violenza.
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                    {player_name} ha scelto la violenza.
+                }
+        {charTag(ThirdCharacter, "jester")}:                            Nuovo motto: "Non essere misandrico: odia tutti allo stesso modo!"
+        {charTag(ThirdCharacter, "neutral")}:                           Io non sono uno che si arrabbia molto, ti ci devi proprio impegnare per farmi incazzare, ma tanto.
+                                                                        E non mi piace la violenza.
+                                                                        Ti mette sempre dalla parte del torto.
+                                                                        Per questo 'sto racconto mi fa incazzare a bestia.
+                                                                        Perché magari lei c'aveva pure ragione, alla fine gliel'ha detto mille volte di no.
+                                                                        Ma lui col cervello duro come il marmo non l'ha mai ascoltata.
+        {charTag(ThirdCharacter, "jester")}:                            E capisco uno sberlotto o due per fargli riavviare il sistema e farlo ragionare.
+        {charTag(ThirdCharacter, "bored")}:                             Ma quella roba lì, tutta quella violenza lì, zero.
+                                                                        Espulsione immediata e sospensione fino a fine campionato.      
+        -
+        {charTag(ThirdCharacter, "neutral")}:                           Più tardi provo a leggere qualcosa.
+        {charTag(ThirdCharacter, "jester")}:                            Ma se mi esce un altro racconto come quello mi sentite urlare bestemmie per tutto 'sto cazzo di posto.
+            
+            -> third_char_closing_storylet ->
+            ->->
 
 
 === dog_third_char

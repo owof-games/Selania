@@ -56,13 +56,13 @@
             {charTag(FirstCharacter, "annoyed")}:               Questa te la do come buona.                        
             }                                                        
         }
-        {
-        - are_two_entities_together(Franco, PG):
-        {charTag(Franco, "question")}:                          E Franco? Franco cosa pensa?
-        {charTag(ThirdCharacter, "jester")}:                    Zio, tu devi pensare meno.
+            {
+            - are_two_entities_together(Franco, PG):
+            {charTag(Franco, "question")}:                      E Franco? Franco cosa pensa?
+            {charTag(ThirdCharacter, "jester")}:                Zio, tu devi pensare meno.
                                                                 E farti trovare pronto con la squadra del fantacalcio quando abbiamo finito questa robaccia!
 
-        }
+            }
         {charTag(ThirdCharacter, "neutral")}:                   E con te, {player_name}?
                                                                 Come sono andate le cose con te?                                                                                                        
 
@@ -182,7 +182,10 @@
         - third_char_main_storylets.two.aether:
                                                                 E la soluzione non è portarsi a letto delle turiste ubriache.
         }         
-
+        {
+        - grimoire_thirdChar has grimThirdCharNovel:
+                                                                O infuriarsi per un racconto dove una donna che subisce violenza si ribella.    
+        }
 
 
 

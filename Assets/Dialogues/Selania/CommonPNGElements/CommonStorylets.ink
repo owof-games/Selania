@@ -1395,7 +1395,7 @@
         {charTag(FirstCharacter, "neutral")}:                                   E quindi?
                                                                                 Mettiamo pure che lei è stata stronza, non è che questo rende tutte le donne stronze.
         {charTag(ThirdCharacter, "bored")}:                                     Ma fate tutte così!
-        {charTag(FirstCharacter, "bored")}:                                     Tutte chi?
+        {charTag(FirstCharacter, "annoyed")}:                                   Tutte chi?
         {charTag(FirstCharacter, "neutral")}:                                   Io non l'ho fatto.
                                                                                 Mia madre non l'ha fatto.
                                                                                 Tua madre?
@@ -1524,7 +1524,7 @@
                 }
                                                                                 Non serve trasformare un problema personale in un problema strutturale per ricevere dalle altre persone cura e supporto.
                                                                                 Hai tutto il diritto di chiederlo.
-        {charTag(FirstCharacter, "bored")}:                                     Non da me perché sinceramente fatico a sopportarti.
+        {charTag(FirstCharacter, "annoyed")}:                                   Non da me perché sinceramente fatico a sopportarti.
         {charTag(FirstCharacter, "neutral")}:                                   Ma chiedi aiuto.
                                                                                 Ne hai bisogno.
                                                                                 

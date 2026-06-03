@@ -60,13 +60,13 @@
     
     
     
-    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.Tirando fuori tutte le cose che mi ero tenuta dentro.E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.E sì, lo sono.Sono pazza.Quella pazzia che quando fuoriesce non puoi più controllare.
+    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no. A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro. Tirando fuori tutte le cose che mi ero tenuta dentro. E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza. E sì, lo sono. Sono pazza. Quella pazzia che quando fuoriesce non puoi più controllare.
 
-    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce.Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce.Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano.Sento che ha paura della mia pazzia.
+    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce. Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia. Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce. Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano. Sento che ha paura della mia pazzia.
     
-    E fa bene.La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.Prova a parlare, a chiedermi pietà, e io rido.La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.
+    E fa bene.La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza. Prova a parlare, a chiedermi pietà, e io rido. La malvagità stampata sul mio volto -Perché non provi a chiedermelo di nuovo?-.
     
-    Lui apre la bocca.Urlo più forte - CHIEDIMELO ANCORA! -Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.Mi accorgo che anche la mia pazzia sta volando via.La riacciuffo immediatamente “Tu resti qua con me.
+    Lui apre la bocca. Urlo più forte -CHIEDIMELO ANCORA!-. Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere. Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento. Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali. Mi accorgo che anche la mia pazzia sta volando via. La riacciuffo immediatamente -Tu resti qua con me-.
 
     //Check per achievement racconti
     -> achievements_onGame_statusUpdate_RM ->

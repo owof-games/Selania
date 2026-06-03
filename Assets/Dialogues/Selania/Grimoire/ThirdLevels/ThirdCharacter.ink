@@ -84,12 +84,11 @@
     {
         - grimoire_thirdChar has grimThirdCharKitchenAlone:
             Dopo aver preparato dei toast bruciati, {charNameThree} ha raccontato a {player_name} della sua vita al bar dei genitori, delle scarse doti culinarie della madre e dei pic nic organizzati per il padre, dove la madre di {charNameThree} cucinava molte cose poco buone che il padre di {charNameThree} mangiava per rispetto, mentre {charNameThree} e la sorella mangiavano di nascosto patatine e pop corn recuperati nei giorni precedenti al bar di famiglia. Durante l'ultimo pic nic assieme, la mamma di {charNameThree} ha fatto trovare un cestino pieno di patatine e pop corn, raccontando che sapeva del loro trucchetto durante i vecchi pic nic. Per questo {charNameThree} ha lasciato in cucina in dono per {player_name} un set da pic nic.
-
     }
 
     {
         - grimoire_thirdChar has grimThirdCharNovel:
-
+            La rabbia di {charNameThree} dopo aver letto <i>Polvere</i> di Maura nella biblioteca è stata palpabile. {charNameThree} ha definito il racconto "misandrico", e ha detto a {player_name} che se un uomo avesse scritto lo stesso racconto "lo bruciano sul rogo". Nonostante la rabbia, dopo la risposta di {player_name} {charNameThree} ha deciso di leggere un altro racconto della biblioteca. E anche se non è ortodosso, lasciamo un nostro commento: crediamo nella capacità di {player_name} di poter aiutare {charNameThree} a trovare una nuova strada, ma era dai tempi del <i>Movimento per la Rinascita Maschile</i> che non sentivamo discorsi del genere.
     }
 
     
