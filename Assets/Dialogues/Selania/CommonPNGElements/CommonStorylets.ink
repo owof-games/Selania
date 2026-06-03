@@ -543,7 +543,7 @@
                                                                         Ma ormai è diventato una merda, tra gli scarichi delle vecchie fabbriche e la gente che lo usa come una discarica.
         {charTag(ThirdCharacter, "melanchonic")}:                       Un po' come qui.
                                                                         E ormai le fabbriche le hanno chiuse quasi tutte, per cui c'è solo il brutto.
-                                                                        Solo il brutto.                                                                    
+                                                                        E niente lavoro.                                                                 
         {charTag(TheWitch, witch_state())}:                             <i>Ringraziamo {player_name} per essere qui.</i>
                                                                         <i>Pensiamo sia importante dire una cosa a {charNameThree}.</i>
                                                                         <i>Soprattutto perché stiamo notando che {charNameOne} tollera sempre meno {charNameThree}.</i>
@@ -585,32 +585,40 @@
         {charTag(ThirdCharacter, "neutral")}:                           I tuoi occhi.
                                                                         Ma è una cosa seria.
                                                                         Oh merda, è una cosa seria.
-        {charTag(PG, "neutral")}:                                       <i>Non abbiamo molto tempo, {charNameThree}, questa cosa è molto faticosa.</i>
+        {charTag(PG, "neutral")}:                                       <i>Non abbiamo molto tempo, {charNameThree}, essere una sola cosa è molto faticoso per noi.</i>
         {charTag(ThirdCharacter, "neutral")}:                           Me ne sto zitto, promesso.
                                                                         Zitto.
-        {charTag(PG, "neutral")}:                                       <i>La persona che sei ti sta stretta.</i>
+        {charTag(PG, "neutral")}:                                       <i>Ti osserviamo dal tuo arrivo, giovane uomo.
+                                                                        <i>Sentiamo che la persona che sei ti sta stretta.</i>
+                                                                        <i>Che il tuo cuore batte forte ogni volta che intravedi le cose che puoi essere.</i>
+                                                                        <i>Per poi rinchiudersi nella paura.</i>
+        {charTag(ThirdCharacter, "jester")}:                            Ah no, quella è la pressione alta, zia.
+        {charTag(ThirdCharacter, "bored")}:                             Un altro regalo di mio padre.                                                             
                                                                         <i>Senti che potresti provare ad essere qualcosa di diverso, ma non sai cosa.</i>
                                                                         <i>E ti spaventa, perché i tuoi amici, gli amici del calcetto, te lo ricordano ogni giorno: o sei come loro, o sei fuori.</i>
         {charTag(PG, "neutral")}:                                       <i>Solo.</i>
         {charTag(ThirdCharacter, "neutral")}:                           Non esageriamo.
-        {charTag(PG, "neutral")}:                                       <i>Ma ci sono altre persone, persone come {charNameOne} a cui potresti chiedere una mano.</i>
+        {charTag(PG, "neutral")}:                                       <i>E ci sono altre persone, persone come {charNameOne} a cui potresti chiedere una mano.</i>
                                                                         <i>Ma che vedono solo quello che sei stato, non quello che puoi diventare.</i>
-        {charTag(ThirdCharacter, "bored")}:                             Già.                                                                
-                                                                        <i>E così hai davanti un'unica strada: schiacciarti in qualcosa che ti fa male, prendendoti l'odio di chi ti potrebbe aiutare.</i>
+        {charTag(ThirdCharacter, "bored")}:                             Tutto questo è molto gay, zia.                               
+                                                                        <i>E così vedi un'unica strada: schiacciarti ancora di più in qualcosa che ti sta facendo del male, guadagnandoti l'odio di chi ti potrebbe mostrare una vita diversa.</i>
                                                                         <i>Ma sono qui per dirti che le tue strade sono infinite, {charNameThree}.</i>
-                                                                        <i>Tante quante le persone che puoi essere.</i>
-                                                                        <i>E anche se non è sempre facile, c'è sempre qualcuno che può volere bene a una persona che è totalmente sé stessa, senza maschere o menzogne.</i>
+                                                                        <i>Tante quante le persone che puoi immaginare.</i>
+                                                                        <i>E anche se ora non ti sembra possibile, c'è sempre qualcuno che vorrà bene a una persona che è totalmente sé stessa, senza maschere o menzogne.</i>
+                                                                        <i>Come è stato con il signor Poggi.</i>
+        {charTag(ThirdCharacter, "bored")}:                             Decisamente gay.                                                                
                                                                         <i>Noi ci abbiamo messo una vita per fare questo passo, e ora siamo tutt3.</i>
                                                                         <i>E {charNameThree} può essere chiunque voglia essere.</i>
         {charTag(ThirdCharacter, "jester")}:                            Anche Elon Musk?
                                                                         Mi farebbero comodo tutti i suoi soldi!                                                                
-        {charTag(PG, "neutral")}:                                       <i>Ora usciamo da questo corpo, ma sappi anima bella che siamo qui, sempre a proteggerti.</i>
+        {charTag(PG, "neutral")}:                                       <i>Ora usciamo da questo corpo, ma sappi, anima bella, che siamo qui, sempre a proteggerti.</i>
         {charTag(TheWitch, witch_state())}:                             <i>Ringraziamo {player_name}.</i>
                                                                         <i>La sensazione di confusione e ebbrezza dovrebbe finire in pochi secondi.</i>
-        {charTag(ThirdCharacter, "jester")}:                            Oh, sei tu {player_name}, vero?
+        {charTag(ThirdCharacter, "jester")}:                            Sei di nuovo tu {player_name}, vero?
                                                                         Che roba assurda.
-                                                                        E che marea di cazzate, vah.
-        {charTag(ThirdCharacter, "bored")}:                             Vero?                                                                
+        {charTag(ThirdCharacter, "bored")}:                             E che marea di cazzate, vah.
+                                                                        Cazzate enormi.
+                                                                        Vero?                                                                
 
         + [<i>Vorrei rispondere ma</i>]
         + [<i>la mia bocca è intorpidita</i>]
@@ -618,6 +626,7 @@
         + [<i>e tutto ciò che mi spaventa</i>]
         + [<i>scomparso.</>]
         -
+        {charTag(ThirdCharacter, "jester")}:                            Ma che faccia c'hai?!?
         {charTag(ThirdCharacter, "bored")}:                             Che posto di matti.
                                                                         In che posto di matti che sono finito!                                                                
 

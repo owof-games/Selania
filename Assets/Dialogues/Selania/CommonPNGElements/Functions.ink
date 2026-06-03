@@ -1063,6 +1063,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimThirdPreOpenNest
         }
 
+        {
+            - third_witch_follow_up && grimoire_thirdChar hasnt grimWitchThirdCharFollowUp:
+                ~ grimoire_thirdChar += grimWitchThirdCharFollowUp
+        }
+
         {        
             
             - open_the_nest && grimoire_thirdChar hasnt grimThirdOpenNest:

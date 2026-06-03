@@ -195,4 +195,44 @@
    {charTag(ThirdCharacter, "neutral")}:       {charNameThree} ha visto un cane.
 
     -> third_char_closing_storylet ->
-    ->->        
+    ->-> 
+
+
+
+=== third_witch_follow_up
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
+    {
+    - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
+    {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "neutral")}:                       Volevo giusto segnarmi da qualche parte un'idea per una melodia.
+            ~ change_entity_place(FirstCharacter)
+
+        - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "energy")}:                       È il momento per {charNameTwo} di scoprire un nuovo animale!
+            ~ change_entity_place(SecondCharacter)
+
+        - are_two_entities_together(FifthCharacter, PG):
+        {charTag(Mentor, "sad")}:                                   Spero non sia niente di grave {charNameThree}.
+        {charTag(ThirdCharacter, "jester")}:                        Tranquilla zia, giusto un piccolo chiarimento tra me e {player_name}.
+        {charTag(Mentor, "neutral")}:                               A dopo allora!
+            ~ change_entity_place(FifthCharacter)
+
+        - are_two_entities_together(Franco, PG):
+        {charTag(Franco, "neutral")}:                               Non fate caso a me.
+                                                                    Sto facendo i miei esercizi per sembrare serio.
+        {charTag(Franco, "reading")}:	                            Domani ci saranno i consigli di classe.                        
+
+        }
+    }
+   
+    
+
+    -> third_char_closing_storylet ->
+    ->-> 
