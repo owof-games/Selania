@@ -22,6 +22,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         private readonly ReactiveProperty<string?> _lastSpeakingCharacter = new(null);
 
+        private string? _currentSpeakingCharacter;
+
         /// <summary>
         ///     The display name last used for the speaking character.
         /// </summary>
@@ -157,6 +159,7 @@ namespace Selania.Rework.Components.DialogueBox
             if (isInProgress) return;
             dialogueBox.Hide();
             _lastSpeakingCharacter.Value = null;
+            _currentSpeakingCharacter = null;
             // no need to explicitly handle the show part: adding a line of text or a choice automatically shows the
             // dialogue panel
         }
@@ -209,6 +212,7 @@ namespace Selania.Rework.Components.DialogueBox
 
             // remember who was the last character speaking, and notify that to listeners
             _lastSpeakingCharacter.Value = character;
+            _currentSpeakingCharacter ??= character;
 
             if (displayName != _lastSpeakingDisplayName && character != null && displayName != null)
             {
@@ -235,7 +239,10 @@ namespace Selania.Rework.Components.DialogueBox
             }
 
             // handle the sigil descriptor
-            if (sigilDescriptor == null)
+            var actualCharacter = character ?? _currentSpeakingCharacter;
+            var isAffectedBySigils = actualCharacter != null &&
+                                     SettingsDialogueBox.IsCharacterAffectedBySigils(actualCharacter);
+            if (sigilDescriptor == null || !isAffectedBySigils)
             {
                 Logger.ZLogTrace($"Received a null descriptor from ActiveSigilInfo: hide the sigil");
                 dialogueBox.HideSigil();

@@ -89,6 +89,16 @@ namespace Selania.Rework.Components
                 : null;
         }
 
+        private readonly DerivedDictionaryProvider<string, bool, CharacterInfo> _characterInfoAffectedBySigilsProvider =
+            new(info => info.listName, info => info.AffectedBySigils);
+
+        /// <inheritdoc />
+        public bool IsCharacterAffectedBySigils(string character)
+        {
+            return _characterInfoAffectedBySigilsProvider.Get(characterInfo)
+                .TryGetValue(character, out var affectedBySigils) && affectedBySigils;
+        }
+
         #endregion
 
         #region dialogue box - choices
@@ -219,6 +229,10 @@ namespace Selania.Rework.Components
             [field: SerializeField]
             [field: Tooltip("Portrait used in the grimoire.")]
             public Sprite grimoirePortrait { get; private set; } = null!;
+
+            [field: SerializeField]
+            [field: Tooltip("Whether the given character is affected by sigils.")]
+            public bool AffectedBySigils { get; private set; }
 
             [field: SerializeField]
             [field: Tooltip("All the possible moods of this character.")]

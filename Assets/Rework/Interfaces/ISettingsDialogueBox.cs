@@ -122,5 +122,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="spriteName">Name of the sprite.</param>
         /// <returns>Sprite to use, or <c>null</c> if no sprite with the given name was found.</returns>
         Sprite? GetDialogueSprite(string spriteName);
+
+        /// <summary>
+        ///     Return whether the given character is affected by sigils.
+        /// </summary>
+        /// <param name="character"></param>
+        /// <returns></returns>
+        bool IsCharacterAffectedBySigils(string character);
     }
 }

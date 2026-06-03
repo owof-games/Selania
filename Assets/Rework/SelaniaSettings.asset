@@ -208,6 +208,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: firstChar_InkLevel
     <relationshipVariableName>k__BackingField: firstChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: c9ee8c9277009394984894fc40aeb107, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Chitarra_affectionate
       <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
@@ -236,6 +237,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: secondChar_InkLevel
     <relationshipVariableName>k__BackingField: secondChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 70e04f7858c0cd54390a8fb7d0f73abe, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Riccio_emotional
       <sprite>k__BackingField: {fileID: 21300000, guid: 38d1f8b1799e89a49b3aba3cb60f2701, type: 3}
@@ -256,6 +258,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: thirdChar_InkLevel
     <relationshipVariableName>k__BackingField: thirdChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 3f6d08cb6de2b944dab6bc728fd51e9a, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Boccale_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 2285801924b45234985b9da66eac5415, type: 3}
@@ -274,6 +277,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: fourthChar_InkLevel
     <relationshipVariableName>k__BackingField: fourthChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: NonnaMolotov_emotional
       <sprite>k__BackingField: {fileID: 21300000, guid: 38d1f8b1799e89a49b3aba3cb60f2701, type: 3}
@@ -292,6 +296,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Mentore_bored
       <sprite>k__BackingField: {fileID: 21300000, guid: 971a9d5006825f9449d83bcf792fa7d3, type: 3}
@@ -308,6 +313,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: fifthChar_InkLevel
     <relationshipVariableName>k__BackingField: fifthChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Mostro_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 6e9ab649598c61249a56275663efe151, type: 3}
@@ -318,6 +324,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 00fff9eb5d083484ab9d1afa02131b67, type: 3}
@@ -326,6 +333,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 7bb7f9594ff0b6f4c83d09b1ab9eaf29, type: 3}
@@ -342,6 +350,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 230549ef2b990b749b59bb376cfa82c1, type: 3}
@@ -350,6 +359,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 0c56c4884d759af4f81afd67c5682603, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 0383c1ace5e7cfd42b7fe8be66a63175, type: 3}
@@ -364,6 +374,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: a1e9b47196035de4daed753206560a4a, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: witch_new_moon
       <sprite>k__BackingField: {fileID: 21300000, guid: 3f52b03c44537ba41b49ad4d3a86530e, type: 3}
@@ -380,6 +391,7 @@ MonoBehaviour:
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: docNest
       <sprite>k__BackingField: {fileID: 21300000, guid: f7d8c5e2866f12c498cfd20a649648fe, type: 3}
