@@ -242,6 +242,10 @@
         
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        {
+        - grimoire_thirdChar has grimWitchThirdChar:
+                                                    Ci dice che la conversazione con {witch_actualName} gli è rimasta in testa come una brutta malattia, quando è tornato a casa, e sta continuando a farsi domande.   
+        }
         
 
 
@@ -378,6 +382,11 @@
         
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+
+        {
+        - grimoire_thirdChar has grimWitchThirdCharFollowUp:
+        Ci dice che dopo il follow up con la strega, la persona di cui ci parlava era il Poggi. gioia o amarezza a seconda degli esiti.     
+        }
         
         Dopo che mi hai risposto questa cosa nella lettera precedente:
         {

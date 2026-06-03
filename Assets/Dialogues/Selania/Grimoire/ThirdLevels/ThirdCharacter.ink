@@ -70,6 +70,10 @@
         - grimoire_thirdChar has grimWitchThirdChar:
             ~ grimWitchThirdChar_text()     
     }
+    {
+        - grimoire_thirdChar has grimWitchThirdCharFollowUp:
+            Dopo la nostra conversazione con {charNameThree}, {charNameThree} ha chiesto a {player_name} cosa noi intendessimo con le nostre parole. Dopo la risposta di {player_name}, {charNameThree} ha detto a {player_name} che su una cosa noi avevamo ragione: che c'è sempre qualcuno che vorrà bene a una persona che è totalmente sé stessa, senza maschere o menzogne. Ma che {charNameThree} ha avuto quella persona vicino per una vita, e ora ha cancellato {charNameThree} dalla sua vita.
+    }
 
     {
         - grimoire_thirdChar has grimThirdOpenNest:

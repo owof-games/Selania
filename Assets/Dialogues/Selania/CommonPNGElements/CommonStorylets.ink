@@ -1247,6 +1247,12 @@
                 }
                                                                         
         {charTag(ThirdCharacter, "neutral")}:                                   Dimmi: come aiutiamo questo giovanotto a diventare un uomo?
+                {
+                - grimoire_thirdChar has grimWitchThirdChar:                    
+                {charTag(ThirdCharacter, "bored")}:                             E dì alla tua amica medium pazza che c'hai nel cervello che non mi interessa la sua opinione.
+                                                                                Loro opinione.
+                                                                                Quel che è.                
+                }
                 
                 {
                 - are_two_entities_together(FirstCharacter, PG):

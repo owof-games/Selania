@@ -303,7 +303,7 @@
     {charTag(TheWitch, witch_state())}:                                 <i>Rimaniamo sorprese e un po' deluse dalla risposta di {player_name}.</i>                                                                             
     -
     {charTag(ThirdCharacter, "neutral")}:                               C'è sempre qualcuno che vuole bene anche al più idiota del pianeta, se quell'idiota è sé stesso senza troppe maschere.
-                                                                        Il problema per me è che quella persona l'ho avuta vicina per una vita, e ora non mi parla più.
+                                                                        Il problema per me è che quella persona l'ho avuta vicina per una vita, e ora mi ha cancellato dalla sua vita.
     {charTag(ThirdCharacter, "jester")}:                                Ma vai a farti due passi ora {player_name}!
                                                                         E cerca di non farti possedere di nuovo: c'avevi una faccia da idiota quando quella là se ne è andata dal tuo corpo!                                                                    
 
