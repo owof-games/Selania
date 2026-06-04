@@ -48,7 +48,7 @@
                 ~ cooking_animations_on()
                 ~ storage_glyphs(ThirdCharacter)
                 -> kitchen_moon_feedback -> 
-                -> first_theme
+                -> third_theme
                 
         + {grimoire_thirdChar has grimThirdCharTwo}\ {charTag(PG, "neutral")}:          Di ragazze.
                 ~ cooking_animations_on()
@@ -60,7 +60,7 @@
                 ~ cooking_animations_on()
                 ~ storage_glyphs(ThirdCharacter)
                 -> kitchen_moon_feedback -> 
-                -> third_theme
+                -> first_theme
        
             
         + \ {charTag(PG, "neutral")}:                                           Sai, forse preferirei cucinare più tardi.
@@ -98,7 +98,7 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma se domani tiriamo su una squadretta, che tipo di calciatore saresti?
             
             -> kitchen_moon_feedback -> 
         
@@ -124,7 +124,8 @@
             -> glyph_choice_manager(true, airC)->
         -  
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Secondo te si fa bene a perdonare qualcuno?
+                                                                                O è una mancanza di rispetto verso di sè?
     
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -170,7 +171,8 @@
             -> glyph_choice_manager(true, fireC)->
         -      
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Alla fine siamo soli, vecio.
+                                                                                Soli.
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -223,12 +225,13 @@
             
     
     = second_theme
+    //ragazze
         ~ temp charNameOne = translator(thirdChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
     
-    {charTag(ThirdCharacter, "neutral")}:                                   Frase
+    {charTag(ThirdCharacter, "neutral")}:                                       Frase
         
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -246,7 +249,9 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "jester")}:                                    Ma ora voglio farmi due risate con te vecio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Racconta un po' a zio {charNameThree} come imbrocchi?
+        {charTag(ThirdCharacter, "jester")}:                                    I dettagli sconci solo se c'hai anche qualche foto!
             
             -> kitchen_moon_feedback -> 
         
@@ -272,8 +277,10 @@
             -> glyph_choice_manager(true, airC)->
         -  
         
+
         {charTag(ThirdCharacter, "neutral")}:                                   Frase
-    
+                                                                                                                                                   
+
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
 
@@ -291,19 +298,22 @@
 
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Non farti idee strane, ma c'ho una cosa che voglio chiederti da un po'.
+                                                                                Questa non l'ho chiesta nemmeno ai ragazzi del calcetto.
+        {charTag(ThirdCharacter, "jester")}:                                    Vedi quanto mi fido di te?
+        {charTag(ThirdCharacter, "neutral")}:                                   Per te scopare è una cosa importante in una relazione?
         
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
             ~ kitchen_recipeAdjective = "onesta"
             -> glyph_choice_manager(true, earthC)->
 
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//Aromantico
             ~ kitchen_recipeAdjective = "allegra"
             -> glyph_choice_manager(true, airC)->
 
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//conta più l'emozione
             ~ kitchen_recipeAdjective = "empatica"
             -> glyph_choice_manager(true, waterC)->
 
@@ -313,7 +323,7 @@
             -> glyph_choice_manager(true, aetherC)->
 
 
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//che differenza di "sì" ci saranno tra fuoco e terra?
             ~ kitchen_recipeAdjective = "leale"
             -> glyph_choice_manager(true, fireC)->
         -      
@@ -345,7 +355,9 @@
             {charTag(ThirdCharacter, "neutral")}:                               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
             }
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Te ti ci vedi come padre?
+                                                                                Una o due bestiacce in giro per la casa, con cui incazzarti quando ci sono.
+                                                                                E sentire la mancanza appena se ne vanno a scuola?
         
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
             ~ kitchen_recipeComplement = "con brodo del terrore"
@@ -372,6 +384,7 @@
                 
     
     = third_theme
+    //lavoro
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -396,7 +409,10 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma a proposito di lavoro!
+                                                                                Domani ti dicono che puoi fare qualsiasi lavoro su questo pianeta.
+                                                                                Quale scegli?
+        {charTag(ThirdCharacter, "jester")}:                                    E <i>mantenut{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}</i> non vale                                                                        
             
             -> kitchen_moon_feedback -> 
         
@@ -405,7 +421,7 @@
             ~ kitchen_recipeNoun = "Zuppa di grano"
             -> glyph_choice_manager(true, earthC)->
 
-        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//riscrittora o simile
             ~ kitchen_recipeNoun = "Grigliata di seitan"
             -> glyph_choice_manager(true, waterC)->
             
@@ -441,7 +457,7 @@
 
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   E te, che rapporto c'hai col tuo capo?
         
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
             ~ kitchen_recipeAdjective = "onesta"
@@ -495,17 +511,20 @@
             {charTag(ThirdCharacter, "neutral")}:                               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
             }
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Domanda spinosa in arrivo.
+                                                                                Come te la sfanghi coi soldi?
+                                                                                Sei quel tipo di persona che li ha già spesi prima ancora che gli arrivino in mano?
+                                                                                O più una formichina?
         
-        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>   //Soldi? quali soldi?
             ~ kitchen_recipeComplement = "con brodo del terrore"
             -> glyph_choice_manager(true, waterC)->
             
-        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i> //gestione equilibrata
             ~ kitchen_recipeComplement = "con noce euforica"
             -> glyph_choice_manager(true, earthC)->
             
-        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i> //pianifico, ma poi le cose vanno a ramengo
             ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
             -> glyph_choice_manager(true, airC)->
     
