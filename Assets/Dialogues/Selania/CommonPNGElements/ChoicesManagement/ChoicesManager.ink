@@ -480,16 +480,16 @@
             - neutral:
                 {glyph_actualActiveSigil == ():
                     {shuffle:
-                        - {charTag(SecondCharacter, "neutral")}:            Ok.
-                        - {charTag(SecondCharacter, "neutral")}:            Certo.
-                        - {charTag(SecondCharacter, "neutral")}:            Mhm.
+                    - {charTag(SecondCharacter, "neutral")}:            Ok.
+                    - {charTag(SecondCharacter, "neutral")}:            Certo.
+                    - {charTag(SecondCharacter, "neutral")}:            Mhm.
                     }
                 - else:
                     {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} non riesce a distrarre {charNameTwo} dalla voglia di toccare le libellule.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} viene ignorato da{charNameTwo}, che pensa soltanto alle caramelle.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} vfa venire a {charNameTwo} voglia di dormire.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il suono di {sigils_translator(glyph_actualActiveSigil)} passa su {charNameTwo} senza destare la sua attenzione.</i>
                     }
                 }    
 
@@ -504,10 +504,10 @@
                     }
                 - else:
                     {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il profumo di {sigils_translator(glyph_actualActiveSigil)} per {charNameTwo} è come una stanza piena di caramelle.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Davanti ai colori di {sigils_translator(glyph_actualActiveSigil)}, {charNameTwo} pensa a un pomeriggio di gioco con suo fratello.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>La consistenza di {sigils_translator(glyph_actualActiveSigil)} ricorda a {charNameTwo} il prociorso.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} lascia nella bocca di {charNameTwo} un sapore di cioccolato.</i>
                     }
                 }        
 
@@ -521,10 +521,10 @@
                     }
                 - else:
                     {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} ricorda a {charNameTwo} le ore di ginnastica.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{charNameTwo} reagisce a {sigils_translator(glyph_actualActiveSigil)} come se fosse un castigo.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} fa pensare a {charNameTwo} a un cane bellissimo che non può coccolare.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} per {charNameTwo} sa di broccolo.</i>
                     }
                 }       
         }
