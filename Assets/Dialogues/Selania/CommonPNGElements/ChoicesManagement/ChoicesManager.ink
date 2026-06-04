@@ -159,6 +159,11 @@
 
 
 === updatePNGCounters(currentCharacter, GlyphC, variationAir, variationWater, variationAether, variationFire, variationEarth)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 // Salva valore di relazione in valore di relazione precedente
 {currentCharacter:
     - FirstCharacter:
@@ -420,54 +425,99 @@
     - FirstCharacter:
         {reaction:
             - neutral:
-                {shuffle:
-                    - {charTag(FirstCharacter, "neutral")}:         Già.
-                    - {charTag(FirstCharacter, "neutral")}:         Chiaro.
-                    - {charTag(FirstCharacter, "neutral")}:         Mhm.
-                }
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                        - {charTag(FirstCharacter, "neutral")}:         Già.
+                        - {charTag(FirstCharacter, "neutral")}:         Chiaro.
+                        - {charTag(FirstCharacter, "neutral")}:         Mhm.
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    }
+                }     
 
+            //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {shuffle:
-                    - {charTag(FirstCharacter, "affectionate")}:     Woah!
-                    - {charTag(FirstCharacter, "affectionate")}:     Totale!
-                    - {charTag(FirstCharacter, "curious")}:          Adoro!
-                    - {charTag(FirstCharacter, "curious")}:          Amo!
-                }
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                    - {charTag(FirstCharacter, "affectionate")}:        Woah!
+                    - {charTag(FirstCharacter, "affectionate")}:        Totale!
+                    - {charTag(FirstCharacter, "curious")}:             Adoro!
+                    - {charTag(FirstCharacter, "curious")}:             Amo!
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>L'energia di {sigils_translator(glyph_actualActiveSigil)} risuona piacevolmente in {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>La presenza di {sigils_translator(glyph_actualActiveSigil)} rasserena {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Le vibrazioni di {sigils_translator(glyph_actualActiveSigil)} si accordano a quelle di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il ritmo di {sigils_translator(glyph_actualActiveSigil)} e quello di {charNameOne} vibrano in armonia.</i>
+                    }
+                }    
 
             - negative:
-                {shuffle:
-                    - {charTag(FirstCharacter, "sad")}:             Bah.
-                    - {charTag(FirstCharacter, "annoyed")}:         Vabbè.
-                    - {charTag(FirstCharacter, "annoyed")}:         Meh...
-                }
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                    - {charTag(FirstCharacter, "sad")}:                 Bah.
+                    - {charTag(FirstCharacter, "annoyed")}:             Vabbè.
+                    - {charTag(FirstCharacter, "annoyed")}:             Meh...
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>La melodia di {sigils_translator(glyph_actualActiveSigil)} infastidisce {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} è un fastidioso graffio per le orecchie di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} e {charNameOne} non riescono a risuonare tra loro.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>La metrica di {sigils_translator(glyph_actualActiveSigil)} urta i nervi di {charNameOne}.</i>
+                    }
+                }      
         }
 
     - SecondCharacter:
         {reaction:
-
             - neutral:
                 {shuffle:
-                    - {charTag(SecondCharacter, "neutral")}:        Ok.
-                    - {charTag(SecondCharacter, "neutral")}:        Certo.
-                    - {charTag(SecondCharacter, "neutral")}:        Mhm.
+                    - {charTag(SecondCharacter, "neutral")}:            Ok.
+                    - {charTag(SecondCharacter, "neutral")}:            Certo.
+                    - {charTag(SecondCharacter, "neutral")}:            Mhm.
                 }
 
+            //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
                     - {charTag(SecondCharacter, "emotional")}:          Oooh!
                     - {charTag(SecondCharacter, "energy")}:             Wow!
                     - {charTag(SecondCharacter, "energy")}:             Siii!
-                }
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
+                    - {charTag(SecondCharacter, "emotional")}:          Oooh!
+                    - {charTag(SecondCharacter, "energy")}:             Wow!
+                    - {charTag(SecondCharacter, "energy")}:             Siii!
+                    }
+                }        
 
             - negative:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - {charTag(SecondCharacter, "angry")}:              No?
                     - {charTag(SecondCharacter, "angry")}:              ???
                     - {charTag(SecondCharacter, "melanchonic")}:        Ah.
                     - {charTag(SecondCharacter, "melanchonic")}:        Uff.
-                }
-
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(SecondCharacter, "angry")}:              No?
+                    - {charTag(SecondCharacter, "angry")}:              ???
+                    - {charTag(SecondCharacter, "melanchonic")}:        Ah.
+                    - {charTag(SecondCharacter, "melanchonic")}:        Uff.
+                    }
+                }       
         }
 
     - ThirdCharacter:
@@ -475,29 +525,47 @@
         {ThirdCharacterLetters == false:
 
             {reaction:
-
                 - neutral:
                     {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:        Ok.
-                        - {charTag(ThirdCharacter, "neutral")}:        Certo.
-                        - {charTag(ThirdCharacter, "neutral")}:        Mhm.
+                    - {charTag(ThirdCharacter, "neutral")}:             Ok.
+                    - {charTag(ThirdCharacter, "neutral")}:             Certo.
+                    - {charTag(ThirdCharacter, "neutral")}:             Mhm.
                     }
 
+                //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
                 - positive:
-                    {shuffle:
+                    {glyph_actualActiveSigil == ():
+                        {shuffle:
                         - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
                         - {charTag(ThirdCharacter, "neutral")}:          Oooh!
                         - {charTag(ThirdCharacter, "neutral")}:          Wow!
                         - {charTag(ThirdCharacter, "neutral")}:          Siii!
-                    }
+                        }
+                    - else:
+                        {shuffle:
+                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
+                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
+                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
+                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
+                        }
+                    }        
 
                 - negative:
-                    {shuffle:
+                    {glyph_actualActiveSigil == ():
+                        {shuffle:
                         - {charTag(ThirdCharacter, "neutral")}:         No?
                         - {charTag(ThirdCharacter, "neutral")}:         ???
                         - {charTag(ThirdCharacter, "neutral")}:         Ah.
                         - {charTag(ThirdCharacter, "neutral")}:         Uff.
-                    }
+                        }
+                    - else:
+                        {shuffle:
+                        - {charTag(ThirdCharacter, "neutral")}:         No?
+                        - {charTag(ThirdCharacter, "neutral")}:         ???
+                        - {charTag(ThirdCharacter, "neutral")}:         Ah.
+                        - {charTag(ThirdCharacter, "neutral")}:         Uff.
+                        }
+                    }     
 
             }
 
@@ -505,7 +573,6 @@
 
     - FourthCharacter:
         {reaction:
-
             - neutral:
                 {shuffle:
                     - Reazione neutra al sigillo.
@@ -513,24 +580,40 @@
                     - Un'altra ancora reazione neutra al sigillo.
                 }
 
+            //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - Reazione positiva al sigillo.
                     - Altra reazione positiva al sigillo.
                     - Un'altra ancora reazione positiva al sigillo.
-                }
+                    }
+                - else:
+                    {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                    }
+                }    
 
             - negative:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
                     - Un'altra ancora reazione negativa al sigillo.
-                }
-    }     
+                    }
+                - else:
+                    {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                    }
+                }   
+        }     
 
     - FifthCharacter:
         {reaction:
-
             - neutral:
                 {shuffle:
                     - Reazione neutra al sigillo.
@@ -538,29 +621,46 @@
                     - Un'altra ancora reazione neutra al sigillo.
                 }
 
+            //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - Reazione positiva al sigillo.
                     - Altra reazione positiva al sigillo.
                     - Un'altra ancora reazione positiva al sigillo.
-                }
+                    }
+                - else:
+                    {shuffle:
+                    - Reazione positiva al sigillo.
+                    - Altra reazione positiva al sigillo.
+                    - Un'altra ancora reazione positiva al sigillo.
+                    }
+                }    
 
             - negative:
-                {shuffle:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
                     - Un'altra ancora reazione negativa al sigillo.
-                }
-    }
+                    }
+                - else:
+                    {shuffle:
+                    - Reazione negativa al sigillo.
+                    - Altra reazione negativa al sigillo.
+                    - Un'altra ancora reazione negativa al sigillo.
+                    }
+                }   
+        } 
 
     - Mentor:
     {shuffle:
-        - {charTag(FifthCharacter, "neutral")}:         Sì sì.
-        - {charTag(FifthCharacter, "neutral")}:         Ok.
-        - {charTag(FifthCharacter, "neutral")}:         Eh.
-        - {charTag(FifthCharacter, "neutral")}:         Mhm.
-        - {charTag(FifthCharacter, "neutral")}:         Chiaro.
-        - {charTag(FifthCharacter, "neutral")}:         Già.
+    - {charTag(FifthCharacter, "neutral")}:                             Sì sì.
+    - {charTag(FifthCharacter, "neutral")}:                             Ok.
+    - {charTag(FifthCharacter, "neutral")}:                             Eh.
+    - {charTag(FifthCharacter, "neutral")}:                             Mhm.
+    - {charTag(FifthCharacter, "neutral")}:                             Chiaro.
+    - {charTag(FifthCharacter, "neutral")}:                             Già.
     }  
 }
 
