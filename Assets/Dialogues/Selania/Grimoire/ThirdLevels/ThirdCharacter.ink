@@ -347,7 +347,7 @@
         - grimoire_thirdChar has grimThirdCharLetterOne:
             <b>Prima lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_one()
+            -> letters_thirdCharLetters_one -> 
     }
     
     {
@@ -361,42 +361,42 @@
         - grimoire_thirdChar has grimThirdCharLetterThree:
             <b>Terza lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_three()
+            -> letters_thirdCharLetters_three -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterFour:
             <b>Quarta lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_four()
+            -> letters_thirdCharLetters_four -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterFive:
             <b>Quinta lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_five()
+            -> letters_thirdCharLetters_five -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterSix:
             <b>Sesta lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_six()
+            -> letters_thirdCharLetters_six -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterSeven:
             <b>Settima lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_seven()
+            -> letters_thirdCharLetters_seven -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterEight:
             <b>Ottava lettera</b>
             Saluto. <>
-                ~ letters_thirdCharLetters_eight()
+            -> letters_thirdCharLetters_eight -> 
     }
     
 

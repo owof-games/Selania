@@ -1441,10 +1441,6 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimThirdCharLetterSeven
     }
 
-    {
-        - third_character_notes.seven && grimoire_thirdChar hasnt grimThirdCharLetterSeven:
-                ~ grimoire_thirdChar += grimThirdCharLetterSeven
-    }
 
     {
         - third_character_notes.eight && grimoire_thirdChar hasnt grimThirdCharLetterEight:

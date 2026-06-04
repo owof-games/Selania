@@ -233,7 +233,7 @@
         
         
 
-=== function letters_thirdCharLetters_one()
+=== letters_thirdCharLetters_one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -268,7 +268,7 @@
                 }                                                
         }
         
-
+->->
 
 ===  letters_thirdCharLetters_two 
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -310,19 +310,19 @@
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.one.air: 
-                    // -> glyph_choice_manager(false, airC)->
+                    -> glyph_choice_manager(false, airC)->
 
                 - third_char_letters_choices.one.fire: 
-                    // -> glyph_choice_manager(false, fireC)->
+                    -> glyph_choice_manager(false, fireC)->
 
                 - third_char_letters_choices.one.earth: 
-                    Una cosa terra , mi sono sentito...
+                    -> glyph_choice_manager(false, earthC)->
 
                 - third_char_letters_choices.one.aether: 
-                    Una cosa spirito, mi sono sentito...
+                    -> glyph_choice_manager(false, aetherC)->
 
                 - third_char_letters_choices.one.water: 
-                    Una cosa acqua, mi sono sentito...
+                    -> glyph_choice_manager(false, waterC)->
                 }
 
             //E disattivo la variabile che blocca le varie reazioni.
@@ -334,7 +334,7 @@
 
     
 
-=== function letters_thirdCharLetters_three()
+=== letters_thirdCharLetters_three
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -362,10 +362,39 @@
                 Una cosa acqua, mi sono sentito...
 
         }
-        
-     
 
-=== function letters_thirdCharLetters_four()
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterThree:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
+
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.two.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.two.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.two.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.two.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.two.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+        
+->->     
+
+=== letters_thirdCharLetters_four
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -393,8 +422,39 @@
                 Una cosa acqua, mi sono sentito...
 
         }
+
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFour:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
+
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.three.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.three.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.three.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.three.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.three.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+
+->->        
      
-=== function letters_thirdCharLetters_five()
+=== letters_thirdCharLetters_five
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -428,7 +488,38 @@
 
         }
 
- === function letters_thirdCharLetters_six()
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFive:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
+
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.four.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.four.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.four.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.four.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.four.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+
+->->
+
+ === letters_thirdCharLetters_six
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -457,9 +548,38 @@
 
         }
 
-    
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSix:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
 
-=== function letters_thirdCharLetters_seven()
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.five.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.five.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.five.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.five.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.five.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+
+->->    
+
+=== letters_thirdCharLetters_seven
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -488,24 +608,172 @@
 
         }
 
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
+
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.six.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.six.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.six.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.six.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.six.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
+
         Mi sento pronto per la riscrittura, e per questo ti dico questo.
         //Secondo check relazione e inchiostro
         //Confessione      
 
+->->
 
-
-=== function letters_thirdCharLetters_eight()
+=== letters_thirdCharLetters_eight
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
         
+        {grimoire_thirdChar hasnt grimThirdCharLetterEight:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            Blah blah blah
+
+                //E poi procedo con gli effetti delle scelte.
+                //Prima riscrittura
+                {
+                - third_char_second_rewriting.one.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.one.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.one.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.one.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.one.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+                //Seconda riscrittura
+                {
+                - third_char_second_rewriting.two.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.two.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.two.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.two.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.two.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+                //Terza riscrittura
+                {
+                - third_char_second_rewriting.three.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.three.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.three.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.three.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.three.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+                //Quarta riscrittura
+                {
+                - third_char_second_rewriting.four.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.four.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.four.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.four.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.four.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+                //Finale
+                {
+                - third_char_second_rewriting.ending.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.ending.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.ending.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.ending.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.ending.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+                //Saluti
+                //Prima riscrittura
+                {
+                - third_char_second_rewriting.saluti.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_second_rewriting.saluti.fire:
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_second_rewriting.saluti.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_second_rewriting.saluti.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_second_rewriting.saluti.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //E disattivo la variabile che blocca le varie reazioni.
+           ~  ThirdCharacterLetters = false          
+
+        }
 
         {charTag(Documents, "writer_thirdChar")}:      Grazie per quello che mi hai detto, ora ci ragiono un poco sopra e poi ti scrivo.
         
 
-
+->->
 
 === function letters_fourthCharLetters_one()
         ~ temp charNameOne = translator(firstChar_ActualName)
