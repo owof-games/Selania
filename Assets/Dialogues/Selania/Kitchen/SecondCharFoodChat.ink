@@ -41,7 +41,7 @@
     {charTag(PG, "neutral")}:                           In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più... 
     {
         - grimoire_secondChar hasnt grimSecondCharEight:
-        {charTag(TheWitch, witch_state())}:             <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima lo conoscesse un po' meglio.</i>
+        {charTag(TheWitch, witch_state())}:             <i>{charNameTwo} ha altri temi che vorrebbe condividere con {player_name}, ma vorrebbe che {player_name} prima conoscesse {charNameTwo} un po' meglio.</i>
     }
 
         + \ {charTag(PG, "neutral")}:                                                           Parliamo di animali.

@@ -39,7 +39,7 @@
 
     {
         - grimoire_firstChar hasnt grimFirstCharNine:
-        {charTag(TheWitch, witch_state())}:                     <i>{charNameOne} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di conoscerla meglio.</i>
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameOne} ha altri argomenti importanti da condivide con {player_name}, se {player_name} deciderà di conoscere {charNameOne} meglio.</i>
     }
     
     + \ {charTag(PG, "neutral")}:                               Del rapporto che hai con le persone care.
