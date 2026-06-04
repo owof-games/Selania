@@ -478,11 +478,20 @@
     - SecondCharacter:
         {reaction:
             - neutral:
-                {shuffle:
-                    - {charTag(SecondCharacter, "neutral")}:            Ok.
-                    - {charTag(SecondCharacter, "neutral")}:            Certo.
-                    - {charTag(SecondCharacter, "neutral")}:            Mhm.
-                }
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                        - {charTag(SecondCharacter, "neutral")}:            Ok.
+                        - {charTag(SecondCharacter, "neutral")}:            Certo.
+                        - {charTag(SecondCharacter, "neutral")}:            Mhm.
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    }
+                }    
 
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
@@ -495,10 +504,10 @@
                     }
                 - else:
                     {shuffle:
-                    - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
-                    - {charTag(SecondCharacter, "emotional")}:          Oooh!
-                    - {charTag(SecondCharacter, "energy")}:             Wow!
-                    - {charTag(SecondCharacter, "energy")}:             Siii!
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }        
 
@@ -512,74 +521,90 @@
                     }
                 - else:
                     {shuffle:
-                    - {charTag(SecondCharacter, "angry")}:              No?
-                    - {charTag(SecondCharacter, "angry")}:              ???
-                    - {charTag(SecondCharacter, "melanchonic")}:        Ah.
-                    - {charTag(SecondCharacter, "melanchonic")}:        Uff.
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }       
         }
 
     - ThirdCharacter:
-        //Blocco le reazioni di PNG3 durante le lettere
-        {ThirdCharacterLetters == false:
+    //Blocco le reazioni di PNG3 durante le lettere
+    {ThirdCharacterLetters == false:
 
-            {reaction:
-                - neutral:
+        {reaction:
+            - neutral:
+                {glyph_actualActiveSigil == ():
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Ok.
                     - {charTag(ThirdCharacter, "neutral")}:             Certo.
                     - {charTag(ThirdCharacter, "neutral")}:             Mhm.
                     }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} è una mediocre serata al Baretto per {charNameThree}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il dribbling di {sigils_translator(glyph_actualActiveSigil)} è per {charNameThree} come un gol durante un'amichevole.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} entusiasma {charNameThree} tanto quanto un silenzioso cliente abituale.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} è per {charNameThree} come una partita da zero a zero.</i>
+                    }
+                }    
 
-                //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
-                - positive:
-                    {glyph_actualActiveSigil == ():
-                        {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
-                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
-                        }
-                    - else:
-                        {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:          Uuuuh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Oooh!
-                        - {charTag(ThirdCharacter, "neutral")}:          Wow!
-                        - {charTag(ThirdCharacter, "neutral")}:          Siii!
-                        }
-                    }        
+            //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
+            - positive:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
+                    - {charTag(ThirdCharacter, "neutral")}:             Oooh!
+                    - {charTag(ThirdCharacter, "neutral")}:             Wow!
+                    - {charTag(ThirdCharacter, "neutral")}:             Siii!
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} è come birra fresca nella gola di {charNameThree}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} ricorda a {charNameThree} i Mondiali del 2006.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} fa sentire {charNameThree} come un vero bomber.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Nel cuore di {charNameThree} {sigils_translator(glyph_actualActiveSigil)} segna una doppietta.</i>
+                    }
+                }        
 
-                - negative:
-                    {glyph_actualActiveSigil == ():
-                        {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:         No?
-                        - {charTag(ThirdCharacter, "neutral")}:         ???
-                        - {charTag(ThirdCharacter, "neutral")}:         Ah.
-                        - {charTag(ThirdCharacter, "neutral")}:         Uff.
-                        }
-                    - else:
-                        {shuffle:
-                        - {charTag(ThirdCharacter, "neutral")}:         No?
-                        - {charTag(ThirdCharacter, "neutral")}:         ???
-                        - {charTag(ThirdCharacter, "neutral")}:         Ah.
-                        - {charTag(ThirdCharacter, "neutral")}:         Uff.
-                        }
-                    }     
-
-            }
-
+            - negative:
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                    - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
+                    - {charTag(ThirdCharacter, "neutral")}:             Oooh!
+                    - {charTag(ThirdCharacter, "neutral")}:             Wow!
+                    - {charTag(ThirdCharacter, "neutral")}:             Siii!
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} ricorda a {charNameThree} una sciapa birra calda.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} lascia in bocca a {charNameThree} il sapore della birra analcolica.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} innervosisce {charNameThree}, che pensa all'autogol di Škriniar.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>{sigils_translator(glyph_actualActiveSigil)} per {charNameThree} è una partita persa a tavolino.</i>
+                    }
+                }     
         }
+
+    }
 
     - FourthCharacter:
         {reaction:
             - neutral:
-                {shuffle:
-                    - Reazione neutra al sigillo.
-                    - Altra reazione neutra al sigillo.
-                    - Un'altra ancora reazione neutra al sigillo.
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                        - Reazione neutra al sigillo.
+                        - Altra reazione neutra al sigillo.
+                        - Un'altra ancora reazione neutra al sigillo.
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    }
                 }
-
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
                 {glyph_actualActiveSigil == ():
@@ -590,9 +615,10 @@
                     }
                 - else:
                     {shuffle:
-                    - Reazione positiva al sigillo.
-                    - Altra reazione positiva al sigillo.
-                    - Un'altra ancora reazione positiva al sigillo.
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }    
 
@@ -601,13 +627,14 @@
                     {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
-                    - Un'altra ancora reazione negativa al sigillo.
+                    - Un'altra ancora negativa positiva al sigillo.
                     }
                 - else:
                     {shuffle:
-                    - Reazione negativa al sigillo.
-                    - Altra reazione negativa al sigillo.
-                    - Un'altra ancora reazione negativa al sigillo.
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }   
         }     
@@ -615,12 +642,20 @@
     - FifthCharacter:
         {reaction:
             - neutral:
-                {shuffle:
-                    - Reazione neutra al sigillo.
-                    - Altra reazione neutra al sigillo.
-                    - Un'altra ancora reazione neutra al sigillo.
+                {glyph_actualActiveSigil == ():
+                    {shuffle:
+                        - Reazione neutra al sigillo.
+                        - Altra reazione neutra al sigillo.
+                        - Un'altra ancora reazione neutra al sigillo.
+                    }
+                - else:
+                    {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
+                    }
                 }
-
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
                 {glyph_actualActiveSigil == ():
@@ -631,9 +666,10 @@
                     }
                 - else:
                     {shuffle:
-                    - Reazione positiva al sigillo.
-                    - Altra reazione positiva al sigillo.
-                    - Un'altra ancora reazione positiva al sigillo.
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }    
 
@@ -642,16 +678,17 @@
                     {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
-                    - Un'altra ancora reazione negativa al sigillo.
+                    - Un'altra ancora negativa positiva al sigillo.
                     }
                 - else:
                     {shuffle:
-                    - Reazione negativa al sigillo.
-                    - Altra reazione negativa al sigillo.
-                    - Un'altra ancora reazione negativa al sigillo.
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il canto di {sigils_translator(glyph_actualActiveSigil)} lascia {charNameOne} indifferente.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Gli accordi di {sigils_translator(glyph_actualActiveSigil)} non suscitano l'interesse di {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il fraseggio di {sigils_translator(glyph_actualActiveSigil)} viene ignorato da {charNameOne}.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:           <i>Il timbro di {sigils_translator(glyph_actualActiveSigil)} scivola su {charNameOne} senza lasciare tracce.</i>
                     }
                 }   
-        } 
+        }     
 
     - Mentor:
     {shuffle:
