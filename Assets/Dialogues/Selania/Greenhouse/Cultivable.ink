@@ -612,10 +612,10 @@
             -> main
           
     = step_four
-        {charTag(TheWitch, witch_state())}:   <i>La serra si muove e si scuote, le travi cigolano nel voler danzare. 
-        <i>I piedi di {player_name} battono il ritmo.
+        {charTag(TheWitch, witch_state())}:                 <i>La serra si muove e si scuote, le travi cigolano nel voler danzare. 
+                                                            <i>I piedi di {player_name} battono il ritmo.
         
-        + (colto)\ {charTag(PG, "neutral")}:         <i>Inizio a danzare.
+        + (colto)\ {charTag(PG, "neutral")}:                <i>Inizio a danzare.
             ~ growthCantoDelleCompagne = stepFour
             
             {charTag(TheWitch, witch_state())}:   <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.
