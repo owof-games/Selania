@@ -461,6 +461,8 @@
         
         {charTag(ThirdCharacter, "neutral")}:                                   Da quando è arrivata Petra c'è anche un'altra cosa che ho scoperto che mi piace del mio lavoro.
                                                                                 Insegnare come farlo.
+                                                                                Vedere che puoi insegnare qualcosa ti fa sentire rispettato, vero?
+                                                                                Importante.
         {charTag(ThirdCharacter, "jester")}:                                    Petra è una che ascolta, più o meno.
         {charTag(ThirdCharacter, "neutral")}:                                   Non so se è perché lavora al Baretto giusto per pagarsi gli studi, o se è perché è una generazione di pelandroni, ma fa il minimo.
                                                                                 Quando gliel'ho detto qualche giorno fa mi ha risposto che "viene pagata troppo poco per fare di più".
@@ -523,19 +525,47 @@
             -> glyph_choice_manager(true, fireC)->
         -      
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "bored")}:                                     Comunque anche se mi piace insegnare le cose a Petra, non sarebbe male guadagnare di più.
+                                                                                Il capo è un tirchio di merda, piange la fame e poi si è fatto il Natale a Dubai.
+        {charTag(ThirdCharacter, "neutral")}:                                   E io dico: se uno lavora male, guadagna male ed è giusto.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma se uno lavora bene, perché guadagna comunque male?
+                                                                                È una cosa da deficienti.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non mi piacere rompere i coglioni su queste cose, ma sono stanco di vivere con un coinquilino idiota e il suo gatto di merda che marca mezza casa.
+                                                                                Non so come dire, {player_name}, ma è una questione di rispetto, no?
+                                                                                Se faccio il mio lavoro e tu non lo riconosci, allora non mi stai rispettando.
+        {charTag(ThirdCharacter, "bored")}:                                     Soprattutto dopo che ti paro il culo con colleghi e fornitori perché tu non sai gestire un cazzo.
+        {charTag(ThirdCharacter, "jester")}:                                    Forse dovrei imparare a rispondergli a merda come fa Petra.
+        {charTag(ThirdCharacter, "angry")}:                                     Che poi alla fine è tutta colpa di quello sfigato di mio padre.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sapevi che quando ero piccolo, il locale, il Baretto, era nostro?
+                                                                                Non eravamo ricchi sfondati, ma stavamo bene, e io me la spassavo a giocare con i vecchi a carte, o a calcio coi miei amici.
+        {charTag(ThirdCharacter, "bored")}:                                     E poi bum, di punto in bianco abbiamo perso tutto, perché lui era incapace di gestire i soldi.
+                                                                                Di non fare favori ad amici di merda.
+        {charTag(ThirdCharacter, "neutral")}:                                   È tutta la vita che mi dico che non sarò un fallito come lui.
+                                                                                E ce la sto facendo.
+                                                                                Anche se.
+        {charTag(ThirdCharacter, "bored")}:                                     Merda.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando ho perso il vecchio lavoro, sono rimasto disoccupato per un anno.
+                                                                                Un incubo.
+                                                                                E il lavoro al Baretto l'ho trovato perché ha chiesto lui un favore a quello che ora è il mio capo.
+                                                                                In onore del rapporto che suo padre e il mio avevano da giovani.
+        {charTag(ThirdCharacter, "angry")}:                                     E ti giuro {player_name}, ti giuro che me lo immagino ogni volta che passa davanti al Baretto che se la sorride tutto felice perché alla fine ha vinto lui.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sto in piedi grazie a lui.
+        {charTag(ThirdCharacter, "bored")}:                                     Peccato che sono qui come lavoratore, quando sarei dovuto essere il cazzo di padrone.
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?//Qualcosa sul fatto che suo padre può avergli fatto un favore, ma il lavoro l'ha solo perché è capace.
                 -> glyph_choice_manager(false, earthC)->
                 
         + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Ma come ti stai vivendo questa cosa di essere un Boccale, quindi?
                 -> glyph_choice_manager(false, waterC)->
+                                                                                La odio.
+                                                                                Mi sembra un promemoria di un fallimento.
+                                                                                È da quando sono arrivato che 'sto cazzo di posto si prende gioco di me.
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
