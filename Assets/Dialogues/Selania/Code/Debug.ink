@@ -292,3 +292,49 @@
 
 
 ->->
+
+
+
+=== function debug_allGraphicsElementsEndingMode()
+//Step uno, cose della serra
+~ move_entity(Snail, Greenhouse)
+~ move_entity(BastonSound, Greenhouse)
+~ move_entity(RedBee, Greenhouse)
+~ move_entity(PurpleBee, Greenhouse)
+~ move_entity(PinkBee, Greenhouse)
+
+~ growthBaccaDellaAddolorata = stepFour
+~ growthBarbaDellInciampo = stepFour
+~ growthBastoneDellOzioso = stepFour
+~ growthBrinaDellImpossibile = stepFour
+~ growthCantoDelleCompagne = stepFour
+~ growthCardoAspinato = stepFour
+~ growthEderaDelleAmanti = stepFour
+~ growthErbaLiccia = stepFour
+~ growthFalsaPalude = stepFour
+~ growthLanaNotturna = stepFour
+~ growthLicheneDegliAbissi = stepFour
+~ growthNonTiScordarDiTe = stepFour
+~ growthOlobino = stepFour
+~ growthSpazzata = stepFour
+
+//Step due, l'albero
+~ player_firstStepStatus = RANDOM(1,5)
+~ player_secondStepStatus = RANDOM(1,5)
+~ player_thirdStepStatus = RANDOM(1,5)
+
+//Cucina
+~ move_entity(CookingWithFirstCharOBJ, Kitchen)
+~ move_entity(CookingWithSecondCharOBJ, Kitchen)
+~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+~ move_entity(CookingWithFranco, Kitchen)
+~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
+~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
+~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+~ move_entity(CookingWithThirdCharOBJ, Kitchen)
+~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)

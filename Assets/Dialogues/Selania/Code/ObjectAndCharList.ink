@@ -14,7 +14,7 @@
     LIST listStaticObjects = TheWitch, ReadingPlace, StartingNote, Arbustini, NightMode,  DoggoNoLetters
     
     LIST listConditionalObjects =  
-    CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, CookingWithThirdCharOBJ, EatingWithThirdCharOBJ, ThirdCharCookingAloneOBJ,
+    CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, SecondCharCookingAloneOBJ, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, CookingWithThirdCharOBJ, EatingWithThirdCharOBJ, ThirdCharCookingAloneOBJ,
     firstDumpOBJ, secondDumpOBJ, thirdDumpOBJ, fourthDumpOBJ, fifthDumpOBJ, CookingWithFourthCharOBJ, EatingWithFourthCharOBJ, CookingWithFifthCharOBJ, EatingWithFifthCharOBJ, FourthCharCookingAloneOBJ, FifthCharCookingAloneOBJ, CookingWithFranco,
     mapDump, mapKitchen, mapGreenhouse, mapLibrary, mapNest, 
     docDump, docKitchen, docGreenhouse, docNest, docLibrary, Clothespin,
@@ -26,7 +26,7 @@
     CloudOne, CloudTwo, CloudThree, 
     RedBee, PinkBee, PurpleBee, Snail,
     NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, 
-    FirstRipple, SecondRipple, ThirdRipple, KitchenFire, Bat,
+    FirstRipple, SecondRipple, ThirdRipple, KitchenFire,
     lighthouseAnimation
 
     LIST listButtons = MenuSave, MenuQuit, FromTrainStopToBedroom
@@ -54,4 +54,4 @@
     Documents
 
     //Tutte le cose legate all'albero principale
-    LIST listTreeParts = treeTrunk, treeBranches
+    LIST listTreeParts = treeTrunk, treeBranches, treeLeaves

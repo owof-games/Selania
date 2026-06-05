@@ -421,13 +421,6 @@
             -
 
 
-            {
-            - contentsKitchen has Bat:
-            {charTag(ThirdCharacter, "neutral")}:                               Questo pipistrello mi sta spaventando.
-
-            - else:
-            {charTag(ThirdCharacter, "neutral")}:                               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-            }
 
         {charTag(ThirdCharacter, "neutral")}:                                   Te ti ci vedi come padre?
                                                                                 Una o due bestiacce in giro per la casa, con cui incazzarti quando ci sono.

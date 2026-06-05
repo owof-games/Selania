@@ -182,7 +182,7 @@
                     -> glyph_choice_manager(false, aetherC)->
             -
         {
-            - contentsKitchen has Bat:
+            - contentsKitchen has SecondCharCookingAloneOBJ:
                 {charTag(FifthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
@@ -330,7 +330,7 @@
                     -> glyph_choice_manager(false, aetherC)->
             -
         {
-            - contentsKitchen has Bat:
+            - contentsKitchen has SecondCharCookingAloneOBJ:
                 {charTag(FifthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:
@@ -478,7 +478,7 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
         {
-            - contentsKitchen has Bat:
+            - contentsKitchen has SecondCharCookingAloneOBJ:
                 {charTag(FifthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
             - else:

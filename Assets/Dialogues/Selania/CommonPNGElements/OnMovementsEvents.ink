@@ -504,9 +504,7 @@ VAR letters_doggoPause = false
                     //Attivo il cooldown, così altre png non vanno subito a cucinare da sole
                     ~ kitchen_cookingAloneCoolDown = kitchen_cookingAloneCoolDownMAX
                     //E poi sposto gli elementi decorativi in cucina
-                    ~ move_entity(BatHouseFront, Kitchen)
-                    ~ move_entity(BatHouseRetro, Kitchen)
-                    ~ move_entity(Bat, Kitchen)
+                    ~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
                     ~ kitchen_kitchenOccupied = false
                     ~ cooking_animations_off()
                     {debug_kitchen: Riccio ha finito di cucinare.}

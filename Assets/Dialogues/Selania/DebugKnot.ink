@@ -14,3 +14,9 @@
     ~ debugRewriting()
    -> debug_knot 
     
++ [Imposta come se fossimo a gioco completo]
+    ~ debug_places_open()
+    ~ grimoire_isEnabled = true
+    ~ debug_allGraphicsElementsEndingMode()
+    -> debug_richGrimoire ->
+    -> debug_knot

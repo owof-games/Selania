@@ -340,7 +340,7 @@
             {charTag(FirstCharacter, "affectionate")}:          Ma vero.
         -
     {
-        - contentsKitchen has Bat:
+        - contentsKitchen has SecondCharCookingAloneOBJ:
         {charTag(FirstCharacter, "annoyed")}:                   Questo pipistrello mi sta spaventando.
         {charTag(FirstCharacter, "affectionate")}:              Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!
 

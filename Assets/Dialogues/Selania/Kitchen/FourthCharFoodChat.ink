@@ -182,13 +182,7 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
             -
-        {
-            - contentsKitchen has Bat:
-                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
 
-            - else:
-                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-        }
 
         {charTag(FourthCharacter, "neutral")}:       Frase
         
@@ -329,13 +323,6 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
             -
-        {
-            - contentsKitchen has Bat:
-                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
-
-            - else:
-                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-        }
 
         {charTag(FourthCharacter, "neutral")}:       Frase
         
@@ -478,13 +465,6 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
             -
-        {
-            - contentsKitchen has Bat:
-                {charTag(FourthCharacter, "neutral")}:       Questo pipistrello mi sta spaventando.
-
-            - else:
-                {charTag(FourthCharacter, "neutral")}:       Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-        }
 
         {charTag(FourthCharacter, "neutral")}:       Frase
         
