@@ -643,36 +643,36 @@
         -> remove_proposed_cultivable ->
         ~ growthCardoAspinato = stepOne
         
-        {charTag(TheWitch, witch_state())}:   <i>Odore di buio, di cielo senza stelle.
-        <i>Di bosco e nebbia e nessuna strada da imboccare.
-        <i>E una palla soffice deposta sul terreno.
+        {charTag(TheWitch, witch_state())}:                 <i>Odore di buio, di cielo senza stelle.
+                                                            <i>Di bosco e nebbia e nessuna strada da imboccare.
+                                                            <i>E una palla soffice deposta sul terreno.
                 -> main
     
     = step_two
-        {charTag(TheWitch, witch_state())}:   <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.
-        <i>I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronoun has him:lo|{player_pronoun has her:la|lə}} tengono distante.
+        {charTag(TheWitch, witch_state())}:                 <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.
+                                                            <i>I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronoun has him:lo|{player_pronoun has her:la|lə}} tengono distante.
                 -> main
     
     = step_three
-        {charTag(TheWitch, witch_state())}:   <i>È comparsa una gemma sulla cima dello stelo.
-        <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo chiede di provare paura, di allontanarsi, di arrendersi, di evitare ogni contatto.
+        {charTag(TheWitch, witch_state())}:                 <i>È comparsa una gemma sulla cima dello stelo.
+                                                            <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo chiede di provare paura, di allontanarsi, di arrendersi, di evitare ogni contatto.
                 -> main
     
     = step_four
-        {charTag(TheWitch, witch_state())}:   La resistenza della pianta si fa sempre più debole.
+        {charTag(TheWitch, witch_state())}:                 <i>La resistenza della pianta si fa sempre più debole.
         
-        + (colto)\ {charTag(PG, "neutral")}:         <i>Offro il mio aiuto.
+        + (colto)\ {charTag(PG, "neutral")}:                <i>Offro il mio aiuto.
             ~ growthCardoAspinato = stepFour
             
-            {charTag(TheWitch, witch_state())}:   <i>La piante cede, si stende tra le gambe di {player_name}.
-            <i>{player_name} allunga le dita, ne carezza il pelo, e al contatto, sente.
-            <i>Sente la luna, le stelle, le foglie nel vento, l'erba umida.
-            <i>Sente abbracci e sorrisi e mani che sorreggono.
-            <i>La pianta sboccia.
-            <i>Il <b>Cardo aspinato</b> sboccia nel supporto.
-            <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.
-            <i>Nell'accettare che aiutare è aiutarsi.
-                ~ move_entity(BrownBee, Greenhouse)
+            {charTag(TheWitch, witch_state())}:             <i>La piante cede, si stende tra le gambe di {player_name}.
+                                                            <i>{player_name} allunga le dita, ne carezza il pelo, e al contatto, sente.
+                                                            <i>Sente la luna, le stelle, le foglie nel vento, l'erba umida.
+                                                            <i>Sente abbracci e sorrisi e mani che sorreggono.
+                                                            <i>La pianta sboccia.
+                                                            <i>Il <b>Cardo aspinato</b> sboccia nel supporto.
+                                                            <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.
+                                                            <i>Nell'accettare che aiutare è aiutarsi.
+                ~ move_entity(PurpleBee, Greenhouse)
                 -> ending_cultivation
             
         + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
