@@ -10,7 +10,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
     
-        {charTag(ThirdCharacter, "neutral")}:                               Cuciniamo?
+        {charTag(ThirdCharacter, "neutral")}:                               Ehi {player_name}, sei pront{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} per cucinare qualche disastro assieme?
         
         + \ {charTag(PG, "neutral")}:                                       Sono pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
             -> cooking_with_third_char
@@ -26,10 +26,10 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
 
 
-        {charTag(PG, "neutral")}:                                           Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
+        {charTag(PG, "neutral")}:                                           Stavo pensando che nel mentre potremmo parlare un po'.
     
     - (top)
-        {charTag(PG, "neutral")}:                                           In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
+        {charTag(PG, "neutral")}:                                           E ripensando alle nostre conversazioni, mi farebbe piacere parlare di...
 
 
                 {
@@ -389,20 +389,41 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
 
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "jester")}:                                    Ah ah, ci sta.
+                                                                                Ed è la cosa che mi viene meglio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Lavorare dico, non parlare.
+                                                                                Anche se alla fine metà del mio lavoro è quello.
+        {charTag(ThirdCharacter, "jester")}:                                    Niente di troppo spirituale o psicologico, non ti preoccupare!
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma i clienti sono contenti quando ti ricordi i loro nomi.
+                                                                                Quando sai già cos'è che prendono.
+                                                                                Che Tizio non vuole il sale sulle patatine, o che Caio si siede al tavolo per ore con la stessa birra.
+                                                                                Amo le birre, ma la parte principale non è consigliarle o che.
+                                                                                È fare sentire il cliente a casa.
+        {charTag(ThirdCharacter, "bored")}:                                     E detto tra noi, anche per questo mi incazzo col Merlo e gli altri del calcetto.
+        {charTag(ThirdCharacter, "neutral")}:                                   Una sera il Giova mi dice "Beato te che fai ancora un lavoro da ragazzino".
+        {charTag(ThirdCharacter, "bored")}:                                     Secondo me se la sentono tanto per i soldi che fanno.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma c'è una cosa che non capiscono proprio: che le persone possono vivere senza l'ultima start up del cazzo lanciata dal Giova.
+                                                                                O quel particolare bullone stampato o che ne so io da Rocco.
+                                                                                E anche le case che costruisce il Merlo, alla fine non ce ne servono così tante.
+                                                                                Ma un posto dove staccare la testa e dimenticare il mondo.
+                                                                                Quello è un posto che salva le vite, {player_name}.
+                                                                                Che tiene le persone unite anche nei periodi di merda.
+        {charTag(ThirdCharacter, "bored")}:                                     Questa roba soprattutto il Merlo e il Giova non la capiranno mai.
+                                                                                                         
         
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Quando gli dici queste cose come reagiscono?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Commento sui bisogni fondamentali.
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Ne facciamo una questione di classe (apprezza a metà)
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Un po' come il cucinare assieme.
                 -> glyph_choice_manager(false, waterC)->
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -410,7 +431,7 @@
         -
 
         {charTag(ThirdCharacter, "neutral")}:                                   Ma a proposito di lavoro!
-                                                                                Domani ti dicono che puoi fare qualsiasi lavoro su questo pianeta.
+                                                                                {player_name}, domani ti dicono che puoi fare qualsiasi lavoro su questo pianeta.
                                                                                 Quale scegli?
         {charTag(ThirdCharacter, "jester")}:                                    E <i>mantenut{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}</i> non vale                                                                        
             
@@ -429,7 +450,7 @@
             ~ kitchen_recipeNoun = "Fagiolata"
             -> glyph_choice_manager(true, fireC)->
     
-        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//non lavoro? lui commenta con una battuta infastidita.
             ~ kitchen_recipeNoun = "Cimetta di broccolo"
             -> glyph_choice_manager(true, aetherC)->
 
@@ -438,7 +459,25 @@
             -> glyph_choice_manager(true, airC)->
         -  
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Da quando è arrivata Petra c'è anche un'altra cosa che ho scoperto che mi piace del mio lavoro.
+                                                                                Insegnare come farlo.
+        {charTag(ThirdCharacter, "jester")}:                                    Petra è una che ascolta, più o meno.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non so se è perché lavora al Baretto giusto per pagarsi gli studi, o se è perché è una generazione di pelandroni, ma fa il minimo.
+                                                                                Quando gliel'ho detto qualche giorno fa mi ha risposto che "viene pagata troppo poco per fare di più".
+                                                                                E allora le ho detto che se non lo fa lei deve farlo qualcun altro, e lei c'è un po' rimasta male.
+                                                                                Ma è in gamba Petra, anche se poi quando viene la sua ragazza si distrae un botto.
+        {charTag(ThirdCharacter, "jester")}:                                    E a volte litigano coi clienti.
+        {charTag(ThirdCharacter, "neutral")}:                                   Il capo dice che dobbiamo tenerci i cazzi nostri a casa quando lavoriamo qui.
+                                                                                Ma Petra gli risponde ogni volta che se i suoi clienti fanno dei commenti del cazzo perché è lesbica, allora i cazzi se li ritrova lì, a lavoro, e lì li deve affrontare.
+        {charTag(ThirdCharacter, "jester")}:                                    C'ha una grinta quella!
+        {charTag(ThirdCharacter, "neutral")}:                                   Mi ha anche difeso perché il capo dice che bevo troppo durante il turno.
+        {charTag(ThirdCharacter, "bored")}:                                     Non è che bevo troppo, reggo benissimo.
+                                                                                Tra l'altro ora quell'idiota c'ha mandato <i>in prova</i> la nuova fidanzata, una incapace che palesemente è lì solo per controllarci.
+                                                                                E quando provo a insegnarle le cose, mi guarda come se c'avesse il cervello completamente spento.
+        {charTag(ThirdCharacter, "jester")}:                                    Mi sa che è buona solo per scopare quella.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però mi fa strano che tante cose cambiano e tutto il resto, ma alla fine i trucchi che insegno alla Petra, quelli che uso io, sono gli stessi che mi ha insegnato mio padre anni fa, quando ero piccolo e il Baretto era ancora suo.
+        {charTag(ThirdCharacter, "bored")}:                                     Un paio di cose nella vita le ha imbroccate alla fine.
+        {charTag(ThirdCharacter, "jester")}:                                    L'altra cosa che ha imbroccato ovviamente è mettere questo bel pezzo di uomo al mondo!
     
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -449,7 +488,7 @@
         + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Domanda sul padre.
                 -> glyph_choice_manager(false, waterC)->
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
