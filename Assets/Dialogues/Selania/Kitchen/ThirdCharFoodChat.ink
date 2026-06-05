@@ -572,16 +572,13 @@
             -
 
 
-            {
-            - contentsKitchen has Bat:
-            {charTag(ThirdCharacter, "neutral")}:                               Questo pipistrello mi sta spaventando.
-
-            - else:
-            {charTag(ThirdCharacter, "neutral")}:                               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-            }
 
         {charTag(ThirdCharacter, "neutral")}:                                   Domanda spinosa in arrivo.
                                                                                 Come te la sfanghi coi soldi?
+            {
+            - aether1:
+            {charTag(ThirdCharacter, "bored")}:                                 Anche se hai detto che non ti piace lavorare.      
+            }                                                                    
                                                                                 Sei quel tipo di persona che li ha già spesi prima ancora che gli arrivino in mano?
                                                                                 O più una formichina?
         
