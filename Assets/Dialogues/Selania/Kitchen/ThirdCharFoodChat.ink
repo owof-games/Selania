@@ -80,8 +80,27 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
        
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
-        
+        {charTag(ThirdCharacter, "jester")}:                                    Ahah, potrebbe diventare il mio momento preferito da quando sono qui.
+        {charTag(ThirdCharacter, "neutral")}:                                   E scusa se non ti ho chiesto che squadra tifi, ma voglio avere ancora rispetto per te, vecio.
+        {charTag(ThirdCharacter, "bored")}:                                     Perché cosa faccio se te ne esci con una Juve, o il Milan?
+        {charTag(ThirdCharacter, "neutral")}:                                   Però ti ci porterei a giocare a calcetto con gli altri.
+                                                                                La cosa migliore fatta dal Poggi, sicuramente.
+                                                                                Dopo la piccola Olivia.
+        {charTag(ThirdCharacter, "jester")}:                                    E dopo avermi scelto come amico.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci manca nelle partitelle, lo stronzo.
+                                                                                Però ce la caviamo comunque.
+                                                                                Il Giova è una bomba in porta.
+        {charTag(ThirdCharacter, "jester")}:                                    Una bomba per l'età che c'ha.
+        {charTag(ThirdCharacter, "neutral")}:                                   Dario invece è velocissimo come attaccante.
+        {charTag(ThirdCharacter, "bored")}:                                     Peccato che c'abbia in mezzo ai coglioni il Merlo, che vuole sempre la palla e poi non sa mai segnare.
+        {charTag(ThirdCharacter, "neutral")}:                                   Due anni fa però siamo riusciti anche a tirare su un mezzo torneo informale, tra colleghi, amici e clienti.
+                                                                                Dona mi aveva appena lasciato.
+        {charTag(ThirdCharacter, "jester")}:                                    Calciavo ogni cazzo di palla come una bomba.
+                                                                                Alla fine siamo arrivati secondi.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci ha salvato Rocco ai rigori.
+                                                                                Quell'uomo è tanto silenzioso quanto letale.
+
+
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
 
@@ -98,7 +117,7 @@
                 -> glyph_choice_manager(false, aetherC)->
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Ma se domani tiriamo su una squadretta, che tipo di calciatore saresti?
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma se domani tiriamo su una squadretta, in che ruolo ti mettiamo vecio?
             
             -> kitchen_moon_feedback -> 
         
@@ -124,8 +143,29 @@
             -> glyph_choice_manager(true, airC)->
         -  
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Secondo te si fa bene a perdonare qualcuno?
-                                                                                O è una mancanza di rispetto verso di sè?
+        {charTag(ThirdCharacter, "neutral")}:                                   Ultimamente capita che le serata assieme saltano.
+                                                                                Ed è difficile che ci siamo tutti.
+                                                                                Tra figli, mogli e lavoro c'è sempre qualche cazzo di mezzo.
+                                                                                Col Poggi non era così, non è mai stato così, almeno fino all'arrivo di Olivia.
+        {charTag(ThirdCharacter, "jester")}:                                    Appena abbiamo iniziato a fare casino assieme, la nostra serata settimanale era garantita.
+        {charTag(ThirdCharacter, "neutral")}:                                   Si andava a vedere le partite, o ci facevamo una bevuta al Baretto, quando ancora non ci lavoravo.
+        {charTag(ThirdCharacter, "jester")}:                                    O andavamo a caccia di figa.
+                                                                                Quando c'avevamo vent'anni nessuno ci fermava, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Tra le serate in discoteca e poi le feste, la domenica eravamo sempre delle pezze.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma felici.
+                                                                                E dovevi vedere come piaceva alle ragazze.
+                                                                                Col fatto che non c'ha la faccia da idiota come la mia ma è tutto gentile, sorridente, e ti ascolta.
+        {charTag(ThirdCharacter, "neutral")}:                                   Cadevano tutte ai suoi piedi.
+        {charTag(ThirdCharacter, "jester")}:                                    Lo stronzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando si è trovato Amanda, sapevo che erano perfetti assieme.
+                                                                                Già la prima sera che si sono incontrati c'era un non so che, una roba che con Dona non ce l'ho mai avuta.
+        {charTag(ThirdCharacter, "bored")}:                                     Non uscivamo quasi mai a quattro, ma perché Dona non si sentiva all'altezza delle conversazioni dell'<i>ingegnera</i>, lo diceva sempre con disprezzo Dona quell'<i>ingegnera</i>.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando è nata Olivia e pian piano il Poggi è scomparso, ero convinto che fosse colpa di Dona.
+                                                                                Che Amanda non c'aveva voglia di crescere la figlia con una accanto che la guarda con fastidio e fa i finti sorrisini.
+                                                                                Ma quando Dona mi ha lasciato, non è cambiato niente.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Io boh.
+                                                                                Non capisco {player_name}, proprio non capisco.
+
     
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -144,7 +184,11 @@
 
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Forse sono un po' arrabbiato col Poggi.
+                                                                                Alla fine mi ha messo da parte per la sua famiglia.
+                                                                                Boh.
+                                                                                Secondo te si fa bene a perdonare qualcuno?
+                                                                                O è una mancanza di rispetto verso di sè?
         
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
             ~ kitchen_recipeAdjective = "onesta"
