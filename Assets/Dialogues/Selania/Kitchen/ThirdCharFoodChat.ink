@@ -101,8 +101,17 @@
                                                                                 Quell'uomo è tanto silenzioso quanto letale.
 
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           E di cosa parlate quando siete assieme?
                 -> glyph_choice_manager(false, airC)->
+                                                                                Di calcio, per lo più.
+                                                                                Al Merlo piace anche criticare gli altri.
+                                                                                Chi non c'è in quel momento, l'infame.
+                                                                                Qualcuno con cui abbiamo giocato la settimana prima, o un collega che conosciamo anche noi.
+                                                                                Per il Merlo sono tutti sempre troppo sfigati.
+                                                                                O perché non c'hanno la figa, o perché non c'hanno i soldi, o perché non fanno nulla tutto il giorno.
+                                                                                A volte fa ridere, perché dice le cose in un modo da coglione totale.
+                                                                                Ma la maggior parte delle volte è fottutissimamente pesante.
+
 
         + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
@@ -167,8 +176,15 @@
                                                                                 Non capisco {player_name}, proprio non capisco.
 
     
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Riesci a rimanere aggiornato sulla vita del Poggi?
                 -> glyph_choice_manager(false, airC)->
+                                                                                A volte durante le partitelle qualcuno se ne esce con qualche commento, e così scopro qualcosa di nuovo.
+                                                                                Ma mi rode un po' il culo quando parlano di lui, perché sono degli ingrati.
+                                                                                Soprattutto il Merlo.
+                                                                                Ogni tanto se ne esce con robe tipo che è contento che non c'è più nella chat di gruppo, perché mandava anche cose politiche o le foto della figlia "manco fosse il gatto", dice sempre il Merlo.
+                                                                                Dio, che coglione.
+                                                                                L'unica cosa che sa fare è mandare foto di tizie dei porno e lamentarsi di tutti.
+       
 
         + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
@@ -215,7 +231,27 @@
             -> glyph_choice_manager(true, fireC)->
         -      
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Alla fine siamo soli, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Comunque non credo gli scriverò presto, al Poggi.
+                                                                                Anche se c'ho una voglia matta di raccontargli questa situazione assurda.
+                                                                                Ma non voglio che pensa che sono pesante a dirgli che si sta comportando da stronzo.
+                                                                                Però potrei parlarci col Rocco.
+                                                                                Lui è strano, vecio, ma in modo buono.
+                                                                                Come il Poggi.
+                                                                                Non ci ho mai cavato più di due frasi di bocca per anni.
+                                                                                Poi ce ne andiamo una volta a Milano a festeggiare lo scudetto, e durante il viaggio del ritorno mi dice che è preoccupato per il suo vecio.
+                                                                                Mi dice che è malato, e che vorrebbe che venisse qui, ma che lui è testone e se ne vuole stare in Egitto.
+                                                                                E che è preoccupato perché i suoi figli hanno avuto dei problemi di razzismo, non ho capito cosa, robe legate agli affitti.
+                                                                                E così finisce che dorme poco perché non sa se rimanere qui in Italia o tornare in Egitto, e mi dice che gli sembra di impazzire e che non ne può parlare con sua moglie perché lei non vede l'ora di tornare dalla sua famiglia, dice che lei non è oggettiva, non vede tutti i problemi.
+                                                                                Continua così, a guidare e raccontarmi e poi a una certa si ferma e mi dice "Grazie {charNameThree}. Ho questa cosa addosso da mesi e avevo bisogno di parlarne con qualcuno, ma quando siamo a calcetto non mi viene da parlare. Merloni e Giovanni criticano sempre tutti, mi avrebbero solo fatto sentire uno sfigato."
+                                                                                Io ho risposto con una cosa stupida, ma la cosa più stupida che puoi pensare, e ci siamo messi a parlare dell'Inter.
+                                                                                Però da lì, abbiamo preso a uscire e berci una birretta dopo calcetto.
+                                                                                Ovviamente il Merlo ora fa battute sul fatto che siamo froci.
+                                                                                Alla fine si sta assieme giusto mezz'ora, a volte manco si dice davvero qualcosa.
+                                                                                Una sigaretta.
+                                                                                Ci si saluta, e via.
+                                                                                Ed è una cosa strana, perché mi piacciono questi momenti.
+                                                                                Ma mi fanno anche paura, perché mi ricordano una cosa, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Alla fine della faccenda siamo soli.
                                                                                 Soli.
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
@@ -235,15 +271,9 @@
             -
 
 
-            {
-            - contentsKitchen has Bat:
-            {charTag(ThirdCharacter, "neutral")}:                               Questo pipistrello mi sta spaventando.
-
-            - else:
-            {charTag(ThirdCharacter, "neutral")}:                               Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
-            }
-
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Merda, che pesante che sono stato.
+                                                                                Dovevamo parlare di calcio e invece.
+                                                                                Te non c'hai mai paura di risultare troppo pesante coi tuoi amici?
         
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
             ~ kitchen_recipeComplement = "con brodo del terrore"
