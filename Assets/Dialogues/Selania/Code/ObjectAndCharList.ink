@@ -24,7 +24,7 @@
     Birds,
     LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, 
     CloudOne, CloudTwo, CloudThree, 
-    RedBee, GoldenBee, PurpleBee, Snail,
+    RedBee, PinkBee, PurpleBee, Snail,
     NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, 
     FirstRipple, SecondRipple, ThirdRipple, KitchenFire, Bat,
     lighthouseAnimation

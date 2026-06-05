@@ -739,7 +739,7 @@
                 <i>Di fusione.
                 <i>Vivo.
                 
-                    ~ move_entity(GoldenBee, Greenhouse)
+                    ~ move_entity(PinkBee, Greenhouse)
                     -> ending_cultivation
             
             + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.
