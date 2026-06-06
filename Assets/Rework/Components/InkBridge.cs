@@ -76,7 +76,7 @@ namespace Selania.Rework.Components
         #region gamer mode
 
         /// <inheritdoc />
-        public Observable<bool> gamerMode => GetVariableObservable<bool>(gamerModeVariableName);
+        public Observable<bool> GamerMode => GetVariableObservable<bool>(gamerModeVariableName);
 
         #endregion
 
@@ -104,6 +104,16 @@ namespace Selania.Rework.Components
             return Observable.Create<T>(observer =>
             {
                 var story = GetStory();
+
+                if (!story.variablesState.Contains(variableName))
+                {
+                    Logger.ZLogError(
+                        $"Tried to observable variable {variableName}, but it's not defined in the story.");
+                    var error = new InvalidOperationException(
+                        $"Tried to observable variable {variableName}, but it's not defined in the story.");
+                    observer.OnCompleted(error);
+                    return Disposable.Empty;
+                }
 
                 story.ObserveVariable(variableName, EmitValue);
 
@@ -2600,8 +2610,11 @@ namespace Selania.Rework.Components
 
         private void OnStartSigilSupport()
         {
-            _sigilInfoStreamsSubject!.OnNext(GetVariableObservable<InkList>(currentSigilVariableName)
-                .CombineLatest(GetVariableObservable<int>(numSigilUsagesVariableName), (i, j) => (i, j))
+            var sigilDescriptorObservable = GetVariableObservable<InkList>(currentSigilVariableName)
+                .Do(_ => Logger.ZLogTrace($"Received {currentSigilVariableName}"))
+                .CombineLatest(
+                    GetVariableObservable<int>(numSigilUsagesVariableName)
+                        .Do(_ => Logger.ZLogTrace($"Received {numSigilUsagesVariableName}")), (i, j) => (i, j))
                 .Select(data =>
                 {
                     var (inkList, numUsages) = data;
@@ -2610,7 +2623,8 @@ namespace Selania.Rework.Components
                     var story = GetStory();
                     var glyphs = GetGlyphsFromSigilInkVariableValue(inkList, story);
                     return new IStorySigilSupport.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2], numUsages);
-                }));
+                });
+            _sigilInfoStreamsSubject!.OnNext(sigilDescriptorObservable);
         }
 
         private void CleanupSigilSupport()

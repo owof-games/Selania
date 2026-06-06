@@ -63,7 +63,9 @@ namespace Selania.Rework.Components.DialogueBox
 
             // update the text whenever it changes, and enrich it with sigil information
             parsedTextInfoObservable
-                .CombineLatestWhenFirstChanged(StorySigilSupport.ActiveSigilInfo, StoryGamerMode.gamerMode,
+                .CombineLatestWhenFirstChanged(
+                    StorySigilSupport.ActiveSigilInfo.Do(info => Logger.ZLogTrace($"Active Sigil Info data received")),
+                    StoryGamerMode.GamerMode.Do(info => Logger.ZLogTrace($"Gamer Mode data received")),
                     (parsedText, sigilDescriptor, gamerMode) => (parsedText, sigilDescriptor, gamerMode))
                 .Subscribe(CurrentTextChanged).AddTo(this);
 
@@ -116,7 +118,7 @@ namespace Selania.Rework.Components.DialogueBox
 
             // show the relationship status when in gamer mode and there's a valid level
             relationshipLevelObservable.Select(x => x.HasValue)
-                .CombineLatest(StoryGamerMode.gamerMode, (hasValidLevel, isGamerMode) => (hasValidLevel, isGamerMode))
+                .CombineLatest(StoryGamerMode.GamerMode, (hasValidLevel, isGamerMode) => (hasValidLevel, isGamerMode))
                 .Subscribe(data =>
                 {
                     var (hasValidLevel, isGamerMode) = data;

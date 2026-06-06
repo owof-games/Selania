@@ -7,6 +7,6 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         ///     An observable that informs whether we're in gamer mode or not.
         /// </summary>
-        Observable<bool> gamerMode { get; }
+        Observable<bool> GamerMode { get; }
     }
 }

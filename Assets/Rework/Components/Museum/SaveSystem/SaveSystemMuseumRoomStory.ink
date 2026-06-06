@@ -10,6 +10,9 @@ VAR fourthChar_InkLevel = ink_empty
 VAR fifthChar_InkLevel = ink_empty
 VAR firstChar_relationshipIndicator = 0
 VAR secondChar_relationshipIndicator = 0
+VAR glyph_actualActiveSigil = ()
+VAR glyph_actualSigilUses = 0
+
 
 
 VAR contentsRoom1 = (PG, ToRoom2, QueryState, ChangeState)
@@ -26,11 +29,11 @@ VAR state = 0
   ~ contentsRoom1 -= PG
   ~ contentsRoom2 += PG
 + [QueryState]
-    Lo stato corrente è {state}. #portrait:chitarra_affectionate #speaker:Chitarra
+    TheWitch, , witch_first_quarter: Lo stato corrente è {state}. #portrait:chitarra_affectionate #speaker:Chitarra
 + [ChangeState]
-    Incremento lo stato {state}. #portrait:chitarra_affectionate #speaker:Chitarra
+    TheWitch, , witch_first_quarter: Incremento lo stato {state}. #portrait:chitarra_affectionate #speaker:Chitarra
     ~ state += 1
-    Ora lo stato vale {state}. #portrait:chitarra_affectionate #speaker:Chitarra
+    TheWitch, , witch_first_quarter: Ora lo stato vale {state}. #portrait:chitarra_affectionate #speaker:Chitarra
 + {contentsRoom2 has PG} [ToRoom1]
   ~ contentsRoom1 += PG
   ~ contentsRoom2 -= PG

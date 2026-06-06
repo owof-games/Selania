@@ -585,6 +585,8 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox
+      <minimumLogLevel>k__BackingField: 0
     - <categoryPrefix>k__BackingField: Selania.Rework.Components.InkBridge
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2

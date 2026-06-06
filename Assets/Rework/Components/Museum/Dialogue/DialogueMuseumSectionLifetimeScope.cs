@@ -50,7 +50,7 @@ namespace Selania.Rework.Components.Museum.Dialogue
             {
             }
 
-            public Observable<bool> gamerMode => Observable.Return<bool>(false);
+            public Observable<bool> GamerMode => Observable.Return<bool>(false);
 
             public Observable<int> GetInkLevelObservable(string inkVariableName)
             {
