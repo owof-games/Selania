@@ -29,8 +29,10 @@ namespace Selania.Rework.Components
                     // otherwise, set up the ink bridge and return it afterward
                     var logger = resolver.Resolve<ILogger<InkBridge>>();
                     var saveSystemSettings = resolver.Resolve<ISettingsSaveSystem>();
-                    inkBridge.SetUp(logger, saveSystemSettings.saveDirPrefix,
-                        saveSystemSettings.minimumTimeBetweenAutomaticSaves);
+                    inkBridge.SetUp(logger, saveSystemSettings.SaveDirPrefix,
+                        saveSystemSettings.MinimumTimeBetweenAutomaticSaves,
+                        saveSystemSettings.MinimumNumberOfRetainedSaves,
+                        saveSystemSettings.MinimumTimeSpanOfSavesRetained);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)

@@ -28,8 +28,10 @@ namespace Selania.Rework.Components.Museum.SaveSystem
 
         private class SettingsSaveSystem : ISettingsSaveSystem
         {
-            public string saveDirPrefix => "museum_room_save_dir_";
-            public TimeSpan minimumTimeBetweenAutomaticSaves { get; } = TimeSpan.FromSeconds(10);
+            public string SaveDirPrefix => "museum_room_save_dir_";
+            public TimeSpan MinimumTimeBetweenAutomaticSaves { get; } = TimeSpan.FromSeconds(5);
+            public int MinimumNumberOfRetainedSaves => 5;
+            public TimeSpan MinimumTimeSpanOfSavesRetained { get; } = TimeSpan.FromSeconds(20);
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - used by DI

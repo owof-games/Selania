@@ -464,8 +464,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a17b8582b907504ab59b97ef03b9449, type: 3}
   - name: closeDialogue
     clip: {fileID: 8300000, guid: 7b3ec5938470579439f3dad96a76529a, type: 3}
-  <saveDirPrefix>k__BackingField: save_dir_
+  <SaveDirPrefix>k__BackingField: save_dir_
   minimumTimeBetweenAutomaticSavesInSeconds: 300
+  <MinimumNumberOfRetainedSaves>k__BackingField: 50
+  minimumTimeBetweenSavesRetainedInDays: 7
   airGlyphs:
   - {fileID: 21300000, guid: 8660bf5d2a46db145a551e0a1e4e661b, type: 3}
   - {fileID: 21300000, guid: 1904ed240a4786540a014ef27fdc402c, type: 3}
@@ -583,7 +585,7 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox.DialogueBoxInkBindings
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.InkBridge
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   <CrossFadeAnimationDurationForEvolvingObjects>k__BackingField: 1

@@ -148,11 +148,19 @@ namespace Selania.Rework.Components
         /// <param name="newLogger">The logger to use to log information about the story.</param>
         /// <param name="saveDirPrefix">Prefix used for the save directories.</param>
         /// <param name="minimumTimeBetweenAutomaticSaves">The minimum time between automatic saves.</param>
-        public void SetUp(ILogger<InkBridge> newLogger, string saveDirPrefix, TimeSpan minimumTimeBetweenAutomaticSaves)
+        /// <param name="minimumNumberOfRetainedSaves">When automatic saves start to get deleted, this is the minimum amount of save files that are always kept.</param>
+        /// <param name="minimumTimeSpanOfSavesRetained">When automatic saves start to get deleted, this is the minimum time span between now and the oldest save file.</param>
+        public void SetUp(ILogger<InkBridge> newLogger, string saveDirPrefix, TimeSpan minimumTimeBetweenAutomaticSaves,
+            int minimumNumberOfRetainedSaves, TimeSpan minimumTimeSpanOfSavesRetained)
         {
             _logger = newLogger;
             _saveDirPrefix = saveDirPrefix;
             _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves;
+            _minimumNumberOfRetainedSaves = minimumNumberOfRetainedSaves;
+            _minimumTimeSpanOfSavesRetained = minimumTimeSpanOfSavesRetained;
+
+            Logger.ZLogInformation(
+                $"Initializing ink bridge: save dir prefix = {_saveDirPrefix}, minimum time between automatic saves = {_minimumTimeBetweenAutomaticSaves}, _minimumNumberOfRetainedSaves={_minimumNumberOfRetainedSaves}, _minimumTimeSpanOfSavesRetained={_minimumTimeSpanOfSavesRetained}");
 
             OnStartRoomLocation();
 
@@ -212,6 +220,8 @@ namespace Selania.Rework.Components
         private void LogAndNotifyCurrentState()
         {
             var story = GetStory();
+
+            // log the current story step
             Logger.ZLogInformation($"Story text: {story.currentText}");
             foreach (var choice in story.currentChoices)
             {
@@ -563,7 +573,7 @@ namespace Selania.Rework.Components
                 // Lines starting with "@" have a special handling, and are never about dialogue
                 _conversationInProgressSubject!.OnNext(false);
 
-                // @interact is the moment we enter a room, and we try to save
+                // @interact is the moment we enter a room or finish a dialogue, and we try to save
                 if (currentText == "@interact") actionsAfterUpdate.saveIfNeeded = true;
             }
 
@@ -809,8 +819,10 @@ namespace Selania.Rework.Components
         ///     Get a file system enumerable which filters only directories containing save date.
         /// </summary>
         /// <param name="transform">The transform to apply to the file system entries.</param>
+        /// <param name="extraShouldIncludePredicate">An optional, extra predicate to filter out savefile system entries.</param>
         /// <returns>The file system enumerable.</returns>
-        private FileSystemEnumerable<T> GetSaveFileSystemEnumerable<T>(FileSystemEnumerable<T>.FindTransform transform)
+        private FileSystemEnumerable<T> GetSaveFileSystemEnumerable<T>(FileSystemEnumerable<T>.FindTransform transform,
+            FileSystemEnumerable<T>.FindPredicate? extraShouldIncludePredicate = null)
         {
             return new FileSystemEnumerable<T>(
                 Application.persistentDataPath,
@@ -824,10 +836,13 @@ namespace Selania.Rework.Components
                 ShouldIncludePredicate = ShouldIncludePredicate
             };
 
-            // get only the directories matching _saveDirPrefix
+            // get only the directories matching _saveDirPrefix (and the optional extraShouldIncludePredicate)
             bool ShouldIncludePredicate(ref FileSystemEntry entry)
             {
-                return entry.FileName.StartsWith(_saveDirPrefix, StringComparison.InvariantCultureIgnoreCase);
+                var shouldInclude =
+                    entry.FileName.StartsWith(_saveDirPrefix, StringComparison.InvariantCultureIgnoreCase);
+                if (!shouldInclude) return false;
+                return extraShouldIncludePredicate?.Invoke(ref entry) ?? shouldInclude;
             }
         }
 
@@ -841,17 +856,18 @@ namespace Selania.Rework.Components
             if (now < _minimumNextSaveTime) return;
 
             Logger.ZLogInformation(
-                $"Currently {now:G}, should not save before {_minimumNextSaveTime:G}, so we're saving.");
+                $"Should wait until {_minimumNextSaveTime:G} to save, and it's currently {now:G}, so we're saving.");
 
             // sanity checks and state updates
             if (_currentRoomName == null)
                 throw new InvalidOperationException("Trying to save, but _currentRoomName hasn't a value yet");
 
+            // update the time for the next save time
             _minimumNextSaveTime = now + _minimumTimeBetweenAutomaticSaves;
 
-            var mySaveNumber = GetSaveFileSystemEnumerable(GetFileSystemEntryNumber)
-                .DefaultIfEmpty(0)
-                .Max() + 1;
+            var (numSaveFiles, maxSaveNumber) = GetSaveFileSystemEnumerable(GetFileSystemEntryNumber)
+                .Aggregate((0, 0), (accumulate, index) => (accumulate.Item1 + 1, Math.Max(accumulate.Item2, index)));
+            var mySaveNumber = maxSaveNumber + 1;
             var descriptor = $"{_saveDirPrefix}{mySaveNumber:0000000}";
 
             // produce the serialized data
@@ -870,6 +886,7 @@ namespace Selania.Rework.Components
                 Directory.CreateDirectory(directoryName);
                 await File.WriteAllTextAsync(GetSaveFileAbsolutePath(descriptor), jsonSaveData);
                 await File.WriteAllTextAsync(GetInkStoryStateFileAbsolutePath(descriptor), jsonInkStoryState);
+                numSaveFiles++;
                 Logger.ZLogInformation($"Save performed in {directoryName}.");
             }
             catch (Exception)
@@ -889,12 +906,55 @@ namespace Selania.Rework.Components
                 throw;
             }
 
+            // check old save files to potentially remove them if possible
+            if (numSaveFiles <= _minimumNumberOfRetainedSaves)
+            {
+                Logger.ZLogTrace(
+                    $"Not removing any save directory because there are {numSaveFiles} save files, which is less or equal than the minimum number of save files {_minimumNumberOfRetainedSaves}");
+                return;
+            }
+
+            foreach (var saveDirectoryPathToRemove in GetSaveFileSystemEnumerable(GetFileSystemEntryPath, CanBeRemoved))
+                try
+                {
+                    Logger.ZLogInformation(
+                        $"Removing {saveDirectoryPathToRemove} because we have more than {_minimumNumberOfRetainedSaves} and the directory was older than {_minimumTimeSpanOfSavesRetained}.");
+                    Directory.Delete(saveDirectoryPathToRemove, true);
+                    Logger.ZLogTrace(
+                        $"Directory {saveDirectoryPathToRemove} removed.");
+                    numSaveFiles--;
+                    if (numSaveFiles > _minimumNumberOfRetainedSaves) continue;
+                    Logger.ZLogInformation(
+                        $"Reached {_minimumNumberOfRetainedSaves} saves, stop removing older saves.");
+                    return;
+                }
+                catch (Exception e)
+                {
+                    Logger.ZLogError(e, $"Error while trying to remove save directory {saveDirectoryPathToRemove}");
+                }
+
             return;
 
-            // find my save name
+            // extract the save number
             int GetFileSystemEntryNumber(ref FileSystemEntry entry)
             {
                 return int.Parse(entry.FileName[_saveDirPrefix.Length..]);
+            }
+
+            // extract the save directory path
+            string GetFileSystemEntryPath(ref FileSystemEntry entry)
+            {
+                return entry.ToFullPath();
+            }
+
+            // check whether the directory path can be removed
+            bool CanBeRemoved(ref FileSystemEntry entry)
+            {
+                // the "minimum number of saves" criteria is already checked in advance
+                // we use the creation time as an acceptable value for the actual time of save. A user could technically
+                // move the directory back and forth, thus changing its creation time, but then again this is savefile
+                // tampering, not much we can do.
+                return DateTimeOffset.UtcNow - entry.CreationTimeUtc > _minimumTimeSpanOfSavesRetained;
             }
         }
 
@@ -2521,6 +2581,9 @@ namespace Selania.Rework.Components
         ///     The actual observable that produces the current sigil info, and replays the last one on connection.
         /// </summary>
         private ConnectableObservable<IStorySigilSupport.SigilDescriptor?>? _publishedActiveSigilInfo;
+
+        private int _minimumNumberOfRetainedSaves;
+        private TimeSpan _minimumTimeSpanOfSavesRetained;
 
         private void SetupSigilSupport()
         {

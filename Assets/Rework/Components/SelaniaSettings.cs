@@ -484,14 +484,31 @@ namespace Selania.Rework.Components
         [field: Title("Save system")]
         [field: SerializeField]
         [field: Tooltip("Prefix of the directory names where saves are stored.")]
-        public string saveDirPrefix { get; private set; } = "save_dir_";
+        public string SaveDirPrefix { get; private set; } = "save_dir_";
 
-        [field: SerializeField] [field: Tooltip("Minimum time (in seconds) between automatic saves.")]
+        [SerializeField] [Tooltip("Minimum time (in seconds) between automatic saves.")]
         private int minimumTimeBetweenAutomaticSavesInSeconds = 5 * 60;
 
         /// <inheritdoc />
-        public TimeSpan minimumTimeBetweenAutomaticSaves =>
+        public TimeSpan MinimumTimeBetweenAutomaticSaves =>
             TimeSpan.FromSeconds(minimumTimeBetweenAutomaticSavesInSeconds);
+
+        /// <inheritdoc />
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "When automatic saves start to get deleted, this is the minimum amount of save files that are always kept.")]
+        public int MinimumNumberOfRetainedSaves { get; private set; } = 50;
+
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "When automatic saves start to get deleted, this is the minimum time span (in days) between now and the oldest save file.")]
+        private int minimumTimeBetweenSavesRetainedInDays = 7;
+
+        /// <inheritdoc />
+        public TimeSpan MinimumTimeSpanOfSavesRetained =>
+            TimeSpan.FromDays(minimumTimeBetweenSavesRetainedInDays);
 
         #endregion
 
