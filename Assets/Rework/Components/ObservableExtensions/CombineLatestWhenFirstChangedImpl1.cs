@@ -128,18 +128,23 @@ namespace Selania.Rework.Components.ObservableExtensions
                 return this;
             }
 
-            private void TryPublishOnNext()
+            private void TryPublishOnNext(bool isDriver)
             {
-                // check if all the observers have received a value
+                // if the source is the driver, always try to raise OnNext
+                var onNext = isDriver;
+
+                // check if we changed from not having all the values, to having them
                 if (!_hasValueAll)
                 {
                     if (!_observerDriver.HasValue || !_observer1.HasValue)
                         return;
+                    // we did! this means we now have to raise OnNext for sure
                     _hasValueAll = true;
+                    onNext = true;
                 }
 
-                // they did: invoke OnNext
-                _observer.OnNext(_resultSelector(_observerDriver.Value!, _observer1.Value!));
+                // invoke OnNext if necessary
+                if (onNext) _observer.OnNext(_resultSelector(_observerDriver.Value!, _observer1.Value!));
             }
 
             private void TryPublishOnCompleted(Result result, bool empty)
@@ -183,7 +188,7 @@ namespace Selania.Rework.Components.ObservableExtensions
                         // save the received value, but ask for OnNext to the parent only if this is connected to the driver
                         Value = value;
                         HasValue = true;
-                        if (_isDriver) _parent.TryPublishOnNext();
+                        _parent.TryPublishOnNext(_isDriver);
                     }
                 }
 
