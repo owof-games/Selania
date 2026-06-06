@@ -96,6 +96,7 @@ namespace Selania.Rework.Components.Grimoire
             grimoireBackground.DisableAllLeftButtons();
             foreach (var leftButton in descriptor.enabledLeftButtonNames)
                 grimoireBackground.EnableLeftButton(leftButton, true);
+            grimoireBackground.EnableLeftButton("Load", true);
 
             foreach (var achievement in descriptor.achievements)
                 grimoireBackground.SetAchievementStatus(achievement.achievementName, achievement.amount,
