@@ -148,10 +148,10 @@ VAR grimoire_isEnabled = false
 -> start
 
 === start
-Questo è un dialogo.
-Abilito il grimorio.
+TheWitch, , witch_first_quarter: Questo è un dialogo.
+TheWitch, , witch_first_quarter: Abilito il grimorio.
 ~ grimoire_isEnabled = true
-Il grimorio è abilitato.
+TheWitch, , witch_first_quarter: Il grimorio è abilitato.
 ~ firstChar_aether        = 5
 ~ firstChar_earth         = -2
 ~ firstChar_air           = 5
@@ -162,7 +162,7 @@ Il grimorio è abilitato.
 ~ firstChar_last_air      = 7
 ~ firstChar_last_water    = 9
 ~ firstChar_last_fire     = -9
-Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
+TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
 ~ firstChar_aether        = -5
 ~ firstChar_earth         = 2
 ~ firstChar_air           = -5
@@ -173,9 +173,9 @@ Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
 ~ firstChar_last_air      = -7
 ~ firstChar_last_water    = -9
 ~ firstChar_last_fire     = 9
-Ho invertito tutto di segno tutto per Chitarra.
-Questa è la seconda riga.
-E ora apro la scelta delle piante.
+TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.
+TheWitch, , witch_first_quarter: Questa è la seconda riga.
+TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
 -> grimoire_greenhouse_in_dialogue ->
 -> start
 
@@ -229,7 +229,7 @@ E ora apro la scelta delle piante.
         -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [Spazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third
     + [Index #bookmark:index]
         -> grimoire
@@ -300,7 +300,7 @@ E ora apro la scelta delle piante.
         -> grimoire_greenhouse_third_in_dialogue
     + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [Spazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
     + [Close #bookmark:close]
         @grimoireClose
