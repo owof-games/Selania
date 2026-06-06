@@ -38,3 +38,5 @@ Whenever a save file is produced, the system checks if it can remove old save fi
 - the save file to remove is older than the current one of at least `_minimumTimeSpanOfSavesRetained`
 
 Both these parameters are passed once again through `SetUp`.
+
+The interface `IStoryStateSerializer` is implemented to offer methods that return all available save states (GetSaveStates) and load a story / start a new story (StartStory).
