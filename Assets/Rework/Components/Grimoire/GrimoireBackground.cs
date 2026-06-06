@@ -298,7 +298,8 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that exposes clicks on top level buttons.
         /// </summary>
         public Observable<string> firstLevelButtonClick =>
-            topLevelButtons.Select(topLevelButton => topLevelButton.click).Merge();
+            topLevelButtons.Where(topLevelButton => topLevelButton.buttonName != "Load")
+                .Select(topLevelButton => topLevelButton.click).Merge();
 
         /// <summary>
         ///     An observable that exposes clicks on second level greenhouse buttons.
@@ -922,6 +923,10 @@ namespace Selania.Rework.Components.Grimoire
         public void SecondLevelRulesGrimoireSetText(string text)
         {
             secondLevelRulesGrimoire.SetRulesText(text);
+        }
+
+        public void OnLoadClick()
+        {
         }
     }
 }
