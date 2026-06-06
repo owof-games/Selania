@@ -59,7 +59,8 @@ namespace Selania.Rework.Components.DialogueBox
             /* INK => DIALOGUE BOX */
 
             // parse the lines that arrive from ink
-            var parsedTextInfoObservable = StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo);
+            var parsedTextInfoObservable =
+                StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo).Publish().RefCount();
 
             // update the text whenever it changes, and enrich it with sigil information
             parsedTextInfoObservable
