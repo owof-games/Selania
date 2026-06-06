@@ -156,21 +156,24 @@ namespace Selania.Rework.Components
         ///     Start the story. This sets up the internal state and runs the first <see cref="Continue" />.
         /// </summary>
         /// <param name="newLogger">The logger to use to log information about the story.</param>
+        /// <param name="disableSaves">Whether to disable the save system.</param>
         /// <param name="saveDirPrefix">Prefix used for the save directories.</param>
         /// <param name="minimumTimeBetweenAutomaticSaves">The minimum time between automatic saves.</param>
         /// <param name="minimumNumberOfRetainedSaves">When automatic saves start to get deleted, this is the minimum amount of save files that are always kept.</param>
         /// <param name="minimumTimeSpanOfSavesRetained">When automatic saves start to get deleted, this is the minimum time span between now and the oldest save file.</param>
-        public void SetUp(ILogger<InkBridge> newLogger, string saveDirPrefix, TimeSpan minimumTimeBetweenAutomaticSaves,
-            int minimumNumberOfRetainedSaves, TimeSpan minimumTimeSpanOfSavesRetained)
+        public void SetUp(ILogger<InkBridge> newLogger, bool disableSaves, string saveDirPrefix,
+            TimeSpan minimumTimeBetweenAutomaticSaves, int minimumNumberOfRetainedSaves,
+            TimeSpan minimumTimeSpanOfSavesRetained)
         {
             _logger = newLogger;
+            _disableSaves = disableSaves;
             _saveDirPrefix = saveDirPrefix;
             _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves;
             _minimumNumberOfRetainedSaves = minimumNumberOfRetainedSaves;
             _minimumTimeSpanOfSavesRetained = minimumTimeSpanOfSavesRetained;
 
             Logger.ZLogInformation(
-                $"Initializing ink bridge: save dir prefix = {_saveDirPrefix}, minimum time between automatic saves = {_minimumTimeBetweenAutomaticSaves}, _minimumNumberOfRetainedSaves={_minimumNumberOfRetainedSaves}, _minimumTimeSpanOfSavesRetained={_minimumTimeSpanOfSavesRetained}");
+                $"Initializing ink bridge: _disableSaves = {_disableSaves}, save dir prefix = {_saveDirPrefix}, minimum time between automatic saves = {_minimumTimeBetweenAutomaticSaves}, _minimumNumberOfRetainedSaves={_minimumNumberOfRetainedSaves}, _minimumTimeSpanOfSavesRetained={_minimumTimeSpanOfSavesRetained}");
 
             OnStartRoomLocation();
 
@@ -253,7 +256,7 @@ namespace Selania.Rework.Components
             UpdateAudio(tags);
 
             // in some cases, we must immediately process the next line (typically with @command lines)
-            if (actionsAfterUpdate.saveIfNeeded) SaveIfNeeded().Forget();
+            if (actionsAfterUpdate.saveIfNeeded && !_disableSaves) SaveIfNeeded().Forget();
             if (actionsAfterUpdate.@continue) Continue();
         }
 
@@ -2594,6 +2597,7 @@ namespace Selania.Rework.Components
 
         private int _minimumNumberOfRetainedSaves;
         private TimeSpan _minimumTimeSpanOfSavesRetained;
+        private bool _disableSaves;
 
         private void SetupSigilSupport()
         {

@@ -18,7 +18,7 @@ namespace Selania.Rework.Components.Museum.SaveSystem
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterInkBridgeInstance(inkBridge);
+            builder.RegisterInkBridgeInstance(inkBridge, false);
             builder.RegisterLogger();
             builder.RegisterSettings(settings,
                 settingsRooms: new SettingsRoom(rooms),
