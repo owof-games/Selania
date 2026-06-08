@@ -207,6 +207,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.60784316, g: 0.43529412, b: 0.07058824, a: 1}
     <inkVariableName>k__BackingField: firstChar_InkLevel
     <relationshipVariableName>k__BackingField: firstChar_relationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: c9ee8c9277009394984894fc40aeb107, type: 3}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
@@ -236,6 +237,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.078431375, g: 0.17254902, b: 0.19607843, a: 1}
     <inkVariableName>k__BackingField: secondChar_InkLevel
     <relationshipVariableName>k__BackingField: secondChar_relationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 70e04f7858c0cd54390a8fb7d0f73abe, type: 3}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
@@ -257,6 +259,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.47058824, g: 0.12941177, b: 0.08235294, a: 1}
     <inkVariableName>k__BackingField: thirdChar_InkLevel
     <relationshipVariableName>k__BackingField: thirdChar_relationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 3f6d08cb6de2b944dab6bc728fd51e9a, type: 3}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
@@ -276,6 +279,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.84705883, g: 0.2, b: 0.07450981, a: 1}
     <inkVariableName>k__BackingField: fourthChar_InkLevel
     <relationshipVariableName>k__BackingField: fourthChar_relationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
@@ -295,6 +299,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.36078432, g: 0.3529412, b: 0.29411766, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -312,6 +317,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.23529412, g: 0.44705883, b: 0.22352941, a: 1}
     <inkVariableName>k__BackingField: fifthChar_InkLevel
     <relationshipVariableName>k__BackingField: fifthChar_relationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
@@ -323,6 +329,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.84313726, g: 0.14901961, b: 0.3019608, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -331,7 +338,8 @@ MonoBehaviour:
   - <listName>k__BackingField: Carla
     <dialogueColor>k__BackingField: {r: 1, g: 0, b: 1, a: 1}
     <inkVariableName>k__BackingField: 
-    <relationshipVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: tutorial_CarlaRelationshipIndicator
+    <activateRelationshipIndicatorVariableName>k__BackingField: tutorial_CarlaRelationshipIndicator_enabled
     <grimoirePortrait>k__BackingField: {fileID: 0}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -349,6 +357,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.5686275, g: 0.46666667, b: 0.36862746, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -358,6 +367,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.08627451, g: 0.07058824, b: 0.6745098, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 0c56c4884d759af4f81afd67c5682603, type: 3}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -373,6 +383,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: a1e9b47196035de4daed753206560a4a, type: 3}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
@@ -390,6 +401,7 @@ MonoBehaviour:
     <dialogueColor>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
     <inkVariableName>k__BackingField: 
     <relationshipVariableName>k__BackingField: 
+    <activateRelationshipIndicatorVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
     <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
