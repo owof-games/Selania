@@ -713,7 +713,8 @@
                 }
         {charTag(ThirdCharacter, "neutral")}:                                   Mamma mi raccontava che quando era piccola d'inverno passavano le giornate tutti assieme in cucina, per risparmiare.
                                                                                 Sua mamma e la nonna facevano dei lavoretti in nero e chiacchieravano, e lei aiutava.
-                                                                                E in quegli inverni si discuteva e decideva del destino di famiglie e mariti e rapporti coi vicini.
+                                                                                E in quegli inverni si discuteva del destino di famiglie e mariti e rapporti coi vicini.
+                                                                                E a volte si prendevano decisioni per il resto dell'anno, o della vita.
                                                                                 Ecco, mi sembra più una cosa del genere.
                                                                                 Non è una roba spirituale, però fa stare assieme le persone, le fa parlare.        
         -
@@ -728,25 +729,46 @@
             -> kitchen_moon_feedback -> 
         
 
-        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//Qualcosa che ha a che fare con il costruire
-            ~ kitchen_recipeNoun = "Zuppa di grano"
+        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Schiaccio dei ceci della creazione.</i>
+            ~ kitchen_recipeNoun = "Purea di ceci"
             -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Un po' tipo un pittore?
+                                                                                O un muratore?
+        {charTag(ThirdCharacter, "jester")}:                                    Le cazzate che dicono valgono come creazione?
 
-        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//riscrittora o simile
-            ~ kitchen_recipeNoun = "Grigliata di seitan"
+        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Frullo delle melanzane dellə Riscrittorə.</i>
+            ~ kitchen_recipeNoun = "Crema di melanzane"
             -> glyph_choice_manager(true, waterC)->
-            
-        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//qualcosa che ha a che fare col trasformare
-            ~ kitchen_recipeNoun = "Fagiolata"
-            -> glyph_choice_manager(true, fireC)->
-    
-        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//non lavoro? lui commenta con una battuta infastidita.
-            ~ kitchen_recipeNoun = "Cimetta di broccolo"
-            -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Non il massimo della ambizione, credo?
+                                                                                Però ehi, hai trovato quello che ti piace!
+                                                                                Non è una cosa che possono dire tutti!
 
-        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//Qualcosa che ha a che fare con lo spiegare
-            ~ kitchen_recipeNoun = "Crema d'aglio"
+        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Pulisco della anguria della trasformazione.</i>
+            ~ kitchen_recipeNoun = "Gazpacho di anguria"
+            -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Tipo il birraio, che trasforma il luppolo in birra?
+                                                                                O più tipo il falegname?
+        {charTag(ThirdCharacter, "jester")}:                                    O il sottoscritto, che trasforma tutto in cazzate?                                                                            
+    
+        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Sminuzzo delle zucchine del rifiuto del lavoro.</i>
+            ~ kitchen_recipeNoun = "Parmigiana di zucchine"
+            -> glyph_choice_manager(true, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                            Non binario e per sempre precario. 
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Boh, io mio romperei le balle a non fare niente.
+                                                                                L'anno che sono rimasto disoccupato volevo morire.
+                                                                                Passavo il tempo a discutere con Donatella.
+                                                                                O al Baretto a vedere se c'era qualcuno a cui attaccare una pezza.
+        {charTag(ThirdCharacter, "jester")}:                                    Però mi ero seguito tutto il calcio mercato, e mi sono sparato anche le partite CAF Confederation Cup.   
+
+        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Preparo dei peperoni della divulgazione.</i>
+            ~ kitchen_recipeNoun = "Cartoccio di peperoni"
             -> glyph_choice_manager(true, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Un po' come Piero Angela?
+                                                                                O un professore di scuola?
+        {charTag(ThirdCharacter, "jester")}:                                    O vuoi essere pagat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} per raccontare in giro quanto sono bono e bravo?                                                                        
         -
             //Intermezzo culinario
             ~ third_char_kitchen_comments(twoKitchen)  
@@ -775,48 +797,128 @@
     
         + \ {charTag(PG, "neutral")}:                                           Perché l'insegnare dovrebbe avere a che fare col ricevere rispetto?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   È un po' quella roba da "rispetta i saggi", no?
+        {charTag(ThirdCharacter, "jester")}:                                    E lo so che non sono proprio un saggio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però quando uno ha qualcosa da insegnare, allora un po' è arrivato, no?
+        {charTag(ThirdCharacter, "jester")}:                                    O per lo meno, lo era quando sono cresciuto io.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sai qualcosa, la insegni, diventi un riferimento.
+                                                                                Un tipo da rispettare, se non proprio sempre, almeno nel suo campo.
+                                                                                                                                                                              
 
         + \ {charTag(PG, "neutral")}:                                           Quindi vorresti essere un riferimento, po' come {charNameFive}.
                 -> glyph_choice_manager(false, earthC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                             Di tutti gli esempi, perché proprio la zia?
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Mmm.
+                                                                                Forse sì, sai?
+                                                                                Cioè, lei alla fine sta qui e ti fa fare le tue cose, ma vai da lei se non capisci qualcosa, perché ne sa più di te.
+                                                                                E le porti rispetto.
+                                                                                Non sarebbe male se fosse così anche al bar.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma figurati se Petra mi tratta come tu tratti {charNameFive}!       
                 
         + \ {charTag(PG, "neutral")}:                                           Quello vi chiede di lasciare i problemi personali a casa, e dà il lavoro alla fidanzata. Da sberle.
                 -> glyph_choice_manager(false, fireC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                             Io al mio bar il lavoro a Dona l'avrei dato.
+                                                                                Ma Dona è una che sgobbava.
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            Non è tanto che è la tipa, ma che è una incapace.                                                                
+                }
+        {charTag(ThirdCharacter, "bored")}:                                     Però non hai idea di quanto mi rode il culo, {player_name}.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ogni tanto l'idiota se ne salta fuori con "dall'anno prossimo metto i premi di produzione".
+                                                                                Oppure "{charNameThree}! Da questo fine settimana devi sempre proporre qualcosa da mangiare quando ordinano da bere, o il locale chiude!"
+        {charTag(ThirdCharacter, "bored")}:                                     E poi lui se ne va in ufficio a tirare.
+        {charTag(ThirdCharacter, "neutral")}:                                   Perché lo sappiamo tutti.
+        {charTag(ThirdCharacter, "bored")}:                                     O ha una "urgenza" a casa e si porta via la fidanzata, lasciandoci scoperti.
+        {charTag(ThirdCharacter, "neutral")}:                                   Che poi meglio così che quando c'è lei.
+        {charTag(ThirdCharacter, "jester")}:                                    Settimana scorsa ha messo gli hamburger con la stagnola nel microonde.
+        {charTag(ThirdCharacter, "bored")}:                                     Ho ancora nel naso la puzza di plastica fusa.
             
         + \ {charTag(PG, "neutral")}:                                           Qual è il tuo ricordo più bello al Baretto?
                 -> glyph_choice_manager(false, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != her:
+                {charTag(ThirdCharacter, "bored")}:                             Che è, vuoi farmi male?
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:                           Woah, leggera questa.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Anche se ne ho tanti di quando ero piccolo, il più bello è recente.
+                                                                                Il merda era in vacanza ai fiordi o non ricordo dove, ma noi abbiamo avuto una ondata di tempo di merda che non avevo mai visto.
+        {charTag(ThirdCharacter, "bored")}:                                     Era un martedì e non sapevo nemmeno se aprire, non arriva tanta gente di solito, ma lui ha rotto il cazzo a smisura perché andassi lo stesso.
+        {charTag(ThirdCharacter, "neutral")}:                                   L'unica cliente che mi entra per tutta la sera è questa vecchia, Sandra.
+                                                                                Se ne sta lì per due ore buone con la sua tisana, e poi fa il nome di mia mamma.
+                                                                                Salta fuori che la conosceva, che era amica di mia nonna.
+                                                                                Fuori il temporale peggiore degli ultimi anni, e lei ha passato la sera a raccontarmi del suo passato, di mia nonna, di mamma da piccola.
+                                                                                Ci siamo sparati un toast e una birra.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Mi è sembrato di averla lì con me per un attimo.
+
                 
         + \ {charTag(PG, "neutral")}:                                           Petra sembra una che sa cos'è la solidarietà tra colleghi.
                 -> glyph_choice_manager(false, aetherC)->
-            ma non ha ancora capito come funziona la friggitrice.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != they:
+                {charTag(ThirdCharacter, "bored")}:                             Mmm.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Lei ci tiene a queste cose qui, ma tanto.
+                                                                                A volte arriva con articoli di legge.
+                                                                                Ha portato le buste paga dai sindacati ed è tornata dicendomi quante cose non vanno.
+                                                                                Ma a me non va di rompere le balle.
+        {charTag(ThirdCharacter, "jester")}:                                    Le dico sempre che la ascolterò solo quando avrà imparato a fare una spillatura decente.
+        {charTag(ThirdCharacter, "neutral")}:                                   E ora la maledetta sta migliorando a vista d'occhio.                                                                        
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(threeKitchen)
         
         {charTag(ThirdCharacter, "neutral")}:                                   E te, che rapporto c'hai col tuo capo?
         
-        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//di rispetto
-            ~ kitchen_recipeAdjective = "onesta"
+        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Mondo dei durian della stima.</i>
+            ~ kitchen_recipeAdjective = "stima"
             -> glyph_choice_manager(true, earthC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Butta bene, {player_name}.
+                                                                                Alla fine non è mica scontata come cosa.
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//ubbidisco solo se la richiesta ha senso
-            ~ kitchen_recipeAdjective = "allegra"
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Affetto della carambola della accondiscendenza selettiva.</i>
+            ~ kitchen_recipeAdjective = "accondiscendenza selettiva"
             -> glyph_choice_manager(true, airC)->
-
+        {charTag(ThirdCharacter, "jester")}:                                    In soldoni: gli dai ragione fino a quando non dice stronzate?
+        {charTag(ThirdCharacter, "neutral")}:                                   A volte è davvero dura stare zitti quando un capo dice una cosa che non ha senso.
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//di confidenza
-            ~ kitchen_recipeAdjective = "empatica"
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Sbollento dei quadong della confidenza.</i>
+            ~ kitchen_recipeAdjective = "confidenza"
             -> glyph_choice_manager(true, waterC)->
-
+        {charTag(ThirdCharacter, "bored")}:                                     Ma vi raccontate i cazzi vostri?
+                                                                                O più una cosa di fiducia?
+                                                                                Già i clienti sanno troppe cose su di noi.
+                                                                                Non voglio sapere cosa succede se le sa anche il capo, guarda.
     
-        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//non accetto le gerarchie
-            ~ kitchen_recipeAdjective = "incondizionata"
+        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Frullo del mangostano dell'anarchismo.</i>
+            ~ kitchen_recipeAdjective = "anarchia"
             -> glyph_choice_manager(true, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                            Te la faccio passare solo perché già sei non binario, e me la aspettavo che rompevi altre regole.
+                }
+        {charTag(ThirdCharacter, "bored")}:                                     Ma un po' di regole servono, {player_name}.
+                                                                                E un po' di gerarchie.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non dico tanto.
+                                                                                Giusto quelle per capire chi sa fare cose a chi no.
+                                                                                E chi può prendere una scelta sensata.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se con questa logica dovrei essere io e non il mio capo a comandare.
 
-
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//di lotta
-            ~ kitchen_recipeAdjective = "leale"
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio della jabuticaba della lotta.</i>
+            ~ kitchen_recipeAdjective = "lotta"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Cazzo, devo proprio farti conoscere Petra.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "jester")}:                            Non è che sei lesbica anche tu, vero?
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Inizio a chiedermi se non sono un po' un coglione.
+                                                                                Perché alla fine mi lamento lamento lamento ma poi non è che dico mai niente a quel cretino del mio capo.
+                                                                                Magari quando vado via da qui inizio a farmi davvero rispettare.           
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(fourKitchen)      
@@ -849,21 +951,72 @@
 
         + \ {charTag(PG, "neutral")}:                                           Ma anche se tuo padre avesse vinto su questo aspetto, cosa cambia? Perché è così importante?
                 -> glyph_choice_manager(false, airC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                             È una cosa da uomini, non la puoi capire.
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            Serio, {player_name}?
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Io non sono una persona che c'ha tanto, e l'unica cosa che mi rimane è l'orgoglio.
+                                                                                La possibilità di non dovere niente a nessuno.
+                                                                                Perché se devi qualcosa, a quel punto sei fregato.
+                                                                                Nessuno ti dà niente per avere nulla in cambio, nessuno.
+        {charTag(ThirdCharacter, "bored")}:                                     Così ora sono in debito con lui, e vuoi che non venga a riscuotere un giorno o l'altro?        
 
         + \ {charTag(PG, "neutral")}:                                           Magari tuo padre ti ha aiutato a ottenere il lavoro, ma l'hai ancora per le tue capacità.
                 -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se sei un fuoriclasse, cambia squadra. Cercati un altro lavoro.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non risolve il fatto che sono in debito con lui.
+                                                                                Ma è vero.
+                                                                                Alla fine sono un cazzone, ma a lavoro so farmi il culo.
+                                                                                E se sono lì da tutti questi anni è solo per merito mio.
+        {charTag(ThirdCharacter, "jester")}:                                    E del mio bellissimo faccino.
+
+        + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se sei un fuoriclasse, cambia squadra. Cercati un altro bar.
                 -> glyph_choice_manager(false, fireC)->
-            
-        + \ {charTag(PG, "neutral")}:                                           Ma come ti stai vivendo questa cosa di essere un Boccale, quindi?
+        {charTag(ThirdCharacter, "neutral")}:                                   Pensi che non ci abbia già pensato?
+                                                                                Ogni tanto sogno anche di rilevare il bar.
+                                                                                Ma per farlo serve avere qualcosa a cui appoggiarsi per farsi un mutuo.
+        {charTag(ThirdCharacter, "bored")}:                                     E non ho una casa mia.
+        {charTag(ThirdCharacter, "neutral")}:                                   Nessuno nella mia famiglia ha una casa sua, qualcosa di davvero <i>suo</i>.
+                                                                                E poi sono vecchio.
+                                                                                Cioè, non vecchio vecchio.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma chi mi piglia a me alla mia età?
+                                            
+
+        + \ {charTag(PG, "neutral")}:                                           Ma come ti stai vivendo questa cosa di essere un boccale, quindi?
                 -> glyph_choice_manager(false, waterC)->
-                                                                                La odio.
-                                                                                Mi sembra un promemoria di un fallimento.
-                                                                                È da quando sono arrivato che 'sto cazzo di posto si prende gioco di me.
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != her:
+                {charTag(ThirdCharacter, "bored")}:                             Pensavo avessi capito che queste cose psicologiche mi fanno cagare.
+                }
+        {charTag(ThirdCharacter, "bored")}:                                     Detta fuori dai denti?            
+        {charTag(ThirdCharacter, "angry")}:                                     La odio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Praticamente sono il simbolo del lavoro che mio padre mi ha trovato.
+                                                                                Un fallimento.
+        {charTag(ThirdCharacter, "angry")}:                                     È da quando sono arrivato che 'sto cazzo di posto si prende gioco di me.
                 
         + \ {charTag(PG, "neutral")}:                                           {charNameThree}, hai mai sentito parlare di lotta di classe?
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == they:
+                {charTag(ThirdCharacter, "jester")}:                            Ah ah non sapevo che voi persone non binarie tenevate anche a queste cose.
+                - else:
+                {charTag(ThirdCharacter, "bored")}:                             Non mi partire con uno spiegone non richiesto, grazie.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   'sta roba me la tira fuori anche Petra.
+        {charTag(ThirdCharacter, "jester")}:                                    Andreste d'accordo voi due.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma ti dico la stessa cosa che ho detto a lei.
+                                                                                Tenere un locale è una cosa rischiosa.
+                                                                                C'hai tutte le tasse, e c'hai sul groppone gli stipendi di quante?
+                                                                                Otto persone da noi ora, tra fissi e a rotazione.
+                                                                                Otto persone con sogni e famiglie e così via.
+                                                                                Ci sta che ti prendi qualcosa in più, che ti prendi qualche vizio.
+        {charTag(ThirdCharacter, "bored")}:                                     Certo, il nostro capo è un coglione.
+                                                                                E ha il locale perché suo padre si è fatto il culo quando l'ha comprato dal mio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però appunto: suo padre si è smazzato giornate infinite per anni lì dentro, per far sì che poi il merda potesse avere tutto questo.
+                                                                                E lui era un poveraccio.
+        {charTag(ThirdCharacter, "bored")}:                                     Solo, un poveraccio meno idiota di mio padre.
+
         -
             //Intermezzo culinario
             ~ third_char_kitchen_comments(fiveKitchen)
@@ -878,24 +1031,24 @@
                                                                                 Sei quel tipo di persona che li ha già spesi prima ancora che gli arrivino in mano?
                                                                                 O più una formichina?
         
-        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>   //Soldi? quali soldi?
-            ~ kitchen_recipeComplement = "con brodo del terrore"
+        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Insaporisco con aria della povertà.</i>
+            ~ kitchen_recipeComplement = "aria della povertà"
             -> glyph_choice_manager(true, waterC)->
             
-        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i> //gestione equilibrata
-            ~ kitchen_recipeComplement = "con noce euforica"
+        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Farcisco con aroma di oculatezza.</i>
+            ~ kitchen_recipeComplement = "aroma di oculatezza"
             -> glyph_choice_manager(true, earthC)->
             
-        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i> //pianifico, ma poi le cose vanno a ramengo
-            ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Marino con una miscela di pianificazione e disastro.</i>
+            ~ kitchen_recipeComplement = "miscela di pianificazione e disastro"
             -> glyph_choice_manager(true, airC)->
     
-        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
-            ~ kitchen_recipeComplement = "con olio delle lusinghe"
+        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Addenso con farina di quel che accade accade.</i>
+            ~ kitchen_recipeComplement = "quel che accade accade"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
-            ~ kitchen_recipeComplement = "con peperoncini arrapati"
+        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Spolvero con dell'erba del risparmio asfissiante.</i>
+            ~ kitchen_recipeComplement = "erba del risparmio asfissiante"
             -> glyph_choice_manager(true, fireC)->
         -
              //Intermezzo culinario
