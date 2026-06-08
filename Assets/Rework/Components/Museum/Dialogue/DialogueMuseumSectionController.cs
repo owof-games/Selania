@@ -1,5 +1,6 @@
 ﻿using System;
 using Selania.Rework.Components.DialogueBox;
+using Selania.Rework.Interfaces;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -100,6 +101,28 @@ namespace Selania.Rework.Components.Museum.Dialogue
         public void DisableHeart()
         {
             dialogueBox.DisableRelationshipStatus();
+        }
+
+        public void SetSigil1()
+        {
+            dialogueBox.SetSigil(ISettingsSigils.GlyphType.Aether, ISettingsSigils.GlyphType.Air,
+                ISettingsSigils.GlyphType.Earth, 3, true);
+        }
+
+        public void SetSigil2()
+        {
+            dialogueBox.SetSigil(ISettingsSigils.GlyphType.Fire, ISettingsSigils.GlyphType.Water,
+                ISettingsSigils.GlyphType.Aether, 1, false);
+        }
+
+        public void HideSigil()
+        {
+            dialogueBox.HideSigil();
+        }
+
+        public void ApplySigilInfluence()
+        {
+            dialogueBox.ApplySigilInfluence();
         }
     }
 }

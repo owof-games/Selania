@@ -89,6 +89,16 @@ namespace Selania.Rework.Components
                 : null;
         }
 
+        private readonly DerivedDictionaryProvider<string, bool, CharacterInfo> _characterInfoAffectedBySigilsProvider =
+            new(info => info.listName, info => info.AffectedBySigils);
+
+        /// <inheritdoc />
+        public bool IsCharacterAffectedBySigils(string character)
+        {
+            return _characterInfoAffectedBySigilsProvider.Get(characterInfo)
+                .TryGetValue(character, out var affectedBySigils) && affectedBySigils;
+        }
+
         #endregion
 
         #region dialogue box - choices
@@ -213,8 +223,16 @@ namespace Selania.Rework.Components
             public string inkVariableName { get; private set; } = null!;
 
             [field: SerializeField]
+            [field: Tooltip("Name of the ink variable containing the relationship value.")]
+            public string relationshipVariableName { get; private set; } = null!;
+
+            [field: SerializeField]
             [field: Tooltip("Portrait used in the grimoire.")]
             public Sprite grimoirePortrait { get; private set; } = null!;
+
+            [field: SerializeField]
+            [field: Tooltip("Whether the given character is affected by sigils.")]
+            public bool AffectedBySigils { get; private set; }
 
             [field: SerializeField]
             [field: Tooltip("All the possible moods of this character.")]
@@ -301,6 +319,10 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         public IEnumerable<(string, string)> characterInkVariables =>
             characterInfo.Select(c => (c.listName, c.inkVariableName));
+
+        /// <inheritdoc />
+        public IEnumerable<(string, string)> characterRelationshipVariables =>
+            characterInfo.Select(c => (c.listName, c.relationshipVariableName));
 
         #endregion
 
@@ -462,14 +484,31 @@ namespace Selania.Rework.Components
         [field: Title("Save system")]
         [field: SerializeField]
         [field: Tooltip("Prefix of the directory names where saves are stored.")]
-        public string saveDirPrefix { get; private set; } = "save_dir_";
+        public string SaveDirPrefix { get; private set; } = "save_dir_";
 
-        [field: SerializeField] [field: Tooltip("Minimum time (in seconds) between automatic saves.")]
+        [SerializeField] [Tooltip("Minimum time (in seconds) between automatic saves.")]
         private int minimumTimeBetweenAutomaticSavesInSeconds = 5 * 60;
 
         /// <inheritdoc />
-        public TimeSpan minimumTimeBetweenAutomaticSaves =>
+        public TimeSpan MinimumTimeBetweenAutomaticSaves =>
             TimeSpan.FromSeconds(minimumTimeBetweenAutomaticSavesInSeconds);
+
+        /// <inheritdoc />
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "When automatic saves start to get deleted, this is the minimum amount of save files that are always kept.")]
+        public int MinimumNumberOfRetainedSaves { get; private set; } = 50;
+
+        [field: SerializeField]
+        [field:
+            Tooltip(
+                "When automatic saves start to get deleted, this is the minimum time span (in days) between now and the oldest save file.")]
+        private int minimumTimeBetweenSavesRetainedInDays = 7;
+
+        /// <inheritdoc />
+        public TimeSpan MinimumTimeSpanOfSavesRetained =>
+            TimeSpan.FromDays(minimumTimeBetweenSavesRetainedInDays);
 
         #endregion
 

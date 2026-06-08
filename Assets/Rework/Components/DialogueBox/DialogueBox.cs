@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Interfaces;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -54,6 +55,14 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The resizable container of the text parts")]
         private GrowingContainer growingContainer = null!;
 
+        [SerializeField] private Image glyph1Image = null!;
+        [SerializeField] private Image glyph2Image = null!;
+        [SerializeField] private Image glyph3Image = null!;
+        [SerializeField] private Image threeUsagesImage = null!;
+        [SerializeField] private Image twoUsagesImage = null!;
+        [SerializeField] private Image oneUsageImage = null!;
+        [SerializeField] private TMP_Text sigilTitle = null!;
+
         /// <summary>
         ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
         ///     add the choices.
@@ -99,6 +108,8 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Settings for the dialogue box.
         /// </summary>
         [Inject] internal ISettingsDialogueBox Settings = null!;
+
+        [Inject] internal ISettingsSigils SettingsSigils = null!;
 
         /// <summary>
         ///     Invoked whenever an actual continue operation in the ink story must be performed.
@@ -296,7 +307,7 @@ namespace Selania.Rework.Components.DialogueBox
         {
             animator.SetFloat(VisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
             animator.SetBool(VisibleAnimatorHash, true);
-            growingContainer.immediatelyCompleteSizeAnimation = false;
+            growingContainer.ImmediatelyCompleteSizeAnimation = false;
         }
 
         /// <summary>
@@ -312,6 +323,29 @@ namespace Selania.Rework.Components.DialogueBox
             animator.SetBool(ShowPortrait1AnimatorHash, _willUsePortrait1);
             portraitContainer.SetImage(character, mood, _willUsePortrait1);
             _willUsePortrait1 = !_willUsePortrait1;
+        }
+
+        public void SetSigil(ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2,
+            ISettingsSigils.GlyphType glyph3, int numUsages, bool isGamerMode)
+        {
+            animator.SetFloat(WordVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetBool(WordVisibleAnimatorHash, true);
+            sigilTitle.text = "";
+            glyph1Image.sprite = SettingsSigils.GetGlyphSprite(glyph1, 0);
+            glyph1Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph1);
+            glyph2Image.sprite = SettingsSigils.GetGlyphSprite(glyph2, 1);
+            glyph2Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph2);
+            glyph3Image.sprite = SettingsSigils.GetGlyphSprite(glyph3, 2);
+            glyph3Image.color = !isGamerMode ? Color.black : SettingsSigils.GetGlyphColor(glyph3);
+            threeUsagesImage.enabled = numUsages >= 3;
+            twoUsagesImage.enabled = numUsages >= 2;
+            oneUsageImage.enabled = numUsages >= 1;
+        }
+
+        public void HideSigil()
+        {
+            animator.SetFloat(WordVisibleSpeedAnimatorHash, 1 / Settings.slideInDuration);
+            animator.SetBool(WordVisibleAnimatorHash, false);
         }
 
         /// <summary>
@@ -393,10 +427,18 @@ namespace Selania.Rework.Components.DialogueBox
         public void HideAnimationCompleted()
         {
             // clear all the contents: portrait, ink and text
-            growingContainer.immediatelyCompleteSizeAnimation = true;
+            growingContainer.ImmediatelyCompleteSizeAnimation = true;
             portraitContainer.ClearImages();
             SetInkStatus(0, 0);
             foreach (Transform content in textLinesContainer.transform) Destroy(content.gameObject);
+        }
+
+        /// <summary>
+        ///     Show the animation of the sigil influence.
+        /// </summary>
+        public void ApplySigilInfluence()
+        {
+            animator.SetTrigger(ApplySigilInfluenceAnimatorHash);
         }
 
         #region animator variable name hashes
@@ -410,12 +452,13 @@ namespace Selania.Rework.Components.DialogueBox
         private static readonly int InkVisibleSpeedAnimatorHash = Animator.StringToHash("InkVisibleSpeed");
         private static readonly int PortraitVisibleAnimatorHash = Animator.StringToHash("PortraitVisible");
         private static readonly int PortraitVisibleSpeedAnimatorHash = Animator.StringToHash("PortraitVisibleSpeed");
-
         private static readonly int WordVisibleAnimatorHash = Animator.StringToHash("WordVisible");
+        private static readonly int WordVisibleSpeedAnimatorHash = Animator.StringToHash("WordVisibleSpeed");
 
         // private static readonly int WordVisibleSpeedAnimatorHash = Animator.StringToHash("WordVisibleSpeed");
         private static readonly int ShowPortrait1AnimatorHash = Animator.StringToHash("ShowPortrait1");
         private static readonly int ShowPortraitSpeedAnimatorHash = Animator.StringToHash("ShowPortraitSpeed");
+        private static readonly int ApplySigilInfluenceAnimatorHash = Animator.StringToHash("ApplySigilInfluence");
 
         #endregion
     }

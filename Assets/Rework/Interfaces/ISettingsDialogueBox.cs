@@ -89,6 +89,11 @@ namespace Selania.Rework.Interfaces
         IEnumerable<(string Character, string InkVariable)> characterInkVariables { get; }
 
         /// <summary>
+        ///     A mapping between character names (FirstCharacter, SecondCharacter, ...) and the relative relationship variable.
+        /// </summary>
+        IEnumerable<(string Character, string RelationshipVariable)> characterRelationshipVariables { get; }
+
+        /// <summary>
         ///     Get the color of the character by mood.
         /// </summary>
         /// <param name="character">The character (FirstCharacter, SecondCharacter, ...)</param>
@@ -117,5 +122,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="spriteName">Name of the sprite.</param>
         /// <returns>Sprite to use, or <c>null</c> if no sprite with the given name was found.</returns>
         Sprite? GetDialogueSprite(string spriteName);
+
+        /// <summary>
+        ///     Return whether the given character is affected by sigils.
+        /// </summary>
+        /// <param name="character"></param>
+        /// <returns></returns>
+        bool IsCharacterAffectedBySigils(string character);
     }
 }

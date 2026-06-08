@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using R3;
+using Selania.Rework.Components.ObservableExtensions;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -15,10 +14,15 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] [Tooltip("The dialogue box that gets controlled by these bindings.")]
         private DialogueBox dialogueBox = null!;
 
+        [SerializeField] private int minRelationshipLevel = -9;
+        [SerializeField] private int maxRelationshipLevel = 9;
+
         /// <summary>
         ///     Who was the speaker of the last line (or <c>null</c> if there has been no line yet).
         /// </summary>
         private readonly ReactiveProperty<string?> _lastSpeakingCharacter = new(null);
+
+        private string? _currentSpeakingCharacter;
 
         /// <summary>
         ///     The display name last used for the speaking character.
@@ -46,26 +50,89 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         [Inject] internal IStoryLinear StoryLinear = null!;
 
+        [Inject] internal IStoryRelationshipInfo StoryRelationshipInfo = null!;
+
+        [Inject] internal IStorySigilSupport StorySigilSupport = null!;
+
         private void Start()
         {
-            // register to events and save disposables to unregister
-            StoryLinear.currentTextObservable.Subscribe(CurrentTextChanged).AddTo(this);
+            /* INK => DIALOGUE BOX */
 
-            StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
+            // parse the lines that arrive from ink
+            var parsedTextInfoObservable =
+                StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo).Publish().RefCount();
 
+            // update the text whenever it changes, and enrich it with sigil information
+            parsedTextInfoObservable
+                .CombineLatestWhenFirstChanged(
+                    StorySigilSupport.ActiveSigilInfo.Do(info => Logger.ZLogTrace($"Active Sigil Info data received")),
+                    StoryGamerMode.GamerMode.Do(info => Logger.ZLogTrace($"Gamer Mode data received")),
+                    (parsedText, sigilDescriptor, gamerMode) => (parsedText, sigilDescriptor, gamerMode))
+                .Subscribe(CurrentTextChanged).AddTo(this);
+
+            StorySigilSupport.SigilInfluence.Subscribe(OnSigilInfluence).AddTo(this);
+
+            // handle all the changes for the relationship level
+            HandleRelationshipLevel(parsedTextInfoObservable);
+
+            // hide the dialogue box if there's no conversation
+            StoryLinear.conversationInProgressObservable.Subscribe(HideBoxIfNoConversationIsInProgress).AddTo(this);
+
+            // show an image if requested
             StoryLinear.imageObservable.Subscribe(OnImage).AddTo(this);
 
+            // show choices if requested
             StoryChoicesSelector.choicesObservable.Subscribe(ChoicesChanged).AddTo(this);
-
-            dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
-
-            StoryGamerMode.gamerMode.Subscribe(OnGamerModeChanged).AddTo(this);
 
             // hook to all ink variables, and update the ink only when it's the current speaker
             foreach (var c in SettingsDialogueBox.characterInkVariables)
             {
                 SubscribeToCharacterInk(c.Character, c.InkVariable);
             }
+
+            /* DIALOGUE BOX => INK */
+
+            // continue the story if a continue input has been received
+            dialogueBox.continueRequestsObservable.Subscribe(ContinueActionOnPerformed).AddTo(this);
+
+            // choice selection should also be exposed as an observable on dialogueBox; instead, it's a callback in
+            // dialogueBox.AddChoices, which is not architecturally consistent
+        }
+
+        private void HandleRelationshipLevel(Observable<ParsedText> parsedTextInfoObservable)
+        {
+            // extract the relationship level with the latest character we're speaking with (or null if there's no relationship level tracked with that character)
+            var relationshipLevelObservable = parsedTextInfoObservable
+                .Select(data => data.Character)
+                .WhereNotNull()
+                .Select(character =>
+                    StoryRelationshipInfo.GetRelationshipLevelObservableFor(SettingsDialogueBox, character))
+                .Switch();
+
+            // update the relationship status to the correct level when there's a valid level
+            relationshipLevelObservable
+                .WhereNotNull()
+                .Subscribe(level =>
+                    dialogueBox.SetRelationshipStatusLevel(
+                        Mathf.InverseLerp(minRelationshipLevel, maxRelationshipLevel, level)))
+                .AddTo(this);
+
+            // show the relationship status when in gamer mode and there's a valid level
+            relationshipLevelObservable.Select(x => x.HasValue)
+                .CombineLatest(StoryGamerMode.GamerMode, (hasValidLevel, isGamerMode) => (hasValidLevel, isGamerMode))
+                .Subscribe(data =>
+                {
+                    var (hasValidLevel, isGamerMode) = data;
+                    if (hasValidLevel && isGamerMode)
+                    {
+                        dialogueBox.EnableRelationshipStatus();
+                    }
+                    else
+                    {
+                        dialogueBox.DisableRelationshipStatus();
+                    }
+                })
+                .AddTo(this);
         }
 
         private void SubscribeToCharacterInk(string character, string inkVariable)
@@ -90,11 +157,12 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Invoked to inform whether there's a conversation going on or not.
         /// </summary>
         /// <param name="isInProgress"><c>true</c> if a conversation is in progress, <c>false</c> otherwise.</param>
-        private void ConversationInProgress(bool isInProgress)
+        private void HideBoxIfNoConversationIsInProgress(bool isInProgress)
         {
             if (isInProgress) return;
             dialogueBox.Hide();
             _lastSpeakingCharacter.Value = null;
+            _currentSpeakingCharacter = null;
             // no need to explicitly handle the show part: adding a line of text or a choice automatically shows the
             // dialogue panel
         }
@@ -119,43 +187,50 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         /// <summary>
-        ///     Given a set of tags in the form &lt;category&gt;:&lt;value&gt;, this method returns the value of the first tag
-        ///     found with the given category.
+        ///     Extract all the possible information from a line of text in the form of a <see cref="ParsedText" />.
         /// </summary>
-        /// <param name="tags">Set of tags to look in.</param>
-        /// <param name="category">Category to look for.</param>
-        /// <returns>The value of the first tag with the given category, or <c>null</c> if none has been found.</returns>
-        private static string? GetValue(ICollection<Tag> tags, string category)
+        /// <param name="currentTextInfo">Information about the current line.</param>
+        /// <returns>The corresponding parsed text.</returns>
+        private ParsedText ParseCurrentTextInfo(
+            IStoryLinear.CurrentTextInfo currentTextInfo)
         {
-            return tags.FirstOrDefault(t => t.category == category)?.value;
+            currentTextInfo.Deconstruct(out var currentText);
+
+            TryGetSpeakerAndPortraitWithNewSystem(currentText, out var character, out var displayName, out var mood,
+                out var actualText);
+
+            return new ParsedText(character, displayName, mood, actualText);
         }
 
         /// <summary>
         ///     Invoked whenever the current text changes.
         /// </summary>
-        /// <param name="currentTextInfo">Info about the current text.</param>
-        private void CurrentTextChanged(IStoryLinear.CurrentTextInfo currentTextInfo)
+        /// <param name="data">The data about the current text line.</param>
+        private void CurrentTextChanged((ParsedText, IStorySigilSupport.SigilDescriptor?, bool gamerMode) data)
         {
-            // extract fields
-            currentTextInfo.Deconstruct(out var currentText);
+            var (parsedText, sigilDescriptor, gamerMode) = data;
 
-            TryGetSpeakerAndPortraitWithNewSystem(currentText, out var character, out var displayName, out var mood,
-                out var actualText);
+            // extract the parts of the parsed text
+            var (character, displayName, mood, actualText) = parsedText;
+
+            // remember who was the last character speaking, and notify that to listeners
             _lastSpeakingCharacter.Value = character;
+            _currentSpeakingCharacter ??= character;
 
             if (displayName != _lastSpeakingDisplayName && character != null && displayName != null)
             {
+                // if the speaker changed in any way (display name or character), emit the line of text with the speaker header 
                 Logger.ZLogTrace($"Previous speaker was {_lastSpeakingCharacter}, new one is {character}.");
                 dialogueBox.AddTextLine((character, displayName), actualText);
                 _lastSpeakingDisplayName = displayName;
             }
             else
             {
-                // either the speaker was the same (do not print it), or no speaker was given (AKA it's implied it's
-                // the same as the previous line)
+                // otherwise, either the speaker was the same (do not print it), or no speaker was given (AKA it's implied it's// the same as the previous line)
                 dialogueBox.AddTextLine(null, actualText);
             }
 
+            // set the portrait if specified
             if (character != null && mood != null)
             {
                 Logger.ZLogTrace($"Setting portrait image {character} + {mood}.");
@@ -164,6 +239,22 @@ namespace Selania.Rework.Components.DialogueBox
             else
             {
                 Logger.ZLogTrace($"No portrait to set");
+            }
+
+            // handle the sigil descriptor
+            var actualCharacter = character ?? _currentSpeakingCharacter;
+            var isAffectedBySigils = actualCharacter != null &&
+                                     SettingsDialogueBox.IsCharacterAffectedBySigils(actualCharacter);
+            if (sigilDescriptor == null || !isAffectedBySigils)
+            {
+                Logger.ZLogTrace($"Received a null descriptor from ActiveSigilInfo: hide the sigil");
+                dialogueBox.HideSigil();
+            }
+            else
+            {
+                Logger.ZLogTrace($"Received a descriptor {sigilDescriptor} from ActiveSigilInfo: show the sigil");
+                dialogueBox.SetSigil(sigilDescriptor.Glyph1, sigilDescriptor.Glyph2, sigilDescriptor.Glyph3,
+                    sigilDescriptor.NumUsages, gamerMode);
             }
         }
 
@@ -244,9 +335,18 @@ namespace Selania.Rework.Components.DialogueBox
                 });
         }
 
-        private void OnGamerModeChanged(bool gamerMode)
+        private void OnSigilInfluence(Unit _)
         {
-            // dialogueBox.
+            dialogueBox.ApplySigilInfluence();
         }
+
+        /// <summary>
+        ///     A line of text, parsed according to the convention used for displaying information on the screen.
+        /// </summary>
+        /// <param name="Character">Name of the character, if present in the line.</param>
+        /// <param name="DisplayName">The display name to show for the character, if present in the line.</param>
+        /// <param name="Mood">The mood of the character, if present in the line.</param>
+        /// <param name="ActualText">The actual text to display.</param>
+        private record ParsedText(string? Character, string? DisplayName, string? Mood, string ActualText);
     }
 }

@@ -21,7 +21,7 @@ namespace Selania.Rework.Components
         /// <inheritdoc />
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterInkBridgeInstance(inkBridge);
+            builder.RegisterInkBridgeInstance(inkBridge, false);
             builder.RegisterSettings(settings);
             builder.RegisterLogger();
             builder.RegisterInstance(audioSystem).As<IAudioSystem>();

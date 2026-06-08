@@ -17,7 +17,9 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="containerBuilder">The container builder used to register this instance.</param>
         /// <param name="inkBridge">The ink bridge to register.</param>
-        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge)
+        /// <param name="disableSaves">Whether to disable the save system.</param>
+        public static void RegisterInkBridgeInstance(this IContainerBuilder containerBuilder, InkBridge inkBridge,
+            bool disableSaves = true)
         {
             // flag used to set up the ink bridge only once per registration.
             var loggerResolved = false;
@@ -29,8 +31,11 @@ namespace Selania.Rework.Components
                     // otherwise, set up the ink bridge and return it afterward
                     var logger = resolver.Resolve<ILogger<InkBridge>>();
                     var saveSystemSettings = resolver.Resolve<ISettingsSaveSystem>();
-                    inkBridge.SetUp(logger, saveSystemSettings.saveDirPrefix,
-                        saveSystemSettings.minimumTimeBetweenAutomaticSaves);
+                    inkBridge.SetUp(logger, disableSaves,
+                        saveSystemSettings.SaveDirPrefix,
+                        saveSystemSettings.MinimumTimeBetweenAutomaticSaves,
+                        saveSystemSettings.MinimumNumberOfRetainedSaves,
+                        saveSystemSettings.MinimumTimeSpanOfSavesRetained);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)
@@ -46,7 +51,9 @@ namespace Selania.Rework.Components
                 .As<IStoryGamerMode>()
                 .As<IStoryCharacterRelationshipStatus>()
                 .As<IStoryVariableValues>()
-                .As<IStoryDebugSupport>();
+                .As<IStoryDebugSupport>()
+                .As<IStoryRelationshipInfo>()
+                .As<IStorySigilSupport>();
         }
 
         /// <summary>

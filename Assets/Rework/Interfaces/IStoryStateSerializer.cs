@@ -30,8 +30,8 @@ namespace Selania.Rework.Interfaces
         /// A save state.
         /// </summary>
         /// <param name="Descriptor">Descriptor for this save state (unique identifier).</param>
-        /// <param name="RoomInkName">Unique identifier of the room name, as known by Ink (currently, name of the Ink variable used to represent the room contents).</param>
-        /// <param name="Timestamp">The time when this save state was created, as expressed in number of ticks.</param>
+        /// <param name="RoomInkName">Unique identifier of the room name, as known by Ink.</param>
+        /// <param name="Timestamp">The time when this save state was created.</param>
         public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp);
     }
 }

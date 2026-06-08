@@ -20,6 +20,8 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         [SerializeField] private GameObject child = null!;
 
+        private ILayoutElement? _childComponentCache;
+
         /// <summary>
         ///     The current height animation.
         /// </summary>
@@ -38,13 +40,13 @@ namespace Selania.Rework.Components.DialogueBox
         /// <summary>
         ///     The settings used to read about the kind of animation to adopt.
         /// </summary>
-        [Inject] internal ISettingsDialogueBox? Settings;
+        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
         /// <summary>
         ///     Whether size animation should immediately complete. This is useful when the element is not visible, in order
         ///     not to introduce unexplainable resizing animation for the user.
         /// </summary>
-        public bool immediatelyCompleteSizeAnimation { get; set; }
+        public bool ImmediatelyCompleteSizeAnimation { get; set; }
 
         /// <summary>
         ///     Cache and return this object's transform.
@@ -60,7 +62,7 @@ namespace Selania.Rework.Components.DialogueBox
         public override void CalculateLayoutInputVertical()
         {
             // layout is demanded to the child's component and copied from there
-            if (!GetChildComponent<ILayoutElement>(out var layoutElement)) return;
+            if (!GetChildLayoutElementComponent(out var layoutElement)) return;
             layoutElement.CalculateLayoutInputVertical();
             SetLayoutInputForAxis(layoutElement.minHeight, layoutElement.preferredHeight, layoutElement.flexibleHeight,
                 1);
@@ -70,7 +72,7 @@ namespace Selania.Rework.Components.DialogueBox
         public override void CalculateLayoutInputHorizontal()
         {
             // layout is demanded to the child's component and copied from there
-            if (!GetChildComponent<ILayoutElement>(out var layoutElement)) return;
+            if (!GetChildLayoutElementComponent(out var layoutElement)) return;
             layoutElement.CalculateLayoutInputHorizontal();
             SetLayoutInputForAxis(layoutElement.minWidth, layoutElement.preferredWidth, layoutElement.flexibleWidth, 0);
         }
@@ -79,18 +81,27 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Get a component in the child we point to.
         /// </summary>
         /// <param name="childComponent">The child component to extract.</param>
-        /// <typeparam name="T">Type of the child component to extract.</typeparam>
         /// <returns><c>true</c> if the child contained a component of this type, <c>false</c> otherwise.</returns>
-        private bool GetChildComponent<T>([NotNullWhen(true)] out T? childComponent)
+        private bool GetChildLayoutElementComponent([NotNullWhen(true)] out ILayoutElement? childComponent)
         {
-            if (child.TryGetComponent<T>(out var component))
+            // get the child ILayoutElement from the cached value, if possible
+            if (_childComponentCache != null)
             {
-                childComponent = component!;
+                childComponent = _childComponentCache;
                 return true;
             }
 
-            Logger?.ZLogError($"Child component does not have a rect transform");
-            childComponent = default;
+            // if not (first time this method has been called), extract it and cache it
+            if (child.TryGetComponent<ILayoutElement>(out var component))
+            {
+                _childComponentCache = component;
+                childComponent = component;
+                return true;
+            }
+
+            // if this doesn't work either, the method failed
+            Logger?.ZLogError($"Child component does not have an ILayoutElement component");
+            childComponent = null;
             return false;
         }
 
@@ -105,7 +116,7 @@ namespace Selania.Rework.Components.DialogueBox
             // compute the height to reach
             float targetHeight = 0;
 
-            if (GetChildComponent<ILayoutElement>(out var layoutElement))
+            if (GetChildLayoutElementComponent(out var layoutElement))
                 targetHeight = layoutElement.preferredHeight;
 
             // extract info about the current state
@@ -116,11 +127,11 @@ namespace Selania.Rework.Components.DialogueBox
             if (Mathf.Approximately(targetHeight, myHeight) || _currentMotion.IsActive()) return;
 
             // otherwise, update the height
-            var speed = Settings?.textLineSlideSpeed ?? 1;
+            var speed = Application.isPlaying ? SettingsDialogueBox.textLineSlideSpeed : 800;
             var duration = Mathf.Abs(targetHeight - myHeight) / speed;
             Logger?.ZLogTrace($"Starting movement {myHeight} => {targetHeight} for {duration}");
 
-            if (immediatelyCompleteSizeAnimation)
+            if (ImmediatelyCompleteSizeAnimation)
             {
                 // it's been requested to immediately update the height, without animations
                 myRectTransform.sizeDelta = new Vector2(myRectTransform.sizeDelta.x, targetHeight);
@@ -132,7 +143,7 @@ namespace Selania.Rework.Components.DialogueBox
                 _currentMotion = LMotion.Create(myHeight, targetHeight, duration)
                     .Bind(myRectTransform, (newHeight, r) => { r.sizeDelta = new Vector2(r.sizeDelta.x, newHeight); })
                     .AddTo(this);
-                LogAndMarkLayoutForRebuild(_currentMotion).Forget();
+                LogAndMarkLayoutForRebuildAsync(_currentMotion).Forget();
             }
         }
 
@@ -140,7 +151,7 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Log the completion of the animation, and mark our layout for a rebuilt operation.
         /// </summary>
         /// <param name="currentMotion">The animation to track.</param>
-        private async UniTaskVoid LogAndMarkLayoutForRebuild(MotionHandle currentMotion)
+        private async UniTaskVoid LogAndMarkLayoutForRebuildAsync(MotionHandle currentMotion)
         {
             await currentMotion.ToUniTask();
             Logger?.ZLogTrace($"Movement completed");

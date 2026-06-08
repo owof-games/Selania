@@ -420,6 +420,13 @@
     - relationshipChange == 0:
         ~ reaction = neutral
 }
+
+//Animazione utilizzo sigillo
+{
+    - glyph_actualActiveSigil != ():
+        @sigilInfluence
+}
+
 // Genero reazione
 {currentCharacter:
     - FirstCharacter:
@@ -699,12 +706,6 @@
     - {charTag(FifthCharacter, "neutral")}:                             Chiaro.
     - {charTag(FifthCharacter, "neutral")}:                             Già.
     }  
-}
-
-//Animazione utilizzo sigillo
-{
-    - glyph_actualActiveSigil != ():
-        @animation: ActiveSigil
 }
 ->->
 

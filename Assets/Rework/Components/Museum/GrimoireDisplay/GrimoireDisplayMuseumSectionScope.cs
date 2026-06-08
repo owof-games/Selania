@@ -24,10 +24,10 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         {
             public GamerModeFake(Observable<bool> gamerModeObservable)
             {
-                gamerMode = gamerModeObservable;
+                GamerMode = gamerModeObservable;
             }
 
-            public Observable<bool> gamerMode { get; }
+            public Observable<bool> GamerMode { get; }
         }
 
         private class StoryCharacterRelationshipStatusFake : IStoryCharacterRelationshipStatus

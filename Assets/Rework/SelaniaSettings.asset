@@ -206,7 +206,9 @@ MonoBehaviour:
   - <listName>k__BackingField: FirstCharacter
     <dialogueColor>k__BackingField: {r: 0.60784316, g: 0.43529412, b: 0.07058824, a: 1}
     <inkVariableName>k__BackingField: firstChar_InkLevel
+    <relationshipVariableName>k__BackingField: firstChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: c9ee8c9277009394984894fc40aeb107, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Chitarra_affectionate
       <sprite>k__BackingField: {fileID: 21300000, guid: 2db91d165dd198c4391ba68eeed07c33, type: 3}
@@ -233,7 +235,9 @@ MonoBehaviour:
   - <listName>k__BackingField: SecondCharacter
     <dialogueColor>k__BackingField: {r: 0.078431375, g: 0.17254902, b: 0.19607843, a: 1}
     <inkVariableName>k__BackingField: secondChar_InkLevel
+    <relationshipVariableName>k__BackingField: secondChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 70e04f7858c0cd54390a8fb7d0f73abe, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Riccio_emotional
       <sprite>k__BackingField: {fileID: 21300000, guid: 38d1f8b1799e89a49b3aba3cb60f2701, type: 3}
@@ -252,7 +256,9 @@ MonoBehaviour:
   - <listName>k__BackingField: ThirdCharacter
     <dialogueColor>k__BackingField: {r: 0.47058824, g: 0.12941177, b: 0.08235294, a: 1}
     <inkVariableName>k__BackingField: thirdChar_InkLevel
+    <relationshipVariableName>k__BackingField: thirdChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 3f6d08cb6de2b944dab6bc728fd51e9a, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Boccale_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 2285801924b45234985b9da66eac5415, type: 3}
@@ -269,7 +275,9 @@ MonoBehaviour:
   - <listName>k__BackingField: FourthCharacter
     <dialogueColor>k__BackingField: {r: 0.84705883, g: 0.2, b: 0.07450981, a: 1}
     <inkVariableName>k__BackingField: fourthChar_InkLevel
+    <relationshipVariableName>k__BackingField: fourthChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: NonnaMolotov_emotional
       <sprite>k__BackingField: {fileID: 21300000, guid: 38d1f8b1799e89a49b3aba3cb60f2701, type: 3}
@@ -286,7 +294,9 @@ MonoBehaviour:
   - <listName>k__BackingField: Mentor
     <dialogueColor>k__BackingField: {r: 0.36078432, g: 0.3529412, b: 0.29411766, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Mentore_bored
       <sprite>k__BackingField: {fileID: 21300000, guid: 971a9d5006825f9449d83bcf792fa7d3, type: 3}
@@ -301,7 +311,9 @@ MonoBehaviour:
   - <listName>k__BackingField: FifthCharacter
     <dialogueColor>k__BackingField: {r: 0.23529412, g: 0.44705883, b: 0.22352941, a: 1}
     <inkVariableName>k__BackingField: fifthChar_InkLevel
+    <relationshipVariableName>k__BackingField: fifthChar_relationshipIndicator
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
+    <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
     - <name>k__BackingField: Mostro_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 6e9ab649598c61249a56275663efe151, type: 3}
@@ -310,14 +322,18 @@ MonoBehaviour:
   - <listName>k__BackingField: PG
     <dialogueColor>k__BackingField: {r: 0.84313726, g: 0.14901961, b: 0.3019608, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 00fff9eb5d083484ab9d1afa02131b67, type: 3}
   - <listName>k__BackingField: Carla
     <dialogueColor>k__BackingField: {r: 1, g: 0, b: 1, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 7bb7f9594ff0b6f4c83d09b1ab9eaf29, type: 3}
@@ -332,14 +348,18 @@ MonoBehaviour:
   - <listName>k__BackingField: Doggo
     <dialogueColor>k__BackingField: {r: 0.5686275, g: 0.46666667, b: 0.36862746, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 230549ef2b990b749b59bb376cfa82c1, type: 3}
   - <listName>k__BackingField: Franco
     <dialogueColor>k__BackingField: {r: 0.08627451, g: 0.07058824, b: 0.6745098, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 0c56c4884d759af4f81afd67c5682603, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: 0383c1ace5e7cfd42b7fe8be66a63175, type: 3}
@@ -352,7 +372,9 @@ MonoBehaviour:
   - <listName>k__BackingField: TheWitch
     <dialogueColor>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: a1e9b47196035de4daed753206560a4a, type: 3}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: witch_new_moon
       <sprite>k__BackingField: {fileID: 21300000, guid: 3f52b03c44537ba41b49ad4d3a86530e, type: 3}
@@ -367,7 +389,9 @@ MonoBehaviour:
   - <listName>k__BackingField: Documents
     <dialogueColor>k__BackingField: {r: 0.40784314, g: 0.5176471, b: 0.56078434, a: 1}
     <inkVariableName>k__BackingField: 
+    <relationshipVariableName>k__BackingField: 
     <grimoirePortrait>k__BackingField: {fileID: 0}
+    <AffectedBySigils>k__BackingField: 0
     <characterMoods>k__BackingField:
     - <name>k__BackingField: docNest
       <sprite>k__BackingField: {fileID: 21300000, guid: f7d8c5e2866f12c498cfd20a649648fe, type: 3}
@@ -440,8 +464,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a17b8582b907504ab59b97ef03b9449, type: 3}
   - name: closeDialogue
     clip: {fileID: 8300000, guid: 7b3ec5938470579439f3dad96a76529a, type: 3}
-  <saveDirPrefix>k__BackingField: save_dir_
+  <SaveDirPrefix>k__BackingField: save_dir_
   minimumTimeBetweenAutomaticSavesInSeconds: 300
+  <MinimumNumberOfRetainedSaves>k__BackingField: 50
+  minimumTimeBetweenSavesRetainedInDays: 7
   airGlyphs:
   - {fileID: 21300000, guid: 8660bf5d2a46db145a551e0a1e4e661b, type: 3}
   - {fileID: 21300000, guid: 1904ed240a4786540a014ef27fdc402c, type: 3}
@@ -559,7 +585,9 @@ MonoBehaviour:
     <minimumLogLevel>k__BackingField: 0
   _consoleProviderSettings:
     categorySettingsArray:
-    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DebuggingWindow
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.DialogueBox
+      <minimumLogLevel>k__BackingField: 0
+    - <categoryPrefix>k__BackingField: Selania.Rework.Components.InkBridge
       <minimumLogLevel>k__BackingField: 0
     <minimumLogLevel>k__BackingField: 2
   <CrossFadeAnimationDurationForEvolvingObjects>k__BackingField: 1

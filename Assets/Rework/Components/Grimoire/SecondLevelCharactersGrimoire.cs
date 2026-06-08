@@ -67,7 +67,7 @@ namespace Selania.Rework.Components.Grimoire
 
             // show elements according to the reader/gamer mode
             StoryGamerMode
-                .gamerMode
+                .GamerMode
                 .Subscribe(gamerMode =>
                 {
                     if (gamerMode) relationshipStatus.Enable();

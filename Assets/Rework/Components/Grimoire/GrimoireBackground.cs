@@ -222,6 +222,9 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] private SecondLevelRulesGrimoire secondLevelRulesGrimoire = null!;
 
+        [Tooltip("The second level load screen")] [SerializeField]
+        private SecondLevelLoadScreen secondLevelLoadScreen = null!;
+
         private Animator _animator = null!;
 
         private string? _backToLevelTwoChoice;
@@ -298,7 +301,8 @@ namespace Selania.Rework.Components.Grimoire
         ///     An observable that exposes clicks on top level buttons.
         /// </summary>
         public Observable<string> firstLevelButtonClick =>
-            topLevelButtons.Select(topLevelButton => topLevelButton.click).Merge();
+            topLevelButtons.Where(topLevelButton => topLevelButton.buttonName != "Load")
+                .Select(topLevelButton => topLevelButton.click).Merge();
 
         /// <summary>
         ///     An observable that exposes clicks on second level greenhouse buttons.
@@ -362,6 +366,8 @@ namespace Selania.Rework.Components.Grimoire
             // turn off all bookmarks at startup and set the default behavior for 'close'
             SetUpBookmarks();
             ShowBookmarks(null, null, null, null, null);
+            // set up the load screen system
+            SetUpLoadScreen();
         }
 
         /// <summary>
@@ -922,6 +928,17 @@ namespace Selania.Rework.Components.Grimoire
         public void SecondLevelRulesGrimoireSetText(string text)
         {
             secondLevelRulesGrimoire.SetRulesText(text);
+        }
+
+        public void OnLoadClick()
+        {
+            secondLevelLoadScreen.Show();
+        }
+
+        private void SetUpLoadScreen()
+        {
+            // when a load is completed, simulate a close button click
+            secondLevelLoadScreen.LoadCompletedObservable.Subscribe(_ => OnCloseButtonClicked()).AddTo(this);
         }
     }
 }
