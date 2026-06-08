@@ -1034,22 +1034,44 @@
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Insaporisco con aria della povertà.</i>
             ~ kitchen_recipeComplement = "aria della povertà"
             -> glyph_choice_manager(true, waterC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun == her:
+                {charTag(ThirdCharacter, "jester")}:                            Poi voi donne vi lamentate che guadagniamo più di voi.
+                }
+                {
+                - aether1:
+                {charTag(ThirdCharacter, "jester")}:                            Certo che se non ti piace lavorare, cosa ti aspettavi?    
+                }
+            {charTag(ThirdCharacter, "jester")}:                                Almeno se non hai soldi non devi pensare a come gestirli, giusto?    
             
         + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Farcisco con aroma di oculatezza.</i>
             ~ kitchen_recipeComplement = "aroma di oculatezza"
             -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Un po' tipo colpo al cerchio e alla botte, quindi?
+        {charTag(ThirdCharacter, "jester")}:                                    Ma non colpire il povero {charNameThree}!
             
         + (air3)\ {charTag(PG, "neutral")}:                                     <i>Marino con una miscela di pianificazione e disastro.</i>
             ~ kitchen_recipeComplement = "miscela di pianificazione e disastro"
             -> glyph_choice_manager(true, airC)->
-    
+        {charTag(ThirdCharacter, "jester")}:                                    Un po' come Petra.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ogni mese è lì che dice "A questo giro mi metto via i soldi per andare via da casa dei miei!".
+                                                                                E il giorno dopo la paga si è presa un viaggio per un posto che conosce solo lei.                                            
+
         + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Addenso con farina di quel che accade accade.</i>
             ~ kitchen_recipeComplement = "quel che accade accade"
             -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Non credo sia un metodo, {player_name}.
+        {charTag(ThirdCharacter, "jester")}:                                    Soprattutto se vuoi sopravvivere.
+
 
         + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Spolvero con dell'erba del risparmio asfissiante.</i>
             ~ kitchen_recipeComplement = "erba del risparmio asfissiante"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Siamo in due.
+        {charTag(ThirdCharacter, "neutral")}:                                   Donatella diceva che era il trauma dell'essere diventato povero.
+                                                                                Mentre lei era più oculata, ma alcune cose se le concedeva.
+                                                                                Io c'ho le linee del latte bevuto sul mio cartone, così so se quella merda del coinquilino me lo beve.
+
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(sixKitchen)
