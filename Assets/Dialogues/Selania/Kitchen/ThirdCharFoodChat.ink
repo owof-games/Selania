@@ -145,8 +145,14 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Però ci tengo a loro, sì.
         {charTag(ThirdCharacter, "jester")}:                                    Anche se a volte li strozzerei.
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Sai che sono un{player_pronoun has him:o|{player_pronoun has her:a|ə}} che tifa sempre le squadre perdenti?
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Te ti vuoi male, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Cioè, capisco la cosa del perdere ogni tanto, perché poi quando vinci senti proprio che è una figata.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma <i>sempre</i>?
+                                                                                Non è manco tifare per una squadretta sfigata, è proprio cambiare di settimana in settimana per farsi del male.
+        {charTag(ThirdCharacter, "jester")}:                                    Un masochista.
+                                                                                Ora capisco meglio perché stai qui!                                                                                                                                
         -
         
         {charTag(ThirdCharacter, "neutral")}:                                   Ma se domani tiriamo su una squadretta, in che ruolo ti mettiamo vecio?
@@ -241,9 +247,18 @@
                                                                                 Cioè, ti tira anche dei rutti che diventi pelato.
         {charTag(ThirdCharacter, "jester")}:                                    Ma io potevo darle solo i rutti, non i musei, no?
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Il Poggi è la tua famiglia.
                 -> glyph_choice_manager(false, aetherC)->
-
+        {charTag(ThirdCharacter, "bored")}:                                     La mia famiglia è, doveva essere Dona.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma in un certo senso, sì.
+                                                                                Credo.
+                                                                                Cioè, è normale, no?
+                                                                                Ci cresci con questo stronzo.
+                                                                                Ci affronti le cose di merda come la morte dei genitori i casini a lavoro e le prime relazioni finite male.
+                                                                                Diventa un fratello.
+                                                                                Una cosa più forte del sangue.
+                                                                                Quindi sì, di pure che è famiglia.
+                                                                                Era famiglia.                                                
         -
         
         {charTag(ThirdCharacter, "bored")}:                                     Forse sono un po' incazzato col Poggi.
@@ -344,9 +359,18 @@
                                                                                 Non c'ha senso però.
         {charTag(ThirdCharacter, "jester")}:                                    Sono davvero una testa di cazzo.
 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Per non essere soli serve essere vulnerabili.
                 -> glyph_choice_manager(false, aetherC)->
-            -
+        {charTag(ThirdCharacter, "bored")}:                                     Cos'è, un pezzo della Pausini?
+        {charTag(ThirdCharacter, "neutral")}:                                   E non c'ha senso, vecio.
+                                                                                Il Rocco con me è stato vulnerabile, no?
+        {charTag(ThirdCharacter, "bored")}:                                     Ma poi questa merda se la deve sfangare da solo, con la moglie in ansia e il padre che non vuole andarsene dal suo paese.
+        {charTag(ThirdCharacter, "neutral")}:                                   Questa cosa dell'essere soli è più.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Più...
+        {charTag(ThirdCharacter, "neutral")}:                                   C'hai una vita enorme davanti, e non sai con chi sarai alla fine, quando dovrai schiattare.
+                                                                                A parte te.
+        {charTag(ThirdCharacter, "bored")}:                                     È l'unica cosa certa.
+        -
 
         {charTag(ThirdCharacter, "neutral")}:                                   Merda, che pesante che sono stato.
                                                                                 Dovevamo parlare di calcio e invece.
