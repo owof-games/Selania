@@ -7,6 +7,14 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    {
+    - grimoire_secondChar != ():
+        <b>Lista delle persone importanti per {charNameTwo}</b>.
+        <i>Mamma</i>: la mamma di {charNameTwo}. L'ha mandato qui per la sua festa di compleanno?
+        <i>Papà</i>: il papà di {charNameTwo}. Gli ruba le action figures.
+        <i>Fratello</i>: il fratello di {charNameTwo}.
+        <i>Nonna</i>: la nonna di {charNameTwo}.
+    }
 
     //Main story
     {

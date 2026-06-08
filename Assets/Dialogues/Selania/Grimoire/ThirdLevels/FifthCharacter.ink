@@ -7,6 +7,13 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    {//qui sarà più uno storylet ad hoc ad attivarci un po' di roba. Da vedere se prima o dopo la mostrificazione.
+    - fifthChar_storyStatus == story_storyStarted: 
+        <b>Lista delle persone importanti per {charNameFive}</b>.
+        <i>Dona</i>: la ex di {charNameFive}.
+        <i>Il Poggi</i>: il migliore amico di {charNameFive}.  
+    }
+
     //Main story come Mentore
     {
         - grimoire_appendices has grimChoicesMentor:

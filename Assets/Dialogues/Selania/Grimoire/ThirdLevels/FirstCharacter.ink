@@ -8,6 +8,13 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
+    {
+    - grimoire_firstChar != ():
+        <b>Lista delle persone importanti per {charNameOne}</b>.
+        <i>Talco</i>: migliore amicə.
+        <i>Ennio</i>: il ragazzo di {charNameOne}.  
+    }
+
     //Main story
     {
         - grimoire_firstChar has grimFirstCharOne:
