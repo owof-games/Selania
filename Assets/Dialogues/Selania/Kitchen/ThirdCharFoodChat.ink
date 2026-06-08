@@ -930,7 +930,7 @@
 
     {charTag(ThirdCharacter, "jester")}:                                        Non l'averei mai detto, ma è stato divertente cucinare assieme {player_name}.
     {charTag(ThirdCharacter, "bored")}:                                         A parte per la fine che ha fatto la mia insalata di patate.
-
+    
         {
         -cooking_with_third_char.first_theme:
         {charTag(ThirdCharacter, "neutral")}:                                   Non mi aspettavo di passare dal parlare di calcio al parlare degli amici.
@@ -945,7 +945,7 @@
 
         }
     {charTag(ThirdCharacter, "neutral")}:                                       E poi questo {piatto}!
-    {charTag(ThirdCharacter, "neutral")}:                                       Spacca, non trovi?
+    {charTag(ThirdCharacter, "jester")}:                                        {charNameOne} non dovrà mai sapere che ho apprezzato qualcosa di vegano o giuro che ti meno, {player_name}!
     
         {
         - kitchen_thirdCharExtraIngredientReaction != notReaction:
