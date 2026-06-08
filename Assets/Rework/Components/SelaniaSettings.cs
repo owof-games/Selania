@@ -227,6 +227,10 @@ namespace Selania.Rework.Components
             public string relationshipVariableName { get; private set; } = null!;
 
             [field: SerializeField]
+            [field: Tooltip("An optional (boolean) variable that says whether to show the relationship indicator.")]
+            public string activateRelationshipIndicatorVariableName { get; private set; } = null!;
+
+            [field: SerializeField]
             [field: Tooltip("Portrait used in the grimoire.")]
             public Sprite grimoirePortrait { get; private set; } = null!;
 
@@ -321,8 +325,9 @@ namespace Selania.Rework.Components
             characterInfo.Select(c => (c.listName, c.inkVariableName));
 
         /// <inheritdoc />
-        public IEnumerable<(string, string)> characterRelationshipVariables =>
-            characterInfo.Select(c => (c.listName, c.relationshipVariableName));
+        public IEnumerable<(string, string, string)> characterRelationshipVariables =>
+            characterInfo.Select(c =>
+                (c.listName, c.relationshipVariableName, c.activateRelationshipIndicatorVariableName));
 
         #endregion
 

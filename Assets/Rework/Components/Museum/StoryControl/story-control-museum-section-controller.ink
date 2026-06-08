@@ -1,4 +1,4 @@
-LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog, FifthCharacter, TheKitchenFrog
+LIST listCharacters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog, FifthCharacter, TheKitchenFrog, Carla
 
 LIST ink_possibileLevels = ink_empty, ink_low, ink_normal, ink_medium, ink_high
 VAR firstChar_InkLevel = ink_empty
@@ -9,6 +9,8 @@ VAR fifthChar_InkLevel = ink_empty
 
 VAR firstChar_relationshipIndicator = 0
 VAR secondChar_relationshipIndicator = 0
+VAR tutorial_CarlaRelationshipIndicator = 2
+VAR tutorial_CarlaRelationshipIndicator_enabled = false
 
 VAR contentsBedroom = (PG)
 
@@ -192,6 +194,17 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
 ~ knowChitarra = false
 ~ firstChar_InkLevel = ink_empty
 
+{charTag(FirstCharacter, "affectionate")}:  Qui non siamo in gamer mode
+{charTag(Carla, "neutral")}:                Qui non siamo in gamer mode
+~ settings_gamerMode = true
+{charTag(FirstCharacter, "affectionate")}:  Qui siamo in gamer mode
+{charTag(Carla, "neutral")}:                Qui siamo in gamer mode
+~ tutorial_CarlaRelationshipIndicator_enabled = true
+{charTag(Carla, "neutral")}:                Qui siamo ancora in gamer mode, attivato relationship indicator
+~ tutorial_CarlaRelationshipIndicator_enabled = false
+{charTag(Carla, "neutral")}:                Qui siamo ancora in gamer mode, spento di nuovo relationship indicator
+~ settings_gamerMode = false
+
 {charTag(FirstCharacter, "affectionate")}:  Qui non c'è sigillo attivo
 ~ glyph_discoveredSigils += WaterAirAether
 ~ glyph_actualActiveSigil += WaterAirAether
@@ -273,6 +286,8 @@ LIST glyph_talkingVariations = fireC, earthC, airC, waterC, aetherC
         }
     - Mentor:
         ~ return "Mentore"
+    - Carla:
+        ~ return "Carla"
     - else:
         ~ return "<unknown {character}>"
 }

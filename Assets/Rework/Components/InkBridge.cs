@@ -86,13 +86,22 @@ namespace Selania.Rework.Components
             string characterName)
         {
             // find the relationship variable for this character 
-            var variable = settingsDialogueBox.characterRelationshipVariables
-                .FirstOrDefault(data => data.Character == characterName).RelationshipVariable;
+            var (_, relationshipVariable, activateRelationshipVariable) = settingsDialogueBox
+                .characterRelationshipVariables
+                .FirstOrDefault(data => data.Character == characterName);
 
-            // if no variable was found, or the variable is not set, return null, otherwise return the value from the ink story
-            return string.IsNullOrEmpty(variable)
+            // emit a relationship value only if there's a variable associated and, in case an activation variable is provided too, the activation variable is true
+            var relationshipValue = string.IsNullOrEmpty(relationshipVariable)
                 ? Observable.Return((int?)null)
-                : GetVariableObservable<int>(variable).Select(x => (int?)x);
+                : GetVariableObservable<int>(relationshipVariable)
+                    .Select(x => (int?)x);
+            var activateRelationshipValue = string.IsNullOrEmpty(activateRelationshipVariable)
+                ? Observable.Return(true)
+                : GetVariableObservable<bool>(activateRelationshipVariable);
+            return relationshipValue.CombineLatest(
+                activateRelationshipValue,
+                (value, activate) => activate ? value : null
+            );
         }
 
         #endregion

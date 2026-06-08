@@ -89,9 +89,10 @@ namespace Selania.Rework.Interfaces
         IEnumerable<(string Character, string InkVariable)> characterInkVariables { get; }
 
         /// <summary>
-        ///     A mapping between character names (FirstCharacter, SecondCharacter, ...) and the relative relationship variable.
+        ///     A mapping between character names (FirstCharacter, SecondCharacter, ...) and the relative relationship variable + an optional boolean variable that says when to show or hide the relationship indicator.
         /// </summary>
-        IEnumerable<(string Character, string RelationshipVariable)> characterRelationshipVariables { get; }
+        IEnumerable<(string Character, string RelationshipVariable, string ActivateRelationshipIndicatorVariable)>
+            characterRelationshipVariables { get; }
 
         /// <summary>
         ///     Get the color of the character by mood.
