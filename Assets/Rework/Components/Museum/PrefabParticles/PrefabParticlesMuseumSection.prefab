@@ -756,15 +756,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.PrefabParticles.PrefabParticles
   prefab: {fileID: 8158345320039288870, guid: 9cdee8ab2655b99459f923eb51bc30bd, type: 3}
+  prewarmTime: 1
   spawnArea:
     serializedVersion: 2
     x: -100
     y: -100
     width: 200
     height: 200
-  minimumTimeBetweenSpawns: 1
-  maximumTimeBetweenSpawns: 2
+  minimumTimeBetweenSpawns: 0.1
+  maximumTimeBetweenSpawns: 0.4
   animatorParameterDescriptors:
   - animatorParameterName: Speed
     minimumValue: 0.5
     maximumValue: 2
+    isSpeedMultiplier: 1

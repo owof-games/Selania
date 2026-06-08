@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Alchemy.Inspector;
@@ -10,8 +11,13 @@ namespace Selania.Rework.Components.PrefabParticles
 {
     public class PrefabParticles : MonoBehaviour
     {
+        private static readonly Dictionary<GameObject, float> AnimationDurationCache = new();
+
         [SerializeField] [Tooltip("The prefab to instantiate at regular intervals")]
         private GameObject? prefab;
+
+        [SerializeField] [Tooltip("Amount of time to simulate the execution of before starting.")]
+        private float prewarmTime;
 
         [Tooltip("The area where the prefab will be randomly spawned from.")] [SerializeField]
         private Rect spawnArea;
@@ -28,36 +34,122 @@ namespace Selania.Rework.Components.PrefabParticles
 
         private void Start()
         {
-            var objectsToDespawnChannel = Channel.CreateSingleConsumerUnbounded<ObjectToDespawn>();
-            RunAnimationLoopAsync(objectsToDespawnChannel, destroyCancellationToken).Forget();
-            DespawnObjectsLoopAsync(objectsToDespawnChannel, destroyCancellationToken).Forget();
+            // compute / read from cache the animation duration
+            var animationDuration = ComputeAnimationDuration();
+
+            // start the spawning loops
+            RunAnimationLoopAsync(animationDuration, destroyCancellationToken).Forget();
+        }
+
+        private float ComputeAnimationDuration()
+        {
+            // no prefab: don't compute the duration
+            if (prefab == null) return 0;
+
+            // return the cached value, if any
+            if (AnimationDurationCache.TryGetValue(prefab, out var duration)) return duration;
+
+            // otherwise, compute it: if we inspect the prefab, all animator states will have length 0 (...), so we
+            // have to spawn it in order to extract information from it
+
+            // spawn the object outside visible range, just in case
+            var prefabInstance = Instantiate(prefab, new Vector3(10000, 10000), Quaternion.identity);
+            if (prefabInstance == null)
+            {
+                Debug.LogError("Cannot instantiate prefab", this);
+                return 0;
+            }
+
+            // compute the clip duration
+            var animator = prefabInstance.GetComponent<Animator>();
+            var animatorState = animator.GetCurrentAnimatorStateInfo(0);
+            duration = animatorState.length;
+
+            // save it in cache
+            AnimationDurationCache[prefab] = duration;
+
+            // clear the spawned object
+            Destroy(prefabInstance.gameObject);
+
+            // return the result
+            return duration;
+        }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetAnimationDurationCache()
+        {
+            AnimationDurationCache.Clear();
         }
 
         /// <summary>
         ///     "Thread" that takes care of spawning objects.
         /// </summary>
-        /// <param name="objectsToDespawnChannel">Channel where to write info about the despawn of objects.</param>
+        /// <param name="animationDuration">Duration of the prefab animation, without any speed multiplier applied.</param>
         /// <param name="cancellationToken">
         ///     The cancellation token to listen to in order to decide whether to continue with the
         ///     operations or not.
         /// </param>
-        private async UniTaskVoid RunAnimationLoopAsync(Channel<ObjectToDespawn> objectsToDespawnChannel,
-            CancellationToken cancellationToken)
+        private async UniTaskVoid RunAnimationLoopAsync(float animationDuration, CancellationToken cancellationToken)
         {
+            // this variable will keep info about how much time of prewarm must still be simulated.
+            var remainingPrewarmTime = prewarmTime;
+
+            // dictionary where the parameter values will be saved each loop
+            Dictionary<string, float> parameterValues = new();
+
             try
             {
                 Debug.Log("Spawn loop started", this);
                 for (;;)
                 {
-                    // wait until the next spawn time
+                    // wait until the next spawn time (or consume prewarm time)
                     var spawnDelay = Random.Range(minimumTimeBetweenSpawns, maximumTimeBetweenSpawns);
-                    await UniTask.Delay(TimeSpan.FromSeconds(spawnDelay), cancellationToken: cancellationToken);
+                    Debug.Log($"Waiting {spawnDelay} before the next spawn");
+                    if (remainingPrewarmTime > spawnDelay)
+                    {
+                        Debug.Log("Consuming prewarm time instead of real time");
+                        remainingPrewarmTime -= spawnDelay;
+                    }
+                    else
+                    {
+                        spawnDelay -= remainingPrewarmTime;
+                        if (remainingPrewarmTime > 0)
+                            Debug.Log($"Consuming prewarm time instead of real time, {spawnDelay} remaining");
+
+                        remainingPrewarmTime = 0;
+                        await UniTask.Delay(TimeSpan.FromSeconds(spawnDelay), cancellationToken: cancellationToken);
+                    }
+
+                    // compute the required animator parameters
+                    float speedMultiplier = 1;
+                    foreach (var animatorParameterDescriptor in animatorParameterDescriptors)
+                    {
+                        var parameterValue = Random.Range(animatorParameterDescriptor.minimumValue,
+                            animatorParameterDescriptor.maximumValue);
+                        parameterValues[animatorParameterDescriptor.animatorParameterName] = parameterValue;
+                        if (animatorParameterDescriptor.isSpeedMultiplier) speedMultiplier = parameterValue;
+                    }
+
+                    // compute the animation duration
+                    var actualDuration = animationDuration / speedMultiplier;
+                    Debug.Log(
+                        $"Animation duration {animationDuration}, speed multiplier {speedMultiplier}, actual duration {actualDuration}");
+
+                    // check if we actually have to spawn the object, or if it will be despawned by the time the prewarm
+                    // is done
+                    if (remainingPrewarmTime > actualDuration)
+                    {
+                        Debug.Log("Prewarm time will completely use up the object's duration, continue");
+                        continue;
+                    }
 
                     // pick a random spawn point
                     var spawnCoordinates = new Vector2(
                         Random.Range(spawnArea.xMin, spawnArea.xMax),
                         Random.Range(spawnArea.yMin, spawnArea.yMax)
                     );
+                    Debug.Log(
+                        $"Spawning at {transform.position} + {spawnCoordinates} = {transform.position + (Vector3)spawnCoordinates}");
 
                     // spawn the parent at that location
                     var parentGameObject = new GameObject
@@ -77,82 +169,53 @@ namespace Selania.Rework.Components.PrefabParticles
                         continue;
                     }
 
-                    // set the required animator parameters
+                    // apply the animator parameters
                     var animator = prefabInstance.GetComponent<Animator>();
-                    foreach (var animatorParameterDescriptor in animatorParameterDescriptors)
+                    foreach (var parameterNameAndValue in parameterValues)
                     {
-                        var parameterValue = Random.Range(animatorParameterDescriptor.minimumValue,
-                            animatorParameterDescriptor.maximumValue);
-                        animator.SetFloat(animatorParameterDescriptor.animatorParameterName, parameterValue);
+                        animator.SetFloat(parameterNameAndValue.Key, parameterNameAndValue.Value);
                     }
 
-                    // wait a frame to let the animation start
-                    await UniTask.NextFrame();
+                    // check if we have to fast-forward the animation because of prewarm
+                    if (remainingPrewarmTime > 0)
+                    {
+                        var animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                        var normalizedTime = remainingPrewarmTime / actualDuration;
+                        Debug.Log($"Fast forwarding animation to normalized time {normalizedTime}");
+                        animator.Play(animatorStateInfo.fullPathHash, 0, normalizedTime);
+                    }
 
                     // decide when to despawn it and write it in the channel
-                    var animatorState = animator.GetCurrentAnimatorStateInfo(0);
-                    var actualDuration = animatorState.length * animatorState.speed;
-                    var despawnTime = DateTime.Now + TimeSpan.FromSeconds(actualDuration);
-                    var writeSucceeded =
-                        objectsToDespawnChannel.Writer.TryWrite(new ObjectToDespawn(despawnTime, parentGameObject));
-                    if (writeSucceeded) continue;
-                    Debug.LogError(
-                        $"Could not write that an object had to be despawned at {despawnTime}, doing it immediately");
-                    Destroy(parentGameObject);
+                    var despawnTime = DateTime.Now + TimeSpan.FromSeconds(actualDuration - remainingPrewarmTime);
+                    DespawnObjectAt(parentGameObject, despawnTime, cancellationToken).Forget();
                 }
             }
             catch (OperationCanceledException)
             {
-                objectsToDespawnChannel.Writer.TryComplete();
                 Debug.Log("Spawn loop canceled", this);
             }
             catch (Exception e)
             {
-                objectsToDespawnChannel.Writer.TryComplete(e);
                 Debug.LogError(e.ToString(), this);
             }
         }
 
-        /// <summary>
-        ///     "Thread" that takes care of despawning objects.
-        /// </summary>
-        /// <param name="objectsToDespawnChannel">Channel where to read info about the objects to despawn.</param>
-        /// <param name="cancellationToken">
-        ///     The cancellation token to listen to in order to decide whether to continue with the
-        ///     operations or not.
-        /// </param>
-        private async UniTaskVoid DespawnObjectsLoopAsync(Channel<ObjectToDespawn> objectsToDespawnChannel,
+        private async UniTaskVoid DespawnObjectAt(GameObject gameObjectToDespawn, DateTime despawnTime,
             CancellationToken cancellationToken)
         {
             try
             {
-                Debug.Log("Despawn loop started", this);
-                for (;;)
-                    await foreach (var objectToDespawn in objectsToDespawnChannel.Reader.ReadAllAsync()
-                                       .WithCancellation(cancellationToken))
-                    {
-                        var now = DateTime.Now;
-                        if (objectToDespawn.DespawnTime > now)
-                            await UniTask.Delay(objectToDespawn.DespawnTime - now,
-                                cancellationToken: cancellationToken);
-
-                        await UniTask.SwitchToMainThread();
-                        Destroy(objectToDespawn.GameObject);
-                    }
-            }
-            catch (OperationCanceledException)
-            {
-                Debug.Log("Despawn loop canceled", this);
+                var delayTimeSpan = despawnTime - DateTime.Now;
+                if (delayTimeSpan > TimeSpan.Zero)
+                    await UniTask.Delay(delayTimeSpan, cancellationToken: cancellationToken);
             }
             catch (Exception e)
             {
-                Debug.LogError(e.ToString(), this);
+                Debug.LogError(e, this);
             }
             finally
             {
-                // make sure to despawn all pending game objects
-                while (objectsToDespawnChannel.Reader.TryRead(out var objectToDespawn))
-                    Destroy(objectToDespawn.GameObject);
+                Destroy(gameObjectToDespawn);
             }
         }
 
@@ -168,14 +231,10 @@ namespace Selania.Rework.Components.PrefabParticles
 
             [Tooltip("Maximum value of the animator variable.")]
             public float maximumValue = 1;
-        }
 
-        /// <summary>
-        ///     Description of an object to despawn.
-        /// </summary>
-        /// <param name="DespawnTime">Time at which the object must be despawned.</param>
-        /// <param name="GameObject">Game object to despawn.</param>
-        private record ObjectToDespawn(DateTime DespawnTime, GameObject GameObject);
+            [Tooltip("Whether this parameter is the speed multiplier of the animation.")]
+            public bool isSpeedMultiplier;
+        }
 
         #region editor support
 
@@ -243,6 +302,9 @@ namespace Selania.Rework.Components.PrefabParticles
 
                 i++;
             }
+
+            if (animatorParameterDescriptors.Count(descriptor => descriptor.isSpeedMultiplier) > 1)
+                Debug.LogError("Only one animator parameter should be marked as speed multiplier.");
         }
 
         [Button]
