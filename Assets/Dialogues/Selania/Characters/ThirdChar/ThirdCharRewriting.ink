@@ -235,7 +235,11 @@
         - grimoire_thirdChar has grimThirdCharMentor:
         {charTag(PG, "neutral")}:                               Discutendo con {charNameFive} hai detto che cerchi un'amicizia del fare.
                                                                 Ma.
-        }                                                        
+        }
+        {
+        - grimoire_thirdChar has grimThirdCharKitchenOne:
+                                                                Cucinando assieme, hai raccontato di nuovo dei problemi che hai nelle relazioni con i tuoi amici: da una parte un gruppetto giudicante, dall'altra la confidenza che ancora non sboccia con Rocco, e il peso della relazione che più ti manca.  
+        }                                                       
                                                                 Hai perso il tuo principale confidente, il Poggi, e l'unica cosa che fai è aspettare, non tirare fuori il problema.
                                                                 Ma è evidente che ti manca.         
         -
