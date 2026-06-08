@@ -191,10 +191,12 @@
     }
     {
         - grimoire_thirdChar has grimThirdCharKitchenTwo:
+        
   
     }
     {
         - grimoire_thirdChar has grimThirdCharKitchenThree:
+        Cucinando con {player_name}, {charNameThree} e {player_name} hanno parlato di lavoro. {charNameThree} si è rivelato molto orgoglioso del suo lavoro, perché lo vede come qualcosa che fa bene alle persone per staccare la testa e dimenticare per un po' il mondo, mentre i suoi amici di calcetto lo vedono come un lavoro da ragazzino. {charNameThree} crede che "se la sentano" perché sono pieni di soldi. {charNameThree} ha sviluppato un buon rapporto con Petra, una delle sue colleghe, e ha scoperto che gli piace insegnare le cose che sa fare. Lo fa sentire rispettato e importante. Hanno una visione diversa su cosa sia fare il proprio lavoro, ma {charNameThree} ammira come Petra sappia difendersi dal capo e dai clienti che la deridono in quanto lesbica. {charNameThree} ha anche raccontato a {player_name} che è infastidito dalla presenza della fidanzata del capo, incapace e lì per spiarli. E che ha imparato a fare il suo lavoro dal padre. {charNameThree} vorrebbe però guadagnare di più, soprattutto visto che fa un buon lavoro. {charNameThree} è stanco di vivere col suo coinquilino e il gatto. E da la colpa al padre, perché il Baretto era di sua proprietà quando era piccolo, ma poi il padre di {charNameThree} l'ha perso perché "incapace di gestire i soldi e di non fare favori ad amici di merda". Questo lavoro {charNameThree} l'ha trovato attraverso il padre, e crede che il padre sia felice perché "alla fine ha vinto lui".
 
     }
 

@@ -1153,7 +1153,9 @@
         {charTag(ThirdCharacter, "neutral")}:                                   E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
         
         -cooking_with_third_char.third_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   E discutere di creatività.
+        {charTag(ThirdCharacter, "neutral")}:                                   Alla fine non è stato male parlare di lavoro, no?
+        {charTag(ThirdCharacter, "jester")}:                                    Spero di non essermi lamentato troppo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però alla fine mi piace, spero si sia capito.                                                                                                                                                
 
         }
     {charTag(ThirdCharacter, "neutral")}:                                       E poi questo {piatto}!

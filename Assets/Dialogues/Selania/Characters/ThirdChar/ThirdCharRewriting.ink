@@ -203,6 +203,12 @@
         {charTag(PG, "neutral")}:                               Quando hai parlato del tuo capo l'hai descritto come un idiota incapace.
                                                                 E per questo finisce che fai il suo lavoro, che i fornitori ti chiamano mentre non sei in turno, così come i colleghi.
         {
+        - grimoire_thirdChar hasnt grimThirdCharKitchenThree:
+                                                                E quando abbiamo cucinato assieme hai rimarcato la cosa, raccontando del poco che fa.
+                                                                Della fidanzata incapace che è lì solo per spiarvi.
+                                                                Del poco riconoscimento per il mazzo che ti fai. 
+        }                                                         
+        {
         - third_char_main_storylets.one.aether2:
                                                                 Lavori quasi tutte le sere, torni che sei distrutto, che non hai tempo per te.
         }                                                       
