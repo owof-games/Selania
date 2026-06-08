@@ -164,6 +164,11 @@
         - grimoire_franco has grimFrancoThirdIngredientFailure:
                                                                 Neanche il povero Franco è stato capace di capire di cosa hai davvero bisogno.   
         }
+        {
+        - grimoire_thirdChar hasnt grimThirdCharKitchenThree:
+                                                                Per quanto in cucina tu ti sia acceso parlando della gioia che provi nel prenderti cura dei clienti.
+                                                                E della grinta di Petra, la tua collega.
+        } 
 
 
 
@@ -202,8 +207,13 @@
                                                                 Lavori quasi tutte le sere, torni che sei distrutto, che non hai tempo per te.
         }                                                       
                                                                 Hai fatto un lavoro che ti faceva sentire figo, ma ora?
-                                                                I tuoi compagni di calcetto pensano che fai un lavoro da ragazzino.
+                                                                I tuoi compagni di calcetto non prendono il tuo lavoro sul serio.
                                                                 E nel mentre vivi con un coinquilino che detesti.
+        {
+        - grimoire_thirdChar hasnt grimThirdCharKitchenThree:
+                                                                In cucina hai raccontato di amare la possibilità di prenderti cura dei clienti.
+                                                                Può essere un punto di partenza per qualcosa di diverso?   
+        }                                                        
                                                                 
 
 

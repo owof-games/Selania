@@ -12,3 +12,4 @@
 // È 
 //Pronomi usati da Boccale
 //{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}
+//{thirdChar_recordedPlayerPronoun has him:il|{thirdChar_recordedPlayerPronoun has her:la|lə}}

@@ -650,8 +650,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Ma i clienti sono contenti quando ti ricordi i loro nomi.
                                                                                 Quando sai già cos'è che prendono.
                                                                                 Che Tizio non vuole il sale sulle patatine, o che Caio si siede al tavolo per ore con la stessa birra.
-                                                                                Amo le birre, ma la parte principale non è consigliarle o che.
-                                                                                È fare sentire il cliente a casa.
+                                                                                Amo le birre, ma la cosa che mi piace davvero è fare sentire il cliente a casa.
         {charTag(ThirdCharacter, "bored")}:                                     E detto tra noi, anche per questo mi incazzo col Merlo e gli altri del calcetto.
         {charTag(ThirdCharacter, "neutral")}:                                   Una sera il Giova mi dice "Beato te che fai ancora un lavoro da ragazzino".
         {charTag(ThirdCharacter, "bored")}:                                     Secondo me se la sentono tanto per i soldi che fanno.
@@ -664,20 +663,59 @@
         {charTag(ThirdCharacter, "bored")}:                                     Questa roba soprattutto il Merlo e il Giova non la capiranno mai.
                                                                                                          
         
-        + \ {charTag(PG, "neutral")}:                                           Quando gli dici queste cose come reagiscono?
+        + \ {charTag(PG, "neutral")}:                                           Quando gli dici queste cose, come reagiscono?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Pensi seriamente che possa dire una cosa del genere a quei due?
+                                                                                Il Giova negherebbe di aver mai detto una cosa del genere, dicendo che l'ho frainteso o roba del genere.
+                                                                                Il Merlo mi darebbe del frignone e che se ci sono rimasto male è perché in fondo so che è un lavoro da ragazzini.
+        {charTag(ThirdCharacter, "neutral")}:                                   No, lasciamo perdere, va.                                                                        
 
-        + \ {charTag(PG, "neutral")}:                                           Commento sui bisogni fondamentali.
+
+        + \ {charTag(PG, "neutral")}:                                           La casa non sono quattro pareti, ma le persone con cui costruisci qualcosa.
                 -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Ne facciamo una questione di classe (apprezza a metà)
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                             È arrivat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} {thirdChar_recordedPlayerPronoun has him:il|{thirdChar_recordedPlayerPronoun has her:la|lə}} poet{thirdChar_recordedPlayerPronoun has him:a|{thirdChar_recordedPlayerPronoun has her:essa|essə}}.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   La casa è anche quattro pareti.
+                                                                                Ma quanti di noi ci stanno di merda a casa?
+                                                                                Un posto in cui rifugiarsi è fondamentale per sopravvivere.
+
+        + \ {charTag(PG, "neutral")}:                                           A volte dovresti un po' mandare a fanculo i tuoi amici, {charNameThree}.
                 -> glyph_choice_manager(false, fireC)->
-            
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "bored")}:                             Solo io posso criticarli, {player_name}!
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   L'ho fatto un paio di volte.
+                                                                                Ma non serve a molto.
+        {charTag(ThirdCharacter, "bored")}:                                     Il Merlo coglie l'occasione per ridicolizzarti ancora di più.
+                                                                                Il Giova davanti al Merlo ti tratta da idiota, per poi scriverti messaggini dove ti chiede scusa.
+                                                                                Passo, grazie.
+
         + \ {charTag(PG, "neutral")}:                                           Un po' come il cucinare assieme.
                 -> glyph_choice_manager(false, waterC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != her:
+                {charTag(ThirdCharacter, "bored")}:                             Ma non sono una donna come te.
+                }
+        {charTag(ThirdCharacter, "jester")}:                                    Come starai vedendo, cucinare non è il mio forte.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non ho mai visto la cucina come un posto dove stare bene.
+                                                                                Papà insisteva perché mangiassimo tutti assieme, ma per lo più era una tortura.
+                                                                                Mentre con Dona ci guardavamo le serie TV.
+                                                                                Che è anche una cosa carina, quando sei stanco morto.                                                                    
+
+        + \ {charTag(PG, "neutral")}:                                           Alla fine questo senso di comunità e unione <b>è</b> qualcosa di spirituale, {charNameThree}.
                 -> glyph_choice_manager(false, aetherC)->
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != they:
+                {charTag(ThirdCharacter, "bored")}:                             Sarà.
+                }
+        {charTag(ThirdCharacter, "neutral")}:                                   Mamma mi raccontava che quando era piccola d'inverno passavano le giornate tutti assieme in cucina, per risparmiare.
+                                                                                Sua mamma e la nonna facevano dei lavoretti in nero e chiacchieravano, e lei aiutava.
+                                                                                E in quegli inverni si discuteva e decideva del destino di famiglie e mariti e rapporti coi vicini.
+                                                                                Ecco, mi sembra più una cosa del genere.
+                                                                                Non è una roba spirituale, però fa stare assieme le persone, le fa parlare.        
         -
             //Intermezzo culinario
             ~ third_char_kitchen_comments(oneKitchen)
@@ -690,7 +728,7 @@
             -> kitchen_moon_feedback -> 
         
 
-        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//Qualcosa che ha a che fare con il costruire
             ~ kitchen_recipeNoun = "Zuppa di grano"
             -> glyph_choice_manager(true, earthC)->
 
@@ -698,7 +736,7 @@
             ~ kitchen_recipeNoun = "Grigliata di seitan"
             -> glyph_choice_manager(true, waterC)->
             
-        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//qualcosa che ha a che fare col trasformare
             ~ kitchen_recipeNoun = "Fagiolata"
             -> glyph_choice_manager(true, fireC)->
     
@@ -706,7 +744,7 @@
             ~ kitchen_recipeNoun = "Cimetta di broccolo"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//Qualcosa che ha a che fare con lo spiegare
             ~ kitchen_recipeNoun = "Crema d'aglio"
             -> glyph_choice_manager(true, airC)->
         -
@@ -729,54 +767,54 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Mi ha anche difeso perché il capo dice che bevo troppo durante il turno.
         {charTag(ThirdCharacter, "bored")}:                                     Non è che bevo troppo, reggo benissimo.
                                                                                 Tra l'altro ora quell'idiota c'ha mandato <i>in prova</i> la nuova fidanzata, una incapace che palesemente è lì solo per controllarci.
-                                                                                E quando provo a insegnarle le cose, mi guarda come se c'avesse il cervello completamente spento.
-        {charTag(ThirdCharacter, "jester")}:                                    Mi sa che è buona solo per scopare quella.
+                                                                                E quando provo a insegnarle le cose, mi guarda coi neuroni distaccati, zero, il vuoto.
+        {charTag(ThirdCharacter, "jester")}:                                    Quella sopravvive giusto perché è tettona.
         {charTag(ThirdCharacter, "neutral")}:                                   Però mi fa strano che tante cose cambiano e tutto il resto, ma alla fine i trucchi che insegno alla Petra, quelli che uso io, sono gli stessi che mi ha insegnato mio padre anni fa, quando ero piccolo e il Baretto era ancora suo.
         {charTag(ThirdCharacter, "bored")}:                                     Un paio di cose nella vita le ha imbroccate alla fine.
         {charTag(ThirdCharacter, "jester")}:                                    L'altra cosa che ha imbroccato ovviamente è mettere questo bel pezzo di uomo al mondo!
     
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Perché l'insegnare dovrebbe avere a che fare col ricevere rispetto?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Quindi vorresti essere un riferimento, po' come {charNameFive}.
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Quello vi chiede di lasciare i problemi personali a casa, e dà il lavoro alla fidanzata. Da sberle.
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Domanda sul padre.
+        + \ {charTag(PG, "neutral")}:                                           Qual è il tuo ricordo più bello al Baretto?
                 -> glyph_choice_manager(false, waterC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Petra sembra una che sa cos'è la solidarietà tra colleghi.
                 -> glyph_choice_manager(false, aetherC)->
-
+            ma non ha ancora capito come funziona la friggitrice.
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(threeKitchen)
         
         {charTag(ThirdCharacter, "neutral")}:                                   E te, che rapporto c'hai col tuo capo?
         
-        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//di rispetto
             ~ kitchen_recipeAdjective = "onesta"
             -> glyph_choice_manager(true, earthC)->
 
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//ubbidisco solo se la richiesta ha senso
             ~ kitchen_recipeAdjective = "allegra"
             -> glyph_choice_manager(true, airC)->
 
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//di confidenza
             ~ kitchen_recipeAdjective = "empatica"
             -> glyph_choice_manager(true, waterC)->
 
     
-        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//non accetto le gerarchie
             ~ kitchen_recipeAdjective = "incondizionata"
             -> glyph_choice_manager(true, aetherC)->
 
 
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//di lotta
             ~ kitchen_recipeAdjective = "leale"
             -> glyph_choice_manager(true, fireC)->
         -
@@ -789,12 +827,11 @@
         {charTag(ThirdCharacter, "bored")}:                                     Ma se uno lavora bene, perché guadagna comunque male?
                                                                                 È una cosa da deficienti.
         {charTag(ThirdCharacter, "neutral")}:                                   Non mi piacere rompere i coglioni su queste cose, ma sono stanco di vivere con un coinquilino idiota e il suo gatto di merda che marca mezza casa.
-                                                                                Non so come dire, {player_name}, ma è una questione di rispetto, no?
                                                                                 Se faccio il mio lavoro e tu non lo riconosci, allora non mi stai rispettando.
         {charTag(ThirdCharacter, "bored")}:                                     Soprattutto dopo che ti paro il culo con colleghi e fornitori perché tu non sai gestire un cazzo.
         {charTag(ThirdCharacter, "jester")}:                                    Forse dovrei imparare a rispondergli a merda come fa Petra.
         {charTag(ThirdCharacter, "angry")}:                                     Che poi alla fine è tutta colpa di quello sfigato di mio padre.
-        {charTag(ThirdCharacter, "neutral")}:                                   Sapevi che quando ero piccolo, il locale, il Baretto, era nostro?
+        {charTag(ThirdCharacter, "neutral")}:                                   Sapevi che quando ero piccolo il Baretto era nostro?
                                                                                 Non eravamo ricchi sfondati, ma stavamo bene, e io me la spassavo a giocare con i vecchi a carte, o a calcio coi miei amici.
         {charTag(ThirdCharacter, "bored")}:                                     E poi bum, di punto in bianco abbiamo perso tutto, perché lui era incapace di gestire i soldi.
                                                                                 Di non fare favori ad amici di merda.
@@ -805,18 +842,18 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Quando ho perso il vecchio lavoro, sono rimasto disoccupato per un anno.
                                                                                 Un incubo.
                                                                                 E il lavoro al Baretto l'ho trovato perché ha chiesto lui un favore a quello che ora è il mio capo.
-                                                                                In onore del rapporto che suo padre e il mio avevano da giovani.
+                                                                                Perché fu suo padre a comprarsi l'attività dal mio e c'erano in mezzo amicizia e cose che non sto a dirti.
         {charTag(ThirdCharacter, "angry")}:                                     E ti giuro {player_name}, ti giuro che me lo immagino ogni volta che passa davanti al Baretto che se la sorride tutto felice perché alla fine ha vinto lui.
         {charTag(ThirdCharacter, "neutral")}:                                   Sto in piedi grazie a lui.
         {charTag(ThirdCharacter, "bored")}:                                     Peccato che sono qui come lavoratore, quando sarei dovuto essere il cazzo di padrone.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Ma anche se tuo padre avesse vinto su questo aspetto, cosa cambia? Perché è così importante?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?//Qualcosa sul fatto che suo padre può avergli fatto un favore, ma il lavoro l'ha solo perché è capace.
+        + \ {charTag(PG, "neutral")}:                                           Magari tuo padre ti ha aiutato a ottenere il lavoro, ma l'hai ancora per le tue capacità.
                 -> glyph_choice_manager(false, earthC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se sei un fuoriclasse, cambia squadra. Cercati un altro lavoro.
                 -> glyph_choice_manager(false, fireC)->
             
         + \ {charTag(PG, "neutral")}:                                           Ma come ti stai vivendo questa cosa di essere un Boccale, quindi?
@@ -825,7 +862,7 @@
                                                                                 Mi sembra un promemoria di un fallimento.
                                                                                 È da quando sono arrivato che 'sto cazzo di posto si prende gioco di me.
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           {charNameThree}, hai mai sentito parlare di lotta di classe?
                 -> glyph_choice_manager(false, aetherC)->
         -
             //Intermezzo culinario
