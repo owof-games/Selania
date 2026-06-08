@@ -160,25 +160,46 @@
             -> kitchen_moon_feedback -> 
         
 
-        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i> //Centrocampo
-            ~ kitchen_recipeNoun = "Zuppa di grano"
+        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Stufo della soia del centrocampista.</i>
+            ~ kitchen_recipeNoun = "Stufato di soia"
             -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Ci sta, il tizio che sta sempre in mezzo alle scatole.
+                                                                                Scherzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Io non c'ho tutta questa pazienza di stare lì, sempre lontano dalle porte.
 
-        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i> //Difesa
-            ~ kitchen_recipeNoun = "Grigliata di seitan"
+        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Lavo dell'insalata di spinaci del difensore.</i>
+            ~ kitchen_recipeNoun = "Insalata di spinaci"
             -> glyph_choice_manager(true, waterC)->
-            
-        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i> //Attacco
-            ~ kitchen_recipeNoun = "Fagiolata"
-            -> glyph_choice_manager(true, fireC)->
-    
-        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i> //Porta
-            ~ kitchen_recipeNoun = "Cimetta di broccolo"
-            -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Che balle, vecio!
+        {charTag(ThirdCharacter, "jester")}:                                    Cioè, meglio per me, anche perché in squadra tutti vogliono fare l'attaccante.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma boh, è una cosa noiosissima.
 
-        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i> //Arbitro
-            ~ kitchen_recipeNoun = "Crema d'aglio"
+        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Friggo dei peperoncini dell'attaccante.</i>
+            ~ kitchen_recipeNoun = "Frittura di peperoncini"
+            -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Come me.
+        {charTag(ThirdCharacter, "bored")}:                                     Quindi, col cazzo.
+        {charTag(ThirdCharacter, "jester")}:                                    Scherzo, però alla fine tutti nel gruppo voglio sempre stare in attacco.                                                                        
+            
+        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Salto del riso del portiere.</i>
+            ~ kitchen_recipeNoun = "Sauté di riso "
+            -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Sto per dire una cosa odiosa, ma è un ruolo che toglierei.
+                                                                                Lascerei la difesa della porta ai difensori.
+                                                                                Niente uso delle mani.
+                                                                                Perché uno deve averci delle regole tutte sue, scusa?
+                                                                                Facciamo la porta più piccola, tipo quella dell'hockey, e bona.
+
+        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Immergo nell'olio dei pomodorini dell'arbitro.</i>
+            ~ kitchen_recipeNoun = "Confit di pomodori"
             -> glyph_choice_manager(true, airC)->
+        {charTag(ThirdCharacter, "jester")}:                                    CORNUTOOOOOOOOO!
+                                                                                Scusa, ma non potevo farne a meno.
+        {charTag(ThirdCharacter, "bored")}:                                     Cioè, è una scelta.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ti faresti nemico tutti.
+                                                                                Passeresti le serate a litigare col Merlo.
+        {charTag(ThirdCharacter, "jester")}:                                    E toglieresti a me il problema.
+
         -  
         
         {charTag(ThirdCharacter, "neutral")}:                                   Ultimamente capita che le serata assieme saltano.
@@ -268,29 +289,45 @@
                                                                                 Cioè, è una cosa che si deve sempre fare?
                                                                                 O finisci per mancarti da solo di rispetto?
         
-        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//qualcosa sul superare il confine tra accoglienza e sottomissione.
-            ~ kitchen_recipeAdjective = "onesta"
+        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Grattuggio delle olive della invalicabilità.</i>
+            ~ kitchen_recipeAdjective = "invalicabilità"
             -> glyph_choice_manager(true, earthC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Già.
+                                                                                Uno può cedere un po', in alcune situazioni.
+                                                                                Ma altre sono invalicabili, punto.
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//qualcosa sul non ti importa il rispetto
-            ~ kitchen_recipeAdjective = "allegra"
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Impano delle mandorle noncuranti.</i>
+            ~ kitchen_recipeAdjective = "noncuranza"
             -> glyph_choice_manager(true, airC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Non so se sia una gran cosa, ma buon per te.
+                                                                                Io non ce la faccio proprio a farmi passare addosso le cose, zero.
+                                                                                Mi fai un torto?
+        {charTag(ThirdCharacter, "jester")}:                                    Me lo porto fino alla tomba.
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//qualcosa sul guarire nella vulnerabilità
-            ~ kitchen_recipeAdjective = "empatica"
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Mescolo dei semi della apertura.</i>
+            ~ kitchen_recipeAdjective = "apertura"
             -> glyph_choice_manager(true, waterC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Boh vecio, alla fine uno però un limite lo deve anche tirare.
+        {charTag(ThirdCharacter, "bored")}:                                     Perché se stai lì a chiappe all'aria tutto il tempo poi è ovvio che lo prendi nel culo, no?
     
-        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//qualcosa sul cambiare assieme
-            ~ kitchen_recipeAdjective = "incondizionata"
+        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Scaldo delle ciliege collaborative.</i>
+            ~ kitchen_recipeAdjective = "collaborazione"
             -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Collabori nel farti prendere nel culo?
+                                                                                Tipo <i>Porgi l'altra guancia</i>?
+                                                                                Perché non sono uno molto religioso, vecio.
+        {charTag(ThirdCharacter, "jester")}:                                    I santi li chiamo giusto quando arrivano le bollette da pagare.
 
-
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//qualcosa sul tirare a diritto, o ti raggiungono o ti perdono.
-            ~ kitchen_recipeAdjective = "leale"
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio dell'aglio intransigente.</i>
+            ~ kitchen_recipeAdjective = "intransigenza"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Ci capiamo, noi due.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci sta anche perdonare, una volta.
+                                                                                Anche se comunque me la legherò al dito per un bel po'.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma una.
+                                                                                Poi basta, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Com'era quella canzone?
+        {charTag(ThirdCharacter, "jester")}:                                    La prima volta stronzo tu, la seconda scemo io?                                                                            
         -      
         
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque non credo gli scriverò presto, al Poggi.
@@ -376,25 +413,44 @@
                                                                                 Dovevamo parlare di calcio e invece.
                                                                                 Te non c'hai mai paura di risultare troppo pesante coi tuoi amici?
         
-        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//Qualcosa sul fatto che condividere ciò che provi e ascoltarli ti fa stare bene (condivisione)
-            ~ kitchen_recipeComplement = "con brodo del terrore"
+        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Spruzzo con acqua di rose sinergica.</i>
+            ~ kitchen_recipeComplement = "acqua di rose sinergica"
             -> glyph_choice_manager(true, waterC)->
-            
-        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//è un discorso di equilibrio
-            ~ kitchen_recipeComplement = "con noce euforica"
-            -> glyph_choice_manager(true, earthC)->
-            
-        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//sei più da discorsi filosofici
-            ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
-            -> glyph_choice_manager(true, airC)->
-    
-        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//sul crescere assieme.
-            ~ kitchen_recipeComplement = "con olio delle lusinghe"
-            -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Cos'è?
+                                                                                Vi ritrovate a farvi le unghie e parlare dei vostri ragazzi?
+        {charTag(ThirdCharacter, "jester")}:                                    Scherzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però preferirei tagliarmi le palle e mangiarle che passare il tempo a parlare di pesate.
 
-        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//non parliamo, facciamo cose.
-            ~ kitchen_recipeComplement = "con peperoncini arrapati"
+        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Incorporo delle carote del sinallagma.</i>
+            ~ kitchen_recipeComplement = "carote del sinallagma"
+            -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Questa me la ricordo per un casino di Dona con un fornitore.
+        {charTag(ThirdCharacter, "neutral")}:                                   Che in soldoni è: dare e avere secondo contratto?
+        {charTag(ThirdCharacter, "bored")}:                                     È un modo di dire che stai lì a contare i minuti di pesate condivise?
+        {charTag(ThirdCharacter, "neutral")}:                                   Aiuto.
+        {charTag(ThirdCharacter, "jester")}:                                    Te l'ho già detto zio che quello intelligente è il Poggi, non io.                                            
+            
+        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Decoro con delle bacche del filosofeggiare.</i>
+            ~ kitchen_recipeComplement = "bacche del filosofeggiare"
+            -> glyph_choice_manager(true, airC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Non so sei sia meglio, vecio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Quelle cose alla Marzullo, tipo "È meglio avere il cazzo piccolo e scopare, o avere il cazzo grande e non scopare"?
+        {charTag(ThirdCharacter, "jester")}:                                    Giusto?
+                                                                                Perché nel caso possiamo filosofeggiare per giorni, vecio!                                                             
+
+        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Imbevo il tutto con della grappa del coevolvere.</i>
+            ~ kitchen_recipeComplement = "grappa del coevolvere"
+            -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   La quantità di pipponi che ti fai tu vecio.
+        {charTag(ThirdCharacter, "jester")}:                                    Manco {charNameOne}!
+
+        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Rivesto con granella del silenzio.</i>
+            ~ kitchen_recipeComplement = "granella del silenzio"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Idem.
+        {charTag(ThirdCharacter, "neutral")}:                                   La vita è già difficile di suo, perché devo anche riempire qualcuno con le mie paranoie?
+        {charTag(ThirdCharacter, "bored")}:                                     Meglio stare lì a giocare a calcetto e bona, no?
+        {charTag(ThirdCharacter, "jester")}:                                    Così tutto passa.    
         -
         -> fourth_ingredient_dispatcher
             
