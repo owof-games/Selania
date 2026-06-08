@@ -63,8 +63,8 @@
                 -> first_theme
        
             
-        + \ {charTag(PG, "neutral")}:                                           Sai, forse preferirei cucinare più tardi.
-            {charTag(ThirdCharacter, "neutral")}:                               Nessun problema, prenditi i tuoi tempi {player_name}.
+        + \ {charTag(PG, "neutral")}:                                                   Sai, forse preferirei cucinare più tardi.
+            {charTag(ThirdCharacter, "neutral")}:                                       Nessun problema, prenditi i tuoi tempi {player_name}.
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_thirdCharCookingTogetherWaiting = 0
                 ~ move_entity(ThirdCharacter, Pond)
@@ -93,7 +93,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Una bomba per l'età che c'ha.
         {charTag(ThirdCharacter, "neutral")}:                                   Dario invece è velocissimo come attaccante.
         {charTag(ThirdCharacter, "bored")}:                                     Peccato che c'abbia in mezzo ai coglioni il Merlo, che vuole sempre la palla e poi non sa mai segnare.
-        {charTag(ThirdCharacter, "neutral")}:                                   Due anni fa però siamo riusciti anche a tirare su un mezzo torneo informale, tra colleghi, amici e clienti.
+        {charTag(ThirdCharacter, "neutral")}:                                   Due anni fa però siamo riusciti anche a tirare su un mezzo torneo tra colleghi, amici e clienti.
                                                                                 Dona mi aveva appena lasciato.
         {charTag(ThirdCharacter, "jester")}:                                    Calciavo ogni cazzo di palla come una bomba.
                                                                                 Alla fine siamo arrivati secondi.
@@ -103,24 +103,47 @@
 
         + \ {charTag(PG, "neutral")}:                                           E di cosa parlate quando siete assieme?
                 -> glyph_choice_manager(false, airC)->
-                                                                                Di calcio, per lo più.
-                                                                                Al Merlo piace anche criticare gli altri.
+        {charTag(ThirdCharacter, "jester")}:                                    Di calcio, ovvio!
+        {charTag(ThirdCharacter, "bored")}:                                     Al Merlo piace anche criticare gli altri.
                                                                                 Chi non c'è in quel momento, l'infame.
-                                                                                Qualcuno con cui abbiamo giocato la settimana prima, o un collega che conosciamo anche noi.
-                                                                                Per il Merlo sono tutti sempre troppo sfigati.
+        {charTag(ThirdCharacter, "neutral")}:                                   Qualcuno con cui abbiamo giocato la settimana prima, o un collega che conosciamo anche noi.
+        {charTag(ThirdCharacter, "bored")}:                                     Per il Merlo sono tutti sempre troppo sfigati.
                                                                                 O perché non c'hanno la figa, o perché non c'hanno i soldi, o perché non fanno nulla tutto il giorno.
-                                                                                A volte fa ridere, perché dice le cose in un modo da coglione totale.
-                                                                                Ma la maggior parte delle volte è fottutissimamente pesante.
+        {charTag(ThirdCharacter, "jester")}:                                    A volte fa ridere, perché dice le cose in un modo da coglione totale.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma la maggior parte delle volte è fottutissimamente pesante.
 
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Il calcio ti ha sempre dato così tanta stabilità. {charNameThree}?
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Da sempre.
+        {charTag(ThirdCharacter, "neutral")}:                                   Da piccolo passavo le ore a fare le mie formazioni, a studiarmi le strategie.
+                                                                                Andavo allo stadio con mamma.
+                                                                                Per un po' ho anche sperato di poter diventare un professionista.
+                                                                                È venuto questo tizio della primavera del Milan a vedere me e un altro compagno.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma prima ancora che potesse accadere qualcosa mio padre si è messo in mezzo e ha detto all'allenatore che un bambino non deve lavorare.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non credo mi avrebbero mai preso.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma è un'altra cosa per cui odio mio padre.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se giocare nel Milan, da interista, aiuto!                                                                        
+
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Hai trasformato la tua rabbia in qualcosa per vincere, figo!
                 -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Già.
+                                                                                Ma avrei preferito non essere arrabbiato e perdere, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però questa è una di quelle cose che Dona non capiva.
+                                                                                I lunedì sera non sono solo una serata "tra ragazzi".
+        {charTag(ThirdCharacter, "bored")}:                                     Anche se poi capivo che lei diceva "tra vecchi imbecilli che non vogliono crescere".
+        {charTag(ThirdCharacter, "neutral")}:                                   Senza i lunedì sera sarei il cazzo di coglione che si è schiantato in moto ubriaco.
+                                                                                O che finiva per litigare nei bar e fare rissa.
+                                                                                Il pallone, quelle partitelle, mi fanno sfogare l'incazzatura che c'ho col mondo.
+
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Ho l'impressione che vuoi davvero bene a questi ragazzi, vero?
                 -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "bored")}:                                     <i>Bene</i> è una parola strana.
+        {charTag(ThirdCharacter, "jester")}:                                    È una cosa che dici alla tua tipa o a tua madre.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però ci tengo a loro, sì.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se a volte li strozzerei.
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
@@ -131,23 +154,23 @@
             -> kitchen_moon_feedback -> 
         
 
-        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i> //Centrocampo
             ~ kitchen_recipeNoun = "Zuppa di grano"
             -> glyph_choice_manager(true, earthC)->
 
-        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i> //Difesa
             ~ kitchen_recipeNoun = "Grigliata di seitan"
             -> glyph_choice_manager(true, waterC)->
             
-        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i> //Attacco
             ~ kitchen_recipeNoun = "Fagiolata"
             -> glyph_choice_manager(true, fireC)->
     
-        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i> //Porta
             ~ kitchen_recipeNoun = "Cimetta di broccolo"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i> //Arbitro
             ~ kitchen_recipeNoun = "Crema d'aglio"
             -> glyph_choice_manager(true, airC)->
         -  
@@ -163,12 +186,13 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Tra le serate in discoteca e poi le feste, la domenica eravamo sempre delle pezze.
         {charTag(ThirdCharacter, "jester")}:                                    Ma felici.
                                                                                 E dovevi vedere come piaceva alle ragazze.
-                                                                                Col fatto che non c'ha la faccia da idiota come la mia ma è tutto gentile, sorridente, e ti ascolta.
-        {charTag(ThirdCharacter, "neutral")}:                                   Cadevano tutte ai suoi piedi.
+                                                                                Non c'ha la faccia da idiota come la mia, è tutto gentile, sorridente, e ti ascolta.
+        {charTag(ThirdCharacter, "neutral")}:                                   E così cadevano tutte ai suoi piedi.
         {charTag(ThirdCharacter, "jester")}:                                    Lo stronzo.
         {charTag(ThirdCharacter, "neutral")}:                                   Quando si è trovato Amanda, sapevo che erano perfetti assieme.
-                                                                                Già la prima sera che si sono incontrati c'era un non so che, una roba che con Dona non ce l'ho mai avuta.
-        {charTag(ThirdCharacter, "bored")}:                                     Non uscivamo quasi mai a quattro, ma perché Dona non si sentiva all'altezza delle conversazioni dell'<i>ingegnera</i>, lo diceva sempre con disprezzo Dona quell'<i>ingegnera</i>.
+                                                                                La prima sera che si sono incontrati c'era un non so che, una roba che con Dona non ce l'ho mai avuta.
+        {charTag(ThirdCharacter, "bored")}:                                     Non uscivamo quasi mai a quattro, ma perché Dona non si sentiva all'altezza delle conversazioni dell'<i>ingegnera</i>.
+                                                                                Dona lo diceva sempre con disprezzo quell'<i>ingegnera</i>.
         {charTag(ThirdCharacter, "neutral")}:                                   Quando è nata Olivia e pian piano il Poggi è scomparso, ero convinto che fosse colpa di Dona.
                                                                                 Che Amanda non c'aveva voglia di crescere la figlia con una accanto che la guarda con fastidio e fa i finti sorrisini.
                                                                                 Ma quando Dona mi ha lasciato, non è cambiato niente.
@@ -178,120 +202,173 @@
     
         + \ {charTag(PG, "neutral")}:                                           Riesci a rimanere aggiornato sulla vita del Poggi?
                 -> glyph_choice_manager(false, airC)->
-                                                                                A volte durante le partitelle qualcuno se ne esce con qualche commento, e così scopro qualcosa di nuovo.
+        {charTag(ThirdCharacter, "bored")}:                                     A volte durante le partitelle qualcuno se ne esce con qualche commento, e così scopro qualche novità.
                                                                                 Ma mi rode un po' il culo quando parlano di lui, perché sono degli ingrati.
-                                                                                Soprattutto il Merlo.
-                                                                                Ogni tanto se ne esce con robe tipo che è contento che non c'è più nella chat di gruppo, perché mandava anche cose politiche o le foto della figlia "manco fosse il gatto", dice sempre il Merlo.
+        {charTag(ThirdCharacter, "angry")}:                                     Soprattutto il Merlo.
+        {charTag(ThirdCharacter, "bored")}:                                     Ogni tanto se ne esce con robe tipo che è contento che non c'è più nella chat di gruppo, perché mandava anche cose politiche o le foto della figlia "manco fosse il gatto", dice sempre il Merlo.
                                                                                 Dio, che coglione.
                                                                                 L'unica cosa che sa fare è mandare foto di tizie dei porno e lamentarsi di tutti.
        
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Quando hai deciso che sarebbe diventato il tuo migliore amico?
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Non c'è stato un momento preciso.
+                                                                                No, non è vero.
+                                                                                Doveva esserci la gita di classe della quinta, la aspettavamo tutti da inizio anno.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma a casa la situazione economica ormai era un disastro.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sua mamma ha proposto di pagarmi il viaggio, ma non volevo la carità.
+                                                                                E così lui ha deciso di non andare.
+                                                                                E sono stato a casa da lui per tre giorni a giocare e mangiare schifezze.
+        {charTag(ThirdCharacter, "jester")}:                                    E rovistare tra le cassette porno dei suoi genitori.
+
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Sei incazzato con lui?
                 -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   No.
+                                                                                Alla fine ha fatto le sue scelte, no?
+                                                                                Le facciamo tutti.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se non è che qualcuno gli ha detto "O la tua famiglia o quel coglione del tuo migliore amico!".
+        {charTag(ThirdCharacter, "neutral")}:                                   Non che io sappia.
+        {charTag(ThirdCharacter, "bored")}:                                     Quindi perché ha dovuto allontanarmi?
+                                                                                Sai che c'è, {player_name}?
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Eri geloso di Amanda?
                 -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Ma che domande sono, vecio?
+        {charTag(ThirdCharacter, "jester")}:                                    Una come lei non mi avrebbe mai filato, comunque.
+        {charTag(ThirdCharacter, "neutral")}:                                   È una che c'ha bisogno di stimoli intellettuali.
+                                                                                Viaggiano e vanno alle mostre e quelle cose lì.
+                                                                                Cioè, ti tira anche dei rutti che diventi pelato.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma io potevo darle solo i rutti, non i musei, no?
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
 
         -
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Forse sono un po' arrabbiato col Poggi.
+        {charTag(ThirdCharacter, "bored")}:                                     Forse sono un po' incazzato col Poggi.
                                                                                 Alla fine mi ha messo da parte per la sua famiglia.
-                                                                                Boh.
+        {charTag(ThirdCharacter, "neutral")}:                                   Boh.
                                                                                 Secondo te si fa bene a perdonare qualcuno?
-                                                                                O è una mancanza di rispetto verso di sè?
+                                                                                Cioè, è una cosa che si deve sempre fare?
+                                                                                O finisci per mancarti da solo di rispetto?
         
-        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//qualcosa sul superare il confine tra accoglienza e sottomissione.
             ~ kitchen_recipeAdjective = "onesta"
             -> glyph_choice_manager(true, earthC)->
 
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//qualcosa sul non ti importa il rispetto
             ~ kitchen_recipeAdjective = "allegra"
             -> glyph_choice_manager(true, airC)->
 
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//qualcosa sul guarire nella vulnerabilità
             ~ kitchen_recipeAdjective = "empatica"
             -> glyph_choice_manager(true, waterC)->
 
     
-        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//qualcosa sul cambiare assieme
             ~ kitchen_recipeAdjective = "incondizionata"
             -> glyph_choice_manager(true, aetherC)->
 
 
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//qualcosa sul tirare a diritto, o ti raggiungono o ti perdono.
             ~ kitchen_recipeAdjective = "leale"
             -> glyph_choice_manager(true, fireC)->
         -      
         
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque non credo gli scriverò presto, al Poggi.
                                                                                 Anche se c'ho una voglia matta di raccontargli questa situazione assurda.
-                                                                                Ma non voglio che pensa che sono pesante a dirgli che si sta comportando da stronzo.
-                                                                                Però potrei parlarci col Rocco.
+        {charTag(ThirdCharacter, "bored")}:                                     Ma non voglio che pensa che sono pesante a dirgli che si sta comportando da stronzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però potrei parlarci col Rocco.
                                                                                 Lui è strano, vecio, ma in modo buono.
                                                                                 Come il Poggi.
-                                                                                Non ci ho mai cavato più di due frasi di bocca per anni.
-                                                                                Poi ce ne andiamo una volta a Milano a festeggiare lo scudetto, e durante il viaggio del ritorno mi dice che è preoccupato per il suo vecio.
+        {charTag(ThirdCharacter, "jester")}:                                    Non ci ho mai cavato più di due frasi di bocca per anni.
+        {charTag(ThirdCharacter, "neutral")}:                                   Poi ce ne andiamo una volta a Milano a festeggiare lo scudetto, e durante il viaggio del ritorno mi dice che è preoccupato per il suo vecio.
                                                                                 Mi dice che è malato, e che vorrebbe che venisse qui, ma che lui è testone e se ne vuole stare in Egitto.
                                                                                 E che è preoccupato perché i suoi figli hanno avuto dei problemi di razzismo, non ho capito cosa, robe legate agli affitti.
-                                                                                E così finisce che dorme poco perché non sa se rimanere qui in Italia o tornare in Egitto, e mi dice che gli sembra di impazzire e che non ne può parlare con sua moglie perché lei non vede l'ora di tornare dalla sua famiglia, dice che lei non è oggettiva, non vede tutti i problemi.
+                                                                                E così finisce che dorme poco perché non sa se rimanere qui in Italia o tornare in Egitto.
+                                                                                Mi dice che gli sembra di impazzire e che non ne può parlare con sua moglie perché lei non vede l'ora di tornare dalla sua famiglia, dice che lei non è oggettiva, non vede tutti i problemi.
                                                                                 Continua così, a guidare e raccontarmi e poi a una certa si ferma e mi dice "Grazie {charNameThree}. Ho questa cosa addosso da mesi e avevo bisogno di parlarne con qualcuno, ma quando siamo a calcetto non mi viene da parlare. Merloni e Giovanni criticano sempre tutti, mi avrebbero solo fatto sentire uno sfigato."
-                                                                                Io ho risposto con una cosa stupida, ma la cosa più stupida che puoi pensare, e ci siamo messi a parlare dell'Inter.
-                                                                                Però da lì, abbiamo preso a uscire e berci una birretta dopo calcetto.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Io ho risposto con una cosa stupida, ma la cosa più stupida che puoi pensare, e ci siamo messi a parlare dell'Inter.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però da lì, abbiamo preso a uscire e berci una birretta dopo calcetto.
                                                                                 Ovviamente il Merlo ora fa battute sul fatto che siamo froci.
-                                                                                Alla fine si sta assieme giusto mezz'ora, a volte manco si dice davvero qualcosa.
-                                                                                Una sigaretta.
+                                                                                Alla fine si sta assieme giusto mezz'ora.
+        {charTag(ThirdCharacter, "jester")}:                                    A volte manco si dice davvero qualcosa.
+        {charTag(ThirdCharacter, "neutral")}:                                   Una sigaretta.
                                                                                 Ci si saluta, e via.
                                                                                 Ed è una cosa strana, perché mi piacciono questi momenti.
-                                                                                Ma mi fanno anche paura, perché mi ricordano una cosa, vecio.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Ma mi fanno anche paura, perché mi ricordano una cosa, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   Alla fine della faccenda siamo soli.
                                                                                 Soli.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Alla fine cosa ha deciso di fare Rocco?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Si è preso tre settimane questa estate per andare in Egitto coi figli, vedere qual è la situazione effettiva.
+                                                                                Capire se i parenti che ci sono lì stanno aiutando davvero o meno.
+                                                                                E prendersi uno stacco dalla moglie, perché per questa cosa stanno litigando spesso.
+                                                                                Io non so se me la farei tutta questa sbatta per il mio vecio, sinceramente.
+                                                                                Per mamma avrei smosso il mondo.
+                                                                                Ma per lui?
+        {charTag(ThirdCharacter, "bored")}:                                     Non credo.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Se le proprie basi sono solide, non si è mai totalmente soli.
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Ah ah allora le mie basi fanno proprio cacare, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   C'è.
+                                                                                Non sono sempre belle, le notti, sai?
+                                                                                Non dopo che hai speso cinque anni in un letto con una persona che ami.
+                                                                                Ma anche quando sono coi ragazzi.
+                                                                                Boh.
+        {charTag(ThirdCharacter, "bored")}:                                     Non ci voglio pensare.
+
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           La vita è lotta, solitudine e sopravvivenza.
                 -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Già.
+        {charTag(ThirdCharacter, "bored")}:                                     È una cosa schifosa, {player_name}.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però una volta che la accetti, ci fai pure pace.
+                                                                                Non ti fai troppe aspettative.
+                                                                                Chiedi solo di andare avanti per la tua vita senza rotture di cazzo.
+        {charTag(ThirdCharacter, "bored")}:                                     Io non pretendo niente da te, tu non devi pretendere nulla da me.
+                                                                                                                                                    
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Pensi alla solitudine, ma hai davanti qualcuno che ti vuole diventare amico.
                 -> glyph_choice_manager(false, waterC)->
-                
+        {charTag(ThirdCharacter, "bored")}:                                     Bella roba, visto che il mio migliore amico mi è sparito, no?
+        {charTag(ThirdCharacter, "neutral")}:                                   Poi...
+        {charTag(ThirdCharacter, "melanchonic")}:                               Merda.
+        {charTag(ThirdCharacter, "neutral")}:                                   Io c'ho il bisogno di chiudere le cose che non capisco prima di fare qualcosa di nuovo.
+        {charTag(ThirdCharacter, "bored")}:                                     E ancora non capisco cosa sia successo col Poggi.
+                                                                                Non c'ha senso però.
+        {charTag(ThirdCharacter, "jester")}:                                    Sono davvero una testa di cazzo.
+
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
             -
-
 
         {charTag(ThirdCharacter, "neutral")}:                                   Merda, che pesante che sono stato.
                                                                                 Dovevamo parlare di calcio e invece.
                                                                                 Te non c'hai mai paura di risultare troppo pesante coi tuoi amici?
         
-        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
+        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//Qualcosa sul fatto che condividere ciò che provi e ascoltarli ti fa stare bene (condivisione)
             ~ kitchen_recipeComplement = "con brodo del terrore"
             -> glyph_choice_manager(true, waterC)->
             
-        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
+        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>//è un discorso di equilibrio
             ~ kitchen_recipeComplement = "con noce euforica"
             -> glyph_choice_manager(true, earthC)->
             
-        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
+        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//sei più da discorsi filosofici
             ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
             -> glyph_choice_manager(true, airC)->
     
-        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>//sul crescere assieme.
             ~ kitchen_recipeComplement = "con olio delle lusinghe"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
+        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//non parliamo, facciamo cose.
             ~ kitchen_recipeComplement = "con peperoncini arrapati"
             -> glyph_choice_manager(true, fireC)->
         -
