@@ -154,7 +154,10 @@
         {charTag(ThirdCharacter, "jester")}:                                    Un masochista.
                                                                                 Ora capisco meglio perché stai qui!                                                                                                                                
         -
-        
+       
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(oneKitchen)
+
         {charTag(ThirdCharacter, "neutral")}:                                   Ma se domani tiriamo su una squadretta, in che ruolo ti mettiamo vecio?
             
             -> kitchen_moon_feedback -> 
@@ -201,7 +204,10 @@
         {charTag(ThirdCharacter, "jester")}:                                    E toglieresti a me il problema.
 
         -  
-        
+
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(twoKitchen)
+ 
         {charTag(ThirdCharacter, "neutral")}:                                   Ultimamente capita che le serata assieme saltano.
                                                                                 Ed è difficile che ci siamo tutti.
                                                                                 Tra figli, mogli e lavoro c'è sempre qualche cazzo di mezzo.
@@ -257,7 +263,6 @@
         {charTag(ThirdCharacter, "jester")}:                                    Anche se non è che qualcuno gli ha detto "O la tua famiglia o quel coglione del tuo migliore amico!".
         {charTag(ThirdCharacter, "neutral")}:                                   Non che io sappia.
         {charTag(ThirdCharacter, "bored")}:                                     Quindi perché ha dovuto allontanarmi?
-                                                                                Sai che c'è, {player_name}?
             
         + \ {charTag(PG, "neutral")}:                                           Eri geloso di Amanda?
                 -> glyph_choice_manager(false, waterC)->
@@ -279,9 +284,11 @@
                                                                                 Diventa un fratello.
                                                                                 Una cosa più forte del sangue.
                                                                                 Quindi sì, di pure che è famiglia.
-                                                                                Era famiglia.                                                
+        {charTag(ThirdCharacter, "melanchonic")}:                               Era famiglia.                                                
         -
-        
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(threeKitchen)
+
         {charTag(ThirdCharacter, "bored")}:                                     Forse sono un po' incazzato col Poggi.
                                                                                 Alla fine mi ha messo da parte per la sua famiglia.
         {charTag(ThirdCharacter, "neutral")}:                                   Boh.
@@ -329,7 +336,9 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Com'era quella canzone?
         {charTag(ThirdCharacter, "jester")}:                                    La prima volta stronzo tu, la seconda scemo io?                                                                            
         -      
-        
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(fourKitchen)
+
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque non credo gli scriverò presto, al Poggi.
                                                                                 Anche se c'ho una voglia matta di raccontargli questa situazione assurda.
         {charTag(ThirdCharacter, "bored")}:                                     Ma non voglio che pensa che sono pesante a dirgli che si sta comportando da stronzo.
@@ -408,6 +417,8 @@
                                                                                 A parte te.
         {charTag(ThirdCharacter, "bored")}:                                     È l'unica cosa certa.
         -
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(fiveKitchen)
 
         {charTag(ThirdCharacter, "neutral")}:                                   Merda, che pesante che sono stato.
                                                                                 Dovevamo parlare di calcio e invece.
@@ -452,6 +463,9 @@
         {charTag(ThirdCharacter, "bored")}:                                     Meglio stare lì a giocare a calcetto e bona, no?
         {charTag(ThirdCharacter, "jester")}:                                    Così tutto passa.    
         -
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(sixKitchen)
+
         -> fourth_ingredient_dispatcher
             
     
@@ -479,7 +493,9 @@
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
         -
-        
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(oneKitchen)
+
         {charTag(ThirdCharacter, "jester")}:                                    Ma ora voglio farmi due risate con te vecio!
         {charTag(ThirdCharacter, "neutral")}:                                   Racconta un po' a zio {charNameThree} come imbrocchi?
         {charTag(ThirdCharacter, "jester")}:                                    I dettagli sconci solo se c'hai anche qualche foto!
@@ -507,7 +523,8 @@
             ~ kitchen_recipeNoun = "Crema d'aglio"
             -> glyph_choice_manager(true, airC)->
         -  
-        
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(twoKitchen)
 
         {charTag(ThirdCharacter, "neutral")}:                                   Frase
                                                                                                                                                    
@@ -528,6 +545,8 @@
                 -> glyph_choice_manager(false, aetherC)->
 
         -
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(threeKitchen)
         
         {charTag(ThirdCharacter, "neutral")}:                                   Non farti idee strane, ma c'ho una cosa che voglio chiederti da un po'.
                                                                                 Questa non l'ho chiesta nemmeno ai ragazzi del calcetto.
@@ -557,7 +576,9 @@
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//che differenza di "sì" ci saranno tra fuoco e terra?
             ~ kitchen_recipeAdjective = "leale"
             -> glyph_choice_manager(true, fireC)->
-        -      
+        - 
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(fourKitchen)    
         
         {charTag(ThirdCharacter, "neutral")}:                                   Frase
 
@@ -577,6 +598,8 @@
                 -> glyph_choice_manager(false, aetherC)->
             -
 
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(fiveKitchen)
 
 
         {charTag(ThirdCharacter, "neutral")}:                                   Te ti ci vedi come padre?
@@ -603,6 +626,9 @@
             ~ kitchen_recipeComplement = "con peperoncini arrapati"
             -> glyph_choice_manager(true, fireC)->
         -
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(sixKitchen)
+        
         -> fourth_ingredient_dispatcher
             
                 
@@ -653,6 +679,8 @@
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
         -
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(oneKitchen)
 
         {charTag(ThirdCharacter, "neutral")}:                                   Ma a proposito di lavoro!
                                                                                 {player_name}, domani ti dicono che puoi fare qualsiasi lavoro su questo pianeta.
@@ -681,7 +709,9 @@
         + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
             ~ kitchen_recipeNoun = "Crema d'aglio"
             -> glyph_choice_manager(true, airC)->
-        -  
+        -
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(twoKitchen)  
         
         {charTag(ThirdCharacter, "neutral")}:                                   Da quando è arrivata Petra c'è anche un'altra cosa che ho scoperto che mi piace del mio lavoro.
                                                                                 Insegnare come farlo.
@@ -721,6 +751,8 @@
                 -> glyph_choice_manager(false, aetherC)->
 
         -
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(threeKitchen)
         
         {charTag(ThirdCharacter, "neutral")}:                                   E te, che rapporto c'hai col tuo capo?
         
@@ -747,7 +779,9 @@
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
             ~ kitchen_recipeAdjective = "leale"
             -> glyph_choice_manager(true, fireC)->
-        -      
+        -
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(fourKitchen)      
         
         {charTag(ThirdCharacter, "bored")}:                                     Comunque anche se mi piace insegnare le cose a Petra, non sarebbe male guadagnare di più.
                                                                                 Il capo è un tirchio di merda, piange la fame e poi si è fatto il Natale a Dubai.
@@ -793,8 +827,9 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
-            -
-
+        -
+            //Intermezzo culinario
+            ~ third_char_kitchen_comments(fiveKitchen)
 
 
         {charTag(ThirdCharacter, "neutral")}:                                   Domanda spinosa in arrivo.
@@ -826,6 +861,9 @@
             ~ kitchen_recipeComplement = "con peperoncini arrapati"
             -> glyph_choice_manager(true, fireC)->
         -
+             //Intermezzo culinario
+            ~ third_char_kitchen_comments(sixKitchen)
+
         -> fourth_ingredient_dispatcher
             
     
@@ -1104,6 +1142,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
 
     
         {charTag(ThirdCharacter, "neutral")}:                                   Prima mi son messo a sfornellare da solo.
@@ -1233,3 +1272,63 @@
 
     -> third_char_closing_storylet ->
     ->->
+
+
+
+=== function third_char_kitchen_comments(step)
+    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive= translator(fifthChar_ActualName)
+
+{step:
+- oneKitchen:
+{charTag(ThirdCharacter, "neutral")}:                                   Sai che c'è?
+                                                                        Mentre te ti occupi del piatto principale, io penso a un contornino.
+{charTag(ThirdCharacter, "jester")}:                                    Magari qualcosa che richieda solo qualche piatto, così evitiamo di fare disastri.
+{charTag(ThirdCharacter, "neutral")}:                                   Settimana scorsa avevo voglia di cioccolata.
+                                                                        Mi son preso uno di quei preparati istantanei, ma non c'ho avuto pazienza.
+                                                                        Non diventava duro e così ho messo tre buste di preparato nella dose di latte da una busta.
+{charTag(ThirdCharacter, "jester")}:                                    E ho creato una supercolla.
+
+- twoKitchen:
+{charTag(ThirdCharacter, "bored")}:                                     Mmm.
+                                                                        Non è l'odore che mi aspettavo.
+{charTag(ThirdCharacter, "neutral")}:                                   Non del tuo piatto, {player_name}.
+                                                                        Sembra una roba invitante.
+                                                                        Ma questa cosa che sto facendo.
+{charTag(ThirdCharacter, "jester")}:                                    Probabilmente moriremo.
+{charTag(ThirdCharacter, "neutral")}:                                   Comunque.
+
+- threeKitchen:
+{charTag(ThirdCharacter, "jester")}:                                    C'è qualcosa che si sta muovendo qui nel piatto.
+                                                                        Cosa cazz?
+{charTag(ThirdCharacter, "neutral")}:                                   Ah no, è solo il condimento che fa le bolle.
+{charTag(ThirdCharacter, "bored")}:                                     Aspè.
+                                                                        Perché fa le bolle?
+{charTag(ThirdCharacter, "jester")}:                                    Cosa ho combinato?   
+
+- fourtKitchen:
+{charTag(ThirdCharacter, "jester")}:                                    Sto realizzando ora che potrai fare un confronto tra le mie abilità in cucina e quelle di {charNameTwo}.
+                                                                        E il fatto che il fratellino avrà fatto sicuramente un lavoro migliore del mio è umiliante.
+{charTag(ThirdCharacter, "bored")}:                                     Chissà se {charNameOne} si è bevuta tutto il vino che c'era in giro.
+{charTag(ThirdCharacter, "neutral")}:                                   O se magari mi trovo della birra.                                                                        
+
+- fiveKitchen:
+{charTag(ThirdCharacter, "neutral")}:                                   Notizia buona: il contornino che ho preparato sembra commestibile.
+{charTag(ThirdCharacter, "jester")}:                                    <i>Sembra</i> è la parola chiave.
+{charTag(ThirdCharacter, "bored")}:                                     Notizia cattiva: col fatto che {charNameOne} ci ha lasciato solo verdurine e robe da vegani, non sapranno di un cazzo.
+{charTag(ThirdCharacter, "neutral")}:                                   Ora lascio riposare un secondo e poi metto tutto nei piatti!
+
+- sixKitchen:
+{charTag(ThirdCharacter, "angry")}:                                     Mannaggia a chi comprò Vampeta.
+                                                                        E al coglione che ha fatto cascare i piatti.
+{charTag(ThirdCharacter, "jester")}:                                    Cioè me, {player_name}.
+{charTag(ThirdCharacter, "neutral")}:                                   Niente contorno per il tuo piatto.
+{charTag(ThirdCharacter, "jester")}:                                    O adori patate e cocci di ceramica?
+}
+
+
+
+

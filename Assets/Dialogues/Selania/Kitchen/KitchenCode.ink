@@ -32,6 +32,8 @@
     //Nota: notReaction = non dato
     LIST kitchen_extraIngredientPossibleReactions = notReaction, badReaction, mehReaction, goodReaction
 
+//Lista per gli steps di commento in cucina (es: formula unica per Boccale)
+LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitchen. fiveKitchen, sixKitchen
 
 === function cooking_animations_on()
 {debug_kitchen: passo per cooking_animations_on. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)}.}
