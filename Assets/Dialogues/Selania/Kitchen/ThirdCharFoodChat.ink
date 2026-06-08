@@ -928,11 +928,14 @@
     ~ recipe_name_creator()
     ~ recipe_name_storage(ThirdCharacter)
 
-    {charTag(ThirdCharacter, "neutral")}:                                       È stato divertente cucinare assieme, {player_name}.
+    {charTag(ThirdCharacter, "jester")}:                                        Non l'averei mai detto, ma è stato divertente cucinare assieme {player_name}.
+    {charTag(ThirdCharacter, "bored")}:                                         A parte per la fine che ha fatto la mia insalata di patate.
 
         {
-        -cooking_with_third_char.third_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   E non mi facevo certe domande da molto.
+        -cooking_with_third_char.first_theme:
+        {charTag(ThirdCharacter, "neutral")}:                                   Non mi aspettavo di passare dal parlare di calcio al parlare degli amici.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se avrei evitato di ammorbarti con le mie pesate.                                                                        
+
 
         -cooking_with_third_char.second_theme:
         {charTag(ThirdCharacter, "neutral")}:                                   E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
@@ -1309,7 +1312,7 @@
                                                                         Perché fa le bolle?
 {charTag(ThirdCharacter, "jester")}:                                    Cosa ho combinato?   
 
-- fourtKitchen:
+- fourKitchen:
 {charTag(ThirdCharacter, "jester")}:                                    Sto realizzando ora che potrai fare un confronto tra le mie abilità in cucina e quelle di {charNameTwo}.
                                                                         E il fatto che il fratellino avrà fatto sicuramente un lavoro migliore del mio è umiliante.
 {charTag(ThirdCharacter, "bored")}:                                     Chissà se {charNameOne} si è bevuta tutto il vino che c'era in giro.
