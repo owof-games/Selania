@@ -642,12 +642,41 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Ora però sai di non essere un fallito.
                 -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Ci si prova, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma non è facile.
+                                                                                Vorrei avere di più, soprattutto alla mia età.
+                                                                                Mi sembra di fare la vita di un vent'enne, quando vorrei invece la stabilità di un cinquant'enne.
+        {charTag(ThirdCharacter, "jester")}:                                    Però il cazzo che tira come quello di un vent'enne me lo tengo tutto.
+        {charTag(ThirdCharacter, "neutral")}:                                   Dona mi ha lasciato proprio un buco su questa cosa, mi fa incazzare.       
             
         + \ {charTag(PG, "neutral")}:                                           Pensi che Ava stia vedendo parti di te che Donatella non sapeva cogliere?
                 -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Sarebbe un po' una merda, vecio.
+                                                                                Perché vorrebbe dire che sono stato così coglione da passare tredici anni con una donna che non mi ha mai capito, quando poi Ava c'ha messo quanto, cinque mesi?
+        {charTag(ThirdCharacter, "jester")}:                                    Mi prenderei la palma come peggior sottone della storia.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però Ava tira fuori delle cose buone di me.
+                                                                                Che prima non c'erano.
+                                                                                Magari sono uscite con tutto il dolore provato per Dona.
+                                                                                O forse erano lì e non lo sapevamo.
+        {charTag(ThirdCharacter, "bored")}:                                     Boh.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma mi piacciono.                                                                           
                 
         + \ {charTag(PG, "neutral")}:                                           {charNameThree}, sai che quella che hai vissuto da piccolo è una violenza? Ne hai parlato con qualcuno?
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Non è che sei {charNameOne} travestita?
+        {charTag(ThirdCharacter, "neutral")}:                                   A me è piaciuto quel momento.
+                                                                                Mi sono sentito FIGO.
+        {charTag(ThirdCharacter, "jester")}:                                    Cioè {player_name}, ragiona un attimo: a quattordici anni i ragazzini pensano solo alla figa.
+                                                                                Si ammazzano di seghe.
+                                                                                Si schiacciano i brufoli e le coetanee li guardano come se fossero dei vermi.
+        {charTag(ThirdCharacter, "neutral")}:                                   E io mi sono scopato una donna grande.
+                                                                                Una che sa già cos'è un uomo, cosa vuole da lui.
+                                                                                E lei ha scelto me.
+        {charTag(ThirdCharacter, "jester")}:                                    Praticamente ero un dio!
+                                                                                E poi sai che figata che è stata perdere la verginità con una che sa cosa fare, invece di un cadaverino di quattordici anni steso immobile sul letto?
+        {charTag(ThirdCharacter, "neutral")}:                                   Questa roba l'ho raccontata solo al Poggi, e solo quando lei si è trasferita anni dopo, dopo il divorzio.
+                                                                                Non volevo che lei finisse nei casini.
+        {charTag(ThirdCharacter, "bored")}:                                     Nei casini per gente come te.
 
         -
              //Intermezzo culinario
@@ -709,6 +738,7 @@
                                                                                 Ma c'ho questa sensazione, vecio.
                                                                                 Che diventare papà mi farà diventare una persona migliore.
         {charTag(ThirdCharacter, "jester")}:                                    E poi magari mio figlio si fidanza con la figlia del Poggi è diventiamo consuoceri.
+                                                                                O diventa amico di {charNameTwo} e vanno a giocare a calcio assieme.
 
         + \ {charTag(PG, "neutral")}:                                           Qual è la prima cosa che insegneresti a tuo figlio?
                 -> glyph_choice_manager(false, airC)->
@@ -732,12 +762,27 @@
 
         + \ {charTag(PG, "neutral")}:                                           Quella roba della pillola è stato un colpo basso. Poteva dirti di no.
                 -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma poteva anche dire <i>sì</i> e bona.
+                                                                                Stavamo assieme da una vita.
+                                                                                Ci stavamo per sposare.
+        {charTag(ThirdCharacter, "bored")}:                                     Avere un figlio era la cosa più ovvia, punto.        
             
         + \ {charTag(PG, "neutral")}:                                           Ho l'impressione che più che una relazione romantica, tu voglia essere padre, vero?
                 -> glyph_choice_manager(false, waterC)->
-                
+        {charTag(ThirdCharacter, "bored")}:                                     Lo dici come se fossi un po' stronzo, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   La voglio una <i>relazione romantica</i>, come dici te.
+                                                                                Una compagna.
+                                                                                Qualcuno di cui mi fido.
+                                                                                E con cui crescere un bambino.
+                                                                                Il bambino più tosto del mondo.
+
         + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma, {charNameThree}.
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Mi sembri la zia, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Se stai parlando di mio papà, il passato è una cosa che prendi e metti in una scatola e dimentichi.
+                                                                                E se si ostina a chiamarti, o si presenta in birreria senza avvisarti, lo ignori.
+                                                                                Fino a quando non si stanca.
+                                                                                E tu intanto vai avanti.        
             -
 
              //Intermezzo culinario
