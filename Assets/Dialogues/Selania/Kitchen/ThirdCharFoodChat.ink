@@ -1351,17 +1351,19 @@
     
     //La chiusura è comune, sempre per ridurre il rischio di errori
     = fourth_ingredient_dispatcher
-        {charTag(ThirdCharacter, "neutral")}:                                   Ma {player_name}, qui a me sembra tutto pronto, non trovi?
+        {charTag(ThirdCharacter, "neutral")}:                                   Ehi {player_name}, direi che ci siamo, vero?
+        {charTag(ThirdCharacter, "jester")}:                                    L'aspetto è discutibile.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma il profumo c'è tutto.
     
-    {
-        - backpack_findedGifts == (): 
-            {charTag(TheWitch, witch_state())}:                                 <i>{player_name} non possiede alcun ingrediente speciale.</i>
-                -> at_table_with_third_char
-            
-        - else:
-            -> add_ingredient
-    
-    }
+                {
+                    - backpack_findedGifts == (): 
+                        {charTag(TheWitch, witch_state())}:                                 <i>{player_name} non possiede alcun ingrediente speciale.</i>
+                            -> at_table_with_third_char
+                        
+                    - else:
+                        -> add_ingredient
+                
+                }
     
     = add_ingredient
     ~ temp charNameOne = translator(thirdChar_ActualName)
@@ -1370,10 +1372,10 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
         
-        {charTag(TheWitch, witch_state())}:                                     <i>Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.
-                                                                                <i>E {player_name} potrebbe capire un po' meglio {charNameOne}.
+        {charTag(TheWitch, witch_state())}:                                     <i>Il giusto ingrediente sarebbe un goal decisivo per {player_name}.</i>
+                                                                                <i>E {player_name} potrebbe capire un po' meglio {charNameThree}.</i>
        
-    + \ {charTag(PG, "neutral")}:                                               <i>Unisco un ingrediente speciale.
+    + \ {charTag(PG, "neutral")}:                                               <i>Aggiungo un ingrediente speciale.</i>
         -> grimoire_greenhouse_gifts_and_ingredient ->
 
             //Dopo di che associo la scelta fatta alla PNG
@@ -1385,10 +1387,11 @@
             //E il nome dell'ingrediente
             ~ extra_ingredient_name(kitchen_thirdCharExtraIngredient)
                     
-    + \ {charTag(PG, "neutral")}:                                               <i>Non aggiungo altro.
+    + \ {charTag(PG, "neutral")}:                                               <i>Non aggiungo altro.</i>
     -
                 
-    {charTag(ThirdCharacter, "neutral")}:                                       Andiamo a mangiare, ama!
+        {charTag(ThirdCharacter, "jester")}:                                    Sono pronto a divorarmi anche Franchì in questo momento.
+        {charTag(ThirdCharacter, "neutral")}:                                   Andiamo!
 
         -> at_table_with_third_char
 
@@ -1409,76 +1412,59 @@
     ~ recipe_name_creator()
     ~ recipe_name_storage(ThirdCharacter)
 
-    {charTag(ThirdCharacter, "jester")}:                                        Non l'averei mai detto, ma è stato divertente cucinare assieme {player_name}.
-    {charTag(ThirdCharacter, "bored")}:                                         A parte per la fine che ha fatto la mia insalata di patate.
-    
-        {
-        -cooking_with_third_char.first_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   Non mi aspettavo di passare dal parlare di calcio al parlare degli amici.
-        {charTag(ThirdCharacter, "jester")}:                                    Anche se avrei evitato di ammorbarti con le mie pesate.                                                                        
+        {charTag(ThirdCharacter, "jester")}:                                        Non l'averei mai detto, ma è stato divertente cucinare assieme {player_name}.
+        {charTag(ThirdCharacter, "bored")}:                                         A parte per la fine che ha fatto la mia insalata di patate.
+        
+            {
+            -cooking_with_third_char.first_theme:
+            {charTag(ThirdCharacter, "neutral")}:                                   Non mi aspettavo di passare dal parlare di calcio al raccontarti cose sui miei amici.
+            {charTag(ThirdCharacter, "jester")}:                                    Anche se avrei evitato di ammorbarti con le mie pesate.                                                                        
 
 
-        -cooking_with_third_char.second_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   E siamo passati dal parlare delle tipe al diventare papà.
-        {charTag(ThirdCharacter, "jester")}:                                    Questo posto di merda mi sta proprio rammollendo, zio.
-        
-        -cooking_with_third_char.third_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   Alla fine non è stato male parlare di lavoro, no?
-        {charTag(ThirdCharacter, "jester")}:                                    Spero di non essermi lamentato troppo.
-        {charTag(ThirdCharacter, "neutral")}:                                   Però alla fine mi piace, spero si sia capito.                                                                                                                                                
+            -cooking_with_third_char.second_theme:
+            {charTag(ThirdCharacter, "neutral")}:                                   E siamo passati dal parlare delle tipe al diventare papà.
+            {charTag(ThirdCharacter, "jester")}:                                    Questo posto di merda mi sta proprio rammollendo, zio.
+            
+            -cooking_with_third_char.third_theme:
+            {charTag(ThirdCharacter, "neutral")}:                                   Alla fine non è stato male parlare di lavoro, no?
+            {charTag(ThirdCharacter, "jester")}:                                    Spero di non essermi lamentato troppo.
+            {charTag(ThirdCharacter, "neutral")}:                                   Però alla fine mi piace, spero si sia capito.                                                                                                                                                
 
-        }
-    {charTag(ThirdCharacter, "neutral")}:                                       E poi questo {piatto}!
-    {charTag(ThirdCharacter, "jester")}:                                        {charNameOne} non dovrà mai sapere che ho apprezzato qualcosa di vegano o giuro che ti meno, {player_name}!
+            }
+        {charTag(ThirdCharacter, "neutral")}:                                       E poi questo {piatto}!
+        {charTag(ThirdCharacter, "jester")}:                                        {charNameOne} non dovrà mai sapere che ho apprezzato qualcosa di vegano o giuro che ti meno, {player_name}!
+        
+            {
+            - kitchen_thirdCharExtraIngredientReaction != notReaction:
+                -> extra_ing_feedback
+            
+            - else:
+                                                                                    E ho la pancia strapiena ora.
+                -> relationship_feedback
+                    
+            }
+        
+        
     
-        {
-        - kitchen_thirdCharExtraIngredientReaction != notReaction:
-            -> extra_ing_feedback
-        
-        - else:
-                                                                                E ho la pancia strapiena ora.
-            -> relationship_feedback
-                
-        }
-        
-        
-    
-        
         
     = extra_ing_feedback
     
-    // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
-    {
-    - kitchen_thirdCharExtraIngredientReaction == goodReaction:
-        -> good_reaction
-    
-    - kitchen_thirdCharExtraIngredientReaction == badReaction:
-        -> bad_reaction
-    
-    - kitchen_thirdCharExtraIngredientReaction == mehReaction:
-        -> meh_reaction
-    
-    - else:
-        ERROR: non abbiamo un valore valido di kitchen_thirdCharExtraIngredientReaction, che è uguale a {kitchen_thirdCharExtraIngredientReaction}.
-    }
+    //Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
+    //Boccale non ha una reazione positiva in cucina.
 
-        
-    = good_reaction
-    ~ temp charNameOne = translator(thirdChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
-
-            -> kitchen_moon_feedback -> 
-
-        {charTag(ThirdCharacter, "neutral")}:                                   Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stato un tocco geniale.
         {
-        - kitchen_firstCharExtraIngredient == universalIngredient:
-        {charTag(ThirdCharacter, "neutral")}:                                   AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
-        }
-            @animation:RewriterBook
 
-            -> relationship_feedback
+        - kitchen_thirdCharExtraIngredientReaction == badReaction:
+            -> bad_reaction
+        
+        - kitchen_thirdCharExtraIngredientReaction == mehReaction:
+            -> meh_reaction
+        
+        - else:
+            ERROR: non abbiamo un valore valido di kitchen_thirdCharExtraIngredientReaction, che è uguale a {kitchen_thirdCharExtraIngredientReaction}.
+        }
+
+    
                 
     = bad_reaction
     ~ temp charNameOne = translator(thirdChar_ActualName)
@@ -1489,7 +1475,14 @@
 
             -> kitchen_moon_feedback -> 
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Aggiungere {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però {ingredientTranslator(kitchen_thirdCharExtraIngredient)} è stata una scelta di merda.
+            {
+            -  thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient:
+            {charTag(ThirdCharacter, "angry")}:                                 Mi ha ricordato cose, fatto pensare a cose che mi hanno fatto incazzare.
+                                                                                Si mangia per stare bene, non per avere ricordi fastidiosi, {player_name}.
+            }
+        {charTag(ThirdCharacter, "bored")}:                                     Dopo il primo morso mi è quasi passata la voglia di parlare.
+
 
             -> relationship_feedback
             
@@ -1502,8 +1495,33 @@
 
             -> kitchen_moon_feedback -> 
 
-        {charTag(ThirdCharacter, "neutral")}:                                   L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} mi ha confusa.
+        {charTag(ThirdCharacter, "neutral")}:                                   E poi hai aggiunto {ingredientTranslator(kitchen_thirdCharExtraIngredient)}.
+        {charTag(ThirdCharacter, "jester")}:                                    Temevo peggio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma sa stare al suo posto.
+                                                                                Non invade gli altri sapori.
+                                                                                Dice la sua, senza troppi sfarzi.
+        {charTag(ThirdCharacter, "jester")}:                                    Un po' come mi piacciono le persone.
+        {charTag(ThirdCharacter, "neutral")}:                                   Petra dice sempre che sono troppo vecchio per l'età che c'ho.
+                                                                                È che ho avuto tutto quello di cui avevo bisogno o quasi nello stesso buco odioso di pezzo di periferia in cui vivo.
+        {charTag(ThirdCharacter, "jester")}:                                    E a volte c'ho delle idee un po' vecchie.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma sto imparando, giuro!
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                {charTag(ThirdCharacter, "neutral")}:                           Metti che per esempio tu sei un vecio, un ragazzo.
+                                                                                Mi puoi dire tutto quello che vuoi, tranquillo proprio.
+                {charTag(ThirdCharacter, "bored")}:                             Ma non è che la prendo proprio benissimo se mi tiri fuori delle cose emotive.
+                {charTag(ThirdCharacter, "jester")}:                            O robe troppo campate in aria tipo politica, psicologia o le fatine.
+                {charTag(ThirdCharacter, "neutral")}:                           Non so perché ma non mi dai tutta quella fiducia se sei un uomo e tiri fuori 'ste minchiate.
 
+                - else:
+                {charTag(ThirdCharacter, "neutral")}:                           Metti che sei una ragazza per dire, mi aspetto che mi dici cose emotive, no?
+                                                                                Cuoricini e sentimenti e quelle robe lì.
+                {charTag(ThirdCharacter, "jester")}:                            E se sei non binario mi va pure bene che mi parli di psicologia e politica o di perché essere vegani va bene, fa parte un po' di tutta quella brodaglia, me lo dice sempre Petra.
+                {charTag(ThirdCharacter, "bored")}:                             Però se poi mi tiri fuori cose da uomo, mi confondi.
+                {charTag(ThirdCharacter, "neutral")}:                           Non è cattiveria, lo so che son vecchio.
+                                                                                Ma proprio vado in confusione, e la confusione mi innervosisce.
+                {charTag(ThirdCharacter, "bored")}:                             Non mi piace non capire le situazioni in cui sono.                                                                            
+                }  
             -> relationship_feedback
             
     
