@@ -178,15 +178,16 @@
     <b>{kitchen_thirdCharRecipe}.</b>
     <i>Ranacronaca a cura di Franco Lo Chef.</i>
 
-    {kitchen_thirdCharRecipeNoun}: l'elemento centrale di questa ricetta. La preparazione richiede una buona dose di manualità, cosa non facile per {charNameOne}, che ha solo delle vibrisse. Il piatto tradizionalmente prevede anche l'aggiunta di olio invernale, ma {player_name} ha optato per della {kitchen_thirdCharRecipeAdjective}, rompendo gli schemi e il cuore di zio Gracco. Nel mentre {charNameOne} ha rovesciato una prima bottiglia di vino, cosa non prevista dalla ricetta, per poi riempirla con delle spighe raccolte dalla palude, cosa non prevista dai pesci della palude. Quando ormai il piatto ha iniziato ad addensarsi, il duo ha deciso di rafforzarne il sapore aggiungendo {kitchen_thirdCharRecipeComplement}, cosa che i più definirebbero coraggiosa, ma non {player_name}, che ha avuto la capacità di seguire la conversazione con {charNameOne}, e anche di preparare un piatto irripetibile (Tullio dice che è importante che sia irripetibile o a qualcuno viene il mal di pancia). <>
+    {player_name} parte in attacco scegliendo il piatto di oggi: {kitchen_thirdCharRecipeNoun}. {charNameThree} fa melina al centrocampo preparando <i>qualcosa</i>, mentre osserva {player_name} che attacca con le note decise della {kitchen_thirdCharRecipeAdjective}, che rendono {kitchen_thirdCharRecipe} un autogol fermato all'ultimo. Ma ecco che zio Gracco mi tira due sberle e dice che non sarò mai un cuoco e ora osserviamo {player_name} riempire la cucina fino al soffitto di {kitchen_thirdCharRecipeComplement}. Mancano pochi secondi alla fine del match, ed ecco che {charNameThree} fa cascare le patate e anche una decina di piatti. {charNameThree} non lo sa, ma <i>questo</i> è l'ingrediente per rendere {kitchen_thirdCharRecipeComplement} un piatto perfetto. <>
+
     {
         - kitchen_thirdCharExtraIngredient != ():
-            Con classe e anche con palestra e presidenza, {player_name} ha infine aggiunto {ingredientTranslator(kitchen_thirdCharExtraIngredient)}, perché al girino piace rischiare. <>
+            Questo, e l'aggiunta da parte di {player_name} di {ingredientTranslator(kitchen_thirdCharExtraIngredient)}, il vero tocco da fuoriclasse, signor3 e signore e signori! <>
 
         - else:
-            Con austerità (che è una cosa che mi ha insegnato Euforbo e ha a che fare con l'Australia) {player_name} ha deciso di non aggiungere altro. <>
+            Anche per questo {player_name} ha deciso di non rovinare il delicato equilibrio, e non ha aggiunto altro. <>
     }
-    Entrambi i girini sono vivi, e consideriamo questa cosa un vero e proprio successo.
+    L'arbitro segna la fine della partita. Il duo {charNameThree} e {player_name} ha salvato anche oggi le sorti della partita. Gli ananassi dovranno attendere lo spareggio. Che quindi non è una cosa dispari? Devo trovare Euforbo.
 
 
     //Recap cose dette
