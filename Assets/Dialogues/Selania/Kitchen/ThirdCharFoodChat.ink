@@ -718,28 +718,50 @@
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Frullo a neve dell'acquafaba bilanciata.</i>
             ~ kitchen_recipeAdjective = "bilancia"
             -> glyph_choice_manager(true, earthC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Onesto.
+                                                                                Non il centro della relazione, ma nemmeno una cosa che non caghi.
+                                                                                Un po' come una di quelle bilance a due braccia.
+                                                                                E sai cosa succede a chi si siede al centro della bilancia?
+        {charTag(ThirdCharacter, "jester")}:                                    Già, esatto. La piglia nel culo.
+                                                                                Perché un po' di passione serve vecio, sennò la tua tipa poi trova altri modi per, insomma, ci siamo capiti.                                                                        
             
         + (air2)\ {charTag(PG, "neutral")}:                                     <i>Sciolgo a bagnomaria della cioccolata aromantica.</i>
             ~ kitchen_recipeAdjective = "aromanticità"
             -> glyph_choice_manager(true, airC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Sento già Petra che mi urla in testa di non dire cazzate.
+                                                                                Mi ha fatto una testa tanta su questa roba perché lei è aromantica.
+                                                                                E quando gli ho risposto che io ero ajuventino, non ha capito la battuta.
+        {charTag(ThirdCharacter, "jester")}:                                    Dio, ci sarebbe voluto Franchì qui ora, si sarebbe fatto una grossa risata.
             
         + (water2)\ {charTag(PG, "neutral")}:                                   <i>Friggo dei canditi della connessione emotiva.</i>
             ~ kitchen_recipeAdjective = "emotività"
             -> glyph_choice_manager(true, waterC)->
-
+        {charTag(ThirdCharacter, "neutral")}:                                   Ti arrapi se lei piange, una cosa del genere?
+                                                                                O ti viene duro quando lei ti racconta dei problemi col padre?
+        {charTag(ThirdCharacter, "jester")}:                                    Vecio, che roba malata.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però giurami che non le parli delle ex, che non è quella la <i>connessione emotiva</i>.
+        {charTag(ThirdCharacter, "bored")}:                                     Dio, non mi diventerà duro per mesi.
     
         + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Pulisco della vaniglia della ierogamia.</i>
             ~ kitchen_recipeAdjective = "incondizionata"
             -> glyph_choice_manager(true, aetherC)->
-                                                                                Sono estremamente confuso.
-                                                                                Commento di strega.
+        {charTag(ThirdCharacter, "bored")}:                                     Che roba è?!?
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci metto un po' di zucchero, non si sa mai.
+        {charTag(TheWitch, "{witch_state()}")}:                                 <i>Luna e sole che si sfiorano.</i>
+                                                                                <i>L'uovo che perde il suo confine, che si riconosce nel tutto.</i>
+                                                                                <i>Il sesso come ponte verso il divino.</i>
 
 
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbollento delle ciliegie della necessità.</i>
             ~ kitchen_recipeAdjective = "necessità"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Idem con patate vecio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Muoio senza sesso.
+                                                                                Durante la pandemia Donatella a un certo punto mi ha odiato.
+        {charTag(ThirdCharacter, "bored")}:                                     Alla fine si è rifiutata di farlo più di una volta al giorno.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sono arrivato a maggio col cazzo così rosso dalle seghe che mi faceva male.
+                                                                                Ma mentre il mondo ripartiva io ero disoccupato.
+        {charTag(ThirdCharacter, "jester")}:                                    E così, giù di porno ancora e ancora.      
         - 
             //Intermezzo culinario
             ~ third_char_kitchen_comments(fourKitchen)    
