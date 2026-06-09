@@ -1557,6 +1557,7 @@
             }
         {charTag(ThirdCharacter, "neutral")}:                                   Ma boh.
         {charTag(ThirdCharacter, "bored")}:                                     Ci sono poche cose per me importanti, e in qualche modo le scompagini tutte.
+                                                                                Mi metti in difficoltà, e non mi piace sentirmi in difficoltà.
         {charTag(ThirdCharacter, "neutral")}:                                   Ma è stato solo ora qui in cucina.
                                                                                 Ne abbiamo ancora di chiacchiere da fare, magari hai fatto solo cilecca per una volta.
         {charTag(ThirdCharacter, "jester")}:                                    Cosa che a me non è mai capitata.
@@ -1565,28 +1566,30 @@
 
 
         - thirdChar_relationshipStatus == positive:
-        { 
-        - thirdChar_recordedPlayerPronoun == him:
-        {charTag(ThirdCharacter, "jester")}:                                    Ti adoro, vecio, davvero!
+                { 
+                - thirdChar_recordedPlayerPronoun == him:
+                {charTag(ThirdCharacter, "jester")}:                            Ti adoro, vecio, davvero!
                                                                                 Sei fuori di testa come piace a me.
-        {charTag(ThirdCharacter, "neutral")}:                                   Proprio due fratelli, serio serio.
-                                                                                Mi hai.
+                {charTag(ThirdCharacter, "neutral")}:                           Proprio due fratelli, serio serio.
                                                                                 Mi hai fatto pensare alle partitelle coi ragazzi.
-        {charTag(ThirdCharacter, "jester")}:                                    Ma non sei una merdina come il Merlo.                                                                        
-                                                                                
+                {charTag(ThirdCharacter, "jester")}:                            Ma non sei una merdina come il Merlo.                                                                        
+                                                                                        
+                
+                - else:
+                {charTag(ThirdCharacter, "jester")}:                            Non sei male per non essere un ragazzo.
+                {charTag(ThirdCharacter, "neutral")}:                           C'hai una bella testa, mi fai pensare.
+                {charTag(ThirdCharacter, "jester")}:                            Ma non troppo, che non posso essere intelligente <i>e</i> superbono.
+                {charTag(ThirdCharacter, "neutral")}:                           Mi hai fatto pensare alle chiacchiere con Ava.
+                {charTag(ThirdCharacter, "jester")}:                            Non mi fraintendere, non ci sto a provare.
+                {charTag(ThirdCharacter, "neutral")}:                           Ma è stato bello.
+                }
+
+            {charTag(ThirdCharacter, "bored")}:                                 Anche se c'è qualcosa che mi dà fastidio.
+                                                                                Come se fosse tutto troppo al suo posto.
+            ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
         
-        - else:
-        {charTag(ThirdCharacter, "jester")}:                                    Non sei male per non essere un ragazzo.
-        {charTag(ThirdCharacter, "neutral")}:                                   C'hai una bella testa, mi fai pensare.
-        {charTag(ThirdCharacter, "jester")}:                                    Ma non troppo, che non posso essere intelligente <i>e</i> superbono.
-        {charTag(ThirdCharacter, "neutral")}:                                   Mi hai fatto pensare alle chiacchiere con Ava.
-        {charTag(ThirdCharacter, "jester")}:                                    Non mi fraintendere, non ci sto a provare.
-        {charTag(ThirdCharacter, "neutral")}:                                   Ma è stato bello.
         }
 
-            ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
-
-        }    
         
             
             
@@ -1599,6 +1602,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
 
     
     {charTag(ThirdCharacter, "neutral")}:                                       BUUURP!

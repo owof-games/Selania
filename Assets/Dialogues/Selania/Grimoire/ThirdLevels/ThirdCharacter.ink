@@ -208,16 +208,18 @@
 
     //Feedback ingrediente extra
     {
-        - kitchen_thirdCharExtraIngredient == universalIngredient:
-            AGGIUNGI RICORDO IMPORTANTE.
 
-        - thirdChar_favouritesGifts has kitchen_thirdCharExtraIngredient:
+        - kitchen_thirdCharExtraIngredientReaction == badReaction:
+        L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} da parte di {player_name} non è stata apprezzata da {charNameThree}. {charNameThree} dice che gli ha fatto pensare a cose che lo fanno incazzare, ma che quando si mangia, si mangia per stare bene.
 
-   
-        - thirdChar_goodGifts has kitchen_thirdCharExtraIngredient:
-
-
-        - kitchen_thirdCharExtraIngredient != ():
+        - kitchen_thirdCharExtraIngredientReaction == mehReaction:
+        L'aggiunta di {ingredientTranslator(kitchen_thirdCharExtraIngredient)} da parte di {player_name} è stata abbastanza apprezzata da {charNameThree}, felice del gusto che resta al suo posto. {charNameThree} ha raccontato che è un po' così che gli piacciono le persone, senza sfarzi. E ha commentato che Petra ritiene che sia troppo vecchio per l'età che ha. E ha fatto un esempio a {player_name}: <>
+                {//Blocco per reazioni e commenti legati al genere.
+                - thirdChar_recordedPlayerPronoun != him:
+                se ha a che fare con un uomo, {charNameThree} non è contento se gli parla di cose emotive, spirituali, politiche o psicologiche.
+                - else:
+                se ha a che fare con una ragazza, {charNameThree} si aspetta che parli di cose emotive, mentre da una persona non binaria si aspetta osservazioni politiche o psicologiche, ma non "cose da uomo", sennò si confonde, e la confusione lo innervosisce.                                                                        
+                } 
 
         
         - else:
@@ -228,13 +230,19 @@
     //Recap commento a tavola
     {
         - grimoire_thirdChar has grimThirdCharKitchenPositiveReaction:
-            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che.
+            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che <>
+                { 
+                - thirdChar_recordedPlayerPronoun == him:
+                adora {player_name}, e che è "fuori di testa" come piace a {charNameThree}, un po' come se fossero due fratelli, o gli amici di calcio. <>
+                                                            
+                - else:
+                non è male "per non essere un ragazzo", e che {player_name} ha una bella testa, che aiuta {charNameThree} a pensare. <>
+                }
+            {charNameThree} ha anche aggiunto che c'è però qualcosa di fastidioso, come se fosse tutto troppo al suo posto.    
 
         - grimoire_thirdChar has grimThirdCharKitchenNegativeReaction:
-            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che.
+            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che non costruirebbe una amicizia con {player_name}, perché {player_name} scompagina a {charNameThree} tutte le cose che ritiene importanti, mettendo {charNameThree} in difficoltà.
 
-        - grimoire_thirdChar has grimThirdCharKitchenNeutralReaction:
-            Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che.
 
     }
     
