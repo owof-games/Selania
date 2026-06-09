@@ -1527,8 +1527,19 @@
     
         
     = relationship_feedback
+    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
         -> achievements_onGame_statusUpdate_GM ->
-        {charTag(ThirdCharacter, "neutral")}:                                   Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
+
+        {charTag(ThirdCharacter, "neutral")}:                                   Non è stata male comunque 'sta pausa.
+                                                                                Un modo per conoscerti meglio senza che qualcuno ci interrompesse.
+        {charTag(ThirdCharacter, "jester")}:                                    Te la immagini questa chiacchierata con {charNameOne} che mi critica ogni volta?
+        {charTag(ThirdCharacter, "bored")}:                                     Avrei già schiodato proprio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Mi stavo chiedendo se fuori da qui sarei voluto diventare tuo amico.
         
         //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
         ~ affinity_calc(ThirdCharacter)
@@ -1536,19 +1547,44 @@
 
         {
         - thirdChar_relationshipStatus == negative:
-            {charTag(ThirdCharacter, "neutral")}:                               Credo che la risposta sia no.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non credo proprio.
+            { 
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "jester")}:                                Sono sicuro che sei un bravo vecio.
+            
+            - else:
+            {charTag(ThirdCharacter, "neutral")}:                               Sicuro che sei una persona in gamba, {player_name}.
+            }
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma boh.
+        {charTag(ThirdCharacter, "bored")}:                                     Ci sono poche cose per me importanti, e in qualche modo le scompagini tutte.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma è stato solo ora qui in cucina.
+                                                                                Ne abbiamo ancora di chiacchiere da fare, magari hai fatto solo cilecca per una volta.
+        {charTag(ThirdCharacter, "jester")}:                                    Cosa che a me non è mai capitata.
+            
+            ~ grimoire_thirdChar += grimThirdCharKitchenNegativeReaction
 
-                ~ grimoire_thirdChar += grimThirdCharKitchenNegativeReaction
-
-        - thirdChar_relationshipStatus == neutral:
-            {charTag(ThirdCharacter, "neutral")}:                               Credo che la risposta sia "{player_pronoun has him:rimandato|{player_pronoun has her:rimandata|rimandatə}} a settembre".
-
-                ~ grimoire_thirdChar += grimThirdCharKitchenNeutralReaction
 
         - thirdChar_relationshipStatus == positive:
-            {charTag(ThirdCharacter, "neutral")}:                               La risposta è sicuramente "sì".
+        { 
+        - thirdChar_recordedPlayerPronoun == him:
+        {charTag(ThirdCharacter, "jester")}:                                    Ti adoro, vecio, davvero!
+                                                                                Sei fuori di testa come piace a me.
+        {charTag(ThirdCharacter, "neutral")}:                                   Proprio due fratelli, serio serio.
+                                                                                Mi hai.
+                                                                                Mi hai fatto pensare alle partitelle coi ragazzi.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma non sei una merdina come il Merlo.                                                                        
+                                                                                
+        
+        - else:
+        {charTag(ThirdCharacter, "jester")}:                                    Non sei male per non essere un ragazzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   C'hai una bella testa, mi fai pensare.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma non troppo, che non posso essere intelligente <i>e</i> superbono.
+        {charTag(ThirdCharacter, "neutral")}:                                   Mi hai fatto pensare alle chiacchiere con Ava.
+        {charTag(ThirdCharacter, "jester")}:                                    Non mi fraintendere, non ci sto a provare.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma è stato bello.
+        }
 
-                ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
+            ~ grimoire_thirdChar += grimThirdCharKitchenPositiveReaction
 
         }    
         
@@ -1561,11 +1597,27 @@
     ~ temp charNameOne = translator(thirdChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     
-    {charTag(ThirdCharacter, "neutral")}:                                       Frase
-    
+    {charTag(ThirdCharacter, "neutral")}:                                       BUUURP!
+    {charTag(ThirdCharacter, "jester")}:                                        Dio, mi ci impegno pure a non sembrare un troglodita, e poi faccio queste figure di merda.
+            {
+            - thirdChar_recordedPlayerPronoun == her:
+            {charTag(ThirdCharacter, "jester")}:                                Per di più davanti a una ragazza.
+            }                                                
+    {charTag(ThirdCharacter, "neutral")}:                                       Mi sa che mi faccio due passi per digerire tutto quel ben di Dio {player_name}, prima di tirare giù tutte le foglie di questi alberi.
+                                                                                Che poi è da quando sono qui che non vedo un cesso, cazzo.
+                                                                                Franchì forse saprà qualcosa?
+    {charTag(ThirdCharacter, "jester")}:                                        Perché ho il sospetto che se lo chiedo a {charNameFive} mi muore sul posto.
+    {charTag(ThirdCharacter, "neutral")}:                                       La zia mi sembra una che non va a cagare, ma va a <i>sistemarsi il trucco</i>.
+            {
+            - thirdChar_recordedPlayerPronoun == him:
+            {charTag(ThirdCharacter, "jester")}:                                Stammi bene vecio!
+            - else:
+            {charTag(ThirdCharacter, "jester")}:                                A dopo {player_name}!
+            }                                                                     
 
                 ~ move_entity(ThirdCharacter, Pond)
                 ~ move_entity(ThirdCharacterCucina, Safekeeping)
@@ -1573,7 +1625,7 @@
                 ~ kitchen_thirdCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += ThirdCharacter
                 ~ kitchen_kitchenOccupied = false
-            ~ update_glyphs(ThirdCharacter)
+                ~ update_glyphs(ThirdCharacter)
             -> achievements_onGame_statusUpdate_GM ->
             -> third_char_closing_storylet ->
             -> main
