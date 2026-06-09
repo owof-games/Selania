@@ -476,10 +476,42 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
     
-    {charTag(ThirdCharacter, "neutral")}:                                       Frase
+        {charTag(ThirdCharacter, "jester")}:                                    Veciooooooooooooooo!
+                                                                                Tu mi vuoi morto!
+                                                                                Per fortuna Ava non è qui.
+        {charTag(ThirdCharacter, "neutral")}:                                   Anche se sa scherzare su tutto.
+                                                                                Lei è.
+                                                                                È unica.
+                                                                                Unica per me.
+                                                                                Quando ci siamo incontrati, l'idea era di divertirmi un po' e basta, di giocare un po' a "E se?".
+                                                                                E se avessi di nuovo una ragazza?
+                                                                                E se non fossi da solo?
+                                                                                E se mi innamorassi di nuovo?
+        {charTag(ThirdCharacter, "jester")}:                                    Ed è lì che mi ha fregato.
+        {charTag(ThirdCharacter, "neutral")}:                                   Perché è stata bravissima in questo gioco, vecio.
+                                                                                Perché non giocava.
+                                                                                E quindi non è che è stata lì a darmi sempre ragione o lisciarmi il pelo.
+        {charTag(ThirdCharacter, "bored")}:                                     Le prime volte l'ho bloccata per giorni.
+                                                                                Non c'avevo voglia di parlarci quando mi mandava link per spiegarmi che avevo detto delle stronzate.
+                                                                                Tutti questi articoli sulla solitudine degli uomini.
+                                                                                O sulla parità salariale.
+        {charTag(ThirdCharacter, "jester")}:                                    Lei farebbe cambiare idea a {charNameOne} sul tipo di uomo che sono.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non avrei mai pensato di...
+        {charTag(ThirdCharacter, "jester")}:                                    Mi fa sentire intelligente, vecio.
+        {charTag(ThirdCharacter, "neutral")}:                                   Non perché lei è più stupida, bada.
+                                                                                Ma perché si prende il tempo per farmi capire le cose, anche quando mi impunto e faccio lo zuccone.
+                                                                                Per questo la adoro.
+                                                                    
+
         
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Come l'hai conosciuta?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Me ne ha parlato un cliente una sera.
+                                                                                Lui...
+                                                                                Lui si era innamorato di un'altra ragazza, una del posto.
+                                                                                Ma ha passato tutta la serata a raccontarmi di come Ava l'avesse salvato.
+                                                                                E così mi sono detto che mal che andava sarebbe stato un altro palo in faccia.
+        {charTag(ThirdCharacter, "jester")}:                                    E invece.        
 
         + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
                 -> glyph_choice_manager(false, earthC)->
@@ -526,14 +558,50 @@
              //Intermezzo culinario
             ~ third_char_kitchen_comments(twoKitchen)
 
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
-                                                                                                                                                   
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando è finita con Dona, ho pensato solo "sono un fallito".
+                                                                                È stata dura, vecio, perché continuavo a dirmi che la mia donna, l'unica che mi aveva conosciuto così bene, per così tanti anni, aveva comunque deciso di smollarmi.
+                                                                                Ho evitato gli specchi per mesi, perché ogni volta pensavo: sfigato.
+        {charTag(ThirdCharacter, "bored")}:                                     Che sfigato del cazzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando la voce della fine si è sparsa, sono iniziate anche le avance.
+                                                                                Sono sempre piaciuto alle donne, vecio, su quello non ci piove.
+                                                                                Il Poggi mi chiamava sempre "il Manganiello dei poveri".
+        {charTag(ThirdCharacter, "jester")}:                                    Che merda.
+                                                                                Lui a vent'anni sembrava già vecchio come quel vampiro, Bill Compton.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sembra una cosa da film, ma ho perso la verginità a quattordici anni con un'amica di mia mamma.
+                                                                                In macchina.
+                                                                                Mentre i miei genitori e suo marito erano a messa.
+        {charTag(ThirdCharacter, "jester")}:                                    Quella ha chiamato Dio più volte in quella macchina che in tutta la sua vita in Chiesa.
+        {charTag(ThirdCharacter, "neutral")}:                                   Un mese dopo la fine con Dona, qualche cliente ha iniziato a provarci.
+                                                                                Qualche vecchia fiamma.
+                                                                                Ho retto tre mesi, ma poi, una sera smorta.
+                                                                                Una cosa veloce sul retro.
+                                                                                Petra mi ha rotto i coglioni per giorni, perché diceva che ho usato quella donna.
+                                                                                Ma boh, vecio.
+                                                                                Un po' è stato il contrario.
+        {charTag(ThirdCharacter, "jester")}:                                    Sono venuto perché sai come funziona il cazzo, lui va per la sua strada.
+        {charTag(ThirdCharacter, "neutral")}:                                   Che però non è sempre la tua di strada.
+                                                                                E la tipa era lì che si agitava e gemeva.
+                                                                                E io continuavo a pensare che stavo tradendo Donatella.
+        {charTag(ThirdCharacter, "bored")}:                                     Idiota che sono.
+        {charTag(ThirdCharacter, "neutral")}:                                   Le volte dopo...
+                                                                                Il sesso è un po' come la birra.
+        {charTag(ThirdCharacter, "jester")}:                                    Ti distrae sul momento, ma se esageri il giorno dopo te ne penti.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ora mi manca, sinceramente.
+                                                                                Ava mi lascia andare con altre donne, ma non è la stessa cosa.
+        {charTag(ThirdCharacter, "melanchonic")}:                               Ho voglia di qualcosa di più.
+        {charTag(ThirdCharacter, "jester")}:                                    Comunque 'sto cazzo di posto mi rende melenso, vecio!
+                                                                                                                                                  
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Quindi tu e Ava non fate sesso?
                 -> glyph_choice_manager(false, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Boom, diretto come un treno merci, vecio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Non.
+                                                                                Abbiamo fatto, facciamo sexting.
+                                                                                Ma lei non può fare sesso.
+        {charTag(ThirdCharacter, "angry")}:                                     E se mi giudichi per questa cosa giuro che ti butto direttamente nel forno.                                                                                
                 
         + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
                 -> glyph_choice_manager(false, fireC)->
@@ -580,7 +648,30 @@
             //Intermezzo culinario
             ~ third_char_kitchen_comments(fourKitchen)    
         
-        {charTag(ThirdCharacter, "neutral")}:                                   Frase
+        {charTag(ThirdCharacter, "neutral")}:                                   Comunque poi c'è l'altro aspetto del sesso.
+        {charTag(ThirdCharacter, "jester")}:                                    Quello che succede se fai casini col preservativo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Con Dona si era parlato di fare un figlio per diverso tempo, ma lei ci teneva alla sua attività.
+                                                                                C'aveva quest'ansia enorme Dona di tornare povera, enorme proprio.
+                                                                                Però con l'arrivo del matrimonio a forza di parlargliene mi ha detto "Ok, proviamo".
+                                                                                Il sesso era ancora bello con lei, vecio, dopo tutti quegli anni.
+                                                                                Ma.
+        {charTag(ThirdCharacter, "bored")}:                                     Lei non lo voleva davvero 'sto cazzo di bambino.
+        {charTag(ThirdCharacter, "neutral")}:                                   E quando mi ha lasciato, mentre impacchettava le cose, mentre se ne tornava dai suoi, è saltato fuori che continuava a prendere la pillola.
+        {charTag(ThirdCharacter, "angry")}:                                     Non ho mai urlato così tanto.
+        {charTag(ThirdCharacter, "neutral")}:                                   E io mi ci vedo così bene come padre, vecio.
+                                                                                Mi ci vedo tanto.
+                                                                                C'ho già gli occhi a cuore quando sto con l'Armando, mio nipote.
+                                                                                Che poi mia sorella alla fine mi ha rubato anche quella possibilità, quello di essere il primo con un figlio.
+                                                                                Non sarei un papà come il mio.
+                                                                                Gli insegnerei le cose giuste.
+                                                                                Gli mostrerei come farsi valere.
+                                                                                E non lo lascio con le pezze sul culo perché non ci sono soldi.
+                                                                                Con Ava...
+                                                                                Presto dovrò affrontare questo discorso, in qualche modo.
+                                                                                Forse non con lei.
+                                                                                Ma c'ho questa sensazione, vecio.
+                                                                                Che diventare papà mi farà diventare una persona migliore.
+        {charTag(ThirdCharacter, "jester")}:                                    E poi magari mio figlio si fidanza con la figlia del Poggi è diventiamo consuoceri.
 
         + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                 -> glyph_choice_manager(false, airC)->
@@ -1150,7 +1241,8 @@
 
 
         -cooking_with_third_char.second_theme:
-        {charTag(ThirdCharacter, "neutral")}:                                   E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
+        {charTag(ThirdCharacter, "neutral")}:                                   E siamo passati dal parlare delle tipe al diventare papà.
+        {charTag(ThirdCharacter, "jester")}:                                    Questo posto di merda mi sta proprio rammollendo, zio.
         
         -cooking_with_third_char.third_theme:
         {charTag(ThirdCharacter, "neutral")}:                                   Alla fine non è stato male parlare di lavoro, no?

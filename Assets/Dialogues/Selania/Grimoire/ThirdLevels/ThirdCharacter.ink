@@ -197,7 +197,7 @@
     }
     {
         - grimoire_thirdChar has grimThirdCharKitchenTwo:
-        
+        Cucinando con {player_name}, {charNameThree} e {player_name} hanno parlato di ragazze. {charNameThree} ha iniziato a parlare di Ava, e di come l'abbia aiutato a uscire dallo stallo dopo la fine della storia con Donatella. {charNameThree} ha parlato dei primi contrasti con Ava, del modo in cui lei l'ha trattato come una persona intelligente, capace di comprendere che gli sono lontane, e per questo lui la adora. Quando la reazione con Donatella è finita, {charNameThree} si è sentito a lungo tempo un fallito. Ha ripiegato sul sesso, dopo aver atteso per tre mesi che Donatella tornasse da lui, andando a letto con una cliente. In quella occasione {charNameThree} ha pensato di aver tradito Donatella, ma col tempo le cose sono diventate più facili. Ora con Ava non fa sesso, e ne sente la mancanza, e anche se Ava lascia andare {charNameThree} con altre donne, per {charNameThree} non è la stessa cosa. Anche perché {charNameThree} sta pensando alla possibilità di diventare padre. {charNameThree} e Donatella ne hanno parlato più volte durante la loro relazione, e hanno anche provato ad avere un figlio, anche se {charNameThree} ha scoperto solo quando Donatella se ne stava andando che in realtà stava prendendo la pillola. {charNameThree} sente che avere un figlio lo renderà una persona migliore, diversa dal padre. {charNameThree} dice che gli insegnerà le cose giuste, come farsi valere, e che non gli farà mai mancare il supporto economico. {charNameThree} vorrebbe affrontare presto questo discorso con Ava, o forse no. E {charNameThree} si chiede se il futuro figlio si fidanzerà un giorno con la figlia dell'amico Poggi, così da diventare consuoceri.
   
     }
     {
