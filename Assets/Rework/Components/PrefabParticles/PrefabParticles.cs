@@ -32,6 +32,12 @@ namespace Selania.Rework.Components.PrefabParticles
         private AnimatorParameterDescriptor[] animatorParameterDescriptors =
             Array.Empty<AnimatorParameterDescriptor>();
 
+        /// <summary>
+        ///     The area where the prefab will be randomly spawned from.
+        /// </summary>
+        internal Rect SpawnArea => spawnArea;
+
+
         private void Start()
         {
             // compute / read from cache the animation duration
@@ -240,7 +246,7 @@ namespace Selania.Rework.Components.PrefabParticles
 
 #if UNITY_EDITOR
 
-        private readonly Color _spawnAreaGizmoColor = new(1f, 1f, 0f, 0.5f);
+        private readonly Color _spawnAreaGizmoColor = new(1f, 1f, 0f, 0.3f);
 
         private void OnDrawGizmosSelected()
         {
@@ -251,7 +257,13 @@ namespace Selania.Rework.Components.PrefabParticles
         private void OnDrawGizmos()
         {
             Gizmos.color = _spawnAreaGizmoColor;
-            Gizmos.DrawWireCube(transform.position + (Vector3)spawnArea.center, spawnArea.size);
+            var center = transform.position + (Vector3)spawnArea.center;
+            var dx = new Vector3(spawnArea.size.x / 2, 0f, 0);
+            var dy = new Vector3(0f, spawnArea.size.y / 2, 0);
+            Gizmos.DrawLine(center - dx - dy, center - dx + dy);
+            Gizmos.DrawLine(center - dx + dy, center + dx + dy);
+            Gizmos.DrawLine(center + dx + dy, center + dx - dy);
+            Gizmos.DrawLine(center + dx - dy, center - dx - dy);
         }
 
         private void OnValidate()
