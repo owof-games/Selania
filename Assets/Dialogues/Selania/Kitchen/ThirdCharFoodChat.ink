@@ -504,8 +504,8 @@
                                                                     
 
         
-        + \ {charTag(PG, "neutral")}:                                           Come l'hai conosciuta?
-                -> glyph_choice_manager(false, airC)->
+        + \ {charTag(PG, "neutral")}:                                           Ti va di raccontarmi come l'hai conosciuta?
+                -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Me ne ha parlato un cliente una sera.
                                                                                 Lui...
                                                                                 Lui si era innamorato di un'altra ragazza, una del posto.
@@ -513,17 +513,43 @@
                                                                                 E così mi sono detto che mal che andava sarebbe stato un altro palo in faccia.
         {charTag(ThirdCharacter, "jester")}:                                    E invece.        
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
-                -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
-                -> glyph_choice_manager(false, fireC)->
-            
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Quando ti sei accorto che non era più un "e se", ma era quella giusta?
                 -> glyph_choice_manager(false, waterC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Quando ne ho parlato con Petra senza rendermene conto.
+                                                                                E lei mi fa "Hai gli occhi a cuore, idiota".
+        {charTag(ThirdCharacter, "jester")}:                                    È sempre così gentile con me.
+        {charTag(ThirdCharacter, "neutral")}:                                   Sono corso negli spogliatoi e ho scritto subito ad Ava, dicendole che mi mancava.
+                                                                                Mi ha risposto che gli mancavo anche io, che mi pensa tutto il tempo.
+                                                                                Dopo lavoro abbiamo passato la serata a parlare di calcio e capibara.
+        {charTag(ThirdCharacter, "jester")}:                                    Non ricordo manco perché siamo finiti sui capibara.
+                                                                                
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           L'hai già presentata ai tuoi amici?
+                -> glyph_choice_manager(false, fireC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   No.
+                                                                                Io.
+                                                                                No.
+                                                                                È brutto dire che la voglio solo per me?
+                                                                                Che è mia?
+        {charTag(ThirdCharacter, "bored")}:                                     E poi so già cosa direbbero, perché sono un branco di coglioni.
+        
+        + \ {charTag(PG, "neutral")}:                                           Ci sono argomenti su cui ancora discutete?
+                -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Pochissimi.
+                                                                                La cosa più difficile è la gelosia.
+        {charTag(ThirdCharacter, "bored")}:                                     Ci ho messo un bel po' ad accettare che lei conosca anche con altri uomini.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però siamo arrivati a un accordo: con gli altri può essere qualunque persona, ma solo con me sarà Ava.
+
+
+        + \ {charTag(PG, "neutral")}:                                           E tu come la fai sentire invece?
                 -> glyph_choice_manager(false, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Cos'è? Pensi che non sia capace di far stare bene una ragazza?
+        {charTag(ThirdCharacter, "neutral")}:                                   Lei mi adora, vecio.
+                                                                                Me lo dice sempre.
+                                                                                "Adoro le cose che mi racconti, {charNameThree}".
+                                                                                "Adoro le tue battute, {charNameThree}".
+                                                                                "Adoro quando mi fai arrossire, {charNameThree}".
+                                                                                È felice con me, punto.      
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(oneKitchen)
@@ -592,8 +618,19 @@
         {charTag(ThirdCharacter, "jester")}:                                    Comunque 'sto cazzo di posto mi rende melenso, vecio!
                                                                                                                                                   
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Se tu sei Manganiello e Poggi somiglia a Bill Compton, che personaggio di <i>True Blood</i> è Ava?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Ava è Pam, totale.
+        {charTag(ThirdCharacter, "jester")}:                                    Non, non è vero, Pam è troppo stronza.
+        {charTag(ThirdCharacter, "neutral")}:                                   Somiglia a Pam, ma alla fin fine è Sookie.
+        {charTag(ThirdCharacter, "bored")}:                                     Dona invece è come Tara quando è super incazzosa.
+        {charTag(ThirdCharacter, "neutral")}:                                   Il Merlo è quel coglione di Russell.
+                                                                                Il Giova fa il reverendo, non mi ricordo più il nome.
+        {charTag(ThirdCharacter, "jester")}:                                    Dario si sente Eric ma somiglia ad Andy, lo sceriffo sfigato.
+                                                                                E Rocco secondo me è Hoyt, perché alla fine è un sottotone totale.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ora che ci penso forse non sono così Alcide, anche se gli somiglio.
+        {charTag(ThirdCharacter, "jester")}:                                    Sono più Jason, ma senza la roba della chiesa.
+                                                                                Odio quella serie, Dona me l'avrà fatta vedere otto volte almeno.
 
         + \ {charTag(PG, "neutral")}:                                           Quindi tu e Ava non fate sesso?
                 -> glyph_choice_manager(false, earthC)->
@@ -603,13 +640,13 @@
                                                                                 Ma lei non può fare sesso.
         {charTag(ThirdCharacter, "angry")}:                                     E se mi giudichi per questa cosa giuro che ti butto direttamente nel forno.                                                                                
                 
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Ora però sai di non essere un fallito.
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Pensi che Ava stia vedendo parti di te che Donatella non sapeva cogliere?
                 -> glyph_choice_manager(false, waterC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           {charNameThree}, sai che quella che hai vissuto da piccolo è una violenza? Ne hai parlato con qualcuno?
                 -> glyph_choice_manager(false, aetherC)->
 
         -
@@ -649,10 +686,10 @@
             ~ third_char_kitchen_comments(fourKitchen)    
         
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque poi c'è l'altro aspetto del sesso.
-        {charTag(ThirdCharacter, "jester")}:                                    Quello che succede se fai casini col preservativo.
-        {charTag(ThirdCharacter, "neutral")}:                                   Con Dona si era parlato di fare un figlio per diverso tempo, ma lei ci teneva alla sua attività.
+        {charTag(ThirdCharacter, "jester")}:                                    Quello che succede se fai casini col guanto.
+        {charTag(ThirdCharacter, "neutral")}:                                   Con Dona si era parlato di fare un figlio per anni, ma lei ci teneva alla sua attività.
                                                                                 C'aveva quest'ansia enorme Dona di tornare povera, enorme proprio.
-                                                                                Però con l'arrivo del matrimonio a forza di parlargliene mi ha detto "Ok, proviamo".
+                                                                                Però con l'arrivo del matrimonio una sera mentre le facevo vedere dei nomi di bambino che mi piacevano mi ha detto "Ok, proviamo".
                                                                                 Il sesso era ancora bello con lei, vecio, dopo tutti quegli anni.
                                                                                 Ma.
         {charTag(ThirdCharacter, "bored")}:                                     Lei non lo voleva davvero 'sto cazzo di bambino.
@@ -673,19 +710,33 @@
                                                                                 Che diventare papà mi farà diventare una persona migliore.
         {charTag(ThirdCharacter, "jester")}:                                    E poi magari mio figlio si fidanza con la figlia del Poggi è diventiamo consuoceri.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + \ {charTag(PG, "neutral")}:                                           Qual è la prima cosa che insegneresti a tuo figlio?
                 -> glyph_choice_manager(false, airC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Tutta la storia dell'Inter.
+        {charTag(ThirdCharacter, "neutral")}:                                   No dai, è giusto che prenda la sua strada.
+        {charTag(ThirdCharacter, "jester")}:                                    Spero solo che non mi diventa juventino.
+        {charTag(ThirdCharacter, "neutral")}:                                   Faccio il serio ora.
+                                                                                Gli insegnerei che un uomo è il suo lavoro, la sua famiglia e i suoi amici.
+                                                                                Il mondo lo giudicherà in base a queste tre cose.
+                                                                                E dovrà proteggerle a ogni costo.
 
-        + \ {charTag(PG, "neutral")}:                                           Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + \ {charTag(PG, "neutral")}:                                           Quindi sei pronto per pannolini, notti insonni, corse dal pediatra e tutto il resto.
                 -> glyph_choice_manager(false, earthC)->
-                
-        + \ {charTag(PG, "neutral")}:                                           Cosa vuoi? Come puoi cambiare questa situazione?
+        {charTag(ThirdCharacter, "neutral")}:                                   Farei di tutto per lui, vecio.
+                                                                                Lo vedo già con l'Armando.
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se sono già lo zio idiota che lo fa ridere e gli compra le cose stupide.
+        {charTag(ThirdCharacter, "neutral")}:                                   Se finisco per litigare con mia sorella, passo le ore a guardare le sue vecchie foto.
+                                                                                O sento mio cognato per farmi aggiornare da lui.
+        {charTag(ThirdCharacter, "jester")}:                                    Ora sta mettendo i primi dentini.
+                                                                                Sarà indemoniato.
+
+        + \ {charTag(PG, "neutral")}:                                           Quella roba della pillola è stato un colpo basso. Poteva dirti di no.
                 -> glyph_choice_manager(false, fireC)->
             
-        + \ {charTag(PG, "neutral")}:                                           Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + \ {charTag(PG, "neutral")}:                                           Ho l'impressione che più che una relazione romantica, tu voglia essere padre, vero?
                 -> glyph_choice_manager(false, waterC)->
                 
-        + \ {charTag(PG, "neutral")}:                                           Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma, {charNameThree}.
                 -> glyph_choice_manager(false, aetherC)->
             -
 
