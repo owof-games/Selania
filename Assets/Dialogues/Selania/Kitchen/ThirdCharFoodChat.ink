@@ -564,22 +564,50 @@
         + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Inizio a preparare del marzapane della lentezza.</i>
             ~ kitchen_recipeNoun = "Marzapane"
             -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Alla vecchia maniera, eh vecio?
+        {charTag(ThirdCharacter, "neutral")}:                                   Un commento carino alla volta.
+                                                                                Un regalino.
+                                                                                Così silenzioso che nemmeno ti sentono arrivare e poi bang!
+        {charTag(ThirdCharacter, "bored")}:                                     L'hai presa nel culo.
+        {charTag(ThirdCharacter, "jester")}:                                    Perché ti lascerà per uno più coglione ma che la scopa, come me.                                                                        
 
         + (water1)\ {charTag(PG, "neutral")}:                                   <i>Raccolgo gli ingredienti per una pastiera della vulnerabilità.</i>
             ~ kitchen_recipeNoun = "Pastiera"
             -> glyph_choice_manager(true, waterC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Dimmi vecio, vi fate anche le unghie assieme?
+                                                                                Sai farle la treccia?
+        {charTag(ThirdCharacter, "jester")}:                                    E chi chiamerai quando la tua tipa mi telefonerà perché ha bisogno di un idiota con cui scopare davvero?    
             
         + (fire1)\ {charTag(PG, "neutral")}:                                    <i>È il momento di friggere delle frittelle della passione.</i>
             ~ kitchen_recipeNoun = "Frittelle"
             -> glyph_choice_manager(true, fireC)->
-    
+        {charTag(ThirdCharacter, "jester")}:                                    Noi due siamo separati alla nascita vecio!
+        {charTag(ThirdCharacter, "neutral")}:                                   Anche io punto tutto sui miei venti centimetri.
+        {charTag(ThirdCharacter, "jester")}:                                    Di cazzate che dico.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma non sono messo male, giuro!
+        {charTag(ThirdCharacter, "jester")}:                                    Anche se due centimetri in più non li butterei via.
+
         + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Cioccolato a iosa per una tenerina asessuale.</i>
             ~ kitchen_recipeNoun = "Tenerina"
             -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "bored")}:                                     Dio che noia!
+        {charTag(ThirdCharacter, "neutral")}:                                   No no no ritratto.
+                                                                                Che Petra mi ha già spiegato che non è che uno lo fa apposta.
+        {charTag(ThirdCharacter, "jester")}:                                    Poi non deve essere male non avere il cazzo che parla al posto del tuo cervello.
+        {charTag(ThirdCharacter, "neutral")}:                                   Almeno la mattina non ti svegli con una tardona nel letto senza sapere il perché.
 
         + (air1)\ {charTag(PG, "neutral")}:                                     <i>Parto con dei cannoli dell'affinità intellettuale.</i>
             ~ kitchen_recipeNoun = "Cannoli"
             -> glyph_choice_manager(true, airC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Veciooooooooooooooo!
+                                                                                Prima si scopa, <b>poi</b> si parla.
+        {charTag(ThirdCharacter, "neutral")}:                                   Petra dice che sono peggio dei ragazzi gay.
+        {charTag(ThirdCharacter, "jester")}:                                    C'è un cliente, avrà vent'anni, e quando è ubriaco mi chiama <i>daddy</i>, mi fa morire.
+        {charTag(ThirdCharacter, "neutral")}:                                   Vedi però?
+                                                                                Io non ce la faccio mica a stare lì a parlare di D'Annunzio con una tipa, zero.
+        {charTag(ThirdCharacter, "jester")}:                                    Al massimo posso raccontarle di quella cosa delle costole che si è tolto per farsi i pompini da solo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Petra dice che è una cagata, ma è troppo divertente, per cui per me rimane vera.
+
         -  
              //Intermezzo culinario
             ~ third_char_kitchen_comments(twoKitchen)
