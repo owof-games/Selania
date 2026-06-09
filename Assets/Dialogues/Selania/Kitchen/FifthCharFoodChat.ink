@@ -1,6 +1,6 @@
 /* ---------------------------------
 
-   Cucina con Chitarra
+   Cucina  Chitarra
 
  ----------------------------------*/
 === pre_start_cooking_with_fifth_char
@@ -36,7 +36,7 @@
                 {charTag(TheWitch, witch_state())}:   <i>{charNameTwo} ha ancora spunti di conversazione da offrire a {player_name}, se {player_name} deciderà di parlarle ancora un po'.
         }
         
-        + \ {charTag(PG, "neutral")}:         Dei rapporti che hai con le persone che ti sono care.
+        + \ {charTag(PG, "neutral")}:         Dei rapporti che hai  le persone che ti sono care.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(FifthCharacter)
                 -> kitchen_moon_feedback -> 
@@ -192,23 +192,23 @@
         {charTag(FifthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
-                ~ kitchen_recipeComplement = "con brodo del terrore"
+                ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
-                ~ kitchen_recipeComplement = "con noce euforica"
+                ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
-               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+               ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
-                ~ kitchen_recipeComplement = "con olio delle lusinghe"
+                ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
-                ~ kitchen_recipeComplement = "con peperoncini arrapati"
+                ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
@@ -340,23 +340,23 @@
         {charTag(FifthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
-                ~ kitchen_recipeComplement = "con brodo del terrore"
+                ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
-                ~ kitchen_recipeComplement = "con noce euforica"
+                ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
-               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+               ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
-                ~ kitchen_recipeComplement = "con olio delle lusinghe"
+                ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
-                ~ kitchen_recipeComplement = "con peperoncini arrapati"
+                ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
@@ -488,23 +488,23 @@
         {charTag(FifthCharacter, "neutral")}:       Frase
         
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
-                ~ kitchen_recipeComplement = "con brodo del terrore"
+                ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
-                ~ kitchen_recipeComplement = "con noce euforica"
+                ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
-               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+               ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
-                ~ kitchen_recipeComplement = "con olio delle lusinghe"
+                ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
-                ~ kitchen_recipeComplement = "con peperoncini arrapati"
+                ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
             -
             -> fourth_ingredient_dispatcher
@@ -754,7 +754,7 @@
             {charTag(FifthCharacter, "neutral")}:       {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
             
         - 2:
-            {charTag(FifthCharacter, "neutral")}:       {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+            {charTag(FifthCharacter, "neutral")}:       {Potrei sostituire l'aneto , uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
         
         - 3:
             {charTag(FifthCharacter, "neutral")}:       {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
@@ -766,7 +766,7 @@
             {charTag(FifthCharacter, "neutral")}:       {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
     
         - 6:
-            {charTag(FifthCharacter, "neutral")}:       {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+            {charTag(FifthCharacter, "neutral")}:       {Sarà una buona idea avere tutti questi coltelli accessibili  il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
         
         - 7:
             {charTag(FifthCharacter, "neutral")}:       {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}

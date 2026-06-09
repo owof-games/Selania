@@ -561,24 +561,24 @@
             -> kitchen_moon_feedback -> 
         
 
-        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
-            ~ kitchen_recipeNoun = "Zuppa di grano"
+        + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Inizio a preparare del marzapane della lentezza.</i>
+            ~ kitchen_recipeNoun = "Marzapane"
             -> glyph_choice_manager(true, earthC)->
 
-        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
-            ~ kitchen_recipeNoun = "Grigliata di seitan"
+        + (water1)\ {charTag(PG, "neutral")}:                                   <i>Raccolgo gli ingredienti per una pastiera della vulnerabilità.</i>
+            ~ kitchen_recipeNoun = "Pastiera"
             -> glyph_choice_manager(true, waterC)->
             
-        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
-            ~ kitchen_recipeNoun = "Fagiolata"
+        + (fire1)\ {charTag(PG, "neutral")}:                                    <i>È il momento di friggere delle frittelle della passione.</i>
+            ~ kitchen_recipeNoun = "Frittelle"
             -> glyph_choice_manager(true, fireC)->
     
-        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
-            ~ kitchen_recipeNoun = "Cimetta di broccolo"
+        + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Cioccolato a iosa per una tenerina asessuale.</i>
+            ~ kitchen_recipeNoun = "Tenerina"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
-            ~ kitchen_recipeNoun = "Crema d'aglio"
+        + (air1)\ {charTag(PG, "neutral")}:                                     <i>Parto con dei cannoli dell'affinità intellettuale.</i>
+            ~ kitchen_recipeNoun = "Cannoli"
             -> glyph_choice_manager(true, airC)->
         -  
              //Intermezzo culinario
@@ -687,28 +687,30 @@
         {charTag(ThirdCharacter, "jester")}:                                    Vedi quanto mi fido di te?
         {charTag(ThirdCharacter, "neutral")}:                                   Per te scopare è una cosa importante in una relazione?
         
-        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
-            ~ kitchen_recipeAdjective = "onesta"
+        + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Frullo a neve dell'acquafaba bilanciata.</i>
+            ~ kitchen_recipeAdjective = "bilancia"
             -> glyph_choice_manager(true, earthC)->
 
             
-        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>//Aromantico
-            ~ kitchen_recipeAdjective = "allegra"
+        + (air2)\ {charTag(PG, "neutral")}:                                     <i>Sciolgo a bagnomaria della cioccolata aromantica.</i>
+            ~ kitchen_recipeAdjective = "aromanticità"
             -> glyph_choice_manager(true, airC)->
 
             
-        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>//conta più l'emozione
-            ~ kitchen_recipeAdjective = "empatica"
+        + (water2)\ {charTag(PG, "neutral")}:                                   <i>Friggo dei canditi della connessione emotiva.</i>
+            ~ kitchen_recipeAdjective = "emotività"
             -> glyph_choice_manager(true, waterC)->
 
     
-        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
+        + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Pulisco della vaniglia della ierogamia.</i>
             ~ kitchen_recipeAdjective = "incondizionata"
             -> glyph_choice_manager(true, aetherC)->
+                                                                                Sono estremamente confuso.
+                                                                                Commento di strega.
 
 
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>//che differenza di "sì" ci saranno tra fuoco e terra?
-            ~ kitchen_recipeAdjective = "leale"
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbollento delle ciliegie della necessità.</i>
+            ~ kitchen_recipeAdjective = "necessità"
             -> glyph_choice_manager(true, fireC)->
         - 
             //Intermezzo culinario
@@ -793,24 +795,24 @@
                                                                                 Una o due bestiacce in giro per la casa, con cui incazzarti quando ci sono.
                                                                                 E sentire la mancanza appena se ne vanno a scuola?
         
-        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente acqua</i>
-            ~ kitchen_recipeComplement = "con brodo del terrore"
+        + (water3)\ {charTag(PG, "neutral")}:                                   <i>Decoro con una nidiata di praline festose.</i>
+            ~ kitchen_recipeComplement = "nidiata di praline festose"
             -> glyph_choice_manager(true, waterC)->
             
-        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Ingrediente terra</i>
-            ~ kitchen_recipeComplement = "con noce euforica"
+        + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Spolvero con dello zucchero dell'imperativo biologico.</i>
+            ~ kitchen_recipeComplement = "zucchero dell'imperativo biologico"
             -> glyph_choice_manager(true, earthC)->
             
-        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Ingrediente aria</i>
-            ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+        + (air3)\ {charTag(PG, "neutral")}:                                     <i>Inzuppo con dello sciroppo del futuro incerto.</i>
+            ~ kitchen_recipeComplement = "sciroppo del futuro incerto"
             -> glyph_choice_manager(true, airC)->
     
-        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Ingrediente spirito</i>
-            ~ kitchen_recipeComplement = "con olio delle lusinghe"
+        + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Farcisco con della crema della kincentricità.</i>
+            ~ kitchen_recipeComplement = "crema della kincentricità"
             -> glyph_choice_manager(true, aetherC)->
 
-        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Ingrediente fire</i>
-            ~ kitchen_recipeComplement = "con peperoncini arrapati"
+        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Glasso con dello zucchero dello zero, no, mai!</i>
+            ~ kitchen_recipeComplement = "zucchero dello zero, no, mai"
             -> glyph_choice_manager(true, fireC)->
         -
              //Intermezzo culinario
@@ -1690,8 +1692,8 @@
 {step:
 - oneKitchen:
 {charTag(ThirdCharacter, "neutral")}:                                   Sai che c'è?
-                                                                        Mentre te ti occupi del piatto principale, io penso a un contornino.
-{charTag(ThirdCharacter, "jester")}:                                    Magari qualcosa che richieda solo qualche piatto, così evitiamo di fare disastri.
+                                                                        Preparo anche io qualcosa nel frattempo.
+{charTag(ThirdCharacter, "jester")}:                                    Qualcosa di freddo, così evitiamo disastri.
 {charTag(ThirdCharacter, "neutral")}:                                   Settimana scorsa avevo voglia di cioccolata.
                                                                         Mi son preso uno di quei preparati istantanei, ma non c'ho avuto pazienza.
                                                                         Non diventava duro e così ho messo tre buste di preparato nella dose di latte da una busta.
