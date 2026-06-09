@@ -194,6 +194,12 @@
         - grimoire_thirdChar has grimThirdCharNovel:
                                                                 O infuriarsi per un racconto dove una donna che subisce violenza si ribella.    
         }
+        {
+        - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                                                                Che poi me l'hai detto anche tu in cucina: la relazione con Ava va bene, ma il sesso ti manca.
+                                                                E vorresti diventare padre.
+                                                                Ma non sai se farlo con lei o meno.
+        } 
 
 
 
@@ -237,7 +243,10 @@
                                                                 Mentre quando mi hai parlato di Dona, sembra quasi che l'amore sia il premio che si riceve se si fanno le cose giuste, come non urlare contro chi ami, o non tradirla.
                                                                 Mi hai sempre parlato di cose che accadono, di cose che fanno gli altri.
                                                                 E c'è sempre un sottotono di paragone.
-
+        {
+        - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                                                                Persino in cucina, parlando di figli, mi hai detto che ti pesa che tua sorella sia arrivata "prima di te" nel portare un nipote in famiglia.
+        } 
 
 
 
