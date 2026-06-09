@@ -848,22 +848,52 @@
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Decoro con una nidiata di praline festose.</i>
             ~ kitchen_recipeComplement = "nidiata di praline festose"
             -> glyph_choice_manager(true, waterC)->
-            
+        {charTag(ThirdCharacter, "bored")}:                                     Oh dio, facciamo un paio?
+        {charTag(ThirdCharacter, "jester")}:                                    Vuoi tirare su una squadra da calcio vecio? 
+        {charTag(ThirdCharacter, "neutral")}:                                   Magari un giorno ci si becca fuori di qui e il mio figlio e uno dei tuoi trecentomila che ti farai diventano pure amici!
+
         + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Spolvero con dello zucchero dell'imperativo biologico.</i>
             ~ kitchen_recipeComplement = "zucchero dell'imperativo biologico"
             -> glyph_choice_manager(true, earthC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Un po'come la fame, ma per sparare spermini in giro.
+                                                                                Mi fai morire vecio!
+                                                                                Mi fai morire.
+        {charTag(ThirdCharacter, "neutral")}:                                   Però a volte me la sento proprio forte nella pancia questa voglia di vedere in giro qualche piccolo {charNameThree}.
+                                                                                Dona ha abortito una volta.
+                                                                                Ci conoscevamo da tre anni.
+                                                                                Era troppo giovane, aveva un mondo di cose da fare e provare.
+                                                                                Ma a volte ci penso ancora a quel bestiolino, a cosa sarebbe diventato.                                                                        
+
             
         + (air3)\ {charTag(PG, "neutral")}:                                     <i>Inzuppo con dello sciroppo del futuro incerto.</i>
             ~ kitchen_recipeComplement = "sciroppo del futuro incerto"
             -> glyph_choice_manager(true, airC)->
+        {charTag(ThirdCharacter, "neutral")}:                                   Ci sta vecio.
+                                                                                Incerto tu.
+                                                                                Incerto il mondo.
+        {charTag(ThirdCharacter, "jester")}:                                    Incerta la tipa che deve decidere se vuole un figlio con uno come te che si fa tanti pipponi.
+        {charTag(ThirdCharacter, "neutral")}:                                   Scherzo vecio, davvero.
+        {charTag(ThirdCharacter, "jester")}:                                    Sono solo un gran coglione.
     
         + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Farcisco con della crema della kincentricità.</i>
             ~ kitchen_recipeComplement = "crema della kincentricità"
             -> glyph_choice_manager(true, aetherC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Ti sorprenderò, ma questa roba so che cos'è.
+        {charTag(ThirdCharacter, "neutral")}:                                   Grazie a Petra, ovviamente.
+                                                                                È la mia consulente per le cose gender.
+                                                                                Se ho capito bene è una roba tipo che non fai figli ma tiri su una famiglia con una farfalla un albero e l'anima dello zio defunto, una cosa del genere, giusto?
+        {charTag(ThirdCharacter, "jester")}:                                    Ce lo voglio vedere poi il notaio che deve capirci qualcosa col tuo testamento.
 
         + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Glasso con dello zucchero dello zero, no, mai!</i>
             ~ kitchen_recipeComplement = "zucchero dello zero, no, mai"
             -> glyph_choice_manager(true, fireC)->
+        {charTag(ThirdCharacter, "jester")}:                                    Bravo vecio, bravo!
+        {charTag(ThirdCharacter, "neutral")}:                                   Io ne voglio per me, sia chiaro.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma capisco chi vuole rimanere un battitore libero.
+                                                                                Un attaccante pronto a riempire ogni porta.
+                                                                                Il mister che domina il campo ma se ne esce senza una goccia di sudore.
+                                                                                Quello che mette le famose corna all'arbitro.
+        {charTag(ThirdCharacter, "neutral")}:                                   Mi fermo giuro stop basta.                                                                        
         -
              //Intermezzo culinario
             ~ third_char_kitchen_comments(sixKitchen)
