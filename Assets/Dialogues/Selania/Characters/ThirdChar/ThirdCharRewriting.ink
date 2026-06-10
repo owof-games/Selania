@@ -367,6 +367,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+            {charTag(TheWitch, witch_state())}:                 {charNameThree} ha chiesto a {player_name} la possibilità di venire riscritto.
+                                                                E {player_name} può procedere come {charNameThree} fosse qui con noi.
+                                                                Anche se dovremo aspettare per scoprire come {charNameThree} reagirà alla rilettura della sua storia da parte di {player_name}.
 
             //Funzione di preparazione alla riscrittura
                 ~  rewriting_prep(ThirdCharacter)
@@ -387,7 +390,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        
+            
+
+
             {charTag(PG, "neutral")}:                           Sei partito dicendo che fai schifo con le donne, criticandoti per l'amore che hai provato per Ava.
                                                                 Credi che la tua famiglia ti detesti.
                                                                 Che i tuoi amici se ne fregano di te.

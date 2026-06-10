@@ -1262,6 +1262,10 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        {charTag(TheWitch, witch_state())}:                     {charNameThree} ha bisogno dell'aiuto di {player_name}.
+                                                                Per questo la piccola cagnolina che fa da postina di questo luogo consegnerà le risposte di {player_name} a {charNameThree}.
+                                                                Cosa vorrebbe rispondere {player_name}?
         
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
@@ -1289,6 +1293,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
+        {charTag(TheWitch, witch_state())}:                     Che risposta vorrebbe inviare {player_name} a {charNameThree}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
@@ -1315,7 +1320,8 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        
+        {charTag(TheWitch, witch_state())}:                     Che consiglio vorrebbe dare {player_name} a {charNameThree}?
+
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
                 
@@ -1342,6 +1348,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        {charTag(TheWitch, witch_state())}:                     Secondo {player_name}, qual è il consiglio più saggio per {charNameThree}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
@@ -1369,6 +1376,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
+        {charTag(TheWitch, witch_state())}:                     Come risponderà {player_name}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
@@ -1395,6 +1403,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
+        {charTag(TheWitch, witch_state())}:                     Quale consiglio riceverà {charNameThree}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
