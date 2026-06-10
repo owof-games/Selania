@@ -341,7 +341,41 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
    
-   {charTag(ThirdCharacter, "neutral")}:       {charNameThree} ha visto un cane.
+        {charTag(ThirdCharacter, "jester")}:                            C'è una CAGNOLINA!
+        {charTag(ThirdCharacter, "bored")}:                             Merda, dovrei fare l'uomo adulto.
+        {charTag(ThirdCharacter, "jester")}:                            Ma c'è una cagnolina {player_name}!
+        {
+        - contentsTrainStop has PG:
+        {
+        - contentsTrainStop has DoggoNoLetters:
+        {charTag(ThirdCharacter, "jester")}:                            Vicino alla panchina.
+                                                                        C'ha la faccia da furbetta questa qui!
+        - else:
+        {charTag(ThirdCharacter, "jester")}:                            Era vicina alla panchina.
+                                                                        Con una faccia da furbetta che non hai idea!
+        }
+        - else:
+        {charTag(ThirdCharacter, "jester")}:                            Era alla stazione, e c'aveva 'sta faccia da furbetta che l'avrei mangiata tutta!  
+        }
+        {charTag(ThirdCharacter, "neutral")}:                           Quando Dona compì diciotto anni gliene regalai una simile.
+                                                                        Stella.
+        {charTag(ThirdCharacter, "jester")}:                            Sua mamma all'inizio era incazzata a bestia con me.
+                                                                        Ma poi se ne è innamorata.
+        {charTag(ThirdCharacter, "neutral")}:                           Anche se poi quello che la portava a passeggio il più delle volte ero io.
+                                                                        Mi manca tanto.
+                                                                        Quando siamo andati a vivere assieme abbiamo provato a portarla da noi, ma alla fine lei ormai si era affezionata alla mia ex suocera.
+        {charTag(ThirdCharacter, "jester")}:                            Stella è ancora una testona assurda, anche se non ci sente più un cazzo, abbaia come una dannata da mattina a sera.
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "energy")}:                   Me la fai conoscere?
+                                                                        Dai {charNameThree}!
+                                                                        Me la fai conoscere?
+                {charTag(ThirdCharacter, "jester")}:                    Quando usciamo di qui ci provo.
+                {charTag(ThirdCharacter, "bored")}:                     Magari mia suocera, ex suocera, si intenerisce davanti a un bambino.
+                {charTag(ThirdCharacter, "neutral")}:                   Anche se probabilmente Stella cercherà di morderti.
+                {charTag(ThirdCharacter, "jester")}:                    Ma tanto ormai è senza denti.                                                                
+                }                                                                                                                                                                                                
+   
 
     -> third_char_closing_storylet ->
     ->-> 
