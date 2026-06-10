@@ -6,6 +6,7 @@ using UnityEngine;
 namespace Selania.Rework.Components.PrefabParticles.Editor
 {
     [CustomEditor(typeof(PrefabParticles))]
+    [CanEditMultipleObjects]
     public class PrefabParticlesEditor : UnityEditor.Editor
     {
         private SerializedProperty? _animatorParameterDescriptorsProperty;
@@ -64,8 +65,8 @@ namespace Selania.Rework.Components.PrefabParticles.Editor
             var center = _prefabParticles.transform.position;
 
             var xMin = center.x + _prefabParticles.SpawnArea.xMin;
-            var yMin = center.x + _prefabParticles.SpawnArea.yMin;
-            var xMax = center.y + _prefabParticles.SpawnArea.xMax;
+            var yMin = center.y + _prefabParticles.SpawnArea.yMin;
+            var xMax = center.x + _prefabParticles.SpawnArea.xMax;
             var yMax = center.y + _prefabParticles.SpawnArea.yMax;
 
             var bottomLeft = new Vector3(xMin, yMin, 0);
@@ -116,7 +117,7 @@ namespace Selania.Rework.Components.PrefabParticles.Editor
 
             // if there was a change to apply, do it through serialized object
             if (!changed) return;
-            _spawnAreaProperty.rectValue = new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
+            _spawnAreaProperty.rectValue = new Rect(xMin - center.x, yMin - center.y, xMax - xMin, yMax - yMin);
             serializedObject.ApplyModifiedProperties();
         }
 

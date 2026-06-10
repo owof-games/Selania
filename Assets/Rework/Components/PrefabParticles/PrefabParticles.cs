@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Alchemy.Inspector;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -266,14 +265,6 @@ namespace Selania.Rework.Components.PrefabParticles
             Gizmos.DrawLine(center + dx - dy, center - dx - dy);
         }
 
-        private void OnValidate()
-        {
-            foreach (var validationError in GetValidationErrors())
-            {
-                Debug.LogError(validationError);
-            }
-        }
-
         internal IEnumerable<string> GetValidationErrors()
         {
             if (!prefab)
@@ -323,14 +314,7 @@ namespace Selania.Rework.Components.PrefabParticles
             }
 
             if (animatorParameterDescriptors.Count(descriptor => descriptor.isSpeedMultiplier) > 1)
-                Debug.LogError("Only one animator parameter should be marked as speed multiplier.");
-        }
-
-        [Button]
-        // ReSharper disable once UnusedMember.Local - used as a Button
-        private void Validate()
-        {
-            OnValidate();
+                yield return "Only one animator parameter should be marked as speed multiplier.";
         }
 
 #endif
