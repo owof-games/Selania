@@ -276,9 +276,6 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
-
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
 
         Nella lettera precedente mi hai detto che:
 
@@ -392,10 +389,8 @@
 
 
 
-
 ->->
         
-
     
 
 === letters_thirdCharLetters_three
@@ -404,26 +399,25 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        Nella lettera precedente mi hai detto che:
 
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.two.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.two.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.two.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.two.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.two.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -432,7 +426,6 @@
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
             
-
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.two.air: 
@@ -451,12 +444,72 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterThree:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.two.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterThreeChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterThreeChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.two.air: 
+                ~   letters_thirdCharLetterThreeChoice += airC
+
+            - third_char_letters_choices.two.fire: 
+                ~   letters_thirdCharLetterThreeChoice += fireC
+
+            - third_char_letters_choices.two.earth: 
+                ~   letters_thirdCharLetterThreeChoice += earthC
+
+            - third_char_letters_choices.two.aether: 
+                ~   letters_thirdCharLetterThreeChoice += aetherC
+
+            - third_char_letters_choices.two.water: 
+                ~   letters_thirdCharLetterThreeChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterThreeChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
-        
-->->     
+
+        //Step cinque: nuova situazione, a cui poi risponderemo.
+        Nuovo evento blah blah blah.
+->->
 
 === letters_thirdCharLetters_four
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -464,26 +517,25 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
-        
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        Nella lettera precedente mi hai detto che:
+
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.three.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.three.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.three.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.three.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.three.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -492,7 +544,6 @@
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
             
-
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.three.air: 
@@ -511,44 +562,98 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFour:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.three.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterFourChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterFourChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.three.air: 
+                ~   letters_thirdCharLetterFourChoice += airC
+
+            - third_char_letters_choices.three.fire: 
+                ~   letters_thirdCharLetterFourChoice += fireC
+
+            - third_char_letters_choices.three.earth: 
+                ~   letters_thirdCharLetterFourChoice += earthC
+
+            - third_char_letters_choices.three.aether: 
+                ~   letters_thirdCharLetterFourChoice += aetherC
+
+            - third_char_letters_choices.three.water: 
+                ~   letters_thirdCharLetterFourChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterFourChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
 
-->->        
-     
+        //Step cinque: nuova situazione, a cui poi risponderemo.
+        Nuovo evento blah blah blah.
+->->
+
 === letters_thirdCharLetters_five
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
+        Nella lettera precedente mi hai detto che:
 
-        {
-        - grimoire_thirdChar has grimWitchThirdCharFollowUp:
-        Ci dice che dopo il follow up con la strega, la persona di cui ci parlava era il Poggi. gioia o amarezza a seconda degli esiti.     
-        }
-        
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.four.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.four.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.four.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.four.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.four.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -557,7 +662,6 @@
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
             
-
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.four.air: 
@@ -576,39 +680,98 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFive:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.four.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterFiveChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterFiveChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.four.air: 
+                ~   letters_thirdCharLetterFiveChoice += airC
+
+            - third_char_letters_choices.four.fire: 
+                ~   letters_thirdCharLetterFiveChoice += fireC
+
+            - third_char_letters_choices.four.earth: 
+                ~   letters_thirdCharLetterFiveChoice += earthC
+
+            - third_char_letters_choices.four.aether: 
+                ~   letters_thirdCharLetterFiveChoice += aetherC
+
+            - third_char_letters_choices.four.water: 
+                ~   letters_thirdCharLetterFiveChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterFiveChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
 
+        //Step cinque: nuova situazione, a cui poi risponderemo.
+        Nuovo evento blah blah blah.
 ->->
 
  === letters_thirdCharLetters_six
-        ~ temp charNameOne = translator(firstChar_ActualName)
+       ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
-        
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        Nella lettera precedente mi hai detto che:
+
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.five.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.five.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.five.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.five.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.five.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -617,7 +780,6 @@
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
             
-
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.five.air: 
@@ -636,39 +798,99 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSix:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.five.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterSixChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterSixChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.five.air: 
+                ~   letters_thirdCharLetterSixChoice += airC
+
+            - third_char_letters_choices.five.fire: 
+                ~   letters_thirdCharLetterSixChoice += fireC
+
+            - third_char_letters_choices.five.earth: 
+                ~   letters_thirdCharLetterSixChoice += earthC
+
+            - third_char_letters_choices.five.aether: 
+                ~   letters_thirdCharLetterSixChoice += aetherC
+
+            - third_char_letters_choices.five.water: 
+                ~   letters_thirdCharLetterSixChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterSixChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
+
+        //Step cinque: nuova situazione, a cui poi risponderemo.
+        Nuovo evento blah blah blah.
 
 ->->    
 
 === letters_thirdCharLetters_seven
-        ~ temp charNameOne = translator(firstChar_ActualName)
+       ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
-        
 
-        {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
-        
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        Nella lettera precedente mi hai detto che:
+
+        //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.six.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.six.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.six.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.six.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.six.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -676,7 +898,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-
+            
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.six.air: 
@@ -695,11 +917,70 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.six.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterSevenChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterSevenChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.six.air: 
+                ~   letters_thirdCharLetterSevenChoice += airC
+
+            - third_char_letters_choices.six.fire: 
+                ~   letters_thirdCharLetterSevenChoice += fireC
+
+            - third_char_letters_choices.six.earth: 
+                ~   letters_thirdCharLetterSevenChoice += earthC
+
+            - third_char_letters_choices.six.aether: 
+                ~   letters_thirdCharLetterSevenChoice += aetherC
+
+            - third_char_letters_choices.six.water: 
+                ~   letters_thirdCharLetterSevenChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterSevenChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
 
+        //Step cinque: nuova situazione, a cui poi risponderemo (qui è la riscrittura)
         Merda, sono cambiate così tante cose in questi mesi, {player_name}.
         Così tante cose.
         Però rimango lo stesso coglione.
@@ -747,7 +1028,6 @@
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
             
-
                 //E poi procedo con gli effetti delle scelte.
                 //Prima riscrittura
                 {
@@ -863,7 +1143,7 @@
 
         }
 
-        {charTag(Documents, "writer_thirdChar")}:      Grazie per quello che mi hai detto, ora ci ragiono un poco sopra e poi ti scrivo.
+    Grazie per quello che mi hai detto, ora ci ragiono un poco sopra e poi ti scrivo.
         
 
 ->->
