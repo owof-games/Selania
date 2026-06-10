@@ -117,6 +117,14 @@
 
 //Tracciamento del racconto
     VAR frog_third_novel = ""
+
+//Tracciamento degli esiti delle scelte PG nelle varie lettere
+    VAR letters_thirdCharLetterTwoChoice = ()
+    VAR letters_thirdCharLetterThreeChoice = ()
+    VAR letters_thirdCharLetterFourChoice = ()
+    VAR letters_thirdCharLetterFiveChoice = ()
+    VAR letters_thirdCharLetterSixChoice = ()
+    VAR letters_thirdCharLetterSevenChoice = ()
                      
                                                         /* ---------------------------------
                                                         

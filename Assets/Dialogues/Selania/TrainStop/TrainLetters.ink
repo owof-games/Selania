@@ -280,24 +280,24 @@
 
         {charTag(Documents, "writer_thirdChar")}:      {charNameThree}: Lettere random note da parte della personaggia <>
 
-        Dopo che mi hai risposto questa cosa nella lettera precedente:
+        Nella lettera precedente mi hai detto che:
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.one.air: 
-                Una cosa aria, mi sono sentito...
+                Recap scelta aria
 
             - third_char_letters_choices.one.fire: 
-                Una cosa fuoco, mi sono sentito...
+                Recap scelta fuoco
 
             - third_char_letters_choices.one.earth: 
-                Una cosa terra , mi sono sentito...
+                Recap scelta terra
 
             - third_char_letters_choices.one.aether: 
-                Una cosa spirito, mi sono sentito...
+                Recap scelta spirito
 
             - third_char_letters_choices.one.water: 
-                Una cosa acqua, mi sono sentito...
+                Recap scelta acqua
 
         }
 
@@ -305,8 +305,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
-
+            
                 //E poi procedo con gli effetti delle scelte
                 {
                 - third_char_letters_choices.one.air: 
@@ -325,10 +324,75 @@
                     -> glyph_choice_manager(false, waterC)->
                 }
 
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
             //E disattivo la variabile che blocca le varie reazioni.
-           ~  ThirdCharacterLetters = false          
+            ~    ThirdCharacterLetters = false          
+        }
+
+        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.one.fire:
+            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                ~   letters_thirdCharLetterTwoChoice += fireC
+            
+            - else:
+            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                ~   letters_thirdCharLetterTwoChoice += fireC
+            }
+        - else:
+            E ho deciso di seguire il tuo consiglio.
+            {
+            - third_char_letters_choices.one.air: 
+                ~   letters_thirdCharLetterTwoChoice += airC
+
+            - third_char_letters_choices.one.fire: 
+                ~   letters_thirdCharLetterTwoChoice += fireC
+
+            - third_char_letters_choices.one.earth: 
+                ~   letters_thirdCharLetterTwoChoice += earthC
+
+            - third_char_letters_choices.one.aether: 
+                ~   letters_thirdCharLetterTwoChoice += aetherC
+
+            - third_char_letters_choices.one.water: 
+                ~   letters_thirdCharLetterTwoChoice += waterC 
+            }
+        }       
+        }
+
+        //Step quattro: gli esiti
+        {letters_thirdCharLetterTwoChoice:
+            - airC:
+            Evento aria.
+
+            - fireC:
+            Evento fuoco.
+
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
 
         }
+
+        //Step cinque: nuova situazione, a cui poi risponderemo.
+        Nuovo evento blah blah blah.
+
+
+
+
 ->->
         
 
@@ -367,7 +431,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterThree:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
+            
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -427,7 +491,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterFour:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
+            
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -492,7 +556,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterFive:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
+            
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -552,7 +616,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterSix:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
+            
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -612,7 +676,6 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
 
                 //E poi procedo con gli effetti delle scelte
                 {
@@ -683,7 +746,7 @@
         {grimoire_thirdChar hasnt grimThirdCharLetterEight:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
-            Blah blah blah
+            
 
                 //E poi procedo con gli effetti delle scelte.
                 //Prima riscrittura
