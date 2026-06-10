@@ -386,25 +386,45 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    //Fallimento relazionale: amici, famiglia, amore (ava, Dona, scopate, il padre, con sé stesso)
 
         
-            {charTag(PG, "neutral")}:                           Frase
+            {charTag(PG, "neutral")}:                           Sei partito dicendo che fai schifo con le donne, criticandoti per l'amore che hai provato per Ava.
+                                                                Credi che la tua famiglia ti detesti.
+                                                                Che i tuoi amici se ne fregano di te.
+                                                                E che il tuo migliore amico si è allontanato da te per l'età che Donatella aveva quando vi siete conosciuti.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
+            + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. Lo stai già facendo saltando gli incontri.
+            {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
+                                                                E magari potresti pure stupirti della loro reazione.
             
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
-                    
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
-                                
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+            + (water) \ {charTag(PG, "neutral")}:               Dimenticando l'amicizia che Rocco è pronto ad offrirti.
+            {charTag(PG, "neutral")}:                           Le confidenze, le bevute.
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenOne:
+                                                                Quelle confidenze di ritorno da Milano di cui mi hai parlato mentre cucinavamo.
+                }
+                                                                La sua mano è tesa, devi solo afferrarla.
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
+                    
+            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra, un buono zio per tua sorella: porta queste cose nelle tue relazioni.
+            {charTag(PG, "neutral")}:                           Non serve per forza essere quello che esce con mille ragazze.
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                                                                O che si porta le clienti sul retro del locale.
+                }
+                                                                Hai due donne nella tua vita con cui riesci ad essere qualcosa di più.
+                                
+            + (air) \ {charTag(PG, "neutral")}:                 Il piccolo Armando ti adora: perché non riparti da lì con la tua famiglia?
+            {charTag(PG, "neutral")}:                           Quando sei arrivato qui hai detto che invidi tua sorella per l'attenzione che ha ricevuto dalla famiglia dopo essere diventata mamma.
+                                                                E se fosse invece l'occasione anche per te per riavvicinarti a loro?
+                                                                Perché se hai paura che ti detestino, alla fine di loro ti importa, no?
+
+            + (aether) \ {charTag(PG, "neutral")}:              Hai chiesto scusa a Donatella: forse la strada è continuare a prenderti le tue responsabilità. 
+            {charTag(PG, "neutral")}:                           Per le cose che sono accadute con tua sorella.
+                                                                Con tuo padre.
+                                                                Per il rapporto che hai coi ragazzi del calcetto.
+                                                                E anche se il Poggi ha chiuso per sempre la sua porta, ci sono cose su cui lavorare anche nel rapporto che hai avuto con lui.
+                                                                O con te stesso.  
             -
 
             //Riduco di uno il livello di inchiostro
