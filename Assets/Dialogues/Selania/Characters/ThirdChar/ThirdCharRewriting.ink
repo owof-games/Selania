@@ -467,25 +467,31 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    //Fallimento col passato: sono come mio padre, ho tradito le promesse fatte a mia madre, sono il figlio del luogo in cui sono cresciuto, ho perso il poggi, dona etc.
 
-        {charTag(PG, "neutral")}:                               Frase
+        {charTag(PG, "neutral")}:                               Il passato sembra schiacciarti a terra: dici di aver tradito le promesse fatte a tua madre.
+                                                                Di essere bloccato nel luogo in cui sei cresciuto, che ti è sempre più stretto.
+                                                                Di aver speso una vita a non voler essere come tuo padre, per poi vederti come un fallito ancora peggiore.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
-            
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
-                    
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
-                                
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+        + (fire) \ {charTag(PG, "neutral")}:                    Cazzate: sei cresciuto in un posto con poco, ti sei fatto il culo, e stai comunque vivendo la tua vita.
+        {charTag(PG, "neutral")}:                               La migliore del mondo?
+                                                                Magari no, e lì si può fare di più.
+                                                                Ma non continuare a pensare a ciò che avresti potuto ottenere.
+                                                                Al massimo, datti da fare!
+        
+        + (water) \ {charTag(PG, "neutral")}:                   QUALCOSA SULLA MADRE.
+        {charTag(PG, "neutral")}:                               Commento    
+                
+        + (earth) \ {charTag(PG, "neutral")}:                   Ma anche ora stai gettando nuove radici: col lavoro, con la casa.
+        {charTag(PG, "neutral")}:                               Non sono soluzioni perfette forse, ma non sono per forza un punto d'arrivo.
+                                                                E quando hai perso il vecchio lavoro o la casa con Donatella, ti sei attivato per gettare nuove fondamenta.
+                            
+        + (air) \ {charTag(PG, "neutral")}:                     Ma io vedo la curiosità e l'acume con cui ti butti nel calcio e nel fantacalcio.
+        {charTag(PG, "neutral")}:                               La vitalità che traspare quando parli delle cose che ami.
+                                                                Il modo in cui ti mantieni sempre attento e curioso.
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
-            -
+        + (aether) \ {charTag(PG, "neutral")}:                  E dove mettiamo il {charNameThree} del futuro, quello che sta imparando a mettersi in discussione con Petra?
+        {charTag(PG, "neutral")}:                               Potevi avere tutte le scuse per fregartene, e invece hai deciso di ascoltare qualcosa di diverso, di accoglierlo.        
+        -
 
             //Riduco di uno il livello di inchiostro
                 ~ thirdChar_InkLevel --
