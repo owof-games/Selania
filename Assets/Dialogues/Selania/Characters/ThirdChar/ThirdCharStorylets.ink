@@ -669,7 +669,7 @@
                                                                 Insomma, nessuno di noi è esattamente questo grande intellettuale.
                                                                 Siamo più gente con le mani sporche.
                                                                 A parte il Giova.
-        {charTag(ThirdCharacter, "jester")}:                    Che è stupido e ha le mani pulite.
+        {charTag(ThirdCharacter, "jester")}:                    Che è stupido <i>e</i> ha le mani pulite.
         {charTag(ThirdCharacter, "neutral")}:                   Però ce la caviamo bene.
                                                                 Si aggiunge sempre qualche collega di Rocco o gente del bar che viene a fare due tiri.
         {charTag(ThirdCharacter, "jester")}:                    E la serata così passa bene.

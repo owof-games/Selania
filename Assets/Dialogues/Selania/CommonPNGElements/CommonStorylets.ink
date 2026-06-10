@@ -1205,7 +1205,7 @@
                 {charTag(FirstCharacter, "neutral")}:                           È mio sacro dovere proteggerli tutti dai pescatori!
                                                                                 E da zio Gracco.
                 }                                                                  
-         {charTag(ThirdCharacter, "neutral")}:                                   Sai pescare, fratellino?
+         {charTag(ThirdCharacter, "neutral")}:                                  Sai pescare, fratellino?
         {charTag(SecondCharacter, "neutral")}:                                  No.
         {charTag(ThirdCharacter, "jester")}:                                    Sei proprio un ragazzo di città.
         {charTag(SecondCharacter, "neutral")}:                                  Io sto in periferia, non in città.

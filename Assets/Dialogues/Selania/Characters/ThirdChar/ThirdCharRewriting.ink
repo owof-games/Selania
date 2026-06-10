@@ -397,13 +397,15 @@
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
                                                                 E magari potresti pure stupirti della loro reazione.
             
-            + (water) \ {charTag(PG, "neutral")}:               Dimenticando l'amicizia che Rocco è pronto ad offrirti.
-            {charTag(PG, "neutral")}:                           Le confidenze, le bevute.
-                {
-                - grimoire_thirdChar has grimThirdCharKitchenOne:
-                                                                Quelle confidenze di ritorno da Milano di cui mi hai parlato mentre cucinavamo.
-                }
-                                                                La sua mano è tesa, devi solo afferrarla.
+            + (water) \ {charTag(PG, "neutral")}:               Forse Ava non era la persona giusta, ma {charNameThree}: hai amato.
+            {charTag(PG, "neutral")}:                           Ricordi come mi hai parlato di lei quando eri qui?
+                                                                Sai già che forse le app di dating non sono il tuo strumento preferito.
+                                                                Ma il mondo è pieno di occasioni per chi ha un cuore aperto.
+                    {
+                    - grimoire_thirdChar has grimWitchThirdChar:
+                                                                Come ti ha detto anche {witch_actualName} quando avete parlato assieme.
+                    }                                             
+                
 
                     
             + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra, un buono zio per tua sorella: porta queste cose nelle tue relazioni.
@@ -413,8 +415,16 @@
                                                                 O che si porta le clienti sul retro del locale.
                 }
                                                                 Hai due donne nella tua vita con cui riesci ad essere qualcosa di più.
+                {
+                - grimoire_thirdChar has grimThirdCharNovel:
+                                                                Pensa a quanto sei cambiato da quando avevi letto <i>Polvere</i> qui in biblioteca, e ti sei arrabbiato contro la protagonista!
+                }                                                  
                                 
             + (air) \ {charTag(PG, "neutral")}:                 Il piccolo Armando ti adora: perché non riparti da lì con la tua famiglia?
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                {charTag(PG, "neutral")}:                       Lo stesso piccolo Armando che, mentre cucinavamo assieme, vedevi come "una vittoria" di tua sorella su di te.
+                } 
             {charTag(PG, "neutral")}:                           Quando sei arrivato qui hai detto che invidi tua sorella per l'attenzione che ha ricevuto dalla famiglia dopo essere diventata mamma.
                                                                 E se fosse invece l'occasione anche per te per riavvicinarti a loro?
                                                                 Perché se hai paura che ti detestino, alla fine di loro ti importa, no?
@@ -463,6 +473,11 @@
                                                                 O offrirci nuove prospettive.    
                     
             + (earth) \ {charTag(PG, "neutral")}:               Ma ogni volta che mi hai parlato del tuo lavoro, ne hai parlato con amore.
+                    {
+                    - grimoire_thirdChar has grimThirdOpenNest:
+                    {charTag(PG, "neutral")}:                   Pensa a quando mi hai aperto il nido, e mi hai detto che la cosa più bella del tuo lavoro è capire cosa dire alle persone quando stanno di merda.
+                    }
+
             {charTag(PG, "neutral")}:                           Il problema è economico, o le tensioni col capo.
                                                                 Ma queste sono cose che si possono risolvere, e che non tolgono valore alla persona che sei.
                                                                 E soprattutto: una persona <i>fa</i> il proprio lavoro, ma non <i>è</i> il proprio lavoro.
@@ -517,8 +532,17 @@
                                                                 E quando hai perso il vecchio lavoro o la casa con Donatella, ti sei attivato per gettare nuove fondamenta.
                             
         + (air) \ {charTag(PG, "neutral")}:                     Ma io vedo la curiosità e l'acume con cui ti butti nel calcio e nel fantacalcio.
-        {charTag(PG, "neutral")}:                               La vitalità che traspare quando parli delle cose che ami.
+                {
+                - grimoire_thirdChar has grimThirdCharFranco:
+                                                                Ti ricordi come hai provato in tutti i modi a spiegarne le regole a Franco?
+                } 
+        {charTag(PG, "neutral")}:                               La vitalità che traspare quando parli delle cose che ami è contagiosa.
                                                                 Il modo in cui ti mantieni sempre attento e curioso.
+                {
+                - grimoire_thirdChar has grimThirdOpenNest:
+                                                                O la curiosità che ti ha spinto ad aprirmi il nido.
+
+                }                                                
 
         + (aether) \ {charTag(PG, "neutral")}:                  E dove mettiamo il {charNameThree} del futuro, quello che sta imparando a mettersi in discussione con Petra?
         {charTag(PG, "neutral")}:                               Potevi avere tutte le scuse per fregartene, e invece hai deciso di ascoltare qualcosa di diverso, di accoglierlo.        
@@ -543,7 +567,6 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    //Fallimento come uomo: paragone con il Merlo e il Giova (denaro), con Rocco (famiglia), con Dario (giovinezza), con il Poggi (fregarsene dei giudizi altrui ed essere felice)    
 
         {charTag(PG, "neutral")}:                               Ti sei paragonato a tutti gli uomini che conosci: Merlo e Giova sono ricchi.
                                                                 Rocco ha una famiglia affiatata.
@@ -557,9 +580,9 @@
                                                                 In cucina mi ha raccontato che ti paragonavano a Joe Manganiello.
                                                                 Non è l'età a dettare il successo, ma il lavoro che fai su di te.
                 } 
-
+                                                                Anche se ricordo ancora quando ci siamo presentat3, e mi hai detto che le ragazze adorano la tua pancetta da birra.
         
-        + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, Che ha messo l'amicizia e la coscienza davanti al denaro?
+        + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, che ha messo l'amicizia e la coscienza davanti al denaro?
         {charTag(PG, "neutral")}:                               L'hai descritto come un fallito, per poi raccontarmi di qualcuno capace di mettere i propri valori e le persone a cui tiene davanti a tutto il resto.
                                                                 Ed è qualcosa che non svanisce come la bellezza, né che non si acquista coi soldi.   
                 
@@ -578,8 +601,19 @@
                 }
                                                                 La vita degli altri sembra sempre migliore di quello che davvero è. 
 
-        + (aether) \ {charTag(PG, "neutral")}:                  Smettila di essere un bicchiere riempito dagli altri: vai di teamPoggi, è fregatene.
+        + (aether) \ {charTag(PG, "neutral")}:                  Smettila di essere un bicchiere riempito dagli altri: impara da Poggi, è fregatene.
         {charTag(PG, "neutral")}:                               Una vita di paragoni non è mai la propria vita.
+                {
+                - grimoire_thirdChar has grimWitchThirdCharFollowUp:
+                                                                Quando abbiamo parlato dopo la tua chiacchierata con {witch_actualName}, temevi non avresti più incontrato qualcuno pronto a volerti bene.
+                                                                E invece Rocco è lì, Petra pure, e anche il piccolo Armando.
+                    {
+                    - grimoire_thirdChar has grimThirdCharKitchenOne:
+                                                                Rocco che si è aperto con te in quel viaggio da Milano, e non con gli altri perché sapeva che tu non l'avresti giudicato.
+                    }  
+
+                                                                Vai già bene per come sei, {charNameThree}!
+                } 
                                                         
         -
              
@@ -656,6 +690,10 @@
                                                                 Sono trent'anni che invidi il Poggi perché se ne frega del giudizio altrui: prova a imparare da lui.
                                                                 O da tuo padre, che ha preferito proteggere chi era in difficoltà invece che fregarsene come il resto del mondo.
                                                                 O dalla persona che sei quando sei con Armando.
+                {
+                - grimoire_thirdChar has grimWitchThirdChar:
+                                                                Un po' come già ti disse {witch_actualName} quando ti parlò attraverso di me.
+                }                                                 
         -
 
     -> saluti
