@@ -700,23 +700,18 @@
 
     = saluti
 
-    {charTag(TheWitch, witch_state())}: Come vuole chiudere la lettera {player_name}?
+    {charTag(TheWitch, witch_state())}:                         Come vuole chiudere la lettera {player_name}?
 
-
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
+            + (fire) \ {charTag(PG, "neutral")}:                Spacca tutto <i>vecio</i>!
             
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
+            + (water) \ {charTag(PG, "neutral")}:               Ti voglio bene. 
                     
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
+            + (earth) \ {charTag(PG, "neutral")}:               Ho fiducia in te.
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+            + (air) \ {charTag(PG, "neutral")}:                 Conosci tutto ciò che ti serve per farcela, ne sono sicur{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
+            + (aether) \ {charTag(PG, "neutral")}:              Che la luna sia con te.
+   
             -
     ->->
 
