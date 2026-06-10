@@ -508,23 +508,43 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     //Fallimento come uomo: paragone con il Merlo e il Giova (denaro), con Rocco (famiglia), con Dario (giovinezza), con il Poggi (fregarsene dei giudizi altrui ed essere felice)    
 
-        {charTag(PG, "neutral")}:                               Frase
+        {charTag(PG, "neutral")}:                               Ti sei paragonato a tutti gli uomini che conosci: Merlo e Giova sono ricchi.
+                                                                Rocco ha una famiglia affiatata.
+                                                                Dario ha dalla sua la giovinezza.
+                                                                Il tuo migliore amico se ne è fregato degli altri, e si è fatto la vita che voleva.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
-            
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
-                    
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
-                                
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+        + (fire) \ {charTag(PG, "neutral")}:                    Il tempo non torna, ma puoi sempre prenderti cura di te: fai sport, datti da fare.
+        {charTag(PG, "neutral")}:                               Se ti metti in moto, la giovinezza di Dario varrà poco nulla.
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                                                                In cucina mi ha raccontato che ti paragonavano a Joe Manganiello.
+                                                                Non è l'età a dettare il successo, ma il lavoro che fai su di te.
+                } 
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
-            -
+        
+        + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, Che ha messo l'amicizia e la coscienza davanti al denaro?
+        {charTag(PG, "neutral")}:                               L'hai descritto come un fallito, per poi raccontarmi di qualcuno capace di mettere i propri valori e le persone a cui tiene davanti a tutto il resto.
+                                                                Ed è qualcosa che non svanisce come la bellezza, né che non si acquista coi soldi.   
+                
+        + (earth) \ {charTag(PG, "neutral")}:                   Chiedi consigli a Merlo e Giova per avere maggiore stabilità.
+        {charTag(PG, "neutral")}:                               Hai paura di perdere la casa dove stai.
+                                                                Di essere come tuo padre.
+                                                                A lavoro non ti rispettano.
+                                                                Questa cosa ti pesa, ma hai anche due persone di successo a cui chiedere una mano. 
+                            
+        + (air) \ {charTag(PG, "neutral")}:                     Ti sei mai chiesto se loro si fanno paragoni con te?
+        {charTag(PG, "neutral")}:                               Sei uscito in piedi da una relazione lunghissima.
+                                                                Sei un ottimo professionista.
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenThree:
+                                                                E mentre cucinavamo mi hai raccontato di come sei in grado di prenderti cura dei tuoi clienti.
+                }
+                                                                La vita degli altri sembra sempre migliore di quello che davvero è. 
+
+        + (aether) \ {charTag(PG, "neutral")}:                  Smettila di essere un bicchiere riempito dagli altri: vai di teamPoggi, è fregatene.
+        {charTag(PG, "neutral")}:                               Una vita di paragoni non è mai la propria vita.
+                                                        
+        -
              
 
             //Riduco di uno il livello di inchiostro
