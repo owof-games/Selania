@@ -386,7 +386,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+    //Fallimento relazionale: amici, famiglia, amore (ava, Dona, scopate, il padre, con sé stesso)
 
         
             {charTag(PG, "neutral")}:                           Frase
@@ -427,7 +427,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-        
+    //Fallimento personale: lavoro, rapporto con la comunità, col coinquilino, col futuro, con l'alcool    
 
             {charTag(PG, "neutral")}:                           Frase
 
@@ -467,6 +467,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+    //Fallimento col passato: sono come mio padre, ho tradito le promesse fatte a mia madre, sono il figlio del luogo in cui sono cresciuto, ho perso il poggi, dona etc.
 
         {charTag(PG, "neutral")}:                               Frase
 
@@ -505,7 +506,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-        
+    //Fallimento come uomo: paragone con il Merlo e il Giova (denaro), con Rocco (famiglia), con Dario (giovinezza), con il Poggi (fregarsene dei giudizi altrui ed essere felice)    
 
         {charTag(PG, "neutral")}:                               Frase
 
@@ -541,25 +542,64 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-        
+    //Partendo da "non sono abbastanza uomo per nulla, nemmeno per finire fino in fondo", si fanno proposte legate ai cinque possibili esiti
 
-        {charTag(PG, "neutral")}:                               Per questo ti scrivo...
-
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
+            {
+            - story_endedStories == ():
+            {charTag(TheWitch, witch_state())}:                 <i>{player_name} sta per utilizzare per la prima volta il potere dell'<b><i>epilogo</b></i>.
+                                                                <i>Quale epilogo proporrà?</i>
             
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
-                    
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
-                                
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+            - else:
+            {charTag(TheWitch, witch_state())}:                 <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?</i>   
+            } 
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
-            -
+            {
+            - thirdChar_InkLevel == ink_empty:
+            {charTag(PG, "neutral")}:                           Mi spiace non esser stat{player_pronoun has him:o|{player_pronoun has her:a|ə}} capace di creare un rapporto di fiducia con te.
+                                                                Spero sarai però disposto ad accogliere quello che sto per dirti.
+                                                                
+            } 
+
+        {charTag(PG, "neutral")}:                               Credo di aver compreso qual è il tuo blocco, cosa ti ha portato da noi la prima volta, e che continua a farti stare male.
+                                                                Mi hai reso il lavoro facile, perché me l'hai scritto esplicitamente: <i>Non sono abbastanza uomo per nulla, nemmeno per fallire fino in fondo.</i>.
+                                                                Per questo ti dico {charNameThree}:
+
+
+        + (fire) \ {charTag(PG, "neutral")}:                    Un uomo non è uno che non cade, ma uno che si rialza sempre: è giunto il momento di lottare.
+        {charTag(PG, "neutral")}:                               Fatti valere col tuo capo.
+                                                                Coi tuoi amici.
+                                                                Trova una persona che ti rispetti.
+                                                                Chiedi al mondo ciò che ti spetta.
+            
+        + (water) \ {charTag(PG, "neutral")}:                   Apri la porta alla vulnerabilità. Con la tua famiglia, con Rocco. Con te stesso.
+        {charTag(PG, "neutral")}:                               Cos'hai da perdere?
+                                                                Sei stato stoico e chiuso in te stesso per tutti questi anni, e ora sei qui che stai male.
+                                                                Cosa c'è di peggiore di ciò che provi ora?
+                                                                E soprattutto, cosa c'è di peggiore dell'affrontare tutto questo da solo?
+                                                                Perché non sei solo, hai la possibilità di scegliere.
+                
+        + (earth) \ {charTag(PG, "neutral")}:                   Hai bisogno di darti delle basi solide. Risolvi i problemi concreti, il resto viene da sé.
+        {charTag(PG, "neutral")}:                               Fatti rispettare dal capo, o trova un nuovo lavoro.
+                                                                Affronta la padrona di casa, o cerca una soluzione diversa.
+                                                                Che sia anche lo stare da tuo padre o tua sorella per il tempo di risparmiare a sufficienza per un posto che sia tuo.
+                                                                Una tana da cui ricominciare.
+                            
+        + (air) \ {charTag(PG, "neutral")}:                     Sii curioso: cerca persone nella tua situazione, condividi, scopri le loro soluzioni.
+        {charTag(PG, "neutral")}:                               È vissuta così tanta gente, non sarai certo il primo a provare ciò che senti ora.
+                                                                E qualcuno avrà dipinto o scritto o cantato quello che provi.
+                                                                E magari ha già anche tracciato una strada per farti stare meglio.
+                {
+                - grimoire_thirdChar has grimThirdCharKitchenTwo:
+                                                                Quando abbiamo cucinato assieme hai detto che il bello della relazione con Ava era che ti faceva ragionare.
+                                                                Riprendi quel piacere con altre persone come te.  
+                }                                                
+
+        + (aether) \ {charTag(PG, "neutral")}:                  Fallisci gloriosamente e sii ancora meno uomo, sii altro.
+        {charTag(PG, "neutral")}:                               O sii un altro tipo di uomo, perché quello che sei ora ti fa sentire solo, ti fa stare male.
+                                                                Sono trent'anni che invidi il Poggi perché se ne frega del giudizio altrui: prova a imparare da lui.
+                                                                O da tuo padre, che ha preferito proteggere chi era in difficoltà invece che fregarsene come il resto del mondo.
+                                                                O dalla persona che sei quando sei con Armando.
+        -
 
     -> saluti
 

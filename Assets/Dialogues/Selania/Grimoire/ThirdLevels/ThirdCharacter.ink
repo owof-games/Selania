@@ -302,19 +302,19 @@
             Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(thirdChar_ActualName)}.</b></i>
     }
     {
-        - thirdChar_ActualName has Triangolo:
-            
+    - thirdChar_ActualName has Forum:
         
-        - thirdChar_ActualName has Orchestra:
-.
-                
-        - thirdChar_ActualName has FlautoDolce:
-
     
-        - thirdChar_ActualName has Ocarina:
+    - thirdChar_ActualName has Canovaccio:
     
+            
+    - thirdChar_ActualName has Sigaro:
 
-        - thirdChar_ActualName has Violino:
+
+    - thirdChar_ActualName has Guantone:
+
+
+    - thirdChar_ActualName has Cerchio:
 
     }
 
@@ -323,16 +323,20 @@
             {charNameFive} ha detto a {player_name} che <>
 
             {
-                - thirdChar_ActualName has Triangolo:
-                    
-                - thirdChar_ActualName has Orchestra:
-
-                - thirdChar_ActualName has FlautoDolce: 
-                                
-                - thirdChar_ActualName has Ocarina:
-
-                - thirdChar_ActualName has Violino:
+            - thirdChar_ActualName has Forum:
             
+        
+            - thirdChar_ActualName has Canovaccio:
+    
+                    
+            - thirdChar_ActualName has Sigaro:
+
+        
+            - thirdChar_ActualName has Guantone:
+        
+
+            - thirdChar_ActualName has Cerchio:
+                
             }
     }
 
