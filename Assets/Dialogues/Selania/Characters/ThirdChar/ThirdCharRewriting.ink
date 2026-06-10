@@ -427,24 +427,35 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    //Fallimento personale: lavoro, rapporto con la comunità, col coinquilino, col futuro, con l'alcool    
 
-            {charTag(PG, "neutral")}:                           Frase
+            {charTag(PG, "neutral")}:                           Hai detto di essere un fallimento come persona: per il lavoro che fai, per i problemi che hai con la casa.
+                                                                Per il rapporto col tuo coinquilino, che hai odiato a lungo, e a cui ora temi di somigliare.
+                                                                C'è il giudizio delle persone che ti conoscono, su come hai trattato Donatella.
+                                                                E il rapporto col bere.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Cosa vuoi? Come puoi cambiare questa situazione?
-            {charTag(PG, "neutral")}:                           Commento
+            + (fire) \ {charTag(PG, "neutral")}:                Hai lottato per liberarti del rapporto con Ava, puoi battere anche l'alcool.
+            {charTag(PG, "neutral")}:                           Quando le cose non vanno come vogliamo si fa quel che si può.
+                                                                E può starci come soluzione temporanea, ma poi c'è il momento di tirarsi indietro le maniche e affrontare il problema.
             
-            + (water) \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-            {charTag(PG, "neutral")}:                           Commento    
+            + (water) \ {charTag(PG, "neutral")}:               Stai già scoprendo in Rocco un amico: perché non trovarne un altro nel tuo coinquilino?
+            {charTag(PG, "neutral")}:                           Una persona che ci somiglia può insegnarci molte cose.
+                                                                E ci si può aiutare assieme per uscire dalle situazioni che ci fanno stare male.
+                                                                O offrirci nuove prospettive.    
                     
-            + (earth) \ {charTag(PG, "neutral")}:               Cosa ti renderà più stabile? Da quali fondamenta parti?
-            {charTag(PG, "neutral")}:                           Commento   
+            + (earth) \ {charTag(PG, "neutral")}:               Ma ogni volta che mi hai parlato del tuo lavoro, ne hai parlato con amore.
+            {charTag(PG, "neutral")}:                           Il problema è economico, o le tensioni col capo.
+                                                                Ma queste sono cose che si possono risolvere, e che non tolgono valore alla persona che sei.
+                                                                E soprattutto: una persona <i>fa</i> il proprio lavoro, ma non <i>è</i> il proprio lavoro.
                                 
             + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
             {charTag(PG, "neutral")}:                           Commento      
 
-            + (aether) \ {charTag(PG, "neutral")}:              Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
-            {charTag(PG, "neutral")}:                           Commento        
+            + (aether) \ {charTag(PG, "neutral")}:              Ma io vedo qualcuno coraggioso che cerca di capire le persone che ha ferito.
+            {charTag(PG, "neutral")}:                           Lo stai facendo con Donatella, e l'hai fatto anche col Poggi.
+                                                                Le cose non sono andate come volevi.
+                                                                Ma non ti sei fermato.
+                                                                Lascia che gli altri pensino quel che gli pare.
+                                                                Tu stai già costruendoti un nuovo futuro.
             -
 
             //Riduco di uno il livello di inchiostro
