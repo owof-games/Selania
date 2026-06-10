@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,8 +8,14 @@ namespace Selania.Rework.Components.PrefabParticles.Editor
     [CustomEditor(typeof(PrefabParticles))]
     public class PrefabParticlesEditor : UnityEditor.Editor
     {
+        private SerializedProperty? _animatorParameterDescriptorsProperty;
+
+        private GUIStyle? _errorLabelGuiStyle;
+        private SerializedProperty? _maximumTimeBetweenSpawnsProperty;
+        private SerializedProperty? _minimumTimeBetweenSpawnsProperty;
         private PrefabParticles? _prefabParticles;
-        private SerializedObject? _serializedPrefabParticles;
+        private SerializedProperty? _prefabProperty;
+        private SerializedProperty? _prewarmTimeProperty;
         private SerializedProperty? _spawnAreaProperty;
 
         private void OnEnable()
@@ -19,21 +26,39 @@ namespace Selania.Rework.Components.PrefabParticles.Editor
                 throw new InvalidOperationException("Target of PrefabParticlesEditor is not a PrefabParticles");
             _prefabParticles = prefabParticles;
 
-            // create the serialized wrappers
-            _serializedPrefabParticles = new SerializedObject(_prefabParticles);
-            _spawnAreaProperty = _serializedPrefabParticles.FindProperty("spawnArea");
+            // create the serialized properties
+            _prefabProperty = serializedObject.FindProperty("prefab");
+            _prewarmTimeProperty = serializedObject.FindProperty("prewarmTime");
+            _spawnAreaProperty = serializedObject.FindProperty("spawnArea");
+            _minimumTimeBetweenSpawnsProperty = serializedObject.FindProperty("minimumTimeBetweenSpawns");
+            _maximumTimeBetweenSpawnsProperty = serializedObject.FindProperty("maximumTimeBetweenSpawns");
+            _animatorParameterDescriptorsProperty = serializedObject.FindProperty("animatorParameterDescriptors");
+
+            // set up styles
+            _errorLabelGuiStyle ??= new GUIStyle
+            {
+                wordWrap = true,
+                normal = new GUIStyleState
+                {
+                    textColor = Color.indianRed
+                }
+            };
         }
 
         private void OnDisable()
         {
+            _prefabProperty?.Dispose();
+            _prewarmTimeProperty?.Dispose();
             _spawnAreaProperty?.Dispose();
-            _serializedPrefabParticles?.Dispose();
+            _minimumTimeBetweenSpawnsProperty?.Dispose();
+            _maximumTimeBetweenSpawnsProperty?.Dispose();
+            _animatorParameterDescriptorsProperty?.Dispose();
         }
 
         private void OnSceneGUI()
         {
             // skip if for some reason it's not enabled
-            if (_prefabParticles == null || _spawnAreaProperty == null || _serializedPrefabParticles == null) return;
+            if (_prefabParticles == null || _spawnAreaProperty == null) return;
 
             // compute the coordinates of the four corners
             var center = _prefabParticles.transform.position;
@@ -92,7 +117,23 @@ namespace Selania.Rework.Components.PrefabParticles.Editor
             // if there was a change to apply, do it through serialized object
             if (!changed) return;
             _spawnAreaProperty.rectValue = new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
-            _serializedPrefabParticles.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
+        }
+
+        public override void OnInspectorGUI()
+        {
+            serializedObject.Update();
+            EditorGUILayout.PropertyField(_prefabProperty);
+            EditorGUILayout.PropertyField(_prewarmTimeProperty);
+            EditorGUILayout.PropertyField(_spawnAreaProperty);
+            EditorGUILayout.PropertyField(_minimumTimeBetweenSpawnsProperty);
+            EditorGUILayout.PropertyField(_maximumTimeBetweenSpawnsProperty);
+            EditorGUILayout.PropertyField(_animatorParameterDescriptorsProperty);
+
+            foreach (var validationError in _prefabParticles?.GetValidationErrors() ?? Enumerable.Empty<string>())
+                EditorGUILayout.LabelField(validationError, _errorLabelGuiStyle);
+
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }

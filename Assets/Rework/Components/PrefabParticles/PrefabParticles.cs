@@ -268,49 +268,56 @@ namespace Selania.Rework.Components.PrefabParticles
 
         private void OnValidate()
         {
-            if (prefab == null)
+            foreach (var validationError in GetValidationErrors())
             {
-                Debug.LogError("No prefab set for this PrefabParticles", this);
+                Debug.LogError(validationError);
+            }
+        }
+
+        internal IEnumerable<string> GetValidationErrors()
+        {
+            if (!prefab)
+            {
+                yield return "No prefab set for this PrefabParticles";
             }
             else
             {
                 var animator = prefab.gameObject.GetComponent<Animator>();
-                if (animator == null) Debug.LogError("No animator component in prefab");
+                if (!animator) yield return "No animator component in prefab";
             }
 
             if (minimumTimeBetweenSpawns <= 0f)
-                Debug.LogError("Minimum time between spawns must be greater than zero.", this);
+                yield return "Minimum time between spawns must be greater than zero.";
 
             if (maximumTimeBetweenSpawns <= 0f)
-                Debug.LogError("Maximum time between spawns must be greater than zero.", this);
+                yield return "Maximum time between spawns must be greater than zero.";
 
             if (maximumTimeBetweenSpawns < minimumTimeBetweenSpawns)
-                Debug.LogError("Maximum time between spawns must be greater than the minimum time.", this);
+                yield return "Maximum time between spawns must be greater than the minimum time.";
 
             var i = 1;
             foreach (var descriptor in animatorParameterDescriptors)
             {
                 if (string.IsNullOrEmpty(descriptor.animatorParameterName))
                 {
-                    Debug.LogError($"Animator variable {i} has no name", this);
+                    yield return $"Animator variable {i} has no name";
                 }
-                else if (prefab != null)
+                else if (prefab)
                 {
                     var animator = prefab.GetComponent<Animator>();
                     var parameter = animator.parameters.FirstOrDefault(parameter =>
                         parameter.name == descriptor.animatorParameterName);
                     if (parameter == null)
-                        Debug.LogError(
-                            $"Animator variable {i} has animator parameter {descriptor.animatorParameterName}, but that parameter does not exist in the animator of the prefab.",
-                            this);
+                        yield return
+                            $"Animator variable {i} has animator parameter {descriptor.animatorParameterName}, but that parameter does not exist in the animator of the prefab.";
                     else if (parameter.type != AnimatorControllerParameterType.Float)
-                        Debug.LogError(
-                            $"Animator variable {i} has animator parameter {descriptor.animatorParameterName}, but that parameter is of type {parameter.type} instead of being a float.",
-                            this);
+                        yield return
+                            $"Animator variable {i} has animator parameter {descriptor.animatorParameterName}, but that parameter is of type {parameter.type} instead of being a float.";
                 }
 
                 if (descriptor.maximumValue < descriptor.minimumValue)
-                    Debug.LogError($"Animator variable {i} has a maximum value less than the minimum value", this);
+                    yield return
+                        $"Animator variable {i} ({descriptor.animatorParameterName}) has a maximum value lower than the minimum value";
 
                 i++;
             }
