@@ -240,33 +240,100 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
+                    Ti odio.
+                    Odio te.
+                    Odio la gente che ho lasciato lì.                               
+                    {
+                        - grimoire_thirdChar has grimWitchThirdChar:
+                        Ma soprattutto odio {witch_actualName} e quei cazzo di pipponi che mi ha tirato e se non se ne vanno via dalla mia testa.
+                    }           
+                    E odio questo cane di merda che sta qui ad aspettare che gli dia una lettera.
+                    Da due giorni sta qui a fissarmi.
+                    DUE GIORNI!
+                    <s>Mannaggia al</s>
+                    -------------------
+                    Scusa, non è stato il modo migliore con cui partire.
+                    Mi sono fatto due passi, anche se le idee non sono molto più chiare di prima.
+                    Da quando sono tornato.
+                    Da quando sono tornato non riesco a fare andare bene le cose.
+                    Mi siete rimasti tutti sotto la testa come un rumore di fondo.
+                    Come una vocina di merda che mi fa guardare la mia vita come se non valesse un cazzo.
+                    E ho avuto una conversazione assurda con Marta, mia sorella.
+                    Dio, quanto è faticoso.
+                    -------------------
+                    Altra passeggiata.
+                    Non sto bene.
+                    Ok?
+                    Avevi ragione tu, aveva ragione la zia.
+                    Ora sarai felice di aver vinto.
+                    Ma non c'è molto da vincere, perché non so cosa farci di questa cosa.
+                    Vogliamo parlare tipo di come sono andate le cose tra me e te?
+                    {//Feedback relazione
+                        - grimoire_thirdChar hasnt grimThirdCharLetterOne:
+                            ~ third_char_relationshipFromLiveToLetters()
+                        - else:
+                        {thirdChar_relationshipFirstLetterStatus:
+                        - positive:
+                        Mi hai fatto incazzare tantissimo.
+                        Ma hai fatto bene, perché stavo in una situazione del cazzo, non me ne rendevo conto.
+                        E tu non ti sei mai fatt{player_pronoun has him:o|{player_pronoun has her:a|ə}} problemi a cercare di svegliarmi.
+                        Per questo ti odio un po' meno.
 
-        {charTag(Documents, "writer_thirdChar")}:               {charNameThree}: Lettere random note da parte della personaggia <>
-        {
-        - grimoire_thirdChar has grimWitchThirdChar:
-                                                                Ci dice che la conversazione con {witch_actualName} gli è rimasta in testa come una brutta malattia, quando è tornato a casa, e sta continuando a farsi domande.   
-        }
-        {
-        - grimoire_franco has grimFrancoThirdIngredientFailure:
-                                                                E che il consiglio di Franco era giusto, e che ha apprezzato <>
-                {
-                    - frog_third_char_gift == thirdChar_giftedObject:
-                        di aver ricevuto in dono {ingredientTranslator(thirdChar_giftedObject)}.
-                        Gli ha fatto capire che <>
-                            {
-                            - thirdChar_giftedObject == CardoAspinato:
-                                frase su Cardo Aspinato.
-                            - else:
-                                frase su Falsa Palude.    
-                            }
-                            Ma al momento non era pronto ad accogliere questa cosa.
-                            Forse manco ora, ma ci sto provando.
+                        - negative:
+                        Mi hai detto quello che mi aspettavo da te.
+                        Ma la zia ha detto che ero lì perché c'era qualcosa da superare.
+                        Dovevi mettermi alla prova {player_name}, invece boh, mi hai lasciato nel brodo che già mi faceva male.
 
-                    - else:
-                        l'aggiunta in cucina di {ingredientTranslator(thirdChar_giftedObject)}.
-                        In quel momento ha avuto in ricordo buono su suo padre, 
-                }                                                
-        }
+                        - neutral:
+                        È stata una situazione neutra, non so se mi capisci.
+                        Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
+                    }    
+                    }
+
+                    {//Commento dono e cucina
+                        - thirdChar_favouritesGifts ^ thirdChar_giftedObject != ():
+                        E quando mi hai regalato {ingredientTranslator(thirdChar_giftedObject)}, mi sono incazzato ma perché hai toccato un tasto dolente.
+                        {
+                        - thirdChar_giftedObject == CardoAspinato:
+                            Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
+                        - else:
+                            Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
+                        }
+                        Sul momento davvero ti ho odiato fino al midollo.
+                        Ma era la cosa giusta da ricevere.
+                        {frog_third_char_gift == thirdChar_giftedObject: Dì a Franchì che c'aveva ragione, povero.}
+
+                        - else:
+                        E quando in cucina hai aggiunto {ingredientTranslator(thirdChar_giftedObject)}.
+                        {
+                        - kitchen_thirdCharExtraIngredient == CardoAspinato:
+                            Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
+                        - kitchen_thirdCharExtraIngredient == FalsaPalude:
+                            Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
+                        - else:
+                            In quel momento mi hai portato alla memoria una cosa bella di papà.
+                            Di quando facevamo queste grosse passeggiate per liberare gli uccellini intrappolati nelle reti dei cacciatori.
+                            E mi diceva che il valore di un uomo non si misura da chi batte, ma da chi aiuta.  
+                        }
+                    } 
+                    E ti dico tutta questa roba perché mia sorella è preoccupata.
+                    E mi ha detto che se non mi do una sistemata, col cazzo che rivedo Armando.
+                    Dice che sono rabbioso, impulsivo, egoista.
+                    E ha paura che divento violento.
+                    C'ho bisogno del tuo aiuto, {player_name}.
+                    E per questo ti chiedo scusa.
+                    Per la sfuriata che ti ho tirato.
+                    E se per caso mi sono ostinato a usare i pronomi che c'avevo in testa io per te e non i tuoi.
+                    Questa è una cosa che mi ha detto Petra di dirti.
+                    Perché una sera le ho raccontato tutto.
+                    E mi ha creduto.
+                    Dice che fa parte di una congrega e.
+                    ---------------
+                    Ok scusa ma mi sono bloccato per il ridere.
+                    Perché una lesbica e strega è così ovvio {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                    Non ridevo così da giorni.
+                      
+    
         
 ->->
 

@@ -93,7 +93,7 @@
         -
             {
             - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               {player_name}, in bocca al lupo.
+            {charTag(FirstCharacter, "annoyed")}:               Fagli il culo {player_name}.
                 ~  change_entity_place(FirstCharacter)                          
             }
             {
@@ -320,7 +320,7 @@
                 {charTag(ThirdCharacter, "neutral")}:           Che uomo piccolo che sei, {player_name}.
                                                                 Piccolo, meschino, schifoso.
                                                                 Infido.
-                                                                Scommetto che non hai amici, vero?
+                                                                Scommetto che non c'hai amici, vero?
                                                                 Che tristezza che mi fai.
                                                                 Che tristezza.
 
@@ -345,7 +345,7 @@
                                                                 Tu te lo sei tenuto qui, l'hai torturato con le tue cazzate.
                                                                 E poi l'hai insultato per bene.
                 {charTag(ThirdCharacter, "angry")}:             E ci scommetto che se ti dico quello che ho davvero in mente ora ci provi pure a cancellarmi, vero?
-                                                                Che merda frustrata che sei.                                                
+                                                                Che merda frustrata che sei.                                              
                 }                                                                                                                                                                              
         {charTag(ThirdCharacter, "neutral")}:                   Bene.
                                                                 Ho fatto quello che la zia mi ha chiesto di fare, per cui ora me ne posso andare.
@@ -353,7 +353,7 @@
                                                                 Fanculo lei.
                                                                 Fanculo questo posto.
         {charTag(ThirdCharacter, "jester")}:                    Spero di leggere presto da qualche parte che questa ciofeca è bruciata, così non vi mettete a torturare qualcun altro di nuovo.
-                                                                E ti saluto col dito medio più grosso che tu abbia mai visto.
+                                                                E ti saluto col dito medio più grosso che hai mai visto.
                                                                 
         -> third_char_closing_storylet ->
         -> endingPNGstory(ThirdCharacter)

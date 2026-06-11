@@ -1358,8 +1358,11 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-
-        {charTag(ThirdCharacter, "angry")}:                                     Dio, non ce la fai proprio a non farti i cazzi miei, vero?
+        {charTag(ThirdCharacter, "angry")}:                                     Ma smettila di parlare come le influsceme su Instagram, dio cristo!
+                                                                                Ma ce l'hai una personalità tua {charNameOne}?!?!?
+        {charTag(ThirdCharacter, "bored")}:                                     <i>E il patriarcato di qua, e il patriarcato di là.</i>
+                                                                                Ma chi se ne fotte mannaggia al cazzo!                                  
+        {charTag(ThirdCharacter, "angry")}:                                     E poi non ce la fai proprio a non farti i cazzi miei, vero?
                 {
                 - thirdChar_firstCharRage == true:                              
                 {charTag(ThirdCharacter, "angry")}:                             Come quando prima stavo parlando a {player_name} di come mi ha trattato di merda Dona, e tu lì a farmi le pulci sull'età.

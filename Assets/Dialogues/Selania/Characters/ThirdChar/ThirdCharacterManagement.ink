@@ -74,6 +74,8 @@
     VAR thirdChar_relationshipStatus = neutral
     //Reaction: qui registriamo la reazione che verrà attivata coi sigilli
     VAR thirdChar_relationshipReaction = neutral
+    //Qui registro lo stato della relazione dopo la prima lettera, così che nel grimorio sia sempre stabile.
+    VAR thirdChar_relationshipFirstLetterStatus = neutral
 
 //Gestione dei doni
     //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
@@ -281,11 +283,26 @@
 {
     - thirdChar_relationshipIndicator <= relationshipIndicatorNegativeValue:
         ~ thirdChar_relationshipIndicator = relationshipIndicatorEnthusiasticValue
+        ~ thirdChar_relationshipFirstLetterStatus = positive
+
+            Mi hai fatto incazzare tantissimo.
+            Ma hai fatto bene, perché stavo in una situazione del cazzo, non me ne rendevo conto.
+            E tu non ti sei mai fatt{player_pronoun has him:o|{player_pronoun has her:a|ə}} problemi a cercare di svegliarmi.
+            Per questo ti odio un po' meno.
 
     - thirdChar_relationshipIndicator >= relationshipIndicatorPositiveValue:
         ~ thirdChar_relationshipIndicator = relationshipIndicatorNegativeValue
+        ~ thirdChar_relationshipFirstLetterStatus = negative
+
+            Mi hai detto quello che mi aspettavo da te.
+            Ma la zia ha detto che ero lì perché c'era qualcosa da superare.
+            Dovevi mettermi alla prova {player_name}, invece boh, mi hai lasciato nel brodo che già mi faceva male.
 
     - else:
         ~ thirdChar_relationshipIndicator = 0
+        ~ thirdChar_relationshipFirstLetterStatus = neutral
+
+            È stata una situazione neutra, non so se mi capisci.
+            Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
 }
 
