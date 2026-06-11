@@ -19,16 +19,23 @@ namespace Selania.Rework.Components.Museum.SaveSystem
 
         [Inject] internal ILogger<SaveSystemMuseumRoomController> Logger = null!;
 
+        [Inject] internal ISettingsSaveSystem SettingsSaveSystem = null!;
+
         [Inject] internal IStoryStateSerializer StoryStateSerializer = null!;
 
         private void Start()
         {
-            AsyncStart().Forget();
+            UpdateSaveButtons().Forget();
         }
 
         public void StartNewStory()
         {
             StartNewStoryAsync().Forget();
+        }
+
+        public void UpdateSaves()
+        {
+            UpdateSaveButtons().Forget();
         }
 
         private async UniTaskVoid StartNewStoryAsync()
@@ -43,10 +50,13 @@ namespace Selania.Rework.Components.Museum.SaveSystem
             }
         }
 
-        private async UniTaskVoid AsyncStart()
+        private async UniTaskVoid UpdateSaveButtons()
         {
             try
             {
+                // clear the current buttons
+                for (var i = 2; i < buttonsContainer.childCount; i++) Destroy(buttonsContainer.GetChild(i).gameObject);
+
                 // fill the save buttons
                 await foreach (var saveState in StoryStateSerializer.GetSaveStates())
                 {
@@ -54,7 +64,7 @@ namespace Selania.Rework.Components.Museum.SaveSystem
                     var saveButton = Instantiate(saveButtonPrefab, buttonsContainer);
                     var textMeshProUGUI = saveButton.GetComponentInChildren<TextMeshProUGUI>();
                     textMeshProUGUI.text =
-                        $"{saveState.Descriptor} - {saveState.RoomInkName} - {saveState.Timestamp:G}";
+                        $"{saveState.Descriptor} - {SettingsSaveSystem.GetRoomNameFromInkValue(saveState.RoomInkName)} - {saveState.Timestamp:G} - {saveState.NumRewritings}";
                     var button = saveButton.GetComponent<Button>();
                     button.onClick.AddListener(() => LoadSave(saveState));
                 }

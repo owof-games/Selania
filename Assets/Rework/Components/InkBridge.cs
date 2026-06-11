@@ -170,9 +170,10 @@ namespace Selania.Rework.Components
         /// <param name="minimumTimeBetweenAutomaticSaves">The minimum time between automatic saves.</param>
         /// <param name="minimumNumberOfRetainedSaves">When automatic saves start to get deleted, this is the minimum amount of save files that are always kept.</param>
         /// <param name="minimumTimeSpanOfSavesRetained">When automatic saves start to get deleted, this is the minimum time span between now and the oldest save file.</param>
+        /// <param name="inkListVariableNameWithCompletedStories">The name of the variable that contains the list of completed stories.</param>
         public void SetUp(ILogger<InkBridge> newLogger, bool disableSaves, string saveDirPrefix,
             TimeSpan minimumTimeBetweenAutomaticSaves, int minimumNumberOfRetainedSaves,
-            TimeSpan minimumTimeSpanOfSavesRetained)
+            TimeSpan minimumTimeSpanOfSavesRetained, string inkListVariableNameWithCompletedStories)
         {
             _logger = newLogger;
             _disableSaves = disableSaves;
@@ -180,6 +181,7 @@ namespace Selania.Rework.Components
             _minimumTimeBetweenAutomaticSaves = minimumTimeBetweenAutomaticSaves;
             _minimumNumberOfRetainedSaves = minimumNumberOfRetainedSaves;
             _minimumTimeSpanOfSavesRetained = minimumTimeSpanOfSavesRetained;
+            _inkListVariableNameWithCompletedStories = inkListVariableNameWithCompletedStories;
 
             Logger.ZLogInformation(
                 $"Initializing ink bridge: _disableSaves = {_disableSaves}, save dir prefix = {_saveDirPrefix}, minimum time between automatic saves = {_minimumTimeBetweenAutomaticSaves}, _minimumNumberOfRetainedSaves={_minimumNumberOfRetainedSaves}, _minimumTimeSpanOfSavesRetained={_minimumTimeSpanOfSavesRetained}");
@@ -746,6 +748,11 @@ namespace Selania.Rework.Components
             ///     See <see cref="IStoryStateSerializer.SaveState.RoomInkName" />.
             /// </summary>
             public required string roomInkName;
+
+            /// <summary>
+            ///     See <see cref="IStoryStateSerializer.SaveState.NumRewritings" />.
+            /// </summary>
+            public required int numRewritings;
         }
 
         /// <inheritdoc />
@@ -796,7 +803,7 @@ namespace Selania.Rework.Components
 
                 // map it to save states
                 yield return new IStoryStateSerializer.SaveState(descriptor, saveData.roomInkName,
-                    new DateTime(saveData.timestamp, DateTimeKind.Utc));
+                    new DateTime(saveData.timestamp, DateTimeKind.Utc), saveData.numRewritings);
             }
 
             yield break;
@@ -883,20 +890,33 @@ namespace Selania.Rework.Components
             // sanity checks and state updates
             if (_currentRoomName == null)
                 throw new InvalidOperationException("Trying to save, but _currentRoomName hasn't a value yet");
+            if (_inkListVariableNameWithCompletedStories == null)
+                throw new InvalidOperationException(
+                    "Trying to save, but _inkListVariableNameWithCompletedStories hasn't a value yet");
 
             // update the time for the next save time
             _minimumNextSaveTime = now + _minimumTimeBetweenAutomaticSaves;
 
+            // get the number of save files, the max save number, and the save descriptor
             var (numSaveFiles, maxSaveNumber) = GetSaveFileSystemEnumerable(GetFileSystemEntryNumber)
                 .Aggregate((0, 0), (accumulate, index) => (accumulate.Item1 + 1, Math.Max(accumulate.Item2, index)));
             var mySaveNumber = maxSaveNumber + 1;
             var descriptor = $"{_saveDirPrefix}{mySaveNumber:0000000}";
 
+            // compute the number of rewritings
+            var story = GetStory();
+            if (story.variablesState[_inkListVariableNameWithCompletedStories] is not InkList completedStoriesInkList)
+                throw new InvalidOperationException(
+                    $"Could not find variable {_inkListVariableNameWithCompletedStories} (_inkListVariableNameWithCompletedStories) in the story.");
+
+            var numRewritings = completedStoriesInkList.Count;
+
             // produce the serialized data
             var saveData = new SaveData
             {
                 timestamp = now.Ticks,
-                roomInkName = _currentRoomName
+                roomInkName = _currentRoomName,
+                numRewritings = numRewritings
             };
             var jsonSaveData = JsonUtility.ToJson(saveData);
             var jsonInkStoryState = GetStory().state.ToJson();
@@ -2607,6 +2627,7 @@ namespace Selania.Rework.Components
         private int _minimumNumberOfRetainedSaves;
         private TimeSpan _minimumTimeSpanOfSavesRetained;
         private bool _disableSaves;
+        private string? _inkListVariableNameWithCompletedStories;
 
         private void SetupSigilSupport()
         {

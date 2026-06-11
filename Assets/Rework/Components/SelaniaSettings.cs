@@ -522,13 +522,13 @@ namespace Selania.Rework.Components
             public string roomName = "";
         }
 
-        [SerializeField]
-        private InkRoomNameTranslation[] inkRoomNameTranslations = Array.Empty<InkRoomNameTranslation>();
-
         /// <inheritdoc />
         [field: SerializeField]
         [field: Tooltip("The name of the variable that contains the list of completed stories.")]
         public string InkListVariableNameWithCompletedStories { get; private set; } = "";
+
+        [SerializeField]
+        private InkRoomNameTranslation[] inkRoomNameTranslations = Array.Empty<InkRoomNameTranslation>();
 
         /// <inheritdoc />
         public string GetRoomNameFromInkValue(string inkValue)

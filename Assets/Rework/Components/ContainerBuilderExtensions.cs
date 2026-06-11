@@ -35,7 +35,8 @@ namespace Selania.Rework.Components
                         saveSystemSettings.SaveDirPrefix,
                         saveSystemSettings.MinimumTimeBetweenAutomaticSaves,
                         saveSystemSettings.MinimumNumberOfRetainedSaves,
-                        saveSystemSettings.MinimumTimeSpanOfSavesRetained);
+                        saveSystemSettings.MinimumTimeSpanOfSavesRetained,
+                        saveSystemSettings.InkListVariableNameWithCompletedStories);
                     loggerResolved = true;
                     return inkBridge;
                 }, Lifetime.Singleton)

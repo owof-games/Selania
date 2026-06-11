@@ -35,10 +35,15 @@ namespace Selania.Rework.Components.Museum.SaveSystem
 
             public string GetRoomNameFromInkValue(string inkValue)
             {
-                return "";
+                return inkValue switch
+                {
+                    "Room1" => "Stanza 1",
+                    "Room2" => "Stanza 2",
+                    _ => throw new ArgumentException($"Unknown room name: {inkValue}", nameof(inkValue))
+                };
             }
 
-            public string InkListVariableNameWithCompletedStories => "";
+            public string InkListVariableNameWithCompletedStories => "story_endedStories";
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - used by DI

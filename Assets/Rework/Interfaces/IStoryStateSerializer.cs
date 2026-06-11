@@ -32,6 +32,7 @@ namespace Selania.Rework.Interfaces
         /// <param name="Descriptor">Descriptor for this save state (unique identifier).</param>
         /// <param name="RoomInkName">Unique identifier of the room name, as known by Ink.</param>
         /// <param name="Timestamp">The time when this save state was created.</param>
-        public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp);
+        /// <param name="NumRewritings">The number of characters that have had a rewriting.</param>
+        public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp, int NumRewritings);
     }
 }
