@@ -503,6 +503,7 @@ MonoBehaviour:
     roomName: Luogo dei Libri
   - inkValue: Dump
     roomName: Discarica
+  <InkListVariableNameWithCompletedStories>k__BackingField: story_endedStories
   airGlyphs:
   - {fileID: 21300000, guid: 8660bf5d2a46db145a551e0a1e4e661b, type: 3}
   - {fileID: 21300000, guid: 1904ed240a4786540a014ef27fdc402c, type: 3}

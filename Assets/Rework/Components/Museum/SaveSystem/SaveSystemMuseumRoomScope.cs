@@ -37,6 +37,8 @@ namespace Selania.Rework.Components.Museum.SaveSystem
             {
                 return "";
             }
+
+            public string InkListVariableNameWithCompletedStories => "";
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - used by DI

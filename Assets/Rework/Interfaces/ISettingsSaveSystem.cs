@@ -28,6 +28,11 @@ namespace Selania.Rework.Interfaces
         public TimeSpan MinimumTimeSpanOfSavesRetained { get; }
 
         /// <summary>
+        ///     The name of the variable that contains the list of completed stories.
+        /// </summary>
+        public string InkListVariableNameWithCompletedStories { get; }
+
+        /// <summary>
         ///     Translate the name of an ink list item representing a room into the name of the room to display to the
         ///     player.
         /// </summary>
