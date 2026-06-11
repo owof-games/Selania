@@ -10,7 +10,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    
+    {charTag(SecondCharacter, "energy")}:               Franco mi ha dato un cappello giganteeeeeeeeeee!
+    {charTag(SecondCharacter, "neutral")}:              Ma non mi ci sta sulla faccia!
     {charTag(SecondCharacter, "neutral")}:              Quando cuciniamo? 
     {charTag(SecondCharacter, "energy")}:               Quando cuciniamo?!?
     {charTag(SecondCharacter, "emotional")}:            Cuciniamo ora?
