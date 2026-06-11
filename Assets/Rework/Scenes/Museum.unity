@@ -757,6 +757,10 @@ MonoBehaviour:
     title: Evolving Object
     description: "Mostra come utilizzare un oggetto che pu\xF2 cambiare immagine
       nel tempo."
+  - prefab: {fileID: 5900152936520379775, guid: 928f02a584d37db41b74c8a8ee3043d2, type: 3}
+    title: Prefab Particles
+    description: Mostra come utilizzare il componente Prefab Particles, che serve
+      per creare sistemi particellari con dei prefab come oggetti di base.
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0
