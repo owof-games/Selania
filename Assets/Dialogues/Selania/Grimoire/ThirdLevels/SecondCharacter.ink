@@ -320,7 +320,8 @@
                 - secondChar_ActualName has Grizzly:
                     "il nostro bambino" ha abbracciato il lato rabbioso, e l'ha fatto proprio. E lei non è una fan della rabbia.
                 
-                - secondChar_ActualName has Lupo: forse un giorno la nonna e il fratello di {charNameTwo} torneranno a vivere sotto il tetto dei genitori. E questo senso di famiglia così forte per lei sarebbe un finale davvero felice.
+                - secondChar_ActualName has Lupo: 
+                    forse un giorno la nonna e il fratello di {charNameTwo} torneranno a vivere sotto il tetto dei genitori. E questo senso di famiglia così forte per lei sarebbe un finale davvero felice.
                 
                 - secondChar_ActualName has Delfino:
                     è perplessa, perché {player_name} ha reso {charNameTwo} un giullare.
