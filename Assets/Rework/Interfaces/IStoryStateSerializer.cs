@@ -33,6 +33,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="RoomInkName">Unique identifier of the room name, as known by Ink.</param>
         /// <param name="Timestamp">The time when this save state was created.</param>
         /// <param name="NumRewritings">The number of characters that have had a rewriting.</param>
-        public record struct SaveState(string Descriptor, string RoomInkName, DateTime Timestamp, int NumRewritings);
+        /// <param name="NumPlayedSeconds">The number of seconds passed playing this session of the game.</param>
+        public record struct SaveState(
+            string Descriptor,
+            string RoomInkName,
+            DateTime Timestamp,
+            int NumRewritings,
+            int NumPlayedSeconds);
     }
 }

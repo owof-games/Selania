@@ -64,7 +64,7 @@ namespace Selania.Rework.Components.Museum.SaveSystem
                     var saveButton = Instantiate(saveButtonPrefab, buttonsContainer);
                     var textMeshProUGUI = saveButton.GetComponentInChildren<TextMeshProUGUI>();
                     textMeshProUGUI.text =
-                        $"{saveState.Descriptor} - {SettingsSaveSystem.GetRoomNameFromInkValue(saveState.RoomInkName)} - {saveState.Timestamp:G} - {saveState.NumRewritings}";
+                        $"{saveState.Descriptor} - {SettingsSaveSystem.GetRoomNameFromInkValue(saveState.RoomInkName)} - {saveState.Timestamp:G} - num rewritings: {saveState.NumRewritings} - num played seconds: {saveState.NumPlayedSeconds}";
                     var button = saveButton.GetComponent<Button>();
                     button.onClick.AddListener(() => LoadSave(saveState));
                 }

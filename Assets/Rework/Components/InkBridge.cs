@@ -753,7 +753,26 @@ namespace Selania.Rework.Components
             ///     See <see cref="IStoryStateSerializer.SaveState.NumRewritings" />.
             /// </summary>
             public required int numRewritings;
+
+            /// <summary>
+            ///     See <see cref="IStoryStateSerializer.SaveState.NumPlayedSeconds" />.
+            /// </summary>
+            public required int numPlayedSeconds;
         }
+
+        /// <summary>
+        ///     A timestamp that indicated when this session (new story or continue story) has begun.
+        /// </summary>
+        /// <seealso cref="_numPlayedSecondsAtTheBeginningOfCurrentSession" />
+        /// <seealso cref="StartStory" />
+        private DateTime _currentSessionStartTime;
+
+        /// <summary>
+        ///     The number of seconds passed since the beginning of this session (new story or continue story).
+        /// </summary>
+        /// <seealso cref="_currentSessionStartTime" />
+        /// <seealso cref="StartStory" />
+        private int _numPlayedSecondsAtTheBeginningOfCurrentSession;
 
         /// <inheritdoc />
         public async UniTask StartStory(string? descriptor)
@@ -763,17 +782,33 @@ namespace Selania.Rework.Components
             if (descriptor != null)
             {
                 Logger.ZLogInformation($"Loading save file {descriptor}.");
+
+                // load the ink story
                 var jsonPath = GetInkStoryStateFileAbsolutePath(descriptor);
-                _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
-                Logger.ZLogInformation($"Save file {descriptor} loaded.");
+
+                // load the number of played seconds
+                var savePath = GetSaveFileAbsolutePath(descriptor);
+                var saveJson = await File.ReadAllTextAsync(savePath);
+                var saveData = JsonUtility.FromJson<SaveData>(saveJson);
+                _numPlayedSecondsAtTheBeginningOfCurrentSession = saveData.numPlayedSeconds;
+
+                // update timestamps
+                _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
+                _currentSessionStartTime = DateTime.UtcNow;
+
+                Logger.ZLogInformation(
+                    $"Save file {descriptor} loaded, played {_numPlayedSecondsAtTheBeginningOfCurrentSession} up to now.");
+
                 LogAndNotifyCurrentState();
             }
             else
             {
                 // otherwise, just reset and continue to trigger a new story
                 story.ResetState();
+                _numPlayedSecondsAtTheBeginningOfCurrentSession = 0;
+                _currentSessionStartTime = DateTime.UtcNow;
                 _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
                 Logger.ZLogInformation($"New story started.");
                 Continue();
@@ -803,7 +838,8 @@ namespace Selania.Rework.Components
 
                 // map it to save states
                 yield return new IStoryStateSerializer.SaveState(descriptor, saveData.roomInkName,
-                    new DateTime(saveData.timestamp, DateTimeKind.Utc), saveData.numRewritings);
+                    new DateTime(saveData.timestamp, DateTimeKind.Utc), saveData.numRewritings,
+                    saveData.numPlayedSeconds);
             }
 
             yield break;
@@ -911,12 +947,17 @@ namespace Selania.Rework.Components
 
             var numRewritings = completedStoriesInkList.Count;
 
+            // compute the number of total played seconds for this session
+            var numPlayedSeconds = _numPlayedSecondsAtTheBeginningOfCurrentSession +
+                                   (int)(DateTime.UtcNow - _currentSessionStartTime).TotalSeconds;
+
             // produce the serialized data
             var saveData = new SaveData
             {
                 timestamp = now.Ticks,
                 roomInkName = _currentRoomName,
-                numRewritings = numRewritings
+                numRewritings = numRewritings,
+                numPlayedSeconds = numPlayedSeconds
             };
             var jsonSaveData = JsonUtility.ToJson(saveData);
             var jsonInkStoryState = GetStory().state.ToJson();
