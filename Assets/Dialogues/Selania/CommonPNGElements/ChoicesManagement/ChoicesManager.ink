@@ -845,7 +845,7 @@
                 ~ thirdChar_relationshipIndicator = thirdChar_aether - thirdChar_fire - thirdChar_earth - thirdChar_water - thirdChar_air     
 
         }
-    //Se siamo nella seconda fase:
+    //Se siamo nella seconda fase sono considerate positive le scelte acqua e spirito:
     - thirdChar_storyStatus == story_storyRemote:
         ~ thirdChar_relationshipIndicator = thirdChar_water + thirdChar_aether - thirdChar_earth - thirdChar_fire - thirdChar_air
 
