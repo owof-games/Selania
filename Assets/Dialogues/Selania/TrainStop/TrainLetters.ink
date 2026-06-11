@@ -1254,9 +1254,11 @@
 
         }
 
-    Grazie per quello che mi hai detto, ora ci ragiono un poco sopra e poi ti scrivo.
-        
-
+    Ti ringrazio per quello che mi hai detto, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+    Mi voglio prendere qualche giorno per rifletterci sopra.
+    A presto.
+    {charNameThree}.
+    
 ->->
 
 === function letters_fourthCharLetters_one()
