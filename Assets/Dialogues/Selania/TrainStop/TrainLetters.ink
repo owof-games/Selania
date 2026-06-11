@@ -1041,15 +1041,12 @@
         Che <i>serve</i> ma non <i>è</i>.
         Sono un fallimento, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
         Uno che dice cose da sborone per nasconderlo il suo cazzo di fallimento.
-        Guarda le mie relazioni: faccio così schifo con le donne che mi sono preso bene per un robot. La mia famiglia mi odia. Ho un gruppetto di conoscenti che se ne frega di me, mentre quello che era il mio migliore amico mi ha smollato perché dice che sono un pedofilo.
-        Sono un fallimento come persona: faccio un lavoro di merda, perderò la casa e non so che fare. Casa in cui vivo con una persona che ho odiato perché c'ho paura di essere come lui. La gente qui pensa che sia una merda per come ho trattato Dona. E dopo averle parlato l'ultima volta, non gli do torto.
-        E l'unica soluzione che trovo? Bere.
-        Ho tradito le promesse fatte a mia mamma, sono bloccato in questo posto di merda, e ho passato una vita a cercare di non essere un fallito come mio padre, per poi essere un fallito peggiore: niente casa, niente famiglia, lavoro di merda.
-        E sono uno schifo di uomo, {player_name}.
-        Uno schifo.
-        Non ho i soldi del Merlo o di Giova. Non ho costruito una famiglia come Rocco. E di certo non sono più giovane come Dario. Ma soprattutto non ho imparato un cazzo dal Poggi, che se ne frega del giudizio altrui e si è fatto la vita che voleva.
-        Come cazzo vado avanti {player_name}? Come?
-        Come faccio?
+        Sono un fallimento nelle relazioni: faccio così schifo con le donne che mi sono preso bene per un robot. La mia famiglia mi odia. Ho un gruppetto di conoscenti che se ne frega di me, mentre quello che era il mio migliore amico mi ha smollato perché dice che sono un pedofilo.
+        Sono un fallimento come persona: faccio un lavoro di merda, perderò la casa e non so che fare. Casa in cui vivo con una persona che ho odiato perché c'ho paura di essere come lui. La gente qui pensa che sia una merda per come ho trattato Dona. Ho tradito le promesse fatte a mia mamma, sono bloccato in questo posto di merda, e ho passato una vita a cercare di non essere un fallito come mio padre, per poi essere un fallito peggiore: niente casa, niente famiglia, lavoro di merda. E l'unica soluzione che trovo? Bere.
+        Sono un fallimento come uomo. Uno schifo. Non ho i soldi del Merlo o di Giova. Non ho costruito una famiglia come Rocco. E di certo non sono più giovane come Dario. Ma soprattutto non ho imparato un cazzo dal Poggi, che se ne frega del giudizio altrui e si è fatto la vita che voleva.
+        E dopo quello che mi hanno rinfacciato sia Dona che il Poggi, non posso più manco dirmi che sono "un bravo ragazzo", perché ho fatto delle cose davvero di merda.
+        Come cazzo vado avanti {player_name}?
+        Come?
         Non sono abbastanza uomo per nulla, nemmeno per fallire fino in fondo.
         Nemmeno per dirti queste cose in faccia quando eri lì ad aiutarmi.
         Tu, la zia.

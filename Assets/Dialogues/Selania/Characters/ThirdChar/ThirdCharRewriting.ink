@@ -389,8 +389,6 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
             
-
-
             {charTag(PG, "neutral")}:                           Sei partito dicendo che fai schifo con le donne, criticandoti per l'amore che hai provato per Ava.
                                                                 Credi che la tua famiglia ti detesti.
                                                                 Che i tuoi amici se ne fregano di te.
@@ -464,7 +462,8 @@
             {charTag(PG, "neutral")}:                           Hai detto di essere un fallimento come persona: per il lavoro che fai, per i problemi che hai con la casa.
                                                                 Per il rapporto col tuo coinquilino, che hai odiato a lungo, e a cui ora temi di somigliare.
                                                                 C'è il giudizio delle persone che ti conoscono, su come hai trattato Donatella.
-                                                                E il rapporto col bere.
+                                                                L'impossibilità di poterti definire ancora un <i>bravo ragazzo</i> ti toglie il fiato.
+                                                                E la soluzione che hai trovato: il bere.
 
             + (fire) \ {charTag(PG, "neutral")}:                Hai lottato per liberarti del rapporto con Ava, puoi battere anche l'alcool.
             {charTag(PG, "neutral")}:                           Quando le cose non vanno come vogliamo si fa quel che si può.
@@ -485,8 +484,11 @@
                                                                 Ma queste sono cose che si possono risolvere, e che non tolgono valore alla persona che sei.
                                                                 E soprattutto: una persona <i>fa</i> il proprio lavoro, ma non <i>è</i> il proprio lavoro.
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
-            {charTag(PG, "neutral")}:                           Commento      
+            + (air) \ {charTag(PG, "neutral")}:                 Non sei curioso di sapere cosa succede però se smetti di essere un <i>bravo ragazzo</i> e inizi ad essere una buona persona?
+            {charTag(PG, "neutral")}:                           Qualcuno che si muove secondo i suoi principi e non per fare una buona figura, come Petra.
+                                                                Qualcuno che cerca un modo per prendersi cura di chi ama, come Rocco.
+                                                                Qualcuno che fa la cosa giusta, anche quando ha un costo, come tuo padre.
+                                                                Qualcuno che affronta una conversazione difficile per poter capire la persona che ha amato e ferito, come hai fatto tu con Donatella.
 
             + (aether) \ {charTag(PG, "neutral")}:              Ma io vedo qualcuno coraggioso che cerca di capire le persone che ha ferito.
             {charTag(PG, "neutral")}:                           Lo stai facendo con Donatella, e l'hai fatto anche col Poggi.
