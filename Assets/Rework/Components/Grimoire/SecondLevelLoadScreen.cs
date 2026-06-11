@@ -6,6 +6,7 @@ using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 using ZLogger;
 
 namespace Selania.Rework.Components.Grimoire
@@ -29,6 +30,8 @@ namespace Selania.Rework.Components.Grimoire
         private DisposableBag _disposableBag;
 
         [Inject] internal ILogger<SecondLevelLoadScreen> Logger = null!;
+
+        [Inject] internal IObjectResolver ObjectResolver = null!;
 
         [Inject] internal IStoryStateSerializer StoryStateSerializer = null!;
 
@@ -74,7 +77,7 @@ namespace Selania.Rework.Components.Grimoire
                         // but instantiate the prefab in the main one
                         await UniTask.SwitchToMainThread();
                         var loadScreenButtonGameObject =
-                            Instantiate(loadScreenButtonPrefab, loadScreenButtonsContainer);
+                            ObjectResolver.Instantiate(loadScreenButtonPrefab, loadScreenButtonsContainer);
                         var loadScreenButton = loadScreenButtonGameObject.GetComponent<SecondLevelLoadScreenButton>();
                         loadScreenButton.SetContent(saveState);
                         _disposableBag.Add(loadScreenButton.Click.Subscribe(OnLoadScreenButtonClicked));
