@@ -67,7 +67,7 @@
                                                                 Come sono andate le cose con te?                                                                                                        
 
         //Funzione di preparazione alla riscrittura
-                ~  rewriting_prep(ThirdCharacter)
+            ~  rewriting_prep(ThirdCharacter)
 
         -> third_char_closing_storylet ->
         -> third_char_first_rewriting
@@ -371,8 +371,6 @@
                                                                 E {player_name} può procedere come {charNameThree} fosse qui con noi.
                                                                 Anche se dovremo aspettare per scoprire come {charNameThree} reagirà alla rilettura della sua storia da parte di {player_name}.
 
-            //Funzione di preparazione alla riscrittura
-                ~  rewriting_prep(ThirdCharacter)
             
             //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {

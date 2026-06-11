@@ -435,7 +435,7 @@
     
         - ThirdCharacter:
             ~ ink_status = thirdChar_maximum_inkLevel
-
+            
             //Eccezione per il grimorio, così che ci sia una separazione tra prima e seconda riscrittura.
             - thirdChar_inkFirstRewriting:
                 ~ ink_status = thirdChar_inkFirstRewriting    

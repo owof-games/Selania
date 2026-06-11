@@ -294,7 +294,7 @@
 
     {
         - thirdChar_inkFSecondRewriting_updated == true:
-            Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della seconda riscrittura è stato: <b>{fromInkToNumbers(thirdChar_inkFirstRewriting)}</b>.<>
+            Il valore di inchiostro che {player_name} ha raggiunto con {charNameThree} prima della seconda riscrittura è stato: <b>{fromInkToNumbers(ThirdCharacter)}</b>.<>
     }
 
     {

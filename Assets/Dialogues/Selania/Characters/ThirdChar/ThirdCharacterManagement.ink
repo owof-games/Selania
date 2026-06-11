@@ -144,7 +144,12 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-        
+
+    //Boccale passa da queste parti due volte. La prima dal vivo, con soli tre possibili esiti (empty, low, normal) e la seconda con tutti e cinque.
+    //La cosa che ci permette di fare un distinguo è lo stato della storia, se è story_storyStarted (primo check) o story_storyRemote (secondo check).
+    {
+    - thirdChar_storyStatus == story_storyStarted:
+
         {
             - thirdChar_InkLevel == ink_empty:
                 {//Blocco per reazioni e commenti legati al genere.
@@ -203,8 +208,45 @@
                                                                     Sono contento di andarmene, ma grazie a te stare qui è volata.
                 } 
         
-        }
+    - else:
+                                                                    Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                                                                    Una seconda volta.
+        {
+        - thirdChar_InkLevel == ink_empty:
+                                                                    Ci siamo fatti un intero campionato assieme.
+                                                                    Ma se saremo assieme la prossima annata, sicuro sicuro ti caccio in panchina.
+                                                                    Non penso tu abbia capito molto di me, {player_name}.
+                                                                    Uno su dieci per tutta la stagione, scusa.
 
+        - thirdChar_InkLevel == ink_low:
+                                                                    Mi sono sentito un po' come un portiere professionista con un difensore dilettante.
+                                                                    C'hai la passione, la voglia di fare, ma non leggi proprio il mio gioco {player_name}.
+                                                                    Una pagella da tre su dieci per la stagione, più per non abbatterti che per un effettivo merito.
+
+        - thirdChar_InkLevel == ink_normal:
+                                                                    È stato un po' come avere quel centrocampista che ogni tanto ti fa un assist a modo.
+                                                                    <i>Ogni tanto</i> non garantisce la vittoria, ma almeno non si fa una figura di merda tutto l'anno, vero?
+                                                                    E così siamo arrivati a metà classifica: né vincitori, né retrocessi.
+                                                                    Una pagella da sei su dieci, con un punto in più per l'affetto.
+
+        - thirdChar_InkLevel == ink_medium:
+                                                                    Mi hai messo alla prova {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, ma in modo buono.
+                                                                    Siamo state due punte che si sono fatte un po' di sana competizione a vicenda, ma sempre con rispetto.
+                                                                    E abbiamo fatto un campionato grandioso.
+                                                                    Niente scudetto, ma ogni partita è stata una gioia per i tifosi.
+                                                                    Pagella: otto su dieci, ma con la sicurezza che la perfezione è dietro l'angolo.
+        
+        - thirdChar_InkLevel == ink_high:
+                                                                    Che dire {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}?
+                                                                    Abbiamo vinto il campionato.
+                                                                    Ci hanno chiamati in nazionale.
+                                                                    Ci siamo presi le migliori prime pagine della Gazzetta.
+                                                                    Due eroi noi due.
+                                                                    Una pagella da dieci su dieci, e la sicurezza di aver trovato un{player_pronoun has him:o|{player_pronoun has her:a|ə}} nuov{player_pronoun has him:o|{player_pronoun has her:a|ə}} amic{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+
+        }
+    }
+    }
 
 
 
