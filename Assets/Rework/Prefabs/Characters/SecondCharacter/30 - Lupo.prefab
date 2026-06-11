@@ -738,7 +738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8235661390823931172, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: inkName
-      value: SecondCharacter
+      value: SecondCharacterLupo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
