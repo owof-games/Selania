@@ -26,5 +26,13 @@ namespace Selania.Rework.Interfaces
         ///     When automatic saves start to get deleted, this is the minimum time span between now and the oldest save file.
         /// </summary>
         public TimeSpan MinimumTimeSpanOfSavesRetained { get; }
+
+        /// <summary>
+        ///     Translate the name of an ink list item representing a room into the name of the room to display to the
+        ///     player.
+        /// </summary>
+        /// <param name="inkValue">The name of the ink list item.</param>
+        /// <returns>The name to present to the player.</returns>
+        public string GetRoomNameFromInkValue(string inkValue);
     }
 }

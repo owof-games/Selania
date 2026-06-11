@@ -482,6 +482,27 @@ MonoBehaviour:
   minimumTimeBetweenAutomaticSavesInSeconds: 300
   <MinimumNumberOfRetainedSaves>k__BackingField: 50
   minimumTimeBetweenSavesRetainedInDays: 7
+  inkRoomNameTranslations:
+  - inkValue: Forest
+    roomName: Foresta
+  - inkValue: TrainStop
+    roomName: Fermata del Treno
+  - inkValue: Greenhouse
+    roomName: Serra
+  - inkValue: Library
+    roomName: Biblioteca
+  - inkValue: Nest
+    roomName: Nido
+  - inkValue: Kitchen
+    roomName: Cucina
+  - inkValue: Pond
+    roomName: Lago
+  - inkValue: Bedroom
+    roomName: Camera da Letto
+  - inkValue: BookPlace
+    roomName: Luogo dei Libri
+  - inkValue: Dump
+    roomName: Discarica
   airGlyphs:
   - {fileID: 21300000, guid: 8660bf5d2a46db145a551e0a1e4e661b, type: 3}
   - {fileID: 21300000, guid: 1904ed240a4786540a014ef27fdc402c, type: 3}

@@ -515,6 +515,25 @@ namespace Selania.Rework.Components
         public TimeSpan MinimumTimeSpanOfSavesRetained =>
             TimeSpan.FromDays(minimumTimeBetweenSavesRetainedInDays);
 
+        [Serializable]
+        private class InkRoomNameTranslation
+        {
+            public string inkValue = "";
+            public string roomName = "";
+        }
+
+        [SerializeField]
+        private InkRoomNameTranslation[] inkRoomNameTranslations = Array.Empty<InkRoomNameTranslation>();
+
+        public string GetRoomNameFromInkValue(string inkValue)
+        {
+            var entry = inkRoomNameTranslations.FirstOrDefault(translation => translation.inkValue == inkValue);
+            return entry == null
+                ? throw new ArgumentException($"The ink value {inkValue} is not a valid ink room name.",
+                    nameof(inkValue))
+                : entry.roomName;
+        }
+
         #endregion
 
         #region sigils

@@ -32,6 +32,11 @@ namespace Selania.Rework.Components.Museum.SaveSystem
             public TimeSpan MinimumTimeBetweenAutomaticSaves { get; } = TimeSpan.FromSeconds(5);
             public int MinimumNumberOfRetainedSaves => 5;
             public TimeSpan MinimumTimeSpanOfSavesRetained { get; } = TimeSpan.FromSeconds(20);
+
+            public string GetRoomNameFromInkValue(string inkValue)
+            {
+                return "";
+            }
         }
 
         // ReSharper disable once ClassNeverInstantiated.Local - used by DI
