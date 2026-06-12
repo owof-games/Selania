@@ -1293,22 +1293,22 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
         
-        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} si chiede se si aspetta troppo dalle persone.
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} chiede a {player_name} come può farsi degli amici alla sua età.
                                                                 <i>Come aiutiamo {charNameThree}?
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Non hai pensato che forse il problema è l'opposto? E che a loro manca la curiosità di conoscerti per davvero?
 
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (earth)\ {charTag(PG, "neutral")}:                    Prenditi del tempo per te, e curati del tuo corpo: vai in palestra, mettiti in forma, scarica la tensione.
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:                     Vai a calcetto: è il tuo posto, l'ha creato il Poggi quando stavi male. Non lasciarlo al Merlo.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + (water)\ {charTag(PG, "neutral")}:                    Ti fidi di Rocco: scrivigli, uscite a bere assieme.
                 
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   Petra ti è già amica, e la sua rabbia ha qualcosa di importante da insegnarti. Chiedile di aiutarti a capire.
                 
         -
 

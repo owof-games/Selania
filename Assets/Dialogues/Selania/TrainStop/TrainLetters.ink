@@ -345,7 +345,7 @@
                     Non ridevo da giorni.
                     Scrivere comunque non è male.
                     Anche se mi fa male la mano.
-                    E bellina la cagnolina, ma voglio un po' farmi i cazzi miei, che questa sta qui anche se dormo cago o mi sego.
+                    E bellina la cagnolina, ma voglio un po' farmi i cazzi miei, che questa sta qui anche se dormo cago o mi {thirdChar_recordedPlayerPronoun has him:sego|ehm, prendo cura di me}.
                     Ti saluto con una domanda.
                     Come faccio capire a mia sorella che sono pronto a cambiare?
                     Ciao.
@@ -512,14 +512,14 @@
                     Le serate a calcetto son strane {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
                     Ho già saltato due incontri e non so nemmeno io dirti il perché, ma non c'ho la poesia proprio.
                     {letters_thirdCharLetterTwoChoice has aetherC: Forse c'ho in testa Marta che mi dice che sono degli idioti.}
-                    C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio c'ho in testa la voce del Merlo che ci chiama <i>froci</i>.
-                    E lui, il Rocco, non mi ha mai chiesto di uscire, non capisco.
-                    Mi manca però avere qualcosa con cui sfogarmi.
+                    C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio in testa mi arriva la voce del Merlo che ci chiama <i>froci</i>.
+                    E poi comunque non è che mi abbia mai detto di beccarci e bere, il Rocco.
+                    Merda. mi manca avere qualcosa con cui sfogarmi.
                     Forse anche per questo sto diventando più fumino.
                     L'altra sera c'erano questi tre ragazzetti, turisti, che hanno rotto i coglioni a Petra tutta sera.
                     Lei li ha mandati a fanculo due volte, fino a quando non le hanno toccato il culo, e lei è diventata di pietra.
                     Io non l'ho mai vista così lei e mi è saltata fuori una roba da fratello maggiore.
-                    Un momento ero a pulire un tavolo, quello dopo avevo spaccato il naso a uno di questi.
+                    Un momento ero a pulire un tavolo, quello dopo avevo spaccato il naso a uno degli idioti.
                     I veci del paese hanno applaudito.
                     Ma non il capo.
                     {letters_thirdCharLetterTwoChoice has earthC: Visto che già mi aveva rotto il cazzo per quanto bevo a lavoro.}
@@ -527,13 +527,12 @@
                     Petra mi ha difeso, per cui alla fine non è successo niente.
                     Ma è arrabbiata con me, {player_name}.
                     Dice che apprezza il pensiero ma non il gesto.
+                    Cioè, io ti difendo e tu ti incazzi?!?
                     E ora son qui che scalpito, anche la cagnolina sembra nervosa, continua a rigirarsi.
-                    Tra il Poggi che non mi caga più.
-                    Dona che mi ha smollato come un'insalata scaduta.
-                    Rocco che beve con me solo se abbiamo giocato a calcetto, c'ha senso?
-                    E Petra che la difendo e si incazza, io le persone non le capisco.
-                    Mi aspetto troppo dalle persone, {player_name}?
-                    Mi sta sfuggendo qualcosa?
+                    Come cazzo si fanno degli amici alla mia età, {player_name}?
+                    Dimmelo tu.
+                    Perché qualsiasi cosa faccio, qualcuno si incazza.
+                    Mi sa che non le capisco davvero le persone.
                     Ciao.
 
 ->->
