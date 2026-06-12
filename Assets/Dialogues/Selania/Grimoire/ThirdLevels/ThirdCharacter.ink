@@ -375,14 +375,14 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterTwo:
             <b>Seconda lettera</b>
-            C'ho messo un po' a risponderti, {player_name}.
+            C'ho messo un po' a risponderti, {player_name}. <>
             -> letters_thirdCharLetters_two ->
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterThree:
             <b>Terza lettera</b>
-            Ciao {player_name}! <>
+            Ma io non ti saluto mai all'inizio delle lettere?!? <>
             -> letters_thirdCharLetters_three -> 
     }
 

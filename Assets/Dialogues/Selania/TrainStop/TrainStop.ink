@@ -191,7 +191,7 @@
         -> third_char_closing_letters -> main
     
     = three
-    {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+    {charTag(Documents, "writer_thirdChar")}:      Ma io non ti saluto mai all'inizio delle lettere?!?
         -> letters_thirdCharLetters_three -> 
         -> third_char_letters_choices.three ->
         -> third_char_closing_letters -> main

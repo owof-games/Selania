@@ -456,7 +456,7 @@
                     Marta si è tutta sorpresa quando le ho chiesto secondo lei cosa dovrei fare.
                     La prima risposta è stata: smettila di uscire con quel coglione di Merloni e quell'altro idiota dei bitcoin (il Giova, ovvio).
                     Mi sono incazzato a bestia sul momento, ma mi son preso un grosso respiro e l'ho lasciata parlare.
-                    La seconda cosa che mi ha detto è che posso incanalare tutta questa energia in qualcosa di più utile, tipo aiutare a sistemare il giardino del nido che è un disastro (questa sarebbe più roba della zia mi sa) o fare volontariato per l'associazione per i vecchi qui in paese.
+                    La seconda cosa che mi ha detto è che posso incanalare tutta questa energia in qualcosa di più utile, tipo aiutare a sistemare il giardino dell'asilo nido che è un disastro (questa sarebbe più roba della zia mi sa) o fare volontariato per l'associazione per i vecchi qui in paese.
                     Che è quella dove ci va anche papà.
                     Quando gliel'ho fatto notare ha fatto spallucce.
                     Non sono convinto di nessuna delle sue idee, ma questa cosa del fare qualcosa di utile non è mica male!
@@ -546,28 +546,172 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+                    Non lo farò manco adesso.
+                    Uh, perché nelle lettere non ci posso mettere le emoji?
+                    Non ricordo se sei abbastanza vecchi{player_pronoun has him:o|{player_pronoun has her:a|ə}} da ricordati cose come 
+                    XD
+                    :D
+                    :P
+                    E poi c'è ovviamente <s>8====</s>
+                    ---------
+                    Petra mi ha appena tirato una sberla che mi ha fatto fare alla testa il giro del mondo.
+                    Già non ero così intelligente prima, figurarsi ora.
+                    Siamo qui a lavoro.
+                    Piove.
+                    E
+                    --------
+                    Ehi sono Petra!
+                    L'idea di scriverti.
+                    Oh.
+                    All'inizio ho pensato che questo idiota fosse completamente impazzito.
+                    Ma poi ho visto il cane, le tue lettere.
+                    Ma soprattutto.
+                    G.M. è ancora lì?
+                    Mi hanno parlato di lei nella congrega, ma sono anni che non sanno dove sia finita.
+                    Ed è la mia SUPEREROINA.
+                    La amo davvero la amo la 
+                    -------
+                    Ho dovuto strappargli la lettera dalle mani.
+                    Ora sono a casa perché Petra ha passato il resto della sera a chiedermi come sono arrivato lì e come sono tornato e se ricordo dei dettagli e il treno e di che colore era Franco e.
+                    Non lo ricordo, {player_name}.
+                    A volte mi dimentico di voi, penso sia un sogno.
+                    Poi arriva la cagnolina (che ora c'ha anche una cuccia e la sua ciotola al Baretto) e mi torna tutto in mente.
+                    Oppure ci pensano i risultati dei tuoi suggerimenti.
+                    Ti ho detto che non capisco le persone e ti ho chiesto come posso farmi amici alla mia età, <>
 
-        //Step uno: un feedback sulla lettera precedente
-        {
-            - third_char_letters_choices.two.air: 
-                Recap scelta aria
 
-            - third_char_letters_choices.two.fire: 
-                Recap scelta fuoco
+                        //Step uno: un feedback sulla lettera precedente
+                        {
+                            - third_char_letters_choices.two.air: 
+                                e tu mi hai detto che il problema in realtà sono loro, che devono provare a conoscermi meglio.
+                            
+                            - third_char_letters_choices.two.fire: 
+                                e tu mi hai ricordato che il calcetto il Poggi l'ha creato per farmi star bene, e devo rivendicarlo!
 
-            - third_char_letters_choices.two.earth: 
-                Recap scelta terra
+                            - third_char_letters_choices.two.earth: 
+                                e tu mi hai detto di prendermi del tempo per me per mettermi in forma e scaricare la tensione.
 
-            - third_char_letters_choices.two.aether: 
-                Recap scelta spirito
+                            - third_char_letters_choices.two.aether: 
+                                e tu mi hai detto che Petra è già mia amica, e che poteva aiutarmi a capire la sua rabbia.
 
-            - third_char_letters_choices.two.water: 
-                Recap scelta acqua
+                            - third_char_letters_choices.two.water: 
+                                e tu mi hai detto di scrivere a Rocco e di invitarlo a bere.
 
-        }
+                        }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+
+                        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+                        {grimoire_thirdChar hasnt grimThirdCharLetterThree:
+                        {
+                        - thirdChar_relationshipStatus == negative:
+                            {
+                            - third_char_letters_choices.two.fire:
+                                    Sono andato a muso duro dal Merlo, ma non perché me l'hai detto te.
+                                    Era una cosa che c'avevo già in testa da un po'.
+                                    E ancora non on così sicuro che mi devo fidare di te.
+                                ~   letters_thirdCharLetterThreeChoice += fireC
+                            
+                            - else:
+                                Mi spiace che ti chiedo consiglio e poi faccio di testa mia, ma ancora c'è un po' di fiducia che devi recuperare.
+                                ~   letters_thirdCharLetterThreeChoice += fireC
+                            }
+                        - else:
+                            E ho deciso di seguire il tuo consiglio.
+                            {
+                            - third_char_letters_choices.two.air: 
+                                ~   letters_thirdCharLetterThreeChoice += airC
+
+                            - third_char_letters_choices.two.fire: 
+                                ~   letters_thirdCharLetterThreeChoice += fireC
+
+                            - third_char_letters_choices.two.earth: 
+                                ~   letters_thirdCharLetterThreeChoice += earthC
+
+                            - third_char_letters_choices.two.aether: 
+                                ~   letters_thirdCharLetterThreeChoice += aetherC
+
+                            - third_char_letters_choices.two.water: 
+                                ~   letters_thirdCharLetterThreeChoice += waterC 
+                            }
+                        }       
+                        }
+
+                        //Step tre: gli esiti
+                        {letters_thirdCharLetterThreeChoice:
+                            - airC:
+                                    Credo proprio che c'hai ragione, sai? Non è che i miei amici cercano di capirmi poi tanto.
+                                    E manco la mia famiglia.
+                                    {letters_thirdCharLetterTwoChoice has airC: Per fortuna ci sono i ragazzi che sto conoscendo online|Però ho rispolverato Reddit, e ho iniziato a cercare gruppi di persone come me}.
+                                    Mi stanno aiutando a capire un bel po' di cose.
+                                    Ti ricordi che mi lamentavo delle app di dating ad esempio?
+                                    Ecco: è saltato fuori che il 20% degli uomini praticamente si prende tutto il mercato di figa che c'è sull'app.
+                                    {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: ci sono storie dell'orrore tra quelle pagine.
+                                    Ancora non so se raccontare loro di Dona o meno, ma credo che mi capirebbero.
+                                    Però.
+                                    Però la tensione con gli altri è ancora lì.
+                                    Non è che mi hai dato questo grande consiglio, {player_name}.
+
+                            - fireC:
+                                    Lunedì sera sono andato alla partitella, senza avvisarli.
+                                    C'erano il Merlo, il Giova, e anche Rocco.
+                                    Rocco mi ha salutato subito, tutto felice, e mi ha chiesto come andava.
+                                    Il Merlo mi ha fatto cenno con la testa e mi ha presentato 'sti due tizzi.
+                                    "Hanno preso il tuo posto mentre eri a farti le seghe mentali" mi ha detto.
+                                    {letters_thirdCharLetterTwoChoice has fireC: E Giova mi fa "Bella scenata di merda quella di tua sorella, cazzo!"}
+                                    A me 'sta roba di venire sostituito così mi ha fatto uscire di testa.
+                                    Li ho insultati tutti.
+                                    Rocco ha cercato di calmarmi e si è preso una gomitata sulla faccia che non gli volevo dare, giuro, ma un po' mi ha fatto piacere.
+                                    Sono andato al Baretto, che il lunedì è chiuso, e mi sono sfasciato come non capitava da una vita.
+                                    {letters_thirdCharLetterTwoChoice has earthC: Tanto, visto che il merda non mi ha dato l'aumento, me lo do da solo in birra.}
+                                    {third_char_letters_choices.two.aether or third_char_letters_choices.two.water: Ho ancora il mal di testa, e continuo a pensare che la tua idea era di gran lunga migliore.}
+                                    {third_char_letters_choices.two.fire:  Ho ancora il mal di testa, e continuo a pensare che non sia una grande idea ascoltarti, cazzo.}
+
+                            - earthC:
+                                    Isolarmi non è stata una cattiva idea.
+                                    {letters_thirdCharLetterTwoChoice has airC: Anche se continuo a seguire le conversazioni su Reddit.}
+                                    C'è qualcosa di piacevole nel fare le cose secondo la propria testa.
+                                    Andare in palestra...
+                                    Lo sto odiando.
+                                    {letters_thirdCharLetterTwoChoice has fireC: Con Marta me la sarei passata bene, ma col cazzo che la chiamo dopo la parte di merda al locale.}
+                                    Ma l'altra sera mi sono sbattuto una turista che ha passato la sera a dirmi che c'ho delle belle braccia.
+                                    Per cui serve a qualcosa.
+                                    O forse era solo ubriaca: non posso essere diventato più muscoloso in così poco tempo XD.
+                                    Però.
+                                    Però la tensione con gli altri è ancora lì.
+                                    Non è che mi hai dato questo grande consiglio, {player_name}.
+
+                            - aetherC:
+                                    È stata un'idea, mettiamola così.
+                                    Perché mi sono ritrovato dentro un pippone con i soliti termini che mi fanno cadere le palle come <i>patriarcato</i>, <i>maschio tossico</i>, <i>cisetero</i> e blah blah blah.
+                                    {letters_thirdCharLetterTwoChoice has waterC: Ora capisco come s'è sentita Marta quando le ho fatto il discorsone sull'Inter.}
+                                    Quello che ho capito?
+                                    È che è incazzata con me perché le ho tolto la possibilità di agire come voleva davanti a quei ragazzi (ma detto tra noi, era lì come una statua, non capisco cosa pensava di fare!).
+                                    E che l'ho fatto con il linguaggio della violenza, che è lo stesso linguaggio che hanno usato quei ragazzi.
+                                    E che questa cosa non gli ha insegnato nulla ai tipi perché non hanno capito che la cosa è sbagliata, ma che si fanno del male se qualcuno li vede.
+                                    E quindi la rifaranno.
+                                    Mi sembra di sentire {charNameOne}.
+                                    Però un po' (non troppo, un po') ho capito.
+                                    E poi Petra mi vuole più bene credo. 
+                                    Mi ha anche invitato a casa sua a giocare a (chiedile cosa prima di inviare la lettera!)
+                                    {letters_thirdCharLetterTwoChoice has waterC: Sta diventando un po' come con Marta l'altra volta: parlare alle persone non è così male.}
+                                    {letters_thirdCharLetterTwoChoice has aetherC: Magari gli posso proporre quella roba dell'associazione che diceva mia sorella.}
+
+                            - waterC:
+                                    Mi ha risposto subito il vecio, e mi ha detto che era contento di sentirmi e se torno a giocare perché sennò finisce sul giornale perché ha ucciso il Merlo.
+                                    Quando ci siamo visti mi ha detto una cosa che m'ha fatto male: il Merlo ha portato due nuove persone, per sostituirmi.
+                                    Ha già deciso che non ci vado più.
+                                    Quella roba era mia, {player_name}, mia e del Poggi.
+                                    L'ha fatta per me perché stavo male, porco il XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (mettici la bestemmia che vuoi).
+                                    Ma Rocco mi ha detto che si sta rompendo il cazzo di loro, e che se mi va si può fare qualcosa di diverso assieme, tipo andare a correre assieme a suo figlio, o giocare a D&D.
+                                    Sul momento ho riso, ma lui si è fatto serissimo e mi ha detto che ci gioca con alcuni amici da una vita, ed è una cosa che lo fa stare bene.
+                                    {letters_thirdCharLetterTwoChoice has airC: E chi sono io per giudicarlo, dopo il mio periodo col Poggi e Yu-Gi-Oh?}
+                                    Mi era mancato vederlo, cazzo.
+                                    {letters_thirdCharLetterTwoChoice has waterC: Sta diventando un po' come con Marta l'altra volta: parlare alle persone non è così male.}
+                                    {letters_thirdCharLetterTwoChoice has aetherC: Magari gli posso proporre quella roba dell'associazione che diceva mia sorella.}
+
+                        }
+
+         //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
         {grimoire_thirdChar hasnt grimThirdCharLetterThree:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
@@ -596,64 +740,6 @@
             //E disattivo la variabile che blocca le varie reazioni.
             ~    ThirdCharacterLetters = false          
         }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
-        {grimoire_thirdChar hasnt grimThirdCharLetterThree:
-        {
-        - thirdChar_relationshipStatus == negative:
-            {
-            - third_char_letters_choices.two.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
-                ~   letters_thirdCharLetterThreeChoice += fireC
-            
-            - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
-                ~   letters_thirdCharLetterThreeChoice += fireC
-            }
-        - else:
-            E ho deciso di seguire il tuo consiglio.
-            {
-            - third_char_letters_choices.two.air: 
-                ~   letters_thirdCharLetterThreeChoice += airC
-
-            - third_char_letters_choices.two.fire: 
-                ~   letters_thirdCharLetterThreeChoice += fireC
-
-            - third_char_letters_choices.two.earth: 
-                ~   letters_thirdCharLetterThreeChoice += earthC
-
-            - third_char_letters_choices.two.aether: 
-                ~   letters_thirdCharLetterThreeChoice += aetherC
-
-            - third_char_letters_choices.two.water: 
-                ~   letters_thirdCharLetterThreeChoice += waterC 
-            }
-        }       
-        }
-
-        //Step quattro: gli esiti
-        {letters_thirdCharLetterThreeChoice:
-            - airC:
-            Evento aria.
-
-            - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.two.aether or third_char_letters_choices.two.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.two.fire:  Non ti avrei dovuto ascoltare.}
-
-            - earthC:
-            Evento terra.
-
-
-            - aetherC:
-            Evento spirito.
-
-
-            - waterC:
-            Evento acqua.
-
-        }
-
         //Step cinque: nuova situazione, a cui poi risponderemo.
         Nuovo evento blah blah blah.
 ->->
