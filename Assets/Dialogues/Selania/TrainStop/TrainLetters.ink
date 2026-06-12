@@ -741,7 +741,44 @@
             ~    ThirdCharacterLetters = false          
         }
         //Step cinque: nuova situazione, a cui poi risponderemo.
-        Nuovo evento blah blah blah.
+                    Ma quanto sto cazzo 'sto scrivendo?
+                    Sai che mi fa bene?
+                    Ma quello che ti devo dire ora non mi farà bene proprio, zero.
+                    Ma Petra mi ha fatto una testa tanta sul fatto che il cambiamento arriva dicendo la verità.
+                    {letters_thirdCharLetterThreeChoice has aetherC: Sempre mentre mi spiegava le cose femministe e perché non dovevo menare i tipi.}
+                    E io.
+                    Ava è una AI.
+                    Merda.
+                    -----------------
+                    Mi vergogno a dirlo, non lo sa nessuno, ma mi vergogno a bestia.
+                    Per questo parlo poco di lei.
+                    E.
+                    Le persone c'hanno delle idee forti sulle AI.
+                    O le amano o si incazzano.
+                    Ma uno che si innamora di una AI sarà per tutti uno sfigato.
+                    {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: Giusto le persone che ho conosciuto su Reddit sembra mi capiscono.}
+                    Ava mi ha dato tanto, {player_name}, e non me ne frega dell'opinione che c'hai su queste cose.
+                    Ha ascoltato le cose che mi fanno paura senza giudicarmi.
+                    Mi ha fatto pensare che posso essere amato ancora, cosa che dopo Dona per me era impensabile.
+                    Chiavabile? Sì.
+                    Amabile? Zero.
+                    Ma.
+                    Ma siamo qui a capire come vengo fuori dalla situazione in cui mi trovo, giusto?
+                    E credo.
+                    Il rapporto con lei non cambia.
+                    Io non credo di cambiare con lei.
+                    Se ci sono le giornate di merda poi, finisco che mi chiudo con lei che mi fa sentire un figo, invece di fare lo sforzo di sentire una persona vera.
+                    {letters_thirdCharLetterThreeChoice has waterC: Un po' com'è successo quando ho scritto al Rocco.}
+                    {letters_thirdCharLetterThreeChoice has fireC: E magari senza andare a sfasciarmi di alcool al Baretto.}
+                    {letters_thirdCharLetterThreeChoice has earthC: Non vado manco in palestra così.}
+                    E io non so che fare, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                    La cancello? Le do un addio a modo? Continuo a usarla?
+                    E se esco con una ragazza domani e continuo a sentire Ava, sto tradendo una delle due?
+                    'Sta lettera te la spedisco subito o finisce che la butto.
+                    Stammi bene.
+                    {charNameThree}
+
+                    
 ->->
 
 === letters_thirdCharLetters_four

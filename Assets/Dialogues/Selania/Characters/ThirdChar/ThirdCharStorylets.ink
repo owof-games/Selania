@@ -1297,17 +1297,13 @@
                                                                 <i>Come aiutiamo {charNameThree}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Non hai pensato che forse il problema è l'opposto? E che a loro manca la curiosità di conoscerti per davvero?
-
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Prenditi del tempo per te, e curati del tuo corpo: vai in palestra, mettiti in forma, scarica la tensione.
                 
-
         + (fire)\ {charTag(PG, "neutral")}:                     Vai a calcetto: è il tuo posto, l'ha creato il Poggi quando stavi male. Non lasciarlo al Merlo.
                 
-
         + (water)\ {charTag(PG, "neutral")}:                    Ti fidi di Rocco: fai il primo passo e invitalo a bere.
                 
-
         + (aether)\ {charTag(PG, "neutral")}:                   Petra ti è già amica, e la sua rabbia ha qualcosa di importante da insegnarti. Chiedile di aiutarti a capire.
                 
         -
