@@ -1317,7 +1317,31 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        {charTag(TheWitch, witch_state())}:                     Che consiglio vorrebbe dare {player_name} a {charNameThree}?
+                TODO: Commento diverso da parte della strega su GM a seconda dello stato della storia
+                {//Storylet temporaneo, da sistemare poi a personaggia scritta.
+                - fourthChar_storyStatus == story_storyNotStarted && grimoire_fourthChar hasnt grimFourthCharThree:
+                {charTag(TheWitch, witch_state())}:             <i>G.M.</i>
+                                                                <i>Che cose strane fa la magia.</i>
+                                                                <i>Non sentivamo quel nome da così tanto.</i>
+                                                                <i>E ora è ovunque.</i>
+                
+                - fourthChar_storyStatus == story_storyNotStarted && grimoire_fourthChar has grimFourthCharThree:
+                {charTag(TheWitch, witch_state())}:             <i>G.M.</i>
+                                                                <i>Il nome in codice di {charNameFour}</i>
+                                                                <i>Chissà se {charNameFour} sarebbe felice di sapere che qualcuno la considera una supereroina</i>
+                
+                - else:
+                {charTag(TheWitch, witch_state())}:             <i>G.M.</i>
+                                                                <i>Da quanto non sentivamo quel nome?</i>
+                                                                <i>Siamo così felici che il suo ricordo sia vivo.</i>
+                                                                <i>Anche se.</i>
+                                                                <i>Supereroina.</i>
+                }
+
+        {charTag(TheWitch, witch_state())}:                     <i>Chiediamo a {player_name} di non scrivere nulla a Petra per ora.</i>
+                                                                <i>Fino a quando non sappiamo quali saranno le conseguenze di questa situazione.</i>
+                                                                <i>Ma nel mentre {player_name} può dare un consiglio a {charNameThree}.</i>
+                                                                <i>Una prospettiva sulla relazione tra {charNameThree} e l'entità digitale chiamata Ava.</i>
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 

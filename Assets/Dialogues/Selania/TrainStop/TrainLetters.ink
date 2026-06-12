@@ -777,7 +777,6 @@
                     'Sta lettera te la spedisco subito o finisce che la butto.
                     Stammi bene.
                     {charNameThree}
-
                     
 ->->
 
