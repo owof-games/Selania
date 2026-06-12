@@ -240,7 +240,6 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
         
-                    Ti odio.
                     Odio te.
                     Odio la gente che ho lasciato lì.                               
                     {
@@ -248,92 +247,109 @@
                         Ma soprattutto odio {witch_actualName} e quei cazzo di pipponi che mi ha tirato e se non se ne vanno via dalla mia testa.
                     }           
                     E odio questo cane di merda che sta qui ad aspettare che gli dia una lettera.
-                    Da due giorni sta qui a fissarmi.
-                    DUE GIORNI!
+                    Sono due giorni che mi fissa.
+                    DUE CAZZO DI GIORNI!
                     <s>Mannaggia al</s>
                     -------------------
-                    Scusa, non è stato il modo migliore con cui partire.
                     Mi sono fatto due passi, anche se le idee non sono molto più chiare di prima.
-                    Da quando sono tornato.
+                    Da quando sono tornato dormo di merda.
                     Da quando sono tornato non riesco a fare andare bene le cose.
-                    Mi siete rimasti tutti sotto la testa come un rumore di fondo.
-                    Come una vocina di merda che mi fa guardare la mia vita come se non valesse un cazzo.
+                    Da quando sono tornato non riesco a pensare bene, cazzo.
+                    Mi siete rimasti tutti nella testa, una vocina di merda che mi fa guardare la mia vita come se non valesse un cazzo.
                     E ho avuto una conversazione assurda con Marta, mia sorella.
-                    Dio, quanto è faticoso.
+                    Quella stronz
                     -------------------
                     Altra passeggiata.
                     Non sto bene.
                     Ok?
                     Avevi ragione tu, aveva ragione la zia.
-                    Ora sarai felice di aver vinto.
-                    Ma non c'è molto da vincere, perché non so cosa farci di questa cosa.
-                    Vogliamo parlare tipo di come sono andate le cose tra me e te?
+                    Avete vinto.
+                    Content{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}?!?!
+                    Come ci si sente, {player_name}?
+                    Perché io non ne ho idea.
+                    Non ne ho più idea.
+                    -------------------
+                    Ormai il cane è qui da una settimana, mi ci sono affezionato.
+                    Ma quanto è testarda?
+                    Petra mi ha detto che ci sono dei momenti nelle relazioni in cui uno deve fare il punto per capire da dove vogliamo partire.
+                    Vogliamo parlare allora di come sono andate le cose tra me e te?
                     {//Feedback relazione
                         - grimoire_thirdChar hasnt grimThirdCharLetterOne:
                             ~ third_char_relationshipFromLiveToLetters()
+                        
                         - else:
-                        {thirdChar_relationshipFirstLetterStatus:
-                        - positive:
-                        Mi hai fatto incazzare tantissimo.
-                        Ma hai fatto bene, perché stavo in una situazione del cazzo, non me ne rendevo conto.
-                        E tu non ti sei mai fatt{player_pronoun has him:o|{player_pronoun has her:a|ə}} problemi a cercare di svegliarmi.
-                        Per questo ti odio un po' meno.
+                            {thirdChar_relationshipFirstLetterStatus:
+                                - positive:
+                                Mi hai fatto incazzare tantissimo.
+                                Ma hai fatto bene, perché stavo in una situazione del cazzo, non me ne rendevo conto.
+                                E tu non ti sei mai fatt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} problemi a cercare di svegliarmi.
+                                Per questo ti odio un po' meno.
 
-                        - negative:
-                        Mi hai detto quello che mi aspettavo da te.
-                        Ma la zia ha detto che ero lì perché c'era qualcosa da superare.
-                        Dovevi mettermi alla prova {player_name}, invece boh, mi hai lasciato nel brodo che già mi faceva male.
+                                - negative:
+                                Mi hai detto quello che mi aspettavo da te.
+                                Ma la zia ha detto che ero lì perché c'era qualcosa da superare.
+                                Dovevi mettermi alla prova {player_name}, invece boh, mi hai lasciato nel brodo che già mi faceva male.
 
-                        - neutral:
-                        È stata una situazione neutra, non so se mi capisci.
-                        Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
-                    }    
+                                - neutral:
+                                È stata una situazione neutra, non so se mi capisci.
+                                Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
+                            }
                     }
 
                     {//Commento dono e cucina
                         - thirdChar_favouritesGifts ^ thirdChar_giftedObject != ():
-                        E quando mi hai regalato {ingredientTranslator(thirdChar_giftedObject)}, mi sono incazzato ma perché hai toccato un tasto dolente.
-                        {
-                        - thirdChar_giftedObject == CardoAspinato:
-                            Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
-                        - else:
-                            Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
-                        }
-                        Sul momento davvero ti ho odiato fino al midollo.
-                        Ma era la cosa giusta da ricevere.
-                        {frog_third_char_gift == thirdChar_giftedObject: Dì a Franchì che c'aveva ragione, povero.}
+                            E quando mi hai regalato {ingredientTranslator(thirdChar_giftedObject)}, mi sono incazzato ma perché hai toccato un tasto dolente.
+                                {
+                                - thirdChar_giftedObject == CardoAspinato:
+                                    Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
+                                
+                                - else:
+                                    Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
+                                }
+                            Sul momento davvero ti ho odiato fino al midollo.
+                            Ma era la cosa giusta da ricevere.
+                            {frog_third_char_gift == thirdChar_giftedObject: Dì a Franchì che c'aveva ragione, povero.}
 
-                        - else:
-                        E quando in cucina hai aggiunto {ingredientTranslator(thirdChar_giftedObject)}.
-                        {
-                        - kitchen_thirdCharExtraIngredient == CardoAspinato:
-                            Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
-                        - kitchen_thirdCharExtraIngredient == FalsaPalude:
-                            Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
-                        - else:
-                            In quel momento mi hai portato alla memoria una cosa bella di papà.
-                            Di quando facevamo queste grosse passeggiate per liberare gli uccellini intrappolati nelle reti dei cacciatori.
-                            E mi diceva che il valore di un uomo non si misura da chi batte, ma da chi aiuta.  
-                        }
+                            - thirdChar_favouritesGifts ^ kitchen_thirdCharExtraIngredient != ():
+                            E quando in cucina hai aggiunto {ingredientTranslator(kitchen_thirdCharExtraIngredient)}.
+                                {
+                                - kitchen_thirdCharExtraIngredient == CardoAspinato:
+                                    Quella cazzo di pianta, letteralmente, mi ha fatto pensare al peso che c'ho addosso del dover far sempre il tipo duro e che tira a diritto.
+
+                                - kitchen_thirdCharExtraIngredient == FalsaPalude:
+                                    Cazzo, quella pianta mi ha tipo smontato il mondo, perché mi ha fatto dire "Idiota, non c'è un rapporto paritario coi tuoi amici, non ce l'hai con nessuno, sei sempre lì a lottare per non si sa manco cosa."
+
+                                - else:
+                                    In quel momento mi hai portato alla memoria una cosa bella di papà.
+                                    Di quando facevamo queste lunghe passeggiate per liberare gli uccellini intrappolati nelle reti dei cacciatori.
+                                    E mi diceva che il valore di un uomo non si misura da chi batte, ma da chi aiuta.  
+                                }
                     } 
                     E ti dico tutta questa roba perché mia sorella è preoccupata.
                     E mi ha detto che se non mi do una sistemata, col cazzo che rivedo Armando.
                     Dice che sono rabbioso, impulsivo, egoista.
                     E ha paura che divento violento.
-                    C'ho bisogno del tuo aiuto, {player_name}.
+                    C'ho bisogno di aiuto, {player_name}.
+                    Del tuo aiuto.
                     E per questo ti chiedo scusa.
                     Per la sfuriata che ti ho tirato.
                     E se per caso mi sono ostinato a usare i pronomi che c'avevo in testa io per te e non i tuoi.
+                    Quindi poi dimmi quali sono i tuoi pronomi e mi comporto bene, promesso.
                     Questa è una cosa che mi ha detto Petra di dirti.
-                    Perché una sera le ho raccontato tutto.
+                    C'ho raccontato tutto a Petra, una sera.
                     E mi ha creduto.
-                    Dice che fa parte di una congrega e.
+                    Dice che fa parte di una congrega e
                     ---------------
                     Ok scusa ma mi sono bloccato per il ridere.
-                    Perché una lesbica e strega è così ovvio {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
-                    Non ridevo così da giorni.
-                      
-    
+                    Perché una che è lesbica e strega è una cosa così OVVIA {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|campionə}}!
+                    Non ridevo da giorni.
+                    Scrivere comunque non è male.
+                    Anche se mi fa male la mano.
+                    E bellina la cagnolina, ma voglio un po' farmi i cazzi miei, che questa sta qui anche se dormo cago o mi sego.
+                    Ti saluto con una domanda.
+                    Come faccio capire a mia sorella che sono pronto a cambiare?
+                    Ciao.
+                    {charNameThree}
         
 ->->
 
@@ -436,7 +452,8 @@
 
             - fireC:
             Evento fuoco.
-
+            {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.one.fire:  Non ti avrei dovuto ascoltare.}
 
             - earthC:
             Evento terra.
@@ -559,7 +576,8 @@
 
             - fireC:
             Evento fuoco.
-
+            {third_char_letters_choices.two.aether or third_char_letters_choices.two.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.two.fire:  Non ti avrei dovuto ascoltare.}
 
             - earthC:
             Evento terra.
@@ -677,7 +695,8 @@
 
             - fireC:
             Evento fuoco.
-
+            {third_char_letters_choices.three.aether or third_char_letters_choices.three.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.three.fire:  Non ti avrei dovuto ascoltare.}
 
             - earthC:
             Evento terra.
@@ -795,6 +814,8 @@
 
             - fireC:
             Evento fuoco.
+            {third_char_letters_choices.four.aether or third_char_letters_choices.four.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.four.fire:  Non ti avrei dovuto ascoltare.}
 
 
             - earthC:
@@ -913,6 +934,8 @@
 
             - fireC:
             Evento fuoco.
+            {third_char_letters_choices.five.aether or third_char_letters_choices.five.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.five.fire:  Non ti avrei dovuto ascoltare.}
 
 
             - earthC:
@@ -1032,6 +1055,8 @@
 
             - fireC:
             Evento fuoco.
+            {third_char_letters_choices.six.aether or third_char_letters_choices.six.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.six.fire:  Non ti avrei dovuto ascoltare.}
 
 
             - earthC:

@@ -179,7 +179,7 @@
         }
         
     = one
-     {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+     {charTag(Documents, "writer_thirdChar")}:      Ti odio.
         -> letters_thirdCharLetters_one -> 
         -> third_char_letters_choices.one ->
         -> third_char_closing_letters -> main

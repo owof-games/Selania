@@ -368,7 +368,7 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterOne:
             <b>Prima lettera</b>
-            Ciao {player_name}! <>
+            Ti odio. <>
             -> letters_thirdCharLetters_one -> 
     }
     

@@ -1263,9 +1263,12 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        {charTag(TheWitch, witch_state())}:                     {charNameThree} ha bisogno dell'aiuto di {player_name}.
-                                                                Per questo la piccola cagnolina che fa da postina di questo luogo consegnerà le risposte di {player_name} a {charNameThree}.
-                                                                Cosa vorrebbe rispondere {player_name}?
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} ha bisogno dell'aiuto di {player_name}.</i>
+                                                                <i>La cagnolina consegnerà le risposte di {player_name} a {charNameThree}.</i>
+                                                                <i>La prima cosa che ha chiesto {charNameThree} sono i pronomi di {player_name}.</i>
+                                                                        -> gender.top ->
+                                                                <i>E poi {charNameThree} chiede: <b>Come faccio capire a mia sorella che sono pronto a cambiare?</b></i>
+                                                                <i>Cosa vorrebbe rispondere {player_name}?</i>
         
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
