@@ -397,6 +397,10 @@
             + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. Lo stai già facendo saltando gli incontri.
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
                                                                 E magari potresti pure stupirti della loro reazione.
+                {
+                - letters_thirdCharLetterThreeChoice has fire: 
+                                                                Alla fine hai già urlato a tutti una volta quando ti sei trovato coi due sostituti portati dal Merlo, no?    
+                }                                                 
             
             + (water) \ {charTag(PG, "neutral")}:               Forse Ava non era la persona giusta, ma {charNameThree}: hai amato.
             {charTag(PG, "neutral")}:                           Ricordi come mi hai parlato di lei quando eri qui?
@@ -419,7 +423,11 @@
                 {
                 - grimoire_thirdChar has grimThirdCharNovel:
                                                                 Pensa a quanto sei cambiato da quando avevi letto <i>Polvere</i> qui in biblioteca, e ti sei arrabbiato contro la protagonista!
-                }                                                  
+                }   
+                {
+                - letters_thirdCharLetterThreeChoice has aetherC:
+                                                                Pensa a quando ti sei messo lì ad ascoltare Petra per capire perché era arrabbiata per la rissa che avevi scatenato per difenderla.   
+                }                                               
                                 
             + (air) \ {charTag(PG, "neutral")}:                 Il piccolo Armando ti adora: perché non riparti da lì con la tua famiglia?
                 {
