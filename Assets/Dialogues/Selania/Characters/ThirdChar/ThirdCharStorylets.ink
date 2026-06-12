@@ -1292,7 +1292,9 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        {charTag(TheWitch, witch_state())}:                     Che risposta vorrebbe inviare {player_name} a {charNameThree}?
+        
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} si chiede se si aspetta troppo dalle persone.
+                                                                <i>Come aiutiamo {charNameThree}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 

@@ -326,7 +326,7 @@
                                 }
                     } 
                     E ti dico tutta questa roba perché mia sorella è preoccupata.
-                    E mi ha detto che se non mi do una sistemata, col cazzo che rivedo Armando.
+                    E mi ha detto che se non mi do una sistemata, col cazzo che rivedo l'Armando.
                     Dice che sono rabbioso, impulsivo, egoista.
                     E ha paura che divento violento.
                     C'ho bisogno di aiuto, {player_name}.
@@ -384,7 +384,7 @@
                     E hai rigirato la frittata dicendomi di chiedere a lei un consiglio perché mi conosce da tanto.
 
             - third_char_letters_choices.one.water: 
-                    Mi hai detto che mi conosce da sempre, cosa vera, e di chiederle un consiglio, cosa spaventosa.
+                    Mi hai detto di dirle come sto in questo periodo.
 
         }
 
@@ -435,21 +435,46 @@
                     Non so quanto 'sta roba mi aiuterà con mia sorella, ma per ora vado avanti a seguire le loro storie.
                     
             - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.one.fire:  Non ti avrei dovuto ascoltare.}
+                    Ho deciso di lasciare mia sorella nel suo brodo, e farmi i cazzi miei.
+                    Non l'ha presa benissimo.
+                    L'altra sera è venuta al Baretto incazzata come una biscia, perché le avevo promesso che la accompagnavo dal ginecoso.
+                    Ma gliel'avevo promesso <i>prima</i> della sua fottuta minaccia di non farmi più vedere l'Armando.
+                    Gliel'ho detto con tutta la calma del mondo {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, e lei mi ha urlato davanti a tutti che sono un cazzo di immaturo di merda, un bambino di un metro ottanta e zero cervello.
+                    Ho continuato a pulire bicchieri fino a quando se ne è andata urlando e dicendo che bene, allora l'Armando non c'ha più uno zio.
+                    {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Sono stato un coglione a non ascoltarti, un grandissimo coglione.}
+                    {third_char_letters_choices.one.fire:  Sono stato un coglione ad ascoltarti, un grandissimo coglione.}
 
             - earthC:
-            Evento terra.
-
+                    Più facile a dirsi che a farsi, ma non è male averci un obiettivo concreto.
+                    E così sono andato a chiedere un aumento al merda.
+                    Che dopo aver pianto miseria perché l'economia e il petrolio e blah blah blah, mi ha detto che quella stronza della sua fidanzata gli dice che bevo troppo mentre lavoro.
+                    E che quello è il mio aumento, se non faccio casini coi clienti.
+                    Non c'ho molto da portare a mia sorella mi sa.
+                    Ma non mi arrendo qui.
 
             - aetherC:
-            Evento spirito.
+                    Marta si è tutta sorpresa quando le ho chiesto secondo lei cosa dovrei fare.
+                    La prima risposta è stata: smettila di uscire con quel coglione di Merloni e quell'altro idiota dei bitcoin (il Giova, ovvio).
+                    Mi sono incazzato a bestia sul momento, ma mi son preso un grosso respiro e l'ho lasciata parlare.
+                    La seconda cosa che mi ha detto è che posso incanalare tutta questa energia in qualcosa di più utile, tipo aiutare a sistemare il giardino del nido che è un disastro (questa sarebbe più roba della zia mi sa) o fare volontariato per l'associazione per i vecchi qui in paese.
+                    Che è quella dove ci va anche papà.
+                    Quando gliel'ho fatto notare ha fatto spallucce.
+                    Non sono convinto di nessuna delle sue idee, ma questa cosa del fare qualcosa di utile non è mica male!
+                    Grazie per il consiglio {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
 
 
             - waterC:
-            Evento acqua.
-
+                    È stato un mezzo disastro, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                    Perché io non le so dire certe cose, non c'ho proprio le parole.
+                    Fammi parlare di Inter, e ti racconto tutta la storia dal 1908 a due secondi fa.
+                    Alla fine le ho detto che è come se fossi in attacco da 44 anni ma ora sono stanco ma non ho mai saputo fare diversamente.
+                    E che prima segnavo perché c'avevo il migliore trequartista del mondo accanto, eravamo come Milito e Sneijder.
+                    E sugli spalti c'era la mia Sofia.
+                    Marta mi ha ascoltato straparlare per venti minuti e poi mi fa: quindi sei stanco di fare il coglione, ma non sai come smettere?
+                    Ti ho già detto che lei è un trattore, vero?
+                    Mi ha dato una pacca sulle spalle, il massimo proprio per lei dell'affetto.
+                    Quindi: mi hai dato un gran consiglio {player_name}!
+                    Chi l'avrebbe mai detto?!?!
         }
 
         //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
@@ -483,9 +508,33 @@
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
-        Nuovo evento blah blah blah.
-
-
+                    Comunque non c'è solo Marta con cui devo sistemare le cose.
+                    Le serate a calcetto son strane {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                    Ho già saltato due incontri e non so nemmeno io dirti il perché, ma non c'ho la poesia proprio.
+                    {letters_thirdCharLetterTwoChoice has aetherC: Forse c'ho in testa Marta che mi dice che sono degli idioti.}
+                    C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio c'ho in testa la voce del Merlo che ci chiama <i>froci</i>.
+                    E lui, il Rocco, non mi ha mai chiesto di uscire, non capisco.
+                    Mi manca però avere qualcosa con cui sfogarmi.
+                    Forse anche per questo sto diventando più fumino.
+                    L'altra sera c'erano questi tre ragazzetti, turisti, che hanno rotto i coglioni a Petra tutta sera.
+                    Lei li ha mandati a fanculo due volte, fino a quando non le hanno toccato il culo, e lei è diventata di pietra.
+                    Io non l'ho mai vista così lei e mi è saltata fuori una roba da fratello maggiore.
+                    Un momento ero a pulire un tavolo, quello dopo avevo spaccato il naso a uno di questi.
+                    I veci del paese hanno applaudito.
+                    Ma non il capo.
+                    {letters_thirdCharLetterTwoChoice has earthC: Visto che già mi aveva rotto il cazzo per quanto bevo a lavoro.}
+                    {letters_thirdCharLetterTwoChoice has fireC: Visto che la sera prima è stata quella in cui Marta mi ha urlato davanti a tutto il locale di stare lontano da suo figlio.}
+                    Petra mi ha difeso, per cui alla fine non è successo niente.
+                    Ma è arrabbiata con me, {player_name}.
+                    Dice che apprezza il pensiero ma non il gesto.
+                    E ora son qui che scalpito, anche la cagnolina sembra nervosa, continua a rigirarsi.
+                    Tra il Poggi che non mi caga più.
+                    Dona che mi ha smollato come un'insalata scaduta.
+                    Rocco che beve con me solo se abbiamo giocato a calcetto, c'ha senso?
+                    E Petra che la difendo e si incazza, io le persone non le capisco.
+                    Mi aspetto troppo dalle persone, {player_name}?
+                    Mi sta sfuggendo qualcosa?
+                    Ciao.
 
 ->->
         
