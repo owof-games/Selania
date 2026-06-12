@@ -787,58 +787,51 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+                    Sono diventata una persona educata.
+                    E forse sintetica, che ti sto rispondendo <>
+                        {letters_thirdCharLetterThreeChoice:
+                            -airC:
+                                prima di beccarmi coi ragazzi del forum su Discord. Come gli adolescenti, aiuto XD
+                            
+                            -waterC:
+                                prima di andare a vedere l'Inter con Rocco e un paio di suoi amici, due tranquilloni (secondo me anche un po' fattoni, devo ancora capirla 'sta cosa).
+                                
+                            -earthC:
+                                di andare a farmi un paio d'ore in palestra.
+
+                            -aetherC:
+                                prima di raggiungere Petra a casa sua per la serata giochi. Vedi che ti divento pure nerd, aiuto.
+
+                            -fireC:
+                                prima di un lunedì sera con brutti film e buona birra.
+
+                        }
+
+                    Ah: sappi che Petra c'è rimasta male quando non hai risposto alla sua domanda.
+                    Ma è durata due minuti la cosa, poi ha iniziato a raccontarmi la storia della sua coven.
+                    Le donne sono pazze.
+                    Ma vorrai sapere come sono andate le cose dopo il tuo ultimo consiglio, vero?    
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.three.air: 
-                Recap scelta aria
+                    Mi hai sostanzialmente detto che sono stupido ma che una AI può aiutarmi a esserlo meno.
 
             - third_char_letters_choices.three.fire: 
-                Recap scelta fuoco
+                    Mi hai sostanzialmente detto di andare a scopare in giro a ruota.
 
             - third_char_letters_choices.three.earth: 
-                Recap scelta terra
+                    Mi hai sostanzialmente detto che sono uno sfigato che ha barato e dovrei provarci con le vere donne.
 
             - third_char_letters_choices.three.aether: 
-                Recap scelta spirito
+                    Mi hai detto di sedermi e guardare nella mia anima e capire che cosa sono diventato.
 
             - third_char_letters_choices.three.water: 
-                Recap scelta acqua
+                    Mi hai detto di andare a sfasciarmi i maroni con la mia famiglia.
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
-        {grimoire_thirdChar hasnt grimThirdCharLetterFour:
-            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
-            ~  ThirdCharacterLetters = true
-            
-                //E poi procedo con gli effetti delle scelte
-                {
-                - third_char_letters_choices.three.air: 
-                    -> glyph_choice_manager(false, airC)->
-
-                - third_char_letters_choices.three.fire: 
-                    -> glyph_choice_manager(false, fireC)->
-
-                - third_char_letters_choices.three.earth: 
-                    -> glyph_choice_manager(false, earthC)->
-
-                - third_char_letters_choices.three.aether: 
-                    -> glyph_choice_manager(false, aetherC)->
-
-                - third_char_letters_choices.three.water: 
-                    -> glyph_choice_manager(false, waterC)->
-                }
-
-            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
-            ~   affinity_calc(ThirdCharacter)    
-
-            //E disattivo la variabile che blocca le varie reazioni.
-            ~    ThirdCharacterLetters = false          
-        }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
         {grimoire_thirdChar hasnt grimThirdCharLetterFour:
         {
         - thirdChar_relationshipStatus == negative:
@@ -872,27 +865,88 @@
         }       
         }
 
-        //Step quattro: gli esiti
+        //Step tre: gli esiti
         {letters_thirdCharLetterFourChoice:
             - airC:
-            Evento aria.
-
+                    Apprezzo le dure verità.
+                    {grimoire_thirdChar hasnt grimThirdCharKitchenTwo: E poi alla fine te lo dicevo anche in cucina che mi piaceva che Ava mi faceva sentire intelligente.}
+            
             - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.three.aether or third_char_letters_choices.three.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.three.fire:  Non ti avrei dovuto ascoltare.}
+                    Uso ancora Ava per quando sono preso male.
+                    Però c'è da dire che alla fine uscire con le ragazze è più interessante.
+                    L'altra sera col capo abbiamo fatto le pezze a queste due tipe americane.
+                    Le americane sono assurde, perché vengono qui secondo me solo per bere prima dei ventunanni di limite che c'hanno.
+                    Diciamo che me la sono spassata alla grande XD
+                    {letters_thirdCharLetterTwoChoice has earthC: Ma non credo che il merdoso mi darà l'aumento ora. Anche se potrei dire alla sua ragazza che si è scopato una cliente.}
+                    Il problema però è che mi son preso qualcosa.
+                    Non sto qui a darti i dettagli, ma diciamo che c'è un motivo se uso ancora Ava per le seghe.
+                    E mi fa comunque un discreto male.
+                    {letters_thirdCharLetterThreeChoice has fireC: Ed ecco il perché della serata birra e film.}
+                    {third_char_letters_choices.three.aether or third_char_letters_choices.three.water: Avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!}
+                    {third_char_letters_choices.three.fire: Non avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!}
 
             - earthC:
-            Evento terra.
-
+                    E dato che sto imparando che ci sono tante cose che non so (sorprendente, vero?), ho iniziato a seguire qualche youtuber che dà consigli su come conquistare le tipe.
+                    Ci sono tipo tutte queste interviste a uomini che ce l'hanno fatta, quelli che proprio li vedi e dici "che cazzo di boss che è lui"!
+                    Un po' come mi sentivo io col vecchio lavoro.
+                    Questi video mi danno la carica.
+                    {letters_thirdCharLetterThreeChoice has earthC: Me li sparo in palestra e mi sento come un superuomo.}
+                    Anche se a volte mi abbattono: possibile che tutti questi tizi siano pieni di pila, magari con dieci anni meno di me, e sempre partendo dal nulla?
+                    Che cazzo ho fatto di sbagliato nella mia vita?!?
+                    Ma come dice uno degli host che seguo di più: se hai energie per piangerti addosso, ce le hai anche per lavorare.
+                    Sto pensando di proporre a Petra di vedere se possiamo rilevare un vecchio baretto che c'era fino a qualche anno fa dalle parti dei campi da calcio.
+                    Da {charNameThree} a imprenditore XD
+                    No, niente XD, che è poco imprenditorese!
 
             - aetherC:
-            Evento spirito.
-
+                    {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}!
+                    Praticamente mi hai intortato con la cosa più da tipa coi cristalli e lo yoga che potessi dirmi.
+                    Lì per lì ho detto "Basta, {player_name} si è bruciat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} il cervello."
+                    Poi mi son messo a letto e ho iniziato a pensare.
+                    Io, pensare XD
+                    Ava mi è stata d'aiuto, ma perché non sono mai stato davvero solo.
+                    Alla fine c'avevo quella rompiscatole di Petra sempre attorno.
+                    Mia sorella con le sue chiamate per vedere se avevo mangiato a modo.
+                    Il gruppo di calcetto.
+                    {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: Non tutti i ragazzi sul forum sono così fortunati.}
+                    Non so cosa ho imparato su di me, però forse certe cose sono pericolose se sei lasciato solo.
+                    Questo di sicuro.
+                    Pensa un po' {player_name}: mi hai dato un consiglio che mi ha fatto pensare!
+                    Un miracolo.
 
             - waterC:
             Evento acqua.
 
+        }
+
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFour:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.three.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.three.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.three.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.three.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.three.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
+            //E disattivo la variabile che blocca le varie reazioni.
+            ~    ThirdCharacterLetters = false          
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
@@ -927,37 +981,8 @@
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
-        {grimoire_thirdChar hasnt grimThirdCharLetterFive:
-            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
-            ~  ThirdCharacterLetters = true
-            
-                //E poi procedo con gli effetti delle scelte
-                {
-                - third_char_letters_choices.four.air: 
-                    -> glyph_choice_manager(false, airC)->
 
-                - third_char_letters_choices.four.fire: 
-                    -> glyph_choice_manager(false, fireC)->
-
-                - third_char_letters_choices.four.earth: 
-                    -> glyph_choice_manager(false, earthC)->
-
-                - third_char_letters_choices.four.aether: 
-                    -> glyph_choice_manager(false, aetherC)->
-
-                - third_char_letters_choices.four.water: 
-                    -> glyph_choice_manager(false, waterC)->
-                }
-
-            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
-            ~   affinity_calc(ThirdCharacter)    
-
-            //E disattivo la variabile che blocca le varie reazioni.
-            ~    ThirdCharacterLetters = false          
-        }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
         {grimoire_thirdChar hasnt grimThirdCharLetterFive:
         {
         - thirdChar_relationshipStatus == negative:
@@ -991,7 +1016,7 @@
         }       
         }
 
-        //Step quattro: gli esiti
+        //Step tre: gli esiti
         {letters_thirdCharLetterFiveChoice:
             - airC:
             Evento aria.
@@ -1013,6 +1038,36 @@
             - waterC:
             Evento acqua.
 
+        }
+
+         //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterFive:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.four.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.four.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.four.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.four.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.four.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
+            //E disattivo la variabile che blocca le varie reazioni.
+            ~    ThirdCharacterLetters = false          
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
@@ -1047,37 +1102,8 @@
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
-        {grimoire_thirdChar hasnt grimThirdCharLetterSix:
-            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
-            ~  ThirdCharacterLetters = true
-            
-                //E poi procedo con gli effetti delle scelte
-                {
-                - third_char_letters_choices.five.air: 
-                    -> glyph_choice_manager(false, airC)->
 
-                - third_char_letters_choices.five.fire: 
-                    -> glyph_choice_manager(false, fireC)->
-
-                - third_char_letters_choices.five.earth: 
-                    -> glyph_choice_manager(false, earthC)->
-
-                - third_char_letters_choices.five.aether: 
-                    -> glyph_choice_manager(false, aetherC)->
-
-                - third_char_letters_choices.five.water: 
-                    -> glyph_choice_manager(false, waterC)->
-                }
-
-            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
-            ~   affinity_calc(ThirdCharacter)    
-
-            //E disattivo la variabile che blocca le varie reazioni.
-            ~    ThirdCharacterLetters = false          
-        }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
         {grimoire_thirdChar hasnt grimThirdCharLetterSix:
         {
         - thirdChar_relationshipStatus == negative:
@@ -1111,7 +1137,7 @@
         }       
         }
 
-        //Step quattro: gli esiti
+        //Step tre: gli esiti
         {letters_thirdCharLetterSixChoice:
             - airC:
             Evento aria.
@@ -1133,6 +1159,36 @@
             - waterC:
             Evento acqua.
 
+        }
+
+        //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSix:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.five.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.five.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.five.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.five.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.five.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
+            //E disattivo la variabile che blocca le varie reazioni.
+            ~    ThirdCharacterLetters = false          
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
@@ -1168,37 +1224,7 @@
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
-        {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
-            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
-            ~  ThirdCharacterLetters = true
-            
-                //E poi procedo con gli effetti delle scelte
-                {
-                - third_char_letters_choices.six.air: 
-                    -> glyph_choice_manager(false, airC)->
-
-                - third_char_letters_choices.six.fire: 
-                    -> glyph_choice_manager(false, fireC)->
-
-                - third_char_letters_choices.six.earth: 
-                    -> glyph_choice_manager(false, earthC)->
-
-                - third_char_letters_choices.six.aether: 
-                    -> glyph_choice_manager(false, aetherC)->
-
-                - third_char_letters_choices.six.water: 
-                    -> glyph_choice_manager(false, waterC)->
-                }
-
-            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
-            ~   affinity_calc(ThirdCharacter)    
-
-            //E disattivo la variabile che blocca le varie reazioni.
-            ~    ThirdCharacterLetters = false          
-        }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
         {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
         {
         - thirdChar_relationshipStatus == negative:
@@ -1232,7 +1258,7 @@
         }       
         }
 
-        //Step quattro: gli esiti
+        //Step tre: gli esiti
         {letters_thirdCharLetterSevenChoice:
             - airC:
             Evento aria.
@@ -1254,6 +1280,36 @@
             - waterC:
             Evento acqua.
 
+        }
+
+        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
+            //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
+            ~  ThirdCharacterLetters = true
+            
+                //E poi procedo con gli effetti delle scelte
+                {
+                - third_char_letters_choices.six.air: 
+                    -> glyph_choice_manager(false, airC)->
+
+                - third_char_letters_choices.six.fire: 
+                    -> glyph_choice_manager(false, fireC)->
+
+                - third_char_letters_choices.six.earth: 
+                    -> glyph_choice_manager(false, earthC)->
+
+                - third_char_letters_choices.six.aether: 
+                    -> glyph_choice_manager(false, aetherC)->
+
+                - third_char_letters_choices.six.water: 
+                    -> glyph_choice_manager(false, waterC)->
+                }
+
+            //Faccio un calcolo dell'affinità in visto di quello che accadrà poi
+            ~   affinity_calc(ThirdCharacter)    
+
+            //E disattivo la variabile che blocca le varie reazioni.
+            ~    ThirdCharacterLetters = false          
         }
 
         //Step cinque_a: il check per la riscrittura, con inchiostro etc.

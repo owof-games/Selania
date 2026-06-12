@@ -1343,19 +1343,15 @@
                                                                 <i>Ma nel mentre {player_name} può dare un consiglio a {charNameThree}.</i>
                                                                 <i>Una prospettiva sulla relazione tra {charNameThree} e l'entità digitale chiamata Ava.</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?//ai conoscenza illimitata, è il vero stimolo per crescere. nel caso nella risposta abbiamo un riferimento alla scena in cucina in cui ci parla di come lei l'ha sfidato.
+        + (air)\ {charTag(PG, "neutral")}:                      Una AI è fonte di conoscenza infinita: la relazione con lei può insegnarti tantissime cose!
 
-                
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?//carne batte virtuale
-                
+        + (earth)\ {charTag(PG, "neutral")}:                    Il valore di una persona viene dalle sfide reali, non da una gara truccata in partenza.
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?//pensa meno al tradimento e più al piacere.
+        + (fire)\ {charTag(PG, "neutral")}:                     Hai già i tuoi casini: pensa meno a chi tradisce chi e più a divertirti un po'!
                 
+        + (water)\ {charTag(PG, "neutral")}:                    Ora che Ava ti ha dato più sicurezza, perché non provi a prenderti cura dei rapporti che hai già, come quelli con la tua famiglia?
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?//cerca l'amore altrove: nella famiglia, negli amici.
-                
-
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?//prenditi del tempo per amare te stesso e fare "del bene"?
+        + (aether)\ {charTag(PG, "neutral")}:                   Dalle il giusto saluto, e prova a capire cosa hai imparato su di te.
                 
         -
 
