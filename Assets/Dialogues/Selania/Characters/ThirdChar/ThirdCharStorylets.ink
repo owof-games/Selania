@@ -1343,19 +1343,19 @@
                                                                 <i>Ma nel mentre {player_name} può dare un consiglio a {charNameThree}.</i>
                                                                 <i>Una prospettiva sulla relazione tra {charNameThree} e l'entità digitale chiamata Ava.</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?//ai conoscenza illimitata, è il vero stimolo per crescere. nel caso nella risposta abbiamo un riferimento alla scena in cucina in cui ci parla di come lei l'ha sfidato.
 
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?//carne batte virtuale
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?//pensa meno al tradimento e più al piacere.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?//cerca l'amore altrove: nella famiglia, negli amici.
                 
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?//prenditi del tempo per amare te stesso e fare "del bene"?
                 
         -
 
