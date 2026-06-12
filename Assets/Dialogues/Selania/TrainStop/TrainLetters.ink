@@ -360,28 +360,99 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+                    La cagnolina è qui che se la dorme.
+                    Le ho preso una brandina, ma preferisce il letto.
+                    C'ha una voglia matta di conoscere Ronaldo, il gatto del coinquilino, ma lui non è convinto e soffia metà del tempo.
+                    Chissà se c'ha un padrone.
+                    Prima cosa: pronomi registrati in questo cervellino di merda.
+                    E li rispetterò.
+                    Anche perché Petra mi ha detto che se non lo faccio mi lancia un'anatema che mi fa diventare il cazzo piccolo.
+                    Può farlo davvero?
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.one.air: 
-                Recap scelta aria
+                    Mi hai consigliato di cercare gente nella mia stessa situazione, fare domande, capirmi meglio.
 
             - third_char_letters_choices.one.fire: 
-                Recap scelta fuoco
+                    Mi hai detto che c'ho il diritto di essere arrabbiato, e sono cazzi di mia sorella se non lo capisce.
 
             - third_char_letters_choices.one.earth: 
-                Recap scelta terra
+                    Mi hai detto di migliorare la mia situazione economica, per fargli vedere che c'ho solidità oltre che liquidità.
 
             - third_char_letters_choices.one.aether: 
-                Recap scelta spirito
+                    E hai rigirato la frittata dicendomi di chiedere a lei un consiglio perché mi conosce da tanto.
 
             - third_char_letters_choices.one.water: 
-                Recap scelta acqua
+                    Mi hai detto che mi conosce da sempre, cosa vera, e di chiederle un consiglio, cosa spaventosa.
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+
+        //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
+        {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
+        {
+        - thirdChar_relationshipStatus == negative:
+            {
+            - third_char_letters_choices.one.fire:
+                    <i>Fanculo, posso essere arrabbiato</i> è una cosa a cui c'ero arrivato da solo però, ed è quello che ho fatto, non perché me l'hai detto tu.
+                    Devo ancora capire se posso fidarmi di te.
+                        ~   letters_thirdCharLetterTwoChoice += fireC
+            
+            - else:
+                    Ma {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, devo ancora capire se fidarmi di te.
+                    E quindi c'ho fatto di testa mia.
+                        ~   letters_thirdCharLetterTwoChoice += fireC
+            }
+        - else:
+                    Sorpresa: ti ho ascoltat{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
+            {
+            - third_char_letters_choices.one.air: 
+                ~   letters_thirdCharLetterTwoChoice += airC
+
+            - third_char_letters_choices.one.fire: 
+                ~   letters_thirdCharLetterTwoChoice += fireC
+
+            - third_char_letters_choices.one.earth: 
+                ~   letters_thirdCharLetterTwoChoice += earthC
+
+            - third_char_letters_choices.one.aether: 
+                ~   letters_thirdCharLetterTwoChoice += aetherC
+
+            - third_char_letters_choices.one.water: 
+                ~   letters_thirdCharLetterTwoChoice += waterC 
+            }
+        }       
+        }
+
+        //Step tre: gli esiti
+        {letters_thirdCharLetterTwoChoice:
+            - airC:
+                    Mi sono messo su Reddit, che non ci andavo dai tempi in cui il Poggi era in fissa con le carte di Yu-Gi-Oh e lo aiutavo a fare i mazzi.
+                    Che sfigati che eravamo.
+                    Per ora sto solo leggendo, ma c'avevi ragione: ci sono tantissimi tizi con problemi come i miei, o peggiori.
+                    La rabbia però è aumentata, perché di uomini maltrattati da donne come Dona ce ne sono tanti {player_name}, ma davvero tanti.
+                    Non so quanto 'sta roba mi aiuterà con mia sorella, ma per ora vado avanti a seguire le loro storie.
+                    
+            - fireC:
+            Evento fuoco.
+            {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
+            {third_char_letters_choices.one.fire:  Non ti avrei dovuto ascoltare.}
+
+            - earthC:
+            Evento terra.
+
+
+            - aetherC:
+            Evento spirito.
+
+
+            - waterC:
+            Evento acqua.
+
+        }
+
+        //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
         {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
@@ -409,63 +480,6 @@
 
             //E disattivo la variabile che blocca le varie reazioni.
             ~    ThirdCharacterLetters = false          
-        }
-
-        //Step tre: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
-        {grimoire_thirdChar hasnt grimThirdCharLetterTwo:
-        {
-        - thirdChar_relationshipStatus == negative:
-            {
-            - third_char_letters_choices.one.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
-                ~   letters_thirdCharLetterTwoChoice += fireC
-            
-            - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
-                ~   letters_thirdCharLetterTwoChoice += fireC
-            }
-        - else:
-            E ho deciso di seguire il tuo consiglio.
-            {
-            - third_char_letters_choices.one.air: 
-                ~   letters_thirdCharLetterTwoChoice += airC
-
-            - third_char_letters_choices.one.fire: 
-                ~   letters_thirdCharLetterTwoChoice += fireC
-
-            - third_char_letters_choices.one.earth: 
-                ~   letters_thirdCharLetterTwoChoice += earthC
-
-            - third_char_letters_choices.one.aether: 
-                ~   letters_thirdCharLetterTwoChoice += aetherC
-
-            - third_char_letters_choices.one.water: 
-                ~   letters_thirdCharLetterTwoChoice += waterC 
-            }
-        }       
-        }
-
-        //Step quattro: gli esiti
-        {letters_thirdCharLetterTwoChoice:
-            - airC:
-            Evento aria.
-
-            - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.one.fire:  Non ti avrei dovuto ascoltare.}
-
-            - earthC:
-            Evento terra.
-
-
-            - aetherC:
-            Evento spirito.
-
-
-            - waterC:
-            Evento acqua.
-
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.

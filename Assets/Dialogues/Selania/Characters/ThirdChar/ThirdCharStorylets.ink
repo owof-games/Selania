@@ -1271,19 +1271,15 @@
                                                                 <i>Cosa vorrebbe rispondere {player_name}?</i>
         
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Cerca online persone con problemi come i tuoi: fai domande, conosciti meglio, sii meno solo.
 
+        + (earth)\ {charTag(PG, "neutral")}:                    Migliora la tua situazione economica, così vedrà che sei più solido di quello che pensa.
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (fire)\ {charTag(PG, "neutral")}:                     Hai il diritto di essere arrabbiato, se lei non lo capisce è un problema suo.
                 
-
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (water)\ {charTag(PG, "neutral")}:                    Raccontale a cuore aperto quello che stai provando in questo periodo.
                 
-
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
-                
-
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   Ti conosce da una vita: chiedile un consiglio.
                 
         -
 

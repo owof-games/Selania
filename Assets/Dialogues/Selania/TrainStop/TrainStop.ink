@@ -185,7 +185,7 @@
         -> third_char_closing_letters -> main
 
     = two
-    {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+    {charTag(Documents, "writer_thirdChar")}:      C'ho messo un po' a risponderti, {player_name}.
         -> letters_thirdCharLetters_two ->
         -> third_char_letters_choices.two ->
         -> third_char_closing_letters -> main

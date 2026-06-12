@@ -375,7 +375,7 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterTwo:
             <b>Seconda lettera</b>
-            Ciao {player_name}! <>
+            C'ho messo un po' a risponderti, {player_name}.
             -> letters_thirdCharLetters_two ->
     }
 
