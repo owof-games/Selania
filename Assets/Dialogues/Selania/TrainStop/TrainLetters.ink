@@ -915,7 +915,7 @@
                     Un miracolo.
 
             - waterC:
-            Evento acqua.
+            Evento acqua. qui accade qualcosa che lo fa star male, ma in modo buono.
 
         }
 
