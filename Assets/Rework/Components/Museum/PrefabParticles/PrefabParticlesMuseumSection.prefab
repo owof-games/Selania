@@ -801,11 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
       propertyPath: animatorParameterDescriptors.Array.data[0].maximumValue
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
       propertyPath: animatorParameterDescriptors.Array.data[0].minimumValue
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
       propertyPath: animatorParameterDescriptors.Array.data[1].maximumValue
