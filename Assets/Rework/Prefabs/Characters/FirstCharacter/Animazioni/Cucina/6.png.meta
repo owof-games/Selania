@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c4a263937585714286f918b83eba001
+guid: c8726269c08cb104b8dc6648b97729ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4514798711479773050
-    second: ChitarraCucina 4_0
+      213: 3465286685962602723
+    second: 6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChitarraCucina 4_0
+      name: 6_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
         y: 0
-        width: 130
-        height: 378
+        width: 153
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a77a426f189c7ae30800000000000000
-      internalID: 4514798711479773050
+      spriteID: 3e801b981eb271030800000000000000
+      internalID: 3465286685962602723
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChitarraCucina 4_0: 4514798711479773050
+      6_0: 3465286685962602723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
