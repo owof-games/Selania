@@ -30,7 +30,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    
+    {charTag(FirstCharacter, "curious")}:                       Di tutte le cose possibili, non pensavo avrei trovato un paio di baffi finti.
+                                                                Così ora sembro una di quei cuochi serissimi e fastidiosi che guarda Valeria in TV.
     
     {charTag(PG, "neutral")}:                                   Mi stavo chiedendo di cosa potremmo parlare mentre cuciniamo.
 
