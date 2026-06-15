@@ -1368,19 +1368,19 @@
         {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} ha bisogno dell'aiuto di {player_name} per chiarire la situazione con Poggi, senza fare un disastro.</i>
                                                                 <i>Qual è il consiglio di {player_name}?
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Chiedigli cosa è successo, senza scappatoie: ti deve una risposta chiara, razionale.
 
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (earth)\ {charTag(PG, "neutral")}:                    Accetta che la cosa è cambiata, e continua a costruirti una vita senza di lui.
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:                     Fallo quel macello, lascia che veda quanto sei incazzato.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + (water)\ {charTag(PG, "neutral")}:                    Fagli capire quanto ti manca, senza che sia la rabbia a parlare al posto tuo.
                 
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   Offri in modo sincero il tuo aiuto per la raccolta fondi.
                 
         -
 
@@ -1394,7 +1394,7 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        {charTag(TheWitch, witch_state())}:                     Come risponderà {player_name}?
+        {charTag(TheWitch, witch_state())}:                     <i>C'è qualcosa che {player_name} vuole scrivere a {charNameThree}?</i>
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 

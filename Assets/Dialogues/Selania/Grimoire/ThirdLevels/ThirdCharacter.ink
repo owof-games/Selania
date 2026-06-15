@@ -396,7 +396,7 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterFive:
             <b>Quinta lettera</b>
-            Ciao {player_name}! <>
+            Sto una merda. <>
             -> letters_thirdCharLetters_five -> 
     }
 

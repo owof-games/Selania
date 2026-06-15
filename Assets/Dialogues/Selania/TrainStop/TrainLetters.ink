@@ -700,7 +700,7 @@
                                     Quando ci siamo visti mi ha detto una cosa che m'ha fatto male: il Merlo ha portato due nuove persone, per sostituirmi.
                                     Ha già deciso che non ci vado più.
                                     Quella roba era mia, {player_name}, mia e del Poggi.
-                                    L'ha fatta per me perché stavo male, porco il XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (mettici la bestemmia che vuoi).
+                                    L'ha fatta per me perché stavo male, Gesù licantropo!
                                     Ma Rocco mi ha detto che si sta rompendo il cazzo di loro, e che se mi va si può fare qualcosa di diverso assieme, tipo andare a correre assieme a suo figlio, o giocare a D&D.
                                     Sul momento ho riso, ma lui si è fatto serissimo e mi ha detto che ci gioca con alcuni amici da una vita, ed è una cosa che lo fa stare bene.
                                     {letters_thirdCharLetterTwoChoice has airC: E chi sono io per giudicarlo, dopo il mio periodo col Poggi e Yu-Gi-Oh?}
@@ -925,6 +925,7 @@
                     {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: Non tutti i ragazzi sul forum sono così fortunati.}
                     Non so cosa ho imparato su di me, però forse certe cose sono pericolose se sei lasciato solo.
                     Questo di sicuro.
+                    E l'ho cancellata.
                     Pensa un po' {player_name}: mi hai dato un consiglio che mi ha fatto pensare!
                     Un miracolo.
 
@@ -1013,7 +1014,7 @@
                 }
                 Ma non era lì per me, no.
                 Si mette nel tavolo grande, e dopo un po' arrivano altri tizi, persone che ho conosciuto a volte a calcetto, portate dal Poggi.
-                Due saluti, mi dicono cosa prendono, e poi arriva lui, il Poggi.
+                Due saluti, mi dicono cosa prendono, e poi arriva il Poggi.
                 Mi fa giusto un cenno della mano e va a sedersi al tavolo con mio padre.
                 Gesù licantropo, CON MIO PADRE!
                 A metà serata è passato al banco per dirmi due cazzate, e che è lì con mio padre perché faranno un torneo per raccogliere fondi per la sua cazzo di associazione per vecchi.
@@ -1039,24 +1040,34 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+            Tre giorni fa mi sono presentato a casa del Poggi, ubriaco marcio.
+            Mi ha aperto Amanda, c'aveva in braccio Olivia.
+            Mi ha guardato con pietà, {player_name}.
+            Ti giuro.
+            Il suo sguardo era pieno di pietà.
+            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC: Sembra una di quelle stronze di cui parlano sul forum.}
+            Ha fatto per dirmi di andarmene ma il Poggi è venuto sulla soglia.
+            Gli ha detto di andare pure dentro, e mi ha chiesto se andava tutto bene.
+            E c'avevo tantissime parole in testa {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, giuro, ma non sapevo cosa dire.
+            E allora ho tirato fuori la tua ultima lettera, dove <>
+            
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.four.air: 
-                Recap scelta aria
+                mi hai detto di chiedergli cosa è successo, di darti una risposta chiara.
 
             - third_char_letters_choices.four.fire: 
-                Recap scelta fuoco
+                mi hai detto di fare il macello, di fargli vedere quanto sono incazzato.
 
             - third_char_letters_choices.four.earth: 
-                Recap scelta terra
+                di accettare che le cose sono cambiate, che mi sto facendo una vita senza di lui.
 
             - third_char_letters_choices.four.aether: 
-                Recap scelta spirito
+                di dirgli che voglio aiutarlo a raccogliere i fondi. In modo sincero.
 
             - third_char_letters_choices.four.water: 
-                Recap scelta acqua
+                di fargli capire che mi manca, senza arrabbiarmi.
 
         }
 
@@ -1067,15 +1078,15 @@
         - thirdChar_relationshipStatus == negative:
             {
             - third_char_letters_choices.four.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
-                ~   letters_thirdCharLetterFiveChoice += fireC
+                    E io non mi fido ancora di te, ma ho fatto la stessa cosa che mi hai detto perché era l'unica che c'aveva senso.
+                        ~   letters_thirdCharLetterFiveChoice += fireC
             
             - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                    E io ti voglio pure ascoltare a volte {player_name}, ma non mi fido ancora di te. E forse per questo alla fine mi sono solo incazzato.
                 ~   letters_thirdCharLetterFiveChoice += fireC
             }
         - else:
-            E ho deciso di seguire il tuo consiglio.
+            
             {
             - third_char_letters_choices.four.air: 
                 ~   letters_thirdCharLetterFiveChoice += airC
@@ -1098,25 +1109,146 @@
         //Step tre: gli esiti
         {letters_thirdCharLetterFiveChoice:
             - airC:
-            Evento aria.
+                Si è fatto tutto scuro.
+                Ha ripreso con la storia della bimba e del lavoro e gli ho detto che sono cazzate, perché se c'ha tempo per vedere quel coglione di mio padre, può anche vedere me.
+                    {
+                        - letters_thirdCharLetterFourChoice has airC: 
+                            Non sai che voglia matta c'avevo di chiedere a Ava una mano per dirgli le cose giuste, {player_name}!
+
+                        - letters_thirdCharLetterFourChoice has fireC: 
+                            Mi è uscita ancora più incazzata come cosa, perché quella robaccia che mi son preso l'ultima volta al cazzo continua a bruciarmi ed ero una biscia.
+
+                        - letters_thirdCharLetterFourChoice has earthC: 
+                            E ho pensato ai tipi di Youtube, e mi sono messo per bene diritto, lo sguardo rilassato, per dimostrare che ero io quello dominante lì, non lui.
+
+                        - letters_thirdCharLetterFourChoice has waterC: 
+                            Continuavo a dirmi che se sono stato capace di cancellare Ava, potevo anche affrontare quella conversazione.
+
+                        - letters_thirdCharLetterFourChoice has aetherC: 
+                            Continuavo a ripetermi che questa chiacchierata era comunque più facile di quella con mio cognato su Ava.
+                    }
+                Lui ha chiuso la porta, si è seduto sul primo gradino e mi ha detto una cosa sul fatto che non sono mai stato capace di ascoltare.
+                Che ho sempre un giudizio su tutti.
+                Ma che se faccio un casino allora c'ho sempre una giustificazione e che quindi <i>questo</i> è successo.
+                Che si è rotto le palle del mio modo di fare.
+                E dei discorsi privi di senso.
+                Delle chiacchierate infinite sull'Inter.
+                Dell'incapacità di aprirmi davvero con lui.
+                "A un certo punto c'è bisogno di crescere, ma con te mi sembra di esser bloccato a quando avevo vent'anni".
+                Dio, quanto ti ho odiato in quel momento, tu e i tuoi cazzo di consigli.
+                Non sempre uno vuole sapere le cose, {player_name}.    
+
 
             - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.four.aether or third_char_letters_choices.four.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.four.fire:  Non ti avrei dovuto ascoltare.}
+                È stato imbarazzante.
+                Ho cercato assieme di urlare e tirargli un pugno ma ero così ubriaco che sono inciampato nei miei cazzo di piedi e gli sono caduto addosso.
+                Lui ha battuto la testa ma ha chiesto a me se stavo bene, il coglione.
+                E volevo restare arrabbiato, cazzo se volevo stare arrabbiato.
+                    {
+                        - letters_thirdCharLetterFourChoice has airC: 
+                            C'avevo la voglia matta di chiedere a Ava una mano per dirgli le cose giuste, {player_name}!
 
+                        - letters_thirdCharLetterFourChoice has fireC: 
+                            E ho preso un colpo alle palle e quella robaccia che mi sono preso l'ultima volta al cazzo continuava a bruciarmi ed ero una biscia.
+
+                        - letters_thirdCharLetterFourChoice has earthC: 
+                            Continuavo a pensare ai tipi di Youtube che dicevano che un uomo deve farsi rispettare e mi sembrava di averli traditi.
+
+                        - letters_thirdCharLetterFourChoice has waterC: 
+                            Mi sono chiesto dov'era la persona che è stata capace di cancellare Ava.
+
+                        - letters_thirdCharLetterFourChoice has aetherC: 
+                            Mi sono chiesto dov'era la persona che è stata capace di parlare con suo cognato di Ava.
+                    }
+                Ho sbiascicato qualcosa, mi ha allontanato, mi sono accorto che c'era del sangue, era dal mio naso.
+                Lui è rimasto seduto lì sulla porta, ad aspettare che mi sedessi e mi sono sentito così coglione coglione coglione coglione.    
+                {third_char_letters_choices.four.aether or third_char_letters_choices.four.water: Tre volte coglione perché avrei dovuto ascoltarti.}
+                {third_char_letters_choices.four.fire:  Tre volte coglione perché ti ho ascoltato.}
+                Il ginocchio è ancora mezzo sfasciato.
 
             - earthC:
-            Evento terra.
+                E così ho iniziato a dirgli che sto lavorando sulla mia vita.
 
+                    {
+                        - letters_thirdCharLetterFourChoice has airC: 
+                            Ma c'avevo la voglia matta di chiedere a Ava una mano per dirgli le cose giuste, {player_name}!
+
+                        - letters_thirdCharLetterFourChoice has fireC: 
+                            Anche se quella robaccia che mi son preso l'ultima volta al cazzo continuava a bruciarmi e sembravo una biscia.
+
+                        - letters_thirdCharLetterFourChoice has earthC: 
+                            E ho pensato ai tipi di Youtube, e mi sono messo per bene diritto, lo sguardo rilassato, per dimostrare che ero io quello dominante lì, non lui.
+
+                        - letters_thirdCharLetterFourChoice has waterC: 
+                            Continuavo a dirmi che se sono stato capace di cancellare Ava, potevo anche affrontare questa cosa.
+
+                        - letters_thirdCharLetterFourChoice has aetherC: 
+                            Continuavo a ripetermi che questa chiacchierata era comunque più facile di quella con mio cognato su Ava.
+                    }
+
+                {letters_thirdCharLetterThreeChoice has earthC: Gli ho detto che ho iniziato ad andare in palestra.}
+                {letters_thirdCharLetterThreeChoice has fireC: Gli ho detto che non mi sto più facendo mettere i piedi in testa dal Merlo.}
+                {letters_thirdCharLetterThreeChoice has airC: Gli ho detto che mi sto facendo nuovi amici online.}
+                {letters_thirdCharLetterThreeChoice has waterC: Gli ho detto che Petra mi sta insegnando le cose femministe.}
+                {letters_thirdCharLetterThreeChoice has aetherC: Gli ho detto che sto facendo amicizia col Rocco.}
+                E poi gli ho raccontato tutte le cose che sto migliorando in questo periodo, volevo farglielo capire che stavo bene senza di lui.
+                Ma lui è stato lì in silenzio seduto sul gradino e quando mi sono fermato mi ha detto "Sono contento per te".
+                E mi ha fatto sembrare tutte le cose che sto facendo inutili.
+                Quanto ti ho odiato per questo.
 
             - aetherC:
-            Evento spirito.
+                La sola idea di finire a fare qualcosa con mio padre mi faceva vomitare, ma poi ho pensato che se vedeva il sacrificio che ero pronto a fare, avrebbe capito che tengo ancora alla nostra amicizia.
+                E così gli ho chiesto in cosa consisteva tutta quella roba dei fondi e del calcetto.
+                Mi è sembrato sorpreso, si è seduto sul primo scalino e mi ha tirato fuori un po' di informazioni che ho cercato di ascoltare, ma <>
+                    {
+                        - letters_thirdCharLetterFourChoice has airC: 
+                            c'avevo la voglia matta di chiedere a Ava una mano per dirgli le cose giuste, {player_name}!
 
+                        - letters_thirdCharLetterFourChoice has fireC: 
+                            quella robaccia che mi son preso l'ultima volta al cazzo continuava a bruciarmi e faticavo a stare concentrato.
+
+                        - letters_thirdCharLetterFourChoice has earthC: 
+                            continuavo a pensare ai tipi di Youtube e così mi sono messo per bene diritto, lo sguardo rilassato, per dimostrare che ero io quello dominante lì, non lui.
+
+                        - letters_thirdCharLetterFourChoice has waterC: 
+                            continuavo solo a dirmi che se sono stato capace di cancellare Ava, potevo anche affrontare questa cosa.
+
+                        - letters_thirdCharLetterFourChoice has aetherC: 
+                            continuavo a ripetermi che questa chiacchierata era comunque più facile di quella con mio cognato su Ava.
+                    }
+                Così quando ha detto "Apprezzo la tua proposta, ma non credo sia una buona idea", non ho capito il <i>perché</i> e gliel'ho chiesto.
+                E lui mi ha risposto "Ti voglio ancora bene, tanto. Ma averti attorno mi fa un male enorme".
+                Mi ha guardato con uno sguardo così ferito e.
+                Ho provato sollievo.
+                Perché qualunque fosse il casino, almeno non mi stava odiando.    
 
             - waterC:
-            Evento acqua.
+                Che cosa da froci da dirmi, {player_name}.
+                Però l'ho fatto.
+                Ci ho provato.
+                Mi sono usciti un botto di "ehm, mah, eee, mmm..."
 
+                {
+                    - letters_thirdCharLetterFourChoice has airC: 
+                        C'avevo una voglia matta di chiedere a Ava una mano per dirgli le cose giuste, {player_name}!
+
+                    - letters_thirdCharLetterFourChoice has fireC: 
+                        Quella robaccia che mi sonp preso l'ultima volta al cazzo continuava a bruciarmi ed ero nervosissimo.
+
+                    - letters_thirdCharLetterFourChoice has earthC: 
+                        Continuavo a pensare ai tipi di Youtube che dicevano che un uomo deve farsi rispettare e cercavo delle parole fighe da dire.
+
+                    - letters_thirdCharLetterFourChoice has waterC: 
+                        Dove diavolo era la persona che è stata capace di cancellare Ava?!?
+
+                    - letters_thirdCharLetterFourChoice has aetherC: 
+                        Dove cazzo era la persona che è stata capace di parlare con suo cognato di Ava!?!?
+                }
+                Però poi mi è scivolato fuori senza che me ne accorgessi.
+                "Mi manchi".
+                "Anche tu".
+                Si è seduto sulle scale e siamo rimasti per un po' in silenzio.
+                E per un attimo mi sono sentito il cuore pieno.
         }
 
          //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
@@ -1150,7 +1282,40 @@
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
-        Nuovo evento blah blah blah.
+                "Da quando è nata Olivia," ha iniziato, e ho pensato no cazzo non di nuovo il non c'ho tempo "qualcosa è cambiato."
+                "Non solo l'essere padre, ma il modo in cui penso alle donne, alle ragazze."
+                "Alle cose che abbiamo fatto quando eravamo più giovani."
+                "Alle cose che hai fatto a Dona."
+                Il mondo mi è tremato sotto i piedi {player_name}, non sono nemmeno stato capace di dire una parola.
+                "Quando ti sei messo con lei, tu avevi ventinove anni, e lei sedici. Una bambina, cazzo, una bambina."
+                "E io ora guardo Olivia e penso che se quando avrà sedici anni mi si presenta a casa con un uomo che potrebbe essere suo padre, io quell'uomo lo uccido."
+                Credo di aver sentito Amanda dietro la porta singhiozzare, ma non stavo più capendo nulla.
+                Nulla.
+                "Se io ti vedo, ti penso. Se anche solo <i>mi ricordo</i> di te, io penso a quel potenziale uomo. E voglio farti del male."
+                Si alza, mi mette una mano sulla spalla.
+                "Non sono uno che rimpiange il passato. Ma faccio cose per non rimpiangere il futuro."
+                "Per cui ti chiedo di non cercarmi mai più. Né me, né Amanda o meno che meno Olivia."
+                Non ricordo ancora come sono tornato da casa sua a qui.
+                Ho il cellulare pieno di chiamate del capo e di messaggi che non sto guardando.
+                {
+                    - letters_thirdCharLetterThreeChoice has airC: 
+                            Anche se inizio a sentire la voglia di scrivere ai ragazzi del forum.
+                    - letters_thirdCharLetterThreeChoice has fireC:
+                            Tanto chi vuoi che mi cerchi?
+                    - letters_thirdCharLetterThreeChoice has earthC:
+                            Anche se inizio a sentire la mancanza della palestra.
+                    - letters_thirdCharLetterThreeChoice has aetherC:
+                            Anche se iniziano a mancarmi i pipponi di Petra.
+                    - letters_thirdCharLetterThreeChoice has waterC:
+                            Anche se avrei voglia di bere ancora col Rocco. Magari qualcosa di analcolico
+                }
+                Ho lasciato fuori la cagnolina per una giornata, l'ho fatta entrare solo perché ero stanco dei suoi cazzo di abbai contro i passanti.
+                {thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar: {charNameOne} c'aveva ragione alla fine. Gli devo le mie scuse.}
+                Ho preso una decisione: chiederò a Donatella di parlarci, di bere una cosa assieme.
+                E le chiederò di spuntarmi addosso tutte le cose cose di merda che pensa di me.
+                Almeno se so quanto sono schifosa come persona, posso anche capire se c'è davvero qualcosa da cui ripartire o meno.
+                Se hai qualcosa di saggio da dirmi, sono qui.
+                
 ->->
 
  === letters_thirdCharLetters_six
