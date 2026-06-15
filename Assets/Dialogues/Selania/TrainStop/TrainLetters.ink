@@ -1682,7 +1682,7 @@
 
         }
 
-        //Step due: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
+        //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
         {grimoire_thirdChar hasnt grimThirdCharLetterSeven:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
             ~  ThirdCharacterLetters = true
@@ -1712,7 +1712,65 @@
             ~    ThirdCharacterLetters = false          
         }
 
-        //Step cinque_a: il check per la riscrittura, con inchiostro etc.
+        //Step cinque: esito discorso col padre
+                Gli ho chiesto io di beccarci, ma è stato lui a reggere la conversazione.
+                Ed è stato strano.
+                È partito chiedendomi: "Ti ricordi cosa promettesti a tua madre prima che morisse?"
+                "Che l'avrei resa orgogliosa di me."
+                "Lo era già, lo era sempre stata,", mi ha risposto "Era così felice tua mamma della tua ambizione."
+                "Ci sono cose strane da dire a un figlio."
+                C'ha messo un mese a dire la frase dopo.
+                "Quando ci siamo sposati lei mi amava e io ero solo preso dalla sua bellezza, ma era incinta di tua sorella e volevo prendermi le mie responsabilità."
+                "Col tempo però ho imparato ad amarla, mentre il suo amore per me è sfiorito."
+                "Non ero... Lei... Tua mamma ha sempre voluto di più, ma un di più diverso."
+                "Magari una casa grande. Belle vacanze. Quelle cose lì."
+                "Invece i tuoi nonni mi hanno cresciuto con l'idea che il dovere di ogni persona è di ridare quello che riceve al posto che l'ha cresciuto."
+                "Erano quel vecchio tipo di comunisti, si sono fatti la guerra e sai già tutte le storie di nonna Lina, e che non andava d'accordo con tua mamma, ma la sto prendendo alla larga."
+                "Tua mamma mi ha odiato quando ho perso il locale. Ma non ha mai capito perché l'ho fatto."
+                "Era appena iniziata la crisi che ha portato alla chiusura di tutte le fabbriche del posto. Molte persone non arrivavano a fine mese. Le stesse persone che negli anni ci avevano dato i soldi per stare bene. Volevo fare qualcosa per loro, per questo ho iniziato a lasciare che venissero a credito."
+                "So che mi odi perché abbiamo perso tutto, ma io non l'ho mai vista così."
+                "Ho perso un lavoro, dei soldi, ma non ho mai perso la mia comunità."
+                La sua birra è lì, ferma, senza più schiuma.
+                "Sei diventato il figlio di tua mamma, ma io non ho mai smesso di volerti bene. Ma dalle cose che mi racconta Marta, dalle cose che vedo, io ho paura che non ce la fai più a mantenere quella promessa che le hai fatto. E non so se sono forte abbastanza da sapere cosa succede se non ce la fai."
+                A quel punto ha atteso che dicessi qualcosa.
+        
+        {letters_thirdCharLetterSevenChoice:
+            - airC:
+                Ma l'unica cosa che sono riuscito a fare è stato chiudere la chiamata, e guardare il cellulare per mezz'ora.
+                Non mi ha più richiamato.
+
+            - fireC:
+                Ma non c'avevo parole, {player_name}, solo sassi in gola, vetri, roba che faceva male.
+                A me.
+                Mi sono rialzato, e ho iniziato a prendere a calci il pallone.
+                Volevo che andasse via.
+                Ha iniziato a piovere.
+                L'ho lasciato lì da solo, a ripararsi sotto gli spalti.
+
+            - earthC:
+                "Sono orgoglioso di essere suo figlio. E quando ricomprerò questo cazzo di locale o uno ancora migliore, lo vedrai".
+                L'ho lasciato lì con la sua cazzo di birra.
+
+            - aetherC:
+                Ho iniziato a piangere.
+                Mi sono vergognato così tanto, ma così tanto.
+                Marta è arrivata, mi ha stretto.
+                Papà le ha messo una mano sul braccio, e ci ha lasciati soli.
+
+            - waterC:
+                "Mamma c'è sempre stata per me, è quello che ho imparato l'ho imparato da lei".
+                "Lo so, e sono felice dell'uomo che sei, solo"
+                Ma l'ho interrotto.
+                "Ma non mi aveva detto mai questa cosa della crisi e del locale. Mi ha solo detto che abbiamo perso tutto perché non chiedevi i soldi ai tuoi amici."
+                "In un certo senso è vero: per me tutto il paese mi è amico. Tua mamma e io vedevamo lo stesso mondo in modi molto diversi."
+                "Già", è l'unica cosa che mi è venuta da dirgli.
+                L'ho accompagnato alla macchina, e prima di salutarlo gli ho chiesto se gli va di prendere una birra assieme, una volta.
+                Non so ancora se sia una buona idea.
+        }           
+
+                                                                    Che periodo assurdo, {player_name}.
+
+        //Step sei: il check per la riscrittura, con inchiostro etc.
         {
             - grimoire_thirdChar hasnt grimThirdCharLetterSeven:
             //Se è il primo passaggio, chiamo la funzione di preparazione alla riscrittura
@@ -1758,7 +1816,7 @@
 
         }
             
-        //Step cinque: nuova situazione, a cui poi risponderemo (qui è la riscrittura)
+        //Step sette: nuova situazione, a cui poi risponderemo (qui è la riscrittura)
         E ora è il momento di dirti le cose serie, quelle che si aspettava da me la zia quando ero lì con voi.
         Merda, sono cambiate così tante cose in questi mesi, {player_name}.
         Così tante cose.
