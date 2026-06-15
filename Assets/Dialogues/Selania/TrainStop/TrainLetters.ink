@@ -1562,6 +1562,8 @@
                 Enorme.
                 Quella sera sono rimasto con lui a vedere la TV, la cagnolina e il gatto ai nostri piedi.
                 Non è stato così male.
+                Anche se la padrona di casa ha confermato che non ci rinnoverà il contratto.
+                Non voglio pensare a dove cazzo andrò a vivere, non voglio.
 
 ->->    
 
@@ -1824,14 +1826,14 @@
         Un coglione che c'ha messo tutti 'sti cazzo di mesi per accettare cose che sapeva già.
         Dio, mi prenderei a sberle anche ora.
         Ci sono cose che ti potevo anche dire quando eravamo assieme, invece di sclerarti addosso come ho fatto.
-        Mi spiace per quella sclerata, sono stato una merda di uomo.
+        Mi spiace per come me ne sono andato, sono stato una merda di uomo.
         Ma ogni volta che mi vedevo riflesso, ogni volta che mi rendevo conto di quale era il mio corpo lì, pensavo solo: "Cazzo, sono un bicchiere. Sono solo un cazzo di bicchiere."
         Un bicchiere è una cosa che non c'ha un carattere.
         Che viene riempita dagli altri.
         Che <i>serve</i> ma non <i>è</i>.
         Sono un fallimento, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
         Uno che dice cose da sborone per nasconderlo il suo cazzo di fallimento.
-        Sono un fallimento nelle relazioni: faccio così schifo con le donne che mi sono preso bene per un robot. La mia famiglia mi odia. Ho un gruppetto di conoscenti che se ne frega di me, mentre quello che era il mio migliore amico mi ha smollato perché dice che sono un pedofilo.
+        Sono un fallimento nelle relazioni: faccio così schifo con le donne che mi sono preso bene per un robot. Non riesco a stare bene con la sua famiglia. Ho un gruppetto di conoscenti che se ne frega di me, mentre quello che era il mio migliore amico mi ha smollato perché dice che sono un pedofilo.
         Sono un fallimento come persona: faccio un lavoro di merda, perderò la casa e non so che fare. Casa in cui vivo con una persona che ho odiato perché c'ho paura di essere come lui. La gente qui pensa che sia una merda per come ho trattato Dona. Ho tradito le promesse fatte a mia mamma, sono bloccato in questo posto di merda, e ho passato una vita a cercare di non essere un fallito come mio padre, per poi essere un fallito peggiore: niente casa, niente famiglia, lavoro di merda. E l'unica soluzione che trovo? Bere.
         Sono un fallimento come uomo. Uno schifo. Non ho i soldi del Merlo o di Giova. Non ho costruito una famiglia come Rocco. E di certo non sono più giovane come Dario. Ma soprattutto non ho imparato un cazzo dal Poggi, che se ne frega del giudizio altrui e si è fatto la vita che voleva.
         E dopo quello che mi hanno rinfacciato sia Dona che il Poggi, non posso più manco dirmi che sono "un bravo ragazzo", perché ho fatto delle cose davvero di merda.
@@ -1840,9 +1842,11 @@
         Non sono abbastanza uomo per nulla, nemmeno per fallire fino in fondo.
         Nemmeno per dirti queste cose in faccia quando eri lì ad aiutarmi.
         Tu, la zia.
+        {charNameTwo}.
+        Franchì.
         Persino {charNameOne}.
         Eravate tutti lì per me.
-        Ma dio cristo se fa male anche ora scriverle queste cose, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+        Ma dio se fa male anche ora scriverle queste cose, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
         Perché se le scrivo allora sono vere.
         E c'ho una paura matta che me le usi contro come il Merlo, come il Poggi.
         Per cui te lo chiedo ora, come ultima spiaggia.

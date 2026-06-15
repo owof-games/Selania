@@ -390,9 +390,9 @@
 
             
             {charTag(PG, "neutral")}:                           Sei partito dicendo che fai schifo con le donne, criticandoti per l'amore che hai provato per Ava.
-                                                                Credi che la tua famiglia ti detesti.
-                                                                Che i tuoi amici se ne fregano di te.
-                                                                E che il tuo migliore amico si è allontanato da te per l'età che Donatella aveva quando vi siete conosciuti.
+                                                                Ti pesa il rapporto che hai con la tua famiglia.
+                                                                Dici che i tuoi amici se ne fregano di te.
+                                                                E il tuo migliore amico si è allontanato da te per l'età che Donatella aveva quando vi siete conosciuti.
 
             + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. Lo stai già facendo saltando gli incontri.
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
@@ -410,9 +410,8 @@
                     - grimoire_thirdChar has grimWitchThirdChar:
                                                                 Come ti ha detto anche {witch_actualName} quando avete parlato assieme.
                     }                                             
-                
+            
 
-                    
             + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra, un buono zio per tua sorella: porta queste cose nelle tue relazioni.
             {charTag(PG, "neutral")}:                           Non serve per forza essere quello che esce con mille ragazze.
                 {
@@ -429,7 +428,7 @@
                                                                 Pensa a quando ti sei messo lì ad ascoltare Petra per capire perché era arrabbiata per la rissa che avevi scatenato per difenderla.   
                 }                                               
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Il piccolo Armando ti adora: perché non riparti da lì con la tua famiglia?
+            + (air) \ {charTag(PG, "neutral")}:                 Adori il piccolo Armando: perché non riparti da lì con la tua famiglia?
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
                 {charTag(PG, "neutral")}:                       Lo stesso piccolo Armando che, mentre cucinavamo assieme, vedevi come "una vittoria" di tua sorella su di te.
@@ -438,7 +437,7 @@
                                                                 E se fosse invece l'occasione anche per te per riavvicinarti a loro?
                                                                 Perché se hai paura che ti detestino, alla fine di loro ti importa, no?
 
-            + (aether) \ {charTag(PG, "neutral")}:              Hai chiesto scusa a Donatella: forse la strada è continuare a prenderti le tue responsabilità. 
+            + (aether) \ {charTag(PG, "neutral")}:              Hai deciso di ascoltare cosa avesse da dirti Donatella: forse la strada è continuare a prenderti le tue responsabilità. 
             {charTag(PG, "neutral")}:                           Per le cose che sono accadute con tua sorella.
                                                                 Con tuo padre.
                                                                 Per il rapporto che hai coi ragazzi del calcetto.
@@ -468,12 +467,12 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
             {charTag(PG, "neutral")}:                           Hai detto di essere un fallimento come persona: per il lavoro che fai, per i problemi che hai con la casa.
-                                                                Per il rapporto col tuo coinquilino, che hai odiato a lungo, e a cui ora temi di somigliare.
+                                                                Per il rapporto col tuo coinquilino, che hai odiato a lungo, e a cui ora credi di somigliare.
                                                                 C'è il giudizio delle persone che ti conoscono, su come hai trattato Donatella.
                                                                 L'impossibilità di poterti definire ancora un <i>bravo ragazzo</i> ti toglie il fiato.
                                                                 E la soluzione che hai trovato: il bere.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Hai lottato per liberarti del rapporto con Ava, puoi battere anche l'alcool.
+            + (fire) \ {charTag(PG, "neutral")}:                Hai affrontato tuo padre, puoi battere anche l'alcool.
             {charTag(PG, "neutral")}:                           Quando le cose non vanno come vogliamo si fa quel che si può.
                                                                 E può starci come soluzione temporanea, ma poi c'è il momento di tirarsi indietro le maniche e affrontare il problema.
             
@@ -537,8 +536,10 @@
                                                                 Ma non continuare a pensare a ciò che avresti potuto ottenere.
                                                                 Al massimo, datti da fare!
         
-        + (water) \ {charTag(PG, "neutral")}:                   QUALCOSA SULLA MADRE.
-        {charTag(PG, "neutral")}:                               Commento    
+        + (water) \ {charTag(PG, "neutral")}:                   Però tuo padre ha ragione: continuare a seguire la promessa fatta a tua madre non ti farà bene.
+        {charTag(PG, "neutral")}:                               Sei arrivato ad un punto di crisi perché sei stato anche quel tipo di persona.
+                                                                Se vuoi vivere, stare bene, forse è arrivato il momento di provare qualcosa di diverso.
+                                                                Magari imparando proprio da tuo padre.    
                 
         + (earth) \ {charTag(PG, "neutral")}:                   Ma anche ora stai gettando nuove radici: col lavoro, con la casa.
         {charTag(PG, "neutral")}:                               Non sono soluzioni perfette forse, ma non sono per forza un punto d'arrivo.
@@ -595,7 +596,7 @@
                 } 
                                                                 Anche se ricordo ancora quando ci siamo presentat3, e mi hai detto che le ragazze adorano la tua pancetta da birra.
         
-        + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, che ha messo l'amicizia e la coscienza davanti al denaro?
+        + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, che ha messo i suoi valori davanti al denaro?
         {charTag(PG, "neutral")}:                               L'hai descritto come un fallito, per poi raccontarmi di qualcuno capace di mettere i propri valori e le persone a cui tiene davanti a tutto il resto.
                                                                 Ed è qualcosa che non svanisce come la bellezza, né che non si acquista coi soldi.   
                 

@@ -289,7 +289,7 @@
 
     {
         - grimoire_thirdChar has grimThirdCharSecondProposal:
-            Prima della riscrittura, la seconda, {charNameThree} ha detto a {player_name} di.
+            Prima della riscrittura, la seconda, {charNameThree} ha detto a {player_name} di sentirsi un fallimento nelle relazioni, come uomo, come persona. E che dopo le cose dette da Donatella e Poggi, non può più nemmeno sentirsi "un bravo ragazzo". E per questo {charNameThree} ha bisogno dell'aiuto di {player_name}: per trovare un modo per andare avanti.
     } 
 
     {
@@ -302,19 +302,19 @@
             Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(thirdChar_ActualName)}.</b></i>
     }
     {
-    - thirdChar_ActualName has Forum:
-        
-    
-    - thirdChar_ActualName has Canovaccio:
-    
+        - thirdChar_ActualName has Forum:
             
-    - thirdChar_ActualName has Sigaro:
+        
+        - thirdChar_ActualName has Canovaccio:
+        
+                
+        - thirdChar_ActualName has Sigaro:
 
 
-    - thirdChar_ActualName has Guantone:
+        - thirdChar_ActualName has Guantone:
 
 
-    - thirdChar_ActualName has Cerchio:
+        - thirdChar_ActualName has Cerchio:
 
     }
 
