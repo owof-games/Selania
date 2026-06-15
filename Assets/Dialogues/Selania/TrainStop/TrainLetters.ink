@@ -979,7 +979,57 @@
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
-        Nuovo evento blah blah blah.
+                Comunque è stata una settimana davvero di merda {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                In breve: il merda mi ha fatto di nuovo storie perché bevo mentre lavoro.
+                Gli ho risposto che devo conoscere le birre per consigliarle.
+                {letters_thirdCharLetterThreeChoice has fireC: Lui mi ha chiesto se è per quello che due lunedì fa sono entrato a locale chiuso a sfasciarmi|Mi ha risposto di non prenderlo per il culo.}
+                Mi ha detto che da ora posso prendere solo due medie a sera, e ha chiesto a Petra di controllarmi, ma le gli ha risposto che non è uno sbirro.
+                Però mi ha guardato preoccupata.
+                La sera dopo se ne entra mio padre, così a cazzo.
+                {
+                    - letters_thirdCharLetterTwoChoice has fireC: 
+                        Mi dice che dopo la sfuriata qui in locale, mia sorella sta male e che devo scrivergli.
+
+                    - else:
+                        {
+                            - letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has fireC or letters_thirdCharLetterFourChoice has earthC: 
+                                Mi ha detto che mia sorella è preoccupata perché non le rispondo da giorni, e gli ho detto che <>
+                            
+                                {
+                                    - letters_thirdCharLetterFourChoice has airC:
+                                        sono stato impegnato con la mia nuova compagna.
+
+                                    - letters_thirdCharLetterFourChoice has earthC:
+                                        sono stato impegnato a imparare la vita da uomini migliori di lui.
+
+                                    - letters_thirdCharLetterFourChoice has fireC:
+                                        sono stato impegnato a godermi la vita.
+
+                                    }
+
+                            - else:
+                                Ho sentito le mie palle cadere a terra e lasciarci due buchi grandi abbastanza da farci nuotare il Franchì.
+                        }
+                }
+                Ma non era lì per me, no.
+                Si mette nel tavolo grande, e dopo un po' arrivano altri tizi, persone che ho conosciuto a volte a calcetto, portate dal Poggi.
+                Due saluti, mi dicono cosa prendono, e poi arriva lui, il Poggi.
+                Mi fa giusto un cenno della mano e va a sedersi al tavolo con mio padre.
+                Gesù licantropo, CON MIO PADRE!
+                A metà serata è passato al banco per dirmi due cazzate, e che è lì con mio padre perché faranno un torneo per raccogliere fondi per la sua cazzo di associazione per vecchi.
+                {letters_thirdCharLetterTwoChoice has aetherC: Quella dove voleva mandarmi Marta per aiutarli.}
+                {letters_thirdCharLetterThreeChoice has fireC: Ho dato per scontato che dopo la sclerata che ho fatto al Merlo qualche tempo fa, non avrei potuto partecipare nemmeno se voglio.}
+                Tutto lì.
+                Mi dice "Stammi bene" e se ne torna al tavolo.
+                Ho chiesto a Petra di coprirmi mezz'ora, ho preso una media, le sigarette, e sono andato a tirare calci alle lattine dietro il bar.
+                Io la devo risolvere questa cosa con lui, {player_name}.
+                La devo risolvere o do fuoco a lui, al capo, a quella associazione di merda.
+                C'ho voglia di andarci a rissa, ma tanto tanto tanto.
+                Di menarlo come quando eravamo piccoli.
+                Sfasciargli il naso come a quei cazzo di turisti che hanno toccato il culo a Petra.
+                Dimmi cosa fare {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                Dimmi cosa fare per non fare un macello.
+
 ->->
 
 === letters_thirdCharLetters_five

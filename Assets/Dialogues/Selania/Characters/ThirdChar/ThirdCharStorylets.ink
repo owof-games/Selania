@@ -1365,7 +1365,8 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        {charTag(TheWitch, witch_state())}:                     Secondo {player_name}, qual è il consiglio più saggio per {charNameThree}?
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} ha bisogno dell'aiuto di {player_name} per chiarire la situazione con Poggi, senza fare un disastro.</i>
+                                                                <i>Qual è il consiglio di {player_name}?
 
         + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
 
