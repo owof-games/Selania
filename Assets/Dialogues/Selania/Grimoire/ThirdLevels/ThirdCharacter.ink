@@ -403,7 +403,7 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterSix:
             <b>Sesta lettera</b>
-            Ciao {player_name}! <>
+            Immagina. <>
             -> letters_thirdCharLetters_six -> 
     }
 

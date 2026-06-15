@@ -209,7 +209,7 @@
         -> third_char_closing_letters -> main
 
     = six
-    {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+    {charTag(Documents, "writer_thirdChar")}:      Immagina.
         -> letters_thirdCharLetters_six -> 
         -> third_char_letters_choices.six ->
         -> third_char_closing_letters -> main

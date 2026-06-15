@@ -1396,19 +1396,19 @@
         
         {charTag(TheWitch, witch_state())}:                     <i>C'è qualcosa che {player_name} vuole scrivere a {charNameThree}?</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Ciò che gli altri pensano dice molto di loro, non di te, che sia Poggi o che sia Donatella.
 
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (earth)\ {charTag(PG, "neutral")}:                    Non farlo ora, aspetta di sbatterle in faccia l'uomo nuovo che diventerai.
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:                     Per ricominciare da capo serve distruggere tutto, bruciare il passato.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + (water)\ {charTag(PG, "neutral")}:                    Le cose dette da Poggi ti hanno ferito, lascia perdere Donatella ora e chiedi aiuto a chi ti vuole bene.
                 
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   {charNameThree} non hai bisogno di una spirale autodistruttiva ma di un aiuto, che sia psicologico o spirituale.
                 
         -
 

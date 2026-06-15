@@ -295,6 +295,9 @@
                                 Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
                             }
                     }
+                    Facciamo comunque che ricominciamo da capo, circa.
+                    Cioè: mi son fatto una opinione su di te.
+                    Ma resetto più o meno tutto quello che mi hai detto fino ad ora.
 
                     {//Commento dono e cucina
                         - thirdChar_favouritesGifts ^ thirdChar_giftedObject != ():
@@ -324,7 +327,8 @@
                                     Di quando facevamo queste lunghe passeggiate per liberare gli uccellini intrappolati nelle reti dei cacciatori.
                                     E mi diceva che il valore di un uomo non si misura da chi batte, ma da chi aiuta.  
                                 }
-                    } 
+                    }
+                    
                     E ti dico tutta questa roba perché mia sorella è preoccupata.
                     E mi ha detto che se non mi do una sistemata, col cazzo che rivedo l'Armando.
                     Dice che sono rabbioso, impulsivo, egoista.
@@ -1164,7 +1168,7 @@
                 Lui è rimasto seduto lì sulla porta, ad aspettare che mi sedessi e mi sono sentito così coglione coglione coglione coglione.    
                 {third_char_letters_choices.four.aether or third_char_letters_choices.four.water: Tre volte coglione perché avrei dovuto ascoltarti.}
                 {third_char_letters_choices.four.fire:  Tre volte coglione perché ti ho ascoltato.}
-                Il ginocchio è ancora mezzo sfasciato.
+                Il ginocchio mi fa ancora un male boia.
 
             - earthC:
                 E così ho iniziato a dirgli che sto lavorando sulla mia vita.
@@ -1288,20 +1292,20 @@
                 "Alle cose che hai fatto a Dona."
                 Il mondo mi è tremato sotto i piedi {player_name}, non sono nemmeno stato capace di dire una parola.
                 "Quando ti sei messo con lei, tu avevi ventinove anni, e lei sedici. Una bambina, cazzo, una bambina."
-                "E io ora guardo Olivia e penso che se quando avrà sedici anni mi si presenta a casa con un uomo che potrebbe essere suo padre, io quell'uomo lo uccido."
+                "E io ora guardo Olivia e penso che se a sedici anni mi si presenta a casa con un uomo che potrebbe essere suo padre, io quell'uomo lo uccido."
                 Credo di aver sentito Amanda dietro la porta singhiozzare, ma non stavo più capendo nulla.
                 Nulla.
-                "Se io ti vedo, ti penso. Se anche solo <i>mi ricordo</i> di te, io penso a quel potenziale uomo. E voglio farti del male."
+                "Se io ti vedo. Ti penso. Se anche solo <i>mi ricordo</i> di te, io ho in testa solo quel potenziale uomo. E voglio farti del male. Un sacco di male."
                 Si alza, mi mette una mano sulla spalla.
-                "Non sono uno che rimpiange il passato. Ma faccio cose per non rimpiangere il futuro."
-                "Per cui ti chiedo di non cercarmi mai più. Né me, né Amanda o meno che meno Olivia."
-                Non ricordo ancora come sono tornato da casa sua a qui.
+                "Non sono uno che rimpiange il passato. Ma cerco di fare le cose giuste per non rimpiangere il futuro."
+                "Non cercarmi mai più. Né me, né Amanda o meno che meno Olivia. Se ci incrociamo, non salutarmi. Smettila con gli auguri di Natale, i compleanni. Non esisto più."
+                Non ricordo ancora come ci sono tornato a casa.
                 Ho il cellulare pieno di chiamate del capo e di messaggi che non sto guardando.
                 {
                     - letters_thirdCharLetterThreeChoice has airC: 
                             Anche se inizio a sentire la voglia di scrivere ai ragazzi del forum.
                     - letters_thirdCharLetterThreeChoice has fireC:
-                            Tanto chi vuoi che mi cerchi?
+                            Tanto chi mi dovrebbe scrivere? Qualche stronza ubriaca che ho scopato per noia?
                     - letters_thirdCharLetterThreeChoice has earthC:
                             Anche se inizio a sentire la mancanza della palestra.
                     - letters_thirdCharLetterThreeChoice has aetherC:
@@ -1311,12 +1315,12 @@
                 }
                 Ho lasciato fuori la cagnolina per una giornata, l'ho fatta entrare solo perché ero stanco dei suoi cazzo di abbai contro i passanti.
                 {thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar: {charNameOne} c'aveva ragione alla fine. Gli devo le mie scuse.}
-                Ho preso una decisione: chiederò a Donatella di parlarci, di bere una cosa assieme.
+                Ho preso una decisione: visto che è tornata per il matrimonio di una cugina o che, inviterò Donatella a bere una cosa assieme.
                 E le chiederò di spuntarmi addosso tutte le cose cose di merda che pensa di me.
-                Almeno se so quanto sono schifosa come persona, posso anche capire se c'è davvero qualcosa da cui ripartire o meno.
+                Almeno se so quanto sono schifosa come persona, posso anche capire se c'è davvero qualcosa da cui ripartire o se è il caso che vado a fondo e bona.
                 Se hai qualcosa di saggio da dirmi, sono qui.
                 
-->->
+        ->->
 
  === letters_thirdCharLetters_six
        ~ temp charNameOne = translator(firstChar_ActualName)
@@ -1325,27 +1329,42 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+                {
+                    - letters_thirdCharLetterFourChoice has airC: 
+                        Lui: un tizio che non sapeva nemmeno come utilizzare la mail, e che ora c'ha una fidanzata AI super intelligente.
+                    - letters_thirdCharLetterFourChoice has fireC:
+                        Lui: uno che si è finalmente ripreso dal virus del cazzo (letteralmente) e c'ha una tipa diversa tutte le sere.
+                    - letters_thirdCharLetterFourChoice has earthC:
+                        Lui: uno che vuole smetterla di piangersi addosso per aprire il suo baretto e diventare ricco.
+                    - letters_thirdCharLetterFourChoice has aetherC:
+                        Lui: uno che a 44 anni sta imparando a guardare il mondo in modo diverso.
+                    - letters_thirdCharLetterFourChoice has waterC:
+                        Lui: uno che ha appena rotto la relazione con una fidanzata virtuale, il cuore ancora ferito, anche se è orgoglioso del gesto che ha fatto.
+                }
+                Uno che ha appena perso il suo migliore amico.
+                Uno che vuole affrontare i suoi casini del passato, perché non ne può più di sentirsi bloccato.
+                Lei: una che non si presenta.
+                No, questa cosa della storiellina non funziona stasera.
+                Mentre ero al bar ho letto e riletto il tuo consiglio.
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.five.air: 
-                Recap scelta aria
+                E ho pensato che c'hai proprio ragione: se uno c'ha delle idee di merda su di me, è perché la merda è nel suo cervello, non su di me.
 
             - third_char_letters_choices.five.fire: 
-                Recap scelta fuoco
+                E la cosa di bruciare tutto mi correva proprio nella pancia e nelle mani. Basta pesi morti!
 
             - third_char_letters_choices.five.earth: 
-                Recap scelta terra
+                E sì, le sbatterò in faccia l'uomo che diventerò, lo farò un giorno, e magari lei vorrà pure tornare con me e le dirò di no mentre c'avrò la mia Tesla.
 
             - third_char_letters_choices.five.aether: 
-                Recap scelta spirito
+                Quella roba dello psicologo o del prete (o pensavi più a una cosa tipo sciamano? Strega?) e mi sono chiesto solo lì se non c'avevi ragione.
 
             - third_char_letters_choices.five.water: 
-                Recap scelta acqua
+                E mentre lei non arrivava ho capito che avevi ragione, che dovevo evitare questa roba e chiedere aiuto a una persona fidata.
 
         }
-
 
         //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
         {grimoire_thirdChar hasnt grimThirdCharLetterSix:
@@ -1353,15 +1372,21 @@
         - thirdChar_relationshipStatus == negative:
             {
             - third_char_letters_choices.five.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                    Ma c'ero arrivato da solo, grazie, non mi fido del tuo aiuto.
                 ~   letters_thirdCharLetterSixChoice += fireC
             
             - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                {
+                    - third_char_letters_choices.five.water or third_char_letters_choices.five.aether:
+                        E ho fatto per alzarmi, ma poi ho pensato che non mi fido ancora di te.
+                        E che era una scelta da sfigati, da gente che scappa.
+                    - else:
+                        Ma io non ho sentito quella tua risposta come sincera. O forse non mi fido di te {player_name}.    
+                }
+
                 ~   letters_thirdCharLetterSixChoice += fireC
             }
         - else:
-            E ho deciso di seguire il tuo consiglio.
             {
             - third_char_letters_choices.five.air: 
                 ~   letters_thirdCharLetterSixChoice += airC
@@ -1373,38 +1398,90 @@
                 ~   letters_thirdCharLetterSixChoice += earthC
 
             - third_char_letters_choices.five.aether: 
+                        Ho fatto per alzarmi.
                 ~   letters_thirdCharLetterSixChoice += aetherC
 
             - third_char_letters_choices.five.water: 
+                        Ho fatto per alzarmi.
                 ~   letters_thirdCharLetterSixChoice += waterC 
             }
         }       
         }
 
         //Step tre: gli esiti
+                Lei è entrata.
+                Mi ha sorriso, tutta abbronzata.
+                Qualche commento generale, poi il primo problema.
+                Arriva il cameriere, e chiedo a Dona se le va una weiss, lei mi dice che preferisce una west coast IPA.
+                Dico al cameriere di portarle una weiss perché tanto finisce che non le piacciono le birre amare.
+                "Cazzo, non hai smesso di farlo", mi dice lei, davanti al cameriere.
+                "Cosa?"
+                "Di prendere decisioni per me. Mi porti una West Coast, grazie".
+                Faccio finta di niente, e mi aggiorna su come vanno le cose in Spagna, sul lavoro che ama ma una socia con cui litiga.
+                "Ha voluto mettere una roba AI per proporre un restyling alle clienti ed è un disastro ma lei non vuole ascoltarmi".
+                Mi metto a difendere le AI fino a quando tra un tira e molla non mi scappa un commento su Ava, e mi chiede chiarimenti.
+                Le racconto la situazione, facendole anche capire come stavo di merda quando lei se ne è andata, e il suo unico commento è: "Continui a preferire chi non sa dirti di no, vedo".
+                Lascio passare anche questa perché sono qui proprio per capire, imparare, giusto?
+                {letters_thirdCharLetterFourChoice has waterC or letters_thirdCharLetterThreeChoice has aetherC: Le dico giusto che ora l'ho lasciata, Ava.}
+                Glielo dico anche, che sto cercando di cambiare.
+
+
         {letters_thirdCharLetterSixChoice:
             - airC:
-            Evento aria.
+                E le dico che lo faccio per me, non per lei, perché se lei mi ha lasciato è solo perché mi vedeva male ed è lei ad essere malata, come mi hai detto tu.
+                Ha iniziato a ridermi in faccia.
+                Stava quasi per svenire.
+                E poi mi fa: "Ho vinto la scommessa".
+                "Quale fottuta scommessa?!?"
+                "Avevo detto alla mia migliore amica che avresti fatto la vittima prima dell'arrivo della birra. Lei era convinta che avresti aspettato almeno di pagare il conto."
+                Non mi sono mai sentito così umiliato.
+                Fanculo te e le tue idee.
+                Dovevo trovare un modo per venirmene fuori comunque.
 
             - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.five.aether or third_char_letters_choices.five.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.five.fire:  Non ti avrei dovuto ascoltare.}
+                Rinfacciandole tutto.
+                Il modo in cui mi ha lasciato all'altare.
+                Il non volere dei figli.
+                Il litigio davanti ai suoi genitori.
+                I biglietti per New York.
+                Tutto.
+                Ero rosso in viso, il cameriere è anche venuto a vedere se andava tutto bene e mi sono incazzato.
+                Lei non ha detto niente fino a quando non ho finito e a quel punto mi fa: "Come sono felice di averti lasciato. Dio come cazzo sono felice di averti lasciato."
+                Non mi sono mai sentito così umiliato.
+                {third_char_letters_choices.five.aether or third_char_letters_choices.five.water: Dovevo ascoltarti e non venire, Gesù licantropo.}
+                {third_char_letters_choices.five.fire: Ed è tutta colpa dei tuoi consigli di merda.}
+                Ma dovevo uscirne vincitore, dovevo.
 
 
             - earthC:
-            Evento terra.
-
-
+                E visto che mi hai detto quella cosa dell'uomo che sarò, le parlo del lavoro ora e dell'idea che ho di coinvolgere Petra nella gestione di un altro bar, e lei mi dice che quello non sarà mai il mio lavoro.
+                "In che senso?"
+                "Perché tu sei sempre stato una diva. Ti piace stare al centro dell'attenzione, fare casino. Per questo amavi il vecchio lavoro. Mentre in birreria il palco è per il cliente."
+                Abbiamo iniziato a litigare su questa cosa.
+                Continuavo a mandarti maledizioni, perché è stata un'idea del cazzo.
+                Ma volevo trovare il modo di avere ragione.
+                
             - aetherC:
-            Evento spirito.
-
+                E che una persona amica (tu) mi ha suggerito di andare da uno psicologo.
+                (Non le ho detto la roba dello stregone perché mi sembrava troppo).
+                Lei si è mostrata sorpresa, e mi ha chiesto cosa mi avesse fatto cambiare idea.
+                Le chiedo perché e mi dice che quando stavamo assieme me l'aveva detto più volte, ma non l'ho mai voluta ascoltare.
+                E lì ho negato tutto e lei si è incazzata.
+                Ma la tua idea era buona, è la mia testa che fa cagare.
+                Così cagare che invece di chiedere scusa ho cercato solo di avere ragione.
 
             - waterC:
-            Evento acqua.
+                E che sto cercando di imparare a chiedere aiuto alle persone care.
+                Lei mi dice "Sono felice che la stai smettendo col superuomo".
+                Le chiedo cosa intende, e lei mi dice che ha provato più volte a dirmi di chiedere aiuto se qualcosa non andava, ma io mi incazzavo.
+                E che avevo come modelli "dei coglioni come il Merlo o il Giova" e che questo era metà del problema nella nostra relazione.
+                Mi sono zittito, rendendomi conto che forse avrei potuto imparare molte cose da lei e non so perché ma questa cosa mi ha fatto incazzare e così le ho detto delle robe merdose e lei ha fatto il paro ma.
+                Il tuo suggerimento era buono.
+                Solo l'hai dato alla persona più idiota di questo pianeta.
+                Che in quel momento aveva in testa solo la voglia di avere ragione.
 
         }
-
+                
         //Step quattro: variazione della relazione e dei contatori. La faccio separatamente per evitare che si ripeta ogni volta che consulto la lettera nel grimorio.
         {grimoire_thirdChar hasnt grimThirdCharLetterSix:
             //Setto anche la variabile che non va a far reagire le png, e mi gestisce solo PNG3
@@ -1436,7 +1513,41 @@
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
-        Nuovo evento blah blah blah.
+                Le ho detto che non sono l'uomo che conosce.
+                    {letters_thirdCharLetterThreeChoice:
+                        -airC:
+                            E che ho imparato anche a conoscere nuove persone online, persone con cui condividere i problemi e sentirmi meno solo.
+                        
+                        -waterC:
+                            E che ora ho anche un nuovo amico, Rocco, che ci beviamo qualcosina e chiacchieriamo.
+                            
+                        -earthC:
+                            Che sto anche andando in palestra, io che mi vantavo della pancia da birra.
+
+                        -aetherC:
+                            Che ho un'amica lesbica e faccio i giochi di ruolo con la sua fidanzata.
+
+                        -fireC:
+                            Ma non ho detto niente su alcool e tipette, non avrebbe capito.
+                    }
+                Ma poi mi è saltata fuori la roba del Poggi, così, come se la mia lingua c'avesse una cosa tutta sua.
+                Lei mi ha risposto che è una cosa complicata.
+                "Luca (il nome del Poggi) ha ragione, ma sai quante volte ho litigato con mio papà per questa cosa? E non volevo sentirlo perché tutto ti dice che uscire con un tipo grande è una cosa da fighe, e io volevo essere figa. Le mie amiche pensavano che fossi figa. I ragazzi della mia età mi vedevano come una dea. Uscivo con uno con un lavoro figo, soldi, un bell'appartamento. Ti ricordi tutte le cose che mi regalavi? Ero come la reginetta di un telefilm americano."
+                Si scola mezza birra.
+                Si vede che le piace davvero la birra amara.
+                Certe cose cambiano.
+                "Tu sei stato stronzo ad uscire con me quando ero così piccola. Ma c'è tutto un mondo che ti dà ragione: non lo vedevo io all'epoca, e mi sa che ancora non lo vedi manco tu."
+                "Non sei una persona cattiva. Puoi essere un grande idiota, ma non sei una persona cattiva. È che non ti fai mai domande."
+                "E io a un certo punto ho iniziato a farmi domande, e mi sono resa conto che tutte le risposte che avevo erano le tue, e non volevo sposarmi e diventare una mamma senza sapere le mie di risposte."
+                "E sei così incapace di farti domande, che mi hai ascoltata, ma non hai capito un cazzo di quello che ho detto, e sei andato in giro a dire le peggio cose su di me."
+                "Per quello ti ho urlato così tanto addosso l'ultima volta che ci siamo visti. E per questo ho lasciato questo buco."
+                "Per non diventare come te."
+                "Io non sono Luca, non credo che ti ammazzerei. Ma nessun uomo dovrebbe mettersi con una ragazzina."
+                Si scola tutta la birra, e lascia che io dica qualcosa.
+                Ma non so cosa dire.
+                Si alza, lascia i soldi al cameriere mentre resto lì e mi dice.
+                "Se davvero vuoi cambiare, devi fare pace con tuo padre. È l'unico uomo da cui dovresti imparare qualcosa."
+                E mi ha lasciato lì, dicendomi di affrontare il mio nemico finale.
 
 ->->    
 

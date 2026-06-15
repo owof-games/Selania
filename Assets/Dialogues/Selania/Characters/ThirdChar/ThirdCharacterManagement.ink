@@ -306,3 +306,17 @@
             Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
 }
 
+
+    //Prima aggiorno l'ultimo stato delle scelte, così che comunque una traccia di quello che abbiamo fatto fino a quel momento rimanga
+    ~ thirdChar_last_aether = thirdChar_aether
+    ~ thirdChar_last_earth = thirdChar_earth
+    ~ thirdChar_last_air = thirdChar_air
+    ~ thirdChar_last_water = thirdChar_water
+    ~ thirdChar_last_fire =  thirdChar_fire
+
+    //Poi resetto i contatori, perché sennò per la giocatrice è impossibile con sole 6 scelte cambiare qualsiasi cosa
+    ~ thirdChar_aether = 0
+    ~ thirdChar_earth = 0
+    ~ thirdChar_air = 0
+    ~ thirdChar_water = 0
+    ~ thirdChar_fire = 0
