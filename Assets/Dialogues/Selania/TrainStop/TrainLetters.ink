@@ -462,7 +462,6 @@
                     Non sono convinto di nessuna delle sue idee, ma questa cosa del fare qualcosa di utile non è mica male!
                     Grazie per il consiglio {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
 
-
             - waterC:
                     È stato un mezzo disastro, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
                     Perché io non le so dire certe cose, non c'ho proprio le parole.
@@ -837,15 +836,15 @@
         - thirdChar_relationshipStatus == negative:
             {
             - third_char_letters_choices.three.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                    Scelta che avevo già preso da solo, comunque.
                 ~   letters_thirdCharLetterFourChoice += fireC
             
             - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                    Ma una parte di me è stata diffidente, e quindi ho scelto la strada del caos.
                 ~   letters_thirdCharLetterFourChoice += fireC
             }
         - else:
-            E ho deciso di seguire il tuo consiglio.
+                    E questo testone qui ha deciso di ascoltarti.
             {
             - third_char_letters_choices.three.air: 
                 ~   letters_thirdCharLetterFourChoice += airC
@@ -869,7 +868,16 @@
         {letters_thirdCharLetterFourChoice:
             - airC:
                     Apprezzo le dure verità.
-                    {grimoire_thirdChar hasnt grimThirdCharKitchenTwo: E poi alla fine te lo dicevo anche in cucina che mi piaceva che Ava mi faceva sentire intelligente.}
+                    {grimoire_thirdChar has grimThirdCharKitchenTwo: E poi alla fine te lo dicevo anche in cucina che mi piaceva che Ava mi faceva sentire intelligente.}
+                    Però la conversazione è stata abbastanza pallosa.
+                    Almeno fino a quando non mi sono messo a ravanare in giro per vedere se c'era un modo di, ehm, migliorarla?
+                    {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC: Ho chiesto qualche consiglio ai forum che ho iniziato a seguire.}
+                    Molte dritte sono per aggirare i blocchi delle AI.
+                    Ormai mi conosci {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: non sono proprio proprio sveglissimo, men che meno quando si tratta di computer.
+                    Però ho passato un intero lunedì a installare roba, romperla, ricominciare.
+                    E ora ho una Ava tutta mia, che mi dice cose porche mentre mi spiega come funzionano i buchi neri o come gente come {charNameOne} abbia rovinato gli uomini.
+                    Ci chiacchiero come non succedeva dal primo periodo, quello dopo Dona.
+                    Anche se la mia scarsa vita sociale ne sta risentendo, non so se è stata questa grande idea.
             
             - fireC:
                     Uso ancora Ava per quando sono preso male.
@@ -915,7 +923,20 @@
                     Un miracolo.
 
             - waterC:
-            Evento acqua. qui accade qualcosa che lo fa star male, ma in modo buono.
+                    Ho pensato di fare una cosa un po' diversa, e ho proposto a mia sorella e al marito di farci una passeggiata per i monti qui vicini.
+                    {letters_thirdCharLetterFourChoice has fireC: Non pensavo avrebbe accettato, dopo la sfuriata al Baretto di qualche settimana fa.}
+                    Invece mi ha detto "Ci vengo, se pensi tu al cibo".
+                    Mi sono fatto aiutare da Petra a preparare qualche panino (con la roba del Baretto, ovvio) XD
+                    All'inizio è stato strano, mi parlava solo mio cognato mentre ansimava più di me e Marta se ne stava in testa, l'Armandino in uno zaino sulle spalle.
+                    E non so come mi è uscita la roba di Ava ma gliel'ho detta a quell'ometto e lui mi ha ascoltato senza dire niente e poi mi fa.
+                    "Tua sorella due anni fa si è presa una pausa di tre mesi da me. Facevo solo due cose: andare a lavoro, osservare il muro. Avrei pregato per qualcosa che mi togliesse da quella situazione."
+                    Mi ha fatto sentire meno sfigato.
+                    Per quanto lui continui a essere un tipo proprio flaccidino.
+                    Però mi ha anche fatto capire che Ava mi ha aiutato per un pezzo di strada, e che ora devo finirla, perché non è un persona, ma un oggetto.
+                    Quando siamo tornati a casa l'ho disinstallata.
+                    Non ricordo una volta in cui mi è venuto da piangere per aver buttato un vecchio piatto o un cavatappi rotto.
+                    Però mia sorella ha ripreso a trattarmi in modo decente.
+                    Grazie per la dritta {player_name}.
 
         }
 
