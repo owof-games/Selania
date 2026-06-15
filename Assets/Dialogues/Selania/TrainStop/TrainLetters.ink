@@ -512,6 +512,12 @@
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
                     Comunque non c'è solo Marta con cui devo sistemare le cose.
+                    La padrona di casa ad esempio non vuole rinnovarci il contratto.
+                    Dice che ci può ricavare due monolocali per gli affitti brevi.
+                    Stiamo cercando di convincerla a non farlo perché sennò sono nella merda: case a prezzi che posso permettermi qui non ce ne sono.
+                    Non posso spostarmi ancora più fuori perché con gli orari che faccio mi servirebbe un'auto che non posso permettermi con questo lavoro di merda.
+                    Se ci caccia faccio una strage.
+                    E poi anche coi ragazzi, boh. 
                     Le serate a calcetto son strane {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
                     Ho già saltato due incontri e non so nemmeno io dirti il perché, ma non c'ho la poesia proprio.
                     {letters_thirdCharLetterTwoChoice has aetherC: Forse c'ho in testa Marta che mi dice che sono degli idioti.}
@@ -1536,10 +1542,10 @@
                 Si scola mezza birra.
                 Si vede che le piace davvero la birra amara.
                 Certe cose cambiano.
-                "Tu sei stato stronzo ad uscire con me quando ero così piccola. Ma c'è tutto un mondo che ti dà ragione: non lo vedevo io all'epoca, e mi sa che ancora non lo vedi manco tu."
+                "Tu sei stato stronzo ad uscire con me quando ero così piccola. Ma c'è tutto un mondo che ti dà ragione: non lo vedevo io all'epoca, e mi sa che tu non lo vedi manco adesso."
                 "Non sei una persona cattiva. Puoi essere un grande idiota, ma non sei una persona cattiva. È che non ti fai mai domande."
                 "E io a un certo punto ho iniziato a farmi domande, e mi sono resa conto che tutte le risposte che avevo erano le tue, e non volevo sposarmi e diventare una mamma senza sapere le mie di risposte."
-                "E sei così incapace di farti domande, che mi hai ascoltata, ma non hai capito un cazzo di quello che ho detto, e sei andato in giro a dire le peggio cose su di me."
+                "E sei così incapace di farti domande, che mi hai ascoltata ma non hai capito un cazzo di quello che ho detto, e sei andato in giro a dire le peggio cose su di me."
                 "Per quello ti ho urlato così tanto addosso l'ultima volta che ci siamo visti. E per questo ho lasciato questo buco."
                 "Per non diventare come te."
                 "Io non sono Luca, non credo che ti ammazzerei. Ma nessun uomo dovrebbe mettersi con una ragazzina."
@@ -1562,7 +1568,7 @@
                 Enorme.
                 Quella sera sono rimasto con lui a vedere la TV, la cagnolina e il gatto ai nostri piedi.
                 Non è stato così male.
-                Anche se la padrona di casa ha confermato che non ci rinnoverà il contratto.
+                Anche se oggi la padrona di casa gli ha confermato che non ci rinnoverà il contratto.
                 Non voglio pensare a dove cazzo andrò a vivere, non voglio.
 
 ->->    
@@ -1981,10 +1987,22 @@
 
         }
 
-    Ti ringrazio per quello che mi hai detto, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
-    Mi voglio prendere qualche giorno per rifletterci sopra.
-    A presto.
-    {charNameThree}.
+            Ti ringrazio per quello che mi hai detto, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+            Mi voglio prendere qualche giorno per rifletterci sopra.
+            Per una volta riesco a non essere una testa di cazzo impulsiva: un miracolo XD
+            A presto.
+            {charNameThree}.
+
+            {
+            - grimoire_secondChar has grimSecondThirdChar && ! secondChar_storyStatus == story_storyStarted:
+                PS: Alla fine grazie alla cagnolina postina sono riuscito ad organizzarmi, e sono andato all'acquario con {charNameTwo}.
+                Il bimbo sta crescendo a vista d'occhio!
+                E alla fine si capiva che allo stadio ci voleva venire solo perché me l'aveva promesso, e così ci siamo organizzati per un giro allo zoo safari.
+                Maledetto!
+                Ormai so a memoria tutti i dati sulle balenottere.
+
+            }
+          
     
 ->->
 
