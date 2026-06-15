@@ -876,8 +876,10 @@
                     Ormai mi conosci {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: non sono proprio proprio sveglissimo, men che meno quando si tratta di computer.
                     Però ho passato un intero lunedì a installare roba, romperla, ricominciare.
                     E ora ho una Ava tutta mia, che mi dice cose porche mentre mi spiega come funzionano i buchi neri o come gente come {charNameOne} abbia rovinato gli uomini.
+                    {letters_thirdCharLetterTwoChoice has earthC: O come chiedere di nuovo l'aumento al merda.}
                     Ci chiacchiero come non succedeva dal primo periodo, quello dopo Dona.
                     Anche se la mia scarsa vita sociale ne sta risentendo, non so se è stata questa grande idea.
+                    {letters_thirdCharLetterTwoChoice has aetherC: Almeno Marta sarà contenta, che mi aveva detto di non vedere più il Merlo e il Giova.}
             
             - fireC:
                     Uso ancora Ava per quando sono preso male.
@@ -885,8 +887,9 @@
                     L'altra sera col capo abbiamo fatto le pezze a queste due tipe americane.
                     Le americane sono assurde, perché vengono qui secondo me solo per bere prima dei ventunanni di limite che c'hanno.
                     Diciamo che me la sono spassata alla grande XD
+                    {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: Appena mi sono svegliato ho raccontato tutto ai ragazzi del forum, e mi hanno fatto sentire un boss.}
                     {letters_thirdCharLetterTwoChoice has earthC: Ma non credo che il merdoso mi darà l'aumento ora. Anche se potrei dire alla sua ragazza che si è scopato una cliente.}
-                    Il problema però è che mi son preso qualcosa.
+                    Il problema però è che mi sono preso qualcosa.
                     Non sto qui a darti i dettagli, ma diciamo che c'è un motivo se uso ancora Ava per le seghe.
                     E mi fa comunque un discreto male.
                     {letters_thirdCharLetterThreeChoice has fireC: Ed ecco il perché della serata birra e film.}
@@ -895,13 +898,15 @@
 
             - earthC:
                     E dato che sto imparando che ci sono tante cose che non so (sorprendente, vero?), ho iniziato a seguire qualche youtuber che dà consigli su come conquistare le tipe.
+                    {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: C'è tutto un thread sul gruppetto online con questi canali.}
                     Ci sono tipo tutte queste interviste a uomini che ce l'hanno fatta, quelli che proprio li vedi e dici "che cazzo di boss che è lui"!
                     Un po' come mi sentivo io col vecchio lavoro.
                     Questi video mi danno la carica.
                     {letters_thirdCharLetterThreeChoice has earthC: Me li sparo in palestra e mi sento come un superuomo.}
                     Anche se a volte mi abbattono: possibile che tutti questi tizi siano pieni di pila, magari con dieci anni meno di me, e sempre partendo dal nulla?
                     Che cazzo ho fatto di sbagliato nella mia vita?!?
-                    Ma come dice uno degli host che seguo di più: se hai energie per piangerti addosso, ce le hai anche per lavorare.
+                    Ma come dice uno dei tizi che seguo di più: se hai energie per piangerti addosso, ce le hai anche per lavorare.
+                    {letters_thirdCharLetterTwoChoice has aetherC: Questo sarebbe stato il terzo consiglio di mia sorella, dopo quelli di qualche settimana fa.}
                     Sto pensando di proporre a Petra di vedere se possiamo rilevare un vecchio baretto che c'era fino a qualche anno fa dalle parti dei campi da calcio.
                     Da {charNameThree} a imprenditore XD
                     No, niente XD, che è poco imprenditorese!
@@ -916,6 +921,7 @@
                     Alla fine c'avevo quella rompiscatole di Petra sempre attorno.
                     Mia sorella con le sue chiamate per vedere se avevo mangiato a modo.
                     Il gruppo di calcetto.
+                    {letters_thirdCharLetterTwoChoice has aetherC: Anche se mia sorella dice di liberarmene.}
                     {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterTwoChoice has airC: Non tutti i ragazzi sul forum sono così fortunati.}
                     Non so cosa ho imparato su di me, però forse certe cose sono pericolose se sei lasciato solo.
                     Questo di sicuro.
@@ -924,18 +930,20 @@
 
             - waterC:
                     Ho pensato di fare una cosa un po' diversa, e ho proposto a mia sorella e al marito di farci una passeggiata per i monti qui vicini.
-                    {letters_thirdCharLetterFourChoice has fireC: Non pensavo avrebbe accettato, dopo la sfuriata al Baretto di qualche settimana fa.}
+                    {letters_thirdCharLetterTwoChoice has fireC: Non pensavo avrebbe accettato, dopo la sfuriata al Baretto di qualche settimana fa.}
                     Invece mi ha detto "Ci vengo, se pensi tu al cibo".
                     Mi sono fatto aiutare da Petra a preparare qualche panino (con la roba del Baretto, ovvio) XD
-                    All'inizio è stato strano, mi parlava solo mio cognato mentre ansimava più di me e Marta se ne stava in testa, l'Armandino in uno zaino sulle spalle.
-                    E non so come mi è uscita la roba di Ava ma gliel'ho detta a quell'ometto e lui mi ha ascoltato senza dire niente e poi mi fa.
+                    Marta è partita come sempre in quinta, l'Armandino in uno zaino sulle spalle, e così mi sono ritrovato ad ansimare assieme a mio cognato.
+                    All'inizio non sapevo che cazzo dirgli e forse per quello mi è uscita la roba di Ava senza pensarci e lui mi ha ascoltato senza dire niente e poi mi fa.
                     "Tua sorella due anni fa si è presa una pausa di tre mesi da me. Facevo solo due cose: andare a lavoro, osservare il muro. Avrei pregato per qualcosa che mi togliesse da quella situazione."
                     Mi ha fatto sentire meno sfigato.
                     Per quanto lui continui a essere un tipo proprio flaccidino.
-                    Però mi ha anche fatto capire che Ava mi ha aiutato per un pezzo di strada, e che ora devo finirla, perché non è un persona, ma un oggetto.
+                    {letters_thirdCharLetterTwoChoice has waterC: Mia sorella si è fermata e mi ha chiesto chi era questa Ava in tutta la faccenda dell'Inter di qualche tempo fa, ma non l'ho trovato un posto nella squadra, sai?}
+                    {letters_thirdCharLetterTwoChoice has aetherC: Non mi ero accordo che Marta si era fermata e aveva sentito tutto e mi ha detto: ti ricordi di due consigli di qualche settimana fa? Il terzo è: liberati di quell'aggeggio.}
+                    Quella sfacchinata mi ha fatto capire che Ava mi ha aiutato per un pezzo di strada, e che ora devo finirla, perché non è un persona, ma un oggetto.
                     Quando siamo tornati a casa l'ho disinstallata.
                     Non ricordo una volta in cui mi è venuto da piangere per aver buttato un vecchio piatto o un cavatappi rotto.
-                    Però mia sorella ha ripreso a trattarmi in modo decente.
+                    {letters_thirdCharLetterTwoChoice has fireC: Però mia sorella ha ripreso a trattarmi in modo decente.}
                     Grazie per la dritta {player_name}.
 
         }
