@@ -1548,6 +1548,20 @@
                 Si alza, lascia i soldi al cameriere mentre resto lì e mi dice.
                 "Se davvero vuoi cambiare, devi fare pace con tuo padre. È l'unico uomo da cui dovresti imparare qualcosa."
                 E mi ha lasciato lì, dicendomi di affrontare il mio nemico finale.
+                Io...
+                Sto sentendo le energie che stanno finendo.
+                Da quando sono tornato sto solo affrontando situazioni.
+                Donatella mi ha detto delle cose pesanti, ma sensate.
+                Per cui mi fiderò di lei e parlerò con mio padre.
+                Sai così tante cose su di me {player_name}: dove pensi dovrei invitarlo per parlargli?
+                Qualcosa che renda questa cazzo di conversazione meno faticosa?
+                Ti rispedisco la cagnolina.
+                {charNameThree}.
+                Dimenticavo: la cagnolina e Ronaldo, il gatto del coinquilino, sono migliori amici ormai.
+                E tornando dopo la bevuta con Dona, mi sono reso conto che odio così tanto lo Stracciamaroni perché c'ho una paura enorme di finire come lui.
+                Enorme.
+                Quella sera sono rimasto con lui a vedere la TV, la cagnolina e il gatto ai nostri piedi.
+                Non è stato così male.
 
 ->->    
 
@@ -1558,25 +1572,26 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
-        Nella lettera precedente mi hai detto che:
+                La chiacchierata con mio padre, è andata.
 
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.six.air: 
-                Recap scelta aria
+                Mi hai suggerito di farla al telefono, così che potessi essere pura razionalità.
 
             - third_char_letters_choices.six.fire: 
-                Recap scelta fuoco
+                Mi hai consigliato di portarlo al campetto da calcio, per fagli vedere quanto sono forte.
 
             - third_char_letters_choices.six.earth: 
-                Recap scelta terra
+                Mi hai consigliato di andare al Baretto, il luogo della sua sconfitta.
 
             - third_char_letters_choices.six.aether: 
-                Recap scelta spirito
+                Mi hai consigliato di chiamare anche mia sorella, per un po' di aiuto.
+                {letters_thirdCharLetterTwoChoice has fireC: Nonostante lo sclero che mi ha fatto al Baretto mesi fa.}
 
             - third_char_letters_choices.six.water: 
-                Recap scelta acqua
-
+                Mi hai consigliato di portarlo in un posto legato a mamma, per avercela vicina.
+                
         }
 
         //Step due: aggiornamento variabili per capire come Boccale ha agito dopo il nostro suggerimento.
@@ -1585,15 +1600,15 @@
         - thirdChar_relationshipStatus == negative:
             {
             - third_char_letters_choices.six.fire:
-            Ho fatto esattamente così ma non perché mi fido di te, ma perché ci ero arrivato da solo.
+                E il campetto era la scelta ovvia, ci avevo pensato da solo, ci sono andato nonostante non mi fido di te.
                 ~   letters_thirdCharLetterSevenChoice += fireC
             
             - else:
-            Ma non mi fido ancora di te, e quindi ho deciso di seguire il mio istinto.
+                Io questa fiducia però nelle tue scelte non ce l'ho {player_name}, e così ho seguito il mio intuito.
                 ~   letters_thirdCharLetterSevenChoice += fireC
             }
         - else:
-            E ho deciso di seguire il tuo consiglio.
+
             {
             - third_char_letters_choices.six.air: 
                 ~   letters_thirdCharLetterSevenChoice += airC
@@ -1616,24 +1631,54 @@
         //Step tre: gli esiti
         {letters_thirdCharLetterSevenChoice:
             - airC:
-            Evento aria.
+                Ma non so se la <i>pura razionalità</i> era la cosa di cui avevo bisogno.
+                Perché venivo da due incontri pesanti, che mi hanno fatto sentire una merda.
+                E forse alla fine ero lì per sentire il mio vecio e <i>sentire</i> qualcosa.
+                Qualcosa di diverso da lui che è in imbarazzo dall'altra parte della linea e non sa come iniziare la conversazione.
 
             - fireC:
-            Evento fuoco.
-            {third_char_letters_choices.six.aether or third_char_letters_choices.six.water:  Avrei dovuto ascoltarti invece di fare di testa mia.}
-            {third_char_letters_choices.six.fire:  Non ti avrei dovuto ascoltare.}
-
+                I primi due minuti sono stati divertenti.
+                Il pallone calciato nella rete con tutta la violenza possibile.
+                I muscoli tesi.
+                Il fiatone del corpo che inizia ad avviarsi.
+                Ma mio padre non è mai stato uno sportivo.
+                Ed è <b>impossibile</b> parlare mentre corri dietro a una palla.
+                C'ho provato ancora un po' ma mi sono sentito solo un grandioso coglione.
+                {third_char_letters_choices.six.aether or third_char_letters_choices.six.water: La tua idea era migliore, scusa.}
+                {third_char_letters_choices.six.fire: Vorrei capire che cazzo ti è saltato in testa.}
+                Mi sono dovuto sedere sulla panchina accanto a lui.
+                Sudato e ansimante.
 
             - earthC:
-            Evento terra.
-
+                Non è stata una buona idea, ma proprio zero.
+                Primo: mio padre conosce un sacco di gente, più di me che lavoro lì da anni.
+                Secondo: conosce il mio capo e si stanno simpatici.
+                Terzo: Petra che mi continuava a controllare per vedere se stavo bene e mi faceva sentire più un ragazzetto che non l'uomo che volevo far vedere a mio padre.
+                Così alla fine con la scusa del rumore ho preso le birre e gli ho detto "Mettiamoci sul retro, va".
+                Lui se ne è venuto così, tranqui.
+                Sembrava casa sua.
+                Ti ho odiato per questo cazzo di consiglio.
 
             - aetherC:
-            Evento spirito.
-
+                Mia sorella ci ha invitati a casa sua, con l'Armando che dormiva nella cameretta accanto.
+                Ma invece di rimanere vicino, ci ha detto: "Se Armando non dorme il pomeriggio, la mia notte diventa un inferno."
+                "E se questa notte dovrò vivere un inferno, domattina io sarò per voi direttamente Satana."
+                "Quindi vedete di non urlare."
+                Mi sono messo a ridere, e ha riso anche papà.
+                Avrei voluto avercela vicina, ma sapere che era lì, nella stanza accanto, mi ha fatto sentire più sereno.
+                Hai avuto una bella idea {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                Grazie.
 
             - waterC:
-            Evento acqua.
+                Siamo andati al cimitero.
+                Perché non ci andavo da tantissimo.
+                Mi fa sentire così spaventato, non so perché.
+                È rilassante, ma troppo.
+                Petra mi ha detto di portare dei fiori per mamma.
+                Quando papà è arrivato era tutto in imbarazzo.
+                Siamo stati un po' di tempo davanti alla tomba, in silenzio.
+                Mi ha detto che i fiori erano davvero belli.
+                È stata una buona partenza, grazie per la dritta {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
 
         }
 

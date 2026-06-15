@@ -1421,21 +1421,22 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        {charTag(TheWitch, witch_state())}:                     Quale consiglio riceverà {charNameThree}?
+        {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} vorrebbe invitare il padre a parlare in un posto che renda la conversazione per {charNameThree} meno faticosa.</i>
+                                                                <i>Qual è il consiglio di {player_name}?</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
+        + (air)\ {charTag(PG, "neutral")}:                      Fallo per telefono: niente distrazioni fisiche o espressioni facciali, pura razionalità.
 
                 
-        + (earth)\ {charTag(PG, "neutral")}:                    Cosa ti renderà più stabile? Da quali fondamenta parti?
+        + (earth)\ {charTag(PG, "neutral")}:                    Al Baretto, per ricordargli cosa ha perso.
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Cosa vuoi? Come puoi cambiare questa situazione?
+        + (fire)\ {charTag(PG, "neutral")}:                     Al campetto di calcio, così gli fai vedere nel mentre quanto sei forte.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+        + (water)\ {charTag(PG, "neutral")}:                    Un posto legato a tua madre, così che tu possa sentirla vicina.
                 
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
+        + (aether)\ {charTag(PG, "neutral")}:                   Invita anche tua sorella, così che possa aiutarvi ad affrontare il discorso.
                 
         -
 

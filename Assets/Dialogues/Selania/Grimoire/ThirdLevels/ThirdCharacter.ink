@@ -410,14 +410,14 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterSeven:
             <b>Settima lettera</b>
-            Ciao {player_name}! <>
+            È andata. <>
             -> letters_thirdCharLetters_seven -> 
     }
 
     {
         - grimoire_thirdChar has grimThirdCharLetterEight:
             <b>Ottava lettera</b>
-            Ciao {player_name}! <>
+            {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}. <>
             -> letters_thirdCharLetters_eight -> 
     }
     

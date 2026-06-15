@@ -215,13 +215,13 @@
         -> third_char_closing_letters -> main
 
     = seven
-    {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+    {charTag(Documents, "writer_thirdChar")}:      È andata.
         -> letters_thirdCharLetters_seven -> 
         -> third_char_letters_choices.seven ->
         -> third_char_closing_letters -> main
 
     = eight
-     {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+     {charTag(Documents, "writer_thirdChar")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}.
         -> letters_thirdCharLetters_eight -> 
         -> third_char_closing_letters -> 
         // E aggiornamento nome, anche se non avremo feedback sul momento. Lo facciamo ora e non dopo la proposta della settima lettera, o finiamo per avere nell'ottava lettera già presente il nome nuovo
