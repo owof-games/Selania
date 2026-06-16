@@ -368,13 +368,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.vanbassum.wakatime": {
-      "version": "https://github.com/vanBassum/Wakatime.Unity.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "37a618a46cf33a9bce760c90eecf4bf2a3c9664a"
-    },
     "it.lemurivolta.ink-translate": {
       "version": "0.5.0",
       "depth": 0,
