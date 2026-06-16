@@ -436,7 +436,10 @@
                     Che sfigati che eravamo.
                     Per ora sto solo leggendo, ma c'avevi ragione: ci sono tantissimi tizi con problemi come i miei, o peggiori.
                     La rabbia però è aumentata, perché di uomini maltrattati da donne come Dona ce ne sono tanti {player_name}, ma davvero tanti.
-                    Non so quanto 'sta roba mi aiuterà con mia sorella, ma per ora vado avanti a seguire le loro storie.
+                    Quando ne ho parlato con Marta, mi ha fatto una parte di merda enorme, dandomi del "bambino viziato".
+                    Detto da lei, sempre protetta da papà, è ridicolo, davvero ridicolo.
+                    Si è anche incazzata perché dice che faccio lo zio solo per le cose stupide, e non la aiuto mai.
+                    Non ci parliamo da giorni.
                     
             - fireC:
                     Ho deciso di lasciare mia sorella nel suo brodo, e farmi i cazzi miei.
@@ -445,16 +448,20 @@
                     Ma gliel'avevo promesso <i>prima</i> della sua fottuta minaccia di non farmi più vedere l'Armando.
                     Gliel'ho detto con tutta la calma del mondo {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, e lei mi ha urlato davanti a tutti che sono un cazzo di immaturo di merda, un bambino di un metro ottanta e zero cervello.
                     Ho continuato a pulire bicchieri fino a quando se ne è andata urlando e dicendo che bene, allora l'Armando non c'ha più uno zio.
-                    {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:  Sono stato un coglione a non ascoltarti, un grandissimo coglione.}
-                    {third_char_letters_choices.one.fire:  Sono stato un coglione ad ascoltarti, un grandissimo coglione.}
+                    {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:Sono stato un coglione a non ascoltarti, un grandissimo coglione.}
+                    {third_char_letters_choices.one.fire:Sono stato un coglione ad ascoltarti, un grandissimo coglione.}
 
             - earthC:
                     Più facile a dirsi che a farsi, ma non è male averci un obiettivo concreto.
                     E così sono andato a chiedere un aumento al merda.
                     Che dopo aver pianto miseria perché l'economia e il petrolio e blah blah blah, mi ha detto che quella stronza della sua fidanzata gli dice che bevo troppo mentre lavoro.
                     E che quello è il mio aumento, se non faccio casini coi clienti.
-                    Non c'ho molto da portare a mia sorella mi sa.
-                    Ma non mi arrendo qui.
+                    Quando l'ho detto a Marta, mi ha fatto una parte di merda per il bere.
+                    E questa roba del bere mi sta facendo incazzare perché è una fissa per lei, per il capo, per Petra.
+                    Ma non è che se ce l'hanno nella loro cazzo di testa è vera.
+                    Non gli è piaciuto quando gliel'ho detto, a Marta.
+                    Mi ha detto che sono un immaturo del cazzo e mi ha cacciato di casa.
+                    Sono giorni che non mi parla.
 
             - aetherC:
                     Marta si è tutta sorpresa quando le ho chiesto secondo lei cosa dovrei fare.
@@ -531,8 +538,8 @@
                     Un momento ero a pulire un tavolo, quello dopo avevo spaccato il naso a uno degli idioti.
                     I veci del paese hanno applaudito.
                     Ma non il capo.
-                    {letters_thirdCharLetterTwoChoice has earthC: Visto che già mi aveva rotto il cazzo per quanto bevo a lavoro.}
-                    {letters_thirdCharLetterTwoChoice has fireC: Visto che la sera prima è stata quella in cui Marta mi ha urlato davanti a tutto il locale di stare lontano da suo figlio.}
+                    {letters_thirdCharLetterTwoChoice has earthC:Visto che già mi aveva rotto il cazzo per quanto bevo a lavoro.}
+                    {letters_thirdCharLetterTwoChoice has fireC:Visto che la sera prima è stata quella in cui Marta mi ha urlato davanti a tutto il locale di stare lontano da suo figlio.}
                     Petra mi ha difeso, per cui alla fine non è successo niente.
                     Ma è arrabbiata con me, {player_name}.
                     Dice che apprezza il pensiero ma non il gesto.
@@ -621,7 +628,7 @@
                                 ~   letters_thirdCharLetterThreeChoice += fireC
                             
                             - else:
-                                Mi spiace che ti chiedo consiglio e poi faccio di testa mia, ma ancora c'è un po' di fiducia che devi recuperare.
+                                    Mi spiace che ti chiedo consiglio e poi faccio di testa mia, ma ancora c'è un po' di fiducia che devi recuperare.
                                 ~   letters_thirdCharLetterThreeChoice += fireC
                             }
                         - else:
@@ -656,8 +663,9 @@
                                     Ecco: è saltato fuori che il 20% degli uomini praticamente si prende tutto il mercato di figa che c'è sull'app.
                                     {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: ci sono storie dell'orrore tra quelle pagine.
                                     Ancora non so se raccontare loro di Dona o meno, ma credo che mi capirebbero.
-                                    Però.
-                                    Però la tensione con gli altri è ancora lì.
+                                    Ho anche invitato il Rocco sul gruppo, perché volevo fargli capire meglio come sto, e mi ha risposto "Ma cos'è questa merda?"
+                                    Non gli ho più risposto.
+                                    Stronzo giudicone del cazzo.
                                     Non è che mi hai dato questo grande consiglio, {player_name}.
 
                             - fireC:
@@ -682,11 +690,15 @@
                                     Andare in palestra...
                                     Lo sto odiando.
                                     {letters_thirdCharLetterTwoChoice has fireC: Con Marta me la sarei passata bene, ma col cazzo che la chiamo dopo la parte di merda al locale.}
+                                    {letters_thirdCharLetterTwoChoice has airC: Con Marta me la sarei passata bene, ma col cazzo che la chiamo dopo la rottura di coglioni perché non l'aiuto con l'Armandino.}
+                                    {letters_thirdCharLetterTwoChoice has earthC: Con Marta me la sarei passata bene, ma col cazzo che la chiamo dopo la rottura di coglioni che mi ha fatto sul bere.}
                                     Ma l'altra sera mi sono sbattuto una turista che ha passato la sera a dirmi che c'ho delle belle braccia.
                                     Per cui serve a qualcosa.
                                     O forse era solo ubriaca: non posso essere diventato più muscoloso in così poco tempo XD.
-                                    Però.
-                                    Però la tensione con gli altri è ancora lì.
+                                    Ho anche girato un selfie nostro sul gruppo di calcetto.
+                                    Il Merlo ha fatto le solite battute del cazzo.
+                                    Il Rocco mi ha scritto in privato e mi ha chiesto se va tutto bene, e non so perché ma mi sono incazzato a biscia proprio, ma a biscia totale.
+                                    Gli ho risposto che un po' di figa non faceva male anche a lui, e non mi ha più detto niente.
                                     Non è che mi hai dato questo grande consiglio, {player_name}.
 
                             - aetherC:
@@ -917,9 +929,10 @@
                     Che cazzo ho fatto di sbagliato nella mia vita?!?
                     Ma come dice uno dei tizi che seguo di più: se hai energie per piangerti addosso, ce le hai anche per lavorare.
                     {letters_thirdCharLetterTwoChoice has aetherC: Questo sarebbe stato il terzo consiglio di mia sorella, dopo quelli di qualche settimana fa.}
-                    Sto pensando di proporre a Petra di vedere se possiamo rilevare un vecchio baretto che c'era fino a qualche anno fa dalle parti dei campi da calcio.
+                    Ho proposto a Petra di vedere se possiamo rilevare un vecchio baretto che c'era fino a qualche anno fa dalle parti dei campi da calcio, e lei ha detto che ci penserà, ma che se uso ancora termini come <i>guru</i> o <i>business</i> smette di parlarmi.
                     Da {charNameThree} a imprenditore XD
                     No, niente XD, che è poco imprenditorese!
+                    Però per ora Ava me la tengo lì, che non si sa mai.
 
             - aetherC:
                     {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}!
@@ -942,6 +955,8 @@
             - waterC:
                     Ho pensato di fare una cosa un po' diversa, e ho proposto a mia sorella e al marito di farci una passeggiata per i monti qui vicini.
                     {letters_thirdCharLetterTwoChoice has fireC: Non pensavo avrebbe accettato, dopo la sfuriata al Baretto di qualche settimana fa.}
+                    {letters_thirdCharLetterTwoChoice has airC: Non pensavo avrebbe accettato, dopo tutto il discorso dell'aiuto con l'Armandino.}
+                    {letters_thirdCharLetterTwoChoice has earthC: Non pensavo avrebbe accettato, dopo che mi ha detto che bevo troppo.}
                     Invece mi ha detto "Ci vengo, se pensi tu al cibo".
                     Mi sono fatto aiutare da Petra a preparare qualche panino (con la roba del Baretto, ovvio) XD
                     Marta è partita come sempre in quinta, l'Armandino in uno zaino sulle spalle, e così mi sono ritrovato ad ansimare assieme a mio cognato.
@@ -954,7 +969,7 @@
                     Quella sfacchinata mi ha fatto capire che Ava mi ha aiutato per un pezzo di strada, e che ora devo finirla, perché non è un persona, ma un oggetto.
                     Quando siamo tornati a casa l'ho disinstallata.
                     Non ricordo una volta in cui mi è venuto da piangere per aver buttato un vecchio piatto o un cavatappi rotto.
-                    {letters_thirdCharLetterTwoChoice has fireC: Però mia sorella ha ripreso a trattarmi in modo decente.}
+                    {letters_thirdCharLetterTwoChoice has fireC or letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has earthC: Però mia sorella ha ripreso a trattarmi in modo decente.}
                     Grazie per la dritta {player_name}.
 
         }
@@ -1297,10 +1312,9 @@
                 "Alle cose che abbiamo fatto quando eravamo più giovani."
                 "Alle cose che hai fatto a Dona."
                 Il mondo mi è tremato sotto i piedi {player_name}, non sono nemmeno stato capace di dire una parola.
-                "Quando ti sei messo con lei, tu avevi ventinove anni, e lei sedici. Una bambina, cazzo, una bambina."
+                "Quando ti sei messo con lei, tu avevi ventinove anni, e lei sedici. Una bambina amico, era una cazzo di bambina."
                 "E io ora guardo Olivia e penso che se a sedici anni mi si presenta a casa con un uomo che potrebbe essere suo padre, io quell'uomo lo uccido."
                 Credo di aver sentito Amanda dietro la porta singhiozzare, ma non stavo più capendo nulla.
-                Nulla.
                 "Se io ti vedo. Ti penso. Se anche solo <i>mi ricordo</i> di te, io ho in testa solo quel potenziale uomo. E voglio farti del male. Un sacco di male."
                 Si alza, mi mette una mano sulla spalla.
                 "Non sono uno che rimpiange il passato. Ma cerco di fare le cose giuste per non rimpiangere il futuro."
@@ -1310,12 +1324,16 @@
                 {
                     - letters_thirdCharLetterThreeChoice has airC: 
                             Anche se inizio a sentire la voglia di scrivere ai ragazzi del forum.
+
                     - letters_thirdCharLetterThreeChoice has fireC:
                             Tanto chi mi dovrebbe scrivere? Qualche stronza ubriaca che ho scopato per noia?
+
                     - letters_thirdCharLetterThreeChoice has earthC:
                             Anche se inizio a sentire la mancanza della palestra.
+
                     - letters_thirdCharLetterThreeChoice has aetherC:
                             Anche se iniziano a mancarmi i pipponi di Petra.
+
                     - letters_thirdCharLetterThreeChoice has waterC:
                             Anche se avrei voglia di bere ancora col Rocco. Magari qualcosa di analcolico
                 }
@@ -1417,18 +1435,19 @@
         //Step tre: gli esiti
                 Lei è entrata.
                 Mi ha sorriso, tutta abbronzata.
-                Qualche commento generale, poi il primo problema.
-                Arriva il cameriere, e chiedo a Dona se le va una weiss, lei mi dice che preferisce una west coast IPA.
-                Dico al cameriere di portarle una weiss perché tanto finisce che non le piacciono le birre amare.
+                Qualche commento sul tempo, quelle cose di quando non c'hai molto da dire o sei disagiata, poi il primo scazzo.
+                Arriva il cameriere e chiedo a Dona se le va una weiss.
+                Lei mi dice che preferisce una west coast IPA.
+                Dico al cameriere di portarle una weiss perché tanto finisce che non le piacciono le birre amare e tocca berla a me.
                 "Cazzo, non hai smesso di farlo", mi dice lei, davanti al cameriere.
                 "Cosa?"
-                "Di prendere decisioni per me. Mi porti una West Coast, grazie".
-                Faccio finta di niente, e mi aggiorna su come vanno le cose in Spagna, sul lavoro che ama ma una socia con cui litiga.
-                "Ha voluto mettere una roba AI per proporre un restyling alle clienti ed è un disastro ma lei non vuole ascoltarmi".
+                "Di prendere decisioni per me. Prendo una Pirettu, grazie".
+                Faccio finta di niente, e lei mi aggiorna su come vanno le cose in Spagna, sul lavoro che ama ma una socia con cui litiga.
+                "Ha voluto mettere un totem AI che propone un restyling alle clienti ed è un disastro ma lei non vuole ascoltarmi, dice che fa bene alla nostra immagine".
                 Mi metto a difendere le AI fino a quando tra un tira e molla non mi scappa un commento su Ava, e mi chiede chiarimenti.
                 Le racconto la situazione, facendole anche capire come stavo di merda quando lei se ne è andata, e il suo unico commento è: "Continui a preferire chi non sa dirti di no, vedo".
                 Lascio passare anche questa perché sono qui proprio per capire, imparare, giusto?
-                {letters_thirdCharLetterFourChoice has waterC or letters_thirdCharLetterThreeChoice has aetherC: Le dico giusto che ora l'ho lasciata, Ava.}
+                {letters_thirdCharLetterFourChoice has waterC or letters_thirdCharLetterThreeChoice has aetherC: "Comunque l'ho lasciata, Ava".}
                 Glielo dico anche, che sto cercando di cambiare.
 
 
@@ -1458,9 +1477,8 @@
                 {third_char_letters_choices.five.fire: Ed è tutta colpa dei tuoi consigli di merda.}
                 Ma dovevo uscirne vincitore, dovevo.
 
-
             - earthC:
-                E visto che mi hai detto quella cosa dell'uomo che sarò, le parlo del lavoro ora e dell'idea che ho di coinvolgere Petra nella gestione di un altro bar, e lei mi dice che quello non sarà mai il mio lavoro.
+                E visto che mi hai detto quella cosa dell'uomo che sarò, le parlo del lavoro ora e del progetto con Petra per l'altro bar, e lei mi dice che quello non sarà mai il mio lavoro.
                 "In che senso?"
                 "Perché tu sei sempre stato una diva. Ti piace stare al centro dell'attenzione, fare casino. Per questo amavi il vecchio lavoro. Mentre in birreria il palco è per il cliente."
                 Abbiamo iniziato a litigare su questa cosa.
@@ -1538,14 +1556,14 @@
                     }
                 Ma poi mi è saltata fuori la roba del Poggi, così, come se la mia lingua c'avesse una cosa tutta sua.
                 Lei mi ha risposto che è una cosa complicata.
-                "Luca (il nome del Poggi) ha ragione, ma sai quante volte ho litigato con mio papà per questa cosa? E non volevo sentirlo perché tutto ti dice che uscire con un tipo grande è una cosa da fighe, e io volevo essere figa. Le mie amiche pensavano che fossi figa. I ragazzi della mia età mi vedevano come una dea. Uscivo con uno con un lavoro figo, soldi, un bell'appartamento. Ti ricordi tutte le cose che mi regalavi? Ero come la reginetta di un telefilm americano."
+                "Luca (il nome del Poggi) ha ragione, ma sai quante volte ho litigato con mio papà per questa cosa? E non volevo sentirlo perché tutto ti dice che uscire con un tipo grande è una cosa da fighe, e io volevo essere figa. Le mie amiche pensavano che fossi figa. I ragazzi della mia età mi vedevano come una dea. Uscivo con uno con un lavoro che lo faceva viaggiare ovunque, che c'aveva i soldi, un bell'appartamento. Ti ricordi tutte le cose che mi regalavi? Ero come la reginetta di un telefilm americano."
                 Si scola mezza birra.
                 Si vede che le piace davvero la birra amara.
                 Certe cose cambiano.
                 "Tu sei stato stronzo ad uscire con me quando ero così piccola. Ma c'è tutto un mondo che ti dà ragione: non lo vedevo io all'epoca, e mi sa che tu non lo vedi manco adesso."
                 "Non sei una persona cattiva. Puoi essere un grande idiota, ma non sei una persona cattiva. È che non ti fai mai domande."
                 "E io a un certo punto ho iniziato a farmi domande, e mi sono resa conto che tutte le risposte che avevo erano le tue, e non volevo sposarmi e diventare una mamma senza sapere le mie di risposte."
-                "E sei così incapace di farti domande, che mi hai ascoltata ma non hai capito un cazzo di quello che ho detto, e sei andato in giro a dire le peggio cose su di me."
+                "E sei così incapace di farti domande, che mi hai ascoltata ma non hai capito un cazzo di quello che ho detto, e sei andato in giro a dire le cose peggiori su di me."
                 "Per quello ti ho urlato così tanto addosso l'ultima volta che ci siamo visti. E per questo ho lasciato questo buco."
                 "Per non diventare come te."
                 "Io non sono Luca, non credo che ti ammazzerei. Ma nessun uomo dovrebbe mettersi con una ragazzina."
@@ -1553,6 +1571,24 @@
                 Ma non so cosa dire.
                 Si alza, lascia i soldi al cameriere mentre resto lì e mi dice.
                 "Se davvero vuoi cambiare, devi fare pace con tuo padre. È l'unico uomo da cui dovresti imparare qualcosa."
+                    {letters_thirdCharLetterSixChoice:
+                        - airC:
+                            "Senza fare la vittima come hai fatto con me. E ti prego: non cercarmi più."
+
+                        - fireC:
+                            "Certo, sei rimasto la stessa testa di cazzo litigiosa che ho conosciuto una vita fa, per cui sarà un mezzo disastro. Ma anche per questo: non mi cercare mai più."
+
+                        - earthC:
+                            "E non infilarti in quella cazzata del bar con la tua collega, sarà solo un altro casino in cui ti caccerai. Casino di cui non voglio sapere niente: non cercarmi mai più."
+                            
+                        - aetherC:
+                            "Spero ascolterai {player_pronoun has him:il|{player_pronoun has her:la|lə}} tu{player_pronoun has him:o|{player_pronoun has her:a|ə}} amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} e andrai a fare terapia."
+                            "Se ne avrai bisogno, scrivimi. Come amica, ricordatelo. Solo come amica."
+
+                        - waterC:
+                            "Spero che davvero chiederai aiuto a chi ti vuole bene, come hai detto prima. E se servirà, scrivimi. Come amica. Non farti strane idee."
+
+                    }
                 E mi ha lasciato lì, dicendomi di affrontare il mio nemico finale.
                 Io...
                 Sto sentendo le energie che stanno finendo.
@@ -1595,7 +1631,7 @@
 
             - third_char_letters_choices.six.aether: 
                 Mi hai consigliato di chiamare anche mia sorella, per un po' di aiuto.
-                {letters_thirdCharLetterTwoChoice has fireC: Nonostante lo sclero che mi ha fatto al Baretto mesi fa.}
+                {letters_thirdCharLetterFourChoice hasnt waterC && (letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has fireC or letters_thirdCharLetterTwoChoice has earthC): Nonostante lo sclero che mi ha fatto al Baretto mesi fa.}
 
             - third_char_letters_choices.six.water: 
                 Mi hai consigliato di portarlo in un posto legato a mamma, per avercela vicina.
@@ -1669,6 +1705,10 @@
 
             - aetherC:
                 Mia sorella ci ha invitati a casa sua, con l'Armando che dormiva nella cameretta accanto.
+                {
+                - letters_thirdCharLetterFourChoice hasnt waterC && (letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has fireC or letters_thirdCharLetterTwoChoice has earthC):
+                    Non me l'aspettavo: insomma, non è che ci siamo lasciati proprio in grandi rapporti l'ultima volta che abbiamo parlato.    
+                }
                 Ma invece di rimanere vicino, ci ha detto: "Se Armando non dorme il pomeriggio, la mia notte diventa un inferno."
                 "E se questa notte dovrò vivere un inferno, domattina io sarò per voi direttamente Satana."
                 "Quindi vedete di non urlare."
@@ -1727,8 +1767,8 @@
                 "Che l'avrei resa orgogliosa di me."
                 "Lo era già, lo era sempre stata,", mi ha risposto "Era così felice tua mamma della tua ambizione."
                 "Ci sono cose strane da dire a un figlio."
-                C'ha messo un mese a dire la frase dopo.
-                "Quando ci siamo sposati lei mi amava e io ero solo preso dalla sua bellezza, ma era incinta di tua sorella e volevo prendermi le mie responsabilità."
+                C'ha messo un'eternità a dire la frase dopo.
+                "Quando ci siamo sposati lei mi amava e io ero solo preso dalla sua bellezza, ma era incinta e volevo prendermi le mie responsabilità."
                 "Col tempo però ho imparato ad amarla, mentre il suo amore per me è sfiorito."
                 "Non ero... Lei... Tua mamma ha sempre voluto di più, ma un di più diverso."
                 "Magari una casa grande. Belle vacanze. Quelle cose lì."
@@ -1737,7 +1777,7 @@
                 "Tua mamma mi ha odiato quando ho perso il locale. Ma non ha mai capito perché l'ho fatto."
                 "Era appena iniziata la crisi che ha portato alla chiusura di tutte le fabbriche del posto. Molte persone non arrivavano a fine mese. Le stesse persone che negli anni ci avevano dato i soldi per stare bene. Volevo fare qualcosa per loro, per questo ho iniziato a lasciare che venissero a credito."
                 "So che mi odi perché abbiamo perso tutto, ma io non l'ho mai vista così."
-                "Ho perso un lavoro, dei soldi, ma non ho mai perso la mia comunità."
+                "Ho perso dei soldi, ma non ho mai perso la mia comunità."
                 La sua birra è lì, ferma, senza più schiuma.
                 "Sei diventato il figlio di tua mamma, ma io non ho mai smesso di volerti bene. Ma dalle cose che mi racconta Marta, dalle cose che vedo, io ho paura che non ce la fai più a mantenere quella promessa che le hai fatto. E non so se sono forte abbastanza da sapere cosa succede se non ce la fai."
                 A quel punto ha atteso che dicessi qualcosa.
@@ -1764,6 +1804,8 @@
                 Mi sono vergognato così tanto, ma così tanto.
                 Marta è arrivata, mi ha stretto.
                 Papà le ha messo una mano sul braccio, e ci ha lasciati soli.
+                Ora ha iniziato a mandarmi foto del giardino comunale dove passa le mattinate.
+                C'ha messo i fiori preferiti di mamma.
 
             - waterC:
                 "Mamma c'è sempre stata per me, è quello che ho imparato l'ho imparato da lei".
