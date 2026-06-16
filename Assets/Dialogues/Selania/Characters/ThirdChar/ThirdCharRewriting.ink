@@ -394,16 +394,28 @@
                                                                 Dici che i tuoi amici se ne fregano di te.
                                                                 E il tuo migliore amico si è allontanato da te per l'età che Donatella aveva quando vi siete conosciuti.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. Lo stai già facendo saltando gli incontri.
+            + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. {letters_thirdCharLetterThreeChoice has fireC: Hai già iniziato col litigio, no?|Lo stai già facendo saltando gli incontri.}
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
                                                                 E magari potresti pure stupirti della loro reazione.
                 {
                 - letters_thirdCharLetterThreeChoice has fire: 
                                                                 Alla fine hai già urlato a tutti una volta quando ti sei trovato coi due sostituti portati dal Merlo, no?    
-                }                                                 
+                }
+                {
+                - letters_thirdCharLetterThreeChoice has waterC:
+                                                                E comunque Rocco ti ha già fatto capire che ha voglia di passare del tempo con te, tra D&D e la proposta di correre assieme.    
+                }                                      
             
             + (water) \ {charTag(PG, "neutral")}:               Forse Ava non era la persona giusta, ma {charNameThree}: hai amato.
             {charTag(PG, "neutral")}:                           Ricordi come mi hai parlato di lei quando eri qui?
+                    {
+                    - letters_thirdCharLetterFourChoice has waterC:
+                                                                E la lacrimuccia quando l'hai cancellata?    
+                    }
+                    {
+                    - letters_thirdCharLetterFourChoice has aetherC:
+                                                                Ma hai anche ammesso che sei riuscito a rimanere ancorato coi piedi a terra perché avevi altre persone, persone reali, nella tua vita.   
+                    }
                                                                 Sai già che forse le app di dating non sono il tuo strumento preferito.
                                                                 Ma il mondo è pieno di occasioni per chi ha un cuore aperto.
                     {
@@ -412,13 +424,32 @@
                     }                                             
             
 
-            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra, un buono zio per tua sorella: porta queste cose nelle tue relazioni.
+            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra{!letters_thirdCharLetterTwoChoice has airC && !letters_thirdCharLetterTwoChoice has fireC && !letters_thirdCharLetterTwoChoice has earthC:, un buono fratello per tua sorella }: porta queste cose nelle tue relazioni.
             {charTag(PG, "neutral")}:                           Non serve per forza essere quello che esce con mille ragazze.
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
                                                                 O che si porta le clienti sul retro del locale.
                 }
-                                                                Hai due donne nella tua vita con cui riesci ad essere qualcosa di più.
+                {
+                - letters_thirdCharLetterTwoChoice has aetherC:
+                                                                Pensa a come tua sorella ha cercato di aiutarti, proponendoti di fare volontariato, di cercare qualcosa di diverso nella tua vita.    
+                }
+                {
+                - letters_thirdCharLetterTwoChoice has waterC:
+                                                                Pensa a come tua sorella ha cercato di aiutarti, con la sua schiettezza, chiedendoti se tu fossi stanco di fare il coglione, senza sapere però come smettere.   
+                }
+                {
+                - letters_thirdCharLetterFourChoice has waterC:
+                                                                Ti ricordi com'è stata la scampagnata con Marta, mentre parlavi di Ava?  
+                }
+                {
+                - letters_thirdCharLetterSevenChoice has aetherC:
+                                                                C'è stato quell'abbraccio che ti ha dato Marta a casa sua, mentre parlavi con tuo padre e ti sei emozionato. 
+                }      
+                {
+                 - letters_thirdCharLetterFourChoice has earthC:
+                                                                E con Petra c'è l'idea della attività assieme, è l'inizio di un rapporto diverso con qualcuno di cui ti fidi.   
+                }
                 {
                 - grimoire_thirdChar has grimThirdCharNovel:
                                                                 Pensa a quanto sei cambiato da quando avevi letto <i>Polvere</i> qui in biblioteca, e ti sei arrabbiato contro la protagonista!
@@ -436,13 +467,21 @@
             {charTag(PG, "neutral")}:                           Quando sei arrivato qui hai detto che invidi tua sorella per l'attenzione che ha ricevuto dalla famiglia dopo essere diventata mamma.
                                                                 E se fosse invece l'occasione anche per te per riavvicinarti a loro?
                                                                 Perché se hai paura che ti detestino, alla fine di loro ti importa, no?
+                {
+                - letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC:
+                                                                E le cose stanno già andando meglio dopo la chiacchierata con tuo padre, non trovi?    
+                }                                                
 
             + (aether) \ {charTag(PG, "neutral")}:              Hai deciso di ascoltare cosa avesse da dirti Donatella: forse la strada è continuare a prenderti le tue responsabilità. 
             {charTag(PG, "neutral")}:                           Per le cose che sono accadute con tua sorella.
                                                                 Con tuo padre.
                                                                 Per il rapporto che hai coi ragazzi del calcetto.
                                                                 E anche se il Poggi ha chiuso per sempre la sua porta, ci sono cose su cui lavorare anche nel rapporto che hai avuto con lui.
-                                                                O con te stesso.  
+                                                                O con te stesso. 
+                {
+                  - letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC:
+                                                                E Donatella stessa si è proposta di starti vicina come amica. È bello avere accanto qualcuno che ti conosce da tanto e sa dirti le cose come stanno.
+                }                                                
             -
 
             //Riduco di uno il livello di inchiostro
@@ -472,14 +511,30 @@
                                                                 L'impossibilità di poterti definire ancora un <i>bravo ragazzo</i> ti toglie il fiato.
                                                                 E la soluzione che hai trovato: il bere.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Hai affrontato tuo padre, puoi battere anche l'alcool.
+            + (fire) \ {charTag(PG, "neutral")}:                Hai affrontato una conversazione complessa con tuo padre, puoi battere anche l'alcool.
             {charTag(PG, "neutral")}:                           Quando le cose non vanno come vogliamo si fa quel che si può.
                                                                 E può starci come soluzione temporanea, ma poi c'è il momento di tirarsi indietro le maniche e affrontare il problema.
+                    {
+                    - letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC:
+                                                                E alla fine la chiacchierata con lui è andata bene, no?   
+                    }                                             
             
-            + (water) \ {charTag(PG, "neutral")}:               Stai già scoprendo in Rocco un amico: perché non trovarne un altro nel tuo coinquilino?
+            + (water) \ {charTag(PG, "neutral")}:               Rocco ti ha mostrato che puoi avere altri amici: perché non trovarne un altro nel tuo coinquilino?
             {charTag(PG, "neutral")}:                           Una persona che ci somiglia può insegnarci molte cose.
                                                                 E ci si può aiutare assieme per uscire dalle situazioni che ci fanno stare male.
-                                                                O offrirci nuove prospettive.    
+                                                                O offrirci nuove prospettive.
+                    {
+                    - letters_thirdCharLetterThreeChoice has fireC:
+                                                                Magari senza gomitate sul naso.    
+                    }
+                    {
+                    - letters_thirdCharLetterThreeChoice has airC:
+                                                                Magari senza girare anche a lui contenuti discutibili dai gruppi che segui. 
+                    } 
+                    {
+                    - letters_thirdCharLetterThreeChoice has earthC:
+                                                                Magari senza dirgli di trovarsi altre donne, come hai fatto con Rocco.
+                    }                                               
                     
             + (earth) \ {charTag(PG, "neutral")}:               Ma ogni volta che mi hai parlato del tuo lavoro, ne hai parlato con amore.
                     {
@@ -490,6 +545,10 @@
             {charTag(PG, "neutral")}:                           Il problema è economico, o le tensioni col capo.
                                                                 Ma queste sono cose che si possono risolvere, e che non tolgono valore alla persona che sei.
                                                                 E soprattutto: una persona <i>fa</i> il proprio lavoro, ma non <i>è</i> il proprio lavoro.
+                    {
+                    - letters_thirdCharLetterFourChoice has earthC:
+                                                                E poi c'è il piano con Petra, per il nuovo locale!
+                    }                                              
                                 
             + (air) \ {charTag(PG, "neutral")}:                 Non sei curioso di sapere cosa succede però se smetti di essere un <i>bravo ragazzo</i> e inizi ad essere una buona persona?
             {charTag(PG, "neutral")}:                           Qualcuno che si muove secondo i suoi principi e non per fare una buona figura, come Petra.
@@ -499,8 +558,17 @@
 
             + (aether) \ {charTag(PG, "neutral")}:              Ma io vedo qualcuno coraggioso che cerca di capire le persone che ha ferito.
             {charTag(PG, "neutral")}:                           Lo stai facendo con Donatella, e l'hai fatto anche col Poggi.
+                                                                Con tuo padre.
                                                                 Le cose non sono andate come volevi.
                                                                 Ma non ti sei fermato.
+                    {
+                    - letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC:
+                                                                E si è aperto un nuovo spiraglio con tuo padre, non è grandioso?
+                    }
+                    {
+                    - letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC:
+                                                                E Donatella è disposta ad essere tua amica, cosa che non ritenevi nemmeno pensabile quando sei venuto qui.
+                    }                                               
                                                                 Lascia che gli altri pensino quel che gli pare.
                                                                 Tu stai già costruendoti un nuovo futuro.
             -
@@ -542,6 +610,11 @@
                                                                 Magari imparando proprio da tuo padre.    
                 
         + (earth) \ {charTag(PG, "neutral")}:                   Ma anche ora stai gettando nuove radici: col lavoro, con la casa.
+        {
+        - letters_thirdCharLetterFourChoice has earthC:
+        {charTag(PG, "neutral")}:                               Col piano per il nuovo locale con Petra.
+
+        }
         {charTag(PG, "neutral")}:                               Non sono soluzioni perfette forse, ma non sono per forza un punto d'arrivo.
                                                                 E quando hai perso il vecchio lavoro o la casa con Donatella, ti sei attivato per gettare nuove fondamenta.
                             
@@ -559,7 +632,12 @@
                 }                                                
 
         + (aether) \ {charTag(PG, "neutral")}:                  E dove mettiamo il {charNameThree} del futuro, quello che sta imparando a mettersi in discussione con Petra?
-        {charTag(PG, "neutral")}:                               Potevi avere tutte le scuse per fregartene, e invece hai deciso di ascoltare qualcosa di diverso, di accoglierlo.        
+        {
+        - letters_thirdCharLetterThreeChoice has aetherC:
+        {charTag(PG, "neutral")}:                               Quello che le ha chiesto di spiegargli perché lei si fosse arrabbiata quando l'ha difesa, e l'ha ascoltata mentre gli parlava di questioni femministe?
+
+        }
+        {charTag(PG, "neutral")}:                               Potevi avere tutte le scuse per fregartene, e invece hai deciso di ascoltare qualcosa di diverso, di accoglierlo.     
         -
 
             //Riduco di uno il livello di inchiostro
@@ -589,6 +667,10 @@
 
         + (fire) \ {charTag(PG, "neutral")}:                    Il tempo non torna, ma puoi sempre prenderti cura di te: fai sport, datti da fare.
         {charTag(PG, "neutral")}:                               Se ti metti in moto, la giovinezza di Dario varrà poco nulla.
+                {
+                - letters_thirdCharLetterThreeChoice has earthC:
+                                                                Hai già iniziato con la palestra, perché non aggiungere anche qualcosa di più dinamico?    
+                }
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
                                                                 In cucina mi ha raccontato che ti paragonavano a Joe Manganiello.
@@ -676,7 +758,7 @@
                                                                 Trova una persona che ti rispetti.
                                                                 Chiedi al mondo ciò che ti spetta.
             
-        + (water) \ {charTag(PG, "neutral")}:                   Apri la porta alla vulnerabilità. Con la tua famiglia, con Rocco. Con te stesso.
+        + (water) \ {charTag(PG, "neutral")}:                   Apri la porta alla vulnerabilità. Con la tua famiglia, con le persone amiche. Con te stesso.
         {charTag(PG, "neutral")}:                               Cos'hai da perdere?
                                                                 Sei stato stoico e chiuso in te stesso per tutti questi anni, e ora sei qui che stai male.
                                                                 Cosa c'è di peggiore di ciò che provi ora?
