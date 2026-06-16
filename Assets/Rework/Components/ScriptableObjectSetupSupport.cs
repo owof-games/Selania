@@ -27,12 +27,14 @@ namespace Selania.Rework.Components
             GlobalCleanup();
         }
 
+#if UNITY_EDITOR
         private void StateChanged(PlayModeStateChange playModeStateChange)
         {
             if (playModeStateChange != PlayModeStateChange.ExitingEditMode) return;
             GlobalCleanup();
             GlobalSetup();
         }
+#endif
 
         /// <summary>
         ///     Method invoked every time there's the need to set up the scriptable object. This method should take care of
