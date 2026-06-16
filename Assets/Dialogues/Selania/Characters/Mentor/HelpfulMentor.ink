@@ -6,10 +6,21 @@
 ~ temp charNameFour= translator(fourthChar_ActualName)
 
 
-
+{
+- thirdChar_storyStatus != story_storyRemote:
 {charTag(FifthCharacter, "neutral")}:                  {player_name}!
+
+- else:
+{charTag(FifthCharacter, "bored")}:                     ...
+
+}
+
+
 - (saluto)
-{shuffle:
+
+{
+- thirdChar_storyStatus != story_storyRemote:
+    {shuffle:
     //Sulla cucina
     - {player_accessiblePlaces has Kitchen:Non sono mai stata una grande cuoca. Ma amo mangiare.|->saluto}
     - {player_accessiblePlaces has Kitchen:Il cibo è un momento di unione anche con l'essere che l'ha generato.|->saluto}
@@ -42,11 +53,24 @@
     - Hai notato la mappa alla stazione dei treni?
     - A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.
 
+    }
+- else:
+{charTag(FifthCharacter, "bored")}:                         ???
 }
 
 
+
+
 - (top)
-    Come posso esserti utile, {player_pronoun has him: amico mio|{player_pronoun has her: amica mia|amicə miə}}?
+    {
+    - thirdChar_storyStatus != story_storyRemote:
+    {charTag(FifthCharacter, "hurry")}:                     Come posso esserti utile, {player_pronoun has him: amico mio|{player_pronoun has her: amica mia|amicə miə}}?
+
+    - else:
+    {charTag(FifthCharacter, "bored")}:                     Dimmi.
+    }
+
+
     
         + \ {charTag(PG, "neutral")}:                                           Avrei bisogno di una mano.
             -> support
@@ -67,7 +91,13 @@
  === support
     
     - (top)
-    Hai bisogno dei miei consigli?
+    {
+    - thirdChar_storyStatus != story_storyRemote:
+    {charTag(FifthCharacter, "hurry")}:                                         Hai bisogno dei miei consigli tesoro?
+
+    - else:
+    {charTag(FifthCharacter, "bored")}:                                         Vai.
+    }
     
         + {tutorial_mentorInkAndYouAreARewriter}\ {charTag(PG, "neutral")}:     Mi ripeteresti cosa devo fare?
             -> to_do
@@ -84,8 +114,13 @@
             -> top   
 
     = myself
-    
-        Di cosa senti il bisogno?
+    {
+    - thirdChar_storyStatus != story_storyRemote:
+    {charTag(FifthCharacter, "hurry")}:                                         Come posso aiutarti?
+
+    - else:
+    {charTag(FifthCharacter, "bored")}:                                         Vai.
+    }
             
             + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare il mio nome.
                     -> name_choice -> support
@@ -154,9 +189,16 @@
     
     
 
-    {charTag(PG, "neutral")}:                       Vorrei raccontarti una cosa strana.
+    {charTag(PG, "neutral")}:                                                                       Vorrei raccontarti una cosa strana.
 
-        * (voices) {player_somethingStrange has strangeVoice}\ {charTag(PG, "neutral")}:            C'è una voce che mi racconta cose.
+
+        * (fugaBoccale) {player_somethingStrange has strangeBoccale}\ {charTag(PG, "neutral")}:     {charNameThree} se ne è andato arrabbiato e senza farsi riscrivere.
+            {charTag(FifthCharacter, "bored")}:                                                     NON NOMINARLO MAI PIù!
+                                                                                                    MAI PIù, CAPITO? 
+                ~ player_somethingStrange -= strangeBoccale
+                -> helping_mentor.top
+
+        * (voices) {player_somethingStrange has strangeVoice}\ {charTag(PG, "neutral")}:            C'è una voce che mi dice cose nella mia testa.
             
             {charTag(FifthCharacter, "neutral")}:                                                   Voce?
             {charTag(PG, "neutral")}:                                                               Sì.

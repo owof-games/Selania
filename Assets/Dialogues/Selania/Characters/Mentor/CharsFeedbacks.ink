@@ -11,9 +11,9 @@
         {charTag(FifthCharacter, "hurry")}:                                 Hai concluso la riscrittura di {charNameOne}, {player_name}!
                                                                             E quindi: è tempo di feedback!
         {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "neutral")}:                       Ehm, non sono una grande fan delle pagelle.
-                    ~ change_entity_place(FirstCharacter)
+            - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:                       Apprezzo solo le mie di pagelle zia!
+                    ~ change_entity_place(ThirdCharacter)
         }
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -23,6 +23,10 @@
         }
         
         {charTag(FifthCharacter, "hurry")}:                                 Partiamo con un promemoria: non ci sono riscritture buone o cattive, e nomi sbagliati.
+        {
+        - thirdChar_storyStatus == story_storyRemote:
+        {charTag(FifthCharacter, "bored")}:                                 Cosa che {charNameThree} non ha capito.   
+        }
         {charTag(FifthCharacter, "neutral")}:                               Ma: il mio lavoro come {charNameFive} è quello di assicurarmi che tu possa essere la versione migliore di te.
                                                                             Partiamo con quello che è accaduto prima della riscrittura.
         {
@@ -109,6 +113,10 @@
         
         {charTag(FifthCharacter, "hurry")}:                                 Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {player_pronoun has him:soddisfatto|{player_pronoun has her:soddisfatta|soddisfattə}}!
         {charTag(FifthCharacter, "neutral")}:                               Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.
+        {
+        - thirdChar_storyStatus == story_storyRemote:
+        {charTag(FifthCharacter, "bored")}:                                 E mi assicurerò che nessun altro se ne andrà come, come quello là!
+        }
         {charTag(FifthCharacter, "hurry")}:                                 Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. 
                                                                             Ma se avrai bisogno di aiuto o un po' di supporto personale, sono sempre qui.
         {charTag(FifthCharacter, "neutral")}:                               O anche solo per due chiacchiere.
@@ -125,13 +133,12 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
        
     
-   {charTag(FifthCharacter, "neutral")}:                                    Hai finito il percorso con {charNameTwo}, {player_name}!
+    {charTag(FifthCharacter, "neutral")}:                                   Hai finito il percorso con {charNameTwo}, {player_name}!
                                                                             Ed entramb3 mi avete stupita: non pensavo davvero che un bambino avrebbe tratto giovamento da questo luogo.
         {
-            - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "energy")}:                       Il mio nome è {charNameTwo}, e sono sempre felice di stupirvi!
-                {charTag(FifthCharacter, "neutral")}:                       Mi mancherai bimbetto, mi mancherai.
-        }
+        - thirdChar_storyStatus == story_storyRemote:
+        {charTag(FifthCharacter, "bored")}:                                 Un comportamento molto più maturo di quello di {charNameThree}.   
+        }                                                                        
 
     {charTag(FifthCharacter, "neutral")}:                                   È arrivato il momento da darti un commento su come sono andate le cose con lui.
             {
@@ -140,9 +147,9 @@
                         ~ change_entity_place(FirstCharacter)
             }
             {
-                - are_two_entities_together(SecondCharacter, PG):
-                    {charTag(SecondCharacter, "energy")}:                   Mi sa che vado a salutare il pipistrello prima di partire!
-                        ~ change_entity_place(SecondCharacter)
+                - are_two_entities_together(ThirdCharacter, PG):
+                    {charTag(ThirdCharacter, "neutral")}:                   Sono abbastanza sicuro di aver visto una bottiglia di weiss prima.
+                        ~ change_entity_place(ThirdCharacter)
             }
 
     {charTag(FifthCharacter, "neutral")}:                                   Iniziamo dal lavoro preparatorio che hai fatto.        

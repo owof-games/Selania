@@ -132,7 +132,6 @@
     {
         - frog_third_char_gift != "":
             Franco ha consigliato a {player_name} di regalare a {charNameThree} <b>{ingredientTranslator(frog_third_char_gift)}</b>.
-
     }
 
 
@@ -243,7 +242,6 @@
 
         - grimoire_thirdChar has grimThirdCharKitchenNegativeReaction:
             Dopo aver cucinato assieme, {charNameThree} ha detto a {player_name} che non costruirebbe una amicizia con {player_name}, perché {player_name} scompagina a {charNameThree} tutte le cose che ritiene importanti, mettendo {charNameThree} in difficoltà.
-
 
     }
     

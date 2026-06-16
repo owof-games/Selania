@@ -624,7 +624,8 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
     
-        {charTag(FifthCharacter, "hurry")}:                     Sembra che {charNameThree} ti abbia scritto una lettera, {player_name}! 
+        {charTag(FifthCharacter, "bored")}:                     {charNameThree} ti ha scritto una lettera, {player_name}!
+                                                                Che faccia tosta.
                                                                 
         {
             - entity_location(PG) == TrainStop:

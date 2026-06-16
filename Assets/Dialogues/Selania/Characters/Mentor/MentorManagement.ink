@@ -28,6 +28,12 @@
 === talk_to_me ===
 {debug: passo per talk_to_me. Il valore di mentor_lastTimeTalking è {mentor_lastTimeTalking}.}
 
+{
+- thirdChar_storyStatus == story_storyRemote:
+    ->->
+
+}
+
     
 {   
     - mentor_lastTimeTalking < mentor_MAX_lastTimeTalking:
@@ -38,6 +44,8 @@
     - else:
     {
         - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor:
+        {
+        - thirdChar_storyStatus != story_storyRemote:
             { 
                 - (contentsTrainStop has DoggoFirstLetters or contentsTrainStop has DoggoSecondLetters) && (contentsTrainStop hasnt Mentor):
                     {stopping:
@@ -60,6 +68,16 @@
                         ~ mentor_lastTimeTalking = 0
                         ->->
             }
+        
+        //Frasi che dice se Boccale se ne è andato
+        - else:
+        {shuffle:
+                        - {charTag(FifthCharacter, "bored")}:             Andarsene così, senza nemmeno farsi riscrivere, ma io dico.
+                        - {charTag(FifthCharacter, "bored")}:             La mancanza di rispetto di quell'uomo. Che nervi.
+                        - {charTag(FifthCharacter, "bored")}:             Tutti rispettiamo delle regole, e lui? Lui se ne va così, perché gli va.
+                        - {charTag(FifthCharacter, "bored")}:             Arriva qui, ed è un <b>privilegio</b>! E lui invece ci abbandona tutt3. Quel maleducato.
+                    }
+        }    
                 
         - else:
             {debug: Mentore e PG non sono assieme, per cui vado avanti.}
