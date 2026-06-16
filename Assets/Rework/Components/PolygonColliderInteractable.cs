@@ -47,6 +47,8 @@ namespace Selania.Rework.Components
             _interactionSubject!.OnNext(this);
         }
 
+#if UNITY_EDITOR
+
         [Button]
         [LabelText("Adapt collider shape to sprite shape")]
         public void CopySpritePhysicsShapeToPolygonCollider2DShape()
@@ -74,5 +76,7 @@ namespace Selania.Rework.Components
             Debug.Log(
                 $"Copied {shapeCount} shapes for a total of {numVertices} vertices to produce the polygon collider for the interactable '{name}'.");
         }
+
+#endif
     }
 }
