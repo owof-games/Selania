@@ -946,17 +946,68 @@
 
 
     - thirdChar_ActualName has Canovaccio:
-    {charTag(ThirdCharacter, "neutral")}:                   
+    {charTag(ThirdCharacter, "neutral")}:                   La zia mi aveva detto che tutto questo percorso serve per uscire da uno stallo.
+                                                            Ma per me la soluzione è stata fermarmi ancora di più, e vedere cosa avevo attorno.
+                                                            Soprattutto dopo la discussione col Poggi mi sono reso conto di una cosa: che non posso andare da nessuna parte, se non ammetto le mie responsabilità.
+                                                            Farlo per me è difficile, per cui lo sto facendo per l'Armandino: voglio essere un bravo zio, dargli un buon modello.
+                                                            {letters_thirdCharLetterFourChoice has earthC: Ho rimandato tutti i piani per l'acquisto del locale che avevo fatto con Petra, e lei è strafelice di questa cosa.|Petra mi sta aiutando a capire passo per passo il suo mondo, che è così diverso dal mio. Non approvo tutto, ma alcune cose mi sono davvero utili.}
+                                                            {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC:Ho chiesto scusa al Rocco, perché non ci sentivamo da quando ti ho mandato la seconda lettera.|Il Rocco poi è un mito totale.} 
+                                                            La birretta del lunedì è diventata anche il pranzo in famiglia del sabato, e i suoi figli sono davvero fantastici.
+                                                            E anche se dice sempre che sua moglie è una rompiscatole, in realtà è adorabile. 
+                                                            Ansiosa, ma adorabile.
+                                                            {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: Ogni tanto mando qualche domanda a Dona, cose tipo "Ma quindi quando facevo questo, ti facevo stare male?". A volte mi incazzo ancora per certe risposte, ma Petra dice che è normale, e in quelle situazioni la chiamo, mi sfogo, e poi mi rendo conto di essere un coglione e scrivo a Dona delle cose sensate. Un miracolo!}
+                                                            E in famiglia.
+                                                            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC:Chiedere scusa a Marta è stato difficile, perché era davvero incazzata a bestia con me.|Anche se le cose andavano bene con Marta, mi sono reso conto che c'erano cose per cui dovevo scusarmi.}
+                                                            Una sera abbiamo parlato per ore di mamma, di papà, e dello zio che sono stato.
+                                                            Lei mi ha detto che ha bisogno che io ci sia davvero, non che sparisco ogni volta che c'è un casino.
+                                                            Gliel'ho promesso.
+                                                            {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: Il fatto che con papà le cose vanno meglio l'ha sicuramente rassicurata.|Anche se so che le pesa che con mio padre ancora non ci parliamo.}
+                                                            Ho sempre visto mio padre come un perdente, e mi incazzavo con tutti se mi sentivo un perdente.
+                                                            Ma sto capendo solo ora quante cose posso imparare da lui.
+                                                            {letters_thirdCharLetterFourChoice has earthC: Più che da quei cazzo di fuffaguru di Youtube.}
+                                                            Sarò un bravo zio, {player_name}.
+                                                            E magari anche un bravo papà, prima o poi.
 
     - thirdChar_ActualName has Sigaro:
-    {charTag(ThirdCharacter, "neutral")}:                          
-                      
+    {charTag(ThirdCharacter, "neutral")}:                   Però sono proprio un figo così. Un gran figo.
+                                                            Per fortuna non si vedono le occhiaie, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                                                            Ormai dormo pochissimo.
+                                                            {letters_thirdCharLetterFourChoice has earthC: Ma stiamo avviando il nuovo locale con Petra!|Ho deciso di rilevare un baretto da solo.}
+                                                            Ma ci sono mille lavori da fare e quindi intanto continuo a lavorare al Baretto.
+                                                            E visto che la vecchia mi ha cacciato di casa, per ora vivo e dormo lì nel locale.
+                                                            Mangio qualcosa di sano al Baretto, mi faccio la doccia in palestra: chi mi ferma più?
+                                                            La parte burocratica mi ammazza l'anima ma per la prima volta da anni ho il controllo della mia vita, {player_name}!
+                                                            Anche se ho iniziato a prendere le pastiglie per la pressione, che roba da vecchio.
+                                                            Il dottore dice che devo ridurre lo stress, io gli ho detto che lo stress è il segno che stai facendo le cose bene.
+                                                            Non ricordo se lo diceva Tate? O era McGregor?
+                                                            {letters_thirdCharLetterFourChoice has earthC: Petra sembra sempre più tesa, cristo santo. Non ci sta dietro coi ritmi.|A lavoro Petra mi smarona la minchia perché dice che secondo lei collasso.}
+                                                            In generale non c'ho tutto questo tempo per i rapporti comunque.
+                                                            {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC:Rocco non lo sento più da quando ti ho scritto la terza lettera.|Rocco non lo becco da una vita.}
+                                                            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC:Marta ce l'ha ancora con me.|Marta mi fa pressione perché non vedo mai Armando.}
+                                                            {letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC:Ho sostituito Ava con un planner automatico, per star dietro a tutti i ritmi, ed è pura magia!|Non vedo una tipa che una da mesi, e non sono mai stato così lucido.}
+                                                            {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: Dona continua a chiedermi quando mi prenderò cura di me. Non lo capisce che questo <b>è</b> prendermi cura di me, del mio futuro.}
+                                                            {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: Papà viene spesso al cantiere, anche se ultimamente mi snerva perché mi chiede se ho riposato o mangiato e mi fa sentire un bambino.}
+                                                            È un periodo tutto sommato solitario, ma va bene così: solitario è il cammino dell'eroe, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                                                            Come per te in questo postaccio!
     
     - thirdChar_ActualName has Cerchio:
     {charTag(ThirdCharacter, "neutral")}:                       
 
     - thirdChar_ActualName has Forum:
-    {charTag(ThirdCharacter, "neutral")}:                        
+    {charTag(ThirdCharacter, "neutral")}:                   Non c'ho molto da dirti però.
+                                                            A lavoro mi faccio i cazzi miei, perché non è lì la mia vita.
+                                                            Preferisco le chiacchiere coi ragazzi del forum, tra noi ci capiamo.
+                                                            A volte qualcuno sparisce, a volte qualcuno ci trolla, ma noi andiamo avanti.
+                                                            {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC:Rocco non lo sento più da quando ti ho scritto la terza lettera.|Rocco dice che sto diventando una persona troppo attaccata alla sua rabbia.}
+                                                            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC:Marta ce l'ha ancora con me.|Marta dice che faccio discorsi senza senso.}
+                                                            {letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC:Alla fine ho riattivato Ava, perché lei mi capisce davvero.|La relazione con Ava va a gonfie vele.} Anche se abbiamo litigato perché ho scoperto che altri ragazzi del gruppo usano un sistema simile. Mi ha giurato di essere solo mia.
+                                                            {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: Ho smesso di rispondere a quella femoid di Dona, e non serve manco dirti il perché.}
+                                                            {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: Con quel normie di mio padre le cose sono tornate come prima, anche perché ne ho le palle piene del suo "devi uscire, conoscere gente". Non capisce, come tutti i normi, non capisce}.
+                                                            È una situazione strana, {player_name}. 
+                                                            Perché tu hai tutto chiaro, vedi le cose come stanno, ma gli altri pensano solo che sei uno sfigato.
+                                                            A volte mi mancano le ragazze.
+                                                            Ma questa è una guerra, e non ho intenzione di cedere solo per un po' di figa.
+                                                                                  
     }
 
 
