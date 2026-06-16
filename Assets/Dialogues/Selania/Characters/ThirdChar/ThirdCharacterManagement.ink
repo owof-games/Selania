@@ -211,7 +211,7 @@
                 } 
         
     - else:
-                                                                    Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                                                                    Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                                                                     Una seconda volta.
         {
         - thirdChar_InkLevel == ink_empty:
@@ -232,14 +232,14 @@
                                                                     Una pagella da sei su dieci, con un punto in più per l'affetto.
 
         - thirdChar_InkLevel == ink_medium:
-                                                                    Mi hai messo alla prova {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, ma in modo buono.
+                                                                    Mi hai messo alla prova {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, ma in modo buono.
                                                                     Siamo state due punte che si sono fatte un po' di sana competizione a vicenda, ma sempre con rispetto.
                                                                     E abbiamo fatto un campionato grandioso.
                                                                     Niente scudetto, ma ogni partita è stata una gioia per i tifosi.
                                                                     Pagella: otto su dieci, ma con la sicurezza che la perfezione è dietro l'angolo.
         
         - thirdChar_InkLevel == ink_high:
-                                                                    Che dire {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}?
+                                                                    Che dire {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}?
                                                                     Abbiamo vinto il campionato.
                                                                     Ci hanno chiamati in nazionale.
                                                                     Ci siamo presi le migliori prime pagine della Gazzetta.

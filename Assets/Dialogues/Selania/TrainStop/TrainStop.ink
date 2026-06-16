@@ -221,7 +221,7 @@
         -> third_char_closing_letters -> main
 
     = eight
-     {charTag(Documents, "writer_thirdChar")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}.
+     {charTag(Documents, "writer_thirdChar")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}.
         -> letters_thirdCharLetters_eight -> 
         -> third_char_closing_letters -> 
         -> main

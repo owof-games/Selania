@@ -427,7 +427,7 @@
     {
         - grimoire_thirdChar has grimThirdCharLetterEight:
             <b>Ottava lettera</b>
-            {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}. <>
+            {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}. <>
             -> letters_thirdCharLetters_eight -> 
     }
     

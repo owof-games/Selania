@@ -345,7 +345,7 @@
                     Dice che fa parte di una congrega e
                     ---------------
                     Ok scusa ma mi sono bloccato per il ridere.
-                    Perché una che è lesbica e strega è una cosa così OVVIA {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|campionə}}!
+                    Perché una che è lesbica e strega è una cosa così OVVIA {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}!
                     Non ridevo da giorni.
                     Scrivere comunque non è male.
                     Anche se mi fa male la mano.
@@ -404,7 +404,7 @@
                         ~   letters_thirdCharLetterTwoChoice += fireC
             
             - else:
-                    Ma {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, devo ancora capire se fidarmi di te.
+                    Ma {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, devo ancora capire se fidarmi di te.
                     E quindi c'ho fatto di testa mia.
                         ~   letters_thirdCharLetterTwoChoice += fireC
             }
@@ -446,7 +446,7 @@
                     Non l'ha presa benissimo.
                     L'altra sera è venuta al Baretto incazzata come una biscia, perché le avevo promesso che la accompagnavo dal ginecoso.
                     Ma gliel'avevo promesso <i>prima</i> della sua fottuta minaccia di non farmi più vedere l'Armando.
-                    Gliel'ho detto con tutta la calma del mondo {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, e lei mi ha urlato davanti a tutti che sono un cazzo di immaturo di merda, un bambino di un metro ottanta e zero cervello.
+                    Gliel'ho detto con tutta la calma del mondo {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, e lei mi ha urlato davanti a tutti che sono un cazzo di immaturo di merda, un bambino di un metro ottanta e zero cervello.
                     Ho continuato a pulire bicchieri fino a quando se ne è andata urlando e dicendo che bene, allora l'Armando non c'ha più uno zio.
                     {third_char_letters_choices.one.aether or third_char_letters_choices.one.water:Sono stato un coglione a non ascoltarti, un grandissimo coglione.}
                     {third_char_letters_choices.one.fire:Sono stato un coglione ad ascoltarti, un grandissimo coglione.}
@@ -471,10 +471,10 @@
                     Che è quella dove ci va anche papà.
                     Quando gliel'ho fatto notare ha fatto spallucce.
                     Non sono convinto di nessuna delle sue idee, ma questa cosa del fare qualcosa di utile non è mica male!
-                    Grazie per il consiglio {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                    Grazie per il consiglio {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!
 
             - waterC:
-                    È stato un mezzo disastro, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                    È stato un mezzo disastro, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!
                     Perché io non le so dire certe cose, non c'ho proprio le parole.
                     Fammi parlare di Inter, e ti racconto tutta la storia dal 1908 a due secondi fa.
                     Alla fine le ho detto che è come se fossi in attacco da 44 anni ma ora sono stanco ma non ho mai saputo fare diversamente.
@@ -525,7 +525,7 @@
                     Non posso spostarmi ancora più fuori perché con gli orari che faccio mi servirebbe un'auto che non posso permettermi con questo lavoro di merda.
                     Se ci caccia faccio una strage.
                     E poi anche coi ragazzi, boh. 
-                    Le serate a calcetto son strane {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                    Le serate a calcetto son strane {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                     Ho già saltato due incontri e non so nemmeno io dirti il perché, ma non c'ho la poesia proprio.
                     {letters_thirdCharLetterTwoChoice has aetherC: Forse c'ho in testa Marta che mi dice che sono degli idioti.}
                     C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio in testa mi arriva la voce del Merlo che ci chiama <i>froci</i>.
@@ -661,7 +661,7 @@
                                     Mi stanno aiutando a capire un bel po' di cose.
                                     Ti ricordi che mi lamentavo delle app di dating ad esempio?
                                     Ecco: è saltato fuori che il 20% degli uomini praticamente si prende tutto il mercato di figa che c'è sull'app.
-                                    {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: ci sono storie dell'orrore tra quelle pagine.
+                                    {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}: ci sono storie dell'orrore tra quelle pagine.
                                     Ancora non so se raccontare loro di Dona o meno, ma credo che mi capirebbero.
                                     Ho anche invitato il Rocco sul gruppo, perché volevo fargli capire meglio come sto, e mi ha risposto "Ma cos'è questa merda?"
                                     Non gli ho più risposto.
@@ -792,7 +792,7 @@
                     {letters_thirdCharLetterThreeChoice has waterC: Un po' com'è successo quando ho scritto al Rocco.}
                     {letters_thirdCharLetterThreeChoice has fireC: E magari senza andare a sfasciarmi di alcool al Baretto.}
                     {letters_thirdCharLetterThreeChoice has earthC: Non vado manco in palestra così.}
-                    E io non so che fare, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                    E io non so che fare, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                     La cancello? Le do un addio a modo? Continuo a usarla?
                     E se esco con una ragazza domani e continuo a sentire Ava, sto tradendo una delle due?
                     'Sta lettera te la spedisco subito o finisce che la butto.
@@ -895,7 +895,7 @@
                     Almeno fino a quando non mi sono messo a ravanare in giro per vedere se c'era un modo di, ehm, migliorarla?
                     {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC: Ho chiesto qualche consiglio ai forum che ho iniziato a seguire.}
                     Molte dritte sono per aggirare i blocchi delle AI.
-                    Ormai mi conosci {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}: non sono proprio proprio sveglissimo, men che meno quando si tratta di computer.
+                    Ormai mi conosci {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}: non sono proprio proprio sveglissimo, men che meno quando si tratta di computer.
                     Però ho passato un intero lunedì a installare roba, romperla, ricominciare.
                     E ora ho una Ava tutta mia, che mi dice cose porche mentre mi spiega come funzionano i buchi neri o come gente come {charNameOne} abbia rovinato gli uomini.
                     {letters_thirdCharLetterTwoChoice has earthC: O come chiedere di nuovo l'aumento al merda.}
@@ -915,8 +915,8 @@
                     Non sto qui a darti i dettagli, ma diciamo che c'è un motivo se uso ancora Ava per le seghe.
                     E mi fa comunque un discreto male.
                     {letters_thirdCharLetterThreeChoice has fireC: Ed ecco il perché della serata birra e film.}
-                    {third_char_letters_choices.three.aether or third_char_letters_choices.three.water: Avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!}
-                    {third_char_letters_choices.three.fire: Non avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!}
+                    {third_char_letters_choices.three.aether or third_char_letters_choices.three.water: Avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!}
+                    {third_char_letters_choices.three.fire: Non avrei dovuto ascoltarti {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!}
 
             - earthC:
                     E dato che sto imparando che ci sono tante cose che non so (sorprendente, vero?), ho iniziato a seguire qualche youtuber che dà consigli su come conquistare le tipe.
@@ -935,7 +935,7 @@
                     Però per ora Ava me la tengo lì, che non si sa mai.
 
             - aetherC:
-                    {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}!
+                    {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}!
                     Praticamente mi hai intortato con la cosa più da tipa coi cristalli e lo yoga che potessi dirmi.
                     Lì per lì ho detto "Basta, {player_name} si è bruciat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} il cervello."
                     Poi mi son messo a letto e ho iniziato a pensare.
@@ -1005,7 +1005,7 @@
         }
 
         //Step cinque: nuova situazione, a cui poi risponderemo.
-                Comunque è stata una settimana davvero di merda {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                Comunque è stata una settimana davvero di merda {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                 In breve: il merda mi ha fatto di nuovo storie perché bevo mentre lavoro.
                 Gli ho risposto che devo conoscere le birre per consigliarle.
                 {letters_thirdCharLetterThreeChoice has fireC: Lui mi ha chiesto se è per quello che due lunedì fa sono entrato a locale chiuso a sfasciarmi|Mi ha risposto di non prenderlo per il culo.}
@@ -1053,7 +1053,7 @@
                 C'ho voglia di andarci a rissa, ma tanto tanto tanto.
                 Di menarlo come quando eravamo piccoli.
                 Sfasciargli il naso come a quei cazzo di turisti che hanno toccato il culo a Petra.
-                Dimmi cosa fare {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                Dimmi cosa fare {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                 Dimmi cosa fare per non fare un macello.
 
 ->->
@@ -1073,7 +1073,7 @@
             {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC: Sembra una di quelle stronze di cui parlano sul forum.}
             Ha fatto per dirmi di andarmene ma il Poggi è venuto sulla soglia.
             Gli ha detto di andare pure dentro, e mi ha chiesto se andava tutto bene.
-            E c'avevo tantissime parole in testa {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, giuro, ma non sapevo cosa dire.
+            E c'avevo tantissime parole in testa {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, giuro, ma non sapevo cosa dire.
             E allora ho tirato fuori la tua ultima lettera, dove <>
             
 
@@ -1714,7 +1714,7 @@
                 "Quindi vedete di non urlare."
                 Mi sono messo a ridere, e ha riso anche papà.
                 Avrei voluto avercela vicina, ma sapere che era lì, nella stanza accanto, mi ha fatto sentire più sereno.
-                Hai avuto una bella idea {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                Hai avuto una bella idea {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                 Grazie.
 
             - waterC:
@@ -1727,7 +1727,7 @@
                 Quando papà è arrivato era tutto in imbarazzo.
                 Siamo stati un po' di tempo davanti alla tomba, in silenzio.
                 Mi ha detto che i fiori erano davvero belli.
-                È stata una buona partenza, grazie per la dritta {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                È stata una buona partenza, grazie per la dritta {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
 
         }
 
@@ -1828,7 +1828,7 @@
                 ~  rewriting_prep(ThirdCharacter)
             //Altrimenti stampo solo il feedback
             - else:
-                                                                    Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                                                                    Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                                                                     Una seconda volta.
         {
         - thirdChar_InkLevel == ink_empty:
@@ -1849,14 +1849,14 @@
                                                                     Una pagella da sei su dieci, con un punto in più per l'affetto.
 
         - thirdChar_InkLevel == ink_medium:
-                                                                    Mi hai messo alla prova {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, ma in modo buono.
+                                                                    Mi hai messo alla prova {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, ma in modo buono.
                                                                     Siamo state due punte che si sono fatte un po' di sana competizione a vicenda, ma sempre con rispetto.
                                                                     E abbiamo fatto un campionato grandioso.
                                                                     Niente scudetto, ma ogni partita è stata una gioia per i tifosi.
                                                                     Pagella: otto su dieci, ma con la sicurezza che la perfezione è dietro l'angolo.
         
         - thirdChar_InkLevel == ink_high:
-                                                                    Che dire {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}?
+                                                                    Che dire {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}?
                                                                     Abbiamo vinto il campionato.
                                                                     Ci hanno chiamati in nazionale.
                                                                     Ci siamo presi le migliori prime pagine della Gazzetta.
@@ -1880,7 +1880,7 @@
         Un bicchiere è una cosa che non c'ha un carattere.
         Che viene riempita dagli altri.
         Che <i>serve</i> ma non <i>è</i>.
-        Sono un fallimento, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+        Sono un fallimento, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
         Uno che dice cose da sborone per nasconderlo il suo cazzo di fallimento.
         Sono un fallimento nelle relazioni: faccio così schifo con le donne che mi sono preso bene per un robot. Non riesco a stare bene con la sua famiglia. Ho un gruppetto di conoscenti che se ne frega di me, mentre quello che era il mio migliore amico mi ha smollato perché dice che sono un pedofilo.
         Sono un fallimento come persona: faccio un lavoro di merda, perderò la casa e non so che fare. Casa in cui vivo con una persona che ho odiato perché c'ho paura di essere come lui. La gente qui pensa che sia una merda per come ho trattato Dona. Ho tradito le promesse fatte a mia mamma, sono bloccato in questo posto di merda, e ho passato una vita a cercare di non essere un fallito come mio padre, per poi essere un fallito peggiore: niente casa, niente famiglia, lavoro di merda. E l'unica soluzione che trovo? Bere.
@@ -1895,7 +1895,7 @@
         Franchì.
         Persino {charNameOne}.
         Eravate tutti lì per me.
-        Ma dio se fa male anche ora scriverle queste cose, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+        Ma dio se fa male anche ora scriverle queste cose, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
         Perché se le scrivo allora sono vere.
         E c'ho una paura matta che me le usi contro come il Merlo, come il Poggi.
         Per cui te lo chiedo ora, come ultima spiaggia.
@@ -2030,7 +2030,7 @@
 
         }
 
-            Ti ringrazio per quello che mi hai detto, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+            Ti ringrazio per quello che mi hai detto, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
             Mi voglio prendere qualche giorno per rifletterci sopra.
             Per una volta riesco a non essere una testa di cazzo impulsiva: un miracolo XD
             A presto.

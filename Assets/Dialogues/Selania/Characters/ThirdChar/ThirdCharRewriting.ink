@@ -820,7 +820,7 @@
     // ~ rewriting_end(ThirdCharacter)
     //Andrà anche modificata charTag() in modo tale che il nome nuovo sia mostrato solo DOPO la presentazione.
 
-    {charTag(ThirdCharacter, "neutral")}:                   {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}!
+    {charTag(ThirdCharacter, "neutral")}:                   {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}!
                                                             Se non mi riconosci guarda che ci rimango male!
                                                             Dopo tutte le lettere che ti ho spedito e le merdate che ho fatto, non puoi esserti dimenticato di me.
                                                             E come vedi, mi ci sono davvero impegnato con quella cosa del cambio di nome!
@@ -863,7 +863,7 @@
             - third_char_second_rewriting.ending.fire:
                                                             E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, cose che mi hanno scavato di più questa testa vuota.
             }
                                                             E una notte mi sveglio nel letto di una sgallettata, e cosa penso?
                                                             Che il mio nome è...                                            
@@ -875,7 +875,7 @@
             - third_char_second_rewriting.ending.water:
                                                             E quella roba lì che mi hai detto proprio mi si è messa in testa, sai? 
             - else:
-                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, cose che mi hanno scavato di più questa testa vuota.
             }
                                                             E sono lì che cerco di fare addormentare l'Armandino, e cosa finisco per pensare?
                                                             Che il mio nome è...                                          
@@ -888,7 +888,7 @@
             - third_char_second_rewriting.ending.earth:
                                                             E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, cose che mi hanno scavato di più questa testa vuota.
             }
                                                             E sono lì che mi studio i documenti della cazzo di banca, e cosa sento?
                                                             Che il mio nome è...                                            
@@ -901,7 +901,7 @@
             - third_char_second_rewriting.ending.aether:
                                                             E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, cose che mi hanno scavato di più questa testa vuota.
             }
                                                             E sono lì che dico col Rocco che in 'sta cazzo di frazione non c'è niente per i ragazzini, e cosa sento?
                                                             Che il mio nome è...                                         
@@ -915,7 +915,7 @@
             - third_char_second_rewriting.ending.air:
                                                             E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}, cose che mi hanno scavato di più questa testa vuota.
             }
                                                             E sono lì che chiacchiero coi ragazzi di Reddit, e cosa sento?
                                                             Che il mio nome è...                                         
@@ -930,7 +930,7 @@
     {
 
     - thirdChar_ActualName has Guantone:
-    {charTag(ThirdCharacter, "neutral")}:                   Comunque sono diventato il boss dei disastri, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+    {charTag(ThirdCharacter, "neutral")}:                   Comunque sono diventato il boss dei disastri, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                                                             Dopo che quella zoccola della padrona di casa ci ha cacciati, ora vivo un po' dove capita.
                                                             E per "dove capita" intendo il letto di qualche figa.
                                                             A lavoro sopporto sempre meno tutti, che stanno a rompermi il cazzo sempre per il bere, i ritardi e tutto il resto.
@@ -973,7 +973,7 @@
 
     - thirdChar_ActualName has Sigaro:
     {charTag(ThirdCharacter, "neutral")}:                   Però sono proprio un figo così. Un gran figo.
-                                                            Per fortuna non si vedono le occhiaie, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                                                            Per fortuna non si vedono le occhiaie, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!
                                                             Ormai dormo pochissimo.
                                                             {letters_thirdCharLetterFourChoice has earthC: Ma stiamo avviando il nuovo locale con Petra!|Ho deciso di rilevare un baretto da solo.}
                                                             Ma ci sono mille lavori da fare e quindi intanto continuo a lavorare al Baretto.
@@ -990,7 +990,7 @@
                                                             {letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC or letters_thirdCharLetterFourChoice has airC:Ho sostituito Ava con un planner automatico, per star dietro a tutti i ritmi, ed è pura magia!|Non vedo una tipa che una da mesi, e non sono mai stato così lucido.}
                                                             {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: Dona continua a chiedermi quando mi prenderò cura di me. Non lo capisce che questo <b>è</b> prendermi cura di me, del mio futuro.}
                                                             {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: Papà viene spesso al cantiere, anche se ultimamente mi snerva perché mi chiede se ho riposato o mangiato e mi fa sentire un bambino.}
-                                                            È un periodo tutto sommato solitario, ma va bene così: solitario è il cammino dell'eroe, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}!
+                                                            È un periodo tutto sommato solitario, ma va bene così: solitario è il cammino dell'eroe, {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}!
                                                             Come per te in questo postaccio!
     
     - thirdChar_ActualName has Cerchio:
