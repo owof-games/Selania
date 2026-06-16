@@ -370,7 +370,7 @@
                     Chissà se c'ha un padrone.
                     Prima cosa: pronomi registrati in questo cervellino di merda.
                     E li rispetterò.
-                    Anche perché Petra mi ha detto che se non lo faccio mi lancia un'anatema che mi fa diventare il cazzo piccolo.
+                    Anche perché Petra mi ha detto che se non lo faccio mi lancia il malocchio e mi diventa il cazzo piccolo.
                     Può farlo davvero?
 
         //Step uno: un feedback sulla lettera precedente
@@ -1723,6 +1723,7 @@
                 Mi fa sentire così spaventato, non so perché.
                 È rilassante, ma troppo.
                 Petra mi ha detto di portare dei fiori per mamma.
+                Ho preso un vasetto di crochi, che li adorava.
                 Quando papà è arrivato era tutto in imbarazzo.
                 Siamo stati un po' di tempo davanti alla tomba, in silenzio.
                 Mi ha detto che i fiori erano davvero belli.
@@ -1805,7 +1806,7 @@
                 Marta è arrivata, mi ha stretto.
                 Papà le ha messo una mano sul braccio, e ci ha lasciati soli.
                 Ora ha iniziato a mandarmi foto del giardino comunale dove passa le mattinate.
-                C'ha messo i fiori preferiti di mamma.
+                C'ha messo dei crochi, i fiori preferiti di mamma.
 
             - waterC:
                 "Mamma c'è sempre stata per me, è quello che ho imparato l'ho imparato da lei".
