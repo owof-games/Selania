@@ -11,7 +11,7 @@
 //{player_pronoun has him:gli|{player_pronoun has her:le|lə}}
 //{player_pronoun has him:il|{player_pronoun has her:la|lə}}
 
-// È 
+//È 
 //Pronomi usati da Boccale
 //{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}
 //{thirdChar_recordedPlayerPronoun has him:il|{thirdChar_recordedPlayerPronoun has her:la|lə}}
