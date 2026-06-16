@@ -908,7 +908,7 @@
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
                                                             Cerchio.
                                                             Come quello del centrocampo.
-                                                            Quando la partita non è ancora iniziata, e c'è un buon equilibrio e c'è solo l'energia del cambiamento in arrivo.   
+                                                            Quando la partita non è ancora iniziata, e c'è un buon equilibrio e c'è solo l'energia bella del cambiamento in arrivo.   
             
     - thirdChar_ActualName has Forum:
             {

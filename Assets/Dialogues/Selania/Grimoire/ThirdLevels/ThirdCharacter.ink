@@ -299,22 +299,32 @@
 
     {
         - grimoire_thirdChar has grimThirdCharNewName:
-            Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(thirdChar_ActualName)}.</b></i>
+            Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{charNameThree}.</b></i>
     }
     {
         - thirdChar_ActualName has Forum:
-            
+            Il luogo che sta insegnando a {charNameThree} a capire meglio le relazioni, le donne, il posto di {charNameThree} nel mondo in modo oggettivo.
+            A quanto pare il <i>Movimento per la Rinascita Maschile</i> continua a mietere vittime. Ora vive con degli studenti.
+
         
         - thirdChar_ActualName has Canovaccio:
+            Il tessuto usato nei locali per pulire i bicchieri. Per {charNameThree} è simbolo di qualcosa di modesto ma che risistema i casini, rendendo i bicchieri di nuovo pronti per bere.
+            La nuova vita di {charNameThree} sembra essere fatta di ricuciture col passato, presa di responsabilità e della volontà di diventare un modello per Armando, il nipote. Ora vive con Marta.
         
                 
         - thirdChar_ActualName has Sigaro:
+            Per {charNameThree} un grosso sigaro è il simbolo degli uomini di successo, con l'orologio di lusso e la casa a Dubai.
+            La nuova vita di {charNameThree} sembra essere fatta di lavoro, lavoro, lavoro e solitudine. Ora dorme nel cantiere del locale che sta aprendo, e non ha una casa stabile.
 
 
         - thirdChar_ActualName has Guantone:
+            Il guantone da box, che per {charNameThree} è simbolo di chi lotta sempre.
+            La nuova vita di {charNameThree} sembra essere fatta di sesso, alcool, instabilità e solitudine. Ora non vive in un posto fisso, ma dorme di letto in letto.
 
 
         - thirdChar_ActualName has Cerchio:
+            Il cerchio del centrocampo, che per {charNameThree} è il simbolo di una partita non ancora iniziata, di equilibrio e dell'energia bella di un cambiamento in arrivo.
+            La nuova vita di {charNameThree} sembra essere fatta di elaborazioni collettive e azioni per la comunità, con una creazione della squadra di calcio mista, e una riduzione del bere. Ora vive con Marta.
 
     }
 
