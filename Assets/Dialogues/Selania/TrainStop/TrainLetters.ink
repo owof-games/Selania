@@ -563,15 +563,15 @@
         ~ temp charFifthName = translator(fifthChar_ActualName)
 
                     Non lo farò manco adesso.
-                    Uh, perché nelle lettere non ci posso mettere le emoji?
-                    Non ricordo se sei abbastanza vecchi{player_pronoun has him:o|{player_pronoun has her:a|ə}} da ricordati cose come 
+                    Però mischierò vecchia roba e roba ancora più vecchia mettendo le emoji nelle lettere!
+                    Non ricordo se sei abbastanza vecchi{player_pronoun has him:o|{player_pronoun has her:a|ə}} da ricordati cose come:
                     XD
                     :D
                     :P
                     E poi c'è ovviamente <s>8====</s>
                     ---------
                     Petra mi ha appena tirato una sberla che mi ha fatto fare alla testa il giro del mondo.
-                    Già non ero così intelligente prima, figurarsi ora.
+                    Già non ero così intelligente prima, figurarsi ora XD
                     Siamo qui a lavoro.
                     Piove.
                     E
@@ -587,14 +587,13 @@
                     Ed è la mia SUPEREROINA.
                     La amo davvero la amo la 
                     -------
-                    Ho dovuto strappargli la lettera dalle mani.
+                    Ho dovuto strappargli la lettera dalle mani :/
                     Ora sono a casa perché Petra ha passato il resto della sera a chiedermi come sono arrivato lì e come sono tornato e se ricordo dei dettagli e il treno e di che colore era Franco e.
                     Non lo ricordo, {player_name}.
                     A volte mi dimentico di voi, penso sia un sogno.
                     Poi arriva la cagnolina (che ora c'ha anche una cuccia e la sua ciotola al Baretto) e mi torna tutto in mente.
                     Oppure ci pensano i risultati dei tuoi suggerimenti.
                     Ti ho detto che non capisco le persone e ti ho chiesto come posso farmi amici alla mia età, <>
-
 
                         //Step uno: un feedback sulla lettera precedente
                         {
@@ -656,7 +655,7 @@
                         {letters_thirdCharLetterThreeChoice:
                             - airC:
                                     Credo proprio che c'hai ragione, sai? Non è che i miei amici cercano di capirmi poi tanto.
-                                    E manco la mia famiglia.
+                                    E manco la mia famiglia :/
                                     {letters_thirdCharLetterTwoChoice has airC: Per fortuna ci sono i ragazzi che sto conoscendo online|Però ho rispolverato Reddit, e ho iniziato a cercare gruppi di persone come me}.
                                     Mi stanno aiutando a capire un bel po' di cose.
                                     Ti ricordi che mi lamentavo delle app di dating ad esempio?
