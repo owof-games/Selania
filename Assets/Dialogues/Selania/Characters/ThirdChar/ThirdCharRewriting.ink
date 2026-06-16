@@ -815,28 +815,33 @@
 
 
 === third_char_post_rewriting
+    TODO: una volta capita come gestire la parte della festa, vediamo di capire dove chiamare queste due funzioni
+    // ~  characterChangingObjects(ThirdCharacter)     
+    // ~ rewriting_end(ThirdCharacter)
+    //Andrà anche modificata charTag() in modo tale che il nome nuovo sia mostrato solo DOPO la presentazione.
 
-    //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
-    {charTag(ThirdCharacter, "neutral")}:                   Ehi {player_name}!
-                                                            Spero mi riconosci!
-                                                            Sono, ero Boccale.
-                                                            Ho riflettuto a lungo sulle cose che mi hai detto, sai, e in particolare <>
+    {charTag(ThirdCharacter, "neutral")}:                   {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}!
+                                                            Se non mi riconosci guarda che ci rimango male!
+                                                            Dopo tutte le lettere che ti ho spedito e le merdate che ho fatto, non puoi esserti dimenticato di me.
+                                                            E come vedi, mi ci sono davvero impegnato con quella cosa del cambio di nome!
+                                                            C'ho anche un corpo tutto nuovo!
+                                                            Quando hai fatto tutta quella roba della riscrittura tu mi hai detto <>
 
     {
     - third_char_second_rewriting.ending.fire:
-    {charTag(ThirdCharacter, "neutral")}:                   Alla cosa fuoco.
+    {charTag(ThirdCharacter, "neutral")}:                   che era arrivato il momento per me di lottare.
     
     - third_char_second_rewriting.ending.aether:
-    {charTag(ThirdCharacter, "neutral")}:                   Alla cosa spirito.
+    {charTag(ThirdCharacter, "neutral")}:                   che dovevo fallire ed essere meno uomo, essere un'altra cosa.
         
     - third_char_second_rewriting.ending.earth:
-    {charTag(ThirdCharacter, "neutral")}:                   Alla cosa terra.
+    {charTag(ThirdCharacter, "neutral")}:                   che avevo bisogno di sistemare le cose pratiche e poi da lì tutto si sarebbe risolto.
 
     - third_char_second_rewriting.ending.water:
-    {charTag(ThirdCharacter, "neutral")}:                   Alla cosa acqua.
+    {charTag(ThirdCharacter, "neutral")}:                   che dovevo imparare ad essere vulnerabile con le persone care.
 
     - third_char_second_rewriting.ending.air:
-    {charTag(ThirdCharacter, "neutral")}:                   Alla cosa aria.
+    {charTag(ThirdCharacter, "neutral")}:                   che dovevo conoscere altre persone coi miei stessi casi e vedere che soluzioni c'avevano da darmi.
             
     }
 
@@ -850,70 +855,111 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-        // E aggiornamento nome, anche se non avremo feedback sul momento. Lo facciamo ora e non dopo la proposta della settima lettera, o finiamo per avere nell'ottava lettera già presente il nome nuovo
-        ~ rewriting_end(ThirdCharacter)
 
-    //non taggare il nome fino a quando non è stato dichiarato, sennò viene cambiato prima
     {
 
     - thirdChar_ActualName has Guantone:
             {
             - third_char_second_rewriting.ending.fire:
-                                                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                                                            E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
             }
-                                                            Il mio vero nome è...
-                ~  characterChangingObjects(ThirdCharacter)                                                
+                                                            E una notte mi sveglio nel letto di una sgallettata, e cosa penso?
+                                                            Che il mio nome è...                                            
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
+                                                            Come il guantone da box, come il simbolo di chi lotta sempre!
 
     - thirdChar_ActualName has Canovaccio:
             {
             - third_char_second_rewriting.ending.water:
-                                                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                                                            E quella roba lì che mi hai detto proprio mi si è messa in testa, sai? 
             - else:
-                                                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
             }
-                                                            Mi chiamerò...
-                ~  characterChangingObjects(ThirdCharacter)                                                
+                                                            E sono lì che cerco di fare addormentare l'Armandino, e cosa finisco per pensare?
+                                                            Che il mio nome è...                                          
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
+                                                            Come quello che uso a lavoro per pulire i bicchieri.
+                                                            E sembra una cosa modesta, ma è lì a risistemare i casini, a rendere i bicchieri di nuovo pronti per bere.
 
     - thirdChar_ActualName has Sigaro:
             {
             - third_char_second_rewriting.ending.earth:
-                                                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                                                            E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
             }
-                                                            E il mio nome è...
-                ~  characterChangingObjects(ThirdCharacter)                                                
+                                                            E sono lì che mi studio i documenti della cazzo di banca, e cosa sento?
+                                                            Che il mio nome è...                                            
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
+                                                            Uno di quelli grossi e cubani che fumano i tizi di successo. Quelli col Rolex e la casa a Dubai.
                         
     
     - thirdChar_ActualName has Cerchio:
             {
             - third_char_second_rewriting.ending.aether:
-                                                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                                                            E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
             }
-                                                            Mi chiamerò...
-                ~  characterChangingObjects(ThirdCharacter)                                                
-            {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.    
+                                                            E sono lì che dico col Rocco che in 'sta cazzo di frazione non c'è niente per i ragazzini, e cosa sento?
+                                                            Che il mio nome è...                                         
+            {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
+                                                            Cerchio.
+                                                            Come quello del centrocampo.
+                                                            Quando la partita non è ancora iniziata, e c'è un buon equilibrio e c'è solo l'energia del cambiamento in arrivo.   
             
     - thirdChar_ActualName has Forum:
             {
             - third_char_second_rewriting.ending.air:
-                                                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
+                                                            E quella roba lì che mi hai detto proprio mi si è messa in testa, sai?
             - else:
-                                                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
+                                                            Ma ci siamo detti anche tante altre cose {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}, cose che mi hanno scavato di più questa testa vuota.
             }
-                                                            Io sono...
-                ~  characterChangingObjects(ThirdCharacter)                                                
-            {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.    
+                                                            E sono lì che chiacchiero coi ragazzi di Reddit, e cosa sento?
+                                                            Che il mio nome è...                                         
+            {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
+                                                            Come il posto che mi sta insegnando a capire meglio le relazioni, le donne, il mio posto del mondo in modo oggettivo. 
                 
     }
+
+    //Solo per comodità separo la dichiarazione del nome dal racconto su come sta andando la sua vita ora.
+    {charTag(ThirdCharacter, "neutral")}:                   Ma non mi aspettavo che venendo qui ci assomigliavo pure a un {charNameThree}.
+                                                            Questo posto è strano, {player_name}!
+    {
+
+    - thirdChar_ActualName has Guantone:
+    {charTag(ThirdCharacter, "neutral")}:                   Comunque sono diventato il boss dei disastri, {player_pronoun has him:vecio|{player_pronoun has her:zia|campionə}}.
+                                                            Dopo che quella zoccola della padrona di casa ci ha cacciati, ora vivo un po' dove capita.
+                                                            E per "dove capita" intendo il letto di qualche figa.
+                                                            A lavoro sopporto sempre meno tutti, che stanno a rompermi il cazzo sempre per il bere, i ritardi e tutto il resto.
+                                                            C'ho una bella barba da marinaio ora, anche se c'ha l'odore di tutte le tipe con cui sono stato.
+                                                            Ho litigato con Petra {letters_thirdCharLetterThreeChoice has aetherC: e le sue cazzo di cose femministe di merda}, ma litigato di brutto.
+                                                            {letters_thirdCharLetterFourChoice has earthC: E il progetto del locale preso assieme è saltato, ma fanculo.}
+                                                            Non sento più mia sorella da mesi.
+                                                            {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: E c'ho messo poco a capire che le cose buone con mio padre erano solo nella mia testa. Dio quanto mi ha rotto il cazzo per la mia vita, ma quanto! Ora l'ho bloccato ovunque.|Men che meno quello sfigato di mio padre.}
+                                                            {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: E Dona come amica è un dito in culo. L'ultima volta che l'ho sentita mi ha detto che sono stato l'errore più grande della sua vita. Che zoccola.}
+                                                            E sai una cosa, {player_name}?
+                                                            Sono libero.
+                                                            Sono fottutamente meravigliosamente cazzutissimamente libero!
+
+
+    - thirdChar_ActualName has Canovaccio:
+    {charTag(ThirdCharacter, "neutral")}:                   
+
+    - thirdChar_ActualName has Sigaro:
+    {charTag(ThirdCharacter, "neutral")}:                          
+                      
+    
+    - thirdChar_ActualName has Cerchio:
+    {charTag(ThirdCharacter, "neutral")}:                       
+
+    - thirdChar_ActualName has Forum:
+    {charTag(ThirdCharacter, "neutral")}:                        
+    }
+
+
     
         {
         - thirdChar_specialEvent == true:
