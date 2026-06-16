@@ -447,19 +447,24 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
         {
             - thirdChar_ActualName == Forum:
-                ~ return "Forum"
+                ~ move_entity(ThirdCharacterForum, currentLocation)
+                ~ move_entity(PaintForum, Bedroom)
 
             - thirdChar_ActualName == Canovaccio:
-                ~ return "Canovaccio"
+                ~ move_entity(ThirdCharacterCanovaccio, currentLocation)
+                ~ move_entity(PaintCanovaccio, Bedroom)
 
             - thirdChar_ActualName == Sigaro:
-                ~ return "Sigaro"
+                ~ move_entity(ThirdCharacterSigaro, currentLocation)
+                ~ move_entity(PaintSigaro, Bedroom)
 
             - thirdChar_ActualName == Guantone:
-                ~ return "Guantone"
+                ~ move_entity(ThirdCharacterGuantone, currentLocation)
+                ~ move_entity(PaintGuantone, Bedroom)
 
             - thirdChar_ActualName == Cerchio:
-                ~ return "Cerchio"                     
+                ~ move_entity(ThirdCharacterCerchio, currentLocation)
+                ~ move_entity(PaintCerchio, Bedroom)                    
         }
 
     - FourthCharacter:

@@ -16,6 +16,8 @@
 ~ temp temporaryEarth = 0
 ~ temp mainGlyph = ()
 ~ temp possiblesMainGlyphs = ()
+//per non complicarmi la vita nei controlli, setto questo valore a 0, 1 e 2 (0, situazione non di Boccale, 1 è negativa, 2 positiva)
+~ temp thirdCharBadEnding = 0
 
 {PNG:
     - FirstCharacter:
@@ -38,6 +40,12 @@
         ~ temporaryAether = thirdChar_aether
         ~ temporaryFire = thirdChar_fire
         ~ temporaryEarth = thirdChar_earth
+            {
+             - (temporaryAir + temporaryFire + temporaryEarth) >= (temporaryWater + temporaryAether):
+                ~ thirdCharBadEnding = 1
+            - else:
+                ~ thirdCharBadEnding = 2
+            }
 
     - FourthCharacter:
         ~ temporaryAir = fourthChar_air
@@ -58,23 +66,23 @@
 //Secondo step: calcolo il valore dominante.
     {
         //Aria elemento più usato     
-        - (temporaryAir > temporaryWater) && (temporaryAir > temporaryFire) && (temporaryAir > temporaryEarth) && (temporaryAir > temporaryAether):
+        - (temporaryAir > temporaryWater) && (temporaryAir > temporaryFire) && (temporaryAir > temporaryEarth) && (temporaryAir > temporaryAether) && thirdCharBadEnding != 2:
             ~ mainGlyph = airC
-        
+          
         //Fuoco elemento più usato         
-        - (temporaryFire> temporaryWater) && (temporaryFire> temporaryAir) && (temporaryFire> temporaryEarth) && (temporaryFire> temporaryAether):
+        - (temporaryFire> temporaryWater) && (temporaryFire> temporaryAir) && (temporaryFire> temporaryEarth) && (temporaryFire> temporaryAether) && thirdCharBadEnding != 2:
             ~ mainGlyph = fireC
-        
-        //Acqua elemento più usato     
-        - (temporaryWater > temporaryAir) && (temporaryWater > temporaryFire) && (temporaryWater > temporaryEarth) && (temporaryWater > temporaryAether):
-            ~ mainGlyph = waterC
 
         //Terra elemento più usato           
-        - (temporaryEarth > temporaryWater) && (temporaryEarth > temporaryFire) && (temporaryEarth > temporaryAir) && (temporaryEarth > temporaryAether):
+        - (temporaryEarth > temporaryWater) && (temporaryEarth > temporaryFire) && (temporaryEarth > temporaryAir) && (temporaryEarth > temporaryAether) && thirdCharBadEnding != 2:
             ~ mainGlyph = earthC
 
+        //Acqua elemento più usato     
+        - (temporaryWater > temporaryAir) && (temporaryWater > temporaryFire) && (temporaryWater > temporaryEarth) && (temporaryWater > temporaryAether) && thirdCharBadEnding != 1:
+            ~ mainGlyph = waterC
+
         //Spirito elemento più usato        
-        - (temporaryAether > temporaryWater) && (temporaryAether > temporaryFire) && (temporaryAether > temporaryEarth) && (temporaryAether > temporaryAir):
+        - (temporaryAether > temporaryWater) && (temporaryAether > temporaryFire) && (temporaryAether > temporaryEarth) && (temporaryAether > temporaryAir) && thirdCharBadEnding != 1:
             ~ mainGlyph = aetherC   
 
                 
@@ -83,23 +91,23 @@
             //Prima di tutto cerco di capire qual è il valore più alto comune.
             ~ temp maxValue = 0
                 {
-                    - temporaryAether >= maxValue:
+                    - temporaryAether >= maxValue && thirdCharBadEnding != 1:
                         ~ maxValue = temporaryAether
                 }
                 {
-                    - temporaryWater >= maxValue:
+                    - temporaryWater >= maxValue && thirdCharBadEnding != 1:
                         ~ maxValue = temporaryWater
                 }
                 {
-                    - temporaryFire >= maxValue:
+                    - temporaryFire >= maxValue && thirdCharBadEnding != 2:
                         ~ maxValue = temporaryFire
                 }
                 {
-                    - temporaryAir >= maxValue:
+                    - temporaryAir >= maxValue && thirdCharBadEnding != 2:
                         ~ maxValue =  temporaryAir
                 }
                 {
-                    - temporaryEarth >= maxValue:
+                    - temporaryEarth >= maxValue && thirdCharBadEnding != 2:
                         ~ maxValue = temporaryEarth
 
                 }
@@ -109,27 +117,27 @@
             //Poi aggiungo alla lista dei potenziali generatori di nomi solo quei glifi che superano il valore medio delle scelte. 
 
             {
-                - temporaryAether >= maxValue:
+                - temporaryAether >= maxValue && thirdCharBadEnding != 1:
                     ~ possiblesMainGlyphs += aetherC
             }
 
             {
-                - temporaryWater >= maxValue:
+                - temporaryWater >= maxValue && thirdCharBadEnding != 1:
                     ~ possiblesMainGlyphs += waterC
             }
 
             {
-                - temporaryFire >= maxValue:
+                - temporaryFire >= maxValue && thirdCharBadEnding != 2:
                     ~ possiblesMainGlyphs += fireC
             }
 
             {
-                - temporaryAir >= maxValue:
+                - temporaryAir >= maxValue && thirdCharBadEnding != 2:
                     ~ possiblesMainGlyphs += airC
             }
 
             {
-                - temporaryEarth >= maxValue:
+                - temporaryEarth >= maxValue && thirdCharBadEnding != 2:
                     ~ possiblesMainGlyphs += earthC
             } 
 
@@ -194,7 +202,7 @@
             - aetherC:
                 ~ thirdChar_ActualName += Cerchio
             - else:
-                //Definire e assegnare il negativo
+                //La lettura negativa per Boccale è quella autodistruttiva
                 ~ thirdChar_ActualName += Guantone
         }
 

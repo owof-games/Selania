@@ -851,6 +851,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
+        // E aggiornamento nome, anche se non avremo feedback sul momento. Lo facciamo ora e non dopo la proposta della settima lettera, o finiamo per avere nell'ottava lettera già presente il nome nuovo
+        ~ rewriting_end(ThirdCharacter)
+
     //non taggare il nome fino a quando non è stato dichiarato, sennò viene cambiato prima
     {
 
@@ -862,6 +865,7 @@
                                                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
             }
                                                             Il mio vero nome è...
+                ~  characterChangingObjects(ThirdCharacter)                                                
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
 
     - thirdChar_ActualName has Canovaccio:
@@ -872,6 +876,7 @@
                                                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
             }
                                                             Mi chiamerò...
+                ~  characterChangingObjects(ThirdCharacter)                                                
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
 
     - thirdChar_ActualName has Sigaro:
@@ -882,6 +887,7 @@
                                                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
             }
                                                             E il mio nome è...
+                ~  characterChangingObjects(ThirdCharacter)                                                
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.
                         
     
@@ -893,6 +899,7 @@
                                                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
             }
                                                             Mi chiamerò...
+                ~  characterChangingObjects(ThirdCharacter)                                                
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.    
             
     - thirdChar_ActualName has Forum:
@@ -903,6 +910,7 @@
                                                             Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
             }
                                                             Io sono...
+                ~  characterChangingObjects(ThirdCharacter)                                                
             {charTag(ThirdCharacter, "neutral")}:           <b><i>{charNameThree}</b></i>.    
                 
     }

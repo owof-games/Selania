@@ -224,8 +224,6 @@
      {charTag(Documents, "writer_thirdChar")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Campionə}}.
         -> letters_thirdCharLetters_eight -> 
         -> third_char_closing_letters -> 
-        // E aggiornamento nome, anche se non avremo feedback sul momento. Lo facciamo ora e non dopo la proposta della settima lettera, o finiamo per avere nell'ottava lettera già presente il nome nuovo
-        ~ rewriting_end(ThirdCharacter)
         -> main
     
 === fourth_character_notes ===
