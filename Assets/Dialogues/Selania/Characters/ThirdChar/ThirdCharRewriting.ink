@@ -967,6 +967,9 @@
                                                             {letters_thirdCharLetterFourChoice has earthC: Più che da quei cazzo di fuffaguru di Youtube.}
                                                             Sarò un bravo zio, {player_name}.
                                                             E magari anche un bravo papà, prima o poi.
+                                                            Ah: la padrona di casa alla fine ci ha cacciati, e per ora vivo da Marta.
+                                                            A volte la strozzerei, ma non è così male.
+                                                            Ha anche aiutato il mio ex inquilino a trovare un appoggio.
 
     - thirdChar_ActualName has Sigaro:
     {charTag(ThirdCharacter, "neutral")}:                   Però sono proprio un figo così. Un gran figo.
@@ -991,7 +994,38 @@
                                                             Come per te in questo postaccio!
     
     - thirdChar_ActualName has Cerchio:
-    {charTag(ThirdCharacter, "neutral")}:                       
+    {charTag(ThirdCharacter, "neutral")}:                   Tutto è cominciato col Rocco e Petra.
+                                                            Una sera si sono presentati assieme a casa mia.
+                                                            {letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC or letters_thirdCharLetterThreeChoice has airC:Non sentivo il Rocco da quando ti ho mandato cos'era, la seconda lettera?|Si sono parlati ogni tanto al Baretto, ma non pensavo che fossero diventati amici.}
+                                                            E mi hanno portato a una serata organizzata dal comune, una cosa per uomini che aiutano uomini.
+                                                            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC: Quando gli ho detto che c'era il mio gruppo su internet, mi hanno mandato a fanculo.}
+                                                            C'è venuto anche il figlio del Rocco, e quindi mi sentivo in colpa a dire che era una buffonata, perché lui se la sentiva tanto.
+                                                            Mi è venuta un sacco di rabbia la prima sera.
+                                                            Ma poi ci sono tornato.
+                                                            E la rabbia è rimasta, ma per andare verso altre direzioni.
+                                                            Sono tutti tipi semplici, come me o il Rocco. O il Poggi.
+                                                            Ma a una certa hanno incontrato "i giri sbagliati", e non intendo le droghe come direbbe subito mio padre.
+                                                            Ma persone e cose che approfittano della nostra rabbia per metterci contro altre persone, altre donne.
+                                                            Più li sentivo più c'avevo voglia di fare qualcosa per chi è più giovane, perché c'hanno bisogno di un posto dove vedere la realtà, no?
+                                                            Non so se mi sto spiegando bene, però alla fine quello che ho fatto col Rocco e suo figlio è tirare su la prima squadra di calcio della frazione.
+                                                            Squadra mista, per la gioia di Petra.
+                                                            Petra, che odia il calcio, ma ama rompere le scatole.
+                                                            E io sono felice, {player_name}.
+                                                            Perché so che il pallone potrà aiutare questi ragazzi e ragazze a non fare le mie stesse cazzate, a vedere il mondo in modo diverso.
+                                                            Soprattutto quando Petra urla insulti ai ragazzi se dicono cose sessiste.
+                                                            E anche il resto della mia vita va meglio.
+                                                            {letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has airC:Con Marta stiamo provando a fare pace.|Marta è la fan numero uno del progetto.}
+                                                            {letters_thirdCharLetterTwoChoice has aetherC: E congola, visto che mi aveva detto che sarei stato bene con una associazione, la stronza.}
+                                                            Mi porto l'Armandino durante le partitelle, così impara ad amare il calcio, e lei c'ha il sabato pomeriggio libero.
+                                                            {letters_thirdCharLetterSixChoice has aetherC or letters_thirdCharLetterSixChoice has waterC: Dona ha chiesto a una sua amica di disegnarci il logo, ed è spettacolare. Mi fa strano sentirla così, come amici, ma ne sono felice, e molto.}
+                                                            {letters_thirdCharLetterSevenChoice has aetherC or letters_thirdCharLetterSevenChoice has waterC: Papà è diventato il vice ufficiale. Nonché mascotte. Nonché raccattapalle.|Ogni tanto vedo mio padre alle partite, ma ancora non si è avvicinato}.
+                                                            Bevo solo in compagnia (non riuscirò mai a smettere).
+                                                            Fumo ancora tanto (e i ragazzetti mi sgridano).
+                                                            E sento tutto questo amore per il mondo, che a volte mi fa male.
+                                                            Ah: la padrona di casa alla fine ci ha cacciati, e per ora vivo da Marta.
+                                                            A volte la strozzerei, ma non è così male.
+                                                            Ha anche aiutato il mio ex inquilino a trovare un appoggio.
+                                                            
 
     - thirdChar_ActualName has Forum:
     {charTag(ThirdCharacter, "neutral")}:                   Non c'ho molto da dirti però.
@@ -1007,7 +1041,10 @@
                                                             Perché tu hai tutto chiaro, vedi le cose come stanno, ma gli altri pensano solo che sei uno sfigato.
                                                             A volte mi mancano le ragazze.
                                                             Ma questa è una guerra, e non ho intenzione di cedere solo per un po' di figa.
-                                                                                  
+                                                            L'unico casino è la casa: la padrona ci ha ufficialmente cacciati. 
+                                                            Ho trovato un'altra stanza di merda con degli studentelli del cazzo, ma mi serve qualcosa di più tranquillo.
+                                                            Mi manca quasi il mio vecchio coinquilino.
+                                                                                
     }
 
 
