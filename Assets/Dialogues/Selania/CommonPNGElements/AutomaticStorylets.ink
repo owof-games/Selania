@@ -203,8 +203,11 @@
     
     //Commento sul cane    
         - are_two_entities_together(FirstCharacter, PG) && (grimoire_secondChar has grimSecondCharLetterOne or grimoire_thirdChar has grimThirdCharLetterOne) && grimoire_firstChar hasnt grimFirstCharDog:
-            -> dog_first_char  
-            
+            -> dog_first_char 
+
+    //Commento su fuga Boccale
+        -  are_two_entities_together(FirstCharacter, PG) && thirdChar_storyStatus == story_storyRemote && grimoire_firstChar hasnt grimFirstCharThirdCharDepartureComment:    
+            -> first_char_third_char_departure_comment
 }
 
 //Storylets speciali Second Char
@@ -216,6 +219,10 @@
     //Commento sul cane    
         - are_two_entities_together(SecondCharacter, PG) && (grimoire_firstChar has grimFirstCharLetterOne or grimoire_thirdChar has grimThirdCharLetterOne) && grimoire_secondChar hasnt grimSecondCharDog:
             -> dog_second_char
+
+    //Commento su fuga Boccale
+        -  are_two_entities_together(SecondCharacter, PG) && thirdChar_storyStatus == story_storyRemote && grimoire_secondChar hasnt grimSecondCharThirdCharDepartureComment:    
+            -> second_char_third_char_departure_comment        
 
 }
 

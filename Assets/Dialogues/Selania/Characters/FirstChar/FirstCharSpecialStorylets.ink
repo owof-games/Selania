@@ -246,3 +246,20 @@
     
         -> first_char_closing_storylet ->
         ->->
+
+
+=== first_char_third_char_departure_comment
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+{charTag(FirstCharacter, "neutral")}:                       Bel comportamento di merda quello di {charNameThree}.
+{charTag(FirstCharacter, "sad")}:                           Spero solo non ti abbia fatto molto male, {player_name}.
+                                                            E come disse Bonaccorti: "Non c'è nessuna risposta, nessuna spiegazione altro che è una truffa".
+{charTag(FirstCharacter, "annoyed")}:                       E quell'uomo è stata una grossa truffa.                                                                 
+
+
+        -> first_char_closing_storylet ->
+        ->->

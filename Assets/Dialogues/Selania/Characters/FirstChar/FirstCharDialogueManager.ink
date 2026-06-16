@@ -63,41 +63,41 @@
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - firstChar_justTalked == false:   
                 {shuffle:
-                    - {charTag(FirstCharacter, "curious")}: {horizontalS_discoveredDocs != ():Non capisco perché qualcuno debba lasciare in giro quei bigliettini, invece di darteli direttamente.|Mi piacerebbe una volta leggere quei documenti che trovi in giro.Le farfalle qui giocano per ore!}
+                    - {charTag(FirstCharacter, "curious")}:     {horizontalS_discoveredDocs != ():Non capisco perché qualcuno debba lasciare in giro quei bigliettini, invece di darteli direttamente.|Mi piacerebbe una volta leggere quei documenti che trovi in giro.Le farfalle qui giocano per ore!}
 
-                    - {charTag(FirstCharacter, "curious")}: {grimoire_witch has grimWitchIntro:Quindi parli con una tizia nella tua testa. Che sta alla discarica. Utile.|No dai, ma hai visto quanto sono carini gli scoiattoli?}
+                    - {charTag(FirstCharacter, "curious")}:     {grimoire_witch has grimWitchIntro:Quindi parli con una tizia nella tua testa. Che sta alla discarica. Utile.|No dai, ma hai visto quanto sono carini gli scoiattoli?}
 
-                    - {charTag(FirstCharacter, "emotional")}: {grimoire_witch has grimWitchIntro:Quella tipa con cui parli, boh, non so perché ma mi dà fiducia. Credo di sentirla a volte. Forse anche io sono una riscrittora? Poveri noi.|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
+                    - {charTag(FirstCharacter, "emotional")}:   {grimoire_witch has grimWitchIntro:Quella tipa con cui parli, boh, non so perché ma mi dà fiducia. Credo di sentirla a volte. Forse anche io sono una riscrittora? Poveri noi.|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
 
-                    - {charTag(FirstCharacter, "sad")}:     Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte. 
+                    - {charTag(FirstCharacter, "sad")}:         {thirdChar_storyStatus == story_storyRemote: È una mia impressione, o {charNameFive} ha preso malissimo la fuga di quel coglione di {charNameThree}?|Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte.}
 
-                    - {charTag(FirstCharacter, "curious")}: Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre. 
+                    - {charTag(FirstCharacter, "curious")}:     Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre. 
 
-                    - {charTag(FirstCharacter, "curious")}: Forse è la fame, ma prima ho sentito odore di lasagna, giuro! 
+                    - {charTag(FirstCharacter, "curious")}:     Forse è la fame, ma prima ho sentito odore di lasagna, giuro! 
 
-                    - {charTag(FirstCharacter, "neutral")}: Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace. 
+                    - {charTag(FirstCharacter, "neutral")}:     Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace. 
 
-                    - {charTag(FirstCharacter, "neutral")}: Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola. 
+                    - {charTag(FirstCharacter, "neutral")}:     Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola. 
 
-                    - {charTag(FirstCharacter, "annoyed")}: Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno. 
+                    - {charTag(FirstCharacter, "annoyed")}:     Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno. 
 
-                    - {charTag(FirstCharacter, "annoyed")}: Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno. 
+                    - {charTag(FirstCharacter, "annoyed")}:     Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno. 
 
-                    - {charTag(FirstCharacter, "sad")}:     Chissà cosa starà facendo Ennio in questo momento. 
+                    - {charTag(FirstCharacter, "sad")}:         Chissà cosa starà facendo Ennio in questo momento. 
 
-                    - {charTag(FirstCharacter, "neutral")}: Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze. 
+                    - {charTag(FirstCharacter, "neutral")}:     Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze. 
 
-                    - {charTag(FirstCharacter, "sad")}:     Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina. 
+                    - {charTag(FirstCharacter, "sad")}:         Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina. 
 
-                    - {charTag(FirstCharacter, "neutral")}: Quando nello stagno non ho visto il mio riflesso ma quello di una Chitarra ho avuto un momento di realizzazione totale.
+                    - {charTag(FirstCharacter, "neutral")}:     Quando nello stagno non ho visto il mio riflesso ma quello di una Chitarra ho avuto un momento di realizzazione totale.
 
-                    - {charTag(FirstCharacter, "annoyed")}: Lavorare è sopravvalutato. 
+                    - {charTag(FirstCharacter, "annoyed")}:     Lavorare è sopravvalutato. 
                     
-                    - {charTag(FirstCharacter, "sad")}:     Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
+                    - {charTag(FirstCharacter, "sad")}:         Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
 
-                    - {charTag(FirstCharacter, "sad")}:     Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
+                    - {charTag(FirstCharacter, "sad")}:         Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
 
-                    - {charTag(FirstCharacter, "curious")}: Eppure più ci penso più sono sicura che {charNameFive} sia arrivata qui con me.
+                    - {charTag(FirstCharacter, "curious")}:     Eppure più ci penso più sono sicura che {charNameFive} sia arrivata qui con me.
                         {
                             - are_two_entities_together(Mentor, PG):
                                 {charTag(FifthCharacter, "bored")}:             Impossibile, è una vita che sto qui.

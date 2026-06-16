@@ -797,7 +797,12 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - a_story_of_revenge && grimoire_firstChar hasnt grimFirstCharNovel:
                 ~ grimoire_firstChar += grimFirstCharNovel
-        }
+        }   
+
+        {
+            - first_char_third_char_departure_comment && grimoire_firstChar hasnt grimFirstCharThirdCharDepartureComment:
+                ~ grimoire_firstChar += grimFirstCharThirdCharDepartureComment
+        } 
 
         {
             - dog_first_char && grimoire_firstChar hasnt grimFirstCharDog:
@@ -968,6 +973,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                     ~ grimoire_secondChar += grimSecondCharCarla
 
         }
+
+        {
+            - second_char_third_char_departure_comment && grimoire_secondChar hasnt grimSecondCharThirdCharDepartureComment:
+                ~ grimoire_secondChar += grimSecondCharThirdCharDepartureComment
+        } 
 
 
                         /******************************

@@ -232,6 +232,12 @@
 
 
 === dog_second_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
     {charTag(SecondCharacter, "energy")}:                       {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name}</b>!!!
     {charTag(SecondCharacter, "energy")}:                       C'è
                                                                 In
@@ -261,4 +267,21 @@
     {charTag(SecondCharacter, "energy")}:                       C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!
 
         -> second_char_closing_storylet ->
-        ->->       
+        ->-> 
+
+
+===  second_char_third_char_departure_comment
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charTag(SecondCharacter, "melanchonic")}:                  È stato brutto sentire urlare così {charNameThree}.
+                                                                Si sentiva ovunque.
+                                                                Nessuno dovrebbe urlarti così {player_name}.
+
+    {charTag(SecondCharacter, "angry")}:                        Se torna chiamo mio fratello e lo picchio!
+    
+        -> second_char_closing_storylet ->
+        ->-> 

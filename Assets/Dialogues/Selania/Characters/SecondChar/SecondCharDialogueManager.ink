@@ -89,7 +89,7 @@
 
                         - {charTag(SecondCharacter, "neutral")}:            So andare in macchina. Ho anche fatto le gare del mondo per adulti.
 
-                        - {charTag(SecondCharacter, "energy")}:             Io non ho paura di nulla.
+                        - {charTag(SecondCharacter, "energy")}:             {thirdChar_storyStatus == story_storyRemote: {charNameFive} sembra molto nervosa da quando se ne è andato {charNameThree}.|Io non ho paura di nulla.}
 
                         - {charTag(SecondCharacter, "neutral")}:            Ho letto tutti i libri della scuola e la maestra ora mi usa al posto del computer.
 
@@ -125,7 +125,7 @@
 
                         - {charTag(SecondCharacter, "energy")}:             Un giorno voglio vedere dal vivo il pinguino blu.
 
-                        - {charTag(SecondCharacter, "neutral")}:            A volte vorrei solo fare il bambino.
+                        - {charTag(SecondCharacter, "neutral")}:            {thirdChar_storyStatus == story_storyRemote: {charNameFive} sembra molto nervosa da quando se ne è andato {charNameThree}.|A volte vorrei solo fare il bambino.}
 
                         - {charTag(SecondCharacter, "energy")}:             Mi piacerebbe trovare un opossum qui in giro, sono così buffi!
 
