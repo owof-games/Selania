@@ -1,6 +1,5 @@
 //Gradualmente ognuno dei cinque feedback che lei ci dà serviranno per tracciare un percorso che parta dalla riscrittura come esperienza personale a qualcosa che è parte di un cambiamento per forza collettivo, inevitabilmente collettivo.
 /***************
-
     Ogni debriefing è un percorso per tracciare il passaggio da una lettura personale a una sistemica delle repressioni.
     FASE 1: Mi succede qualcosa che non sembra essere grave per gli altri, ma lo è per me, o che mi viene chiesto di nascondere.
         es1: le luci a lavoro mi innervosiscono tantissimo, ma se provo a chiedere di cambiarle mi rispondo che sono le leggi, che se ne occupa HR o cose del genere.
@@ -24,9 +23,10 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-    
-        
-        ~ temp sigilUsed = false
+        //Riguarderanno Chitarra e Riccio
+            
+            //Check per vedere se abbiamo o meno usato sigilli sul personaggio
+            ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:                     <i>Le radici ci raccontano che {player_name} ha fatto la sua prima riscrittura.
                                                                 <i>E un nuovo tronco cresce. Questo ci porta gioia.
@@ -34,27 +34,26 @@
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
+
                                                                 <i>Siamo contente che {charNameOne} abbia trovato un nuovo nome, e un nuovo modo di vedere il proprio presente.
                                                                 <i>{charNameOne} è così giovane, eppure faticava a immaginare un futuro.
                                                                 <i>La gemma per crescere deve già contenere la foglia.
                                                                 <i>{charNameOne} ora ha trovato la sua forma.
-                    ~ witch_debriefPNG += FirstCharacter
-                    ~ witch_sigilsComment += FirstCharacter   
-                    ~ sigilUsed = firstChar_usedSigil
+
+                                                                    ~ witch_debriefPNG += FirstCharacter
+                                                                    ~ witch_sigilsComment += FirstCharacter   
+                                                                    ~ sigilUsed = firstChar_usedSigil
             
             - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
+
                                                                 <i>Il piccolo {charNameTwo} ora ha un nuovo nome da gridare.
                                                                 <i>La sua rabbia l'ha inzuppato di problemi.
                                                                 <i>L'ha protetto da cose peggiori.
-                    ~ witch_debriefPNG += SecondCharacter
-                    ~ witch_sigilsComment += SecondCharacter
-                    ~ sigilUsed = secondChar_usedSigil 
 
-            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
-                                                                AGGIUNGERE TESTO:
-                    ~ witch_debriefPNG += ThirdCharacter
-                    ~ witch_sigilsComment += ThirdCharacter
-                    ~ sigilUsed = thirdChar_usedSigil   
+                                                                    ~ witch_debriefPNG += SecondCharacter
+                                                                    ~ witch_sigilsComment += SecondCharacter
+                                                                    ~ sigilUsed = secondChar_usedSigil 
+
         }
 
                                                                 <i>Un problema personale è un masso lungo il sentiero.
@@ -116,14 +115,15 @@
         
     
     === witch_second_debrief
+        //Riguarderanno Chitarra e Riccio
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
     
-        
-        ~ temp sigilUsed = false
+            //Check per vedere se abbiamo o meno usato sigilli sul personaggio
+            ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:                     <i>Il vento canta di una seconda riscrittura.
                                                                 <i>I rami si riempiono di storie.
@@ -132,27 +132,25 @@
         {
         //Frasi sulle PNG
             - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
+
                                                                 <i>{charNameOne} racconta la storia di una generazione.
                                                                 <i>Del peso del capire troppo, e del non sapere che fare.
                                                                 <i>E del non poter accettare che le cose non possano cambiare.
-                    ~ witch_debriefPNG += FirstCharacter
-                    ~ witch_sigilsComment += FirstCharacter
-                    ~ sigilUsed = firstChar_usedSigil
+
+                                                                    ~ witch_debriefPNG += FirstCharacter
+                                                                    ~ witch_sigilsComment += FirstCharacter
+                                                                    ~ sigilUsed = firstChar_usedSigil
 
             - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
+
                                                                 <i>La famiglia di {charNameTwo} è come una slavina.
                                                                 <i>Fiocco sulla vetta.
                                                                 <i>Valanga a valle.
                                                                 <i>Ma forse {charNameTwo} può trasformare la neve in pupazzo. 
-                    ~ witch_debriefPNG += SecondCharacter
-                    ~ witch_sigilsComment += SecondCharacter
-                    ~ sigilUsed = secondChar_usedSigil
 
-            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
-                                                                AGGIUNGERE TESTO:
-                ~ witch_debriefPNG += ThirdCharacter
-                ~ witch_sigilsComment += ThirdCharacter
-                ~ sigilUsed = thirdChar_usedSigil
+                                                                    ~ witch_debriefPNG += SecondCharacter
+                                                                    ~ witch_sigilsComment += SecondCharacter
+                                                                    ~ sigilUsed = secondChar_usedSigil
         }
 
                                                                 <i>Ci sono problemi che restano personali.
@@ -182,12 +180,13 @@
                                                                 <i>Migliaia sono le piante nate dalla sua fatica.
                                                                 <i>In quante ricordano il suo nome?
 
-            + (air) \ {charTag(PG, "neutral")}:                 COMMENTO LEGATO A PNG3.
+            + (air) \ {charTag(PG, "neutral")}:                 Forse come {witch_actualName} ci chiediamo costantemente dove si trova la verità.
                     -> glyph_choice_manager(true, airC)->
                 {charTag(TheWitch, witch_state())}:             <i>Il sapere è una luce.
                                                                 <i>Il sapere è un rifugio.
                                                                 <i>Una luce troppo forte confonde strada e burrone.
                                                                 <i>Un rifugio col tempo può diventare prigione.</i>
+                                                                <i>Ed è qualcosa che noi per prime abbiamo imparato.</i>
          
             + (earth) \ {charTag(PG, "neutral")}:               Franco è sempre iperattivo. Forse entrambi dobbiamo imparare a fermarci, a respirare.
                     -> glyph_choice_manager(true, earthC)->
@@ -195,7 +194,7 @@
                                                                 <i>Le foglie ridono quando il vento le sfiora.
                                                                 <i>L'albero cresce, l'albero riposa.
             -
-        
+
                                                                 <i>Un albero è un albero.
                                                                 <i>Quanti alberi fanno una foresta?
                                                                 <i>"Mi è successo questo", racconta qualcuna.
@@ -213,12 +212,15 @@
         -> main
         
     === witch_third_debrief
+        //Riguarderanno Nonna e Mostro
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        ~ temp sigilUsed = false
+            //Check per vedere se abbiamo o meno usato sigilli sul personaggio
+            ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}:                     <i>La cagnolina della posta è sorpresa da questa terza riscrittura.
                                                                 <i>La nuova chioma raccoglie i suoi dubbi.
@@ -226,29 +228,21 @@
 
         {
         //Frasi sulle PNG
-            - firstChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FirstCharacter:
-                                                                <i>{charNameOne} le ha insegnato che non tutt3 hanno una casa.
-                                                                <i>E che alcun3 ne hanno ancora meno di altr3.
-                                                                <i>E la cagnolina non comprende, perché il mondo per lei è una grande tana.
-                        ~ witch_debriefPNG += FirstCharacter
-                        ~ witch_sigilsComment += FirstCharacter
-                        ~ sigilUsed = firstChar_usedSigil    
+            - fourthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FourthCharacter:
+                                                                Testo:
+                    ~ witch_debriefPNG += FourthCharacter
+                    ~ witch_sigilsComment += FourthCharacter   
+                    ~ sigilUsed = fourthChar_usedSigil    
 
-            - secondChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt SecondCharacter:
-                                                                <i>Con {charNameTwo} ha scoperto che esistono i bambini.
-                                                                <i>E che i bambini come i cuccioli vivono e fanno cose.
-                                                                <i>Ma non possono decidere le cose che li riguardano.
-                                                                <i>Il cucciolo cresce facendo i suoi errori.
-                                                                <i>Ai bambini si chiede di crescere sembrano piccoli adulti.
-                        ~ witch_debriefPNG += SecondCharacter
-                        ~ witch_sigilsComment += SecondCharacter
-                        ~ sigilUsed = secondChar_usedSigil
 
-            - thirdChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt ThirdCharacter:
-                                                                AGGIUNGERE TESTO:
-                        ~ witch_debriefPNG += ThirdCharacter
-                        ~ witch_sigilsComment += ThirdCharacter
-                        ~ sigilUsed = thirdChar_usedSigil  
+            - fifthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FifthCharacter:
+                                                                Testo:                                              
+                    
+                    ~ witch_debriefPNG += FifthCharacter
+                    ~ witch_sigilsComment += FifthCharacter   
+                    ~ sigilUsed = fifthChar_usedSigil
+
+
         }
         
                                                                 <i>La cagnolina non può pensare quello che non conosce.
@@ -286,11 +280,16 @@
         -> main 
         
     === witch_fourth_debrief
+        //Riguarderanno Nonna e Mostro
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
+            //Check per vedere se abbiamo o meno usato sigilli sul personaggio
+            ~ temp sigilUsed = false
+
 
         {charTag(TheWitch, witch_state())}: Descriviamo il vantaggio personale e collettivo di un gruppo rispetto all'esperienza della personaggia. Le scappatoie di questo gruppo, le irresponsabilità. Stesso gesto, scelte diverse.
         E poi chiediamo alla giocatrice qualcosa sulla sua posizione di vantaggio, di privilegio.
@@ -299,7 +298,9 @@
         //Frasi sulle PNG
             - fourthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FourthCharacter:
                 Testo:
-                 ~ witch_debriefPNG += FourthCharacter       
+                    ~ witch_debriefPNG += FourthCharacter
+                    ~ witch_sigilsComment += FourthCharacter   
+                    ~ sigilUsed = fourthChar_usedSigil    
 
             - fifthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FifthCharacter:
                     Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
@@ -307,7 +308,9 @@
                     Mentore stava di merda perché cercava di essere qualcosa che non era.
                     Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
 
-                 ~ witch_debriefPNG += FifthCharacter 
+                    ~ witch_debriefPNG += FifthCharacter
+                    ~ witch_sigilsComment += FifthCharacter   
+                    ~ sigilUsed = fifthChar_usedSigil
         }
 
         
@@ -334,47 +337,63 @@
         -> main  
     
     === witch_fifth_debrief
-         ~ temp charNameOne = translator(firstChar_ActualName)
+        //Riguardera tutti, non solo Boccale
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        
+        ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Check per vedere se abbiamo o meno usato sigilli sul personaggio
+            ~ temp sigilUsed = false
 
         {charTag(TheWitch, witch_state())}: Parliamo della necessità di lottare assieme per il cambiamento.
         Il dolore e le fatiche personali rimangono, e serve trovare modi per stare bene. Ma nel mentre devono cambiare le leggi, i poteri, le culture che permettono l'oppressione.
         E la domanda ora è:
         come pensi di lottare, PG?
 
-        {
-        //Frasi sulle PNG
-            - fourthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FourthCharacter:
-                Testo:
-                 ~ witch_debriefPNG += FourthCharacter       
+        {charTag(TheWitch, witch_state())}:                         <i>La paura di {charNameThree} l'ha spinto lungo la strada più lunga.
+                                                                    <i>Fuggendo da qui si è ritrovato però incapace di nascondersi i problemi problemi.
+                                                                    <i>Il vento sa essere crudele quando sradica il giovane tiglio.
+                                                                    <i>Il vento sa essere vita quando trascina nubi sulla terra assetata.
+                                                                    <i>Ma quando passa il vento qualcosa sempre cambia, così come quando passa la verità.
+                                                                    <i>E {charNameThree} non ha più guardarsi con gli stessi occhi.
 
-            - fifthChar_storyStatus == story_storyPostal && witch_debriefPNG hasnt FifthCharacter:
-                    Personale e sociale non sono scollegati. E la rilettura di Mentore diventa la presenza di una doppia strada: prendersi cura di sé, cambiare il mondo.
-                    Con gli altri.
-                    Mentore stava di merda perché cercava di essere qualcosa che non era.
-                    Ma non perché fosse pazza, ma perché il nostro mondo ci dice: sii una sola cosa, o smetti di esistere.
+                                                                            ~ witch_debriefPNG += ThirdCharacter
+                                                                            ~ witch_sigilsComment += ThirdCharacter   
+                                                                            ~ sigilUsed = thirdChar_usedSigil
+                                                                    
+                                                                    <i>Accade lo stesso con ciò che è ingiusto.
+                                                                    <i>Possiamo sentirci innocenti fintanto che l'ingiustizia è nell'ombra.
+                                                                    <i>Ma quando il vento ce la porta in faccia, possiamo essere solo due tipi di persone.
+                                                                    <i>Quelle che cercano di risolverla.
+                                                                    <i>Quelle che si aggrappano a qualsiasi cosa per negarla.
+                                                                    <i>La storia di {charNameThree} è una storia di cura.
+                                                                    <i>Così come quella di {charNameOne}, {charNameTwo}, {charNameFour}, {charNameFive}.
+                                                                    <i>Ma la cura chiede lotta.
+                                                                    <i>Come lottava {player_name}, prima di ritrovare quest3 nuov3 amic3?
 
-                 ~ witch_debriefPNG += FifthCharacter 
-        }
 
-        + (earth) \ {charTag(PG, "neutral")}:         Scelta terra
+
+
+        + (earth) \ {charTag(PG, "neutral")}:                       Così ancorat{player_pronoun has him:o|{player_pronoun has her:a|ə}} al mio quotidiano da non rendermi conto di cosa stesse accadendo, come {charNameThree}.
             -> glyph_choice_manager(true, earthC)->
  
-        + (aether) \ {charTag(PG, "neutral")}:         Scelta spirito
+        + (aether) \ {charTag(PG, "neutral")}:                      Mi sentivo sempre vicin{player_pronoun has him:o|{player_pronoun has her:a|ə}} all'azione ma mai attiv{player_pronoun has him:o|{player_pronoun has her:a|ə}}, come {charNameOne} quando è arrivata qui.
             -> glyph_choice_manager(true, aetherC)->
         
-        + (fire) \ {charTag(PG, "neutral")}:         Scelta fuoco
+        + (fire) \ {charTag(PG, "neutral")}:                        Sommers{player_pronoun has him:o|{player_pronoun has her:a|ə}} da una rabbia priva di nome, come {charNameTwo} al suo arrivo.
             -> glyph_choice_manager(true, fireC)->
 
-        + (water) \ {charTag(PG, "neutral")}:         Scelta acqua
+        + (water) \ {charTag(PG, "neutral")}:                       Qualcosa su Nonna o Mentore
             -> glyph_choice_manager(true, waterC)->
     
-        + (air) \ {charTag(PG, "neutral")}:         Scelta aria
+        + (air) \ {charTag(PG, "neutral")}:                         Qualcosa su Nonna o Mentore
             -> glyph_choice_manager(true, airC)->
-     
+
+                                                                    <i>Il vento è passato su {player_name}, i suoi occhi sono cambiati.
+                                                                    <i>Ci chiediamo quale tipo di persona sarà ora {player_name}.
+                                                                    <i>Se quella che risolve, o quella che nega.
+                                                                    <i>Perché se il nostro viaggio assieme è quasi concluso, quello di {player_name} deve continuare.
 
         -        
         -> witch_closing_storylet ->
@@ -447,13 +466,13 @@
 
                 {
                     - char_fire > player_PNG_fire:
-                        <i>Ad esempio {player_name} ha suggerito spesso a {speaker} di agire, di fare, ma ha usato sigilli molto meno attivi.
+                        <i>Ad esempio {player_name} ha suggerito spesso a {speaker} di agire, di lottare, ma ha usato sigilli molto meno attivi.
 
                     - char_earth > player_PNG_earth:
                         <i>Ad esempio {player_name} ha parlato spesso a {speaker} di cose concrete, di praticità, ma ha usato sigilli molto più vacui.
 
                     - char_water > player_PNG_water:
-                        <i>Ad esempio {player_name} ha parlato spesso a {speaker} di relazioni e cura, ma ha usato sigilli meno emozionali.
+                        <i>Ad esempio {player_name} ha parlato spesso a {speaker} di relazioni e cura, ma ha usato sigilli meno empatici.
 
                     - char_air > player_PNG_air:
                         <i>Ad esempio {player_name} ha evocato con {speaker} parole di sapere e curiosità, ma ha usato sigilli molto meno propensi alla conoscenza.
