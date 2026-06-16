@@ -1085,7 +1085,8 @@
         
         {charTag(ThirdCharacter, "neutral")}:               Che viaggione, vero?
                                                             Ma ora c'è una sorpresa che ti aspetta! Vieni in cucina!
-                                                            E ci porta alla festa.
+                                                            La cagnolina è ancora in giro?
+                                                            Che ho una sorpresa per lei!
                                                                     
         -> third_char_closing_storylet ->
         -> endingPNGstory(ThirdCharacter)        
