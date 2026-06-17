@@ -35,7 +35,7 @@
                                                                         C'è qualcosa di rilassante in questo posto, sotto questa tenda, vero?
                                                                         Una volta da piccolo mio papà doveva venire a prendermi dopo un allenamento.
                                                                         Avevo più o meno l'età di {charNameTwo}.
-                                                                        Ma pioveva così forte che ci ha messo una vita.
+                                                                        Ma pioveva così forte che c'ha messo una vita.
                                                                         Così mi sono messo sotto agli spalti, fermo, ad ascoltare la tempesta.
         {charTag(ThirdCharacter, "jester")}:                            Chissà quando sono diventato questo vecchio idiota, vero vecio?
         {charTag(ThirdCharacter, "neutral")}:                           Papà si è scusato tantissimo quando è arrivato.
@@ -46,7 +46,7 @@
                                                                         Credo di averli già visti, forse proprio quel giorno.
                                                                         Sai cos'è una cosa bella del mio lavoro?
                                                                         Capire cosa dire alle persone quando stanno di merda.
-                                                                        Dirgli la cosa giusta, così che ci arrivano a soli a trovare le risposte.
+                                                                        Dirgli la cosa giusta, così che c'arrivano da soli a trovare le risposte.
         {charTag(ThirdCharacter, "jester")}:                            Anche perché le mie sono tremende, vecio.
         {charTag(ThirdCharacter, "neutral")}:                           E quei sassi lì mi ricordano la stessa sensazione, di quando stai per aprire la bocca e sai già che effetto farai sulle persone.
                                                                         Non è male.
@@ -92,7 +92,7 @@
             -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
-                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi ci avrei scommesso il culo che mi avresti detto qualcosa di pesante.
+                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi c'avrei scommesso il culo che mi avresti detto qualcosa di pesante.
                 }
         {charTag(ThirdCharacter, "neutral")}:                           Non ho mai tradito la fiducia di nessuno.
                                                                         Non spiffero in giro i cazzi degli altri.
@@ -105,7 +105,7 @@
             -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
-                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi ci avrei scommesso il culo che mi avresti detto qualcosa di pesante.
+                {charTag(ThirdCharacter, "jester")}:                    Non so perché mi c'avrei scommesso il culo che mi avresti detto qualcosa di pesante.
                 }
         {charTag(ThirdCharacter, "neutral")}:                           Io le donne le rispetto.
                                                                         Ma non sono sicuro che la cosa sia reciproca.
@@ -133,7 +133,7 @@
                 {charTag(ThirdCharacter, "jester")}:                    Figurati se non tiravi fuori le cose da fighetta, figurati.
                 }
 
-        {charTag(ThirdCharacter, "melanchonic")}:                       Oh dio sì, sono tormentato.
+        {charTag(ThirdCharacter, "melanchonic")}:                       Gesù licantropo sì! Sono tormentato.
                                                                         La notte non dormo e soffro.
                                                                         Soffro pensando a quanto lavoro sta facendo per me {player_name}!
         {charTag(ThirdCharacter, "jester")}:                            Lavoro non richiesto.
@@ -146,15 +146,15 @@
 
             -> third_char_closing_storylet ->
 
-        {charTag(TheWitch, "{witch_state()}")}:                         {player_name}.
-                                                                        Questo posto è potente.
-                                                                        E complesso.
-                                                                        Una parte di noi vorrebbe dire a {player_name} di andarsene subito.
-                                                                        Ma crediamo anche che l'esperienza sia la migliore maestra.
-                                                                        Abbiamo quindi deciso di donare a {player_name} tre <b>sigilli</b>.
-                                                                        Li troverà nel suo grimorio.
-                                                                        Sperando che {player_name} ricordi che non tutto quello che possediamo va utilizzato.
-                                                                        Se {player_name} vuole ancora parlarne con noi, ci trova come sempre alla discarica.       
+        {charTag(TheWitch, "{witch_state()}")}:                         <i>{player_name}.
+                                                                        <i>Questo posto è potente.
+                                                                        <i>E complesso.
+                                                                        <i>Una parte di noi vorrebbe dire a {player_name} di andarsene subito.
+                                                                        <i>Ma crediamo anche che l'esperienza sia la migliore maestra.
+                                                                        <i>Abbiamo quindi deciso di donare a {player_name} tre <b>sigilli</b>.
+                                                                        <i>Li troverà nel suo grimorio.
+                                                                        <i>Sperando che {player_name} ricordi che non tutto quello che possediamo va utilizzato.
+                                                                        <i>Se {player_name} vuole ancora parlarne con noi, ci trova come sempre alla discarica.</i>   
 
             //Chiamiamo il primo, notifichiamo, ripetiamo  
             ~ png_random_sigils_opener ()
@@ -213,7 +213,7 @@
 
         {charTag(ThirdCharacter, "neutral")}:                           Non leggevo dall'ottantaquattro e sai una cosa {player_name}?
         {charTag(ThirdCharacter, "angry")}:                             Non dovevo farlo nemmeno oggi.
-        {charTag(ThirdCharacter, "neutral")}:                           Ma il fratellino era così preso bene dall'aver aperto la biblioteca di merda che ho detto "Prendiamone uno a caso".
+        {charTag(ThirdCharacter, "neutral")}:                           Ma il fratellino era così preso perché c'ha aperto la biblioteca di merda che ho detto "Prendiamone uno a caso".
                                                                         E il racconto a caso è stato quella roba piena di misandria che è <b>Polvere</b>.
                                                                         So che l'hai letto anche tu.
                 {//Blocco per reazioni e commenti legati al genere.
@@ -486,7 +486,7 @@
     {charTag(TheWitch, witch_state())}:                                 <i>Rimaniamo sorprese e un po' deluse dalla risposta di {player_name}.</i>                                                                             
     -
     {charTag(ThirdCharacter, "neutral")}:                               C'è sempre qualcuno che vuole bene anche al più idiota del pianeta, se quell'idiota è sé stesso senza troppe maschere.
-                                                                        Il problema per me è che quella persona l'ho avuta vicina per una vita, e ora mi ha cancellato dalla sua vita.
+                                                                        Il problema per me è che quella persona l'ho avuta vicina per trent'anni, e ora mi ha cancellato dalla sua vita.
     {charTag(ThirdCharacter, "jester")}:                                Ma vai a farti due passi ora {player_name}!
                                                                         E cerca di non farti possedere di nuovo: c'avevi una faccia da idiota quando quella là se ne è andata dal tuo corpo!                                                                    
 

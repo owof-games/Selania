@@ -271,8 +271,9 @@
                     -------------------
                     Ormai il cane è qui da una settimana, mi ci sono affezionato.
                     Ma quanto è testarda?
+                    {grimoire_thirdChar has grimThirdCharDog:Chissà se si ricorda che ci siamo già incontrati lì dove stai te.}
                     Petra mi ha detto che se c'ho voglia di riscriverti, devo prima capire com'è messa la nostra relazione.
-                    Dio, che coglioni che fa.
+                    Gesù licantropo, che coglioni che mi fa.
                     Ma vuoi sapere davvero davvero davvero come sono stato mentre ero lì?
                     {//Feedback relazione
                         - grimoire_thirdChar hasnt grimThirdCharLetterOne:
@@ -1173,7 +1174,7 @@
                 Delle chiacchierate infinite sull'Inter.
                 Dell'incapacità di aprirmi davvero con lui.
                 "A un certo punto c'è bisogno di crescere, ma con te mi sembra di esser bloccato a quando avevo vent'anni".
-                Dio, quanto ti ho odiato in quel momento, tu e i tuoi cazzo di consigli.
+                Gesù licantropo, quanto ti ho odiato in quel momento, tu e i tuoi cazzo di consigli.
                 Non sempre uno vuole sapere le cose, {player_name}.
                 Poi si è fatto ancora più serio.
 

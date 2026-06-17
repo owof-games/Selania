@@ -97,7 +97,7 @@
                                                                                 Dona mi aveva appena lasciato.
         {charTag(ThirdCharacter, "jester")}:                                    Calciavo ogni cazzo di palla come una bomba.
                                                                                 Alla fine siamo arrivati secondi.
-        {charTag(ThirdCharacter, "neutral")}:                                   Ci ha salvato Rocco ai rigori.
+        {charTag(ThirdCharacter, "neutral")}:                                   C'ha salvato Rocco ai rigori.
                                                                                 Quell'uomo è tanto silenzioso quanto letale.
 
 
@@ -345,7 +345,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Però potrei parlarci col Rocco.
                                                                                 Lui è strano, vecio, ma in modo buono.
                                                                                 Come il Poggi.
-        {charTag(ThirdCharacter, "jester")}:                                    Non ci ho mai cavato più di due frasi di bocca per anni.
+        {charTag(ThirdCharacter, "jester")}:                                    Non c'ho mai cavato più di due frasi di bocca per anni.
         {charTag(ThirdCharacter, "neutral")}:                                   Poi ce ne andiamo una volta a Milano a festeggiare lo scudetto, e durante il viaggio del ritorno mi dice che è preoccupato per il suo vecio.
                                                                                 Mi dice che è malato, e che vorrebbe che venisse qui, ma che lui è testone e se ne vuole stare in Egitto.
                                                                                 E che è preoccupato perché i suoi figli hanno avuto dei problemi di razzismo, non ho capito cosa, robe legate agli affitti.
@@ -537,7 +537,7 @@
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Pochissimi.
                                                                                 La cosa più difficile è la gelosia.
-        {charTag(ThirdCharacter, "bored")}:                                     Ci ho messo un bel po' ad accettare che lei conosca anche con altri uomini.
+        {charTag(ThirdCharacter, "bored")}:                                     C'ho messo un bel po' ad accettare che lei conosca anche con altri uomini.
         {charTag(ThirdCharacter, "neutral")}:                                   Però siamo arrivati a un accordo: con gli altri può essere qualunque persona, ma solo con me sarà Ava.
 
 
@@ -590,7 +590,7 @@
         + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Cioccolato a iosa per una tenerina asessuale.</i>
             ~ kitchen_recipeNoun = "Tenerina"
             -> glyph_choice_manager(true, aetherC)->
-        {charTag(ThirdCharacter, "bored")}:                                     Dio che noia!
+        {charTag(ThirdCharacter, "bored")}:                                     Gesù licantropo, che noia!
         {charTag(ThirdCharacter, "neutral")}:                                   No no no ritratto.
                                                                                 Che Petra mi ha già spiegato che non è che uno lo fa apposta.
         {charTag(ThirdCharacter, "jester")}:                                    Poi non deve essere male non avere il cazzo che parla al posto del tuo cervello.
@@ -731,7 +731,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Sento già Petra che mi urla in testa di non dire cazzate.
                                                                                 Mi ha fatto una testa tanta su questa roba perché lei è aromantica.
                                                                                 E quando gli ho risposto che io ero ajuventino, non ha capito la battuta.
-        {charTag(ThirdCharacter, "jester")}:                                    Dio, ci sarebbe voluto Franchì qui ora, si sarebbe fatto una grossa risata.
+        {charTag(ThirdCharacter, "jester")}:                                    Gesù licantropo, ci sarebbe voluto Franchì qui ora, si sarebbe fatto una grossa risata.
             
         + (water2)\ {charTag(PG, "neutral")}:                                   <i>Friggo dei canditi della connessione emotiva.</i>
             ~ kitchen_recipeAdjective = "emotività"
@@ -740,7 +740,7 @@
                                                                                 O ti viene duro quando lei ti racconta dei problemi col padre?
         {charTag(ThirdCharacter, "jester")}:                                    Vecio, che roba malata.
         {charTag(ThirdCharacter, "neutral")}:                                   Però giurami che non le parli delle ex, che non è quella la <i>connessione emotiva</i>.
-        {charTag(ThirdCharacter, "bored")}:                                     Dio, non mi diventerà duro per mesi.
+        {charTag(ThirdCharacter, "bored")}:                                     Gesù licantropo, non mi diventerà duro per mesi.
     
         + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Pulisco della vaniglia della ierogamia.</i>
             ~ kitchen_recipeAdjective = "incondizionata"
@@ -1604,9 +1604,9 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    
+
     {charTag(ThirdCharacter, "neutral")}:                                       BUUURP!
-    {charTag(ThirdCharacter, "jester")}:                                        Dio, mi ci impegno pure a non sembrare un troglodita, e poi faccio queste figure di merda.
+    {charTag(ThirdCharacter, "jester")}:                                        Gesù licantropo, mi ci impegno pure a non sembrare un troglodita, e poi faccio queste figure di merda.
             {
             - thirdChar_recordedPlayerPronoun == her:
             {charTag(ThirdCharacter, "jester")}:                                Per di più davanti a una ragazza.
@@ -1817,7 +1817,9 @@
                                                                                 A parlare male di tutti gli uomini che conoscete.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:                            Perché vecio, dopo questa sicuro che sei gay, dai!
+                {charTag(ThirdCharacter, "jester")}:                            Perché vecio, dopo questa sicuro che sei frocio, dai!
+                {charTag(ThirdCharacter, "neutral")}:                           Non che c'ho qualcosa contro, sia chiaro.
+                {charTag(ThirdCharacter, "jester")}:                            Ma stai lontano dal mio culo.
                 }
         {charTag(ThirdCharacter, "neutral")}:                                   A bere del rosé.
                                                                                 E chiedervi come bruciare il patriarcato o stronzate del genere.

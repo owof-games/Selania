@@ -600,13 +600,13 @@
         {charTag(ThirdCharacter, "neutral")}:                           Non esageriamo.
         {charTag(PG, "neutral")}:                                       <i>E ci sono altre persone, persone come {charNameOne} a cui potresti chiedere una mano.</i>
                                                                         <i>Ma che vedono solo quello che sei stato, non quello che puoi diventare.</i>
-        {charTag(ThirdCharacter, "bored")}:                             Tutto questo è molto gay, zia.                               
+        {charTag(ThirdCharacter, "bored")}:                             Tutto questo è molto da froci, zia.                               
                                                                         <i>E così vedi un'unica strada: schiacciarti ancora di più in qualcosa che ti sta facendo del male, guadagnandoti l'odio di chi ti potrebbe mostrare una vita diversa.</i>
                                                                         <i>Ma sono qui per dirti che le tue strade sono infinite, {charNameThree}.</i>
                                                                         <i>Tante quante le persone che puoi immaginare.</i>
                                                                         <i>E anche se ora non ti sembra possibile, c'è sempre qualcuno che vorrà bene a una persona che è totalmente sé stessa, senza maschere o menzogne.</i>
                                                                         <i>Come è stato con il signor Poggi.</i>
-        {charTag(ThirdCharacter, "bored")}:                             Decisamente gay.                                                                
+        {charTag(ThirdCharacter, "bored")}:                             Decisamente frocio.                                                                
                                                                         <i>Noi ci abbiamo messo una vita per fare questo passo, e ora siamo tutt3.</i>
                                                                         <i>E {charNameThree} può essere chiunque voglia essere.</i>
         {charTag(ThirdCharacter, "jester")}:                            Anche Elon Musk?

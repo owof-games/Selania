@@ -177,7 +177,7 @@
                 {charTag(ThirdCharacter, "jester")}:                Sei un po' come una birra calda, vecio.
                 {charTag(ThirdCharacter, "neutral")}:               Una cosa che magari bevi perché non ti rimane niente in giro.
                                                                     Ma che non ti disseta.
-                {charTag(ThirdCharacter, "jester")}:                A stare qui in giro sto dicendo cose gay, aiuto!
+                {charTag(ThirdCharacter, "jester")}:                A stare qui in giro sto dicendo cose da froci, aiuto!
                 {charTag(ThirdCharacter, "neutral")}:               Però non sei così male alla fine.
                                                                     Mettiamola così: ti inviterei per una partita a calcetto.
                                                                     Ma non ti metterei mai come titolare.                                               

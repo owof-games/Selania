@@ -523,7 +523,7 @@
                 {
                 - are_two_entities_together(SecondCharacter, PG):
                 {charTag(SecondCharacter, "energy")}:           Lo si può staccare?
-                {charTag(ThirdCharacter, "jester")}:            ci cacceremmo in meno casini fratellino!                                                        
+                {charTag(ThirdCharacter, "jester")}:            Ci cacceremmo in meno casini fratellino!                                                        
                 }                                                  
 
         + \ {charTag(PG, "neutral")}:                           Se vuoi essere felice non dovrebbe importarti così tanto il giudizio degli altri.
@@ -1082,7 +1082,7 @@
                 -> glyph_choice_manager(false, fireC)-> 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:       
-                {charTag(ThirdCharacter, "neutral")}:           Uh, non ci avevo pensato.
+                {charTag(ThirdCharacter, "neutral")}:           Uh, non c'avevo pensato.
                                                                 Magari gli scrivo anche una lettera, che dici?
                                                                 "Caro papà, faccio questa cosa emotiva così {player_name} è content{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}..."        
                 } 
@@ -1206,7 +1206,8 @@
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:        
-                {charTag(ThirdCharacter, "bored")}:             Dio.
+                {charTag(ThirdCharacter, "bored")}:             Gesù.
+                                                                Licantropo.
                                                                 Che.
                                                                 Pesantezza.
                 {charTag(ThirdCharacter, "jester")}:            Sicuro tu e {charNameOne} migliori amiche proprio.         

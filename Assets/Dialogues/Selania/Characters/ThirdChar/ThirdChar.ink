@@ -18,7 +18,7 @@
                                                                     Ma preferisco non vedere le facce.
         - {charTag(ThirdCharacter, "neutral")}:                     Ucciderei per una sigaretta.
                                                                     Anche di quelle odiose col tabacco, che metà finisce sul tavolo e ti fumi anche gli avanzi della cena.
-        - {charTag(ThirdCharacter, "neutral")}:                     So che ogni tanto dico che una cosa è "gay" ma non lo dico con cattiveria, è solo l'abitudine.
+        - {charTag(ThirdCharacter, "neutral")}:                     So che ogni tanto dico che una cosa è da froci ma non lo dico con cattiveria, è solo l'abitudine.
         - {charTag(ThirdCharacter, "neutral")}:                     Metà dei clienti del bar alla fine sono 'sti tizi soli, senza una fidanzata, che bevono con gli amici per sentirsi meno soli ma c'hanno sempre questi occhi da cane bastonato. Che pena mi fanno.
         - {charTag(ThirdCharacter, "neutral")}:                     Appena mi faccio una casa mia mi prendo un cane, un bel bracco di quelli che c'hanno la faccia che sembra che hanno capito il mondo.
             {charTag(ThirdCharacter, "jester")}:                    Così magari me lo spiegano.
