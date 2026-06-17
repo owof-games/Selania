@@ -291,7 +291,7 @@
         {charTag(ThirdCharacter, "neutral")}:                           Le relazioni sono un gran casino.
                                                                         Però non è schiacciando un poveretto come se fosse un pistacchio che si risolve qualcosa.            
         
-        + \ {charTag(PG, "neutral")}:                                   Per te è ingiustificata la rabbia di lei, o solo la violenza?
+        + \ {charTag(PG, "neutral")}:                                   Per te è ingiustificata la sua rabbia o solo la violenza?
                 -> glyph_choice_manager(false, airC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:

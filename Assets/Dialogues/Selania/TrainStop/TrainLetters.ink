@@ -1097,7 +1097,7 @@
         //Step uno: un feedback sulla lettera precedente
         {
             - third_char_letters_choices.four.air: 
-                mi hai detto di chiedergli cosa è successo, che mi ci doveva dare una risposta chiara.
+                mi hai detto di chiedergli cosa è successo, che mi ci doveva dare una risposta ragionevole.
 
             - third_char_letters_choices.four.fire: 
                 mi hai detto di fare il macello, di fargli vedere quanto sono incazzato.

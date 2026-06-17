@@ -1072,14 +1072,14 @@
                 {charTag(Franco, "neutral")}:                                   E virgola!
                 }
 
-        + \ {charTag(PG, "neutral")}:                                           Come hanno reagito i tuoi amici quando gli hai detto che era finita con Donatella?
+        + \ {charTag(PG, "neutral")}:                                           Cosa ti hanno detto i tuoi amici quando gli hai raccontato che era finita con Donatella?
                 -> glyph_choice_manager(false, airC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:                            Il vecio e le domande serie.                      
                 }        
-        {charTag(ThirdCharacter, "bored")}:                                     Non è che gliel'ho esattamente detto.
-                                                                                È una cosa che hanno sentito in giro.
+        {charTag(ThirdCharacter, "bored")}:                                     Non è che gliel'ho esattamente raccontato.
+                                                                                È più una cosa che hanno sentito in giro.
         {charTag(ThirdCharacter, "neutral")}:                                   A parte il Poggi.
                                                                                 Che però c'è stato solo per dirmi due cose e bona.
                                                                                 Rocco mi ha stupito però.

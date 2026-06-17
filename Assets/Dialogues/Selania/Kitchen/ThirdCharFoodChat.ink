@@ -233,7 +233,7 @@
                                                                                 Non capisco {player_name}, proprio non capisco.
 
     
-        + \ {charTag(PG, "neutral")}:                                           Riesci a rimanere aggiornato sulla vita del Poggi?
+        + \ {charTag(PG, "neutral")}:                                           Riesci comunque a rimanere aggiornato sulla vita del Poggi?
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "bored")}:                                     A volte durante le partitelle qualcuno se ne esce con qualche commento, e così scopro qualche novità.
                                                                                 Ma mi rode un po' il culo quando parlano di lui, perché sono degli ingrati.
@@ -932,10 +932,10 @@
         {charTag(ThirdCharacter, "bored")}:                                     Questa roba soprattutto il Merlo e il Giova non la capiranno mai.
                                                                                                          
         
-        + \ {charTag(PG, "neutral")}:                                           Quando gli dici queste cose, come reagiscono?
+        + \ {charTag(PG, "neutral")}:                                           Gliel'hai mai messa in questi termini? Hanno capito cosa intendevi?
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "bored")}:                                     Pensi seriamente che possa dire una cosa del genere a quei due?
-                                                                                Il Giova negherebbe di aver mai detto una cosa del genere, dicendo che l'ho frainteso o roba del genere.
+                                                                                Il Giova negherebbe tutto, dicendo che l'ho frainteso o roba del genere.
                                                                                 Il Merlo mi darebbe del frignone e che se ci sono rimasto male è perché in fondo so che è un lavoro da ragazzini.
         {charTag(ThirdCharacter, "neutral")}:                                   No, lasciamo perdere, va.                                                                        
 
@@ -1218,7 +1218,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Sto in piedi grazie a lui.
         {charTag(ThirdCharacter, "bored")}:                                     Peccato che sono qui come lavoratore, quando sarei dovuto essere il cazzo di padrone.
 
-        + \ {charTag(PG, "neutral")}:                                           Ma anche se tuo padre avesse vinto su questo aspetto, cosa cambia? Perché è così importante?
+        + \ {charTag(PG, "neutral")}:                                           Ma anche se tuo padre avesse vinto, cosa cambia? Perché è così importante?
                 -> glyph_choice_manager(false, airC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:

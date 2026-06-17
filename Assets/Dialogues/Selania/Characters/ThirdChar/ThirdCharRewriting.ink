@@ -459,7 +459,7 @@
                                                                 Pensa a quando ti sei messo lì ad ascoltare Petra per capire perché era arrabbiata per la rissa che avevi scatenato per difenderla.   
                 }                                               
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Adori il piccolo Armando: perché non riparti da lì con la tua famiglia?
+            + (air) \ {charTag(PG, "neutral")}:                 Avete tutt3 un interesse comune: Armando. Perché non riparti da lì con la tua famiglia?
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
                 {charTag(PG, "neutral")}:                       Lo stesso piccolo Armando che, mentre cucinavamo assieme, vedevi come "una vittoria" di tua sorella su di te.
@@ -550,7 +550,7 @@
                                                                 E poi c'è il piano con Petra, per il nuovo locale!
                     }                                              
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Non sei curioso di sapere cosa succede però se smetti di essere un <i>bravo ragazzo</i> e inizi ad essere una buona persona?
+            + (air) \ {charTag(PG, "neutral")}:                 Non sei curioso di sapere cosa succede se smetti di essere un <i>bravo ragazzo</i> e inizi ad essere una buona persona?
             {charTag(PG, "neutral")}:                           Qualcuno che si muove secondo i suoi principi e non per fare una buona figura, come Petra.
                                                                 Qualcuno che cerca un modo per prendersi cura di chi ama, come Rocco.
                                                                 Qualcuno che fa la cosa giusta, anche quando ha un costo, come tuo padre.
@@ -618,13 +618,25 @@
         {charTag(PG, "neutral")}:                               Non sono soluzioni perfette forse, ma non sono per forza un punto d'arrivo.
                                                                 E quando hai perso il vecchio lavoro o la casa con Donatella, ti sei attivato per gettare nuove fondamenta.
                             
-        + (air) \ {charTag(PG, "neutral")}:                     Ma io vedo la curiosità e l'acume con cui ti butti nel calcio e nel fantacalcio.
+        + (air) \ {charTag(PG, "neutral")}:                     Ma io vedo la curiosità con cui ti butti nelle cose nuove.
                 {
                 - grimoire_thirdChar has grimThirdCharFranco:
-                                                                Ti ricordi come hai provato in tutti i modi a spiegarne le regole a Franco?
-                } 
+                                                                Ti ricordi come hai provato in tutti i modi a spiegare le regole del fantacalcio a Franco?
+                }
         {charTag(PG, "neutral")}:                               La vitalità che traspare quando parli delle cose che ami è contagiosa.
                                                                 Il modo in cui ti mantieni sempre attento e curioso.
+                {
+                - letters_thirdCharLetterThreeChoice has waterC:
+                                                                Come la proposta di Rocco di andare a correre o giocare a D&D.    
+                } 
+                {
+                - letters_thirdCharLetterThreeChoice has aetherC:
+                                                                O quando hai chiesto a Petra di spiegarti perché fosse arrabbiata perché l'hai difesa da quei turisti.    
+                }
+                {
+                - letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterThreeChoice has airC:
+                                                                La riscoperta dei forum.    
+                }                                             
                 {
                 - grimoire_thirdChar has grimThirdOpenNest:
                                                                 O la curiosità che ti ha spinto ad aprirmi il nido.
@@ -688,7 +700,7 @@
                                                                 A lavoro non ti rispettano.
                                                                 Questa cosa ti pesa, ma hai anche due persone di successo a cui chiedere una mano. 
                             
-        + (air) \ {charTag(PG, "neutral")}:                     Ti sei mai chiesto se loro si fanno paragoni con te?
+        + (air) \ {charTag(PG, "neutral")}:                     Ti sei mai chiesto se loro si fanno paragoni con te? Il paragone con gli altri è una cosa comune.
         {charTag(PG, "neutral")}:                               Sei uscito in piedi da una relazione lunghissima.
                                                                 Sei un ottimo professionista.
                 {

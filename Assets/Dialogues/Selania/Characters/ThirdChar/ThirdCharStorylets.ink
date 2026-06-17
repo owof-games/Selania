@@ -717,7 +717,7 @@
                                                                 È quando entri in una stanza e tutti ti vedono.
                                                                 E sanno che sei quello figo.
         
-        + \ {charTag(PG, "neutral")}:                           Ma invece cosa fai quando sei libero e non becchi i tuoi amici?
+        + \ {charTag(PG, "neutral")}:                           Ma invece cosa fai quando sei libero e non passi il tempo coi tuoi amici?
                 -> glyph_choice_manager(false, airC)->
 
         {charTag(ThirdCharacter, "neutral")}:                   Un po' le solite cose.
@@ -1229,7 +1229,14 @@
         + \ {charTag(PG, "neutral")}:                           <i>Resto in silenzio: nessuna domanda mi farebbe capire meglio la situazione.</i>
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "neutral")}:                   Non sapevo che potevi stare zitt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}!
-        {charTag(ThirdCharacter, "jester")}:                    Mi devo preoccupare?
+        {charTag(ThirdCharacter, "jester")}:                    Qualcuno lo dica a {charNameOne}!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:           Guardatemi, sono {charNameThree}.
+                                                                Parlo diciotto ore al giorno di fantacalcio, ma guai se una ragazza ha un'opinione.
+                {charTag(ThirdCharacter, "bored")}:             Magari una sola opinione, magari!                                                      
+                }        
+        {charTag(ThirdCharacter, "jester")}:                    Mi devo preoccupare del tuo silenzio {player_name}?
         {charTag(ThirdCharacter, "bored")}:                     Ora finisco per chiedermi se ho detto delle cazzate.
         {charTag(ThirdCharacter, "neutral")}:                   Non è morto nessuno comunque, non ti preoccupare.
                                                                 Ogni amicizia va a modo suo, no?
@@ -1278,7 +1285,7 @@
                                                                 <i>Cosa vorrebbe rispondere {player_name}?</i>
         
 
-        + (air)\ {charTag(PG, "neutral")}:                      Cerca online persone con problemi come i tuoi: fai domande, conosciti meglio, sii meno solo.
+        + (air)\ {charTag(PG, "neutral")}:                      Perché non cercare online persone con la tua esperienza? Potresti scoprire soluzioni che altr3 hanno già trovato.
 
         + (earth)\ {charTag(PG, "neutral")}:                    Migliora la tua situazione economica, così vedrà che sei più solido di quello che pensa.
                 
@@ -1304,7 +1311,7 @@
                                                                 <i>E dice che non comprende le persone.
                                                                 <i>Come aiutiamo {charNameThree}?</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Non hai pensato che forse il problema è l'opposto? E che a loro manca la curiosità di conoscerti per davvero?
+        + (air)\ {charTag(PG, "neutral")}:                      Non hai pensato che forse è a loro manca la curiosità di conoscerti per davvero?
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Prenditi del tempo per te, e curati del tuo corpo: vai in palestra, mettiti in forma, scarica la tensione.
                 
@@ -1376,7 +1383,7 @@
         {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} ha bisogno dell'aiuto di {player_name} per chiarire la situazione con Poggi, senza fare un disastro.</i>
                                                                 <i>Qual è il consiglio di {player_name}?
 
-        + (air)\ {charTag(PG, "neutral")}:                      Chiedigli cosa è successo, senza scappatoie: ti deve una risposta chiara, razionale.
+        + (air)\ {charTag(PG, "neutral")}:                      Chiedigli cosa è successo, senza scappatoie: ti deve una risposta ragionevole, zero scappatoie.
 
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Accetta che la cosa è cambiata, e continua a costruirti una vita senza di lui.
@@ -1404,7 +1411,7 @@
         
         {charTag(TheWitch, witch_state())}:                     <i>C'è qualcosa che {player_name} vuole scrivere a {charNameThree}?</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Ciò che gli altri pensano dice molto di loro, non di te, che sia Poggi o che sia Donatella.
+        + (air)\ {charTag(PG, "neutral")}:                      Che siano Poggi o Donatella, i pareri degli altri mostrano solo la loro prospettiva, non la tua realtà.
 
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Non farlo ora, aspetta di sbatterle in faccia l'uomo nuovo che diventerai.
@@ -1432,7 +1439,7 @@
         {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} vorrebbe invitare il padre a parlare in un posto che renda la conversazione per {charNameThree} meno faticosa.</i>
                                                                 <i>Qual è il consiglio di {player_name}?</i>
 
-        + (air)\ {charTag(PG, "neutral")}:                      Fallo per telefono: niente distrazioni fisiche o espressioni facciali, pura razionalità.
+        + (air)\ {charTag(PG, "neutral")}:                      Fallo per telefono: niente distrazioni fisiche o espressioni facciali, pura lucidità.
 
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Al Baretto, per ricordargli cosa ha perso.
