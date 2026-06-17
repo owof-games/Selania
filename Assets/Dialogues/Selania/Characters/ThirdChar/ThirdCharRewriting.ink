@@ -1010,6 +1010,7 @@
                                                             Non so se mi sto spiegando bene, però alla fine quello che ho fatto col Rocco e suo figlio è tirare su la prima squadra di calcio della frazione.
                                                             Squadra mista, per la gioia di Petra.
                                                             Petra, che odia il calcio, ma ama rompere le scatole.
+                                                            E per qualche strano motivo, aiutarmi col fantacalcio.
                                                             E io sono felice, {player_name}.
                                                             Perché so che il pallone potrà aiutare questi ragazzi e ragazze a non fare le mie stesse cazzate, a vedere il mondo in modo diverso.
                                                             Soprattutto quando Petra urla insulti ai ragazzi se dicono cose sessiste.
