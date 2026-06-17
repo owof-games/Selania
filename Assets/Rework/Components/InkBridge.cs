@@ -1511,27 +1511,31 @@ namespace Selania.Rework.Components
             // extract current sigil from variables
             IStoryGrimoire.SigilDescriptor? sigilDescriptor = null;
             var currentSigil = (InkList)story.variablesState[currentSigilVariableName];
-            if (currentSigil.Count > 1)
-                Logger.ZLogWarning(
-                    $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil}");
-
-            if (currentSigil.Count >= 1)
+            switch (currentSigil.Count)
             {
-                var glyphs = GetGlyphsFromSigilInkVariableValue(currentSigil, story);
+                case > 1:
+                    Logger.ZLogWarning(
+                        $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil}");
+                    break;
+                case 1:
+                {
+                    var glyphs = GetGlyphsFromSigilInkVariableValue(currentSigil, story);
 
-                var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
-                if (numUsages is < 1 or > 3)
-                    Logger.ZLogError(
-                        $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
+                    var numUsages = (int)story.variablesState[numSigilUsagesVariableName];
+                    if (numUsages is < 1 or > 3)
+                        Logger.ZLogError(
+                            $"Number of usages found in variable {numSigilUsagesVariableName} is {numUsages}, whereas it should be 0, 1 or 2.");
 
-                sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
-                    numUsages switch
-                    {
-                        3 => threeUsagesText,
-                        2 => twoUsagesText,
-                        _ => oneUsageText
-                    }
-                );
+                    sigilDescriptor = new IStoryGrimoire.SigilDescriptor(glyphs[0], glyphs[1], glyphs[2],
+                        numUsages switch
+                        {
+                            3 => threeUsagesText,
+                            2 => twoUsagesText,
+                            _ => oneUsageText
+                        }
+                    );
+                    break;
+                }
             }
 
             // analyze navigation

@@ -34,7 +34,7 @@ namespace Selania.Rework.Components.PrefabParticles
         /// <summary>
         ///     The area where the prefab will be randomly spawned from.
         /// </summary>
-        internal Rect SpawnArea => spawnArea;
+        public Rect SpawnArea => spawnArea;
 
 
         private void Start()
@@ -265,7 +265,7 @@ namespace Selania.Rework.Components.PrefabParticles
             Gizmos.DrawLine(center + dx - dy, center - dx - dy);
         }
 
-        internal IEnumerable<string> GetValidationErrors()
+        public IEnumerable<string> GetValidationErrors()
         {
             if (!prefab)
             {
