@@ -22,7 +22,7 @@
         {charTag(ThirdCharacter, "jester")}:                    Ma non è così.
         {charTag(ThirdCharacter, "neutral")}:                   Forse qui ci dovevo venire dopo il Covid.
                                                                 Ma poi me ne sono venuto fuori.
-                                                                Alla fine ora ho il mio lavoretto.
+                                                                Alla fine ora c'ho il mio lavoretto.
                                                                 La mia tipa.
                                                                 Il mio giro di amici.
         {charTag(ThirdCharacter, "jester")}:                    E anche qui mi sono trovato bene con tutti.
@@ -53,7 +53,7 @@
         {charTag(ThirdCharacter, "jester")}:                    Se la smettesse di stare su internet e pensare cose sceme sicuro che è più felice.
             {
             - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Questa te la do come buona.                        
+            {charTag(FirstCharacter, "annoyed")}:               Questa te la do per buona.                        
             }                                                        
         }
             {
@@ -88,7 +88,7 @@
         
         + \ {charTag(PG, "neutral")}:                           Mi prendo un attimo prima di affrontare la riscrittura.
         {charTag(ThirdCharacter, "bored")}:                     Non esiste.
-        {charTag(ThirdCharacter, "neutral")}:                   Mi sono fatto tutta la sbatta di raccontarti le mie cazzate, di ascoltare i tuoi commenti e quelli degli altri.
+        {charTag(ThirdCharacter, "neutral")}:                   Mi sono fatto tutta la sbatta di raccontarti le mie cazzate, di ascoltare i tuoi giudizi e quelli degli altri.
                                                                 Ora mi fai il favore di prenderti due minuti, dirmi due stronzate, e lasciarmi libero.                                                                                                                     
         -
             {
@@ -304,7 +304,7 @@
         
 
         {charTag(ThirdCharacter, "neutral")}:                   Wow.
-                                                                Wow.
+                                                                Gesù licantropo.
                                                                 Io.
         {charTag(ThirdCharacter, "angry")}:                     Non credo di mai essere stato così incazzato in vita mia.
                                                                 Chi ti credi di essere per venirmi a dire cosa va o non va nella mia vita?
@@ -313,7 +313,7 @@
                                                                 CAZZO
                                                                 TI
                                                                 CONOSCE?!?
-        {charTag(ThirdCharacter, "neutral")}:                   Deve essere bella la tua vita, se hai così tanto tempo per sputare sentenze sugli altri.
+        {charTag(ThirdCharacter, "neutral")}:                   Deve essere bella la tua vita, se c'hai così tanto tempo per sputare sentenze sugli altri.
         {charTag(ThirdCharacter, "jester")}:                    O deve fare davvero cagare, se l'unica cosa che ti viene da fare quando incontri qualcuno che sta bene, è provare a buttarlo a terra.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -337,7 +337,7 @@
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           State lì a rompere coi vostri pronomi di merda voi.
                                                                 Per poi sminchiare il cazzo a un povero cristiano che si fa i cazzi suoi.
-                                                                Che è qui e nemmeno ci voleva venire, qui.
+                                                                Che è qui e nemmeno ci voleva venire, in 'sta cloaca del fottuto cazzo di merda.
                                                                 Ma invece di farlo tornare a casa.
                                                                 Alla sua birra.
                                                                 Al suo fantacalcio.
