@@ -287,8 +287,10 @@
 
             Mi hai fatto incazzare tantissimo.
             Ma hai fatto bene, perché stavo in una situazione del cazzo, non me ne rendevo conto.
-            E tu non ti sei mai fatt{player_pronoun has him:o|{player_pronoun has her:a|ə}} problemi a cercare di svegliarmi.
+            E tu non ti sei mai fatt{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} problemi a cercare di svegliarmi.
             Per questo ti odio un po' meno.
+            Pagella della stagione: 8 su 10.
+
 
     - thirdChar_relationshipIndicator >= relationshipIndicatorPositiveValue:
         ~ thirdChar_relationshipIndicator = relationshipIndicatorNegativeValue
@@ -297,6 +299,7 @@
             Mi hai detto quello che mi aspettavo da te.
             Ma la zia ha detto che ero lì perché c'era qualcosa da superare.
             Dovevi mettermi alla prova {player_name}, invece boh, mi hai lasciato nel brodo che già mi faceva male.
+            0 su 10: smettila di giocare, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}!
 
     - else:
         ~ thirdChar_relationshipIndicator = 0
@@ -304,6 +307,7 @@
 
             È stata una situazione neutra, non so se mi capisci.
             Magari non mi hai sfidato, ma non hai manco assecondato sempre il modo in cui vedo il mondo.
+            Pagella da sufficienza, un 6 ma con una probabile panchina l'anno prossimo.
 }
 
 

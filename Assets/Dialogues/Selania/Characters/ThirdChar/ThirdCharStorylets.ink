@@ -107,8 +107,7 @@
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Woah vecio, che cosa da.
-                                                                No, non lo dico va.     
+                {charTag(ThirdCharacter, "jester")}:            Woah vecio, che cosa da froci!  
                 } 
         {charTag(ThirdCharacter, "jester")}:                    Ma quindi è tipo una comune hippie?
                                                                 Droghe e sesso?
@@ -139,7 +138,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   C'ha una fissa per gli animali che fa quasi paura.
                                                                 Ma se ho capito bene mentre lui impara le cose tu lo aiuti con i suoi casini.
                                                                 Che non è roba da poco.
-        {charTag(ThirdCharacter, "bored")}:                     In birreria vedi tanta di quella gente che non doveva proprio diventare genitore, ma zero.
+        {charTag(ThirdCharacter, "bored")}:                     In birreria vedi tanta di quella gente che non doveva proprio diventare genitore.
         {charTag(ThirdCharacter, "angry")}:                     E invece chi vorrebbe, zero.
         
         + \ {charTag(PG, "neutral")}:                           {charNameFive} passa il tempo a sistemare tutto quello che non funziona.
@@ -977,7 +976,7 @@
                                                                 Lavora nel teatro, pensa te.
         {charTag(ThirdCharacter, "jester")}:                    Chi ci va ancora a teatro?
         {charTag(ThirdCharacter, "neutral")}:                   Però forse è per questo che stanno bene assieme.
-                                                                Le ho sempre voluto bene, e quando è nato l'Armando poche settimane fa ho sentito addosso tutta la voglia che ho di diventare papà.
+                                                                Le ho sempre voluto bene, e quando è nato l'Armandino poche settimane fa ho sentito addosso tutta la voglia che ho di diventare papà.
                                                                 Anche se non dice niente e piange metà del tempo, a volte ti caccia dei sorrisoni che ti svoltano la giornata.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -1294,7 +1293,8 @@
         
         
         {charTag(TheWitch, witch_state())}:                     <i>{charNameThree} chiede a {player_name} come può farsi degli amici alla sua età.
-                                                                <i>Come aiutiamo {charNameThree}?
+                                                                <i>E dice che non comprende le persone.
+                                                                <i>Come aiutiamo {charNameThree}?</i>
 
         + (air)\ {charTag(PG, "neutral")}:                      Non hai pensato che forse il problema è l'opposto? E che a loro manca la curiosità di conoscerti per davvero?
                 

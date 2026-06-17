@@ -778,7 +778,7 @@
         {charTag(ThirdCharacter, "angry")}:                                     Non ho mai urlato così tanto.
         {charTag(ThirdCharacter, "neutral")}:                                   E io mi ci vedo così bene come padre, vecio.
                                                                                 Mi ci vedo tanto.
-                                                                                C'ho già gli occhi a cuore quando sto con l'Armando, mio nipote.
+                                                                                C'ho già gli occhi a cuore quando sto con l'Armandino, mio nipote.
                                                                                 Che poi mia sorella alla fine mi ha rubato anche quella possibilità, quello di essere il primo con un figlio.
                                                                                 Non sarei un papà come il mio.
                                                                                 Gli insegnerei le cose giuste.
@@ -805,7 +805,7 @@
         + \ {charTag(PG, "neutral")}:                                           Quindi sei pronto per pannolini, notti insonni, corse dal pediatra e tutto il resto.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Farei di tutto per lui, vecio.
-                                                                                Lo vedo già con l'Armando.
+                                                                                Lo vedo già con l'Armandino.
         {charTag(ThirdCharacter, "jester")}:                                    Anche se sono già lo zio idiota che lo fa ridere e gli compra le cose stupide.
         {charTag(ThirdCharacter, "neutral")}:                                   Se finisco per litigare con mia sorella, passo le ore a guardare le sue vecchie foto.
                                                                                 O sento mio cognato per farmi aggiornare da lui.

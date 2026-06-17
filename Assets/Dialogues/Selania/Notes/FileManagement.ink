@@ -13,6 +13,7 @@
 
 //È 
 //Pronomi usati da Boccale
+//{thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
 //{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}
 //{thirdChar_recordedPlayerPronoun has him:il|{thirdChar_recordedPlayerPronoun has her:la|lə}}
 //{player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}
