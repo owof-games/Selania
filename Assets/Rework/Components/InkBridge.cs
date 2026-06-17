@@ -1353,7 +1353,7 @@ namespace Selania.Rework.Components
         private Subject<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor>?
             _thirdLevelTextGrimoirePageDescriptorSubject;
 
-        public Observable<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptor =>
+        public Observable<IStoryGrimoire.ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptors =>
             _thirdLevelTextGrimoirePageDescriptorSubject?.AsObservable() ?? throw new InvalidOperationException(
                 "Cannot get the third level text grimoire page descriptors before initialization");
 

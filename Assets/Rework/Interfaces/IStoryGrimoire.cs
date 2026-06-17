@@ -128,7 +128,7 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         ///     An observable that produces a value whenever a third level text page should be displayed.
         /// </summary>
-        Observable<ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptor { get; }
+        Observable<ThirdLevelTextGrimoirePageDescriptor> thirdLevelTextGrimoirePageDescriptors { get; }
 
         /// <summary>
         ///     An observable that produces a value whenever a third level text page should go to the previous page.

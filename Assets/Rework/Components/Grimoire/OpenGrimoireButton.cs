@@ -42,7 +42,7 @@ namespace Selania.Rework.Components.Grimoire
                 .Merge(StoryGrimoire.secondLevelSigilsGrimoirePageDescriptors.Select(ToUnit))
                 .Merge(StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors.Select(ToUnit))
                 .Merge(StoryGrimoire.thirdLevelSigilsGrimoirePageDescriptors.Select(ToUnit))
-                .Merge(StoryGrimoire.thirdLevelTextGrimoirePageDescriptor.Select(ToUnit))
+                .Merge(StoryGrimoire.thirdLevelTextGrimoirePageDescriptors.Select(ToUnit))
                 .Subscribe(OnGrimoireDisplayed)
                 .AddTo(this);
 

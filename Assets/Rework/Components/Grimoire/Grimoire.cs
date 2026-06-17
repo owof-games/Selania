@@ -39,7 +39,7 @@ namespace Selania.Rework.Components.Grimoire
             StoryGrimoire.thirdLevelGreenhouseGrimoirePageDescriptors
                 .Subscribe(OnThirdLevelGreenhouseGrimoirePageDescriptors)
                 .AddTo(this);
-            StoryGrimoire.thirdLevelTextGrimoirePageDescriptor
+            StoryGrimoire.thirdLevelTextGrimoirePageDescriptors
                 .Subscribe(OnThirdLevelTextGrimoirePageDescriptor)
                 .AddTo(this);
             StoryGrimoire.thirdLevelTextNextPage
