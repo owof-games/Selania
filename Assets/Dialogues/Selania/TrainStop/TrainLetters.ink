@@ -546,6 +546,8 @@
                     Il Dario che pensa solo ad essere bono e cerca sempre di vedere se una figa ci sta guardando giocare per mettersi in mostra.
                     C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio in testa mi arriva la voce del Merlo che ci chiama <i>froci</i>.
                     E poi comunque non è che mi abbia mai detto di beccarci e bere, il Rocco.
+                    O per aggiornarci sul fantacalcio.
+                    Ora che ci penso, è da un po' che non ci sono messaggi sul gruppo, non è che mi c'hanno cacciato fuori?
                     Merda. Mi manca avere qualcosa con cui sfogarmi.
                     Forse anche per questo sto diventando più fumino.
                     L'altra sera c'erano questi tre ragazzetti, turisti, che hanno rotto i coglioni a Petra tutta sera.
