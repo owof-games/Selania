@@ -80,7 +80,7 @@ namespace Selania.Rework.Components
 
         #endregion
 
-        #region
+        #region relationship
 
         public Observable<int?> GetRelationshipLevelObservableFor(ISettingsDialogueBox settingsDialogueBox,
             string characterName)
@@ -2432,6 +2432,115 @@ namespace Selania.Rework.Components
         {
             _thirdLevelTextNextPageSubject!.OnNext(Unit.Default);
             actionsAfterUpdate.@continue = true;
+        }
+
+        #endregion
+
+        #region grimoire changes
+
+        /// <summary>
+        ///     An observable that emits a page identifier each time that page identifier either appears or change its contents.
+        /// </summary>
+        private Observable<GrimoirePageIdentifier> ChangedPageIdentifiers => throw new NotImplementedException();
+
+        /// <summary>
+        ///     Check if a grimoire page identifier needs the marker of something changed (it has changed, or one of the children
+        ///     pages has changed).
+        /// </summary>
+        /// <param name="identifier">The identifier for the grimoire page.</param>
+        /// <returns>Whether the page has changed and hasn't been seen yet.</returns>
+        /// <seealso cref="MarkAsSeen" />
+        private bool HasChanged(GrimoirePageIdentifier identifier)
+        {
+            return false;
+        }
+
+        /// <summary>
+        ///     Mark a grimoire page as seen, removing the "changed" flag.
+        /// </summary>
+        /// <param name="identifier">The identifier of the page.</param>
+        /// <seealso cref="HasChanged" />
+        private void MarkAsSeen(GrimoirePageIdentifier identifier)
+        {
+        }
+
+        public Observable<Unit> GrimoireChanged => throw new NotImplementedException();
+
+        /// <summary>
+        ///     The identifier of a page: the first line of text (its "name") and the associated tags.
+        /// </summary>
+        /// <param name="Name">The name of the page (first line of text).</param>
+        /// <param name="Tags">The tags associated with the first line of text, ordered alphabetically.</param>
+        private record GrimoirePageIdentifier(
+            string Name,
+            IEnumerable<string> Tags)
+        {
+            public virtual bool Equals(GrimoirePageIdentifier? other)
+            {
+                return Name == other?.Name && Tags.SequenceEqual(other.Tags);
+            }
+
+            public override int GetHashCode()
+            {
+                var hashCode = new HashCode();
+                hashCode.Add(Name);
+                foreach (var tag in Tags) hashCode.Add(tag);
+
+                return hashCode.ToHashCode();
+            }
+        }
+
+        /// <summary>
+        ///     The contents of a page: all the text after the first line, and all the choices at the end ("links").
+        /// </summary>
+        /// <param name="Text">The text of the pages, excluding the first line.</param>
+        /// <param name="Links">All the choices at the end of the text, ordered alphabetically by <see cref="GrimoireLink.Text" />.</param>
+        private record GrimoirePageContent(string Text, IEnumerable<GrimoireLink> Links)
+        {
+            public virtual bool Equals(GrimoirePageContent? other)
+            {
+                return Text == other?.Text && Links.SequenceEqual(other.Links);
+            }
+
+            public override int GetHashCode()
+            {
+                var hashCode = new HashCode();
+                hashCode.Add(Text);
+                foreach (var tag in Links) hashCode.Add(tag);
+
+                return hashCode.ToHashCode();
+            }
+        }
+
+        /// <summary>
+        ///     A single link (choice) at the end of a grimoire page.
+        /// </summary>
+        /// <param name="Identifier">The identifier of the link.</param>
+        /// <param name="Text">The text of the choice.</param>
+        /// <param name="Tags">The tags of the choice, ordered alphabetically.</param>
+        /// <param name="IsSideNavigation">Whether this link is for side navigation, AKA previous, next or back.</param>
+        private record GrimoireLink(
+            GrimoirePageIdentifier Identifier,
+            string Text,
+            IEnumerable<string> Tags,
+            bool IsSideNavigation)
+        {
+            public virtual bool Equals(GrimoireLink? other)
+            {
+                return Identifier == other?.Identifier && Text == other.Text &&
+                       IsSideNavigation == other.IsSideNavigation && Tags.SequenceEqual(other.Tags);
+            }
+
+            public override int GetHashCode()
+            {
+                var hashCode = new HashCode();
+                hashCode.Add(Identifier);
+                hashCode.Add(Text);
+                hashCode.Add(IsSideNavigation);
+                foreach (var tag in Tags) hashCode.Add(tag);
+
+                return hashCode.ToHashCode();
+            }
         }
 
         #endregion
