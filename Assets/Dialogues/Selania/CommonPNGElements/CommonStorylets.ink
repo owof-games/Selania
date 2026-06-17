@@ -540,7 +540,7 @@
         {charTag(ThirdCharacter, "melanchonic")}:                       Mi ricorda casa.
         {charTag(ThirdCharacter, "neutral")}:                           C'è un fiume, un bel fiume.
                                                                         Era bello, quando ero piccolo.
-                                                                        Ma ormai è diventato una merda, tra gli scarichi delle vecchie fabbriche e la gente che lo usa come una discarica.
+                                                                        Ma ormai è diventato una merda, tra le schifezze che buttano fuori le vecchie fabbriche e la gente che lo usa come una discarica.
         {charTag(ThirdCharacter, "melanchonic")}:                       Un po' come qui.
                                                                         E ormai le fabbriche le hanno chiuse quasi tutte, per cui c'è solo il brutto.
                                                                         E niente lavoro.                                                                 
@@ -846,7 +846,6 @@
     ->->
 
 
-
 === frog_and_third_char_chit_chat ===
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -854,7 +853,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, mannaggia a te!
+        {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, Gesù licantropo!
         {charTag(ThirdCharacter, "neutral")}:                                   Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
                 {
                 - are_two_entities_together(SecondCharacter, PG): 
@@ -872,7 +871,7 @@
         {charTag(Franco, "question")}:                                          Quindi paghi per perdere?
                 {
                 - are_two_entities_together(FirstCharacter, PG): 
-                {charTag(FirstCharacter, "curious")}:                           Lol, questa non me la perdo!
+                {charTag(FirstCharacter, "curious")}:                           Questa non me la perdo!
                 }
         {charTag(ThirdCharacter, "neutral")}:                                   No, paghi per giocare.
         {charTag(Franco, "party")}:                                             E dare dei soldi ai tuoi amici.
@@ -880,7 +879,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Vecio, ma hai mai giocato a qualcosa?
                                                                                 Perché ogni gioco è gara, competizione!
         {charTag(Franco, "neutral")}:                                           No perché le gare fanno stare male chi perde.
-        {charTag(ThirdCharacter, "jester")}:                                    Ma dai, è un gioco, non ci stai male.
+        {charTag(ThirdCharacter, "jester")}:                                    Ma dai, è un gioco, chi ci sta male?
         {charTag(Franco, "question")}:                                          Quindi a te va bene se perdi?
         {charTag(ThirdCharacter, "jester")}:                                    Io non perdo, Franchì, non ti preoccupare!
         {charTag(ThirdCharacter, "bored")}:                                     Anche se da quando c'è il Merlo, quello si compra i giocatori migliori.
@@ -987,7 +986,7 @@
                 }                                                                                                                                        
         -
         {charTag(ThirdCharacter, "neutral")}:                                   Franchì, riprendiamo!
-                                                                                Allora, ti consiglio almeno due ali decenti...
+                                                                                Allora, ti consiglio almeno due ali decenti.
 
 
     -> third_char_closing_storylet ->
@@ -1008,7 +1007,7 @@
                 - are_two_entities_together(FirstCharacter, PG):
                         {
                         - grimoire_firstChar has grimFirstThirdChar or grimFirstThirdChar has grimFirstCharMentorAboutThirdChar or thirdChar_firstCharRage == true:
-                        {charTag(FirstCharacter, "annoyed")}:                   Nope.
+                        {charTag(FirstCharacter, "annoyed")}:                   No.
                                                                                 Basta con questa storia.
                                 ~ change_entity_place(FirstCharacter)     
                         }
@@ -1017,7 +1016,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Cioè, non proprio.
                                                                                 Quando stavamo ancora preparando il matrimonio.
                                                                                 Mancavano sei mesi.
-                                                                                Mia sorella ci aveva già aiutati a trovare il fotografo.
+                                                                                Mia sorella c'aveva già aiutati a trovare il fotografo.
                                                                                 Mio cognato c'aveva trovato uno sconto per i fiori con gente del teatro.
                                                                                 E mia suocera, la mia futura suocera, aveva aiutato Dona a trovare il vestito.
         {charTag(ThirdCharacter, "melanchonic")}:                               Un vestito da principessa.
@@ -1043,7 +1042,8 @@
         {charTag(ThirdCharacter, "bored")}:                                     Sai una cosa, {charNameFive}?
                                                                                 Forse ho capito il problema di questo posto, il tuo problema.
         {charTag(ThirdCharacter, "neutral")}:                                   Vi sentite tutte ferite dal mondo.
-        {charTag(ThirdCharacter, "bored")}:                                     Fate come se il mondo vi dovesse qualcosa.
+                                                                                "Buaaaah, il mondo è cattivo con me, buaaaah!"
+        {charTag(ThirdCharacter, "bored")}:                                     Fate come se qualcuno vi deve qualcosa.
                                                                                 Beh: sveglia.
         {charTag(ThirdCharacter, "jester")}:                                    Non vi è dovuto nulla!
                 {
@@ -1161,7 +1161,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   No no credimi: Lautaro Martinez è uno dei migliori di sempre.
                                                                                 Altro che Ronaldo.
         {charTag(SecondCharacter, "neutral")}:                                  Mh mh.
-        {charTag(ThirdCharacter, "neutral")}:                                   Dai, tuo papà ti ci avrà portato allo stadio ogni tanto!
+        {charTag(ThirdCharacter, "neutral")}:                                   Dai, tuo papà ti c'avrà portato allo stadio ogni tanto!
         {charTag(SecondCharacter, "neutral")}:                                  Ci andava coi suoi amici.
                                                                                 Ora sta a casa e si arrabbia con la tv.
         {charTag(ThirdCharacter, "neutral")}:                                   E tuo fratello?
@@ -1358,7 +1358,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-        {charTag(ThirdCharacter, "angry")}:                                     Ma smettila di parlare come le influsceme su Instagram, dio cristo!
+        {charTag(ThirdCharacter, "angry")}:                                     Ma smettila di parlare come le influsceme su Instagram, Gesù licantropo!
                                                                                 Ma ce l'hai una personalità tua {charNameOne}?!?!?
         {charTag(ThirdCharacter, "bored")}:                                     <i>E il patriarcato di qua, e il patriarcato di là.</i>
                                                                                 Ma chi se ne fotte mannaggia al cazzo!                                  
@@ -1418,7 +1418,7 @@
                 }
                 {
                 - are_two_entities_together(Franco, PG):
-                {charTag(Franco, "neutral")}:                                   Questo è troppo anche per il povero Franco.
+                {charTag(Franco, "neutral")}:                                   Questo è troppo anche per Franco.
                         ~ move_entity(Franco, Safekeeping)
                 }                                                                 
         {charTag(FirstCharacter, "neutral")}:                                   Che sappia, no.
@@ -1430,7 +1430,7 @@
                                                                                 Un problema che rende una donna non più una persona ma una cosa da comprare.
                                                                                 Qualcosa da usare.
         {charTag(ThirdCharacter, "neutral")}:                                   Io non ho mai trattato Dona come qualcosa da comprare.
-        {charTag(FirstCharacter, "neutral")}:                                   Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa, ti sei solo incazzato.
+        {charTag(FirstCharacter, "neutral")}:                                   Ma quando ha deciso che la vostra relazione non la faceva più stare bene, invece di accettare la cosa e magari piangerci sopra, ti sei solo incazzato.
                                                                                 Come quando c'è la partita e il telecomando smette di funzionare.
                                                                                 O come quando la macchina decide di non partire e sei in ritardo per il lavoro.
                                                                                 Come con un oggetto.
