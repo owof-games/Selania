@@ -315,7 +315,7 @@
                                 }
                             Sul momento davvero ti ho odiato fino a sentirmi le palle bollire.
                             Ma era la cosa che mi serviva davvero.
-                            {frog_third_char_gift == thirdChar_giftedObject: Dì a Franchì che c'aveva ragione, povero.}
+                            {frog_third_char_gift == thirdChar_giftedObject:Dì a Franchì che c'aveva ragione, povero.}
                             {
                             //Se prima volta che passo da qui, aumento valore inchiostro
                             - grimoire_thirdChar hasnt grimThirdCharLetterOne:
@@ -540,7 +540,7 @@
                     E poi anche coi ragazzi, boh. 
                     Le serate a calcetto sono strane {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
                     Ho già saltato due lunedì e non so nemmeno io dirti il perché, ma non c'ho la poesia proprio.
-                    {letters_thirdCharLetterTwoChoice has aetherC: Forse c'ho in testa Marta che mi dice che sono degli idioti.}
+                    {letters_thirdCharLetterTwoChoice has aetherC:Forse c'ho in testa Marta che mi dice che sono degli idioti.}
                     Non tollero più le cattiverie del Merlo, il Giova che gli lecca il culo come se cagasse oro.
                     Il Dario che pensa solo ad essere bono e cerca sempre di vedere se una figa ci sta guardando giocare per mettersi in mostra.
                     C'ho voglia di scrivere al Rocco per farci una birra invece di giocare, ma ogni volta che lo faccio in testa mi arriva la voce del Merlo che ci chiama <i>froci</i>.
@@ -668,7 +668,7 @@
                                     Credo proprio che c'hai ragione, sai? Non è che i miei amici cercano di capirmi poi tanto.
                                     E manco la mia famiglia :/
                                     Mi sento come Cambiasso nel Real.
-                                    {letters_thirdCharLetterTwoChoice has airC: Per fortuna ci sono i ragazzi che sto conoscendo online|Però ho rispolverato la passione per i forum online, e ho iniziato a cercare gruppi di persone come me}.
+                                    {letters_thirdCharLetterTwoChoice has airC:Per fortuna ci sono i ragazzi che sto conoscendo online|Però ho rispolverato la passione per i forum online, e ho iniziato a cercare gruppi di persone come me}.
                                     Mi stanno aiutando a capire un bel po' di cose.
                                     Ti ricordi quando ti tiravo i pipponi sulle app di dating?
                                     Ecco: è saltato fuori che il 20% degli uomini praticamente si prende tutto il mercato di figa che c'è sull'app.
@@ -1202,7 +1202,7 @@
                 Ho sbiascicato qualcosa, mi ha allontanato, mi sono accorto che c'era del sangue, era dal mio naso.
                 Lui è rimasto seduto lì sulla porta, ad aspettare che mi sedessi e mi sono sentito così coglione coglione coglione coglione.    
                 {third_char_letters_choices.four.aether or third_char_letters_choices.four.water: re volte coglione perché avrei dovuto ascoltarti.}
-                {third_char_letters_choices.four.fire: Tre volte coglione perché ti ho ascoltato.}
+                {third_char_letters_choices.four.fire:Tre volte coglione perché ti ho ascoltato.}
                 Il ginocchio mi fa ancora un male boia.
                 Poi il Poggi si è fatto super serio.
 
@@ -1360,7 +1360,7 @@
                             Anche se avrei voglia di bere ancora col Rocco. Magari qualcosa di analcolico
                 }
                 Ho lasciato fuori la cagnolina per una giornata, l'ho fatta entrare solo perché ero stanco dei suoi cazzo di abbai contro i passanti.
-                {thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar: {charNameOne} c'aveva ragione alla fine. Gli devo le mie scuse.}
+                {thirdChar_firstCharRage == true or grimoire_thirdChar has grimFirstThirdChar:{charNameOne} c'aveva ragione alla fine. Gli devo le mie scuse.}
                 Ho preso una decisione: visto che è tornata per il matrimonio di una cugina o che, inviterò Donatella a bere una cosa assieme.
                 E le chiederò di spuntarmi addosso tutte le cose cose di merda che pensa di me.
                 Almeno se so quanto sono schifosa come persona, posso anche capire se c'è davvero qualcosa da cui ripartire o se è il caso che vado a fondo e bona.
@@ -1649,7 +1649,7 @@
 
             - third_char_letters_choices.six.aether: 
                 Mi hai consigliato di chiamare anche mia sorella, per un po' di aiuto.
-                {letters_thirdCharLetterFourChoice hasnt waterC && (letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has fireC or letters_thirdCharLetterTwoChoice has earthC): Nonostante lo sclero che mi ha fatto al Baretto mesi fa.}
+                {letters_thirdCharLetterFourChoice hasnt waterC && (letters_thirdCharLetterTwoChoice has airC or letters_thirdCharLetterTwoChoice has fireC or letters_thirdCharLetterTwoChoice has earthC):Nonostante lo sclero che mi ha fatto al Baretto mesi fa.}
 
             - third_char_letters_choices.six.water: 
                 Mi hai consigliato di portarlo in un posto legato a mamma, per avercela vicina.
