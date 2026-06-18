@@ -255,10 +255,12 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 78b25f259c2779d4d8029e2ce2a45468, type: 3}
     - <name>k__BackingField: Capibara_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: c1528094de9e24944965628c6f93f599, type: 3}
-    - <name>k__BackingField: writer
-      <sprite>k__BackingField: {fileID: 21300000, guid: f91cce7b796be9d40974c557780df581, type: 3}
     - <name>k__BackingField: Lupo_neutral
       <sprite>k__BackingField: {fileID: 21300000, guid: cf12193c676a5c54cbc0dee17441a621, type: 3}
+    - <name>k__BackingField: Grizzly_neutral
+      <sprite>k__BackingField: {fileID: 21300000, guid: b688c5528be35eb4fb18a3937ad90865, type: 3}
+    - <name>k__BackingField: writer
+      <sprite>k__BackingField: {fileID: 21300000, guid: f91cce7b796be9d40974c557780df581, type: 3}
   - <listName>k__BackingField: ThirdCharacter
     <dialogueColor>k__BackingField: {r: 0.47058824, g: 0.12941177, b: 0.08235294, a: 1}
     <inkVariableName>k__BackingField: thirdChar_InkLevel
