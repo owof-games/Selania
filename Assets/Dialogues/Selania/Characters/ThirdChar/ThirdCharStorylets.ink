@@ -85,8 +85,7 @@
                                                                 Però la mia pancetta da birra alle tipe piace, almeno un otto me lo piglio.
         {charTag(ThirdCharacter, "neutral")}:                   E ora sono una birra.
                                                                 Ma birra o non birra, che si combina da queste parti?
-
-
+                                                                
    
         + \ {charTag(PG, "neutral")}:                           Sto provando ad aiutarvi a stare meglio con voi stess3.
                 -> glyph_choice_manager(false, waterC)->

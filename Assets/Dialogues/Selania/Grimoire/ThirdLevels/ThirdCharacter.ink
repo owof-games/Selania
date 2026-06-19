@@ -8,10 +8,41 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {
-    - grimoire_thirdChar != ():
+    - grimoire_thirdChar has grimThirdCharOne:
         <b>Lista delle persone importanti per {charNameThree}</b>.
-        <i>Dona</i>: la ex di {charNameThree}.
-        <i>Il Poggi</i>: il migliore amico di {charNameThree}.  
+        {
+            - grimoire_thirdChar has grimThirdCharOne:
+            <i>Stracciamaroni</i>: coinquilino di {charNameThree}.
+            <i>Dona</i>: la ex di {charNameThree}.
+            <i>Capo</i>: gestisce Il baretto, la birreria dove lavora {charNameThree}. {charNameThree} lo definisce un idiota.
+            <i>Padre</i>: padre di {charNameThree}. Prima possedeva Il baretto
+        }
+        {
+            - grimoire_thirdChar has grimThirdCharTwo:
+            <i>Ava</i>: {letters_thirdCharLetterFourChoice has waterC or letters_thirdCharLetterFourChoice has aetherC: la ed ragazza nonché AI di {charNameThree}|la ragazza di {charNameThree}}.
+            <i>Petra</i>: collega di {charNameThree}.
+        }
+        {
+            - grimoire_thirdChar has grimThirdCharThree:
+            <i>Poggi</i>: {grimoire_thirdChar has grimThirdCharLetterFive: era il miglior amico di {charNameThree}|miglior amico di {charNameThree}}.
+            <i>Olivia</i>: figlia di Poggi.
+            <i>Merlo</i>: gioca nella squadra informale di calcetto di {charNameThree}. {charNameThree} lo descrive come uno pieno di soldi e che se la sente un po'.
+            <i>Giova</i>: gioca nella squadra informale di calcetto di {charNameThree}. Sposato da poco, si occupa di start up. Viene da una famiglia ricca.
+            <i>Dario</i>: gioca nella squadra informale di calcetto di {charNameThree}. Entrato da poco, secondo {charNameThree} principalmente perché esce con Katia, cugina di Giova.
+            <i>Rocco</i>: gioca nella squadra informale di calcetto di {charNameThree}. Vero nome, Adil. Operaio, ha due figli già grandi.
+        }
+        {
+            - grimoire_thirdChar has grimThirdCharFive:
+            <i>Mamma</i>: madre di {charNameThree}, è morta qualche anno fa.
+            <i>Marta</i>: sorella di {charNameThree}.
+            <i>Armando</i>: figlio di Marta, nato da poco.
+            <i>Petra</i>: collega di {charNameThree}.
+        }
+        {
+            - grimoire_thirdChar has grimThirdCharSix:
+            <i>Amanda</i>: moglie di Poggi.
+        }
+
     }
 
     //Main story
