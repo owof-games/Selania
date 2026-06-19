@@ -74,7 +74,7 @@
                                                                         O passo il tempo a insultare gente online.
         {charTag(ThirdCharacter, "jester")}:                            E poi sono un ragazzo d'oro, non serve che me lo dici tu!                                                                          
 
-        + \ {charTag(PG, "neutral")}:                                   Sei un po' idiota ma mi stai simpatico!
+        + \ {charTag(PG, "neutral")}:                                   Sei un po' idiota ma hai il fuoco dentro, e un tipo così è un tipo che mi piace!
                 -> glyph_choice_manager(false, fireC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -84,7 +84,7 @@
                 {charTag(ThirdCharacter, "bored")}:                     <i>Faccio</i> l'idiota, ma non lo sono.
                                                                         Ti piace giudicare facile, vero? 
                 }
-        {charTag(ThirdCharacter, "neutral")}:                           Però è una cosa che mi diceva sempre anche mamma.
+        {charTag(ThirdCharacter, "neutral")}:                           Però è una cosa che mi diceva sempre anche mamma, dell'idiota.
                                                                         Secondo mia sorella è una cosa che ho iniziato a fare quando le cose in casa stavano andando male.
         {charTag(ThirdCharacter, "jester")}:                            Inizi a fare il buffone per risolvere un problema, e finisci per fare il buffone per il resto della tua vita.                                                                      
         
@@ -307,7 +307,7 @@
                                                                         Ci gode pure a vederlo soffrire, la pazza.
         {charTag(ThirdCharacter, "jester")}:                            Cosa cazzo dovrei giustificare o non giustificare del carattere di merda di questa tizia?    
         
-        + \ {charTag(PG, "neutral")}:                                   La rabbia è un diritto di tutti, uomini e donne.
+        + \ {charTag(PG, "neutral")}:                                   Uomini o donne, chi se ne frega! Tutti hanno il diritto di sfasciare qualcosa.
                 -> glyph_choice_manager(false, fireC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -469,11 +469,11 @@
                                                                         Insieme a un mondo che mi permetta di fare ancora il mio vecchio lavoro.
     {charTag(ThirdCharacter, "jester")}:                                E una tipa vicina meno rompicoglioni di {charNameOne}!                                                                                                                                         
     
-    + \ {charTag(PG, "neutral")}:                                       Di non incazzarti per quello che ti dice {charNameOne}, ha i suoi pregiudizi.
+    + \ {charTag(PG, "neutral")}:                                       Che {charNameOne} è piena di pregiudizi, quindi sbattitene.
             -> glyph_choice_manager(false, fireC)-> 
             {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == her:
-            {charTag(ThirdCharacter, "bored")}:                         Dov'è la solidarietà femminile, {player_name}?
+            {charTag(ThirdCharacter, "bored")}:                         Non c'è quella roba della solidarietà femminile, {player_name}?
             - thirdChar_recordedPlayerPronoun == they:
             {charTag(ThirdCharacter, "bored")}:                         Ehi dai, non serve buttare già dal tetto così {charNameOne}!
             - else:
