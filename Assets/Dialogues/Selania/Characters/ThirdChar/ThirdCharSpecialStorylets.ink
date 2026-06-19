@@ -53,7 +53,7 @@
                                                                         Comunque non credo che nessuno verrà a romperti le palle in questo postaccio.
 
                 {
-                - tutorial_ActivateTutorial == true:
+                - tutorial_CarlaTutorial == true:
                 {charTag(ThirdCharacter, "jester")}:                    A parte Carla ovviamente!                                                                                                                                                                                                                                        
                 }
         {charTag(ThirdCharacter, "neutral")}:                           Quindi ti faccio la domanda peggiore del mondo.

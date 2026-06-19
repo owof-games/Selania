@@ -2,7 +2,8 @@ LIST tutorial_allCarlaTutorials = tutorialChoicesRelationship, tutorialRereading
 
 VAR tutorial_CarlaDiscoveredTutorials= ()
 
-VAR tutorial_ActivateTutorial = false
+VAR tutorial_MentorTutorial = false
+VAR tutorial_CarlaTutorial = false
 VAR tutorial_CarlaRelationshipIndicator = 0
 
 
@@ -47,13 +48,13 @@ VAR tutorial_CarlaInkIndicator = ink_low
         - are_two_entities_together(PG, Carla) && grimoire_isEnabled == true && not tutorial_carlaGrimoireStorylet && settings_gamerMode == true:
                 -> tutorial_carlaGrimoireStorylet        
 
-        - tutorial_ActivateTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet && settings_gamerMode == true:
                 -> tutorial_carlaGreenhouseGiftsInkStorylet
 
-        - tutorial_ActivateTutorial == true && entity_location(PG) == Kitchen && not tutorial_carlaKitchenStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && not tutorial_carlaKitchenStorylet && settings_gamerMode == true:
                 -> tutorial_carlaKitchenStorylet
 
-        - tutorial_ActivateTutorial == true && entity_location(PG) == Nest && not tutorial_carlaNestStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Nest && not tutorial_carlaNestStorylet && settings_gamerMode == true:
                 -> tutorial_carlaNestStorylet
 
     }
@@ -66,11 +67,11 @@ VAR tutorial_CarlaInkIndicator = ink_low
             {   
 
                 //Se il tutorial è attivo, ho raggiunto le condizioni, e Carla mi ha spiegato come funzionano le relazioni:
-                - tutorial_ActivateTutorial == true && tutorial_carlaChoicesRelationshipStorylet:
+                - tutorial_CarlaTutorial == true && tutorial_carlaChoicesRelationshipStorylet:
                     -> tutorial_mentorInkAndYouAreARewriter
 
                 //Se il tutorial non è attivo:    
-                - tutorial_ActivateTutorial == false:
+                - tutorial_CarlaTutorial == false:
                     -> tutorial_mentorInkAndYouAreARewriter
 
                 - else:
@@ -83,15 +84,15 @@ VAR tutorial_CarlaInkIndicator = ink_low
 
             {   
                 //Se il tutorial è attivo, ho raggiunto le condizioni, ma ancora Carla non mi ha spiegato come funzionano le relazioni:
-                - tutorial_ActivateTutorial == true && not tutorial_carlaGreenhouseGiftsInkStorylet:
+                - tutorial_CarlaTutorial == true && not tutorial_carlaGreenhouseGiftsInkStorylet:
                     ->->
 
                 //Se il tutorial è attivo, ho raggiunto le condizioni, e Carla non mi ha spiegato come funzionano le relazioni:
-                -tutorial_ActivateTutorial == true && tutorial_carlaGreenhouseGiftsInkStorylet:
+                -tutorial_CarlaTutorial == true && tutorial_carlaGreenhouseGiftsInkStorylet:
                     -> tutorial_mentorInkAndRewriting
 
                 //Se il tutorial non è attivo, mi affido a tutorial_rereadingActive:
-                - tutorial_ActivateTutorial == false
+                - tutorial_CarlaTutorial == false
                     -> tutorial_mentorInkAndRewriting
                 
             }

@@ -3,14 +3,16 @@ VAR settings_gamerMode = false
 
 
 
-=== gamerMode_activation
+=== function gamerMode_activation()
     //Attivo gli achievements ad hoc
     ~ settings_gamerMode = true
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = true
+
+
+
+=== function tutorial_CarlaTutorialActivation()
     //Attivo il tutorial
-    ~ tutorial_ActivateTutorial = true
+    ~ tutorial_CarlaTutorial = true
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, TrainStop)
-    
-->->

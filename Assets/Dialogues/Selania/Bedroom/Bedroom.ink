@@ -119,48 +119,70 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
 
 
 = witch
-    {charTag(TheWitch, witch_state())}:              Il testing è in ink?
+    {charTag(TheWitch, witch_state())}:                                 <i>Il testing è in ink?
             + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sì.</i>
                 -> top2
-            + (not_ink) \ {charTag(PG, "neutral")}:           <i>No.</i>
+            + (not_ink) \ {charTag(PG, "neutral")}:                     <i>No.</i>
                 -> top3
 
     - (top2)
 
-        {charTag(TheWitch, witch_state())}:         <i>Cosa serve?</i>
+        {charTag(TheWitch, witch_state())}:                             <i>Cosa serve?</i>
             
 
-            + \ {charTag(PG, "neutral")}:           <i>Sono qui per testare il Grimorio.</i>
+            + \ {charTag(PG, "neutral")}:                               <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
-            {charTag(TheWitch, witch_state())}:     <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
-                                                    <i>Hai inoltre sbloccato tutti i sigilli e le piante.</i>
+            {charTag(TheWitch, witch_state())}:                         <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
+                                                                        <i>Ho inoltre sbloccato tutti i sigilli e le piante.</i>
 
-            + (riscrittura) \ {charTag(PG, "neutral")}:          <i>Impostami le prime 3 png come pronte per la riscrittura.
+            + (riscrittura) \ {charTag(PG, "neutral")}:                 <i>Impostami le prime 3 png come pronte per la riscrittura.
                 ~ debugRewriting()
                                                     
 
-            + \ {charTag(PG, "neutral")}:          <i>Aprimi tutti i luoghi del gioco.
+            + \ {charTag(PG, "neutral")}:                               <i>Aprimi tutti i luoghi del gioco.
                 ~ debug_places_open()
 
-            + \ {charTag(PG, "neutral")}:          <i>Non mi serve nulla.</i>  
+            + \ {charTag(PG, "neutral")}:                               <i>Non mi serve nulla.</i>  
                                    
             -
 
-    {charTag(TheWitch, witch_state())}:             <i>Serve altro?
-            + {!debug_stochastic}\ {charTag(PG, "neutral")}:           <i>Sì.
+    {charTag(TheWitch, witch_state())}:                                 <i>Serve altro?
+            + {!debug_stochastic}\ {charTag(PG, "neutral")}:            <i>Sì.
                 -> top2
-            + \ {charTag(PG, "neutral")}:           <i>No.
+            + \ {charTag(PG, "neutral")}:                               <i>No.
     
 
 
     - (top3)
-        {charTag(TheWitch, witch_state())}:         Che modalità di gioco vuoi attivare?
-            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Gamer Mode.</i>
-                -> gamerMode_activation ->
+    {charTag(TheWitch, witch_state())}:                                 <i>Che modalità di gioco vuoi attivare?
+        //Aggiungere spiegazione delle due modalità per il testing
+            + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Gamer Mode.</i>
+                ~ gamerMode_activation ()
+                //Fino a quando non ho sbloccato la parte sotto, attivo anche Carla
+                ~ tutorial_CarlaTutorialActivation()
+                
+            + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Reader Mode.</i>
+    -
+    // {charTag(TheWitch, witch_state())}:                                 <i>Infine, puoi decidere che tipo di tutorial attivare.</i>.
+    //                                                                     <i>Puoi affidarti a <b>Mentore</b>, che ha un approccio più narrativo, non sempre diretto, e per questo ti permette di esplorare questo mondo con i tuoi tempi. Il suo supporto è particolarmente adatto al Reader Mode.</i>
+    //                                                                     <i>Oppure c'è <b>Carla</b>: più diretta, ti spiegherà tutto quello che devi fare con degli esempi che vengono dalla sua enorme conoscenza come Sacra Capra Burocratica. Il suo supporto è particolarmente adatto per il Gamer Mode.</i>
+    //                                                                     <i>C'è anche la possibilità di andare senza guida alcuna, o di chiedere l'aiuto di entrambe.</i>
+    //                                                                     <i>Cosa sceglierai?</i>
 
-            + \ {charTag(PG, "neutral")}:           <i>Voglio la modalità Reader Mode.</i>
-    -    
-        {charTag(TheWitch, witch_state())}:         <i>Perfetto.
-                                                    <i>Buon inizio di questo tuo viaggio.</i>
+    //         + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di Mentore.</i>
+    //                 ~ tutorial_MentorTutorial = true
+
+    //         + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di Carla.</i>
+    //                 ~ tutorial_CarlaTutorialActivation()
+    
+    //         + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di entrambe.</i>
+    //                 ~ tutorial_CarlaTutorialActivation()
+    //                 ~ tutorial_MentorTutorial = true
+    //         
+    //          + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>                                                            
+    //         -
+
+    {charTag(TheWitch, witch_state())}:                                 <i>Perfetto.
+                                                                        <i>Ti auguriamo inizio di questo tuo viaggio.</i>
 
 -> main

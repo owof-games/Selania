@@ -282,13 +282,13 @@
     -> glyph_open_all_sigils ->
 
     //Attivo la gamer mode, o da ink non posso testare nulla
-    -> gamerMode_activation ->   
+        ~ gamerMode_activation ()
 
     //Aggiungiamo con chi abbiamo cucinato
-    ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
+        ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
 
     //E poi i documenti
-    ~  horizontalS_discoveredDocs += horizontalS_allDocs
+        ~  horizontalS_discoveredDocs += horizontalS_allDocs
 
 
 ->->

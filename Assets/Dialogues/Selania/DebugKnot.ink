@@ -27,7 +27,7 @@
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = true
     //Attivo il tutorial
-    ~ tutorial_ActivateTutorial = true
+    ~ tutorial_CarlaTutorial = true
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, TrainStop)
     -> debug_knot
@@ -38,7 +38,7 @@
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = false
     //Attivo il tutorial
-    ~ tutorial_ActivateTutorial = false
+    ~ tutorial_CarlaTutorial = false
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, Safekeeping)
     -> debug_knot
