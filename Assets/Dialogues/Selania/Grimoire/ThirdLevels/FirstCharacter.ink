@@ -9,10 +9,28 @@
 
 
     {
-    - grimoire_firstChar != ():
+    - grimoire_firstChar has grimFirstCharOne:
         <b>Lista delle persone importanti per {charNameOne}</b>.
-        <i>Talco</i>: migliore amicə.
-        <i>Ennio</i>: il ragazzo di {charNameOne}.  
+        {
+            - grimoire_firstChar has grimFirstCharOne:
+                Talco: è l'amə di {charNameOne}. {grimoire_firstChar has grimFirstCharSeven: Di recente si è trasferitə in Islanda}
+                Ennio: il ragazzo di {charNameOne}.
+        }
+        {
+            - grimoire_firstChar has grimFirstCharSix:
+                Valeria: coinquilina di {charNameOne}, nonché cantante del gruppo che hanno creato assieme.
+        }
+        {
+            - grimoire_firstChar has grimFirstCharSeven:
+                Thomas: compagno di Talco, di recente assieme hanno avuto unə bimbə.
+        }
+        {
+            - grimoire_firstChar has grimFirstCharEight:
+                Padre: il padre di {charNameOne}, con cui ha un buon rapporto.
+                Madre: la madre di {charNameOne}.
+                Anna: ex collega del conservatorio, ora si occupa di un festival jazz nel paese natale.
+                Luigia: ex ragazza di Valeria, tornata in Sardegna per fare attività di recupo culturale.    
+        }
     }
 
     //Main story
