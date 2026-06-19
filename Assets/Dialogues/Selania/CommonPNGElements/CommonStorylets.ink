@@ -67,10 +67,11 @@
         {charTag(SecondCharacter, "melanchonic")}:              Come i bambini piccoli. No no no.
         {charTag(FirstCharacter, "affectionate")}:              Mi ci riconosco, totale.
 
-        + \ {charTag(PG, "neutral")}:                           Se gli alieni mi leggono la mente penso a cose assurdissime!
+        + \ {charTag(PG, "neutral")}:                           Se gli alieni mi leggono la mente penso che li fanno scappare dalla paura!
             -> glyph_choice_manager(false, fireC)->
         {charTag(SecondCharacter, "energy")}:                   Sarebbe divertentissimo!
                                                                 Ora provo a pensare tantissimo alla cacca!
+                                                                Mamma si spaventa sempre con la cacca!
         {charTag(FirstCharacter, "affectionate")}:              La mia mente è limpida e innocente.
         {charTag(FirstCharacter, "neutral")}:                   Non come quella di un bambino, ascoltando le cose che dice il piccoletto.
             
@@ -168,9 +169,9 @@
                                                                         Che come provo a fare un passo deciso, ferisco qualcuno?
                                                                         Che forse non sono un granché come {charNameFive}?
         
-        + \ {charTag(PG, "neutral")}:                                   L'hai ferito, cosa ti aspettavi?
+        + \ {charTag(PG, "neutral")}:                                   L'hai ferito, cosa ti aspettavi? Ora però puoi rimediare.
                 -> glyph_choice_manager(Mentor, fireC)->
-        {charTag(FifthCharacter, "sad")}:                               Un po' di comprensione.
+        {charTag(FifthCharacter, "sad")}:                               Speravo in un po' di comprensione.
                                                                         Di ascolto.
                                                                         Delle mie ragioni.
                                                                         Oh cavoletti.
@@ -216,7 +217,7 @@
     {charTag(FifthCharacter, "neutral")}:                               O quello che dice {charNameOne}.
     {charTag(FifthCharacter, "sad")}:                                   Qualcosa che è sempre altrove e quindi irraggiungibile?
     
-        + \ {charTag(PG, "neutral")}:                                   Penso che {charNameFive} confonda felicità e resa.
+        + \ {charTag(PG, "neutral")}:                                   Penso che {charNameFive} dica <i>felicità</i> ma intenda </i>arrendersi</i>.
             -> glyph_choice_manager(false, fireC)->
         {charTag(FifthCharacter, "neutral")}:                           Non arrendersi, {player_name}, ma accogliere quello che si ha.
         {charTag(FirstCharacter, "sad")}:                               E non vedo differenza, {charNameFive}.
@@ -350,7 +351,7 @@
         {charTag(FirstCharacter, "annoyed")}:                                   Non esageriamo ora, ama!
 
                 
-        + \ {charTag(PG, "neutral")}:                                           Le informazioni sono ovunque, sta a lui fare il lavoro, se vuole farlo.
+        + \ {charTag(PG, "neutral")}:                                           Le informazioni per cambiare sono ovunque: a un certo punto uno deve anche farsi il mazzo e smetterla con le scuse.
                 -> glyph_choice_manager(false, fireC)->
         {charTag(FirstCharacter, "neutral")}:                                   La parte stanca di me ti dà ragione, ama.
                                                                                 Ma non è una cosa per tutt3.
@@ -509,7 +510,7 @@
     {charTag(FifthCharacter, "neutral")}:                               Sì.
                                                                         Credo di star facendo un buon lavoro.
 
-    + \ {charTag(PG, "neutral")}:                                       Ha detto tante cose ma la risposta è: no.
+    + \ {charTag(PG, "neutral")}:                                       In soldoni: no.
             -> glyph_choice_manager(Mentor, fireC)->
     {charTag(TheWitch, witch_state())}:                                 <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
     {charTag(FifthCharacter, "sad")}:                                   Oh.
@@ -712,7 +713,7 @@
         {charTag(Franco, "neutral")}:                                   E così.    
         {charTag(FirstCharacter, "annoyed")}:                           BASTAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
 
-        + \ {charTag(PG, "neutral")}:                                   Se usasse quella lingua per cose intelligenti, Franco salverebbe il mondo.
+        + \ {charTag(PG, "neutral")}:                                   Se parlasse meno e facesse di più, Franco cambierebbe il mondo.
             -> glyph_choice_manager(false, fireC)-> 
         {charTag(FirstCharacter, "annoyed")}:                           Non esageriamo.
         {charTag(FirstCharacter, "curious")}:                           Però i suoi deliri hanno del fascino.
@@ -832,7 +833,7 @@
                                                                         Così non annegano.
         {charTag(Franco, "party")}:                                     Logico, no?                                      
         
-        + \ {charTag(PG, "neutral")}:                                   La risposta è nel corpo: vediamo quanto salta in alto!
+        + \ {charTag(PG, "neutral")}:                                   Meno teoria e più muscoli: vediamo quanto salti in alto {charNameTwo}!
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(SecondCharacter, "angry")}:                            Io oooooooodio lo sport!
                                                                         E odio saltare!
@@ -1287,11 +1288,16 @@
         {charTag(ThirdCharacter, "jester")}:                                    Così mi hai fregato {player_name}!
                                                                                 Finisce che sgobbo anche il giorno libero!                                                                                
                 
-        + \ {charTag(PG, "neutral")}:                                           Un po' di stadio e di vita vera non ti farebbero male, {charNameTwo}. Pensa alla passione del tifo!
+        + \ {charTag(PG, "neutral")}:                                           Un po' di stadio e di vita vera ti fanno solo che bene {charNameTwo}. Vai a sentire la passione! Grida!
                 -> glyph_choice_manager(false, fireC)->
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                                   CRAAAAAAAARGH!
+                {charTag(ThirdCharacter, "jester")}:                            No Franco, {player_name} non diceva di gridare ora!
+                } 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
-                {charTag(ThirdCharacter, "neutral")}:                           Sei un maschiaccio te mi sa.               
+                {charTag(ThirdCharacter, "neutral")}:                           Sei un maschiaccio te {player_name}!              
                 } 
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -1479,13 +1485,13 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Ma ora voglio solo togliere l'acqua dalla barca. 
 
         
-        + \ {charTag(PG, "neutral")}:                                           Più che bravo o non bravo ragazzo, cosa stai facendo per superare questa situazione?
+        + \ {charTag(PG, "neutral")}:                                           Bravo o cattivo conta poco: conta quello che fai.
                 -> glyph_choice_manager(false, fireC)->                         
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
                 {charTag(ThirdCharacter, "neutral")}:                           Posso anche apprezzare un taglio pratico, anche se non sei un ragazzo, dai.            
                 }              
-        {charTag(ThirdCharacter, "bored")}:                                     Ad ascoltare la zia il mio inconscio o la carta astrale o Vanna Marchi o che ne so io mi hanno portato qui per farti fare a te questo lavoro, {player_name}.
+        {charTag(ThirdCharacter, "bored")}:                                     Ad ascoltare la zia il mio inconscio o la carta astrale o Vanna Marchi o che ne so io mi hanno portato qui per farti fare a te questo lavoro, {player_name}, per capire che c'ho che non va.
         {charTag(FirstCharacter, "annoyed")}:                                   Ma sì, scarichiamo sempre su qualcun altro la colpa del lavoro che non stiamo facendo.
         {charTag(ThirdCharacter, "bored")}:                                     Sentila.
                                                                                 Quella che passa il tempo a rompermi i maroni.                                   

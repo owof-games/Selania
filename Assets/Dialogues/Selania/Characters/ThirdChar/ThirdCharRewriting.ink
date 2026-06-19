@@ -141,7 +141,7 @@
 
                                                                 
         
-        + \ {charTag(PG, "neutral")}:                           Per me ti sei arreso. L'unica cosa che ti appassiona è l'Inter.
+        + \ {charTag(PG, "neutral")}:                           Ti sei arreso. L'unica cosa che ti appassiona è l'Inter.
             -> glyph_choice_manager(false, fireC)->
         {
         - grimoire_thirdChar has grimThirdCharFranco:
@@ -394,7 +394,7 @@
                                                                 Dici che i tuoi amici se ne fregano di te.
                                                                 E il tuo migliore amico si è allontanato da te per l'età che Donatella aveva quando vi siete conosciuti.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e chiedigli un altro tipo di amicizia. {letters_thirdCharLetterThreeChoice has fireC: Hai già iniziato col litigio, no?|Lo stai già facendo saltando gli incontri.}
+            + (fire) \ {charTag(PG, "neutral")}:                Affronta il gruppo di calcetto e pretendi un altro tipo di amicizia. {letters_thirdCharLetterThreeChoice has fireC: Hai già iniziato col litigio, no?|Lo stai già facendo saltando gli incontri.}
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
                                                                 E magari potresti pure stupirti della loro reazione.
                 {
@@ -511,7 +511,7 @@
                                                                 L'impossibilità di poterti definire ancora un <i>bravo ragazzo</i> ti toglie il fiato.
                                                                 E la soluzione che hai trovato: il bere.
 
-            + (fire) \ {charTag(PG, "neutral")}:                Hai affrontato una conversazione complessa con tuo padre, puoi battere anche l'alcool.
+            + (fire) \ {charTag(PG, "neutral")}:                Hai affrontato tuo padre, puoi battere anche l'alcool.
             {charTag(PG, "neutral")}:                           Quando le cose non vanno come vogliamo si fa quel che si può.
                                                                 E può starci come soluzione temporanea, ma poi c'è il momento di tirarsi indietro le maniche e affrontare il problema.
                     {
@@ -677,7 +677,7 @@
                                                                 Dario ha dalla sua la giovinezza.
                                                                 Il tuo migliore amico se ne è fregato degli altri, e si è fatto la vita che voleva.
 
-        + (fire) \ {charTag(PG, "neutral")}:                    Il tempo non torna, ma puoi sempre prenderti cura di te: fai sport, datti da fare.
+        + (fire) \ {charTag(PG, "neutral")}:                    Non puoi tornare indietro, ma puoi scattare in avanti: fatti il culo e migliora il tuo corpo.
         {charTag(PG, "neutral")}:                               Se ti metti in moto, la giovinezza di Dario varrà poco nulla.
                 {
                 - letters_thirdCharLetterThreeChoice has earthC:
