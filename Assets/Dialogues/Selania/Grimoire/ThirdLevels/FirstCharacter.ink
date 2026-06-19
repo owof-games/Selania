@@ -29,7 +29,7 @@
                 Padre: il padre di {charNameOne}, con cui ha un buon rapporto.
                 Madre: la madre di {charNameOne}.
                 Anna: ex collega del conservatorio, ora si occupa di un festival jazz nel paese natale.
-                Luigia: ex ragazza di Valeria, tornata in Sardegna per fare attività di recupo culturale.    
+                Luigia: ex ragazza di Valeria, tornata in Sardegna per fare attività di recupero culturale.    
         }
     }
 

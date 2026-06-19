@@ -8,12 +8,32 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {
-    - grimoire_secondChar != ():
+    - grimoire_secondChar has grimSecondCharOne:
         <b>Lista delle persone importanti per {charNameTwo}</b>.
-        <i>Mamma</i>: la mamma di {charNameTwo}. L'ha mandato qui per la sua festa di compleanno?
-        <i>Papà</i>: il papà di {charNameTwo}. Gli ruba le action figures.
-        <i>Fratello</i>: il fratello di {charNameTwo}.
-        <i>Nonna</i>: la nonna di {charNameTwo}.
+        {
+            - grimoire_secondChar hasnt grimSecondCharOne:
+                <i>Mamma</i>: la mamma di {charNameTwo}. L'ha mandato qui per la sua festa di compleanno?
+                <i>Papà</i>: il papà di {charNameTwo}. Gli ruba le action figures. 
+        }
+        {
+            - grimoire_secondChar hasnt grimSecondCharTwo:
+                <i>Nonna</i>: la nonna di {charNameTwo}. {grimoire_secondChar hasnt grimSecondCharSeven: Sta nella casa dei vecchi.}
+        } 
+        {
+            - grimoire_secondChar hasnt grimSecondCharFour:
+                <i>Fratello</i>: il fratello di {charNameTwo}.
+        }
+        {
+            - grimoire_secondChar hasnt grimSecondCharEight:
+                <i>Amico del fratello</i>: amico del fratello di {charNameTwo}. Coinquilini.
+        } 
+        {
+            - grimoire_secondChar hasnt grimSecondCharTwelve:
+                <i>ç'altra nonna</i>: la nonna che sta al mare.
+        }      
+        
+        
+       
     }
 
     //Main story
