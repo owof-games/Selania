@@ -533,16 +533,16 @@
 
 === tutorial_carlaSigilsActivationStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
-    {charTag(Carla, "bored")}:              Ma perché questi non si fanno mai i cavoli propri? 
+    {charTag(Carla, "bored")}:                  Ma perché questi non si fanno mai i cavoli propri? 
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialSigils:
                 Devo recuperare il documento del Ministero.
         }
 
-    {charTag(Carla, "bored")}:              Quindi {charNameThree} le ha aperto il Nido!
-                                            Ma che gentile.
-    {charTag(Carla, "neutral")}:            Già.
-    {charTag(Carla, "bored")}:              Mannaggia al.
+    {charTag(Carla, "bored")}:                  Quindi {charNameThree} le ha aperto il Nido!
+                                                Ma che gentile.
+    {charTag(Carla, "neutral")}:                Già.
+    {charTag(Carla, "bored")}:                  Mannaggia al.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialSigils:
                 -> top2
@@ -551,43 +551,44 @@
         }
 
     - (top1) 
-    Vuole che le spieghi come funzionano i Sigilli?
-        + \ {charTag(PG, "neutral")}:                   Sarebbe magnifico.
-            {charTag(Carla, "bored")}:                  No.
-            {charTag(Carla, "happy")}:                  Magnifica è la pensione.
-            {charTag(Carla, "neutral")}:                Non questa mole immensa di scartoffie.
-        + \ {charTag(PG, "neutral")}:                   Preferisco imparare sul campo.
-            {charTag(Carla, "bored")}:                  È una scelta.
-            {charTag(Carla, "neutral")}:                Le ricordo che il numero verde per gli incidenti magici e le trasformazioni involontarie è fuori servizio dal millenovecentoottantaquattro.
-                -> carla_closing_storylet
+                                                Vuole che le spieghi come funzionano i Sigilli?
+    + \ {charTag(PG, "neutral")}:               Sarebbe magnifico.
+        {charTag(Carla, "bored")}:              No.
+        {charTag(Carla, "happy")}:              Magnifica è la pensione.
+        {charTag(Carla, "neutral")}:            Non questa mole immensa di scartoffie.
+    + \ {charTag(PG, "neutral")}:               Preferisco imparare sul campo.
+        {charTag(Carla, "bored")}:              È una scelta.
+        {charTag(Carla, "neutral")}:            Le ricordo che il numero verde per gli incidenti magici e le trasformazioni involontarie è fuori servizio dal millenovecentoottantaquattro.
+            -> carla_closing_storylet
         -
     - (top2)    
-    {charTag(Carla, "happy")}:              Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.
-    {charTag(Carla, "neutral")}:            Leggo direttamente dalla comunicazione ministeriale.
-                                            "Premesso che la Combinata Triglifica Esoterica Espansa (da qui in avanti per brevità chiamato Sigillo) è uno strumento di cui ancora conosciamo poco.
-                                            Premesso che il Sigillo influenza il modo in cui viene percepito il parlante che lo attiva.
-                                            Preso inoltre atto della necessità di utilizzare un Grimorio (da qui in avanti per chiarezza chiamato Libro Oscuro di Sapienza e Potere) per farne l'attivazione.
-                                            E considerata infine la durata limitata di utilizzo di un sigillo (tre utilizzi, non ripetibili né combinabili).
-                                            Il Ministero, con l'obiettivo di facilitare il lavoro dellə Riscrittorə, ha istituito il Servizio di Indicazione Stato Sigillo Integrato (SISSI).
-                                            Qualora un sigillo fosse attivo, la SISSI sarà presente a ogni livello del Libro Oscuro di Sapienza e Potere attraverso la caratteristica animazione.
+    {charTag(Carla, "happy")}:                  Il Nido le sblocca i Sigilli, e i Sigilli sono una cosa pericolosa.
+    {charTag(Carla, "neutral")}:                Leggo direttamente dalla comunicazione ministeriale.
+                                                "Premesso che la Combinata Triglifica Esoterica Espansa (da qui in avanti per brevità chiamato Sigillo) è uno strumento di cui ancora conosciamo poco.
+                                                Premesso che il Sigillo influenza il modo in cui viene percepito il parlante che lo attiva.
+                                                Preso inoltre atto della necessità di utilizzare un Grimorio (da qui in avanti per chiarezza chiamato Libro Oscuro di Sapienza e Potere) per farne l'attivazione.
+                                                E considerata infine la durata limitata di utilizzo di un sigillo (tre utilizzi, non ripetibili né combinabili).
+                                                Il Ministero, con l'obiettivo di facilitare il lavoro dellə Riscrittorə, ha istituito il Servizio di Indicazione Stato Sigillo Integrato (SISSI).
+                                                Qualora un sigillo fosse attivo, la SISSI sarà presente a ogni livello del Libro Oscuro di Sapienza e Potere attraverso la caratteristica animazione.
 
         @sprite:tutorial_carlaSigilsActivationStorylet_1
 
-                                            La SISSI inoltre comparirà durante il dialogo con le persone che ne possono essere condizionate.
-                                            Nel caso in cui un Sigillo fosse attivo e la SISSI non fosse presente durante il dialogo, questo significa che la persona non è in assoluto o in quel momento influenzabile dal potere del sigillo.
-                                            Dopo l'aggiornamento 13.12c, la SISSI indica anche la quantità residua di utilizzi, costantemente aggiornata.
+                                                La SISSI inoltre comparirà durante il dialogo con le persone che ne possono essere condizionate.
+                                                Nel caso in cui un Sigillo fosse attivo e la SISSI non fosse presente durante il dialogo, questo significa che la persona non è in assoluto o in quel momento influenzabile dal potere del sigillo.
+                                                Dopo l'aggiornamento 13.12c, la SISSI indica anche la quantità residua di utilizzi, costantemente aggiornata.
 
         @sprite:tutorial_carlaSigilsActivationStorylet_2
                                     
-                                            Per sua natura invece il Libro Oscuro di Sapienza e Potere aggiornerà i descrittori del sigillo ad ogni utilizzo.
-                                            La comprensione dei descrittori è fondamentale per ogni Riscrittorə per anticipare l'effetto e la portata dei sigilli.
-                                            Altre informazioni non sono di nostra competenza."
-    {charTag(Carla, "bored")}:              Questa conversazione poteva essere una mail.
-    {charTag(Carla, "happy")}:              Vado in pausa sigaretta, anche se non fumo dall'ottantaquattro.
-    {charTag(Carla, "bored")}:              Ora dovrei spiegarle come crearli, ma purtroppo il sistema è fuori uso.
-    {charTag(Carla, "happy")}:              E io ho dimenticato tutto.
-    {charTag(Carla, "neutral")}:            Sono solo una capra.
-    {charTag(Carla, "happy")}:              Bee.
+                                                Per sua natura invece il Libro Oscuro di Sapienza e Potere aggiornerà i descrittori del sigillo ad ogni utilizzo.
+                                                La comprensione dei descrittori è fondamentale per ogni Riscrittorə per anticipare l'effetto e la portata dei sigilli.
+                                                Altre informazioni non sono di nostra competenza."
+    {charTag(Carla, "bored")}:                  Questa conversazione poteva essere una mail.
+    {charTag(Carla, "happy")}:                  Vado in pausa sigaretta, anche se non fumo dall'ottantaquattro.
+    {charTag(Carla, "bored")}:                  Ora dovrei spiegarle come crearli, ma purtroppo il sistema è fuori uso.
+    {charTag(Carla, "happy")}:                  E io ho dimenticato tutto.
+    {charTag(Carla, "neutral")}:                Sono solo una capra.
+    {charTag(Carla, "happy")}:                  Bee.
+                                                Provi a cliccare un po' in giro.
 
 -> carla_closing_storylet
 
@@ -595,64 +596,54 @@
 === tutorial_carlaNestStorylet ===
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
-        {
-            - tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
-                ~ move_entity(Carla, Nest)
-        }
+    {
+    - tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
+            ~ move_entity(Carla, Nest)
+    }
 
-        {
-            - tutorial_CarlaDiscoveredTutorials has tutorialNest:
-                {charTag(Carla, "bored")}:              E quindi rispieghiamo i glifi. Che gioia!
-        }
+    {
+    - tutorial_CarlaDiscoveredTutorials has tutorialNest:
+    {charTag(Carla, "bored")}:                  E quindi rispieghiamo i glifi. Che gioia!
+    }
   
-    {charTag(Carla, "angry")}:              Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria.
-        {
-            - tutorial_CarlaDiscoveredTutorials has tutorialNest:
-                -> top2
-            - else:
-                -> top1    
-        }
+    {charTag(Carla, "angry")}:                  Ogni volta che vedo questi cosi mi chiedo perché non ho concluso la laurea in ingegneria.
+    {
+        - tutorial_CarlaDiscoveredTutorials has tutorialNest:
+            -> top2
+        - else:
+            -> top1    
+    }
 
     - (top1) 
-    Le spiego i sassi, va bene?
-        + \ {charTag(PG, "neutral")}:               Sassiiiiiiiiiiiiii!
-            {charTag(Carla, "bored")}:              Anche meno, figliol{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
-            {charTag(Carla, "neutral")}:            Anche meno.
-        + \ {charTag(PG, "neutral")}:               Sassnooooooooooooo!
-            {charTag(Carla, "bored")}:              Lei è amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} di Franco, vero?
-            {charTag(Carla, "neutral")}:            Avrebbe dovuto dirmelo prima.
-            {charTag(Carla, "bored")}:              Avrei evitato di sprecare il mio tempo.
-                -> carla_closing_storylet
-        -
+                                                Le spiego i sassi, va bene?
+    + \ {charTag(PG, "neutral")}:               Sassiiiiiiiiiiiiii!
+        {charTag(Carla, "bored")}:              Anche meno, figliol{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+        {charTag(Carla, "neutral")}:            Anche meno.
+    + \ {charTag(PG, "neutral")}:               Sassnooooooooooooo!
+        {charTag(Carla, "bored")}:              Lei è amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} di Franco, vero?
+        {charTag(Carla, "neutral")}:            Avrebbe dovuto dirmelo prima.
+        {charTag(Carla, "bored")}:              Avrei evitato di sprecare il mio tempo.
+            -> carla_closing_storylet
+    -
 
     - (top2)
-    {charTag(Carla, "neutral")}:            Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
-                                            Uno: un sigillo utilizzabile è sempre composto da tre glifi.
-    {charTag(Carla, "bored")}:              Non è sempre vero, ma il resto non è di mia competenza.
-    {charTag(Carla, "happy")}:              Due: per creare un sigillo basta iniziare cliccando uno per volta i glifi a disposizione.
-    {charTag(Carla, "sad")}:                Tre: un sigillo è composto da tre glifi diversi, per cui ogni volta che sceglierà un glifo, quello non sarà disponibile fino a nuova composizione.
+    {charTag(Carla, "neutral")}:                Questi sassi sono qui per creare i Sigilli, che abbiamo già visto quando il suo caro amico {charNameThree} ha deciso di aprire questo posto.
+                                                Uno: un sigillo utilizzabile è sempre composto da tre glifi.
+    {charTag(Carla, "happy")}:                  Due: per creare un sigillo basta iniziare cliccando uno per volta i glifi a disposizione.
+    {charTag(Carla, "sad")}:                    Tre: un sigillo è composto da tre glifi diversi, per cui ogni volta che sceglierà un glifo, quello non sarà disponibile fino a nuova composizione.
 
             @sprite:tutorial_carlaNestStorylet_1
 
             @sprite:tutorial_carlaNestStorylet_2
 
-    {charTag(Carla, "neutral")}:            Quattro: Grimorio e glifi comunicano, e per questo i glifi si disattiveranno in automatico se non ci saranno nuove composizioni disponibili.
-                                            Cinque: il Ministero ha tracciato una quantità invereconda di glifi in giro per gli universi, e infiniti sigilli, ma per qualche motivo in questa zona ne funzionano solo.
-    {charTag(Carla, "bored")}:              Uh, quanti erano?
-        {
-            - LIST_COUNT(contentsNest) == 6:
-                {charTag(Carla, "happy")}:              Boh, ne vedo tre qui, quindi immagino siano tre.
-            - LIST_COUNT(contentsNest) == 7:
-                {charTag(Carla, "happy")}:              Boh, ne vedo quattro qui, quindi immagino siano quattro.
-            - LIST_COUNT(contentsNest) == 8:
-                {charTag(Carla, "happy")}:              Cinque. Sì. Da queste parti funzionano solo cinque sigilli.
-
-        }
-
-    {charTag(Carla, "bored")}:              Se qualcosa non dovesse funzionare, non contatti me.
-    {charTag(Carla, "happy")}:              Ah, dimenticavo: ogni volta che scoprirà un nuovo sigillo, verrà aggiunto in automatico sul grimorio.
-    {charTag(Carla, "neutral")}:            E potrà essere attivato in qualsiasi momento, se non c'è un sigillo già attivo.
-    {charTag(Carla, "bored")}:              Non chieda eccezioni: il sistema non lo permette.
+    {charTag(Carla, "neutral")}:                Quattro: Grimorio e glifi comunicano, e per questo i glifi si disattiveranno in automatico se non ci saranno nuove composizioni disponibili.
+                                                Cinque: il Ministero ha tracciato una quantità invereconda di glifi in giro per gli universi, e infiniti sigilli, ma per qualche motivo in questa zona ne funzionano solo.
+    {charTag(Carla, "bored")}:                  Uh, quanti erano?
+                                                Non ricordo, ma immagino lo capirà dal grimorio.
+    {charTag(Carla, "bored")}:                  Se qualcosa non dovesse funzionare, non contatti me.
+    {charTag(Carla, "happy")}:                  Ah, dimenticavo: ogni volta che scoprirà un nuovo sigillo, verrà aggiunto in automatico sul grimorio.
+    {charTag(Carla, "neutral")}:                E potrà essere attivato in qualsiasi momento, se non c'è un sigillo già attivo.
+    {charTag(Carla, "bored")}:                  Non chieda eccezioni: il sistema non lo permette.
 
 -> carla_closing_storylet
 
