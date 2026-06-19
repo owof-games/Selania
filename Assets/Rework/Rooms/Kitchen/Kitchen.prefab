@@ -7081,6 +7081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Dolphin
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: fe39433e8f0c19044bd2ea8c3252dcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7414,6 +7418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Grizzly
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: fc1587389ef50c44997d91c4080c9e89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7634,6 +7642,10 @@ PrefabInstance:
     - target: {fileID: 4449773367406173467, guid: 1123a33d8e6da974d8031d48cec86714, type: 3}
       propertyPath: m_Name
       value: 30 - Corvo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: 1123a33d8e6da974d8031d48cec86714, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7906,7 +7918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2889362861158594370, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: choiceText

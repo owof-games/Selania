@@ -593,15 +593,15 @@ MonoBehaviour:
   - <iconName>k__BackingField: Riccio
     <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
   - <iconName>k__BackingField: Grizzly
-    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: 4f814467a681f9e48951e3a4bd1e476b, type: 3}
   - <iconName>k__BackingField: Lupo
-    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: 52e517c9fa2b38d49a4541833d429a32, type: 3}
   - <iconName>k__BackingField: Delfino
-    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: 4d694778b3044dc49865ff75724831c2, type: 3}
   - <iconName>k__BackingField: Capibara
-    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: d2c948ca25d92824dbaf060cbe1b8b3f, type: 3}
   - <iconName>k__BackingField: Corvo
-    <sprite>k__BackingField: {fileID: 21300000, guid: 128ebe1261bc45c468c689535abddd4c, type: 3}
+    <sprite>k__BackingField: {fileID: 21300000, guid: 069350f8e9ae614418f507f5ac72d821, type: 3}
   - <iconName>k__BackingField: AppendiceA
     <sprite>k__BackingField: {fileID: 21300000, guid: 91cc9779ef09c7e4096f4d17d4c58abc, type: 3}
   - <iconName>k__BackingField: AppendiceB
