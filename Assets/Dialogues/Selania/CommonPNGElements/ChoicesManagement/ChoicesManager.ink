@@ -862,34 +862,6 @@
 
 
 
-/*
-=== function getCleanCharacterGlyphCounter(character, glyph)
-{character:
-    - FirstCharacter:
-        {glyph:
-            - fireC:
-                ~ return player_fire_first_char
-            // ...
-        }
-    // ...
-}
-
-=== function setCleanCharacterGlyphCounter(character, glyph, value)
-{character:
-    - FirstCharacter:
-        {glyph:
-            - fireC:
-                ~ player_fire_first_char = value
-            // ...
-        }
-    // ...
-}
-*/
-
-
-
-
-
 
 //Questa funzione ci permette al volo di evitare che i valori dell'indicatore sforino i limiti previsti
 === function relationshipIndicator_Adjustments(PNG)

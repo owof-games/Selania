@@ -12,6 +12,7 @@ VAR tutorial_rereadingActive = false
 
 //Gestione Carla
 VAR tutorial_CarlaRelationshipIndicator_enabled = false
+VAR tutorial_CarlaInkIndicator = ink_low
 
 
 === on_movement_tutorial_steps ===

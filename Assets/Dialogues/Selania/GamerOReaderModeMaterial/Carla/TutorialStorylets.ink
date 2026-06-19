@@ -22,7 +22,7 @@
     - (top1)
    {charTag(Carla, "neutral")}:                     Vuole sentire, la spiegazione?
         + \ {charTag(PG, "neutral")}:               Certo!
-            {charTag(Carla, "bored")}:              Anche meno entusiasmo.
+            {charTag(Carla, "bored")}:              Anche meno entusiasmo, che poi mi fanno fare gli straordinari.
         + \ {charTag(PG, "neutral")}:               Passo.
             {charTag(Carla, "happy")}:              Meglio per me.
             {charTag(Carla, "bored")}:              Le ricordo che l'ufficio Incidenti e Svenimenti è chiuso fino a data indefinita.
@@ -31,17 +31,22 @@
 
 
     - (top2)
-    {charTag(Carla, "sad")}:                Lei deve parlare con le persone che trova qui in giro.
-                                            Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
-                                            La risposta influenzerà il modo in cui quella persona la vede.
-    {charTag(Carla, "neutral")}:            Facciamo una prova.
-                                            Ora le racconto una cosa, e lei mi dà la sua opinione.
-
+    {charTag(Carla, "sad")}:                        Lei deve parlare con le persone che trova qui in giro.
+                                                    Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
+                                                    La risposta influenzerà il modo in cui quella persona la vede.
+                                                    E anche il giudizio che hanno su di lei le persone presenti in quel momento.
+    {charTag(Carla, "neutral")}:                    Facciamo una prova.
+                                                    Ora le racconto una cosa, e lei mi dà la sua opinione.
+        {
+            - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(ThirdCharacter, PG) or are_two_entities_together(FourthCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
+        {charTag(Carla, "bored")}:                  Per non complicarmi e complicarle le cose, durante questa prova le persone presenti non saranno influenzate dal suo commento.                                            
+        }                                            
         ~ tutorial_CarlaRelationshipIndicator_enabled  = true
 
-                                            Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
-    {charTag(Carla, "neutral")}:            Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.
-    {charTag(Carla, "bored")}:              Questo fa di me una cattiva madre?
+    {charTag(Carla, "neutral")}:                    Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
+    {charTag(Carla, "neutral")}:                    Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.
+    {charTag(Carla, "bored")}:                      Questo fa di me una cattiva madre?
+
         + \ {charTag(PG, "neutral")}:         No.
             ~ tutorial_CarlaRelationshipIndicator ++
         + \ {charTag(PG, "neutral")}:         Sì.
@@ -62,22 +67,30 @@
             {charTag(Carla, "happy")}:              Concordo.
                                                     Non che me ne importi molto della sua opinione.    
     }
-    {charTag(Carla, "neutral")}:            Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
-    {charTag(Carla, "sad")}:                Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
-    {charTag(Carla, "bored")}:              Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
+    {charTag(Carla, "neutral")}:                    Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
+    {charTag(Carla, "sad")}:                        Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
+    {charTag(Carla, "bored")}:                      Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
 
         ~ tutorial_CarlaRelationshipIndicator_enabled  = false
         
-                                            Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
-                                            Cosa?
-    {charTag(Carla, "bored")}:              Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
-    {charTag(Carla, "neutral")}:            Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa apprezza o meno chi ha davanti.
-    {charTag(Carla, "happy")}:              Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo libro un riepilogo delle scelte fatte, con questo indicatore grafico.
+                                                    Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
+                                                    Cosa?
+    {charTag(Carla, "bored")}:                      Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
+    {charTag(Carla, "neutral")}:                    Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa apprezza o meno chi ha davanti.
+
+    {
+        - settings_gamerMode == true:
+        {charTag(Carla, "happy")}:                  Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo libro un riepilogo delle scelte fatte, con questo indicatore grafico.
                                                         
         @sprite:tutorial_carlaChoicesRelationshipStorylet_1
 
-                                            Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
-                                            Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
+                                                    Lo troverà sotto il ritratto di ogni personaggia con cui dovrà lavorare.
+                                                    Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
+
+        - else:
+        {charTag(Carla, "bored")}:                  Se la cosa le sembra difficile, provi a pensare al mio di lavoro e a tutti i protocolli che devo ricordare.                                            
+    }
+    
     {
         - grimoire_appendices hasnt grimChoicesMentor:
             {charTag(Carla, "sad")}:                Ma non ha ancora un grimorio?
@@ -85,8 +98,9 @@
             {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.  
     }
 
-                                            E ora sono in pausa.
-                                            Vada a fare le sue cose.
+    {charTag(Carla, "bored")}:                      Eeeee... perfetto! 
+                                                    Sono ufficialmente in pausa.
+                                                    Lei vada a fare le sue cose così imporanti, prego.
 
     -> carla_closing_storylet
 
@@ -95,12 +109,12 @@
 
 === tutorial_carlaRereadingStorylet ===
     
-    {charTag(Carla, "bored")}:              Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.
+    {charTag(Carla, "bored")}:                      Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.
         {
-            - tutorial_CarlaDiscoveredTutorials has tutorialRereading: 
-                {charTag(Carla, "bored")}:              Ripetiamo la pappardella.
+        - tutorial_CarlaDiscoveredTutorials has tutorialRereading: 
+        {charTag(Carla, "bored")}:                  Ripetiamo la pappardella.
         }
-    {charTag(Carla, "neutral")}:            Sto per spiegarle come funziona la riscrittura.
+    {charTag(Carla, "neutral")}:                    Sto per spiegarle come funziona la riscrittura.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialRereading:
                 -> top2
@@ -119,37 +133,74 @@
         -
 
     - (top2)        
-    {charTag(Carla, "angry")}:              Sbrighiamoci.
-    {charTag(Carla, "neutral")}:            Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
-                                            Perché?
-    {charTag(Carla, "bored")}:              Non ne ho idea, io eseguo solo le indicazioni del ministero.
-    {charTag(Carla, "neutral")}:            Quando avrà conosciuto abbastanza una persona, potrà proporle di rileggere la sua storia e scegliersi un nuovo nome.
-                                            Quindi.
-    {charTag(Carla, "happy")}:              Uno: dice alla persona una cosa tipo "Ti va di rileggere la tua storia con me?".
-    {charTag(Carla, "sad")}:                Due: prima della riscrittura, la persona le dirà quello che pensa di lei.
-                                            Tra relazione e doni può ricevere da zero a quattro gocce di inchiostro.
+    {charTag(Carla, "angry")}:                          Sbrighiamoci.
+    {charTag(Carla, "neutral")}:                        Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
+                                                        Perché?
+    {charTag(Carla, "bored")}:                          Non ne ho idea, io eseguo solo le indicazioni del ministero.
+    {charTag(Carla, "neutral")}:                        Quando avrà conosciuto abbastanza una persona, potrà proporle di rileggere la sua storia e scegliersi un nuovo nome.
+                                                        Quindi.
+    {charTag(Carla, "happy")}:                          Uno: dice alla persona una cosa tipo "Ti va di rileggere la tua storia con me?".
+    {charTag(Carla, "sad")}:                            Due: prima della riscrittura, la persona le dirà quello che pensa di lei.
+                                                        Tra relazione e doni può ricevere da zero a quattro gocce di inchiostro.
 
         @sprite:tutorial_carlaRereadingStorylet_1
 
-    {charTag(Carla, "bored")}:              Non una di più, c'è scritto anche sul sito.
-    {charTag(Carla, "neutral")}:            Tre: a quel punto lei avrà diritto al suo monologo per dimostrare alla persona che la conosce davvero bene.
-                                            Più inchiostro ha accumulato, più cose potrà dire, facendo riferimento alle confidenze fatte da quella persona.
-                                            Quindi: più inchiostro uguale lavoro più facile.
-                                            Perché?
-    {charTag(Carla, "happy")}:              Perché le persone sono insicure, e devi sempre spiegargli le cose mille volte mentre tu vorresti solo andare a casa coi gatti e la switch.
-    {charTag(Carla, "angry")}:              E quando sono insicure, chiedono troppi perché.
-    {charTag(Carla, "neutral")}:            Sono tenuta comunque a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, sette chiacchierate, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
-                                            Anche perché poco dopo la riscrittura, quella persona se ne andrà.
-                                            Non mi chieda dove, perché non è di mia competenza.
-                                            Ah, dimenticavo!
-    {charTag(Carla, "happy")}:              Le scelte fatte durante la riscrittura hanno un valore molto più alto di quelle durante il resto del vostro rapporto.
+    {charTag(Carla, "bored")}:                          Non una di più, c'è scritto anche sul sito.
+    {charTag(Carla, "neutral")}:                        Tre: a quel punto lei avrà diritto al suo monologo per dimostrare alla persona che la conosce davvero bene.
+                                                        Il monologo si chiama <i>epilogo</i>.
+    {charTag(Carla, "bored")}:                          Perché?
+                                                        Perché l'addetto del Ministero sperava di diventare uno scrittore ma gli è andata male e ora ci appesta le giornate.                                                    
+    {charTag(Carla, "neutral")}:                        Comunque: questa possibilità l'avrà sempre, a prescindere dalla quantità di inchiostro accumulato.
+                                                        Riepilogando: più inchiostro ha accumulato, più cose potrà dire, facendo riferimento alle confidenze fatte da quella persona.
+                                                        Quindi: più inchiostro uguale lavoro più facile.
+                                                        Perché?
+    {charTag(Carla, "happy")}:                          Perché le persone sono insicure, e devi sempre spiegargli le cose mille volte mentre tu vorresti solo andare a casa coi gatti e la switch.
+    {charTag(Carla, "angry")}:                          E quando sono insicure, chiedono troppi perché.
+    {charTag(Carla, "neutral")}:                        Facciamo una prova veloce.
+                                                        Mettiamo che l'ho trovata così adorabile, da darle addirittura una goccia di inchiostro.
+                                                        Mi ha sentito raccontare così tante cose su quella piaga di mio figlio, e così decide di dirmi.
+                                                        <i>Carla: so che pensi che tuo figlio è un idiota, ma sono qui per dirti che poi guardarlo in modo diverso.</i>
+
+        + \ {charTag(PG, "neutral")}:                   Come un peccato da espiare.
+        + \ {charTag(PG, "neutral")}:                   Come un gradino in più verso il paradiso.
+        + (amore)\ {charTag(PG, "neutral")}:            Come un il frutto di un atto d'amore.
+        + \ {charTag(PG, "neutral")}:                   Come un termine di paragone per ricordarti quanto sei splendida.
+        + \ {charTag(PG, "neutral")}:                   Come un coglione.
+        -
+    {charTag(Carla, "neutral")}:                        A questo punto il livello di inchiostro diminuisce.
+        ~ tutorial_CarlaInkIndicator --
+                                                        E visto che non c'è altro inchiostro, si passa all'epilogo.
+                                                        L'epilogo di solito è l'occasione per dare un consiglio alla persona che ha davanti.
+        
+        + \ {charTag(PG, "neutral")}:                   È arrivato il momento di abbandonare tuo figlio sull'autostrada.
+        + \ {charTag(PG, "neutral")}:                   Svuota le casse del comune e scappa sull'Isola delle Capre insieme alla tua migliore amica!
+        + \ {charTag(PG, "neutral")}:                   Cambia colore di capelli!
+        + \ {charTag(PG, "neutral")}:                   Fatti spostare all'ufficio <i>Reclami dei defunti</i> così non devi più lavorare!
+        + \ {charTag(PG, "neutral")}:                   Ignora il dottore e riprendi a mangiare i libri della biblioteca!
+        -
+    {charTag(Carla, "neutral")}:                        A quel punto la persona dirà che ha ascoltato con attenzione le sue parole, e che ripensando anche a tutte le vostre chiacchierate, e che quindi il suo nuovo nome è qualcosa di diverso.
+                                                        Il mio rimane Carla, perché adoro odiare la mia vita e mi sta bene così.
+    {
+    - amore:
+    {charTag(Carla, "bored")}:                          Ma non provi di nuovo a dire che mio figlio è frutto di un atto d'amore: non amo quel caprone di mio marito dal Settantasei.    
+    }                                                                                 
+
+    {charTag(Carla, "neutral")}:                        E questa è la spiegazione su come funziona la riscrittura.
+                                                        Se non l'ha capita, può sempre richiedermela.
+    {charTag(Carla, "bored")}:                          Ma non lo faccia.
+
+    {charTag(Carla, "neutral")}:                        Sono tenuta infine a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, sette chiacchierate, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
+                                                        Anche perché dopo la riscrittura, quella persona se ne andrà.
+                                                        Non mi chieda dove, perché non è di mia competenza.
+                                                        Ah, dimenticavo!
+    {charTag(Carla, "happy")}:                          Le scelte fatte durante la riscrittura hanno un valore molto più alto di quelle durante il resto del vostro rapporto.
         {
             - player_accessiblePlaces has Nest: 
-                E questa cosa è importante da considerare se dovesse avere dei sigilli attivi.
+                                                        E questa cosa è importante da considerare se dovesse avere dei sigilli attivi.
             - else:
-                Se lo ricordi, soprattutto se dovesse usare qualcosa che modifica le sue prestazioni.    
+                                                        Se lo ricordi, soprattutto se dovesse usare qualcosa che modifica le sue prestazioni.    
         }
-    {charTag(Carla, "bored")}:              Ma in questo posto non arriva mai il venerdì?
+    {charTag(Carla, "bored")}:                          Ma in questo posto non arriva mai il venerdì?
     
 
 -> carla_closing_storylet
