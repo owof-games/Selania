@@ -28,7 +28,7 @@
                                                                 E devo capire cos'è quella cosa sul tabellone.
             {charTag(SecondCharacter, "neutral")}:              E la porta nell'albero, non mi ci fa mica entrare!
      
-            + (tu)\ {charTag(PG, "neutral")}:                   Bimbo, sta a me chiedertelo: perché sei qui?
+            + (tu)\ {charTag(PG, "neutral")}:                   In realtà sono io a doverti chiedere perché sei qui, non tu.
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:                Boh, che ne so? 
             {charTag(SecondCharacter, "neutral")}:              Ero a scuola, ed era l'ora di ginnastica.
@@ -95,7 +95,7 @@
             {charTag(SecondCharacter, "energy")}:               Quello qui non c'è di sicuro!
                                                                 Ma era comunque freddo e mamma aveva paura che ci annegavo.    
     
-            + (ripreso) \ {charTag(PG, "neutral")}:             Giustamente ti sei arrabbiato e hai ripreso i giocattoli, vero?
+            + (ripreso) \ {charTag(PG, "neutral")}:             Ovviamente ti sei arrabbiato con tuo padre e hai ripreso i giocattoli.
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "angry")}:                Non sono mica giocattoli.
                                                                 Sono AC-TION-FI-GU-RE-S!
@@ -420,7 +420,7 @@
                                                                 Ricordi male.
                                                                 Papà è bravo, non fa queste cose. 
             
-            + {her_liar} \ {charTag(PG, "neutral")}:            Tua mamma è una che si arrabbia spesso?
+            + {her_liar} \ {charTag(PG, "neutral")}:            Tua mamma sembra una che si arrabbia spesso.
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "melanchonic")}:          Un po'.
                                                                 Non è cattiva, è che sono cattivo io.
@@ -428,7 +428,7 @@
             {charTag(SecondCharacter, "melanchonic")}:          Ma è colpa mia.
             
             
-            + {they_liar} \ {charTag(PG, "neutral")}:           Ehi bimbo! Avevi detto che questo è il suo regalo di compleanno!
+            + {they_liar} \ {charTag(PG, "neutral")}:           Ehi bimbo, avevi detto che questo è il suo regalo di compleanno!
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:              Sì, certo che sì.
                                                                 Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
@@ -581,11 +581,11 @@
                     {charTag(SecondCharacter, "neutral")}:          Se ne è andata.                                    
                 }                                            
                 
-            + (stupido) \ {charTag(PG, "neutral")}:             Va bene difendersi, ma picchiare una vecchia è da stupidi.
+            + (stupido) \ {charTag(PG, "neutral")}:             Va bene difendersi, ma picchiare una che non si sa difendere è da vigliacchi.
                     -> glyph_choice_manager(false, fireC)->  
                 {
                     -are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:               Quindi se menava me andava bene?    
+                {charTag(FirstCharacter, "annoyed")}:           Quindi se menava me andava bene?    
                 }
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
@@ -755,7 +755,7 @@
         {charTag(SecondCharacter, "melanchonic")}:              Mi spiace, {player_name}. 
             {
                 - second_char_main_storylets.four.stupido:
-                    {charTag(SecondCharacter, "angry")}:            Anche se mi hai chiamato stupido.
+                    {charTag(SecondCharacter, "angry")}:            Anche se mi hai chiamato vigliacco.
             }
         {charTag(SecondCharacter, "melanchonic")}:              Prima ho detto delle bugie.
                                                                 Non è vero che mamma mi ha mandato qui.
@@ -965,9 +965,10 @@
                                                                 Eravamo a vedere i camuni.
                                                                 Ho cercato per tutta la gita di nascondermi nelle grotte.
                         
-            + \ {charTag(PG, "neutral")}:                       I bulli si battono facendo squadra, non coi sogni.
+            + \ {charTag(PG, "neutral")}:                       I bulli si battono facendo a botte, non coi sogni.
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:              Una volta ci ho provato.
+                                                                Chiedendo aiuto anche ai miei compagni.
             {charTag(SecondCharacter, "melanchonic")}:          Ma io non piaccio molto agli altri.
                                                                 E non vogliono fare squadra con me.
             {charTag(SecondCharacter, "angry")}:                Mi dicono che sono scemo, per via degli animali.
@@ -1106,7 +1107,7 @@
             {charTag(SecondCharacter, "energy")}:               Voglio costruirne una anche io.
                                                                 Forse in biblioteca c'è una guida!
                     
-            + (ragione)\ {charTag(PG, "neutral")}:              {charNameTwo} mannaggia, non dare sempre ragione ai grandi!
+            + (ragione)\ {charTag(PG, "neutral")}:              {charNameTwo}: non devi dare sempre ragione ai grandi!
                     -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:              Non è mica facile!
             {charTag(SecondCharacter, "angry")}:                Papà se si arrabbia mi picchia.
