@@ -360,12 +360,12 @@
                                                                 Questa è intensa.
                                                                 Anche se effettivamente l'amore può far cagare addosso.
             
-        + (earth3)\ {charTag(PG, "neutral")}:                   <i>Manteco della noce euforica.</i>
-            ~ kitchen_recipeComplement = "noce euforica"
-            -> glyph_choice_manager(true, earthC)->
-            {charTag(FirstCharacter, "neutral")}:               Mi risuona tanto.
-                                                                Anche se mi è successo solo due volte.
-            {charTag(FirstCharacter, "affectionate")}:          Detta dalla persona giusta è una parola che ti fa volare, vero?
+        + (fire3)\ {charTag(PG, "neutral")}:                   <i>Manteco della noce inevitabile.</i>
+            ~ kitchen_recipeComplement = "noce inevitabile"
+            -> glyph_choice_manager(true, fireC)->
+            {charTag(FirstCharacter, "neutral")}:               Ah ah abbiamo un pochino di ego, {player_name}!
+                                                                Anche se una volta l'ho pensato anche io.
+            {charTag(FirstCharacter, "affectionate")}:          Detto dalla persona giusta, "ti amo" ti fa volare, vero?
             
         + (water3)\ {charTag(PG, "neutral")}:                   <i>Condisco con semi dell'"io? no, no è possibile!".</i>
             ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
@@ -384,9 +384,9 @@
             {charTag(FirstCharacter, "annoyed")}:               Però non rischia di essere una cosa egoista?
             {charTag(FirstCharacter, "neutral")}:               Più legata a come ti senti che al sentimento che provi per quella persona?
 
-        + (fire3)\ {charTag(PG, "neutral")}:                    <i>Sminuzzo una manciata di peperoncini arrapati.</i>
+        + (earth3)\ {charTag(PG, "neutral")}:                    <i>Sminuzzo una manciata di peperoncini arrapati.</i>
             ~ kitchen_recipeComplement = "peperoncini arrapati"
-            -> glyph_choice_manager(true, fireC)->
+            -> glyph_choice_manager(true, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Questa non me l'aspettavo, ma ci sta.
             {charTag(FirstCharacter, "affectionate")}:          Sentirsi amatə è indubbiamente sexy.
             {charTag(FirstCharacter, "neutral")}:               Anni fa confondevo a manetta arrapamento e amore.
@@ -755,11 +755,11 @@
             {charTag(FirstCharacter, "neutral")}:               Mo mi invento qualcosa per tirarti su.
             {charTag(FirstCharacter, "curious")}:               Tipo: vino? 
     
-            + (fire3)\ {charTag(PG, "neutral")}:                <i>Caramello {player_pronoun has him:sopraffatto|{player_pronoun has her:sopraffatta|sopraffattə}} della salvia.</i>
-                ~ kitchen_recipeComplement = "salvia sopraffatta"
+            + (fire3)\ {charTag(PG, "neutral")}:                <i>Caramello con spirito combattente della salvia.</i>
+                ~ kitchen_recipeComplement = "salvia combattente"
                 -> glyph_choice_manager(true, fireC)->
-            {charTag(FirstCharacter, "sad")}:                   Sentimento comune.
-            {charTag(FirstCharacter, "neutral")}:               Però può consolare un po'?
+            {charTag(FirstCharacter, "sad")}:                   Vorrei poter dire lo stesso.
+            {charTag(FirstCharacter, "neutral")}:               Ma le cose possono comunque cambiare un poco.
             {charTag(FirstCharacter, "affectionate")}:          Poco poco?
 
             -   
@@ -815,9 +815,9 @@
             {charTag(FirstCharacter, "annoyed")}:               Per quanto mi tiri un sacco di pipponi, lo so.
             {charTag(FirstCharacter, "neutral")}:               Ma mentre creo, mi vedo davvero.
 
-            + \ {charTag(PG, "neutral")}:                       Dipende da cosa ci fai poi, con quel benessere.
+            + \ {charTag(PG, "neutral")}:                       Il benessere è benzina, ma poi serve che accendi la macchina e vai da qualche parte.
                 -> glyph_choice_manager(false, fireC)->
-            {charTag(FirstCharacter, "neutral")}:               Un pisolino?
+            {charTag(FirstCharacter, "neutral")}:               A farmi un pisolino?
 
             //più terra
             + \ {charTag(PG, "neutral")}:                       Immaginare plasma il cervello, per cui sì, è empiricamente sensato.
@@ -851,14 +851,14 @@
             {charTag(FirstCharacter, "neutral")}:               Ecco perché mi sento capita da te.
                                                                 {player_pronoun has her:unite|unit3} dalla creatività!
 
-            //rendi più fuoco
-            + (fire1)\ {charTag(PG, "neutral")}:                <i>Arrostisco scientemente delle melanzane.</i>
+            + (fire1)\ {charTag(PG, "neutral")}:                <i>Arrostisco attivamente delle melanzane.</i>
                ~ kitchen_recipeNoun = "Melanzane"
                -> glyph_choice_manager(true, airC)->
-            {charTag(FirstCharacter, "neutral")}:               Ennio fa qualcosa di simile.
-                                                                Quando è teso si mette a studiare qualcosa che ama.
-                                                                O a fare esercizi di fisica.
-                                                                Quando ha perso il lavoro ha passato un intero fine settimana a fare calcoli prima di dire: "Ok, ora me ne cerco uno nuovo".
+            {charTag(FirstCharacter, "neutral")}:               Valeria fa qualcosa di simile.
+                                                                Quando qualcosa non le torna sente il bisogno di sistemare le cose.
+                                                                E a volte la casa.
+                                                                Una volta ha passato due giorni a svuotare il vecchio sgabuzzino e pulire tutto.
+            {charTag(FirstCharacter, "affectionate")}:          Poi quando ha buttato l'ultimo sacchetto mi dice: "Dobbiamo registrare un album ama. Dobbiamo."
         
             +(water1) \ {charTag(PG, "neutral")}:               <i>Griglio amichevolmente delle pesche.</i>
                 ~ kitchen_recipeNoun = "Pesche"

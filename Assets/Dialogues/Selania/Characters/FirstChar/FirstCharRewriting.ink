@@ -301,7 +301,7 @@
                                                                 Ricordi?
                 }
 
-            + \ {charTag(PG, "neutral")}:                       Con le tue colleghe potreste iniziare una piccola rivoluzione.
+            + \ {charTag(PG, "neutral")}:                       Con le tue colleghe potreste iniziare una rivoluzione.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:                           C'è la rabbia.
                                                                 C'è la voglia di creare un sindacato.
@@ -381,9 +381,9 @@
                                                                 Così da non sentirsi inadeguate.
                 }
             
-            + \ {charTag(PG, "neutral")}:                       Talco ha rischiato, parlandoti della sua gravidanza.
+            + \ {charTag(PG, "neutral")}:                       Quando Talco ti ha parlato della gravidanza ha corso un rischio, e ha deciso di cambiare la sua vita.
                 -> glyph_choice_manager(false, fireC)->
-            {charTag(PG, "neutral")}:                           Ed è servito, perché ha smosso in te domande.
+            {charTag(PG, "neutral")}:                           E quel rischio è servito, perché ha smosso in te domande.
                                                                 Su di te, sul tuo futuro.
                                                                 Il rischio porta cambiamento.
                 {

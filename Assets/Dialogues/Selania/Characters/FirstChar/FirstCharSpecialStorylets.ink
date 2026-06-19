@@ -55,7 +55,7 @@
         {charTag(FirstCharacter, "curious")}:               Non l'avrei mai detto, ma mi sono divertita tantissimo!
 
 
-    + \ {charTag(PG, "neutral")}:                           Grande! Mai stare con le mani in mano!
+    + \ {charTag(PG, "neutral")}:                           Grande! Mai con le mani in mano!
         -> glyph_choice_manager(false, fireC)->
         {charTag(FirstCharacter, "annoyed")}:               Non esageriamo.
         {charTag(FirstCharacter, "affectionate")}:          Diciamo che ero motivata dalla fame.

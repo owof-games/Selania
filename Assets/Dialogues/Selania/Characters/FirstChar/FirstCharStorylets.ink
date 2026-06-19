@@ -25,7 +25,7 @@
                                                                 E passano il sabato sera a maledire gli uomini potenti.
 
 
-        + (fire) \ {charTag(PG, "neutral")}:                    Mi piace Talco, sembra una persona piena di passioni!
+        + (fire) \ {charTag(PG, "neutral")}:                    Talco sembra una persona piena di passioni!
                 -> glyph_choice_manager(false, fireC)->
         {charTag(FirstCharacter, "affectionate")}:              Lo è!
         {charTag(FirstCharacter, "neutral")}:                   Anche se a volte è davvero davvero difficile starlə dietro.
@@ -455,7 +455,6 @@
         
 
         + \ {charTag(PG, "neutral")}:                           Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!
-                                                                //E se invece di chiederti se ha senso, decidessi tu che ha senso e basta?
                 -> glyph_choice_manager(false, fireC)-> 
             {charTag(FirstCharacter, "affectionate")}:          Quando si torna nel mondo tu vieni con me.
                                                                 Che con questa energia risolviamo tutti i problemi in quindici giorni.
@@ -910,7 +909,7 @@
             {charTag(FirstCharacter, "neutral")}:               La piazza, gli spazi centrali sono più ordinati e curati.
                                                                 Ma a quale prezzo?                                                    
         
-        + \ {charTag(PG, "neutral")}:                           Datti uno scopo e saprai per cosa lottare, come non perderti.
+        + \ {charTag(PG, "neutral")}:                           Trova il tuo obiettivo e buttati, così sai come non perderti!
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:               Un po' come Luigia e Anna, immagino.
                                                                 Si può fare.
@@ -986,7 +985,7 @@
                                                             Grazie.       
         }
 
-        //Sistemare    
+
         + \ {charTag(PG, "neutral")}:                       Hai mai portato qualcun altrə in quell'acqua?
                 -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:           No, è una cosa molto personale.
@@ -1009,7 +1008,7 @@
                                                             Forse è più un bisogno, {player_name}.
             {charTag(FirstCharacter, "affectionate")}:      Ma mi piace l'idea di sentirmi coraggiosa per una volta, per cui me la porto a casa.
         
-        + \ {charTag(PG, "neutral")}:                       L'unione genera speranza, e la speranza porta cambiamento.
+        + \ {charTag(PG, "neutral")}:                       E la speranza genera lotta, azione, cambiamento.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           La speranza è una gran cosa.
             {charTag(FirstCharacter, "sad")}:               Anche se non la conosco molto bene.
@@ -1103,13 +1102,14 @@
             {charTag(FirstCharacter, "neutral")}:           Alla fine ci ho messo tanto anche a capire che ero in viaggio con lui.
             {charTag(FirstCharacter, "affectionate")}:      Innamorata.
         
-        + \ {charTag(PG, "neutral")}:                       Nel dubbio prendi il controllo del treno e parti.//Coinvolgerlo nel fare assieme qualcosa
+        + \ {charTag(PG, "neutral")}:                       Allora prendi il controllo del treno con Ennio e andate dove volete!
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Ehm.
                                                             Senza sapere come funziona il treno?
                                                             E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
                                                             O non andare via affatto?
             {charTag(FirstCharacter, "annoyed")}:           Non è egoista?
+            {charTag(FirstCharacter, "affectionate")}:      Però sarebbe divertente.
                 
         + \ {charTag(PG, "neutral")}:                       Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?
                 -> glyph_choice_manager(false, aetherC)->
@@ -1189,7 +1189,7 @@
             {charTag(FirstCharacter, "curious")}:           Com'è che {charNameFive} se ne è andata?    
         }
 
-        + \ {charTag(PG, "neutral")}:                       Sì, ma sai già cosa vuoi evitare: fallo.
+        + \ {charTag(PG, "neutral")}:                       Sai già cosa non vuoi, quindi sai già anche cosa fare.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:           Ma tu hai sempre questa visione così chiara del mondo?
                                                             Di ciò che sei e fai?
@@ -1317,7 +1317,7 @@
                                                             Essere adulte significa capire quanto siamo fallibili.
         }
         
-        + \ {charTag(PG, "neutral")}:                       Non accontentarsi è fondamentale, o le lotte poi si spengono.
+        + \ {charTag(PG, "neutral")}:                       Non accontentarsi è fondamentale, o le lotte si spengono.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Già.
             {charTag(FirstCharacter, "sad")}:               Anche se non sarebbe male riposare ogni tanto, credo.
