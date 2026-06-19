@@ -133,7 +133,7 @@
                 {charTag(FirstCharacter, "neutral")}:           Accurato.
                 }
         
-        + \ {charTag(PG, "neutral")}:                           {charNameTwo} cerca di capire ogni cosa di questo posto.
+        + \ {charTag(PG, "neutral")}:                           {charNameTwo} cerca di capire ogni cosa.
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "jester")}:                    Il fratellino è una sagoma proprio.
         {charTag(ThirdCharacter, "neutral")}:                   C'ha una fissa per gli animali che fa quasi paura.
@@ -142,7 +142,7 @@
         {charTag(ThirdCharacter, "bored")}:                     In birreria vedi tanta di quella gente che non doveva proprio diventare genitore.
         {charTag(ThirdCharacter, "angry")}:                     E invece chi vorrebbe, zero.
         
-        + \ {charTag(PG, "neutral")}:                           {charNameFive} passa il tempo a sistemare tutto quello che non funziona.
+        + \ {charTag(PG, "neutral")}:                           {charNameFive} sistema le cose rotte.
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(ThirdCharacter, "jester")}:                    Quella c'ha una carica che manco un chihuahua sotto coca.
                 {
@@ -314,7 +314,7 @@
                                                                 A volte mi viene da fare il deficiente senza proprio pensarci.
                 }  
             
-        + \ {charTag(PG, "neutral")}:                           Sicuro qualcosa con tante responsabilità.
+        + \ {charTag(PG, "neutral")}:                           Sicuro qualcosa che richiede polso e azione, un lavoro di responsabilità.
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(ThirdCharacter, "jester")}:                    Vedi che ce li hai davvero i superpoteri?
         {charTag(ThirdCharacter, "bored")}:                     Anche se questa roba il gruppo del calcetto non lo capisce mica, coi lavori "grossi".
@@ -554,7 +554,7 @@
                 }
         {charTag(ThirdCharacter, "neutral")}:                   A lei sta bene come cosa comunque.
 
-        + \ {charTag(PG, "neutral")}:                           Invece tu non hai voglia di lasciare il posto dove sei nato e cresciuto?
+        + \ {charTag(PG, "neutral")}:                           Pensavo che anche tu come Donatella avessi fame d'altro: nuove città, nuovi rischi, nuove possibilità.
                 -> glyph_choice_manager(false, fireC)->
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -728,7 +728,7 @@
                                                                 Con Rocco siamo andati alla sua festa per lo scudetto.
                                                                 Lui davvero un bomber proprio.
         
-        + \ {charTag(PG, "neutral")}:                           Ma alla fine vincete mai?
+        + \ {charTag(PG, "neutral")}:                           Però non mi hai ancora detto se vincete.
                 -> glyph_choice_manager(false, fireC)-> 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -886,7 +886,7 @@
                                 ~ change_entity_place(SecondCharacter)                           
                         }                                                         
             
-        + \ {charTag(PG, "neutral")}:                           Cosa ha fatto il tipo dopo tutto questo? Come ha cambiato la situazione?
+        + \ {charTag(PG, "neutral")}:                           Ma alla fine il tipo si è dato una mossa per cambiare le cose?
                 -> glyph_choice_manager(false, fireC)-> 
         {charTag(ThirdCharacter, "bored")}:                     E che doveva fare {player_name}?
                                                                 Rapirla?
@@ -1078,7 +1078,7 @@
                 {charTag(FifthCharacter, "sad")}:               Povera stellina.                  
                 }                                                 
             
-        + \ {charTag(PG, "neutral")}:                           Non è più semplice affrontare tuo padre invece di evitarlo?
+        + \ {charTag(PG, "neutral")}:                           Non capisco perché eviti tuo padre invece di affrontarlo.
                 -> glyph_choice_manager(false, fireC)-> 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:       
@@ -1241,7 +1241,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   Non è morto nessuno comunque, non ti preoccupare.
                                                                 Ogni amicizia va a modo suo, no?
         
-        + \ {charTag(PG, "neutral")}:                           Proponigli di fare qualcosa assieme, tipo giocare a calcetto di nuovo! O fagli conoscere Ava!
+        + \ {charTag(PG, "neutral")}:                           Fate qualcosa assieme, tipo giocare a calcetto di nuovo! O un'uscita a quattro con Ava!
                 -> glyph_choice_manager(false, fireC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1289,7 +1289,7 @@
 
         + (earth)\ {charTag(PG, "neutral")}:                    Migliora la tua situazione economica, così vedrà che sei più solido di quello che pensa.
                 
-        + (fire)\ {charTag(PG, "neutral")}:                     Hai il diritto di essere arrabbiato, se lei non lo capisce è un problema suo.
+        + (fire)\ {charTag(PG, "neutral")}:                     Hai i tuoi motivi per essere incazzato. Se lei non lo capisce è un problema solo suo.
                 
         + (water)\ {charTag(PG, "neutral")}:                    Raccontale a cuore aperto quello che stai provando in questo periodo.
                 
@@ -1315,7 +1315,7 @@
                 
         + (earth)\ {charTag(PG, "neutral")}:                    Prenditi del tempo per te, e curati del tuo corpo: vai in palestra, mettiti in forma, scarica la tensione.
                 
-        + (fire)\ {charTag(PG, "neutral")}:                     Vai a calcetto: è il tuo posto, l'ha creato il Poggi quando stavi male. Non lasciarlo al Merlo.
+        + (fire)\ {charTag(PG, "neutral")}:                     Riprenditi quel calcetto! Poggi l'ha fatto per te, per quando stavi male, non devi far vincere il Merlo!
                 
         + (water)\ {charTag(PG, "neutral")}:                    Ti fidi di Rocco: fai il primo passo e invitalo a bere.
                 
@@ -1362,7 +1362,7 @@
 
         + (earth)\ {charTag(PG, "neutral")}:                    Il valore di una persona viene dalle sfide reali, non da una gara truccata in partenza.
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Hai già i tuoi casini: pensa meno a chi tradisce chi e più a divertirti un po'!
+        + (fire)\ {charTag(PG, "neutral")}:                     Hai già i tuoi casini: chi se ne frega di chi tradisce chi, divertirti per una volta!
                 
         + (water)\ {charTag(PG, "neutral")}:                    Ora che Ava ti ha dato più sicurezza, perché non provi a prenderti cura dei rapporti che hai già, come quelli con la tua famiglia?
 
@@ -1389,7 +1389,7 @@
         + (earth)\ {charTag(PG, "neutral")}:                    Accetta che la cosa è cambiata, e continua a costruirti una vita senza di lui.
                 
 
-        + (fire)\ {charTag(PG, "neutral")}:                     Fallo quel macello, lascia che veda quanto sei incazzato.
+        + (fire)\ {charTag(PG, "neutral")}:                     Dai fuoco a tutto e fagli capire quanto sei incazzato.
                 
 
         + (water)\ {charTag(PG, "neutral")}:                    Fagli capire quanto ti manca, senza che sia la rabbia a parlare al posto tuo.
