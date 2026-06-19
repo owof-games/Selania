@@ -757,7 +757,7 @@
                                                                 Ti ho già chiesto scusa.
         {charTag(SecondCharacter, "melanchonic")}:              Ho imparato la lezione.
             
-            + \ {charTag(PG, "neutral")}:                       Bimbo, rilassati, non sono un{player_pronoun has her:a|ə} professor{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+            + \ {charTag(PG, "neutral")}:                       Bimbo calmati: non sono un{player_pronoun has her:a|ə} professor{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
                     -> glyph_choice_manager(false, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Però sei qui per lavorare.
                 {charTag(SecondCharacter, "angry")}:            E alle persone che lavorano i bambini danno fastidio.
@@ -893,7 +893,7 @@
                                                                 Io non so cosa dire.
                                                                 E quindi o sto da solo, o devo dire bugie.
 
-            + \ {charTag(PG, "neutral")}:                       Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblioteca?
+            + \ {charTag(PG, "neutral")}:                       Guardati i cartoni di nascosto, o prenditi i fumetti in biblioteca.
                     -> glyph_choice_manager(false, fireC)->
                 {charTag(SecondCharacter, "melanchonic")}:      La televisione la controlla mamma.
                 {charTag(SecondCharacter, "energy")}:           Però non ci avevo pensato alla biblioteca.
@@ -979,10 +979,10 @@
                 {charTag(SecondCharacter, "melanchonic")}:      O ti dicono che sei strano.
             
 
-            + (fire2)\ {charTag(PG, "neutral")}:                <i>Macino del pepe rosa pratico.</i>
-                ~ kitchen_recipeAdjective = "praticità"
+            + (fire2)\ {charTag(PG, "neutral")}:                <i>Macino del pepe rosa appassionato.</i>
+                ~ kitchen_recipeAdjective = "passione"
                 -> glyph_choice_manager(true, fireC)->
-                {charTag(SecondCharacter, "energy")}:           Tipo che sai come si sistemano i treni?
+                {charTag(SecondCharacter, "energy")}:           Tipo che sai tutti i modi per far arrabbiare {charNameFive}?
                                                                 E come creare l'elettricità?
                                                                 E attirare un prociorso?      
             -      
@@ -1470,7 +1470,7 @@
             {charTag(SecondCharacter, "neutral")}:          E poi mi ha chiesto se mi può abbracciare.
                                                             I grandi non lo fanno mai.                                                                                
         
-        + \ {charTag(PG, "neutral")}:                       Non l'hai perdonata troppo presto?
+        + \ {charTag(PG, "neutral")}:                       L'hai perdonata troppo presto, così non impara nulla.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "neutral")}:          Non mi piace tenere il muso.
                                                             Lo fa mamma ed è suuuperfaticoso.
