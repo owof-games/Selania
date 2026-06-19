@@ -210,12 +210,12 @@
 
 === tutorial_carlaInterfaceStorylets ===
 
-    {charTag(Carla, "angry")}:              Ma quando mi finisce il turno?
+    {charTag(Carla, "angry")}:                          Ma quando mi finisce il turno?
     {
         - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
-            {charTag(Carla, "bored")}:              Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
+            {charTag(Carla, "bored")}:                  Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
-    {charTag(Carla, "bored")}:              Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
+    {charTag(Carla, "bored")}:                          Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
                 -> top2
@@ -224,91 +224,93 @@
         }
 
     - (top1) 
-    {charTag(Carla, "sad")}:                        Iniziamo?
-        + \ {charTag(PG, "neutral")}:               Non vedo l'ora.
-            {charTag(Carla, "neutral")}:            Buffo.
-            {charTag(Carla, "bored")}:              Anche io non vedo l'ora che finisca il mio turno.
-        + \ {charTag(PG, "neutral")}:               So già tutto, grazie.
-            {charTag(Carla, "bored")}:              Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
-            {charTag(Carla, "neutral")}:            Buona continuazione.
+    {charTag(Carla, "sad")}:                            Iniziamo?
+        + \ {charTag(PG, "neutral")}:                   Non vedo l'ora.
+            {charTag(Carla, "neutral")}:                Buffo.
+            {charTag(Carla, "bored")}:                  Anche io non vedo l'ora che finisca il mio turno.
+        + \ {charTag(PG, "neutral")}:                   So già tutto, grazie.
+            {charTag(Carla, "bored")}:                  Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
+            {charTag(Carla, "neutral")}:                Buona continuazione.
                 -> carla_closing_storylet
         -
 
     - (top2)    
-    {charTag(Carla, "bored")}:              Prenda appunti perché odio ripetermi.
-    {charTag(Carla, "neutral")}:            Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
-                                            Col mouse basta passare sopra le cose che deve toccare, e cliccare.
-                                            Idem con il controller.
+    {charTag(Carla, "bored")}:                      Prenda appunti perché odio ripetermi.
+    {charTag(Carla, "neutral")}:                    Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
+                                                    Col mouse basta passare sopra le cose che deve toccare, e cliccare.
+                                                    Idem con il controller.
 
         @sprite:tutorial_carlaInterfaceStorylets_1
 
-                                            Con la tastiera può anche usare i numeri per le scelte.
-                                            Quali scelte?
-    {charTag(Carla, "bored")}:              Per risponderle serve il documento 13/12 in doppia coppia e la marca da bollo.
-                                            Seconda informazione: quello che può toccare ha un bordo nero.
+                                                    Con la tastiera può anche usare i numeri per le scelte.
+                                                    Quali scelte?
+    {charTag(Carla, "bored")}:                      Per risponderle serve il documento 13/12 in doppia coppia e la marca da bollo.
+                                                    Seconda informazione: quello che può toccare ha un bordo nero.
 
         @sprite:tutorial_carlaInterfaceStorylets_2
 
-    {charTag(Carla, "happy")}:              Se sa parlare, si ferma quando lo sfiora.
-                                            Se non sa parlare, si muove quando lo sfiora.
-                                            E il cursore cambia.
+    {charTag(Carla, "happy")}:                      Se sa parlare, si ferma quando lo sfiora.
+                                                    Se non sa parlare, si muove quando lo sfiora.
+                                                    E il cursore cambia.
 
         @sprite:tutorial_carlaInterfaceStorylets_3
 
-                                            Cos'è un cursore?
-    {charTag(Carla, "bored")}:              Forse lo sanno all'ufficio accanto.
-    {charTag(Carla, "neutral")}:            Terza informazione: in camera troverà un citofono.
-                                            Lo può usare per modificare le impostazioni.
+                                                    Cos'è un cursore?
+    {charTag(Carla, "bored")}:                      Se se lo chiede, forse ha sbagliato lavoro.
+    {charTag(Carla, "neutral")}:                    Terza informazione: in camera troverà un citofono.
+                                                    Lo può usare per modificare le impostazioni.
 
         @sprite:tutorial_carlaInterfaceStorylets_4
 
-                                            Più avanti le daranno un libro.
-                                            Potrà trovare il citofono anche nel libro.
-                                            Perché un citofono nel libro?
-    {charTag(Carla, "bored")}:              Direttive dalla sede centrale.
-                                            Quarta informazione: quello che fa viene salvato in automatico.
-                                            Se vede questa icona, non deve fare niente.
+                                                    Più avanti le daranno un libro.
+                                                    Potrà trovare il citofono anche nel libro.
+                                                    Perché un citofono nel libro?
+    {charTag(Carla, "bored")}:                      Direttive dalla sede centrale.
+                                                    Quarta informazione: quello che fa viene salvato in automatico.
+                                                    Se vede questa icona, non deve fare niente.
 
         @sprite:tutorial_carlaInterfaceStorylets_5
 
-    {charTag(Carla, "angry")}:              Non è difficile.
-                                            Quinta informazione: se qualcosa va storto <>
-            {
-                - settings_gamerMode:
-                TODO: in realtà qui non sarà "gamerMode" ma il setting che abilita l'upload
-                    {charTag(Carla, "happy")}:              può tornare indietro nel tempo cliccando questa icona.
+    {charTag(Carla, "angry")}:                      Non è difficile.
+                                                    Quinta informazione: se qualcosa va storto <>
+        {
+            - settings_gamerMode:
+            TODO: in realtà qui non sarà "gamerMode" ma il setting che abilita l'upload
+            {charTag(Carla, "happy")}:              può tornare indietro nel tempo cliccando questa icona.
 
-                        @sprite:tutorial_carlaInterfaceStorylets_6
+                @sprite:tutorial_carlaInterfaceStorylets_6
 
-                                                            Appena le daranno il libro.
+                                                    Appena le daranno il libro.
 
-                - else:
-                    {charTag(Carla, "happy")}:              trova questa icona nelle impostazioni.
+            - else:
+            {charTag(Carla, "happy")}:              trova questa icona nelle impostazioni.
 
-                        @sprite:tutorial_carlaInterfaceStorylets_6
-                        
-                                                            La farà viaggiare nel tempo.
-                                                            Come?
-                    {charTag(Carla, "bored")}:              Sta parlando con una capra ed è questa la cosa che la perplime?!?!
-            }
-    {charTag(Carla, "sad")}:                Infine dovrei spiegarle il sistema di relazioni.
-    {charTag(Carla, "happy")}:              Ma non è di mia competenza.
+                @sprite:tutorial_carlaInterfaceStorylets_6
+                
+                                                    La farà viaggiare nel tempo.
+                                                    Come?
+            {charTag(Carla, "bored")}:              Sta parlando con una capra ed è questa la cosa che la perplime?!?!
+        }
+    {charTag(Carla, "sad")}:                        Infine dovrei spiegarle il sistema di relazioni.
+    {charTag(Carla, "happy")}:                      Ma è arrivata l'ora della mia pausa.
+
 -> carla_closing_storylet
 
 === tutorial_carlaGrimoireStorylet ===
 
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialGrimoire: 
-                {charTag(Carla, "bored")}:              Per fortuna questa è breve.
+            {charTag(Carla, "bored")}:          Per fortuna questa è breve.
         }
 
-    {charTag(Carla, "neutral")}:            Ha finalmente ricevuto il suo Grimorio.
-                                            Festa.
-                                            Rumore di trombette.
-    {charTag(Carla, "happy")}:              Espressione di gioia.
-                                            Altra espressione di gioia.
-    {charTag(Carla, "bored")}:              Basta.
-                                            Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
+    {charTag(Carla, "neutral")}:                Ha finalmente ricevuto il suo Grimorio.
+                                                Festa.
+                                                Giubilo.
+                                                Rumore di trombette.
+    {charTag(Carla, "happy")}:                  Espressione di gioia.
+                                                Altra espressione di gioia.
+    {charTag(Carla, "bored")}:                  Basta.
+                                                Alcune informazioni pratiche sul Grimorio, gentilmente offerte dal Ministero.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialGrimoire:
                 -> top2
@@ -317,39 +319,40 @@
         }
 
     - (top1)     
-    Le vuole ascoltare?
-        + \ {charTag(PG, "neutral")}:               Gliene sarei grat{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
-            {charTag(Carla, "bored")}:              Se sapesse le cose che penso di lei, non mi sarebbe grat{player_pronoun has him:o|{player_pronoun has her:a|ə}} di nulla.
-        + \ {charTag(PG, "neutral")}:               Non importa.
-            {charTag(Carla, "neutral")}:            Siamo in due.
-            {charTag(Carla, "bored")}:              Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
-                -> carla_closing_storylet
+                                                Le vuole ascoltare?
+
+    + \ {charTag(PG, "neutral")}:               Gliene sarei grat{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+        {charTag(Carla, "bored")}:              Se sapesse cosa penso di lei, non mi sarebbe grat{player_pronoun has him:o|{player_pronoun has her:a|ə}} di nulla.
+    + \ {charTag(PG, "neutral")}:               Non importa.
+        {charTag(Carla, "neutral")}:            Siamo in due.
+        {charTag(Carla, "bored")}:              Sono tenuta giusto a ricordarle che il Ministero la riterrà responsabile di ogni uso sconsiderato del Grimorio.
+            -> carla_closing_storylet
         -
 
     - (top2)    
-    {charTag(Carla, "happy")}:              Che gentilmente potrebbe pagarmi di più.
-    {charTag(Carla, "neutral")}:            Quando apre il grimorio vedrà due pagine.
-                                            A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
+    {charTag(Carla, "happy")}:                  Che gentilmente potrebbe pagarmi di più.
+    {charTag(Carla, "neutral")}:                Quando apre il grimorio vedrà due pagine.
+                                                A destra troverà alcune informazioni utili per il suo lavoro, mentre a sinistra è presente l'indice.
 
         @sprite:tutorial_carlaGrimoireStorylet_1
 
-                                            L'indice serve per portarla ai vari capitoli del Grimorio, che di solito raccolgono informazioni su un luogo o una persona.
-                                            Se c'è un bottone, può cliccarlo per andare al relativo capitolo.
-                                            Se c'è un lucchetto, deve ancora scoprire quella voce.
-    {charTag(Carla, "neutral")}:            Alcuni capitoli possono avere delle sottosezioni, e la logica è la stessa: lucchetto uguale informazione bloccata.
-                                            Perché un lucchetto?
-    {charTag(Carla, "bored")}:              La risposta non è di mia competenza.
-                                            Ai lati del Grimorio troverà delle etichette.
+                                                L'indice serve per portarla ai vari capitoli del Grimorio, che di solito raccolgono informazioni su un luogo o una persona.
+                                                Se c'è un bottone, può cliccarlo per andare al relativo capitolo.
+                                                Se c'è un lucchetto, deve ancora scoprire quella voce.
+    {charTag(Carla, "neutral")}:                Alcuni capitoli possono avere delle sottosezioni, e la logica è la stessa: lucchetto uguale informazione bloccata.
+                                                Perché un lucchetto?
+    {charTag(Carla, "bored")}:                  La risposta non è di mia competenza.
+                                                Ai lati del Grimorio troverà delle etichette.
 
         @sprite:tutorial_carlaGrimoireStorylet_2
 
-                                            Servono per chiuderlo, per tornare verso l'indice, o per sfogliare le pagine.
-    {charTag(Carla, "happy")}:              Infine, se vede questa icona, vuol dire che c'è una nuova informazione per lei.
+                                                Servono per chiuderlo, per tornare verso l'indice, o per sfogliare le pagine.
+    {charTag(Carla, "happy")}:                  Infine, se vede questa icona, vuol dire che c'è una nuova informazione per lei.
 
         @sprite:tutorial_carlaGrimoireStorylet_3
 
-    {charTag(Carla, "bored")}:              Se qualcosa non torna, può contattare la sezione Lamentele Inevadibili, al 9° piano.
-                                            Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
+    {charTag(Carla, "bored")}:                  Se qualcosa non torna, può contattare la sezione Lamentele Inevadibili, al 9° piano.
+                                                Se lo dimentica in giro, non posso garantirle che non ne mangerò le pagine.
 
         -> carla_closing_storylet
 
@@ -361,13 +364,13 @@
             ~ move_entity(Carla, Greenhouse)
     }
 
-    {charTag(Carla, "bored")}:              Deve parlare con la responsabile.
+    {charTag(Carla, "bored")}:                  Deve parlare con la responsabile.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
-                                            Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
+                                                Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
         }
-    {charTag(Carla, "neutral")}:            Ah no scusi, è l'abitudine.
-    {charTag(Carla, "sad")}:                Mi è stato chiesto di spiegarle come funziona la serra.
+    {charTag(Carla, "neutral")}:                Ah no scusi, è l'abitudine.
+    {charTag(Carla, "sad")}:                    Mi è stato chiesto di spiegarle come funziona la serra.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
                 -> top2
@@ -376,50 +379,69 @@
         }
 
     - (top1)     
-    {charTag(Carla, "neutral")}:                    È pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}?
-        + \ {charTag(PG, "neutral")}:               Adoro le piante!
-            {charTag(Carla, "bored")}:              Le assicuro che la cosa non è reciproca.
-        + \ {charTag(PG, "neutral")}:               Non serve, ho il pollice verde.
-            {charTag(Carla, "neutral")}:            Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
-            {charTag(Carla, "neutral")}:            Ottavo piano, a destra dopo l'ascensore guasto.
-                -> carla_closing_storylet
+    {charTag(Carla, "neutral")}:                È pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}?
+    + \ {charTag(PG, "neutral")}:               Adoro le piante!
+        {charTag(Carla, "bored")}:              Le assicuro che la cosa non è reciproca.
+    + \ {charTag(PG, "neutral")}:               Non serve, ho il pollice verde.
+        {charTag(Carla, "neutral")}:            Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
+        {charTag(Carla, "neutral")}:            Ottavo piano, a destra dopo l'ascensore guasto.
+            -> carla_closing_storylet
         -
 
     - (top2)    
-    {charTag(Carla, "neutral")}:            Ci fa crescere le piante ed è fatta.
-                                            Arrivederci.
-                                            Mmm, ah.
-    {charTag(Carla, "angry")}:              La responsabile dice che c'è fila in mensa, e devo ammazzare il tempo.
-    {charTag(Carla, "neutral")}:            Uno: se non sta crescendo niente, la serra le farà due domande, e lei deve rispondere come se la sente.
-                                            A quel punto inizierà a crescere una pianta.
-                                            E dopo un po' potrà raccoglierne un pezzo.
-                                            Perché uno solo?
-    {charTag(Carla, "angry")}:              Perché sennò muoiono, no?
-    {charTag(Carla, "neutral")}:            Due: alcune persone possono accettare in dono da parte sua una pianta.
+    {charTag(Carla, "neutral")}:                Ci fa crescere le piante ed è fatta.
+                                                Arrivederci.
+                                                Mmm, ah.
+    {charTag(Carla, "angry")}:                  La responsabile dice che c'è fila in mensa, e devo ammazzare il tempo.
+    {charTag(Carla, "neutral")}:                Uno: se non sta crescendo niente, la serra le farà due domande, e lei deve rispondere come se la sente.
+                                                A quel punto inizierà a crescere una pianta.
+                                                E dopo un po' potrà raccoglierne un pezzo.
+                                                Perché uno solo?
+    {charTag(Carla, "angry")}:                  Perché sennò muoiono, no?
+    {charTag(Carla, "bored")}:                  Facciamo une esempio di domande sulla serra.
+                                                Farò la voce mistica da serra.
+    {charTag(TheWitch, witch_state())}:         <i>Quella è la nostra voce.</i>
+    {charTag(Carla, "bored")}:                  <i>Il figlio di Carla...</i>
+        + \ {charTag(PG, "neutral")}:           Finalmente si è laureato in Architettura.
+        + \ {charTag(PG, "neutral")}:           Osserva il soffitto, il cervello vuoto.
+        -
+    {charTag(Carla, "neutral")}:                <i>La busta paga di Carla...</i>
+        + \ {charTag(PG, "neutral")}:           Non aumenta dal 1976.
+        + \ {charTag(PG, "neutral")}:           È stata accreditata per sbaglio a quel deficiente dell'ufficio Parcheggi e Paracadute.
+        -
+    {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di mistico in questa simulazione.</i>    
+    {charTag(Carla, "neutral")}:                Bene.
+                                                La serra farà le sue cose e poi le dirà che qualcosa è cambiato.
+                                                A questo punto lei va in giro a chiacchierare, la pianta cresce e quando tornerà in serra la voce mistica le dirà qualcosa tipo.
+    {charTag(Carla, "bored")}:                  <i>Gengive infiammate e sciatica che urla: è cresciuta la pianta del <b>Mannaggia perché sono nata?</b></i>
+    {charTag(Carla, "neutral")}:                A quel punto potrà raccoglierla.
+                                                Ma perché raccoglierla?
+    {charTag(Carla, "bored")}:                  Sì, anticipo le sue domande così facciamo prima.                                          
+    {charTag(Carla, "neutral")}:                Alcune persone possono accettare in dono da parte sua una pianta.
         {
             - player_accessiblePlaces has Kitchen:
-                                            Oppure può usarle come ingrediente in cucina.
+                                                Oppure può usarle come ingrediente in cucina.
         }
-    {charTag(Carla, "happy")}:              Per fare un dono basta dire alla persona: "Ehi, voglio donarti una cosa" o qualcosa del genere.
-                                            A quel punto si aprirà il suo grimorio, e lei potrà scegliere quale pianta donare.
+    {charTag(Carla, "happy")}:                  Per fare un dono basta dire alla persona: "Ehi, voglio donarti una cosa" o qualcosa del genere.
+                                                A quel punto si aprirà il suo grimorio, e lei potrà scegliere quale pianta donare.
 
         @sprite:tutorial_carlaGreenhouseGiftsInkStorylet_1
 
-                                            Perché attraverso il grimorio?
-    {charTag(Carla, "bored")}:              Ho aperto una pratica, le faremo sapere.
-    {charTag(Carla, "neutral")}:            Tre: il dono genera inchiostro.
-    {charTag(Carla, "happy")}:              Se ha fatto un dono moooolto apprezzato, riceverà due gocce di inchiostro.
-    {charTag(Carla, "neutral")}:            Se abbastanza apprezzato, una.
-    {charTag(Carla, "sad")}:                Altrimenti, zero.
-    {charTag(Carla, "bored")}:              E no, non possiamo fare eccezioni, mi spiace.
-    {charTag(Carla, "neutral")}:            Si può fare un solo dono a persona, per cui valuti bene.
-    {charTag(Carla, "bored")}:              E non mi chieda perché, perché è sempre stato così.
-    {charTag(Carla, "neutral")}:            Quattro: a cosa serve l'inchiostro?
-                                            Aspetti, ho in linea la mia responsabile.
-    {charTag(Carla, "angry")}:              In che senso stanno finendo i germogli? 
-                                            Un po' di gramigna è rimasta?
-                                            Volo!
-    {charTag(Carla, "bored")}:              Ah: se rimane a stomaco vuoto, non è un problema di mia competenza.
+                                                Perché attraverso il grimorio?
+    {charTag(Carla, "bored")}:                  Ho aperto una pratica, le faremo sapere.
+    {charTag(Carla, "neutral")}:                Tre: il dono genera inchiostro.
+    {charTag(Carla, "happy")}:                  Se ha fatto un dono moooolto apprezzato, riceverà due gocce di inchiostro.
+    {charTag(Carla, "neutral")}:                Se abbastanza apprezzato, una.
+    {charTag(Carla, "sad")}:                    Altrimenti, zero.
+    {charTag(Carla, "bored")}:                  E no, non possiamo fare eccezioni, mi spiace.
+    {charTag(Carla, "neutral")}:                Si può fare un solo dono a persona, per cui valuti bene.
+    {charTag(Carla, "bored")}:                  E non mi chieda perché, perché è sempre stato così.
+    {charTag(Carla, "neutral")}:                Quattro: a cosa serve l'inchiostro?
+                                                Aspetti, ho in linea la mia responsabile.
+    {charTag(Carla, "angry")}:                  In che senso stanno finendo i germogli? 
+                                                Un po' di gramigna è rimasta?
+                                                Volo!
+    {charTag(Carla, "bored")}:                  Ah: se rimane a stomaco vuoto, non è un problema di mia competenza.
 
 -> carla_closing_storylet
 
