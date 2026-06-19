@@ -455,20 +455,20 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         {
-            - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
-                ~ move_entity(Carla, Kitchen)
+        - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
+            ~ move_entity(Carla, Kitchen)
         }
 
         {
-            - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
-                {charTag(Carla, "bored")}:              Quindi non ci stavano ampliando la mensa?!?
+        - tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
+        {charTag(Carla, "bored")}:              Quindi non ci stavano ampliando la mensa?!?
 
-            - else: 
-                {charTag(Carla, "neutral")}:            Perché ho sempre fame?
+        - else: 
+        {charTag(Carla, "neutral")}:            Perché ho sempre fame?
         }
 
-    {charTag(Carla, "happy")}:              Sono qui per spiegarle come funziona questa cucina.
-    {charTag(Carla, "bored")}:              Sperando sia più svegli{player_pronoun has him:o|{player_pronoun has her:a|ə}} di mio figlio.
+    {charTag(Carla, "happy")}:                  Sono qui per spiegarle come funziona questa cucina.
+    {charTag(Carla, "bored")}:                  Sperando sia più svegli{player_pronoun has him:o|{player_pronoun has her:a|ə}} di mio figlio.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialKitchen:
                 -> top2
@@ -477,42 +477,56 @@
         }
 
     - (top1) 
-    {charTag(Carla, "neutral")}:                    Accetta di ascoltare la mia spiegazione?
-        + \ {charTag(PG, "neutral")}:               Ne ho proprio bisogno.
-            {charTag(Carla, "bored")}:              È quello che temevo.
-        + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronoun has him:o|{player_pronoun has her:a|ə}} in MasterChef.
-            {charTag(Carla, "neutral")}:            Mmm.
-            {charTag(Carla, "bored")}:              Forse mio figlio è più sveglio di lei.
-                                                    Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
-                -> carla_closing_storylet
+    {charTag(Carla, "neutral")}:                Accetta di ascoltare la mia spiegazione?
+    + \ {charTag(PG, "neutral")}:               Ne ho proprio bisogno.
+        {charTag(Carla, "bored")}:              È quello che temevo.
+    + \ {charTag(PG, "neutral")}:               Non serve, sono laureat{player_pronoun has him:o|{player_pronoun has her:a|ə}} in MasterChef.
+        {charTag(Carla, "neutral")}:            Mmm.
+        {charTag(Carla, "bored")}:              Forse mio figlio è più sveglio di lei.
+                                                Si ricordi che gli incidenti in cucina non sono coperti dall'assicurazione.
+            -> carla_closing_storylet
         -
 
     - (top2)    
-    {charTag(Carla, "neutral")}:            Uno: ogni persona cucinerà con lei solo una volta.
-                                            Perché?
-    {charTag(Carla, "bored")}:              Il Ministero ha tagliato i fondi.
-                                            E {charNameOne} ha fatto il possibile con quello che aveva.
-                                            Due: prima di cucinare, proporrà alla persona di approfondire un argomento che avete già affrontato.
-                                            Ogni persona di solito ha tre argomenti a disposizione.
-                                            Se ne vede meno, vuole dire che deve conoscere meglio quella persona per potergliene poi parlare.
-    {charTag(Carla, "neutral")}:            Tre: farà delle scelte, come sempre.
-                                            Ma la cucina è una pausa dal mondo, e per questo la persona le darà un feedback sull'impressione che si è fatta su di lei mentre cucinavate.
-                                            Questo è molto utile per capire che tipo di rapporto state creando, e se ci sono correzioni da fare.
-    {charTag(Carla, "happy")}:              Quattro: in cucina le persone le faranno domande personali.
-                                            Potrà rispondere non a parole, ma aggiungendo ingredienti.
-                                            Non ha senso?
-    {charTag(Carla, "bored")}:              Prenda un appuntamento con la sezione Disprezzi e Disservizi.
-    {charTag(Carla, "happy")}:              Cinque: opzionalmente potrà decidere di aggiungere come ingrediente una pianta coltivata in serra, sempre utilizzando il grimorio.
+    {charTag(Carla, "neutral")}:                Uno: ogni persona cucinerà con lei solo una volta.
+                                                Perché?
+    {charTag(Carla, "bored")}:                  Il Ministero ha tagliato i fondi.
+                                                E {charNameOne} ha fatto il possibile con quello che aveva.
+                                                Due: prima di cucinare, proporrà alla persona di approfondire un argomento che avete già affrontato.
+                                                Ogni persona di solito ha tre argomenti a disposizione.
+                                                Se ne percepisce meno a disposizione, di solito vuole dire che deve conoscere meglio quella persona per potergliene poi parlare.
+    {charTag(Carla, "neutral")}:                Tre: farà delle scelte, come sempre.
+                                                Ma la cucina è una pausa dal mondo, e per questo la persona le darà un feedback sull'impressione che si è fatta su di lei mentre cucinavate.
+                                                Questo è molto utile per capire che tipo di rapporto state creando, e se ci sono correzioni da fare.
+                                                Ad esempio, dopo tutte le nostre conversazioni, le posso dire che <>
+                                                ~ temp carlaDice = RANDOM (1, 3)
+        {carlaDice:
+            - 1:
+        {charTag(Carla, "neutral")}:            non mi annoiavo così tanto con qualcuno da quando mi sono ritrovata bloccata in ascensore con il responsabile dei premi assicurativi per i dipendenti.                                                                                   
+            - 2:
+        {charTag(Carla, "bored")}:              un po' lei mi disgusta, mi spiace.
+                                                No, non è vero: non mi dispiace.
+            - 3:
+        {charTag(Carla, "happy")}:              non è male chiacchierare con lei.
+                                                Anche se preferirei non chiacchierare affatto.        
+        }                                                                                
+    {charTag(Carla, "happy")}:                  Quattro: in cucina le persone le faranno domande personali.
+                                                Potrà rispondere non a parole, ma aggiungendo ingredienti.
+                                                Cose come "insalata dell'insufficienza renale" o "hummus speziato con lacrime della quattordicesima ribassata".
+                                                Non ha senso?
+    {charTag(Carla, "bored")}:                  Prenda un appuntamento con la sezione Disprezzi e Disservizi.
+    {charTag(Carla, "happy")}:                  Cinque: opzionalmente potrà decidere di aggiungere come ingrediente una pianta coltivata in serra, sempre utilizzando il grimorio.
 
         @sprite:tutorial_carlaKitchenStorylet_1
 
-                                            Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
-    {charTag(Carla, "bored")}:              Non sono previsti rimborsi in caso di insuccesso.
-    {charTag(Carla, "happy")}:              Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
-    {charTag(Carla, "neutral")}:            Perché?
-                                            Perché è un bravo ranocchio.
-                                            Perché è un bravo ranocchio?
-    {charTag(Carla, "bored")}:              Non è di mia competenza.
+                                                Se la persona apprezzerà l'ingrediente, le dirà qualcosa di utile a capire meglio come ragiona.
+                                                Non sempre in modo chiaro: la gente fa di tutto per incasinare la vita a chi lavora, non trova?
+    {charTag(Carla, "bored")}:                  Non sono previsti rimborsi in caso di insuccesso.
+    {charTag(Carla, "happy")}:                  Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
+    {charTag(Carla, "neutral")}:                Perché?
+                                                Perché è un bravo ranocchio.
+                                                Perché è un bravo ranocchio?
+    {charTag(Carla, "bored")}:                  Non è di mia competenza.
 
 -> carla_closing_storylet
 
