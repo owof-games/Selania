@@ -126,7 +126,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Anche se giocare nel Milan, da interista, aiuto!                                                                        
 
                 
-        + \ {charTag(PG, "neutral")}:                                           Hai trasformato la tua rabbia in qualcosa per vincere, figo!
+        + \ {charTag(PG, "neutral")}:                                           Hai preso la tua rabbia e l'hai usata per vincere: così si fa!
                 -> glyph_choice_manager(false, fireC)->
         {charTag(ThirdCharacter, "jester")}:                                    Già.
                                                                                 Ma avrei preferito non essere arrabbiato e perdere, vecio.
@@ -255,7 +255,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    E rovistare tra le cassette porno dei suoi genitori.
 
                 
-        + \ {charTag(PG, "neutral")}:                                           Sei incazzato con lui?
+        + \ {charTag(PG, "neutral")}:                                           E sei incazzato con lui.
                 -> glyph_choice_manager(false, fireC)->
         {charTag(ThirdCharacter, "neutral")}:                                   No.
                                                                                 Alla fine ha fatto le sue scelte, no?
@@ -325,8 +325,8 @@
                                                                                 Perché non sono uno molto religioso, vecio.
         {charTag(ThirdCharacter, "jester")}:                                    I santi li chiamo giusto quando arrivano le bollette da pagare.
 
-        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio dell'aglio intransigente.</i>
-            ~ kitchen_recipeAdjective = "intransigenza"
+        + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio dell'aglio inflessibile.</i>
+            ~ kitchen_recipeAdjective = "inflessibilità"
             -> glyph_choice_manager(true, fireC)->
         {charTag(ThirdCharacter, "jester")}:                                    Ci capiamo, noi due.
         {charTag(ThirdCharacter, "neutral")}:                                   Ci sta anche perdonare, una volta.
@@ -455,8 +455,8 @@
         {charTag(ThirdCharacter, "neutral")}:                                   La quantità di pipponi che ti fai tu vecio.
         {charTag(ThirdCharacter, "jester")}:                                    Manco {charNameOne}!
 
-        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Rivesto con granella del silenzio.</i>
-            ~ kitchen_recipeComplement = "granella del silenzio"
+        + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Rivesto con granella del ritegno.</i>
+            ~ kitchen_recipeComplement = "granella del ritegno"
             -> glyph_choice_manager(true, fireC)->
         {charTag(ThirdCharacter, "jester")}:                                    Idem.
         {charTag(ThirdCharacter, "neutral")}:                                   La vita è già difficile di suo, perché devo anche riempire qualcuno con le mie paranoie?
@@ -524,11 +524,11 @@
         {charTag(ThirdCharacter, "jester")}:                                    Non ricordo manco perché siamo finiti sui capibara.
                                                                                 
                 
-        + \ {charTag(PG, "neutral")}:                                           L'hai già presentata ai tuoi amici?
+        + \ {charTag(PG, "neutral")}:                                           Quanto sono stati invidiosi i tuoi amici quando l'hanno conosciuta?
                 -> glyph_choice_manager(false, fireC)->
         {charTag(ThirdCharacter, "neutral")}:                                   No.
                                                                                 Io.
-                                                                                No.
+                                                                                Non l'hanno conosciuta.
                                                                                 È brutto dire che la voglio solo per me?
                                                                                 Che è mia?
         {charTag(ThirdCharacter, "bored")}:                                     E poi so già cosa direbbero, perché sono un branco di coglioni.
@@ -668,7 +668,7 @@
                                                                                 Ma lei non può fare sesso.
         {charTag(ThirdCharacter, "angry")}:                                     E se mi giudichi per questa cosa giuro che ti butto direttamente nel forno.                                                                                
                 
-        + \ {charTag(PG, "neutral")}:                                           Ora però sai di non essere un fallito.
+        + \ {charTag(PG, "neutral")}:                                           Ora però non sei un fallito.
                 -> glyph_choice_manager(false, fireC)->
         {charTag(ThirdCharacter, "jester")}:                                    Ci si prova, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   Ma non è facile.
@@ -1087,7 +1087,7 @@
                                                                                 Non sarebbe male se fosse così anche al bar.
         {charTag(ThirdCharacter, "jester")}:                                    Ma figurati se Petra mi tratta come tu tratti {charNameFive}!       
                 
-        + \ {charTag(PG, "neutral")}:                                           Quello vi chiede di lasciare i problemi personali a casa, e dà il lavoro alla fidanzata. Da sberle.
+        + \ {charTag(PG, "neutral")}:                                           Vi chiede di lasciare i problemi personali a casa, e dà il lavoro alla fidanzata. Da sberle.
                 -> glyph_choice_manager(false, fireC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1773,7 +1773,7 @@
                 {charTag(FirstCharacter, "annoyed")}:                           Preferirei farmi mangiare viva dalle giga libellule dello stagno.
                 }                                                                        
 
-        + \ {charTag(PG, "neutral")}:                                           Ma te, ovvio, <i>vecio</i>!
+        + \ {charTag(PG, "neutral")}:                                           Ovvio che ci porto te, <i>vecio</i>!
                 -> glyph_choice_manager(false, fireC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
