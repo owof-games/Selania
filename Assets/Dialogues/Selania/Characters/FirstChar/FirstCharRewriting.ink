@@ -200,9 +200,9 @@
                                                                 Non tutto deve finire come con Luana e il vecchio gruppo.
             }                                    
                 
-            + \ {charTag(PG, "neutral")}:                       Hai un innamorato che ti ha chiesto di convivere.
+            + \ {charTag(PG, "neutral")}:                       L'uomo che ti ama ti ha proposto di diventare <i>casa</i> l'uno per l'altra.
                 -> glyph_choice_manager(false, waterC)->
-           {charTag(PG, "neutral")}:                            Un innamorato che ti fa sentire solida.
+           {charTag(PG, "neutral")}:                            Un uomo che ti fa sentire solida.
                                                                 Con cui hai potuto svolazzare, conoscerti al meglio.
                 {
                     - grimoire_firstChar has grimFirstCharTen: 

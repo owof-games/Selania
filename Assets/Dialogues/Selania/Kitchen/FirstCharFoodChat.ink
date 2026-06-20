@@ -215,7 +215,7 @@
                                                                 No.
                                                                 Non c'è.
     
-        + \ {charTag(PG, "neutral")}:                           Senza chiarirsi, certe ferite rimarranno per sempre.
+        + \ {charTag(PG, "neutral")}:                           Serve poter parlare di un problema, o certe ferite rimarranno per sempre.
             -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "sad")}:                   Penso tanto a Luana.
                                                                 A volte mi manca.
@@ -332,7 +332,7 @@
             {charTag(FirstCharacter, "neutral")}:               E quando le cose cambiano, cambiano entrambe, no?
             {charTag(FirstCharacter, "annoyed")}:               Mica viviamo in un museo a cielo aperto, tipo.
                 
-        + \ {charTag(PG, "neutral")}:                           I sentimenti non si esauriscono se condivisi con più persone.
+        + \ {charTag(PG, "neutral")}:                           L'affetto non è una torta, non si esaurisce se condiviso con più persone.
             -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:               Questo.
                                                                 Sì.
@@ -456,7 +456,7 @@
             {charTag(FirstCharacter, "curious")}:               Le parole sono sempre enormi. 
                                                                 Ha senso?    
     
-            + \ {charTag(PG, "neutral")}:                       Quindi ti senti inadeguata?
+            + \ {charTag(PG, "neutral")}:                       Quindi ti senti come se non fossi all'altezza?
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:               Bingo.
             {charTag(FirstCharacter, "sad")}:                   Già.
@@ -572,7 +572,7 @@
                                                                 Piccole comunità aperte dove ci si divide il lavoro e ci si aiuta a vicenda.
                                                                 Una specie di enorme Rifugia.
 
-            + \ {charTag(PG, "neutral")}:                       Il perdono è un atto di coraggio, ci rende vulnerabili.
+            + \ {charTag(PG, "neutral")}:                       Credo che il perdono sia un atto di coraggio, ci rende vulnerabili.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          E la soluzione per me è nella vulnerabilità.
             {charTag(FirstCharacter, "neutral")}:               Certa gente prende strade di merda perché ha il terrore di mostrarsi ferita.
@@ -677,7 +677,7 @@
         {charTag(FirstCharacter, "neutral")}:                   E addormentarsi precarie e con i casini ma sapendo di aver portato un po' di gioia a una persona.
         {charTag(FirstCharacter, "curious")}:                   Ha senso? 
         
-            + \ {charTag(PG, "neutral")}:                       Il cuore è caldo quando aiutiamo le altre persone, vero?
+            + \ {charTag(PG, "neutral")}:                       Aiutare le altre persone ci riempie il cuore.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          C'è quel momento.
             {charTag(FirstCharacter, "neutral")}:               Tipo quando una è indecisa su cosa ordinare e tu le fai una battuta buffa, e le ti fa un sorriso sincero.
@@ -808,10 +808,10 @@
                                                                 Se non ci fosse la creatività, non avrei idea delle mille cose che mi girano in testa.
             {charTag(FirstCharacter, "sad")}:                   E probabilmente uscirebbero nel momento peggiore, ferendo qualcuno.                                                    
 
-            + \ {charTag(PG, "neutral")}:                       Quindi riesci a trovare parti di te che altrimenti non vedresti?
+            + \ {charTag(PG, "neutral")}:                       Ti mette in contatto con parti di te che non sapevi di avere.
                     -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:               Esatto.
-            {charTag(FirstCharacter, "sad")}:                   Non sono proprio bravissima a vedermi.
+            {charTag(FirstCharacter, "sad")}:                   Non sono proprio bravissima ad ascoltarmi.
             {charTag(FirstCharacter, "annoyed")}:               Per quanto mi tiri un sacco di pipponi, lo so.
             {charTag(FirstCharacter, "neutral")}:               Ma mentre creo, mi vedo davvero.
 
@@ -899,7 +899,7 @@
             {charTag(FirstCharacter, "affectionate")}:          Dai, dimmi come fare {player_name}!
                                                                 Dimmi come resettarmi il cervello!
                
-            + \ {charTag(PG, "neutral")}:                       Sei le relazioni che hai, e per questo non potrai mai perderti.
+            + \ {charTag(PG, "neutral")}:                       Sei le relazioni che hai. Finché ci sono loro, non potrai mai perderti.
                     -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          A volte mi rendo conto di usare frasi o modi di fare di chi voglio bene.
             {charTag(FirstCharacter, "neutral")}:               Mi sento composta anche dalle persone che amo.
@@ -1014,12 +1014,12 @@
                                                                 Perché è un punto di vista creato con le altre persone, no?
                 {charTag(FirstCharacter, "sad")}:               Scusa, sicuramente le tue intenzioni sono buone, ma questa cosa non so perché mi urta tantissimo.                                 
 
-            + \ {charTag(PG, "neutral")}:                       Di chi la ascolta, la legge, la guarda, creando un rapporto con te.
+            + \ {charTag(PG, "neutral")}:                       Di chi la ascoltandola, leggendola, guardandola crea un rapporto con te.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:               Mmm.
                                                                 Ci sta.
                                                                 Anche se è un po' sempre quella roba "separare l'opera dall'autorə".
-            {charTag(FirstCharacter, "annoyed")}:               Che mi fa tanto "Critico J.K.Rowling ma spendo soldi in roba di Harry Potter".
+            {charTag(FirstCharacter, "annoyed")}:               Che mi fa tanto "Critico J.K.Rowling ma spendo soldi in roba di Harry Potter e chi se ne frega se poi quella stronza finanzia pericolose associazioni transfobiche".
             {charTag(FirstCharacter, "affectionate")}:          Però l'idea del rapporto con chi mi ascolta mi piace molto molto molto.
 
             + \ {charTag(PG, "neutral")}:                       Dell'acqua, e delle sue infinite storie.

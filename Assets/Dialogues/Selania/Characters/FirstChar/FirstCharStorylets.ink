@@ -130,7 +130,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Comunque ok, messaggio arrivato: sei reale.
                                                                 O siamo tutt3 e due in un sogno.
                 
-        + (water2) \ {charTag(PG, "neutral")}:                  E se facessimo un bel respiro e ripartissimo da capo?
+        + (water2) \ {charTag(PG, "neutral")}:                  Facessimo un bel respiro e ripartiamo da capo, con dolcezza.
             -> glyph_choice_manager(false, waterC)->
         {
             - one.water:
@@ -922,7 +922,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
             {charTag(FirstCharacter, "sad")}:                   E sei riuscit{player_pronoun has him:o|{player_pronoun has her:a|ə}} pure a farmi preoccupare ancora di più.
         
-        + \ {charTag(PG, "neutral")}:                           Potresti confidare queste paure ai tuoi?
+        + \ {charTag(PG, "neutral")}:                           Forse condividere coi tuoi genitori queste preoccupazioni potrebbe fare bene a te e a loro.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:               Non ci avevo pensato.
                                                                 Non so se capirebbero.
@@ -1094,7 +1094,7 @@
         }
         }         
 
-        + \ {charTag(PG, "neutral")}:                       E se Ennio fosse la tua stazione, il tuo arrivo?
+        + \ {charTag(PG, "neutral")}:                       Forse il treno è fermo perché Ennio è la tua fermata: sei arrivata a casa.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Sarebbe una scoperta.
                                                             Una bella scoperta.
@@ -1195,7 +1195,7 @@
                                                             Di ciò che sei e fai?
             {charTag(FirstCharacter, "neutral")}:           Perché quasi quasi te la invidio.
             
-        + \ {charTag(PG, "neutral")}:                       Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.
+        + \ {charTag(PG, "neutral")}:                       Talco ti vuole bene anche nella distanza, e nonostante il conflitto: non resterai sola.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "neutral")}:           Questo.
                                                             Questo è vero.

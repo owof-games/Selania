@@ -173,7 +173,7 @@
                                                             Mi piacerebbe farlo una volta.
     {charTag(FirstCharacter, "neutral")}:                   Credo mi farebbe sentire parti di me che non cago mai.
         
-    + \ {charTag(PG, "neutral")}:                           Posso capirla, ma non ha pensato a Irene, generando altro dolore.
+    + \ {charTag(PG, "neutral")}:                           Posso capirla. Ma non ha pensando ad Irene potrebbe aver generato altro dolore.
             -> glyph_choice_manager(false, waterC)->
     {charTag(FirstCharacter, "sad")}:                       Ed è una cosa che capisco, ma.
     {charTag(FirstCharacter, "neutral")}:                   Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.
