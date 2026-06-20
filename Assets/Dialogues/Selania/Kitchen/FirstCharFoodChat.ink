@@ -126,8 +126,8 @@
             {charTag(FirstCharacter, "affectionate")}:          Mi suona molto, ama.
                                                                 Fare la strada assieme, aiutandosi.
                                                                 Totale.
-        //Mi piace l'immagine, in generale c'è da capire meglio come focalizzare le scelte spirito
-        + \ {charTag(PG, "neutral")}:                           Una relazione è una foresta, una rete di infinite vite diverse.
+
+        + \ {charTag(PG, "neutral")}:                           Una relazione è una foresta, un fitto intreccio di vite diverse.
             -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "curious")}:               Messa così è più tipo una rete di relazioni, che non una relazione? 
             {charTag(FirstCharacter, "neutral")}:               Una cosa tipo che ognunə di noi è legatə a tante persone legate a loro volta ad altre persone.
@@ -232,9 +232,10 @@
                                                                 Ma puoi comunque romperle.
             {charTag(FirstCharacter, "neutral")}:               Ha senso?
             
-        + \ {charTag(PG, "neutral")}:                           Cosa succederebbe se litigassero con te?
+        + \ {charTag(PG, "neutral")}:                           Una cosa così ti lascia anche il dubbio su cosa accadrà quando litigheranno con te.
             -> glyph_choice_manager(false, aetherC)->
-            {charTag(FirstCharacter, "sad")}:                   In realtà è quello che è successo.
+            {charTag(FirstCharacter, "sad")}:                   Esatto.
+                                                                Cosa che in realtà poi è successa.
             {charTag(FirstCharacter, "neutral")}:               Anni dopo, per una cavolata.
                                                                 Però mi è stato detto "Quando è troppo è troppo."
             {charTag(FirstCharacter, "sad")}:                   E sono tutte sparite.
@@ -301,10 +302,10 @@
     {charTag(FirstCharacter, "affectionate")}:                  Per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
     {charTag(FirstCharacter, "neutral")}:                       Ha senso vero?
     
-        + \ {charTag(PG, "neutral")}:                           L'avresti detto se non fossi stata ubriaca?
+        + \ {charTag(PG, "neutral")}:                           L'alcool ci aiuta a dire cose che sono nascoste dentro di noi.
             -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "neutral")}:               Credo di sì.
-                                                                Prima o poi sì.
+                                                                E credo che prima o poi gliel'avrei detto comunque.
                                                                 Perché l'ho pensato a lungo.
                                                                 Non ho più avuto il coraggio di dirlo di nuovo.
                                                                 E non l'ho di certo dimostrato, dopo il modo in cui l'ho traditə.
@@ -444,7 +445,7 @@
                                                                 Però non sempre sei prontə ad agire.
             {charTag(FirstCharacter, "sad")}:                   Quindi se non fai cose, se non cambi cose, non sei viva?
 
-            + \ {charTag(PG, "neutral")}:                       Le parole grandi hanno anche grandi poteri.
+            + \ {charTag(PG, "neutral")}:                       Le parole grandi hanno un grande potere, e grandi responsabilità.
                 -> glyph_choice_manager(false, aetherC)->
             {
                 -first_char_main_storylets.four.no:
@@ -708,7 +709,7 @@
                                                                 Farla una cover dell'ennesima cantante che non ha detto una parola che una sul genocidio?
                                                                 Queste cose qui.
 
-            + \ {charTag(PG, "neutral")}:                       Non rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare?
+            + \ {charTag(PG, "neutral")}:                       Però rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare.
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "annoyed")}:               Io.
             {charTag(FirstCharacter, "neutral")}:               Uh.
@@ -1022,7 +1023,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Che mi fa tanto "Critico J.K.Rowling ma spendo soldi in roba di Harry Potter e chi se ne frega se poi quella stronza finanzia pericolose associazioni transfobiche".
             {charTag(FirstCharacter, "affectionate")}:          Però l'idea del rapporto con chi mi ascolta mi piace molto molto molto.
 
-            + \ {charTag(PG, "neutral")}:                       Dell'acqua, e delle sue infinite storie.
+            + \ {charTag(PG, "neutral")}:                       Dell'acqua, dall3 antenat3, e dall'inconscio collettivo a cui attingiamo.
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "affectionate")}:          È una bella visione.
                                                                 Così mi inserisco in una lunga conversazione, che non è né l'inizio né la fine.

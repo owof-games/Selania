@@ -61,7 +61,7 @@
         {charTag(FirstCharacter, "affectionate")}:          Diciamo che ero motivata dalla fame.
         {charTag(FirstCharacter, "sad")}:                   E dalla nostalgia.
 
-    + \ {charTag(PG, "neutral")}:                           Sentivo il bisogno di un posto dove fare qualcosa assieme.
+    + \ {charTag(PG, "neutral")}:                           Sentivo il bisogno di un posto dove creare qualcosa assieme.
             -> glyph_choice_manager(false, aetherC)->
         {charTag(FirstCharacter, "curious")}:               Me felice.
         {charTag(FirstCharacter, "neutral")}:               Temevo non avresti apprezzato.
@@ -161,7 +161,7 @@
                                                             Ma sono tante le situazioni in cui una donna non la vede la giustizia.
                                                             Per cui almeno è servita a farla stare meglio, credo.
         
-    + \ {charTag(PG, "neutral")}:                           Lui è ricco, ho pensato parlasse di lotta di classe.
+    + \ {charTag(PG, "neutral")}:                           Lui è ricco, ho dato per assodato che si parlasse di lotta di classe.
             -> glyph_choice_manager(false, aetherC)->
     {charTag(FirstCharacter, "neutral")}:                   Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?
                                                             Però se è ricco ma lei si vendica perché stronzo?
