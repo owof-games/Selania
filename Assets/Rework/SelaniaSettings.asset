@@ -345,7 +345,7 @@ MonoBehaviour:
       <sprite>k__BackingField: {fileID: 21300000, guid: 00fff9eb5d083484ab9d1afa02131b67, type: 3}
   - <listName>k__BackingField: Carla
     <dialogueColor>k__BackingField: {r: 1, g: 0, b: 1, a: 1}
-    <inkVariableName>k__BackingField: 
+    <inkVariableName>k__BackingField: tutorial_CarlaInkIndicator
     <relationshipVariableName>k__BackingField: tutorial_CarlaRelationshipIndicator
     <activateRelationshipIndicatorVariableName>k__BackingField: tutorial_CarlaRelationshipIndicator_enabled
     <grimoirePortrait>k__BackingField: {fileID: 0}

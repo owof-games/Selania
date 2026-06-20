@@ -20,10 +20,10 @@
     {charTag(SecondCharacter, "energy")}:                       Sarebbe DIVERTENTISSIMO!
     {charTag(FirstCharacter, "annoyed")}:                       Bimbo, dobbiamo rivedere la tua idea di divertente!
     {charTag(FirstCharacter, "affectionate")}:                  E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?
-    {
+        {
         - are_two_entities_together(Mentor, PG):
         {charTag(FifthCharacter, "hurry")}:                     Sono felice che apprezzi questi luoghi, {charNameOne}.
-    }
+        }
     {charTag(SecondCharacter, "energy")}:                       Io voglio capire TUTTO di questo posto. Tutto!
                                                                 Capire cosa si può mangiare e cosa no.
                                                                 E dove portano tutti quei posti chiusi.
@@ -33,12 +33,16 @@
     {charTag(FirstCharacter, "affectionate")}:                  Tipo che ne so, dormircela un attimo?
                                                                 Sai quante occasioni ti capiteranno per dormire a modo dopo le elementari?
     {charTag(FirstCharacter, "annoyed")}:                       Zero.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:                    Per questo esistono le sbronze!
+        }
     {charTag(SecondCharacter, "neutral")}:                      No no no.
                                                                 Che noia.
     {charTag(SecondCharacter, "energy")}:                       Forse posso arrampicarmi sugli alberi della foresta e vedere se ci sono scoiattoli!
     {charTag(FirstCharacter, "annoyed")}:                       E io inizio a pregare che da qualche parte ci sia un'infermeria.
         
-    {
+        {
         - are_two_entities_together(Mentor, PG):
         {charTag(FifthCharacter, "neutral")}:                   Fammi vedere se ho dei cerotti da qualche parte.
                                                                 E delle garze.
@@ -46,7 +50,7 @@
         {charTag(FifthCharacter, "hurry")}:                     Non è mai servito del disinfettante!
                                                                 Devo controllare, subito!
         ~ change_entity_place(Mentor)
-    }
+        }
 
     {charTag(FirstCharacter, "neutral")}:                       E tu cosa vorresti fare invece {player_name}?     
     {charTag(SecondCharacter, "energy")}:                       O cosa fai se ci hanno rapito gli alieni?
@@ -125,17 +129,17 @@
     {charTag(SecondCharacter, "neutral")}:                              Ora ho voglia solo di cercare qualcosa da mangiare.
             ~ change_entity_place(SecondCharacter)
         {
-                - are_two_entities_together(FirstCharacter, PG):
+        - are_two_entities_together(FirstCharacter, PG):
         {charTag(FirstCharacter, "sad")}:                                   Povero piccolo.
         {charTag(FirstCharacter, "affectionate")}:                          Però è stato molto coraggioso, vero?
         }
     {charTag(FifthCharacter, "sad")}:                                   Non mi perdonerà mai, vero {player_name}?
 
 
-        + \ {charTag(PG, "neutral")}:                                   Temo che gli adulti non siano la sua cosa preferita.
+        + \ {charTag(PG, "neutral")}:                                   Temo che tu sia stata l'ennesima persona adulta che l'ha ferito.
                 -> glyph_choice_manager(Mentor, waterC)->
         {charTag(FifthCharacter, "sad")}:                               Lo temo anche io.
-                                                                        E questo significa che devo fare il doppio del lavoro per avere la sua  fiducia.
+                                                                        E questo significa che devo fare il doppio del lavoro per avere la sua fiducia.
         {charTag(FifthCharacter, "hurry")}:                             Ma la avrò!
                                                                         E capirà che anche gli adulti sono persone di cui potersi fidare.                                               
                 {
@@ -206,6 +210,11 @@
     {charTag(FifthCharacter, "hurry")}:                                 Un po' lo scoprirai da te, parlando con {player_name}.
     {charTag(FifthCharacter, "neutral")}:                               Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
     {charTag(FifthCharacter, "hurry")}:                                 La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "bored")}:                             Gesù Licantropo che rottura di balle.
+        ~ change_entity_place(ThirdCharacter)
+        }
     {charTag(FirstCharacter, "neutral")}:                               Mmm.
                                                                         Certo.
     {charTag(FirstCharacter, "annoyed")}:                               Scusa {charNameFive}, però un po' mi viene da dirti che è facile dirlo, quando fai già quello che ami.
@@ -233,7 +242,7 @@
         {charTag(FirstCharacter, "annoyed")}:                           Credo che quello si chiami "abuso di sostanze".
         {charTag(FifthCharacter, "sad")}:                               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
-        + \ {charTag(PG, "neutral")}:                                   Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.
+        + \ {charTag(PG, "neutral")}:                                   Non credo nella felicità, ma nel conforto dato dall'avere vicine le persone care.
             -> glyph_choice_manager(false, waterC)->    
         {charTag(FifthCharacter, "neutral")}:                           Questa è una lettura che potrei apprezzare.
         {charTag(FirstCharacter, "curious")}:                           Woah!
@@ -251,16 +260,7 @@
     {charTag(FifthCharacter, "neutral")}:                               Lezione?
     {charTag(FirstCharacter, "affectionate")}:                          Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
     {charTag(FirstCharacter, "annoyed")}:                               Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
-            {
-                - are_two_entities_together(ThirdCharacter, PG):
-                {
-                - grimoire_thirdChar has grimFirstThirdChar:
-                        {charTag(ThirdCharacter, "angry")}:                     Commento infastidito di Boccale.
 
-                - else:
-                        {charTag(ThirdCharacter, "neutral")}:                   Commento neutro/positivo di Boccale.    
-                }
-        }  
 
 
         -> first_char_closing_storylet ->
@@ -359,16 +359,16 @@
         {charTag(Mentor, "neutral")}:                                           Devi superare la paura di farti domande che possono capovolgere il tuo mondo.
         {charTag(TheWitch, "{witch_state()}")}:                                 <i>E sapere che quella domanda esiste, visto che potrebbe non fare proprio parte del tuo mondo, del tuo quotidiano.</i>                                                                         
 
-        + \ {charTag(PG, "neutral")}:                                           Tutt3 meritano una vita felice, ma il lavoro va fatto assieme, non può essere responsabilità di un singolo.
-                -> glyph_choice_manager(false, waterC)->
-        {charTag(FirstCharacter, "curious")}:                                   Ed è subito COLLETTIVO!
+        + \ {charTag(PG, "neutral")}:                                           Abbandonare {charNameThree} vuol dire aprire alla possibilità di abbandonare chiunque. Ma la fatica per aiutarlo va condivisa tra noi.
+                -> glyph_choice_manager(false, aetherC)->
+        {charTag(FirstCharacter, "curious")}:                                   Ed è subito: FONDIAMO UN COLLETTIVO!
         {charTag(FirstCharacter, "neutral")}:                                   Emotivamente ti do ragione ama.
                                                                                 Ma emotivamente c'è questa parte di me che continua a dirsi: perché mi devo prendere l'accollo di chi crea il problema, e dei problemi che ha creato?
         {charTag(Mentor, "sad")}:                                               Perché non farlo vuol dire dimenticarci che non sono idee, ma persone.
         {charTag(TheWitch, "{witch_state()}")}:                                 <i>Vicini di casa, colleghi, gente che condivide i nostri luoghi, le nostre paure, i nostri futuri.</i>                                                                                                                                             
 
-        + \ {charTag(PG, "neutral")}:                                           Capisco {charNameOne}, ma mi chiedo: se abbandoniamo una persona, non apriamo alla possibilità di abbandonare tutt3?
-                -> glyph_choice_manager(false, aetherC)->
+        + \ {charTag(PG, "neutral")}:                                           Capisco {charNameOne}, ma non me la sento di abbandonare una persona solo perché non ce la fa a capire.
+                -> glyph_choice_manager(false, waterC)->
         {charTag(FirstCharacter, "affectionate")}:                              TI ODIO.
                                                                                 Ma con amore.
                                                                                 Ma capisco cosa intendi.
@@ -395,7 +395,6 @@
 
 
 
-
 === frog_and_mentor_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -404,54 +403,54 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-        {charTag(FifthCharacter, "neutral")}:                               Però non ti ho mai visto in giro.
-        {charTag(Franco, "neutral")}:                                       Però sono sempre stato cra!
-        {charTag(FifthCharacter, "neutral")}:                               Ma non ti ho mai mai visto in giro.
+        {charTag(FifthCharacter, "neutral")}:                                   Però non ti ho mai visto in giro.
+        {charTag(Franco, "neutral")}:                                           Però sono sempre stato cra!
+        {charTag(FifthCharacter, "neutral")}:                                   Ma non ti ho mai mai visto in giro.
                                                                                 E ogni giorno vengo a sistemare il sentiero e pulire la serra.
-        {charTag(Franco, "neutral")}:                                       Forse allora non sei venuta ogni giorno.
+        {charTag(Franco, "neutral")}:                                           Forse allora non sei venuta ogni giorno.
                                                                                 O forse mi hai scambiato per Tullio? A volte succede.
-        {charTag(Franco, "question")}:                                     O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+        {charTag(Franco, "question")}:                                          O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
                                                                                 Un po' come zio Gracco e il suo problema con l'alcool.
                                                                                 E i combustibili in generale.
-        {charTag(FifthCharacter, "neutral")}:                               Impossibile.
+        {charTag(FifthCharacter, "neutral")}:                                   Impossibile.
                                                                                 Controllo tutto, è il mio lavoro.
-        {charTag(Franco, "neutral")}:                                       Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
-        {charTag(FifthCharacter, "sad")}:                                   Non ho detto che non ricordi bene.
-        {charTag(Franco, "neutral")}:                                       Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+        {charTag(Franco, "neutral")}:                                           Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
+        {charTag(FifthCharacter, "sad")}:                                       Non ho detto che non ricordi bene.
+        {charTag(Franco, "neutral")}:                                           Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
                                                                                 E io sono una rana e una rana non ha un collo e quindi non mento.
-        {charTag(FifthCharacter, "sorry")}:                                 Non mi permetterei mai di dirlo.
-        {charTag(Franco, "neutral")}:                                       Infatti non l'hai detto, l'hai implicato.
-        {charTag(Franco, "question")}:                                      Questa me l'ha insegnata stamani mio figlio Euforbo.
-        {charTag(Franco, "neutral")}:                                       Ma mi ha chiesto di non usare "stazampe" invece di stamani.
-        {charTag(FifthCharacter, "neutral")}:                               Non mi piace il tuo tono, rana.
-        {charTag(Franco, "neutral")}:                                       Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
-        {charTag(FifthCharacter, "bored")}:                                 Io non l'ho detto!
-        {charTag(Franco, "neutral")}:                                       Ma l'hai implicato.
+        {charTag(FifthCharacter, "sorry")}:                                     Non mi permetterei mai di dirlo.
+        {charTag(Franco, "neutral")}:                                           Infatti non l'hai detto, l'hai implicato.
+        {charTag(Franco, "question")}:                                          Questa me l'ha insegnata stamani mio figlio Euforbo.
+        {charTag(Franco, "neutral")}:                                           Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+        {charTag(FifthCharacter, "neutral")}:                                   Non mi piace il tuo tono, rana.
+        {charTag(Franco, "neutral")}:                                           Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
+        {charTag(FifthCharacter, "bored")}:                                     Io non l'ho detto!
+        {charTag(Franco, "neutral")}:                                           Ma l'hai implicato.
                                                                                 Che non è ampilato, perché i lati non sono ampi.
-        {charTag(Franco, "party")}:                                        Questo lo dice sempre Euforbo.
-        {charTag(FifthCharacter, "bored")}:                                 AAAAAAAARG!
+        {charTag(Franco, "party")}:                                             Questo lo dice sempre Euforbo.
+        {charTag(FifthCharacter, "bored")}:                                     AAAAAAAARG!
                                                                                 SEI INSOPPORTABILE!
                 ~ change_entity_place(Mentor)
-        {charTag(Franco, "neutral")}:                                       No, sono Franco La Rana.
+        {charTag(Franco, "neutral")}:                                           No, sono Franco La Rana.
                                                                                 Non mi ha molto ascoltato.
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
-                {charTag(ThirdCharacter, "jester")}:                    Adoro questa rana, è completamente suonata.
-                                                                        Completamente!
+                {charTag(ThirdCharacter, "jester")}:                            Adoro questa rana, è completamente suonata.
+                                                                                Completamente!
                 }                                                                   
-        {charTag(Franco, "question")}:                                     E comunque io non me lo ricordo un Mentore da queste parti.
+        {charTag(Franco, "question")}:                                          E comunque io non me lo ricordo un Mentore da queste parti.
                                                                                 E neanche un Nasore o un Orecchiore se è per questo.
         {
         - are_two_entities_together(FirstCharacter, PG):
-        {charTag(FirstCharacter, "curious")}:                               In che senso, scusa?
-        {charTag(Franco, "party")}:                                         {charNameOne}!
+        {charTag(FirstCharacter, "curious")}:                                   In che senso, scusa?
+        {charTag(Franco, "party")}:                                             {charNameOne}!
                                                                                 Prima è passata zia Graaak e ti voleva parlare!
-        {charTag(Franco, "neutral")}:                                       Tullio dice che ha una cotta per te.
+        {charTag(Franco, "neutral")}:                                           Tullio dice che ha una cotta per te.
                                                                                 Però non ho visto dove si è bruciata.
-        {charTag(Franco, "question")}:                                      O se ti deve bruciare.
-        {charTag(Franco, "neutral")}:                                       Non sarebbe molto gentile però, vero?
-        {charTag(FirstCharacter, "neutral")}:                               Ooook
-        {charTag(FirstCharacter, "annoyed")}:                               No, non è vero: non ce la posso fare.
+        {charTag(Franco, "question")}:                                          O se ti deve bruciare.
+        {charTag(Franco, "neutral")}:                                           Non sarebbe molto gentile però, vero?
+        {charTag(FirstCharacter, "neutral")}:                                   Ooook
+        {charTag(FirstCharacter, "annoyed")}:                                   No, non è vero: non ce la posso fare.
                 ~ change_entity_place(FirstCharacter)
         }
                 -
@@ -487,7 +486,7 @@
     {charTag(FifthCharacter, "sad")}:                                   Uh, peccato.
     {charTag(FifthCharacter, "neutral")}:                               Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
         
-    + \ {charTag(PG, "neutral")}:                                       Dice che stai facendo un buon lavoro.
+    + \ {charTag(PG, "neutral")}:                                       Sente quanto impegno stai mettendo nel prenderti cura di questo luogo.
             -> glyph_choice_manager(Mentor, waterC)->
     {charTag(FifthCharacter, "hurry")}:                                 Oh, ma sicuramente esagera.
     {charTag(FifthCharacter, "sad")}:                                   Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le pietre del pozzo.
@@ -670,9 +669,9 @@
     {charTag(Franco, "neutral")}:                                       Piccarda, Perlita, Macrina, Gliceria, Gianbrunilde, Eulalia,    Ermenegigia...
     {charTag(FirstCharacter, "neutral")}:                               {player_name} dimmi che non sto impazzendo solo io!
 
-        + \ {charTag(PG, "neutral")}:                                   Franco, sembri davvero legato alla tua famiglia.
+        + \ {charTag(PG, "neutral")}:                                   Franco, il legame che hai con la tua famiglia sembra davvero profondo.
                 -> glyph_choice_manager(false, waterC)->
-        {charTag(Franco, "neutral")}:                                   No, non legato.
+        {charTag(Franco, "neutral")}:                                   No, nessuno è stato legato, non oggi per lo meno!
         {charTag(Franco, "party")}:                                     Quello è successo solo alla festa di laurea di zio Gracco.
                                                                         Ma ho ripetuto tutto il tempo che non era colpa mia.
                                                                         E non mi hanno creduto.
@@ -750,6 +749,10 @@
     {charTag(Franco, "neutral")}:                                       E Franco ti dice che non è vero, {charNameTwo}.
     {charTag(SecondCharacter, "angry")}:                                Ma è IM-POS-SI-BI-LE!
     {charTag(Franco, "neutral")}:                                       No no no, impossibile è un bambino che sa parlare.
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:                            Oh Franchì, purtroppo parlano, e tanto!
+        }
     {charTag(SecondCharacter, "melanchonic")}:                          Ma io so parlare!
     {charTag(Franco, "neutral")}:                                       E sei un bambino? Dimostralo!
     {charTag(SecondCharacter, "neutral")}:                              Sono basso.
@@ -757,7 +760,7 @@
     {charTag(SecondCharacter, "neutral")}:                              E vado a scuola.
         {
                 - second_char_main_storylets.six.tortura:
-                {charTag(SecondCharacter, "neutral")}:                          Che {player_name} dice che è una tortura.
+                {charTag(SecondCharacter, "neutral")}:                  Che {player_name} dice che è una tortura.
         }   
     {charTag(Franco, "question")}:                                      Quello lo fanno i girini, non i bambini.
     {charTag(SecondCharacter, "neutral")}:                              E non sono un girino?
