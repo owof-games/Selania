@@ -87,7 +87,7 @@
         {charTag(SecondCharacter, "angry")}:                    Ma mi hai ascoltato quando ho parlato?
                                                                 Ti sembro uno che gioca a calcio?!?
      
-        + \ {charTag(PG, "neutral")}:                           Un luogo dove meditare?
+        + \ {charTag(PG, "neutral")}:                           Un luogo dove meditare.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(SecondCharacter, "neutral")}:                  ...
                                                                 Davvero?

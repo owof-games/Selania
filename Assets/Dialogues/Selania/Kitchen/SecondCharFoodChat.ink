@@ -123,7 +123,7 @@
                 {charTag(SecondCharacter, "energy")}:           Perché le caramelle fanno bene.
                                                                 E che Elio aveva ragione sugli alieni da sempre e dovevano ascoltarlo.
     
-            + \ {charTag(PG, "neutral")}:                       Però tu stai comunque bene quando fai queste cose, no?
+            + \ {charTag(PG, "neutral")}:                       Però tu stai comunque bene quando fai queste cose.
                -> glyph_choice_manager(false, aetherC)->
                {charTag(SecondCharacter, "energy")}:            Sì!
                                                                 Tantissimissimo!
@@ -227,7 +227,7 @@
                                                                 Però da piccoli sono suuuuperincapaci di camminare.
                 {charTag(SecondCharacter, "energy")}:           Quello è divertente.
         
-            + \ {charTag(PG, "neutral")}:                       Il corvo, che è presente in tante leggende e misteri.
+            + \ {charTag(PG, "neutral")}:                       Il corvo, misterico e misterioso.
                     -> glyph_choice_manager(false, aetherC)->
                {charTag(SecondCharacter, "energy")}:            Sai che i corvi si insegnano tra loro le cose?
                {charTag(SecondCharacter, "neutral")}:           E che se li fai arrabbiare se lo ricordano per sempre.
@@ -339,7 +339,7 @@
                 {charTag(SecondCharacter, "angry")}:            Ma io che c'entro?
                 {charTag(SecondCharacter, "melanchonic")}:      Magari me lo possono dire invece di sgridarmi.
     
-            + \ {charTag(PG, "neutral")}:         C             iò che è strano porta risposte a domande che non ci siamo ancora fatt3.
+            + \ {charTag(PG, "neutral")}:                       Ciò che è strano porta risposte a domande che non ci siamo ancora fatt3.
                 -> glyph_choice_manager(false, aetherC)->
                {charTag(SecondCharacter, "neutral")}:           Eh?
                                                                 Però le domande mi piacciono.
@@ -774,7 +774,7 @@
                 {charTag(SecondCharacter, "neutral")}:          Come con le tigri allo zoo.
                                                                 Non sono mica felici loro.
 
-            + \ {charTag(PG, "neutral")}:                       Ora però vorrei imparare io una lezione da te.
+            + \ {charTag(PG, "neutral")}:                       Ora però vorrei che insegnassi tu qualcosa a me.
                     -> glyph_choice_manager(false, aetherC)->
                 {charTag(SecondCharacter, "energy")}:           Quindi sono il tuo professore?
                                                                 Allora ti insegno cose sui topi!
@@ -1447,11 +1447,13 @@
                                                             Un po' mi dispiace.
                                                             Però sono contento perché mi fa la torta!
             
-        + \ {charTag(PG, "neutral")}:                       Avete trovato una nuova armonia?
+        + \ {charTag(PG, "neutral")}:                       Gli abbracci sono una cosa complicata, vero?
                 -> glyph_choice_manager(false, aetherC)->
-            {charTag(SecondCharacter, "neutral")}:          Tipo come quando si canta?
-                                                            Non ce la vedo molto {charNameFive} a cantare.
-        {charTag(SecondCharacter, "melanchonic")}:          E io sono stra stonato.                                            
+        {charTag(SecondCharacter, "neutral")}:              Dipende.
+                                                            Se mi fido mi piacciono.
+        {charTag(SecondCharacter, "energy")}:               Mi ricordano una piscina, qualcosa del genere.
+        {charTag(SecondCharacter, "melanchonic")}:          Ma ancora non mi fido di {charNameFive}.
+        {charTag(SecondCharacter, "neutral")}:              Però non sono più arrabbiato con lei.                                         
             
 
         + \ {charTag(PG, "neutral")}:                       Il cibo unisce tutte le persone, vero?
