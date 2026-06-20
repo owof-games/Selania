@@ -17,7 +17,7 @@
         {charTag(FirstCharacter, "sad")}:                       Sempre che non abbia cambiato fissa in questi mesi.
         {charTag(FirstCharacter, "neutral")}:                   Insomma: l'hai vistə?
         
-        //MAGGIOR PARTE DELLE SCELTE: ACQUA
+
         + (aether)\ {charTag(PG, "neutral")}:                   Ho sempre pensato che Florence fosse una strega.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(FirstCharacter, "affectionate")}:              Pa-le-se!
@@ -198,7 +198,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Sono le persone con cui cazzeggio e piango e con cui ho anche una band.
                                                                 Una band davvero figa!
         {charTag(FirstCharacter, "affectionate")}:              Le amo.
-        {charTag(FirstCharacter, "sad")}:                       Anche a lavoro saranno incazzati abbestia.
+        {charTag(FirstCharacter, "sad")}:                       Anche a lavoro saranno incazzati a bestia.
         {charTag(FirstCharacter, "annoyed")}:                   Non che me ne freghi un granché per il capo: è una gran testa di cazzo.
                                                                 Come ogni capo.
         {charTag(FirstCharacter, "sad")}:                       Però le colleghe saranno nella merda: se manca una di noi si devono smazzare più lavoro.
@@ -245,13 +245,15 @@
             {charTag(FirstCharacter, "affectionate")}:          C'è qualcosa di <i>concreto</i> in quest'aria.
             {charTag(FirstCharacter, "neutral")}:               Come se lentamente mi pulisse via cose che mi appesantiscono.
             
-        + \ {charTag(PG, "neutral")}:                           Hai detto così tante cose che mi sono pers{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+        + \ {charTag(PG, "neutral")}:                           Come sarebbe un brano su questa situazione?
             -> glyph_choice_manager(false, aetherC)->
-            //Da finire di sistemare
-            {charTag(FirstCharacter, "curious")}:               Bellini i numeri.
-            {charTag(FirstCharacter, "annoyed")}:               No, non è vero.
-            {charTag(FirstCharacter, "neutral")}:               Ma per farti felice: bellini i numeri.
-            {charTag(FirstCharacter, "curious")}:               Ma se è un problema di un terzo delle persone, allora bisogna fare qualcosa a monte, no?
+
+            {charTag(FirstCharacter, "curious")}:               Sarebbe qualcosa sulle strade.
+                                                                Strade come rami.
+                                                                E strade come radici.
+            {charTag(FirstCharacter, "neutral")}:               E sarebbe una canzone polifonica.
+            {charTag(FirstCharacter, "curious")}:               Qualcosa capace di raccontare in modo sincronico più storie, più emozioni.
+                                                                Una canzone sul tutto.
 
         + \ {charTag(PG, "neutral")}:                           Ti mancano le amiche della band?
                 -> glyph_choice_manager(false, waterC)->
@@ -1204,7 +1206,7 @@
             {charTag(FirstCharacter, "neutral")}:           Bella.
             {charTag(FirstCharacter, "sad")}:               Ma grossa.    
                 
-        + \ {charTag(PG, "neutral")}:                       Hai paura di stare sola, o di sentirti sola?
+        + \ {charTag(PG, "neutral")}:                       Non riesco a capire se hai paura di restare sola o di sentirti sola.
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "neutral")}:           Merda.
             {charTag(FirstCharacter, "annoyed")}:           Ora come ora forse di non sapere stare da sola.
