@@ -406,7 +406,7 @@
                                                                 E comunque Rocco ti ha già fatto capire che ha voglia di passare del tempo con te, tra D&D e la proposta di correre assieme.    
                 }                                      
             
-            + (water) \ {charTag(PG, "neutral")}:               Forse Ava non era la persona giusta, ma {charNameThree}: hai amato.
+            + (water) \ {charTag(PG, "neutral")}:               Forse Ava non era la persona giusta, ma {charNameThree}: hai saputo amare di nuovo.
             {charTag(PG, "neutral")}:                           Ricordi come mi hai parlato di lei quando eri qui?
                     {
                     - letters_thirdCharLetterFourChoice has waterC:
@@ -519,7 +519,7 @@
                                                                 E alla fine la chiacchierata con lui è andata bene, no?   
                     }                                             
             
-            + (water) \ {charTag(PG, "neutral")}:               Rocco ti ha mostrato che puoi avere altri amici: perché non trovarne un altro nel tuo coinquilino?
+            + (water) \ {charTag(PG, "neutral")}:               Rocco ti ha mostrato che puoi avere altri amici: potresti trovarne un altro nel tuo coinquilino.
             {charTag(PG, "neutral")}:                           Una persona che ci somiglia può insegnarci molte cose.
                                                                 E ci si può aiutare assieme per uscire dalle situazioni che ci fanno stare male.
                                                                 O offrirci nuove prospettive.
@@ -604,7 +604,7 @@
                                                                 Ma non continuare a pensare a ciò che avresti potuto ottenere.
                                                                 Al massimo, datti da fare!
         
-        + (water) \ {charTag(PG, "neutral")}:                   Però tuo padre ha ragione: continuare a seguire la promessa fatta a tua madre non ti farà bene.
+        + (water) \ {charTag(PG, "neutral")}:                   Però tuo padre ha ragione: continuare a seguire la promessa fatta ti sta ferendo.
         {charTag(PG, "neutral")}:                               Sei arrivato ad un punto di crisi perché sei stato anche quel tipo di persona.
                                                                 Se vuoi vivere, stare bene, forse è arrivato il momento di provare qualcosa di diverso.
                                                                 Magari imparando proprio da tuo padre.    
