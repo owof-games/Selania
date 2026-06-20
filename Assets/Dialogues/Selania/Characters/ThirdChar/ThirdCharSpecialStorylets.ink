@@ -126,7 +126,7 @@
                                                                         Alla fine devi trovare il modo per sfangartela.         
         {charTag(ThirdCharacter, "jester")}:                            Non sono venuto su così male, no?                
 
-        +  \ {charTag(PG, "neutral")}:                                  Ho l'impressione che dietro l'atteggiamento comico tu stia molto male.
+        +  \ {charTag(PG, "neutral")}:                                  Ho l'impressione che dietro la maschera da buffone tu stia soffrendo molto.
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == her:
@@ -245,7 +245,7 @@
                                                                         Soprattutto quando lei gli impedisce di scappare.
                 }
     
-        + \ {charTag(PG, "neutral")}:                                   Capisco la tua frustrazione, ma lui ha ignorato tutti i <i>no</i> di lei: lei si sta proteggendo da lui.
+        + \ {charTag(PG, "neutral")}:                                   Lui ha ignorato tutti i suoi <i>no</i>, e lei si sta proteggendo.
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == her:
@@ -418,7 +418,7 @@
     {charTag(ThirdCharacter, "neutral")}:                               Cosa ha voluto dire prima quella tipa, quella che ha fatto la ventriloqua con le tue chiappe?
 
 
-    + \ {charTag(PG, "neutral")}:                                       Credo intendesse che sei su una strada che può solo ferirti, ma puoi ancora salvarti.
+    + \ {charTag(PG, "neutral")}:                                       Credo intendesse che sei su una strada che può solo ferirti, ma puoi ancora cambiare.
             -> glyph_choice_manager(false, waterC)->
             {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun == her:

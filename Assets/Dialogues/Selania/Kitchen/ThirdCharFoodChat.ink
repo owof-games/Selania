@@ -513,7 +513,7 @@
                                                                                 E così mi sono detto che mal che andava sarebbe stato un altro palo in faccia.
         {charTag(ThirdCharacter, "jester")}:                                    E invece.        
 
-        + \ {charTag(PG, "neutral")}:                                           Quando ti sei accorto che non era più un "e se", ma era quella giusta?
+        + \ {charTag(PG, "neutral")}:                                           Quando hai capito che non era più un "e se", ma era la ragazza giusta?
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Quando ne ho parlato con Petra senza rendermene conto.
                                                                                 E lei mi fa "Hai gli occhi a cuore, idiota".
@@ -677,7 +677,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Però il cazzo che tira come quello di un vent'enne me lo tengo tutto.
         {charTag(ThirdCharacter, "neutral")}:                                   Dona mi ha lasciato proprio un buco su questa cosa, mi fa incazzare.       
             
-        + \ {charTag(PG, "neutral")}:                                           Pensi che Ava stia vedendo parti di te che Donatella non sapeva cogliere?
+        + \ {charTag(PG, "neutral")}:                                           Senti che Ava sta accogliendo parti di te che Donatella non capiva?
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "bored")}:                                     Sarebbe un po' una merda, vecio.
                                                                                 Perché vorrebbe dire che sono stato così coglione da passare tredici anni con una donna che non mi ha mai capito, quando poi Ava c'ha messo quanto, cinque mesi?
@@ -819,13 +819,13 @@
                                                                                 Ci stavamo per sposare.
         {charTag(ThirdCharacter, "bored")}:                                     Avere un figlio era la cosa più ovvia, punto.        
             
-        + \ {charTag(PG, "neutral")}:                                           Ho l'impressione che più che una relazione romantica, tu voglia essere padre, vero?
+        + \ {charTag(PG, "neutral")}:                                           Ho la sensazione che diventare padre per te sia più importante dell'innamorarti di nuovo.
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "bored")}:                                     Lo dici come se fossi un po' stronzo, vecio.
-        {charTag(ThirdCharacter, "neutral")}:                                   La voglio una <i>relazione romantica</i>, come dici te.
+        {charTag(ThirdCharacter, "neutral")}:                                   Io voglio innamorarmi.
                                                                                 Una compagna.
                                                                                 Qualcuno di cui mi fido.
-                                                                                E con cui crescere un bambino.
+                                                                                E con cui crescere il mio bambino.
                                                                                 Il bambino più tosto del mondo.
 
         + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma, {charNameThree}.
@@ -1252,7 +1252,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     Ma chi mi piglia a me alla mia età?
                                             
 
-        + \ {charTag(PG, "neutral")}:                                           Ma come ti stai vivendo questa cosa di essere un boccale, quindi?
+        + \ {charTag(PG, "neutral")}:                                           Ma cosa provi quindi a vederti in giro con l'aspetto di un boccale?
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != her:
@@ -1786,7 +1786,7 @@
                                                                                 Titolo: "Perché l'Inter è meglio di quella cloaca della Juve."
         {charTag(ThirdCharacter, "neutral")}:                                   Svolgimento: "L'Inter non ha mai rubato scudetti."
 
-        + \ {charTag(PG, "neutral")}:                                           {charNameTwo}: c'è ancora il suo compleanno in sospeso da festeggiare.
+        + \ {charTag(PG, "neutral")}:                                           {charNameTwo}: c'è ancora il suo compleanno da festeggiare.
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
