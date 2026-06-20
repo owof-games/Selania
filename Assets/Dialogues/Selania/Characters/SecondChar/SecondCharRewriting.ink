@@ -104,7 +104,7 @@
         }
                 
         
-        + \ {charTag(PG, "neutral")}:                       I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.
+        + \ {charTag(PG, "neutral")}:                       I tuoi genitori sono infelici, {charNameTwo}, hanno bisogno della tua comprensione.
             -> glyph_choice_manager(false, waterC)->
         {charTag(PG, "neutral")}:                           Tutti i litigi, la fuga di tuo padre.
                                                             Il modo in cui si arrabbia per tutto.

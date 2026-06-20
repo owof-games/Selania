@@ -103,7 +103,7 @@
         {charTag(SecondCharacter, "neutral")}:                  No, è un posto interessante.
         {charTag(SecondCharacter, "energy")}:                   Ma c'è anche una poltrona!
             
-        + \ {charTag(PG, "neutral")}:                           Una camera con tutti i tuoi amici?
+        + \ {charTag(PG, "neutral")}:                           Una camera con tutti i tuoi amici!
                 -> glyph_choice_manager(false, waterC)->
         {charTag(SecondCharacter, "melanchonic")}:              Sarebbe vuota.
         {charTag(SecondCharacter, "angry")}:                    No.

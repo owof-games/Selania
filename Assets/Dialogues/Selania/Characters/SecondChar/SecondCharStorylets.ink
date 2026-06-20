@@ -86,7 +86,7 @@
             {charTag(SecondCharacter, "energy")}:               Ma per fortuna oggi potrò mangiare solo caramelle!
                     
                 
-            + (stagno) \ {charTag(PG, "neutral")}:              Niente caramelle, ma c'è uno stagno dove nuotare!
+            + (stagno) \ {charTag(PG, "neutral")}:              Niente caramelle, ma c'è uno stagno dove nuotare!//HA PIU SENSO CHE GLI SI FACCIANO GLI AUGURI XD
                     -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:               WOOOOOOOOOOW!
             {charTag(SecondCharacter, "melanchonic")}:          Non avevo mai visto uno stagno!
@@ -103,7 +103,7 @@
             {charTag(SecondCharacter, "neutral")}:              Papà è buono, fino a quando non si arrabbia.
             {charTag(SecondCharacter, "melanchonic")}:          E non voglio farlo arrabbiare.
                     
-            + (mamma) \ {charTag(PG, "neutral")}:               Vuoi molto bene alla tua mamma?//HA PIU SENSO CHE GLI SI FACCIANO GLI AUGURI XD
+            + (mamma) \ {charTag(PG, "neutral")}:               Si vede che tieni molto alla tua mamma.
                     -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "emotional")}:            Sì sì sì. 
             {charTag(SecondCharacter, "neutral")}:              Lei è la mamma migliore del pianeta.
@@ -604,7 +604,7 @@
                                                                 Volevo solo spingerla via.
                                                                 Ma mi sono arrabbiato troppo.
 
-            + (male) \ {charTag(PG, "neutral")}:                Si è sentita ferita, lo sai?
+            + (male) \ {charTag(PG, "neutral")}:                Si è sentita ferita.
                     -> glyph_choice_manager(false, waterC)->
 
                 {charTag(SecondCharacter, "angry")}:            E a me che mi importa?
@@ -1116,7 +1116,7 @@
             {charTag(SecondCharacter, "melanchonic")}:          Ma se poi si arrabbia con me e non mi vuole più lì?
                                                                 Poi non ci posso più stare con mio fratello!
                 
-            + \ {charTag(PG, "neutral")}:                       Hai chiesto all'amico di tuo fratello se gli dispiace che vai da lui?
+            + \ {charTag(PG, "neutral")}:                       Potresti provare a dire all'amico di tuo fratello quello che ti preoccupa.
                     -> glyph_choice_manager(false, waterC)->
             {charTag(SecondCharacter, "neutral")}:              Scherzi?!?
             {charTag(SecondCharacter, "angry")}:                Non sono mica <b><i>così</b></i> strano.

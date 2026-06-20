@@ -137,7 +137,7 @@
                                                                 Franco fa tantissimissime cose senza senso.
                 {charTag(SecondCharacter, "energy")}:           Ma sono le più migliori qui!
         
-            + \ {charTag(PG, "neutral")}:                       Il cuore degli adulti è molto molto complicato, {charNameTwo}.
+            + \ {charTag(PG, "neutral")}:                       Il cuore di un adulto è un complicato labirinto, {charNameTwo}.
                 -> glyph_choice_manager(false, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Che vuol dire?
                 {charTag(SecondCharacter, "angry")}:            Anche noi abbiamo cose complicate!
@@ -763,10 +763,10 @@
                 {charTag(SecondCharacter, "angry")}:            E alle persone che lavorano i bambini danno fastidio.
                 {charTag(SecondCharacter, "neutral")}:          Come quando vai in biblioteca e ti prendi bene e fai un po' di rumore e i grandi ti guardano male.
         
-            + \ {charTag(PG, "neutral")}:                       Mi spiace, non volevo farti arrabbiare. Vorrei solo parlare con te.
+            + \ {charTag(PG, "neutral")}:                       Mi spiace, non volevo farti arrabbiare. Vorrei solo conoscerti meglio.
                     -> glyph_choice_manager(false, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Però quello lo facciamo già.
-                                                                Anche se non parliamo di bugie.    
+                                                                Anche se non ci mettiamo a parlare di bugie.    
 
             + \ {charTag(PG, "neutral")}:                       No {charNameTwo}, vorrei solo capire meglio come ragioni.
                     -> glyph_choice_manager(false, airC)->
