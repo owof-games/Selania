@@ -479,7 +479,7 @@
                                                                 Lei mi fa stare bene davvero, non mi giudica.
 
         
-        + \ {charTag(PG, "neutral")}:                           Mi sembra che ci tieni molto a questa cosa dell'essere un bravo ragazzo.
+        + \ {charTag(PG, "neutral")}:                           Mi sembra che senti molto questo desiderio di essere un bravo ragazzo.
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -678,12 +678,12 @@
         {charTag(ThirdCharacter, "jester")}:                    E la serata così passa bene.
 
         
-        + \ {charTag(PG, "neutral")}:                           Mi chiedevo: come mai parli sempre degli altri e quasi mai di te?
+        + \ {charTag(PG, "neutral")}:                           Stavo notando che parli molto degli altri, ma senza svelare molto di te.
                 -> glyph_choice_manager(false, waterC)->
 
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:       
-                {charTag(ThirdCharacter, "bored")}:             Potresti anche non chiedertelo e risolvere il problema, {player_name}.     
+                {charTag(ThirdCharacter, "bored")}:             Potresti anche non notarlo e risolvere da solo il problema, {player_name}.     
                 }
         {charTag(ThirdCharacter, "neutral")}:                   Ti ho parlato della mia ragazza, del lavoro, dei miei amici.
                                                                 Vuoi conoscere il mio numero di scarpe?
@@ -842,7 +842,7 @@
                 } 
                                                             
         
-        + \ {charTag(PG, "neutral")}:                           Forse a volte si può tenere a qualcuno, ma non reggere più la relazione.
+        + \ {charTag(PG, "neutral")}:                           A volte si può tenere a qualcuno, ma non reggere più il peso della relazione.
                 -> glyph_choice_manager(false, waterC)->
         {charTag(ThirdCharacter, "angry")}:                     Cazzate.
                                                                 Se ami qualcuno ti fai il culo e ti adatti.
@@ -1188,7 +1188,7 @@
                 }                                                          
 
         
-        + \ {charTag(PG, "neutral")}:                           Hai provato a dirgli che ti manca?
+        + \ {charTag(PG, "neutral")}:                           Hai pensato di dirgli che ti manca?
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:       
@@ -1316,7 +1316,7 @@
                 
         + (fire)\ {charTag(PG, "neutral")}:                     Riprenditi quel calcetto! Poggi l'ha fatto per te, per quando stavi male, non devi far vincere il Merlo!
                 
-        + (water)\ {charTag(PG, "neutral")}:                    Ti fidi di Rocco: fai il primo passo e invitalo a bere.
+        + (water)\ {charTag(PG, "neutral")}:                    Fidati di Rocco: fai il primo passo e invitalo a bere.
                 
         + (aether)\ {charTag(PG, "neutral")}:                   Petra ti è già amica, e la sua rabbia ha qualcosa di importante da insegnarti. Chiedile di aiutarti a capire.
                 
@@ -1363,7 +1363,7 @@
 
         + (fire)\ {charTag(PG, "neutral")}:                     Hai già i tuoi casini: chi se ne frega di chi tradisce chi, divertirti per una volta!
                 
-        + (water)\ {charTag(PG, "neutral")}:                    Ora che Ava ti ha dato più sicurezza, perché non provi a prenderti cura dei rapporti che hai già, come quelli con la tua famiglia?
+        + (water)\ {charTag(PG, "neutral")}:                    Ora che Ava ti ha reso sicuro, potresti dedicarti ai legami che hai già, come quelli con la famiglia.
 
         + (aether)\ {charTag(PG, "neutral")}:                   Dalle il giusto saluto, e prova a capire cosa hai imparato su di te.
                 
@@ -1391,7 +1391,7 @@
         + (fire)\ {charTag(PG, "neutral")}:                     Dai fuoco a tutto e fagli capire quanto sei incazzato.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Fagli capire quanto ti manca, senza che sia la rabbia a parlare al posto tuo.
+        + (water)\ {charTag(PG, "neutral")}:                    Mostragli con sincerità quanto ti manca, senza che sia la rabbia a parlare al posto tuo.
                 
 
         + (aether)\ {charTag(PG, "neutral")}:                   Offri in modo sincero il tuo aiuto per la raccolta fondi.
@@ -1419,7 +1419,7 @@
         + (fire)\ {charTag(PG, "neutral")}:                     Per ricominciare da capo serve distruggere tutto, bruciare il passato.
                 
 
-        + (water)\ {charTag(PG, "neutral")}:                    Le cose dette da Poggi ti hanno ferito, lascia perdere Donatella ora e chiedi aiuto a chi ti vuole bene.
+        + (water)\ {charTag(PG, "neutral")}:                    Sei ancora ferito dalla conversazione con Poggi: lascia perdere Donatella e chiedi aiuto a chi ti vuole bene.
                 
 
         + (aether)\ {charTag(PG, "neutral")}:                   {charNameThree} non hai bisogno di una spirale autodistruttiva ma di un aiuto, che sia psicologico o spirituale.
