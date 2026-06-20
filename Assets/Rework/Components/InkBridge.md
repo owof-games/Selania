@@ -40,3 +40,33 @@ Whenever a save file is produced, the system checks if it can remove old save fi
 Both these parameters are passed once again through `SetUp`.
 
 The interface `IStoryStateSerializer` is implemented to offer methods that return all available save states (GetSaveStates) and load a story / start a new story (StartStory).
+
+## Grimoire page changes detection
+
+In order to detect when the grimoire changes, InkBridge visits the grimoire node and all its children using depth-first search, and saves a tree structure of the nodes visited (a node is defined by all the stuff from the start of a text until the set of choices). The nodes that point to previous, next and back are taken into consideration but not considered during navigation: this ensures the nodes can be serialized as a tree.
+
+Whenever needed (new room? conversation ended? every line of text?), the grimoire is re-visited, and the new data structure is compared with the previous one. Whenever a node has changed, it's marked as such. Then, a `GrimoireChanged` observable event is raised.
+
+It's possible to ask if a node (or any child) has changed (in order to show the change marker), and mark a node as seen (which removes the changed flag).
+
+The structure of the grimoire is visited by running a depth-first search, but contrary to standard DFS, we must follow the link (choices) provided by Ink in order to run along the tree of the grimoire. In order to do this, instead of using a stack, we remember which children we visited of each node, and the algorithm looks something like this:
+
+```
+visitedChoicesByNode = {}
+
+loop:
+choice = first choice "c" in currentChoices such that:
+    it's not a navigation link (a choice tagged with "bookmark:<something>"), and
+    visitedChoicesByNode[currentNode] does not contain c
+if you found one:
+    add choice to visitedChoicesByNode[currentNode]
+    take choice
+    go to loop
+else if there's a navigation link to go back
+    take choice
+    go to loop
+else
+    end the algorithm
+```
+
+This avoids using the stack of DFS, but we have instead a map from nodes to list of nodes

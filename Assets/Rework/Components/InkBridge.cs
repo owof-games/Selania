@@ -2439,11 +2439,6 @@ namespace Selania.Rework.Components
         #region grimoire changes
 
         /// <summary>
-        ///     An observable that emits a page identifier each time that page identifier either appears or change its contents.
-        /// </summary>
-        private Observable<GrimoirePageIdentifier> ChangedPageIdentifiers => throw new NotImplementedException();
-
-        /// <summary>
         ///     Check if a grimoire page identifier needs the marker of something changed (it has changed, or one of the children
         ///     pages has changed).
         /// </summary>
@@ -2467,24 +2462,197 @@ namespace Selania.Rework.Components
         public Observable<Unit> GrimoireChanged => throw new NotImplementedException();
 
         /// <summary>
+        ///     A representation of the tree of pages of a grimoire, where locked pages are not present.
+        /// </summary>
+        /// <param name="TreeRoot">Identifier for the root page of the tree.</param>
+        /// <param name="IdentifierToContent">A map from page identifiers to their contents.</param>
+        /// <param name="LinkToIdentifier">A map from links to the identifiers of the visited page.</param>
+        private record GrimoireTree(
+            GrimoirePageIdentifier TreeRoot,
+            Dictionary<GrimoirePageIdentifier, GrimoirePageContent> IdentifierToContent,
+            Dictionary<GrimoireLink, GrimoirePageIdentifier> LinkToIdentifier);
+
+        /// <summary>
+        ///     Visit the whole grimoire in a separate flow and returns the data structure that represents the contents
+        ///     of the grimoire itself.
+        /// </summary>
+        private GrimoireTree BuildTree()
+        {
+            // data structure to perform the depth-first search: see InkBridge.md for details on the algorithm
+            Dictionary<GrimoirePageIdentifier, List<GrimoireLink>> visitedLinks = new();
+            Dictionary<GrimoirePageIdentifier, GrimoirePageContent> identifierToContent = new();
+            Dictionary<GrimoireLink, GrimoirePageIdentifier> linkToIdentifier = new();
+            GrimoireLink? lastFollowedLink = null;
+            GrimoirePageIdentifier? root = null;
+
+            // get the story
+            var story = GetStory();
+
+            // jump to the grimoire in a different flow
+            var startingFlowName = story.currentFlowName;
+            story.SwitchFlow("grimoireTreeBuilder");
+            story.ChoosePathString(grimoireInkNodeName);
+            try
+            {
+                for (;;)
+                {
+                    // get out identifier and content of this node
+                    story.Continue();
+                    var identifier = GetIdentifier();
+                    var content = GetContent();
+                    // store the root, correspondences identifier => content and link => identifier, with some runtime checks
+                    root ??= identifier;
+                    if (lastFollowedLink != null)
+                        if (!linkToIdentifier.TryAdd(lastFollowedLink, identifier) &&
+                            !linkToIdentifier[lastFollowedLink].Equals(identifier))
+                            throw new InvalidOperationException("Found the same link with two different identifiers");
+
+                    if (!identifierToContent.TryAdd(identifier, content) &&
+                        !identifierToContent[identifier].Equals(content))
+                        throw new InvalidOperationException(
+                            "Found the same identifier with two different contents");
+
+                    // check the first link we can follow that is a forward navigation and we haven't visited yet
+                    if (!visitedLinks.ContainsKey(identifier)) visitedLinks[identifier] = new List<GrimoireLink>();
+
+                    var currentVisitedLinks = visitedLinks[identifier];
+                    var forwardLink = (
+                        from link in content.GrimoireLinks
+                        where link.NavigationKind == NavigationKind.Forward && !currentVisitedLinks.Contains(link)
+                        select link
+                    ).FirstOrDefault();
+                    if (forwardLink != null)
+                    {
+                        lastFollowedLink = forwardLink;
+                        currentVisitedLinks.Add(forwardLink);
+                        story.ChooseChoiceIndex(forwardLink.ChoiceIndex);
+                        continue;
+                    }
+
+                    // otherwise, try to find a back link
+                    var backLink =
+                        content.GrimoireLinks.FirstOrDefault(link => link.NavigationKind == NavigationKind.Back);
+                    if (backLink != null)
+                    {
+                        lastFollowedLink = null;
+                        story.ChooseChoiceIndex(backLink.ChoiceIndex);
+                        continue;
+                    }
+
+                    // otherwise, we got back to root and we have nothing more to visit!
+                    break;
+                }
+            }
+            finally
+            {
+                // revert back to the normal flow
+                story.SwitchFlow(startingFlowName);
+            }
+
+            // sanity checks - if they end up being costly, we can move them under a #if UNITY_EDITOR once we're sure the code is ok
+            if (root == null)
+                throw new InvalidOperationException("Finished the visit of build tree without producing the root");
+            foreach (var content in identifierToContent.Values)
+            foreach (var link in content.GrimoireLinks)
+            {
+                var identifier = linkToIdentifier.GetValueOrDefault(link) ??
+                                 throw new InvalidOperationException($"Missing identifier for link {link}");
+                if (!identifierToContent.ContainsKey(identifier))
+                    throw new InvalidOperationException(
+                        $"Link {link} points to identifier {identifier} which has not been visited");
+            }
+
+            // return the result
+            return new GrimoireTree(root, identifierToContent, linkToIdentifier);
+
+            GrimoirePageIdentifier GetIdentifier()
+            {
+                story.Continue();
+                return new GrimoirePageIdentifier(story.currentText,
+                    story.currentTags.OrderBy(tag => tag).ToList());
+            }
+
+            GrimoirePageContent GetContent()
+            {
+                StringBuilder sb = new();
+                while (story.canContinue)
+                {
+                    story.Continue();
+                    sb.Append(story.currentText);
+                }
+
+                var storyCurrentChoices = story.currentChoices;
+                // find the "back" entry, if any
+                var backChoiceIndex =
+                    (story.currentChoices.FirstOrDefault(choice =>
+                         choice.tags.Contains($"{bookmarkTagCategory}:{secondLevelBookmarkTagValue}")) ??
+                     story.currentChoices.FirstOrDefault(choice =>
+                         choice.tags.Contains($"{bookmarkTagCategory}:{indexBookmarkTagValue}")))?.index;
+                var previousTag = $"{bookmarkTagCategory}:{backBookmarkTagValue}";
+                var nextTag = $"{bookmarkTagCategory}:{forwardBookmarkTagValue}";
+
+                // create the links
+                var links = new List<GrimoireLink>(storyCurrentChoices.Count);
+                foreach (var choice in storyCurrentChoices)
+                {
+                    // extract choice information
+                    var text = choice.text;
+                    var index = choice.index;
+                    var nonBookmarkTags = (
+                        // sort and don't consider navigation tags for identity
+                        from tag in choice.tags
+                        where !tag.StartsWith(bookmarkTagCategory)
+                        orderby tag
+                        select tag
+                    ).ToList();
+                    var navigationTagValue =
+                        choice.tags.SingleOrDefault(tag => tag.StartsWith(bookmarkTagCategory));
+                    var navigationKind = NavigationKind.Forward;
+                    if (backChoiceIndex == index)
+                        navigationKind = NavigationKind.Back;
+                    else if (navigationTagValue == previousTag)
+                        navigationKind = NavigationKind.Previous;
+                    else if (navigationTagValue == nextTag) navigationKind = NavigationKind.Next;
+
+                    // create the link
+                    var grimoireLink = new GrimoireLink(text, index, nonBookmarkTags, navigationKind);
+                    links.Add(grimoireLink);
+                }
+
+                return new GrimoirePageContent(sb.ToString(), links.ToArray());
+            }
+        }
+
+        /// <summary>
         ///     The identifier of a page: the first line of text (its "name") and the associated tags.
         /// </summary>
-        /// <param name="Name">The name of the page (first line of text).</param>
-        /// <param name="Tags">The tags associated with the first line of text, ordered alphabetically.</param>
-        private record GrimoirePageIdentifier(
-            string Name,
-            IEnumerable<string> Tags)
+        private class GrimoirePageIdentifier
         {
+            private readonly string _name;
+            private readonly IEnumerable<string> _tags;
+
+            /// <summary>
+            ///     Create a new GrimoirePageIdentifier.
+            /// </summary>
+            /// <param name="name">The name of the page (first line of text).</param>
+            /// <param name="tags">The tags associated with the first line of text, ordered alphabetically.</param>
+            public GrimoirePageIdentifier(string name,
+                IEnumerable<string> tags)
+            {
+                _name = name;
+                _tags = tags;
+            }
+
             public virtual bool Equals(GrimoirePageIdentifier? other)
             {
-                return Name == other?.Name && Tags.SequenceEqual(other.Tags);
+                return _name == other?._name && _tags.SequenceEqual(other._tags);
             }
 
             public override int GetHashCode()
             {
                 var hashCode = new HashCode();
-                hashCode.Add(Name);
-                foreach (var tag in Tags) hashCode.Add(tag);
+                hashCode.Add(_name);
+                foreach (var tag in _tags) hashCode.Add(tag);
 
                 return hashCode.ToHashCode();
             }
@@ -2493,51 +2661,113 @@ namespace Selania.Rework.Components
         /// <summary>
         ///     The contents of a page: all the text after the first line, and all the choices at the end ("links").
         /// </summary>
-        /// <param name="Text">The text of the pages, excluding the first line.</param>
-        /// <param name="Links">All the choices at the end of the text, ordered alphabetically by <see cref="GrimoireLink.Text" />.</param>
-        private record GrimoirePageContent(string Text, IEnumerable<GrimoireLink> Links)
+        private class GrimoirePageContent
         {
+            private readonly string _text;
+
+            /// <summary>
+            ///     Create a new GrimoirePageContent.
+            /// </summary>
+            /// <param name="text">The text of the pages, excluding the first line.</param>
+            /// <param name="grimoireLinks">The links from this content to other nodes</param>
+            public GrimoirePageContent(string text, GrimoireLink[] grimoireLinks)
+            {
+                _text = text;
+                GrimoireLinks = grimoireLinks;
+            }
+
+            public GrimoireLink[] GrimoireLinks { get; }
+
             public virtual bool Equals(GrimoirePageContent? other)
             {
-                return Text == other?.Text && Links.SequenceEqual(other.Links);
+                return _text == other?._text && other.GrimoireLinks
+                    .Where(l => l.NavigationKind == NavigationKind.Forward)
+                    .SequenceEqual(GrimoireLinks.Where(l => l.NavigationKind == NavigationKind.Forward));
             }
 
             public override int GetHashCode()
             {
                 var hashCode = new HashCode();
-                hashCode.Add(Text);
-                foreach (var tag in Links) hashCode.Add(tag);
+                hashCode.Add(_text);
+                foreach (var link in GrimoireLinks.Where(l => l.NavigationKind == NavigationKind.Forward))
+                    hashCode.Add(link);
 
                 return hashCode.ToHashCode();
             }
         }
 
         /// <summary>
+        ///     The type of navigation of this link.
+        /// </summary>
+        public enum NavigationKind
+        {
+            /// <summary>
+            ///     The navigation goes deeper in the tree.
+            /// </summary>
+            Forward,
+
+            /// <summary>
+            ///     The navigation moves to a previous sibling.
+            /// </summary>
+            Previous,
+
+            /// <summary>
+            ///     The navigation moves to a next sibling.
+            /// </summary>
+            Next,
+
+            /// <summary>
+            ///     The navigation moves up one level.
+            /// </summary>
+            Back,
+
+            /// <summary>
+            ///     The navigation moves up two levels.
+            /// </summary>
+            TwiceBack
+        }
+
+        /// <summary>
         ///     A single link (choice) at the end of a grimoire page.
         /// </summary>
-        /// <param name="Identifier">The identifier of the link.</param>
-        /// <param name="Text">The text of the choice.</param>
-        /// <param name="Tags">The tags of the choice, ordered alphabetically.</param>
-        /// <param name="IsSideNavigation">Whether this link is for side navigation, AKA previous, next or back.</param>
-        private record GrimoireLink(
-            GrimoirePageIdentifier Identifier,
-            string Text,
-            IEnumerable<string> Tags,
-            bool IsSideNavigation)
+        private class GrimoireLink
         {
+            private readonly IEnumerable<string> _tags;
+            private readonly string _text;
+
+            /// <summary>
+            ///     Create a new GrimoireLink.
+            /// </summary>
+            /// <param name="text">The text of the choice.</param>
+            /// <param name="choiceIndex">The choice index.</param>
+            /// <param name="tags">The tags of the choice, ordered alphabetically.</param>
+            /// <param name="navigationKind">The type of navigation of this link.</param>
+            public GrimoireLink(string text,
+                int choiceIndex,
+                IEnumerable<string> tags,
+                NavigationKind navigationKind)
+            {
+                _text = text;
+                ChoiceIndex = choiceIndex;
+                _tags = tags;
+                NavigationKind = navigationKind;
+            }
+
+            public int ChoiceIndex { get; }
+            public NavigationKind NavigationKind { get; }
+
             public virtual bool Equals(GrimoireLink? other)
             {
-                return Identifier == other?.Identifier && Text == other.Text &&
-                       IsSideNavigation == other.IsSideNavigation && Tags.SequenceEqual(other.Tags);
+                return _text == other?._text && NavigationKind == other.NavigationKind &&
+                       _tags.SequenceEqual(other._tags);
             }
 
             public override int GetHashCode()
             {
                 var hashCode = new HashCode();
-                hashCode.Add(Identifier);
-                hashCode.Add(Text);
-                hashCode.Add(IsSideNavigation);
-                foreach (var tag in Tags) hashCode.Add(tag);
+                hashCode.Add(_text);
+                hashCode.Add(NavigationKind);
+                foreach (var tag in _tags) hashCode.Add(tag);
 
                 return hashCode.ToHashCode();
             }
