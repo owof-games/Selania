@@ -79,11 +79,12 @@
         {charTag(FirstCharacter, "affectionate")}:              La mia mente è limpida e innocente.
         {charTag(FirstCharacter, "neutral")}:                   Non come quella di un bambino, ascoltando le cose che dice il piccoletto.
             
-        + \ {charTag(PG, "neutral")}:                           Chiederei agli alieni qual'è il senso della vita.
+        + \ {charTag(PG, "neutral")}:                           Chiederei agli alieni se hanno scoperto il fine ultimo della coscienza.
             -> glyph_choice_manager(false, aetherC)->
         {charTag(SecondCharacter, "neutral")}:                  Te lo dico io: caramelle!
                                                                 E vedere i pinguini.
-        {charTag(FirstCharacter, "affectionate")}:              Ma sarebbe una risposta che mi risolverebbe una marea di problemi.
+                                                                Viviamo per poter guardare i pinguini!
+        {charTag(FirstCharacter, "affectionate")}:              Forse la risposta mi spaventerebbe, ma potrebbe rendermi la vita più facile.
         -    
     {charTag(FirstCharacter, "neutral")}:                       Bene, direi che abbiamo tutt3 qualcosa a cui pensare.
     {charTag(FirstCharacter, "affectionate")}:                  Tipo, dove schiacciarmi quel pisolino.
@@ -147,7 +148,7 @@
                 {charTag(FirstCharacter, "neutral")}:                       Sai che non è una gara, vero?
                 }
 
-        + \ {charTag(PG, "neutral")}:                                   Tu ti sei perdonata, per quello che hai fatto?
+        + \ {charTag(PG, "neutral")}:                                   Quello che puoi fare è cercare di perdonare te stessa: ne trarrete entramb3 beneficio.
                 -> glyph_choice_manager(Mentor, aetherC)->
         {charTag(FifthCharacter, "sad")}:                               Non.
                                                                         No.
@@ -359,7 +360,7 @@
         {charTag(Mentor, "neutral")}:                                           Devi superare la paura di farti domande che possono capovolgere il tuo mondo.
         {charTag(TheWitch, "{witch_state()}")}:                                 <i>E sapere che quella domanda esiste, visto che potrebbe non fare proprio parte del tuo mondo, del tuo quotidiano.</i>                                                                         
 
-        + \ {charTag(PG, "neutral")}:                                           Abbandonare {charNameThree} vuol dire aprire alla possibilità di abbandonare chiunque. Ma la fatica per aiutarlo va condivisa tra noi.
+        + \ {charTag(PG, "neutral")}:                                           Abbandonare {charNameThree} vuol dire aprire alla possibilità di abbandonare chiunque. Piuttosto, condividiamo tra noi la fatica.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(FirstCharacter, "curious")}:                                   Ed è subito: FONDIAMO UN COLLETTIVO!
         {charTag(FirstCharacter, "neutral")}:                                   Emotivamente ti do ragione ama.
@@ -466,63 +467,64 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    {charTag(FifthCharacter, "neutral")}:                               Quindi puoi parlare con, con questo pozzo?
-                                                                        Perché mi piacerebbe.
-    {charTag(FifthCharacter, "sorry")}:                                 Oh, è una cosa vanitosa.
-    {charTag(FifthCharacter, "neutral")}:                               Ma mi piacerebbe sapere cosa ne pensa di me.
-                                                                        Del mio lavoro.
-    {charTag(FifthCharacter, "hurry")}:                                 Se sto facendo un buon lavoro.
-    {charTag(FifthCharacter, "neutral")}:                               Visto che vede e sente tutto.
-    {charTag(TheWitch, witch_state())}:                                 <i>Crediamo che {charNameFive} stia facendo un buon lavoro.</i>
-                                                                        <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
-                                                                        <i>Ma così come l'acqua non può essere incendio, così {charNameFive} non può essere qualcosa che non è.</i>
-                                                                        <i>O portare nomi che non sa.</i>
+    {charTag(FifthCharacter, "neutral")}:                                       Quindi puoi parlare con, con questo pozzo?
+                                                                                Perché mi piacerebbe.
+    {charTag(FifthCharacter, "sorry")}:                                         Oh, è una cosa vanitosa.
+    {charTag(FifthCharacter, "neutral")}:                                       Ma mi piacerebbe sapere cosa ne pensa di me.
+                                                                                Del mio lavoro.
+    {charTag(FifthCharacter, "hurry")}:                                         Se sto facendo un buon lavoro.
+    {charTag(FifthCharacter, "neutral")}:                                       Visto che vede e sente tutto.
+    {charTag(TheWitch, witch_state())}:                                         <i>Crediamo che {charNameFive} stia facendo un buon lavoro.</i>
+                                                                                <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.</i>
+                                                                                <i>Ma così come l'acqua non può essere incendio, così {charNameFive} non può essere qualcosa che non è.</i>
+                                                                                <i>O portare nomi che non sa.</i>
 
-        //Da riscrivere, prima era aria.
-    + \ {charTag(PG, "neutral")}:                                       Metà delle cose che la voce dice sono illogiche.
+
+    + \ {charTag(PG, "neutral")}:                                               Forse stai cercando di essere qualcosa che non sei, {charNameFive}.
             -> glyph_choice_manager(Mentor, aetherC)->
-    {charTag(TheWitch, witch_state())}:                                 <i>{player_name} non vede, e quindi decide che qualcosa non esiste.</i>
-                                                                        <i>Ma quella cosa esiste anche se {player_name} non vede.</i>
-    {charTag(FifthCharacter, "sad")}:                                   Uh, peccato.
-    {charTag(FifthCharacter, "neutral")}:                               Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
-        
-    + \ {charTag(PG, "neutral")}:                                       Sente quanto impegno stai mettendo nel prenderti cura di questo luogo.
-            -> glyph_choice_manager(Mentor, waterC)->
-    {charTag(FifthCharacter, "hurry")}:                                 Oh, ma sicuramente esagera.
-    {charTag(FifthCharacter, "sad")}:                                   Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le pietre del pozzo.
-                                                                        Però.
-    {charTag(FifthCharacter, "neutral")}:                               Ringrazia la voce da parte mia.
-    {charTag(TheWitch, witch_state())}:                                 <i>Dire una mezza verità porta su una mezza strada.</i>
-    
-    + \ {charTag(PG, "neutral")}:                                       Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
-            -> glyph_choice_manager(Mentor, earthC)->
-    {charTag(FifthCharacter, "sad")}:                                   Non è che ho lasciato qualcosa di acceso in cucina?
-                                                                        No dai, si vedrebbe il fumo da qui, sicuro.
-    {charTag(FifthCharacter, "neutral")}:                               Magari è qualcosa di simbolico.
-    {charTag(FifthCharacter, "sorry")}:                                 Spero di non aver distrutto nulla.
-    
-    + \ {charTag(PG, "neutral")}:                                       Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
-            -> glyph_choice_manager(Mentor, airC)->
-    {charTag(FifthCharacter, "neutral")}:                               Credo di sì.
-                                                                        Ma uno sguardo esterno ci può aiutare, immagino.
-    {charTag(FifthCharacter, "sad")}:                                   Oh, non lo so.
-    {charTag(FifthCharacter, "neutral")}:                               Sì.
-                                                                        Credo di star facendo un buon lavoro.
+        {charTag(FifthCharacter, "sad")}:                                       Quindi non sono adatta a fare da Mentore?
+        {charTag(FifthCharacter, "neutral")}:                                   Ma io adoro aiutare le persone!
+                                                                                Sono bravissima nel farlo!
+        {charTag(TheWitch, witch_state())}:                                     <i>A volte la verità va mediata, ritagliata sulla forma delle orecchie di chi ascolta.</i>
+                                                                                <i>Ma apprezziamo la sincerità di {player_name}.</i>    
 
-    + \ {charTag(PG, "neutral")}:                                       In soldoni: no.
+    + \ {charTag(PG, "neutral")}:                                               Sente quanto impegno stai mettendo nel prenderti cura di questo luogo.
+            -> glyph_choice_manager(Mentor, waterC)->
+    {charTag(FifthCharacter, "hurry")}:                                         Oh, ma sicuramente esagera.
+    {charTag(FifthCharacter, "sad")}:                                           Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio tra le pietre del pozzo.
+                                                                                Però.
+    {charTag(FifthCharacter, "neutral")}:                                       Ringrazia la voce da parte mia.
+    {charTag(TheWitch, witch_state())}:                                         <i>Dire una mezza verità porta su una mezza strada.</i>
+    
+    + \ {charTag(PG, "neutral")}:                                               Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+            -> glyph_choice_manager(Mentor, earthC)->
+    {charTag(FifthCharacter, "sad")}:                                           Non è che ho lasciato qualcosa di acceso in cucina?
+                                                                                No dai, si vedrebbe il fumo da qui, sicuro.
+    {charTag(FifthCharacter, "neutral")}:                                       Magari è qualcosa di simbolico.
+    {charTag(FifthCharacter, "sorry")}:                                         Spero di non aver distrutto nulla.
+    
+    + \ {charTag(PG, "neutral")}:                                               Non è più importante il tuo di giudizio sul tuo lavoro, {charNameFive}?
+            -> glyph_choice_manager(Mentor, airC)->
+    {charTag(FifthCharacter, "neutral")}:                                       Credo di sì.
+                                                                                Ma uno sguardo esterno ci può aiutare, immagino.
+    {charTag(FifthCharacter, "sad")}:                                           Oh, non lo so.
+    {charTag(FifthCharacter, "neutral")}:                                       Sì.
+                                                                                Credo di star facendo un buon lavoro.
+
+    + \ {charTag(PG, "neutral")}:                                               In soldoni: no.
             -> glyph_choice_manager(Mentor, fireC)->
-    {charTag(TheWitch, witch_state())}:                                 <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
-    {charTag(FifthCharacter, "sad")}:                                   Oh.
-                                                                        Forse potrei chiedere scusa in qualche modo a...
-                                                                        Ma a chi?
-                                                                        Come?
-    {charTag(FifthCharacter, "hurry")}:                                 Ho deciso: pulisco il tronco.
-    {charTag(FifthCharacter, "neutral")}:                               Potrebbe apprezzare, immagino.
-    {charTag(TheWitch, witch_state())}:                                 <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
+    {charTag(TheWitch, witch_state())}:                                         <i>La frusta che cade senza motivo non porta alcun insegnamento.</i>
+    {charTag(FifthCharacter, "sad")}:                                           Oh.
+                                                                                Forse potrei chiedere scusa in qualche modo a...
+                                                                                Ma a chi?
+                                                                                Come?
+    {charTag(FifthCharacter, "hurry")}:                                         Ho deciso: spazzolo gli spazi tra le pietre.
+    {charTag(FifthCharacter, "neutral")}:                                       Potrebbe apprezzare, immagino.
+    {charTag(TheWitch, witch_state())}:                                         <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.</i> 
     -
-    {charTag(FifthCharacter, "sad")}:                                   Immagino sia faticoso, avere una voce in testa, così.
-    {charTag(FifthCharacter, "neutral")}:                               O magari ti fa sentire meno {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}?
-                                                                        Ho qualcosa su cui riflettere, immagino.
+    {charTag(FifthCharacter, "sad")}:                                           Immagino sia faticoso, avere una voce in testa, così.
+    {charTag(FifthCharacter, "neutral")}:                                       O magari ti fa sentire meno {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}?
+                                                                                Ho qualcosa su cui riflettere, immagino.
 
         -> witch_closing_storylet ->
         -> mentor_closing_storylet ->
@@ -681,7 +683,7 @@
                                                                         E poi a zia Graaak.
         {charTag(Franco, "party")}:                                     E da lì a tutte le altre rane.    
             
-        + \ {charTag(PG, "neutral")}:                                   C'è qualcosa nell'illogicità di Franco che è quasi divina.
+        + \ {charTag(PG, "neutral")}:                                   L'irrazionalità di Franco sembra divina, un pozzo diritto verso l'inconscio.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(Franco, "party")}:                                     Quindi posso esaudire i desideri delle persone?
         {charTag(Franco, "neutral")}:                                   {charNameOne}!
@@ -804,7 +806,7 @@
                                                                         E se sai tutte le parole di <i>(You Drive Me)Craaazy</i> sei una rana!
         {charTag(SecondCharacter, "neutral")}:                          Le parole di cosa?!?
 
-        + \ {charTag(PG, "neutral")}:                                   Dato che è un mistero irrisolvibile, sta a {charNameTwo} decidere se lo è o meno.
+        + \ {charTag(PG, "neutral")}:                                   L'unico che può ascoltare la sua vera natura è {charNameTwo}, per cui sta a lui trovare la sua risposta.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(Franco, "question")}:                                  E cosa ne pensa {charNameTwo}?
         {charTag(SecondCharacter, "energy")}:                           Mi sembrava una cosa bellissima essere una rana.
@@ -968,7 +970,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     Ognuno si fa male come gli pare.
 
 
-        + \ {charTag(PG, "neutral")}:                                           Credo che il punto di Franco sia: se le regole danneggiano chi ha meno potere, vanno rotte.
+        + \ {charTag(PG, "neutral")}:                                           Franco sta dicendo che se le regole danneggiano chi ha meno potere allora vanno distrutte.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
@@ -981,12 +983,17 @@
         {charTag(Franco, "neutral")}:                                           Quasi tutti.
                                                                                 Euforbo è spesso confuso.
         {charTag(ThirdCharacter, "bored")}:                                     Non solo Euforbo.
-        {charTag(ThirdCharacter, "neutral")}:                                   E le regole servono per tenere un minimo di ordine.
-                                                                                Meglio una regola tristolina ma che non fa creare casini, che nessuna regola e solo casini.
+        {charTag(ThirdCharacter, "neutral")}:                                   Le regole servono per tenere un minimo di ordine.
+                                                                                Meglio una regola stupida ma che non fa creare casini, che nessuna regola e solo casini.
                 {
                 - are_two_entities_together(FifthCharacter, PG): 
                 {charTag(Mentor, "hurry")}:                                     Siamo d'accordo con te, {charNameThree}.
                 {charTag(ThirdCharacter, "jester")}:                            Per fortuna che ci sei tu, zia, a capirmi!           
+                }
+                {
+                - are_two_entities_together(FirstCharacter, PG): 
+                {charTag(FirstCharacter, "bored")}:                             Io qui sono per Team Franco.
+                {charTag(Franco, "party")}:                                     E io sono Franco!
                 }                                                                                                                                        
         -
         {charTag(ThirdCharacter, "neutral")}:                                   Franchì, riprendiamo!
@@ -1129,7 +1136,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     E poi la fiducia è una cosa esagerata.
                                                                                 Niente e nessuno c'è per sempre, e alla fine ognuno pensa ai cazzi propri.
                 
-        + \ {charTag(PG, "neutral")}:                                           Se ci mostriamo vulnerabili, le relazioni ci accrescono. Altrimenti rimaniamo per sempre la solita cosa, mentre il mondo cambia.
+        + \ {charTag(PG, "neutral")}:                                           Se siamo vulnerabili, le relazioni ci accrescono. Altrimenti ristagniamo mentre il mondo cambia.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
@@ -1332,7 +1339,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     Pensavo di avere a che fare con un bambino, invece ne ho due.
                                                                                 Povero me.
 
-        + \ {charTag(PG, "neutral")}:                                           Cos'è tutta questa urgenza di mettere {charNameTwo} in una scatoletta, {charNameThree}?
+        + \ {charTag(PG, "neutral")}:                                           Hai una certa fretta di mettere {charNameTwo} in una scatoletta, {charNameThree}.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
@@ -1342,7 +1349,7 @@
                                                                                 Ma il mondo là fuori è complicato.
                                                                                 E se ci vuoi davvero bene a questo bimbetto non gli servono altre favole.
         {charTag(ThirdCharacter, "neutral")}:                                   Gli serve capire come fare squadra, come stare con gli altri ragazzi.
-                                                                                Solo io mi rendo conto che questo ragazzino non sa stare con quelli della sua età?                                                                        
+                                                                                Solo io mi rendo conto che 'sto ragazzino non ci sa stare con quelli della sua età?                                                                        
         -
         {charTag(SecondCharacter, "neutral")}:                                  Facciamo così.
                                                                                 Io vengo alla partita, se tu vieni con me all'acquario.
@@ -1499,7 +1506,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     Sentila.
                                                                                 Quella che passa il tempo a rompermi i maroni.                                   
 
-        + \ {charTag(PG, "neutral")}:                                           {charNameThree}: se il dolore che provi fosse solo tuo e non un problema universale, varrebbe meno?
+        + (water) \ {charTag(PG, "neutral")}:                                           {charNameThree}: se il dolore che provi fosse solo tuo e non un problema universale, varrebbe meno?
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == her:
@@ -1512,7 +1519,7 @@
                                                                                 Lo sono i problemi sul lavoro, l'attacco ai diritti riproduttivi.
                                                                                 Non è difficile, ammasso di testosterone che non sei altro!                                                                        
                 
-        + (aether) \ {charTag(PG, "neutral")}:                                  Credo che il punto di {charNameOne} sia: magari non te ne rendi conto, ma ragioni come un misogino.
+        + (aether) \ {charTag(PG, "neutral")}:                                  {charNameOne} sta cercando di dirti che anche se non te ne rendi conto, ragioni come un misogino.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
@@ -1531,7 +1538,7 @@
         {charTag(FirstCharacter, "neutral")}:                                   {charNameThree}: io non metto in discussione che tu sia ferito, e che la fine della relazione con Donatella sia stata dolorosa.
                                                                                 Ma.
                 {
-                        - aether:
+                        - water:
                                                                                 E qui mi accodo a {player_name}.
                 }
                                                                                 Non serve trasformare un problema personale in un problema strutturale per ricevere dalle altre persone cura e supporto.
