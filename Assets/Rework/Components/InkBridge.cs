@@ -2656,6 +2656,21 @@ namespace Selania.Rework.Components
 
                 return hashCode.ToHashCode();
             }
+
+            public override string ToString()
+            {
+                var sb = new StringBuilder();
+                sb.Append("[GrimoirePageIdentifier ");
+                sb.Append(_name);
+                foreach (var tag in _tags)
+                {
+                    sb.Append(" #");
+                    sb.Append(tag);
+                }
+
+                sb.Append(']');
+                return sb.ToString();
+            }
         }
 
         /// <summary>
@@ -2694,12 +2709,28 @@ namespace Selania.Rework.Components
 
                 return hashCode.ToHashCode();
             }
+
+            public override string ToString()
+            {
+                var sb = new StringBuilder();
+                sb.Append("[GrimoirePageContent ");
+                sb.Append(_text.Replace("\n", "\\n").Replace("\r", "\\r"));
+                sb.Append(" ----------------------- links: ");
+                foreach (var link in GrimoireLinks)
+                {
+                    link.ToString(sb);
+                    sb.Append(", ");
+                }
+
+                sb.Append("and nothing more]");
+                return sb.ToString();
+            }
         }
 
         /// <summary>
         ///     The type of navigation of this link.
         /// </summary>
-        public enum NavigationKind
+        private enum NavigationKind
         {
             /// <summary>
             ///     The navigation goes deeper in the tree.
@@ -2719,12 +2750,7 @@ namespace Selania.Rework.Components
             /// <summary>
             ///     The navigation moves up one level.
             /// </summary>
-            Back,
-
-            /// <summary>
-            ///     The navigation moves up two levels.
-            /// </summary>
-            TwiceBack
+            Back
         }
 
         /// <summary>
@@ -2770,6 +2796,31 @@ namespace Selania.Rework.Components
                 foreach (var tag in _tags) hashCode.Add(tag);
 
                 return hashCode.ToHashCode();
+            }
+
+            public void ToString(StringBuilder sb)
+            {
+                sb.Append("[GrimoireLink ");
+                sb.Append(_text);
+                sb.Append('(');
+                sb.Append(ChoiceIndex);
+                sb.Append(") - ");
+                sb.Append(NavigationKind);
+                sb.Append(" - ");
+                foreach (var tag in _tags)
+                {
+                    sb.Append(" #");
+                    sb.Append(tag);
+                }
+
+                sb.Append(']');
+            }
+
+            public override string ToString()
+            {
+                var sb = new StringBuilder();
+                ToString(sb);
+                return sb.ToString();
             }
         }
 
