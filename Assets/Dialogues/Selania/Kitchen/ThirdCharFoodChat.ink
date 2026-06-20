@@ -145,7 +145,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Però ci tengo a loro, sì.
         {charTag(ThirdCharacter, "jester")}:                                    Anche se a volte li strozzerei.
                 
-        + \ {charTag(PG, "neutral")}:                                           Sai che sono un{player_pronoun has him:o|{player_pronoun has her:a|ə}} che tifa sempre le squadre perdenti?
+        + \ {charTag(PG, "neutral")}:                                           Sono un{player_pronoun has him:o|{player_pronoun has her:a|ə}} che tifa sempre le squadre perdenti.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     Te ti vuoi male, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   Cioè, capisco la cosa del perdere ogni tanto, perché poi quando vinci senti proprio che è una figata.
@@ -273,7 +273,7 @@
                                                                                 Cioè, ti tira anche dei rutti che diventi pelato.
         {charTag(ThirdCharacter, "jester")}:                                    Ma io potevo darle solo i rutti, non i musei, no?
                 
-        + \ {charTag(PG, "neutral")}:                                           Il Poggi è la tua famiglia.
+        + \ {charTag(PG, "neutral")}:                                           Il Poggi <b>è</b> la tua famiglia.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     La mia famiglia è, doveva essere Dona.
         {charTag(ThirdCharacter, "neutral")}:                                   Ma in un certo senso, sì.
@@ -541,7 +541,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Però siamo arrivati a un accordo: con gli altri può essere qualunque persona, ma solo con me sarà Ava.
 
 
-        + \ {charTag(PG, "neutral")}:                                           E tu come la fai sentire invece?
+        + \ {charTag(PG, "neutral")}:                                           Mi piacerebbe sapere anche come tu fai sentire lei.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     Cos'è? Pensi che non sia capace di far stare bene una ragazza?
         {charTag(ThirdCharacter, "neutral")}:                                   Lei mi adora, vecio.
@@ -689,7 +689,7 @@
         {charTag(ThirdCharacter, "bored")}:                                     Boh.
         {charTag(ThirdCharacter, "neutral")}:                                   Ma mi piacciono.                                                                           
                 
-        + \ {charTag(PG, "neutral")}:                                           {charNameThree}, sai che quella che hai vissuto da piccolo è una violenza? Ne hai parlato con qualcuno?
+        + \ {charTag(PG, "neutral")}:                                           Quella che hai vissuto da piccolo è una violenza. Ne hai parlato con qualcuno?
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     Non è che sei {charNameOne} travestita?
         {charTag(ThirdCharacter, "neutral")}:                                   A me è piaciuto quel momento.
@@ -828,7 +828,7 @@
                                                                                 E con cui crescere il mio bambino.
                                                                                 Il bambino più tosto del mondo.
 
-        + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma, {charNameThree}.
+        + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     Mi sembri la zia, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   Se stai parlando di mio papà, il passato è una cosa che prendi e metti in una scatola e dimentichi.
@@ -974,7 +974,7 @@
                                                                                 Mentre con Dona ci guardavamo le serie TV.
                                                                                 Che è anche una cosa carina, quando sei stanco morto.                                                                    
 
-        + \ {charTag(PG, "neutral")}:                                           Alla fine questo senso di comunità e unione <b>è</b> qualcosa di spirituale, {charNameThree}.
+        + \ {charTag(PG, "neutral")}:                                           Questo senso di comunità e unione <b>è</b> qualcosa di spirituale.
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != they:
@@ -1264,7 +1264,7 @@
                                                                                 Un fallimento.
         {charTag(ThirdCharacter, "angry")}:                                     È da quando sono arrivato che 'sto cazzo di posto si prende gioco di me.
                 
-        + \ {charTag(PG, "neutral")}:                                           {charNameThree}, hai mai sentito parlare di lotta di classe?
+        + \ {charTag(PG, "neutral")}:                                           Hai mai sentito parlare di lotta di classe?
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
@@ -1806,7 +1806,7 @@
                 } 
 
 
-        + \ {charTag(PG, "neutral")}:                                           Non mi spiace l'idea di farmi qualche trip politico bevendo con {charNameOne}!
+        + \ {charTag(PG, "neutral")}:                                           Non mi spiace l'idea di farmi qualche trip filosofico bevendo con {charNameOne}!
                 -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:

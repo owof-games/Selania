@@ -499,7 +499,7 @@
                 {charTag(ThirdCharacter, "angry")}:             Ringrazia Dio che sono un signore, {charNameOne} e non ti dico cosa penso di te, Gesù licantropo.
                 }                                                         
 
-        + (aether)\ {charTag(PG, "neutral")}:                   Mi stai dicendo che ti porti a letto delle sconosciute ubriache?
+        + (aether)\ {charTag(PG, "neutral")}:                   Sei molto tranquillo nel dire che ti porti a letto delle sconosciute ubriache.
                 -> glyph_choice_manager(false, aetherC)->
                 {
                 - are_two_entities_together(FirstCharacter, PG):

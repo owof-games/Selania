@@ -88,7 +88,7 @@
                                                                         Secondo mia sorella è una cosa che ho iniziato a fare quando le cose in casa stavano andando male.
         {charTag(ThirdCharacter, "jester")}:                            Inizi a fare il buffone per risolvere un problema, e finisci per fare il buffone per il resto della tua vita.                                                                      
         
-        + {grimoire_thirdChar hasnt grimThirdCharFour}  \ {charTag(PG, "neutral")}:                             Tra gli appuntamenti che fai e gli amici che hai, non ho ancora capito come tratti le persone.
+        + {grimoire_thirdChar hasnt grimThirdCharFour}  \ {charTag(PG, "neutral")}:                             La cosa che mi preoccupa è che non ho ancora capito come tratti le persone.
             -> glyph_choice_manager(false, aetherC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:

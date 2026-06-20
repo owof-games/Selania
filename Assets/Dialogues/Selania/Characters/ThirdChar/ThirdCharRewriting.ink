@@ -472,7 +472,7 @@
                                                                 E le cose stanno già andando meglio dopo la chiacchierata con tuo padre, non trovi?    
                 }                                                
 
-            + (aether) \ {charTag(PG, "neutral")}:              Hai deciso di ascoltare cosa avesse da dirti Donatella: forse la strada è continuare a prenderti le tue responsabilità. 
+            + (aether) \ {charTag(PG, "neutral")}:              Hai fatto il passo di ascoltare Donatella: la strada giusta è continuare a prenderti le tue responsabilità. 
             {charTag(PG, "neutral")}:                           Per le cose che sono accadute con tua sorella.
                                                                 Con tuo padre.
                                                                 Per il rapporto che hai coi ragazzi del calcetto.
@@ -556,7 +556,7 @@
                                                                 Qualcuno che fa la cosa giusta, anche quando ha un costo, come tuo padre.
                                                                 Qualcuno che affronta una conversazione difficile per poter capire la persona che ha amato e ferito, come hai fatto tu con Donatella.
 
-            + (aether) \ {charTag(PG, "neutral")}:              Ma io vedo qualcuno coraggioso che cerca di capire le persone che ha ferito.
+            + (aether) \ {charTag(PG, "neutral")}:              Ma io vedo una persona coraggiosa, che cerca di comprendere come ha ferito le persone a cui tiene.
             {charTag(PG, "neutral")}:                           Lo stai facendo con Donatella, e l'hai fatto anche col Poggi.
                                                                 Con tuo padre.
                                                                 Le cose non sono andate come volevi.
