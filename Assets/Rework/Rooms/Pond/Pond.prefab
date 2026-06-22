@@ -3175,6 +3175,26 @@ PrefabInstance:
       propertyPath: minimumTimeBetweenSpawns
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
+      propertyPath: animatorParameterDescriptors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
+      propertyPath: animatorParameterDescriptors.Array.data[0].maximumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
+      propertyPath: animatorParameterDescriptors.Array.data[0].minimumValue
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
+      propertyPath: animatorParameterDescriptors.Array.data[0].isSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921349813988511518, guid: 37c1370af52c66442b5b3775663252f7, type: 3}
+      propertyPath: animatorParameterDescriptors.Array.data[0].animatorParameterName
+      value: Speed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
