@@ -2670,8 +2670,7 @@ namespace Selania.Rework.Components
             GrimoirePageIdentifier GetIdentifier()
             {
                 story.Continue();
-                return new GrimoirePageIdentifier(story.currentText,
-                    story.currentTags.OrderBy(tag => tag).ToList());
+                return GetCurrentGrimoirePageIdentifier(story);
             }
 
             GrimoirePageContent GetContent()
@@ -2723,6 +2722,24 @@ namespace Selania.Rework.Components
 
                 return new GrimoirePageContent(sb.ToString(), links.ToArray());
             }
+        }
+
+        /// <summary>
+        /// Produce a <see cref="GrimoirePageIdentifier"/> from the current point of the story, which must point to a
+        /// "@grimoire..." line.
+        /// </summary>
+        /// <param name="story">The story to use.</param>
+        /// <returns>The grimoire page identifier</returns>
+        private GrimoirePageIdentifier GetCurrentGrimoirePageIdentifier(Story story)
+        {
+            if (!story.currentText.StartsWith("@grimoire", StringComparison.Ordinal))
+            {
+                Logger.ZLogError(
+                    $"Grimoire page identifiers should start with '@grimoire', not be {story.currentText}");
+            }
+
+            return new GrimoirePageIdentifier(story.currentText,
+                story.currentTags.OrderBy(tag => tag).ToList());
         }
 
         /// <summary>
