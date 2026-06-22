@@ -55,7 +55,7 @@
     {charTag(FirstCharacter, "neutral")}:                       E tu cosa vorresti fare invece {player_name}?     
     {charTag(SecondCharacter, "energy")}:                       O cosa fai se ci hanno rapito gli alieni?
     
-        + \ {charTag(PG, "neutral")}:                           Concordo con {charNameOne}: dormiamocela!
+        + \ {charTag(PG, "neutral")}:                           Concordo con {charNameOne}: è bello faticare, ma è ancora più bello riposare.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "neutral")}:                  Voi persone vecchie siete noiose.
                                                                 Nemmeno la nonna pensa così tanto a dormire!
@@ -236,11 +236,10 @@
             -> glyph_choice_manager(false, airC)->
         {charTag(FirstCharacter, "affectionate")}:                      Oh, che bello sentire qualcun{player_pronoun has him:o|{player_pronoun has her:a|ə}} che matcha la mia gioia di vivere.
         {charTag(FifthCharacter, "neutral")}:                           Il fatto che sia temporanea non nega la mia teoria.
-        
-        //più terra
-        + \ {charTag(PG, "neutral")}:                                   La felicità è una coperta morbida dopo una giornata di duro lavoro.
+
+        + \ {charTag(PG, "neutral")}:                                   La felicità è la soddisfazione di una giornata di duro lavoro.
             -> glyph_choice_manager(false, earthC)->
-        {charTag(FirstCharacter, "annoyed")}:                           Credo che quello si chiami "abuso di sostanze".
+        {charTag(FirstCharacter, "annoyed")}:                           Credo tu intenda "una boccia di rosso il sabato sera".
         {charTag(FifthCharacter, "sad")}:                               Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
 
         + \ {charTag(PG, "neutral")}:                                   Non credo nella felicità, ma nel conforto dato dall'avere vicine le persone care.
@@ -344,7 +343,7 @@
         {charTag(FirstCharacter, "affectionate")}:                              Perché visto che questa idea magnifica è di {player_name}, sono sicura che sarà felice di farlo {player_pronoun has him:lui|{player_pronoun has her:lei|ləi}}!
         {charTag(FirstCharacter, "neutral")}:                                   Io posso continuare a criticarlo, così lo aiutiamo su due fronti.
         
-        + \ {charTag(PG, "neutral")}:                                           Le nostre energie sono limitate, è importante scegliere verso cosa le indirizziamo.
+        + \ {charTag(PG, "neutral")}:                                           Abbiamo energie limitate: è vitale decidere cosa le merita e cosa no.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "neutral")}:                                   Esatto.
                                                                                 Anche se ora che lo dici mi sale un po' il senso di colpa.
@@ -496,9 +495,9 @@
     {charTag(FifthCharacter, "neutral")}:                                       Ringrazia la voce da parte mia.
     {charTag(TheWitch, witch_state())}:                                         <i>Dire una mezza verità porta su una mezza strada.</i>
     
-    + \ {charTag(PG, "neutral")}:                                               Ha parlato di incendi e acqua, forse hai bruciato qualcosa?
+    + \ {charTag(PG, "neutral")}:                                               Ha parlato di incendi e acqua: hai bruciato qualcosa?
             -> glyph_choice_manager(Mentor, earthC)->
-    {charTag(FifthCharacter, "sad")}:                                           Non è che ho lasciato qualcosa di acceso in cucina?
+    {charTag(FifthCharacter, "sad")}:                                           Non è che ho dimenticato qualcosa di acceso in cucina?
                                                                                 No dai, si vedrebbe il fumo da qui, sicuro.
     {charTag(FifthCharacter, "neutral")}:                                       Magari è qualcosa di simbolico.
     {charTag(FifthCharacter, "sorry")}:                                         Spero di non aver distrutto nulla.
@@ -816,7 +815,7 @@
                                                                         Questo è un punto a favore per dire che sono una rana!
                                                                         Ci devo ancora pensare.
     
-        + \ {charTag(PG, "neutral")}:                                   Proviamo a fargli piace mangiare i lombrichi.
+        + \ {charTag(PG, "neutral")}:                                   Siamo ciò che mangiamo, e le rane mangiano i lombrichi, per cui {charNameTwo} deve mangiarne uno!
                 -> glyph_choice_manager(false, earthC)->
         {charTag(SecondCharacter, "angry")}:                            Questa è la cosa più BLEAH che potessi dire!
         {charTag(Franco, "neutral")}:                                   Ma poi non ha senso!
@@ -923,7 +922,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Prendere in giro i perdenti!                                                                
 
 
-        + \ {charTag(PG, "neutral")}:                                           Competizione sì, ma il Merlo si è comprato sostanzialmente la vittoria così.
+        + \ {charTag(PG, "neutral")}:                                           La competizione è una cosa tra pari, ma il Merlo si è comprato la vittoria.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -1101,7 +1100,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Ci voleva.
 
 
-        + \ {charTag(PG, "neutral")}:                                           Anche con le migliori intenzioni, ogni esperienza è personale, e ogni consiglio è un giudizio.
+        + \ {charTag(PG, "neutral")}:                                           Anche con le migliori intenzioni, ogni esperienza è personale, ogni consiglio è un giudizio.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1289,7 +1288,7 @@
                 {charTag(FirstCharacter, "neutral")}:                           Un paladino di D&D, non un essere umano.
                 }       
 
-        + \ {charTag(PG, "neutral")}:                                           Facciamogli fare qualcosa di pratico, {charNameThree}, come spalare un po' di fango in qualche rifugio per animali.
+        + \ {charTag(PG, "neutral")}:                                           Facciamogli fare qualcosa di pratico, come spalare un po' di fango in qualche rifugio per animali.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1484,17 +1483,17 @@
         {charTag(FirstCharacter, "neutral")}:                                   Il fatto che tu non capisca il perché mi fa provare quasi pena per te.
                                                                                 E stima per lei che è stata capace di andarsene.                                                                        
 
-        + \ {charTag(PG, "neutral")}:                                           {charNameOne}, stai parlando di cose astratte a una persona che ancora sanguina.
+        + \ {charTag(PG, "neutral")}:                                           {charNameOne}, stai parlando di cose astratte a una persona che ancora sta male.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "neutral")}:                                   Io.
         {charTag(ThirdCharacter, "neutral")}:                                   No, lo dico io <i>io</i>.
                                                                                 Magari tu c'hai pure ragione.
-                                                                                Ma è come se in questo momento fossi su una barca che continua a imbarcare acqua.
+                                                                                Ma è come se in questo momento fossi su una barca che continua a prendere acqua.
                                                                                 E tu invece di aiutarmi a svuotarla sei qui a dirmi: "Non dovevi partire".
                                                                                 O "Forse era meglio se prima ci mettevi del catrame per coprire i buchi".
                                                                                 Magari poi a riva ti do pure ragione.
         {charTag(ThirdCharacter, "bored")}:                                     Forse.
-        {charTag(ThirdCharacter, "neutral")}:                                   Ma ora voglio solo togliere l'acqua dalla barca. 
+        {charTag(ThirdCharacter, "neutral")}:                                   Ma ora voglio solo togliere quella cazzo di acqua dalla barca. 
 
         
         + \ {charTag(PG, "neutral")}:                                           Bravo o cattivo conta poco: conta quello che fai.
