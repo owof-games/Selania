@@ -44,13 +44,12 @@
         {charTag(FirstCharacter, "neutral")}:                   Sì.
                                                                 Sì.
                                                                 <b>La</b> persona a cui tengo.
-        //più terra, con Chitarra che ha problemi pratici è anche facile
-        + (earth) \ {charTag(PG, "neutral")}:                   Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?
-                -> glyph_choice_manager(false, earthC)->
-        {charTag(FirstCharacter, "curious")}:                   Che al mercato mio padre comprò.
-                                                                Potremmo cavarci una band forse.
-        {charTag(FirstCharacter, "sad")}:                       Ma non sono Talco.
 
+        + (earth) \ {charTag(PG, "neutral")}:                   Anche io voglio tirare le pietre contre le AI.
+                -> glyph_choice_manager(false, earthC)->
+        {charTag(FirstCharacter, "curious")}:                   Le pezze, non le pietre.
+        {charTag(FirstCharacter, "affectionate")}:              Ma credo che Talco apprezzerebbe comunque.
+        {charTag(FirstCharacter, "neutral")}:                   Io ogni volta che ci penso ho solo il terrore di aver studiato per anni per il nulla.
         -
         
         {charTag(FirstCharacter, "sad")}:                       Merda, Talco sa sempre come tirarmi fuori dai casini!
@@ -87,7 +86,8 @@
                                                                 Ed ecco di nuovo quel fiore parlante!
         {charTag(FirstCharacter, "neutral")}:                   {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
                                                                 Fai il tuo dovere da inconscio, così mi ripiglio e vedo di non mandare in merda il lavoro.
-        //MAGGIOR PARTE DELLE SCELTE: ARIA, ACQUA
+       
+
         + \ {charTag(PG, "neutral")}:                           Ma riesci a pensare il tuo vero nome? O ti senti solo {charNameOne}?
             -> glyph_choice_manager(false, airC)->
         {
@@ -100,16 +100,17 @@
         {charTag(FirstCharacter, "annoyed")}:                   Come quando una parola ti resta sulla punta della lingua.
                                                                 O ti ricordi l'effetto di un accordo, ma continua ad uscirti sbagliato.
 
-        + \ {charTag(PG, "neutral")}:                           Sì sì sono il tuo inconscio e tu sei un canarino! Vola canarino, vola!
-            -> glyph_choice_manager(false, earthC)->
+
+        + \ {charTag(PG, "neutral")}:                           Sì sì sono il tuo inconscio e ti dico di fare tu il culo al tuo capo!
+            -> glyph_choice_manager(false, fireC)->
         {
             - one.earth:
-            {charTag(FirstCharacter, "neutral")}:               Ok, allora è un po' una fissa con questi uccellini.
+            {charTag(FirstCharacter, "neutral")}:               Questa fa il paro con le pietre contro le AI.
         }
-        {charTag(FirstCharacter, "curious")}:                   Volare potrebbe non essere male.
-                                                                Dall'alto si possono vedere molte cose.
-        {charTag(FirstCharacter, "affectionate")}:              E potrei fare la cacca in testa al mio capo.
+        {charTag(FirstCharacter, "curious")}:                   Ti assicuro che mi farebbe piacere, se lo merita.
+                                                                Ma in questo momento sono troppo preoccupata per poterci davvero pensare.
             
+
         + \ {charTag(PG, "neutral")}:                           Allora dovrei mostrarti lune di sangue, volpi affamate, rami eterni.
             -> glyph_choice_manager(false, aetherC)->
         {
@@ -119,8 +120,9 @@
             {charTag(FirstCharacter, "affectionate")}:          Quindi devo correre per i boschi nuda e cantare alla luna?
             {charTag(FirstCharacter, "neutral")}:               Perché è un piano che mi piace molto.
         
+
         + (pizzico) \ {charTag(PG, "neutral")}:                 <i>La pizzico, così capisce che sono reale.</i>
-            -> glyph_choice_manager(false, fireC)->
+            -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "annoyed")}:                   Ehi!
         {
             - one.fire:
@@ -130,6 +132,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Comunque ok, messaggio arrivato: sei reale.
                                                                 O siamo tutt3 e due in un sogno.
                 
+
         + (water2) \ {charTag(PG, "neutral")}:                  Facessimo un bel respiro e ripartiamo da capo, con dolcezza.
             -> glyph_choice_manager(false, waterC)->
         {
@@ -238,7 +241,8 @@
             {charTag(FirstCharacter, "annoyed")}:               Mmm, non amo proprio tanto tanto questo modo aggressivo.
             {charTag(FirstCharacter, "neutral")}:               Ma ha senso.
                                                                 Potrei iniziare buttandoti nello stagno per esempio, no?
-        //più spirito? questa è quasi terra: fisica, concreta    
+ 
+        
         + \ {charTag(PG, "neutral")}:                           Respirare è un punto di partenza. L'aria qui è buona.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Già, e non è solo quello, ama.
@@ -447,8 +451,8 @@
                                                                 E "no" sicuramente è magica.
         {charTag(FirstCharacter, "sad")}:                       A volte mi fa una paura tremenda, {player_name}.                                                        
         
-        //anche qui è un'aria che sembra più terra. è STATA ANCHE LA SCELTA MENO PRESA
-        + \ {charTag(PG, "neutral")}:                           Le energie sono sprecate solo se non le indirizzi.
+    
+        + \ {charTag(PG, "neutral")}:                           Le energie sono sprecate solo se non sono indirizzate.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Mmm.
                                                                 Ok.
@@ -462,6 +466,7 @@
                                                                 Che con questa energia risolviamo tutti i problemi in quindici giorni.
             {charTag(FirstCharacter, "neutral")}:               Risolviamo anche la fame nel mondo a 'sto punto.
             
+
         + (air)\ {charTag(PG, "neutral")}:                           Come mai dici spesso "non so se ha senso" o "ha senso?"?
                 -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:               Ehm.
@@ -556,8 +561,8 @@
                                                                 Ma mi manca svolazzare.
             {charTag(FirstCharacter, "sad")}:                   Tantissimo.
 
-        //di nuovo forse più terra che aria    
-        + \ {charTag(PG, "neutral")}:                           Non esiste un "chi siamo davvero".
+ 
+        + \ {charTag(PG, "neutral")}:                           Non esiste un "chi siamo davvero", siamo noi e basta.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Beh: sono abbastanza sicura che tu sia davvero pragmatic{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
                                                                 Con o senza relazioni.
@@ -678,11 +683,19 @@
             {charTag(FirstCharacter, "curious")}:               Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.
             {charTag(FirstCharacter, "neutral")}:               Ha senso?
 
-        //brutta
-        + \ {charTag(PG, "neutral")}:                           "Riempire di calore" i fatti li rende inattendibili.
+
+        + \ {charTag(PG, "neutral")}:                           Non giudicarti: serve un po' di arroganza per costruire qualcosa di nuovo.
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "annoyed")}:               Però se rimangono attendibili e incagabili non servono a nulla.
-            {charTag(FirstCharacter, "sad")}:                   Messa così è una sconfitta a prescindere.
+            {charTag(FirstCharacter, "neutral")}:               Ci sono cose che sono difficili da digerire, {player_name}.
+                                                                Cose che sono sempre raccontate come negative.
+            {charTag(FirstCharacter, "affectionate")}:          Ma capisco cosa intendi, grazie.
+            {charTag(FirstCharacter, "curious")}:               E non dirmi troppo spesso che posso essere un po' arrogante, o divento incagabile.
+
+            {
+            - are_two_entities_together(ThirdCharacter, PG) && grimoire_firstChar has grimFirstThirdChar or thirdChar_firstCharRage == true:
+            {charTag(ThirdCharacter, "neutral")}:               Non mi dire.
+            }
+            
             {
             - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "energy")}:               Mi piace incagabile!
@@ -698,6 +711,7 @@
                 {charTag(FirstCharacter, "annoyed")}:           Me la sono cercata.
             }
             }
+            
         -
         {charTag(FirstCharacter, "sad")}:                       Tra qualche mese Valeria si laureerà e tornerà dai suoi, e a quel punto non so cosa resterà della band.      
         {charTag(FirstCharacter, "neutral")}:                   A volte mi chiedo se non abbia senso lasciare il lavoro e dedicarmi solo alla musica.
@@ -917,8 +931,8 @@
                                                                 Si può fare.
             {charTag(FirstCharacter, "annoyed")}:               Ma sono una che si perde spesso per strada, ama.
         
-        //solito discorso aria/terra
-        + (air)\ {charTag(PG, "neutral")}:                      Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.
+    
+        + (air)\ {charTag(PG, "neutral")}:                      Ad essere pratic3, sì: siamo bestie sociali, le persone ci influenzano.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Sei una brava persona, non mi fraintendere.
             {charTag(FirstCharacter, "annoyed")}:               Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
@@ -1017,15 +1031,16 @@
             {charTag(FirstCharacter, "neutral")}:           Non so se si era visto, ma tendo a vedere il peggio nelle cose.
             {charTag(FirstCharacter, "sad")}:               Cosa che spesso non mi permette di cambiare nulla.
         
-        + \ {charTag(PG, "neutral")}:                       Immaginare è bello perché ci si stupisce, e stupirci ci rende viv3.
+        + \ {charTag(PG, "neutral")}:                       Il doomscrolling è terribile: ti toglie le fondamenta, ti fa sentire incapace di camminare, di fare qualsiasi cosa.
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "neutral")}:           Sai {player_name}?
+            {charTag(FirstCharacter, "neutral")}:           Già.
+                                                            Sai {player_name}?
             {charTag(FirstCharacter, "sad")}:               A volte ho l'impressione che l'unica cosa che ci rende adulti è la perdita dello stupore.
                                                             Tutto è prevedibile.
-                                                            E corri corri guardando solo quello che ti serve.
-                                                            Ed è una cosa grigia.
-                                                            E triste.
-            {charTag(FirstCharacter, "neutral")}:           Ha senso?
+                                                            E terribile.
+                                                            E corri corri guardando solo quello che ti serve sul momento perché l'alternativa è impazzire.
+                                                            Ed è una vita così grigia.
+                                                            Così triste.
         -
         {charTag(FirstCharacter, "neutral")}:               Visto che sono qui a pensare e basta, potrei mettermi a scrivere qualcosa di nuovo.
         {
@@ -1132,7 +1147,7 @@
             {charTag(FirstCharacter, "neutral")}:           Fintanto che rimane una mia paranoia, non sono davvero obbligata ad affrontare la cosa, vero?
             {charTag(FirstCharacter, "annoyed")}:           Dio, quanto sono ipocrita.
         
-        + \ {charTag(PG, "neutral")}:                       Non c'è logica nel tenere un treno fermo. //più in direzione "tutto deve crescere a una certa"
+        + \ {charTag(PG, "neutral")}:                       Non puoi tenere un treno fermo per sempre: alla fine tutto deve crescere, muoversi, cambiare.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "annoyed")}:           Non è vero!
             {charTag(FirstCharacter, "neutral")}:           Per una manutenzione.
@@ -1215,8 +1230,8 @@
             {charTag(FirstCharacter, "neutral")}:           Anche se poi la compagnia a volte è davvero faticosa.
                                                             Dovrei imparare a godermi il tempo con me.
 
-        //solita sistemazione aria/terra    
-        + \ {charTag(PG, "neutral")}:                       {charNameOne}, tu devi pensare meno e fare più casino.
+
+        + \ {charTag(PG, "neutral")}:                       {charNameOne}, tu devi pensare meno e fare più di più.
                 -> glyph_choice_manager(false, earthC)-> 
             {charTag(FirstCharacter, "neutral")}:           Guarda {player_name}, sarei strafelice se ci riuscissi.
                                                             Ci ho provato anche con la terapia.

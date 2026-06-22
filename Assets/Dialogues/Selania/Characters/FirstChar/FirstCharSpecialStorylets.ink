@@ -67,21 +67,19 @@
         {charTag(FirstCharacter, "neutral")}:               Temevo non avresti apprezzato.
                                                             Non vedo l'ora di cucinare assieme ora!
 
-    + \ {charTag(PG, "neutral")}:                           Che dovremmo inaugurarla con una festa!
+    + \ {charTag(PG, "neutral")}:                           Grazie: nessun luogo è bello se non c'è un po' di cibo!
         -> glyph_choice_manager(false, earthC)->
-            {
-                - are_two_entities_together(Mentor, PG):
-                {charTag(FifthCharacter, "sad")}:           Oppure, potremmo gioire in modi non rumorosi.
-            }
+
             {
                 - are_two_entities_together(SecondCharacter, PG):
                 {charTag(SecondCharacter, "energy")}:       Sii!
                                                             Caramelle!
+                                                            Torte!
                                                             Festeggiamo il mio compleanno!
             }
-            {charTag(FirstCharacter, "neutral")}:           Uh.
-                                                            Pensavo a una cosa più tranquilla.
-            {charTag(FirstCharacter, "affectionate")}:      Magari con chiacchiere e vino.
+            {charTag(FirstCharacter, "neutral")}:           Ah ah apprezzo l'entusiasmo.
+                                                            Anche se non so perché ma a stare qui non ho tutta questa fame.
+            {charTag(FirstCharacter, "affectionate")}:      Ma posso farti compagnia col vino!
         
     + \ {charTag(PG, "neutral")}:                           Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.
         -> glyph_choice_manager(false, waterC)->
@@ -166,10 +164,10 @@
     {charTag(FirstCharacter, "neutral")}:                   Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?
                                                             Però se è ricco ma lei si vendica perché stronzo?
                                                             O magari è stronzo <i>anche</i> perché è ricco?
-    //solita sistemazione    
-    + \ {charTag(PG, "neutral")}:                           Mi è sembrato un gioco: "cosa succede se sono un mostro?".
+   
+    + \ {charTag(PG, "neutral")}:                           Mi è sembrato un esperimento: "cosa succede se sono un mostro?".
             -> glyph_choice_manager(false, earthC)->
-    {charTag(FirstCharacter, "curious")}:                   Non è male come gioco, vero?
+    {charTag(FirstCharacter, "curious")}:                   Non è male come esperimento, vero?
                                                             Mi piacerebbe farlo una volta.
     {charTag(FirstCharacter, "neutral")}:                   Credo mi farebbe sentire parti di me che non cago mai.
         
