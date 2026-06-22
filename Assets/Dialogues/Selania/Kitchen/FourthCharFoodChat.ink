@@ -99,25 +99,30 @@
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
                -> glyph_choice_manager(true, fireC)->
+               ~ player_updateKitchenPersonalChoices(fireC)  
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
             -  
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -143,26 +148,31 @@
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
                -> glyph_choice_manager(true, waterC)->
+               ~ player_updateKitchenPersonalChoices(waterC)  
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -      
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -189,22 +199,27 @@
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
+               ~ player_updateKitchenPersonalChoices(airC)  
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -
             -> fourth_ingredient_dispatcher
             
@@ -240,25 +255,30 @@
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
                -> glyph_choice_manager(true, fireC)->
+               ~ player_updateKitchenPersonalChoices(fireC)  
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
             -  
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -284,26 +304,31 @@
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
                -> glyph_choice_manager(true, waterC)->
+               ~ player_updateKitchenPersonalChoices(waterC)  
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -      
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -329,22 +354,27 @@
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
+               ~ player_updateKitchenPersonalChoices(airC)  
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -
             -> fourth_ingredient_dispatcher
             
@@ -382,25 +412,30 @@
             + (earth1)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
 
 
             + (water1)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                 
             + (fire1)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                ~ kitchen_recipeNoun = "Fagiolata"
                -> glyph_choice_manager(true, fireC)->
+               ~ player_updateKitchenPersonalChoices(fireC)  
 
         
             + (aether1)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (air1)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeNoun = "Crema d'aglio"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
             -  
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -426,26 +461,31 @@
             + (earth2)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeAdjective = "onesta"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
     
                
             + (air2)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                 ~ kitchen_recipeAdjective = "allegra"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)  
   
              
             + (water2)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                ~ kitchen_recipeAdjective = "empatica"
                -> glyph_choice_manager(true, waterC)->
+               ~ player_updateKitchenPersonalChoices(waterC)  
 
         
             + (aether2)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeAdjective = "incondizionata"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
 
     
             + (fire2)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeAdjective = "leale"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -      
         
         {charTag(FourthCharacter, "neutral")}:       Frase
@@ -471,22 +511,27 @@
             + (water3)\ {charTag(PG, "neutral")}:         <i>Ingrediente acqua</i>
                 ~ kitchen_recipeComplement = " brodo del terrore"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)  
                
             + (earth3)\ {charTag(PG, "neutral")}:         <i>Ingrediente terra</i>
                 ~ kitchen_recipeComplement = " noce euforica"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)  
              
             + (air3)\ {charTag(PG, "neutral")}:         <i>Ingrediente aria</i>
                ~ kitchen_recipeComplement = " semi dell'<i>io? no, no è possibile!</i>"
                -> glyph_choice_manager(true, airC)->
+               ~ player_updateKitchenPersonalChoices(airC)  
         
             + (aether3)\ {charTag(PG, "neutral")}:         <i>Ingrediente spirito</i>
                 ~ kitchen_recipeComplement = " olio delle lusinghe"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
     
             + (fire3)\ {charTag(PG, "neutral")}:         <i>Ingrediente fire</i>
                 ~ kitchen_recipeComplement = " peperoncini arrapati"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             -
             -> fourth_ingredient_dispatcher
             
