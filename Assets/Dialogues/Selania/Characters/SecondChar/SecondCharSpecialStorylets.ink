@@ -93,12 +93,12 @@
                                                                 Davvero?
                                                                 La cosa più bella per te è un posto dove devi dormire seduto?    
 
-        + \ {charTag(PG, "neutral")}:                           Un posto dove dormire?//troppo vicino alla meditazione
+        + \ {charTag(PG, "neutral")}:                           Qualcosa di utile?
                 -> glyph_choice_manager(false, earthC)->
-        {charTag(SecondCharacter, "neutral")}:                  Tu e {charNameOne} siete uguali.
+        {charTag(SecondCharacter, "neutral")}:                  Tu e {charNameFive} siete uguali.
             {
-            - are_two_entities_together(FirstCharacter, PG):
-                {charTag(FirstCharacter, "annoyed")}:               Non c'è vergogna nell'ammettere la propria stanchezza, piccoletto!
+            - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "neutral")}:                   Non c'è niente di male nel pensare alle cose pratiche, {charNameTwo}.
             }           
         {charTag(SecondCharacter, "neutral")}:                  No, è un posto interessante.
         {charTag(SecondCharacter, "energy")}:                   Ma c'è anche una poltrona!

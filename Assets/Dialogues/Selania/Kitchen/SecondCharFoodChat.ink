@@ -115,7 +115,7 @@
                                                                 E poi lui si è buttato in acqua.
                 {charTag(SecondCharacter, "emotional")}:        E il gatto gli è stato sulla pancia, perché non sa nuotare.
                
-            + \ {charTag(PG, "neutral")}:                       \ {charNameTwo}: gli adulti devono imparare tanto dai bambini!
+            + \ {charTag(PG, "neutral")}:                       Gli adulti devono imparare tanto dai bambini.
                 -> glyph_choice_manager(false, earthC)->
                 {charTag(SecondCharacter, "neutral")}:          Si no boh.
                                                                 Io voglio insegnare tante cose agli adulti.
@@ -227,12 +227,12 @@
                                                                 Però da piccoli sono suuuuperincapaci di camminare.
                 {charTag(SecondCharacter, "energy")}:           Quello è divertente.
         
-            + \ {charTag(PG, "neutral")}:                       Il corvo, misterico e misterioso.
-                    -> glyph_choice_manager(false, aetherC)->
-               {charTag(SecondCharacter, "energy")}:            Sai che i corvi si insegnano tra loro le cose?
-               {charTag(SecondCharacter, "neutral")}:           E che se li fai arrabbiare se lo ricordano per sempre.
-                                                                Una volta un amico di mamma ha spaventato un corvo con la sua moto.
-               {charTag(SecondCharacter, "energy")}:            E ora tutte le volte che viene da noi il corvo gli graffia la moto!
+            + \ {charTag(PG, "neutral")}:                       Il castoro, l'animale ingegnere.
+                    -> glyph_choice_manager(false, earthC)->
+               {charTag(SecondCharacter, "energy")}:            Sapevi che i castori hanno delle palpebre trasparenti che sono come gli occhialini per la piscina?!?
+               {charTag(SecondCharacter, "neutral")}:           E che con la loro coda fanno tantissimissime cose, tipo che la usano per andare velocissimi in acqua.
+                                                                O per fare casino e avvisare di un pericolo.
+               {charTag(SecondCharacter, "energy")}:            E profumano di vaniglia!
             
             + \ {charTag(PG, "neutral")}:                       La civetta: mi piace che sia curiosa e intelligente!
                     -> glyph_choice_manager(false, airC)->
@@ -242,8 +242,8 @@
                 {charTag(SecondCharacter, "emotional")}:        Non hanno il sedere!
                 {charTag(SecondCharacter, "energy")}:           Chissà se fanno le puzzette.
                
-            + \ {charTag(PG, "neutral")}:                       L'unica risposta giusta è: il prociorso!//Vedere se ha senso, più che altro perché poi diventa la cosa più ovvia da prendere
-                    -> glyph_choice_manager(false, earthC)->
+            + \ {charTag(PG, "neutral")}:                       L'unica risposta giusta è: il prociorso!
+                    -> glyph_choice_manager(false, aetherC)->
                 {charTag(SecondCharacter, "energy")}:           Sììììì!!!
                                                                 Possiamo tuffarci nell'acqua ora assieme?
                                                                 Mi insegni a nuotare?
@@ -320,9 +320,8 @@
                                                                 Ma una cosa bella.
                                                                 Non una specie di broccolo ancora più disgustoso di quelli reali.    
              
-             //Più terra  
             + \ {charTag(PG, "neutral")}:                       La stranezza è qualcosa che arricchisce il mondo.
-                    -> glyph_choice_manager(false, earthC)->
+                    -> glyph_choice_manager(false, aetherC)->
                 {charTag(SecondCharacter, "energy")}:           Sì!
                                                                 Come le bussole, che sono suuuuperstrane!
                                                                 O quando la benzina fa gli arcobaleni per terra.
@@ -333,19 +332,22 @@
                 {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                 {charTag(SecondCharacter, "angry")}:            Tu lo dici, ma mica sei tu ad andare in punizione!
         
+
             + \ {charTag(PG, "neutral")}:                       Spesso gli adulti non sanno cosa provano o vogliono, amico mio.
                     -> glyph_choice_manager(false, waterC)->
                 {charTag(SecondCharacter, "neutral")}:          Sì no boh.
                 {charTag(SecondCharacter, "angry")}:            Ma io che c'entro?
                 {charTag(SecondCharacter, "melanchonic")}:      Magari me lo possono dire invece di sgridarmi.
     
-            + \ {charTag(PG, "neutral")}:                       Ciò che è strano porta risposte a domande che non ci siamo ancora fatt3.
-                -> glyph_choice_manager(false, aetherC)->
-               {charTag(SecondCharacter, "neutral")}:           Eh?
-                                                                Però le domande mi piacciono.
-               {charTag(SecondCharacter, "melanchonic")}:       Anche se poi papà dice che gli rompo le palle.
-               {charTag(SecondCharacter, "neutral")}:           Ultimamente mi dice: "Chiedi al tablet, sant'Iddio!".
-               {charTag(SecondCharacter, "emotional")}:         Così posso usare il tablet anche a cena.
+
+            + \ {charTag(PG, "neutral")}:                       Per far parte di un gruppo serve avere una lingua comune, {charNameTwo}.
+                -> glyph_choice_manager(false, earthC)->
+                {charTag(SecondCharacter, "angry")}:            Però non è mai la mia di lingua, perché?
+                {charTag(SecondCharacter, "neutral")}:          A casa devo parlare come parla papà.
+                                                                A scuola come parlano i miei compagni.
+                                                                Qui come parla {charNameFive}. 
+               {charTag(SecondCharacter, "melanchonic")}:       Quando qualcuno parla come me?!?
+
             -
         
         {charTag(SecondCharacter, "neutral")}:                  No non mettere lo zucchero a velo, non mi piace.
@@ -450,14 +452,14 @@
                                                                 L'altra settimana mi ha messo in castigo otto volte.
                                                                 Mi sa che non le dispiace così tanto.
             
-            + \ {charTag(PG, "neutral")}:                       A volte però serve anche capire che ci sono conseguenze per ciò che si fa.
+            + \ {charTag(PG, "neutral")}:                       Serve anche capire che ci sono conseguenze per ciò che facciamo.
                     -> glyph_choice_manager(false, earthC)->
                 {charTag(SecondCharacter, "neutral")}:          Uhm.
                 {charTag(SecondCharacter, "angry")}:            Allora me lo possono spiegare, non sono scemo.
                 {charTag(SecondCharacter, "neutral")}:          Come quando per sbaglio ho fatto scappare il pappagallino della preside.
                                                                 E poi hanno trovato Ciro, il gatto del cortile, che se ne mangiava uno.
                 {charTag(SecondCharacter, "melanchonic")}:      Povero pappagallino.
-                                                                E hanno messo in castigo anche Ciro, povero.                                        
+                                                                E hanno messo in castigo anche Ciro, ma lui ha fatto solo il gatto!                                        
                 
             + \ {charTag(PG, "neutral")}:                       Chi punisce non riesce ad ascoltare il suo cuore.
                     -> glyph_choice_manager(false, waterC)->
@@ -1000,7 +1002,7 @@
                                                                 Per dirsi che possono esistere cose diverse da quelle che si hanno.
         {charTag(SecondCharacter, "melanchonic")}:              E che l'arte è una bella bugia per farci andare avanti quando le cose fanno schifo.
 
-            + \ {charTag(PG, "neutral")}:                       Quindi se dici che sei uno scrittore puoi dire tutte le bugie che vuoi?
+            + \ {charTag(PG, "neutral")}:                       Quindi se dici che sei uno scrittore puoi dire tutte le bugie che vuoi.
                     -> glyph_choice_manager(false, earthC)->
                 {charTag(SecondCharacter, "energy")}:           Non ci avevo pensato!
                 {charTag(SecondCharacter, "neutral")}:          E a me piace scrivere.
@@ -1456,7 +1458,7 @@
         {charTag(SecondCharacter, "neutral")}:              Però non sono più arrabbiato con lei.                                         
             
 
-        + \ {charTag(PG, "neutral")}:                       Il cibo unisce tutte le persone, vero?
+        + \ {charTag(PG, "neutral")}:                       Il cibo è quella cosa che unisce tutte le persone.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "energy")}:           Lo dice anche Franco!
             {charTag(SecondCharacter, "neutral")}:          Ma dice anche "{charNameTwo}, ricorda che la metà di un biscotto è un bisquattro!"
