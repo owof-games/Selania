@@ -120,7 +120,7 @@
             {charTag(FirstCharacter, "affectionate")}:          Uh, ce l'ho con le ame.
             {charTag(FirstCharacter, "sad")}:                   Ma con Ennio?
 
-        //MAGGIOR PARTE DELLE SCELTE: ACQUA
+
         + \ {charTag(PG, "neutral")}:                           Credo molto nell'idea di cura, supporto, sostegno reciproco.
             -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          Mi suona molto, ama.
@@ -141,6 +141,7 @@
         + (earth1)\ {charTag(PG, "neutral")}:                   <i>Soffriggo dei cubetti di grano del rispetto.</i>
             ~ kitchen_recipeNoun = "Zuppa di grano"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "neutral")}:               Uh, credo di capire.
                                                                 Il rispetto è una bella cosa coi genitori.
                                                                 Il trattarsi reciprocamente da adulti etc etc, giusto?
@@ -149,6 +150,7 @@
         + (water1)\ {charTag(PG, "neutral")}:                   <i>Impano delle striscioline di seitan malinconico.</i>
             ~ kitchen_recipeNoun = "Grigliata di seitan"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "sad")}:                   Credo mi dispiaccia, vero?
             {charTag(FirstCharacter, "neutral")}:               Insomma.
                                                                 Qualcosa che manca, che non è come dovrebbe essere.
@@ -158,6 +160,7 @@
         + (fire1)\ {charTag(PG, "neutral")}:                    <i>Sgrano dei fagioli del conflitto.</i>
             ~ kitchen_recipeNoun = "Fagiolata"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "neutral")}:               Non so se ti possa consolare, ma è una cosa comune.
                                                                 Molte delle mie amiche hanno un rapporto di merda coi genitori.
                                                                 Talco pensa sia un passaggio necessario per diventare adulti.
@@ -167,14 +170,16 @@
         + (aether1)\ {charTag(PG, "neutral")}:                  <i>Sbollento delle cimette di broccolo della fiducia.</i>
             ~ kitchen_recipeNoun = "Cimetta di broccolo"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
             {charTag(FirstCharacter, "affectionate")}:          Sento anche io questa cosa.
                                                                 Questa fiducia reciproca.
                                                                 Credo sia la cosa più bella da creare coi propri genitori.
                                                                 Un segno totale d'amore.
 
         + (air1)\ {charTag(PG, "neutral")}:                     <i>Schiaccio degli spicchi di aglio del distacco.</i>
-            ~ kitchen_recipeNoun = "Crema d'aglio"
-            -> glyph_choice_manager(true, airC)->
+                ~ kitchen_recipeNoun = "Crema d'aglio"
+                -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "neutral")}:               Merda.
             {charTag(FirstCharacter, "sad")}:                   Mi spiace {player_name}.
             {charTag(FirstCharacter, "neutral")}:               Non so se ha senso, ma la distanza mi sembra peggio del litigio, del conflitto.
@@ -200,7 +205,7 @@
     {charTag(FirstCharacter, "annoyed")}:                       Anche se Luana si è comportata da stronza.
     {charTag(FirstCharacter, "neutral")}:                       Ho sbagliato?
 
-        //DA RAFFORZARE SCELTA FUOCO
+
         + \ {charTag(PG, "neutral")}:                           Un'amicizia non è volontariato: se si sta male, ci si divide.
             -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "annoyed")}:               Una amicizia è anche volontariato, in un certo senso.
@@ -249,12 +254,14 @@
         + (air2)\ {charTag(PG, "neutral")}:                     <i>Tosto del pepe dell'onestà.</i>
             ~ kitchen_recipeAdjective = "onestà"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "affectionate")}:          Come Talco.
                                                                 Quel tipo di persona che se fai una cagata, te la dice.
             
         + (earth2)\ {charTag(PG, "neutral")}:                   <i>Spargo della curcuma divertente.</i>
             ~ kitchen_recipeAdjective = "comicità"
-            -> glyph_choice_manager(true, airC)->
+                -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
                                                                 L'amicizia da balotta quindi. 
                                                                 Da cazzeggio assieme.
                                                                 Da oasi nel casino del mondo.
@@ -262,6 +269,7 @@
         + (water2)\ {charTag(PG, "neutral")}:                   <i>Aggiungo del cumino empatico.</i>
             ~ kitchen_recipeAdjective = "empatia"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "affectionate")}:          Quel tipo di rapporto che ti fa sentire ascoltata.
                                                                 Capita.
                                                                 Dove puoi essere te stessa.
@@ -270,6 +278,7 @@
         + (aether2)\ {charTag(PG, "neutral")}:                  <i>Grattugio della cannella completa.</i>
             ~ kitchen_recipeAdjective = "completezza"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
             {charTag(FirstCharacter, "neutral")}:               Posso capire, ma non mi piace tantissimo come idea.
                                                                 Mi piace che le amicizie ci siano anche nel conflitto.
                                                                 Non mi preoccupa che le amicizie finiscano.
@@ -280,6 +289,7 @@
         + (fire2)\ {charTag(PG, "neutral")}:                    <i>Sminuzzo dello zenzero leale.</i>
             ~ kitchen_recipeAdjective = "lealtà"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "neutral")}:               Essere leali significa essere affidabili, vero?
                                                                 Quel tipo di persona che non va in giro a dire i tuoi segreti.
                                                                 E che cerca sempre di darti il consiglio giusto, non quello che le torna comodo.
@@ -356,7 +366,8 @@
         //Trasforma la domanda in aria
         + (air3)\ {charTag(PG, "neutral")}:                     <i>Verso una mestolata di brodo del terrore.</i>
             ~ kitchen_recipeComplement = "brodo del terrore"
-            -> glyph_choice_manager(true, airC)->
+                -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "neutral")}:               Woah, {player_name}.
                                                                 Questa è intensa.
                                                                 Anche se effettivamente l'amore può far cagare addosso.
@@ -364,6 +375,7 @@
         + (fire3)\ {charTag(PG, "neutral")}:                   <i>Manteco della noce inevitabile.</i>
             ~ kitchen_recipeComplement = "noce inevitabile"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "neutral")}:               Ah ah abbiamo un pochino di ego, {player_name}!
                                                                 Anche se una volta l'ho pensato anche io.
             {charTag(FirstCharacter, "affectionate")}:          Detto dalla persona giusta, "ti amo" ti fa volare, vero?
@@ -371,6 +383,7 @@
         + (water3)\ {charTag(PG, "neutral")}:                   <i>Condisco con semi dell'"io? no, no è possibile!".</i>
             ~ kitchen_recipeComplement = "semi dell'<i>io? no, no è possibile!</i>"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "neutral")}:               Coff Coff.
                                                                 La sento.
                                                                 Madonna se la sento.
@@ -381,6 +394,7 @@
         + (aether3)\ {charTag(PG, "neutral")}:                  <i>Incorporo una cucchiata di olio delle lusinghe.</i>
             ~ kitchen_recipeComplement = "olio delle lusinghe"
             -> glyph_choice_manager(true, aetherC)->
+
             {charTag(FirstCharacter, "curious")}:               Uh, a qualcuno piace quando il suo pelo viene lisciato, vero? 
             {charTag(FirstCharacter, "annoyed")}:               Però non rischia di essere una cosa egoista?
             {charTag(FirstCharacter, "neutral")}:               Più legata a come ti senti che al sentimento che provi per quella persona?
@@ -388,6 +402,7 @@
         + (earth3)\ {charTag(PG, "neutral")}:                    <i>Sminuzzo una manciata di peperoncini arrapati.</i>
             ~ kitchen_recipeComplement = "peperoncini arrapati"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "neutral")}:               Questa non me l'aspettavo, ma ci sta.
             {charTag(FirstCharacter, "affectionate")}:          Sentirsi amatə è indubbiamente sexy.
             {charTag(FirstCharacter, "neutral")}:               Anni fa confondevo a manetta arrapamento e amore.
@@ -489,6 +504,7 @@
             + (air1)\ {charTag(PG, "neutral")}:                 <i>Infarino confusamente delle tagliatelle.</i>
                 ~ kitchen_recipeNoun = "Tagliatelle"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "sad")}:                   Già.
                                                                 Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
             {charTag(FirstCharacter, "neutral")}:               Anche se Valeria dice che non è vero, che i problemi sono tutti collegati.
@@ -496,6 +512,7 @@
             + (earth1)\ {charTag(PG, "neutral")}:               <i>Stendo con decisione delle lasagne.</i>
                 ~ kitchen_recipeNoun = "Lasagne"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)
                 {charTag(FirstCharacter, "neutral")}:           Uh.
                                                                 Ha senso dire che ti invidio per questa tua chiarezza?
                 {charTag(FirstCharacter, "sad")}:               Deve essere bello sapere dove si vuole andare.
@@ -503,6 +520,7 @@
             + (aether1)\ {charTag(PG, "neutral")}:              <i>Affetto con disinteresse delle bruschette.</i>
                ~ kitchen_recipeNoun = "Bruschette"
                -> glyph_choice_manager(true, aetherC)->
+               ~ player_updateKitchenPersonalChoices(aetherC)  
                {charTag(FirstCharacter, "neutral")}:            Quindi sei più del tipo "Vediamo dove andiamo?"
                                                                 Che ha senso magari a livello personale.
                {charTag(FirstCharacter, "annoyed")}:            Ma per le grandi cose, boh.
@@ -510,6 +528,7 @@
             + (fire1)\ {charTag(PG, "neutral")}:                <i>Impasto furiosamente delle arancine.</i>
                 ~ kitchen_recipeNoun = "Arancine"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
                {charTag(FirstCharacter, "neutral")}:            Immagino che la furia sia un modo per guardare a ciò che non va ora.
                                                                 A volte mi piacerebbe sapermi arrabbiare.
             {
@@ -523,6 +542,7 @@
             + (water1)\ {charTag(PG, "neutral")}:               <i>Scaldo disperatamente delle tortillas.</i>
                 ~ kitchen_recipeNoun = "Tortillas"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
                 {charTag(FirstCharacter, "neutral")}:           È un sentimento.
                                                                 Non so se sia peggio la confusione o la disperazione.
             -  
@@ -598,22 +618,27 @@
             + (earth2)\ {charTag(PG, "neutral")}:               <i>Aggiungo con convinzione delle prugne.</i>
                 ~ kitchen_recipeAdjective = "convinzione"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)
                
             + (water2)\ {charTag(PG, "neutral")}:               <i>Spolvero con titubanza del mais.</i>
                 ~ kitchen_recipeAdjective = "titubanza"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
              
             + (fire2)\ {charTag(PG, "neutral")}:                <i>Affetto con autocontrollo delle zucchine.</i>
                ~ kitchen_recipeAdjective = "disciplina"
                -> glyph_choice_manager(true, fireC)->
+               ~ player_updateKitchenPersonalChoices(fireC)  
         
             + (air2)\ {charTag(PG, "neutral")}:                 <i>Spremo tempestosamente del chinotto.</i>
                 ~ kitchen_recipeAdjective = "tempestosità"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
     
             + (aether2)\ {charTag(PG, "neutral")}:              <i>Sminuzzo con consapevolezza della cipolla.</i>
                 ~ kitchen_recipeAdjective = "consapevolezza"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
             -     
         {
             - (kitchen_storageAether >  kitchen_storageEarth) && (kitchen_storageAether >  kitchen_storageFire) && (kitchen_storageAether >  kitchen_storageWater) && (kitchen_storageAether >  kitchen_storageAir):
@@ -700,9 +725,10 @@
                                                                 No, non so che altro dire.
                                                                 Ti do ragione e bona a questo giro.
 
-            //Troppo distaccata
+
             + \ {charTag(PG, "neutral")}:                       Vivete la band tutte allo stesso modo?
                 -> glyph_choice_manager(false, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "neutral")}:               Circa.
                                                                 A volte si discute, ma mai sulle cose grosse.
                                                                 Tipo: suonare in quel locale col padrone che ha idee del cazzo così che tiriamo su due soldi per fare cose belle poi, o no?
@@ -727,10 +753,11 @@
         {charTag(FirstCharacter, "curious")}:                   Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai? 
 
 
-            //Risistemare aria e terra
+
             +(air3) \ {charTag(PG, "neutral")}:                 <i>Trituro con gioia dell'anice stellato.</i>
                 ~ kitchen_recipeComplement = "anice gioioso"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "affectionate")}:          Gioiaaaaa!
                                                                 Sì, la gioia è qualcosa che manca tanto in questo mondo ama.
                                                                 Sono così felice per te!
@@ -738,12 +765,14 @@
             + (water3)\ {charTag(PG, "neutral")}:               <i>Aggiungo {player_pronoun has him:pieno|{player_pronoun has her:piena|pienə}} di terrore esistenziale dell'origano.</i>
                 ~ kitchen_recipeComplement = "origano terrorizzato"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "annoyed")}:               La cosa più millennial che potessi dire, ama.
             {charTag(FirstCharacter, "affectionate")}:          Ma posso capire.
 
             + (earth3) \ {charTag(PG, "neutral")}:              <i>Sbuccio titubante della vaniglia.</i>
                ~ kitchen_recipeComplement = "vaniglia"
                -> glyph_choice_manager(true, earthC)->
+               ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "neutral")}:               Già.
             {charTag(FirstCharacter, "annoyed")}:               A volte non è così facile capire, vero?
             {charTag(FirstCharacter, "neutral")}:               Serve del tempo anche solo per vedere i risultati.
@@ -752,6 +781,7 @@
             +(aether3) \ {charTag(PG, "neutral")}:              <i>Tosto {player_pronoun has him:rassegnato|{player_pronoun has her:rassegnata|rassegnatə}} del coriandolo.</i>
                 ~ kitchen_recipeComplement = "coriandolo rassegnato"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
             {charTag(FirstCharacter, "sad")}:                   No no, niente rassegnazione {player_name}!
             {charTag(FirstCharacter, "neutral")}:               Mo mi invento qualcosa per tirarti su.
             {charTag(FirstCharacter, "curious")}:               Tipo: vino? 
@@ -759,6 +789,7 @@
             + (fire3)\ {charTag(PG, "neutral")}:                <i>Caramello con spirito combattente della salvia.</i>
                 ~ kitchen_recipeComplement = "salvia combattente"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "sad")}:                   Vorrei poter dire lo stesso.
             {charTag(FirstCharacter, "neutral")}:               Ma le cose possono comunque cambiare un poco.
             {charTag(FirstCharacter, "affectionate")}:          Poco poco?
@@ -841,6 +872,7 @@
             + (earth1)\ {charTag(PG, "neutral")}:               <i>Lesso sportivamente delle patate.</i>
                 ~ kitchen_recipeNoun = "Patate"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "curious")}:               Ti ci vedo a correre e scaricare il nervo. 
                                                                 O in piscina.
                                                                 O a ballare.
@@ -849,13 +881,15 @@
             + (air1)\ {charTag(PG, "neutral")}:                 <i>Friggo con creatività delle mele.</i>
                 ~ kitchen_recipeNoun = "Mele"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "affectionate")}:          Lo sapevo!
             {charTag(FirstCharacter, "neutral")}:               Ecco perché mi sento capita da te.
                                                                 {player_pronoun has her:unite|unit3} dalla creatività!
 
             + (fire1)\ {charTag(PG, "neutral")}:                <i>Arrostisco attivamente delle melanzane.</i>
                ~ kitchen_recipeNoun = "Melanzane"
-               -> glyph_choice_manager(true, airC)->
+               -> glyph_choice_manager(true, fireC)->
+               ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "neutral")}:               Valeria fa qualcosa di simile.
                                                                 Quando qualcosa non le torna sente il bisogno di sistemare le cose.
                                                                 E a volte la casa.
@@ -865,6 +899,7 @@
             +(water1) \ {charTag(PG, "neutral")}:               <i>Griglio amichevolmente delle pesche.</i>
                 ~ kitchen_recipeNoun = "Pesche"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "affectionate")}:          Stare assieme è una cosa che cura molte ferite.
             {charTag(FirstCharacter, "sad")}:                   Forse a volte ho bisogno però di star da sola.
             {charTag(FirstCharacter, "neutral")}:               Ma mi rendo conto che per altre persone la socialità è una medicina.
@@ -872,6 +907,7 @@
             +(aether1) \ {charTag(PG, "neutral")}:              <i>Abbrustolisco meditativamente delle bietole.</i>
                 ~ kitchen_recipeNoun = "Bietole"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
             {charTag(FirstCharacter, "neutral")}:               Ci ho provato mille volte.
             {charTag(FirstCharacter, "annoyed")}:               Ma non so, non riesco a starmene ferma.
             {charTag(FirstCharacter, "neutral")}:               Però gli "ohm" mi piacciono.
@@ -950,11 +986,13 @@
             +(fire2) \ {charTag(PG, "neutral")}:                <i>Frullo della zucca camminando in avanti.</i>
                 ~ kitchen_recipeAdjective = "progressità"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "affectionate")}:          C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
             + (earth2)\ {charTag(PG, "neutral")}:               <i>Pesto dell'ortica con statica soddisfazione.</i>
                 ~ kitchen_recipeAdjective = "soddisfazione"
                 -> glyph_choice_manager(true, earthC)->
+                ~ player_updateKitchenPersonalChoices(earthC)
                 {charTag(FirstCharacter, "sad")}:               Vorrei sapere cosa si prova ad esser al proprio posto.
                 {charTag(FirstCharacter, "neutral")}:           Ti guardo e mi sembri una persona equilibrata.
                                                                 Deve essere bello.
@@ -963,6 +1001,8 @@
             + (air2)\ {charTag(PG, "neutral")}:                 <i>Schiaccio dei rapanelli girando in tondo.</i>
                ~ kitchen_recipeAdjective = "blocchità"
                -> glyph_choice_manager(true, airC)->
+               ~ player_updateKitchenPersonalChoices(airC)
+
                 {charTag(FirstCharacter, "annoyed")}:           Già.
                                                                 Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
                 {charTag(FirstCharacter, "sad")}:               Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
@@ -970,6 +1010,7 @@
             + (water2)\ {charTag(PG, "neutral")}:               <i>Pulisco dei finferli arretrando.</i>
                 ~ kitchen_recipeAdjective = "retrocessione"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "neutral")}:               Uh.
                                                                 Spero tu non viva male questa cosa.
             {charTag(FirstCharacter, "neutral")}:               Per quanto può valere, tornare sui propri passi credo sia sempre un segno del conoscersi meglio.
@@ -979,6 +1020,7 @@
             + (aether2)\ {charTag(PG, "neutral")}:              <i>Sciacquo confusamente della lattuga.</i>
                 ~ kitchen_recipeAdjective = "confusione"
                 -> glyph_choice_manager(true, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)  
             {charTag(FirstCharacter, "neutral")}:               A volte è solo questione di tempo, vero?
                                                                 Prima di capire dove andare.
                                                                 O magari è un momento per fermarsi e riposare.
@@ -1046,6 +1088,7 @@
             + (fire3)\ {charTag(PG, "neutral")}:                <i>Brucio del peperoncino.</i>
                 ~ kitchen_recipeComplement = "peperoncino bruciato"
                 -> glyph_choice_manager(true, fireC)->
+                ~ player_updateKitchenPersonalChoices(fireC)  
             {charTag(FirstCharacter, "sad")}:                   Merda.
             {charTag(FirstCharacter, "neutral")}:               Spero non per insoddisfazione.
             {charTag(FirstCharacter, "sad")}:                   Perché non so te, ma è dura essere soddisfattə di quello che si crea.
@@ -1059,6 +1102,7 @@
             + (earth3)\ {charTag(PG, "neutral")}:               <i>Seleziono dei chiodi di garofano.</i>
                ~ kitchen_recipeComplement = "chiodi di garofano selezionati"
                -> glyph_choice_manager(true, earthC)->
+               ~ player_updateKitchenPersonalChoices(earthC)
             {charTag(FirstCharacter, "neutral")}:               Anche a me piace condividere solo con la cerchia ristretta di am3.
             {charTag(FirstCharacter, "neutral")}:               Mi fa sentire al sicuro.
             {charTag(FirstCharacter, "sad")}:                   Ma a volte da quella bolla ci devo uscire.
@@ -1067,15 +1111,17 @@
             + (water3)\ {charTag(PG, "neutral")}:               <i>Copro dello zenzero.</i>
                 ~ kitchen_recipeComplement = "zenzero coperto"
                 -> glyph_choice_manager(true, waterC)->
+                ~ player_updateKitchenPersonalChoices(waterC)   
             {charTag(FirstCharacter, "neutral")}:               Tieni le tue creature per te.
             {charTag(FirstCharacter, "curious")}:               Sarà un gesto di affetto o di insicurezza? 
                                                                 O una lotta all'idea che tutto debba essere produttivo?
             {charTag(FirstCharacter, "neutral")}:               Sarei curiosa di scoprirlo.
 
-            //non è proprio una risposta da aria, se è una cosa creativa
+
             + (air3)\ {charTag(PG, "neutral")}:                 <i>Aggiungo con disinteresse del cumino.</i>
                 ~ kitchen_recipeComplement = "cumino disinteressato"
                 -> glyph_choice_manager(true, airC)->
+                ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "neutral")}:               Quello che conta è creare e basta per te, quindi?
                                                                 Ha senso.
                                                                 Dovrei farlo anche io ogni tanto.

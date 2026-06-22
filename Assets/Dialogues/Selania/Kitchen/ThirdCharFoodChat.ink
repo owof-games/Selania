@@ -147,6 +147,7 @@
                 
         + \ {charTag(PG, "neutral")}:                                           Sono un{player_pronoun has him:o|{player_pronoun has her:a|ə}} che tifa sempre le squadre perdenti.
                 -> glyph_choice_manager(false, aetherC)->
+                ~ player_updateKitchenPersonalChoices(aetherC)   
         {charTag(ThirdCharacter, "bored")}:                                     Te ti vuoi male, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   Cioè, capisco la cosa del perdere ogni tanto, perché poi quando vinci senti proprio che è una figata.
         {charTag(ThirdCharacter, "bored")}:                                     Ma <i>sempre</i>?
@@ -166,6 +167,7 @@
         + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Stufo della soia del centrocampista.</i>
             ~ kitchen_recipeNoun = "Stufato di soia"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "jester")}:                                    Ci sta, il tizio che sta sempre in mezzo alle scatole.
                                                                                 Scherzo.
         {charTag(ThirdCharacter, "neutral")}:                                   Io non c'ho tutta questa pazienza di stare lì, sempre lontano dalle porte.
@@ -173,6 +175,7 @@
         + (water1)\ {charTag(PG, "neutral")}:                                   <i>Lavo dell'insalata di spinaci del difensore.</i>
             ~ kitchen_recipeNoun = "Insalata di spinaci"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "bored")}:                                     Che balle, vecio!
         {charTag(ThirdCharacter, "jester")}:                                    Cioè, meglio per me, anche perché in squadra tutti vogliono fare l'attaccante.
         {charTag(ThirdCharacter, "neutral")}:                                   Ma boh, è una cosa noiosissima.
@@ -180,6 +183,7 @@
         + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Friggo dei peperoncini dell'attaccante.</i>
             ~ kitchen_recipeNoun = "Frittura di peperoncini"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Come me.
         {charTag(ThirdCharacter, "bored")}:                                     Quindi, col cazzo.
         {charTag(ThirdCharacter, "jester")}:                                    Scherzo, però alla fine tutti nel gruppo voglio sempre stare in attacco.                                                                        
@@ -187,6 +191,7 @@
         + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Salto del riso del portiere.</i>
             ~ kitchen_recipeNoun = "Sauté di riso "
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "bored")}:                                     Sto per dire una cosa odiosa, ma è un ruolo che toglierei.
                                                                                 Lascerei la difesa della porta ai difensori.
                                                                                 Niente uso delle mani.
@@ -196,6 +201,7 @@
         + (air1)\ {charTag(PG, "neutral")}:                                     <i>Immergo nell'olio dei pomodorini dell'arbitro.</i>
             ~ kitchen_recipeNoun = "Confit di pomodori"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "jester")}:                                    CORNUTOOOOOOOOO!
                                                                                 Scusa, ma non potevo farne a meno.
         {charTag(ThirdCharacter, "bored")}:                                     Cioè, è una scelta.
@@ -299,6 +305,7 @@
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Grattuggio delle olive della invalicabilità.</i>
             ~ kitchen_recipeAdjective = "invalicabilità"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "neutral")}:                                   Già.
                                                                                 Uno può cedere un po', in alcune situazioni.
                                                                                 Ma altre sono invalicabili, punto.
@@ -306,6 +313,7 @@
         + (air2)\ {charTag(PG, "neutral")}:                                     <i>Impano delle mandorle noncuranti.</i>
             ~ kitchen_recipeAdjective = "noncuranza"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "neutral")}:                                   Non so se sia una gran cosa, ma buon per te.
                                                                                 Io non ce la faccio proprio a farmi passare addosso le cose, zero.
                                                                                 Mi fai un torto?
@@ -314,12 +322,14 @@
         + (water2)\ {charTag(PG, "neutral")}:                                   <i>Mescolo dei semi della apertura.</i>
             ~ kitchen_recipeAdjective = "apertura"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "neutral")}:                                   Boh vecio, alla fine uno però un limite lo deve anche tirare.
         {charTag(ThirdCharacter, "bored")}:                                     Perché se stai lì a chiappe all'aria tutto il tempo poi è ovvio che lo prendi nel culo, no?
     
         + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Scaldo delle ciliege collaborative.</i>
             ~ kitchen_recipeAdjective = "collaborazione"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "bored")}:                                     Collabori nel farti prendere nel culo?
                                                                                 Tipo <i>Porgi l'altra guancia</i>?
                                                                                 Perché non sono uno molto religioso, vecio.
@@ -328,6 +338,7 @@
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio dell'aglio inflessibile.</i>
             ~ kitchen_recipeAdjective = "inflessibilità"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Ci capiamo, noi due.
         {charTag(ThirdCharacter, "neutral")}:                                   Ci sta anche perdonare, una volta.
                                                                                 Anche se comunque me la legherò al dito per un bel po'.
@@ -427,6 +438,7 @@
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Spruzzo con acqua di rose sinergica.</i>
             ~ kitchen_recipeComplement = "acqua di rose sinergica"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "bored")}:                                     Cos'è?
                                                                                 Vi ritrovate a farvi le unghie e parlare dei vostri ragazzi?
         {charTag(ThirdCharacter, "jester")}:                                    Scherzo.
@@ -435,6 +447,7 @@
         + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Incorporo delle carote del sinallagma.</i>
             ~ kitchen_recipeComplement = "carote del sinallagma"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "jester")}:                                    Questa me la ricordo per un casino di Dona con un fornitore.
         {charTag(ThirdCharacter, "neutral")}:                                   Che in soldoni è: dare e avere secondo contratto?
         {charTag(ThirdCharacter, "bored")}:                                     È un modo di dire che stai lì a contare i minuti di pesate condivise?
@@ -444,6 +457,7 @@
         + (air3)\ {charTag(PG, "neutral")}:                                     <i>Decoro con delle bacche del filosofeggiare.</i>
             ~ kitchen_recipeComplement = "bacche del filosofeggiare"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "jester")}:                                    Non so sei sia meglio, vecio!
         {charTag(ThirdCharacter, "neutral")}:                                   Quelle cose alla Marzullo, tipo "È meglio avere il cazzo piccolo e scopare, o avere il cazzo grande e non scopare"?
         {charTag(ThirdCharacter, "jester")}:                                    Giusto?
@@ -452,12 +466,14 @@
         + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Imbevo il tutto con della grappa del coevolvere.</i>
             ~ kitchen_recipeComplement = "grappa del coevolvere"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "neutral")}:                                   La quantità di pipponi che ti fai tu vecio.
         {charTag(ThirdCharacter, "jester")}:                                    Manco {charNameOne}!
 
         + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Rivesto con granella del ritegno.</i>
             ~ kitchen_recipeComplement = "granella del ritegno"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Idem.
         {charTag(ThirdCharacter, "neutral")}:                                   La vita è già difficile di suo, perché devo anche riempire qualcuno con le mie paranoie?
         {charTag(ThirdCharacter, "bored")}:                                     Meglio stare lì a giocare a calcetto e bona, no?
@@ -564,6 +580,7 @@
         + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Inizio a preparare del marzapane della lentezza.</i>
             ~ kitchen_recipeNoun = "Marzapane"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "jester")}:                                    Alla vecchia maniera, eh vecio?
         {charTag(ThirdCharacter, "neutral")}:                                   Un commento carino alla volta.
                                                                                 Un regalino.
@@ -574,6 +591,7 @@
         + (water1)\ {charTag(PG, "neutral")}:                                   <i>Raccolgo gli ingredienti per una pastiera della vulnerabilità.</i>
             ~ kitchen_recipeNoun = "Pastiera"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "bored")}:                                     Dimmi vecio, vi fate anche le unghie assieme?
                                                                                 Sai farle la treccia?
         {charTag(ThirdCharacter, "jester")}:                                    E chi chiamerai quando la tua tipa mi telefonerà perché ha bisogno di un idiota con cui scopare davvero?    
@@ -581,6 +599,7 @@
         + (fire1)\ {charTag(PG, "neutral")}:                                    <i>È il momento di friggere delle frittelle della passione.</i>
             ~ kitchen_recipeNoun = "Frittelle"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Noi due siamo separati alla nascita vecio!
         {charTag(ThirdCharacter, "neutral")}:                                   Anche io punto tutto sui miei venti centimetri.
         {charTag(ThirdCharacter, "jester")}:                                    Di cazzate che dico.
@@ -590,6 +609,7 @@
         + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Cioccolato a iosa per una tenerina asessuale.</i>
             ~ kitchen_recipeNoun = "Tenerina"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "bored")}:                                     Gesù licantropo, che noia!
         {charTag(ThirdCharacter, "neutral")}:                                   No no no ritratto.
                                                                                 Che Petra mi ha già spiegato che non è che uno lo fa apposta.
@@ -599,6 +619,7 @@
         + (air1)\ {charTag(PG, "neutral")}:                                     <i>Parto con dei cannoli dell'affinità intellettuale.</i>
             ~ kitchen_recipeNoun = "Cannoli"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "jester")}:                                    Veciooooooooooooooo!
                                                                                 Prima si scopa, <b>poi</b> si parla.
         {charTag(ThirdCharacter, "neutral")}:                                   Petra dice che sono peggio dei ragazzi gay.
@@ -718,6 +739,7 @@
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Frullo a neve dell'acquafaba bilanciata.</i>
             ~ kitchen_recipeAdjective = "bilancia"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "neutral")}:                                   Onesto.
                                                                                 Non il centro della relazione, ma nemmeno una cosa che non caghi.
                                                                                 Un po' come una di quelle bilance a due braccia.
@@ -728,6 +750,7 @@
         + (air2)\ {charTag(PG, "neutral")}:                                     <i>Sciolgo a bagnomaria della cioccolata aromantica.</i>
             ~ kitchen_recipeAdjective = "aromanticità"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "neutral")}:                                   Sento già Petra che mi urla in testa di non dire cazzate.
                                                                                 Mi ha fatto una testa tanta su questa roba perché lei è aromantica.
                                                                                 E quando gli ho risposto che io ero ajuventino, non ha capito la battuta.
@@ -736,6 +759,7 @@
         + (water2)\ {charTag(PG, "neutral")}:                                   <i>Friggo dei canditi della connessione emotiva.</i>
             ~ kitchen_recipeAdjective = "emotività"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "neutral")}:                                   Ti arrapi se lei piange, una cosa del genere?
                                                                                 O ti viene duro quando lei ti racconta dei problemi col padre?
         {charTag(ThirdCharacter, "jester")}:                                    Vecio, che roba malata.
@@ -745,6 +769,7 @@
         + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Pulisco della vaniglia della ierogamia.</i>
             ~ kitchen_recipeAdjective = "incondizionata"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "bored")}:                                     Che roba è?!?
         {charTag(ThirdCharacter, "neutral")}:                                   Ci metto un po' di zucchero, non si sa mai.
         {charTag(TheWitch, "{witch_state()}")}:                                 <i>Luna e sole che si sfiorano.</i>
@@ -755,6 +780,7 @@
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbollento delle ciliegie della necessità.</i>
             ~ kitchen_recipeAdjective = "necessità"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Idem con patate vecio!
         {charTag(ThirdCharacter, "neutral")}:                                   Muoio senza sesso.
                                                                                 Durante la pandemia Donatella a un certo punto mi ha odiato.
@@ -848,6 +874,7 @@
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Decoro con una nidiata di praline festose.</i>
             ~ kitchen_recipeComplement = "nidiata di praline festose"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "bored")}:                                     Oh dio, facciamo un paio?
         {charTag(ThirdCharacter, "jester")}:                                    Vuoi tirare su una squadra da calcio vecio? 
         {charTag(ThirdCharacter, "neutral")}:                                   Magari un giorno ci si becca fuori di qui e il mio figlio e uno dei tuoi trecentomila che ti farai diventano pure amici!
@@ -855,6 +882,7 @@
         + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Spolvero con dello zucchero dell'imperativo biologico.</i>
             ~ kitchen_recipeComplement = "zucchero dell'imperativo biologico"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "jester")}:                                    Un po'come la fame, ma per sparare spermini in giro.
                                                                                 Mi fai morire vecio!
                                                                                 Mi fai morire.
@@ -868,6 +896,7 @@
         + (air3)\ {charTag(PG, "neutral")}:                                     <i>Inzuppo con dello sciroppo del futuro incerto.</i>
             ~ kitchen_recipeComplement = "sciroppo del futuro incerto"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "neutral")}:                                   Ci sta vecio.
                                                                                 Incerto tu.
                                                                                 Incerto il mondo.
@@ -878,6 +907,7 @@
         + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Farcisco con della crema della kincentricità.</i>
             ~ kitchen_recipeComplement = "crema della kincentricità"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "jester")}:                                    Ti sorprenderò, ma questa roba so che cos'è.
         {charTag(ThirdCharacter, "neutral")}:                                   Grazie a Petra, ovviamente.
                                                                                 È la mia consulente per le cose gender.
@@ -887,6 +917,7 @@
         + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Glasso con dello zucchero dello zero, no, mai!</i>
             ~ kitchen_recipeComplement = "zucchero dello zero, no, mai"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Bravo vecio, bravo!
         {charTag(ThirdCharacter, "neutral")}:                                   Io ne voglio per me, sia chiaro.
         {charTag(ThirdCharacter, "jester")}:                                    Ma capisco chi vuole rimanere un battitore libero.
@@ -1001,6 +1032,7 @@
         + (earth1)\ {charTag(PG, "neutral")}:                                   <i>Schiaccio dei ceci della creazione.</i>
             ~ kitchen_recipeNoun = "Purea di ceci"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "neutral")}:                                   Un po' tipo un pittore?
                                                                                 O un muratore?
         {charTag(ThirdCharacter, "jester")}:                                    Le cazzate che dicono valgono come creazione?
@@ -1008,6 +1040,7 @@
         + (water1)\ {charTag(PG, "neutral")}:                                   <i>Frullo delle melanzane dellə Riscrittorə.</i>
             ~ kitchen_recipeNoun = "Crema di melanzane"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "neutral")}:                                   Non il massimo della ambizione, credo?
                                                                                 Però ehi, hai trovato quello che ti piace!
                                                                                 Non è una cosa che possono dire tutti!
@@ -1015,6 +1048,7 @@
         + (fire1)\ {charTag(PG, "neutral")}:                                    <i>Pulisco della anguria della trasformazione.</i>
             ~ kitchen_recipeNoun = "Gazpacho di anguria"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "neutral")}:                                   Tipo il birraio, che trasforma il luppolo in birra?
                                                                                 O più tipo il falegname?
         {charTag(ThirdCharacter, "jester")}:                                    O il sottoscritto, che trasforma tutto in cazzate?                                                                            
@@ -1022,6 +1056,7 @@
         + (aether1)\ {charTag(PG, "neutral")}:                                  <i>Sminuzzo delle zucchine del rifiuto del lavoro.</i>
             ~ kitchen_recipeNoun = "Parmigiana di zucchine"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
                 {charTag(ThirdCharacter, "jester")}:                            Non binario e per sempre precario. 
@@ -1035,6 +1070,7 @@
         + (air1)\ {charTag(PG, "neutral")}:                                     <i>Preparo dei peperoni della divulgazione.</i>
             ~ kitchen_recipeNoun = "Cartoccio di peperoni"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "neutral")}:                                   Un po' come Piero Angela?
                                                                                 O un professore di scuola?
         {charTag(ThirdCharacter, "jester")}:                                    O vuoi essere pagat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} per raccontare in giro quanto sono bono e bravo?                                                                        
@@ -1146,18 +1182,21 @@
         + (earth2)\ {charTag(PG, "neutral")}:                                   <i>Mondo dei durian della stima.</i>
             ~ kitchen_recipeAdjective = "stima"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "neutral")}:                                   Butta bene, {player_name}.
                                                                                 Alla fine non è mica scontata come cosa.
             
         + (air2)\ {charTag(PG, "neutral")}:                                     <i>Affetto della carambola della accondiscendenza selettiva.</i>
             ~ kitchen_recipeAdjective = "accondiscendenza selettiva"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "jester")}:                                    In soldoni: gli dai ragione fino a quando non dice stronzate?
         {charTag(ThirdCharacter, "neutral")}:                                   A volte è davvero dura stare zitti quando un capo dice una cosa che non ha senso.
             
         + (water2)\ {charTag(PG, "neutral")}:                                   <i>Sbollento dei quadong della confidenza.</i>
             ~ kitchen_recipeAdjective = "confidenza"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
         {charTag(ThirdCharacter, "bored")}:                                     Ma vi raccontate i cazzi vostri?
                                                                                 O più una cosa di fiducia?
                                                                                 Già i clienti sanno troppe cose su di noi.
@@ -1166,6 +1205,7 @@
         + (aether2)\ {charTag(PG, "neutral")}:                                  <i>Frullo del mangostano dell'anarchismo.</i>
             ~ kitchen_recipeAdjective = "anarchia"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == they:
                 {charTag(ThirdCharacter, "jester")}:                            Te la faccio passare solo perché già sei non binario, e me la aspettavo che rompevi altre regole.
@@ -1180,6 +1220,7 @@
         + (fire2)\ {charTag(PG, "neutral")}:                                    <i>Sbuccio della jabuticaba della lotta.</i>
             ~ kitchen_recipeAdjective = "lotta"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Cazzo, devo proprio farti conoscere Petra.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == her:
@@ -1303,6 +1344,7 @@
         + (water3)\ {charTag(PG, "neutral")}:                                   <i>Insaporisco con aria della povertà.</i>
             ~ kitchen_recipeComplement = "aria della povertà"
             -> glyph_choice_manager(true, waterC)->
+            ~ player_updateKitchenPersonalChoices(waterC)   
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == her:
                 {charTag(ThirdCharacter, "jester")}:                            Poi voi donne vi lamentate che guadagniamo più di voi.
@@ -1316,12 +1358,14 @@
         + (earth3)\ {charTag(PG, "neutral")}:                                   <i>Farcisco con aroma di oculatezza.</i>
             ~ kitchen_recipeComplement = "aroma di oculatezza"
             -> glyph_choice_manager(true, earthC)->
+            ~ player_updateKitchenPersonalChoices(earthC)
         {charTag(ThirdCharacter, "neutral")}:                                   Un po' tipo colpo al cerchio e alla botte, quindi?
         {charTag(ThirdCharacter, "jester")}:                                    Ma non colpire il povero {charNameThree}!
             
         + (air3)\ {charTag(PG, "neutral")}:                                     <i>Marino con una miscela di pianificazione e disastro.</i>
             ~ kitchen_recipeComplement = "miscela di pianificazione e disastro"
             -> glyph_choice_manager(true, airC)->
+            ~ player_updateKitchenPersonalChoices(airC)
         {charTag(ThirdCharacter, "jester")}:                                    Un po' come Petra.
         {charTag(ThirdCharacter, "neutral")}:                                   Ogni mese è lì che dice "A questo giro mi metto via i soldi per andare via da casa dei miei!".
                                                                                 E il giorno dopo la paga si è presa un viaggio per un posto che conosce solo lei.                                            
@@ -1329,6 +1373,7 @@
         + (aether3)\ {charTag(PG, "neutral")}:                                  <i>Addenso con farina di quel che accade accade.</i>
             ~ kitchen_recipeComplement = "quel che accade accade"
             -> glyph_choice_manager(true, aetherC)->
+            ~ player_updateKitchenPersonalChoices(aetherC)  
         {charTag(ThirdCharacter, "neutral")}:                                   Non credo sia un metodo, {player_name}.
         {charTag(ThirdCharacter, "jester")}:                                    Soprattutto se vuoi sopravvivere.
 
@@ -1336,6 +1381,7 @@
         + (fire3)\ {charTag(PG, "neutral")}:                                    <i>Spolvero con dell'erba del risparmio asfissiante.</i>
             ~ kitchen_recipeComplement = "erba del risparmio asfissiante"
             -> glyph_choice_manager(true, fireC)->
+            ~ player_updateKitchenPersonalChoices(fireC)  
         {charTag(ThirdCharacter, "jester")}:                                    Siamo in due.
         {charTag(ThirdCharacter, "neutral")}:                                   Donatella diceva che era il trauma dell'essere diventato povero.
                                                                                 Mentre lei era più oculata, ma alcune cose se le concedeva.
