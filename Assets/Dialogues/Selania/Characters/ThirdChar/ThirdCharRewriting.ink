@@ -204,7 +204,7 @@
 
 
 
-        + \ {charTag(PG, "neutral")}:                           A lavoro ti fai il mazzo, eppure non hai niente.
+        + \ {charTag(PG, "neutral")}:                           A lavoro ti fai il mazzo, eppure non possiedi niente.
             -> glyph_choice_manager(false, earthC)->
         {charTag(PG, "neutral")}:                               Quando hai parlato del tuo capo l'hai descritto come un idiota incapace.
                                                                 E per questo finisce che fai il suo lavoro, che i fornitori ti chiamano mentre non sei in turno, così come i colleghi.
@@ -424,7 +424,7 @@
                     }                                             
             
 
-            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra{!letters_thirdCharLetterTwoChoice has airC && !letters_thirdCharLetterTwoChoice has fireC && !letters_thirdCharLetterTwoChoice has earthC:, un buono fratello per tua sorella }: porta queste cose nelle tue relazioni.
+            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra{!letters_thirdCharLetterTwoChoice has airC && !letters_thirdCharLetterTwoChoice has fireC && !letters_thirdCharLetterTwoChoice has earthC:, un buono fratello per tua sorella }: costruisci nuove relazioni partendo da questa certezza.
             {charTag(PG, "neutral")}:                           Non serve per forza essere quello che esce con mille ragazze.
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
@@ -609,13 +609,13 @@
                                                                 Se vuoi vivere, stare bene, forse è arrivato il momento di provare qualcosa di diverso.
                                                                 Magari imparando proprio da tuo padre.    
                 
-        + (earth) \ {charTag(PG, "neutral")}:                   Ma anche ora stai gettando nuove radici: col lavoro, con la casa.
+        + (earth) \ {charTag(PG, "neutral")}:                   Ma ogni giorno getti nuove radici: stiamo parlando perché hai voglia di cambiamento.
         {
         - letters_thirdCharLetterFourChoice has earthC:
         {charTag(PG, "neutral")}:                               Col piano per il nuovo locale con Petra.
 
         }
-        {charTag(PG, "neutral")}:                               Non sono soluzioni perfette forse, ma non sono per forza un punto d'arrivo.
+        {charTag(PG, "neutral")}:                               Non tutte le soluzioni che hai trovato sono perfette forse, ma non sono per forza un punto d'arrivo.
                                                                 E quando hai perso il vecchio lavoro o la casa con Donatella, ti sei attivato per gettare nuove fondamenta.
                             
         + (air) \ {charTag(PG, "neutral")}:                     Ma io vedo la curiosità con cui ti butti nelle cose nuove.
