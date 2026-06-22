@@ -116,7 +116,7 @@
         }                                     
                 
                 
-        + \ {charTag(PG, "neutral")}:                       Tuo fratello però ha trovato la gioia anche in questo casino.
+        + \ {charTag(PG, "neutral")}:                       Tuo fratello però ha trovato stabilità anche in questo casino.
             -> glyph_choice_manager(false, earthC)->
         {charTag(PG, "neutral")}:                           Ci sono le sue statue, c'è il suo compagno.
         {
@@ -185,14 +185,14 @@
 
     {charTag(PG, "neutral")}:                               A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.
 
-    + \ {charTag(PG, "neutral")}:                           Le bugie alla fine sono solo storie. Usale per divertirti.
+    + \ {charTag(PG, "neutral")}:                           Le bugie alla fine sono solo storie. Usale per costruire qualcosa di diverso.
             -> glyph_choice_manager(false, earthC)->
     {
         - grimoire_secondChar has grimSecondCharKitchenThree:
     {charTag(PG, "neutral")}:                               L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
                                                             E che sei felice di inventare storie con tuo fratello.
     }    
-    {charTag(PG, "neutral")}:                               Ti piace immaginare giornate diverse: prova a condividere questa cosa con nuove persone, facendoti nuovi amici.
+    {charTag(PG, "neutral")}:                               Ti piace immaginare giornate diverse: prova a fare questa cosa con nuove persone, facendoti nuovi amici.
                                                             La tua testa è un bellissimo parco giochi: perché non condividerla con gli altri?
     {
         - grimoire_secondChar has grimSecondOpenLibrary:
@@ -298,7 +298,7 @@
                                                             Non si è fatto mettere i piedi in testa da nessuno.
                                                             E questo lo fai se pensi ci sia un futuro dove andare.
                 
-    + \ {charTag(PG, "neutral")}:                           Ma sai anche trovare la fantasia e la giocosità nel mondo.
+    + \ {charTag(PG, "neutral")}:                           Ma sai trovare un compromesso tra cose pratiche e fantasia.
         -> glyph_choice_manager(false, earthC)->
          {charTag(PG, "neutral")}:                          Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
                                                             Ti sei fatto amico una rana parlante.
@@ -394,7 +394,7 @@
                                                             Ma un adulto responsabile, come tuo fratello.
         }
 
-        + \ {charTag(PG, "neutral")}:                       Ma puoi essere un adulto creativo, come tuo fratello.
+        + \ {charTag(PG, "neutral")}:                       Ma puoi essere un adulto concreto e creativo, come tuo fratello.
             -> glyph_choice_manager(false, earthC)->
         {charTag(PG, "neutral")}:                           E condividere le tue storie e i tuoi esperimenti.
                                                             Essere felice nel farli.
@@ -447,9 +447,9 @@
                                                         Assieme.
                 
 
-        + (earth)\ {charTag(PG, "neutral")}:            L'opposto della paura è il giocare.//ragiona meglio l'esito per non uscire da Delfino
+        + (earth)\ {charTag(PG, "neutral")}:            Abbiamo paura delle cose che non affrontiamo, ma questo non è mai stato un tuo limite.
         -> glyph_choice_manager(false, earthC)->
-        {charTag(PG, "neutral")}:                       E tu sei il ritratto della volontà di giocare, di provare.
+        {charTag(PG, "neutral")}:                       Sei il ritratto della volontà di giocare, di provare.
                                                         Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
                                                         E a quel punto ogni paura diventerà solo un problema da risolvere.
                 

@@ -20,7 +20,7 @@
                                                                 Perché c'è una stazione ma non passa nessun treno?
             {charTag(SecondCharacter, "angry")}:                Perché c'è una porta vicino alla stazione ma non ci posso entrare?
 
-            + (rilassante)\ {charTag(PG, "neutral")}:           C'è qualcosa di rilassante.
+            + (rilassante)\ {charTag(PG, "neutral")}:           C'è qualcosa di rilassante, di stabilizzante.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "neutral")}:              Sì no boh.
                                                                 Mi annoiano le cose rilassanti.
@@ -86,14 +86,12 @@
             {charTag(SecondCharacter, "energy")}:               Ma per fortuna oggi potrò mangiare solo caramelle!
                     
                 
-            + (stagno) \ {charTag(PG, "neutral")}:              Niente caramelle, ma c'è uno stagno dove nuotare!//HA PIU SENSO CHE GLI SI FACCIANO GLI AUGURI XD
+            + (auguri) \ {charTag(PG, "neutral")}:              Partiamo dalle cose pratiche: auguri!!!
                     -> glyph_choice_manager(false, earthC)->
-            {charTag(SecondCharacter, "energy")}:               WOOOOOOOOOOW!
-            {charTag(SecondCharacter, "melanchonic")}:          Non avevo mai visto uno stagno!
-            {charTag(SecondCharacter, "emotional")}:            Però questa estate ho visto un mare gigantesco.
-                                                                Più grande anche del cielo!
-            {charTag(SecondCharacter, "energy")}:               Quello qui non c'è di sicuro!
-                                                                Ma era comunque freddo e mamma aveva paura che ci annegavo.    
+            {charTag(SecondCharacter, "energy")}:               Grazie!!!
+                                                                Mi piacciono gli auguri.
+            {charTag(SecondCharacter, "emotional")}:            Ma mi piacciono di più le caramelle.
+       
     
             + (ripreso) \ {charTag(PG, "neutral")}:             Ovviamente ti sei arrabbiato con tuo padre e hai ripreso i giocattoli.
                     -> glyph_choice_manager(false, fireC)->
@@ -150,10 +148,6 @@
 
         {charTag(SecondCharacter, "emotional")}:                Non sai che cosa fighissima!
                                                                 Prima ho visto una rana allo stagno.
-        {
-            - second_char_main_storylets.one.stagno:
-            {charTag(SecondCharacter, "emotional")}:            Volevo nuotarci, come mi hai detto prima, ma poi sono stato con lei.
-        }
 
         {
             - are_two_entities_together(Mentor, PG): 
@@ -449,12 +443,12 @@
             {charTag(SecondCharacter, "emotional")}:            E allora vado a letto prestissimo e correggo tutta la giornata.
 
 
-            + \ {charTag(PG, "neutral")}:                       Però non mi hai detto il tuo nome. Sei una spia? Un gatto? Un gatto spia?
+            + \ {charTag(PG, "neutral")}:                       Non mi hai ancora detto cosa ti piace dei ricci.
                     -> glyph_choice_manager(false, earthC)->
-            {charTag(SecondCharacter, "neutral")}:              Sì no boh.
-            {charTag(SecondCharacter, "energy")}:               Una spia non direbbe mai che è una spia.
-                                                                Oppure ti confonde, così non capisci cosa è vero o cosa no.
-            {charTag(SecondCharacter, "angry")}:                Però tu non puoi mica farlo!
+            {charTag(SecondCharacter, "emotional")}:            Sanno resistere a tantissimi morsi di vipera!
+            {charTag(SecondCharacter, "energy")}:               E poi quando qualcuno gli rompe le scatole possono proteggersi con le loro spine.
+                                                                Anche se non sarebbe male lanciarle, come fanno gli istrici!
+            {charTag(SecondCharacter, "melanchonic")}:          E il latte gli fa male, come a me!
             
             + \ {charTag(PG, "neutral")}:                       Sembra che tua mamma ha tante preoccupazioni.
                     -> glyph_choice_manager(false, aetherC)->
@@ -542,7 +536,7 @@
     - (top)
         {charTag(PG, "neutral")}:                               {charNameFive} dice che prima le hai dato un calcio.
             
-            + (razionale) \ {charTag(PG, "neutral")}:           Pensavo che uno scienziato come te fosse più razionale.
+            + (razionale) \ {charTag(PG, "neutral")}:           Ti facevo più responsabile.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "angry")}:                Ehi! Mica mi chiedi perché lo fatto!
                                                                 Vi odio.
@@ -677,7 +671,7 @@
                                                                 E a sputare nel caffè di chi ti fa male.
             {
                 - second_char_main_storylets.four.razionale:
-                {charTag(SecondCharacter, "angry")}:                E non mi dire di nuovo che devo essere più razionale, come prima!
+                {charTag(SecondCharacter, "angry")}:                E non mi dire di nuovo che devo essere più responsabile, come prima!
             
             }
         {charTag(SecondCharacter, "neutral")}:                  Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
@@ -1041,16 +1035,16 @@
     
             } 
             {
-                - second_char_main_storylets.five.casa:
-            {charTag(SecondCharacter, "melanchonic")}:              Dopo che mi hai chiesto se volevo tornare a casa, sento che mi manca tanto.
+            - second_char_main_storylets.five.casa:
+            {charTag(SecondCharacter, "melanchonic")}:          Dopo che mi hai chiesto se volevo tornare a casa, sento che mi manca tanto.
             }
         {charTag(SecondCharacter, "neutral")}:                  Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
                                                                 E vive in una casa piccola piccola assieme al suo amico.
         {charTag(SecondCharacter, "melanchonic")}:              Viene a trovarci quando non c'è papà perché non si piacciono.
         {charTag(SecondCharacter, "neutral")}:                  Ma se papà mi fa male allora lo cerca e gli urla addosso tantissime cose.
             {
-                - second_char_main_storylets.six.lottare:
-            {charTag(SecondCharacter, "energy")}:                   Quella cosa che mi hai detto prima sullo stringere i denti e lottare, lui è sempre così.
+            - second_char_main_storylets.six.lottare:
+            {charTag(SecondCharacter, "energy")}:               Quella cosa che mi hai detto prima sullo stringere i denti e lottare, lui è sempre così.
             }
         {charTag(SecondCharacter, "emotional")}:                Mi ha promesso che mi porta a pescare una volta.
         {charTag(SecondCharacter, "neutral")}:                  Senza dirlo a mamma perché lei ha paura perché non so nuotare.
@@ -1083,10 +1077,10 @@
                                                                 E anche lui non sa nuotare.
         {charTag(SecondCharacter, "neutral")}:                  Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
             {
-                - are_two_entities_together(Mentor, PG): 
-                {charTag(FifthCharacter, "hurry")}:                 Potrebbe essere carino se provaste a imparare assieme, no?
-                {charTag(SecondCharacter, "neutral")}:              E se poi mi vuole annegare?
-                {charTag(SecondCharacter, "neutral")}:              Poi la mamma mi risuscita solo per ammazzarmi di nuovo.
+            - are_two_entities_together(Mentor, PG): 
+            {charTag(FifthCharacter, "hurry")}:                 Potrebbe essere carino se provaste a imparare assieme, no?
+            {charTag(SecondCharacter, "neutral")}:              E se poi mi vuole annegare?
+            {charTag(SecondCharacter, "neutral")}:              Poi la mamma mi risuscita solo per ammazzarmi di nuovo.
             }
             
             + \ {charTag(PG, "neutral")}:                       Come sono le statue di tuo fratello?
@@ -1098,14 +1092,25 @@
             {charTag(SecondCharacter, "emotional")}:            Ma ci pensi se sono vive che cosa assurda?!?
             {charTag(SecondCharacter, "energy")}:               Cose pensa una statua?                                              
 
-            + \ {charTag(PG, "neutral")}:                       Le statue di tuo fratello si muovono?//Qualcosa sul pescare, sui pesci?
+            + \ {charTag(PG, "neutral")}:                       Potremmo pescare qui allo stagno, impariamo assieme da Franco.
                     -> glyph_choice_manager(false, earthC)->
-            {charTag(SecondCharacter, "energy")}:               Forse quando non ci siamo?
-            {charTag(SecondCharacter, "neutral")}:              Mio fratello è superdisordinato.
-                                                                Quindi se si spostano non è che lo capisci con facilità.
-                                                                Però gli serve l'elettricità.
-            {charTag(SecondCharacter, "energy")}:               Voglio costruirne una anche io.
-                                                                Forse in biblioteca c'è una guida!
+                {
+                - are_two_entities_together(Franco, PG):
+                {charTag(Franco, "neutral")}:                   Franco non sa pescare.
+                                                                Non da quando è vegetariano.
+                                                                E non dopo che ha per sbaglio pescato la carpa della sera.
+                                                                Non mi ha parlato per tre settimane, e non potevo più ricevere le lettere dei miei mariti!    
+                }    
+            {charTag(SecondCharacter, "energy")}:               Mi piacerebbe fare questa cosa con mio fratello.
+            {charTag(SecondCharacter, "neutral")}:              Gli piace insegnare le cose, ed è bravo.
+                                                                Non si arrabbia se mi distraggo, o se gli faccio tante domande.
+            {charTag(SecondCharacter, "energy")}:               Però puoi insegnarmi ad arrampicarmi sugli alberi!
+                    {
+                    - are_two_entities_together(FifthCharacter, PG):
+                    {charTag(Mentor, "neutral")}:               {player_name}: hai il divieto ASSOLUTO di fare questa cosa.
+                                                                AS-SO-LU-TO!
+                    {charTag(Mentor, "sad")}:                   Mi farete venire un infarto, povera me.                                           
+                    }   
                     
             + (ragione)\ {charTag(PG, "neutral")}:              {charNameTwo}: non devi dare sempre ragione ai grandi!
                     -> glyph_choice_manager(false, fireC)->
@@ -1420,7 +1425,7 @@
                                                                 O fortissima come i denti di un grizzly.
             {charTag(SecondCharacter, "melanchonic")}:          O spaventata come un riccio.  
 
-            + \ {charTag(PG, "neutral")}:                       Hai pensato a qualcosa da fare per sfogare la rabbia?
+            + \ {charTag(PG, "neutral")}:                       Hai pensato a qualcosa di pratico da fare per sfogare la rabbia?
                     -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "melanchonic")}:          Non ci riesco.
                                                                 Quando arriva è fortissima.
@@ -1644,14 +1649,14 @@
                                                                 Nonna dice che a volte la cosa più difficile da fare come madre è lasciar pagare ai propri figli le conseguenze delle loro scelte.         
                                          
             + \ {charTag(PG, "neutral")}:                       Facciamo una gara di rutti?!
-                    -> glyph_choice_manager(false, earthC)->
+                    -> glyph_choice_manager(false, fireC)->
             {charTag(SecondCharacter, "energy")}:               Ci sto!
                                                                 Però mi serve della roba frizzante sennò non mi vengono bene.
             {charTag(SecondCharacter, "melanchonic")}:          Ma poi mi scappa tanta pipì.
                                                                 E non ho ancora capito dove sia il bagno qui.
 
-            + \ {charTag(PG, "neutral")}:                       Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!
-                    -> glyph_choice_manager(false, fireC)->
+            + \ {charTag(PG, "neutral")}:                       Hai bisogno di maggiore stabilità, {charNameTwo}: dovresti trasferirti a casa della nonna.
+                    -> glyph_choice_manager(false, earthC)->
             {charTag(SecondCharacter, "melanchonic")}:          Mica è così facile!
             {charTag(SecondCharacter, "neutral")}:              Una volta però gliel'ho chiesto.
                                                                 E lei mi ha detto "Finisci le elementari, poi ne parliamo".
