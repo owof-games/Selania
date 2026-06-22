@@ -18,7 +18,9 @@
                 }
                                                                 Volevo prendermi una Kilkenny, giusto per rilassarmi.
                                                                 E invece eccomi qui.
-                {charTag(ThirdCharacter, "jester")}:            Gesù licantropo, che colpo che mi sono preso!                                                
+                {charTag(ThirdCharacter, "jester")}:            Gesù licantropo, che colpo che mi sono preso!
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()                                           
                 {charTag(ThirdCharacter, "neutral")}:           Però per lo meno non si sente il miagolio del gatto dello Stracciamaroni.
                 {charTag(ThirdCharacter, "bored")}:             O il puzzo dello Stracciamaroni.
 
@@ -223,8 +225,8 @@
         {charTag(ThirdCharacter, "bored")}:                     Di nuovo.
                                                                     
         {charTag(ThirdCharacter, "neutral")}:                   Sono uno che si fa il culo a lavoro io, {player_name}.
-                                                                //Check parolacce da parte di Mentore
-                                                                ~ fifthChar_slurDetectorFunction()
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
                         {
                         - are_two_entities_together(SecondCharacter, PG):
                         {charTag(SecondCharacter, "energy")}:   Cuuuloooooooooo!
@@ -497,6 +499,8 @@
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:           Un molestatore che si porta a letto delle sconosciute ubriache.
                 {charTag(ThirdCharacter, "angry")}:             Ringrazia Dio che sono un signore, {charNameOne} e non ti dico cosa penso di te, Gesù licantropo.
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
                 }                                                         
 
         + (aether)\ {charTag(PG, "neutral")}:                   Sei molto tranquillo nel dire che ti porti a letto delle sconosciute ubriache.
@@ -825,8 +829,8 @@
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "angry")}:             Alla fine lei stava solo cercando un nuovo cazzo, più giovane, più figo, più ricco.
-                                                                //Check parolacce da parte di Mentore
-                                                                ~ fifthChar_slurDetectorFunction()
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
                         {
                         - are_two_entities_together(SecondCharacter, PG):
                         {charTag(SecondCharacter, "melanchonic")}:Non mi piace questa energia, no.
@@ -898,7 +902,12 @@
         {charTag(FirstCharacter, "annoyed")}:                   So che non sono cazzi miei, ma questa ragazza aveva tutto il diritto di andarsene.
         {charTag(ThirdCharacter, "bored")}:                     Chi ti ha chiesto qualcosa a te, Gesù licantropo?
         {charTag(FirstCharacter, "neutral")}:                   Sei qui a raccontare la tua storia da vittima di 'sto cazzo davanti a tutti, per cui un po' diventano anche cazzi miei.
-        {charTag(ThirdCharacter, "bored")}:                     Quindi quando parlerai delle tue paranoie sul lavoro o il moroso o Sborotalco posso venire a romperti i coglioni a mia volta?
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(Mentor, "sad")}:                       {charNameOne}, {charNameThree}: siamo qui per stare bene assieme, non per farci del male.
+                {charTag(ThirdCharacter, "bored")}              Guarda che è questa pazza che ha cominciato a rompere i coglioni!     
+                }
+        {charTag(ThirdCharacter, "bored")}:                     Bene {charNameOne}: quando parlerai delle tue paranoie sul lavoro o il moroso o Sborotalco verrò a romperti i coglioni anch'io.
         {charTag(FirstCharacter, "annoyed")}:                   Come se tu avessi qualcosa di più importante da portare di "Oh povero me ho groomato questa tipa per un decennio e poi mi ha lasciato, sob."
         {charTag(ThirdCharacter, "bored")}:                     Cazzo vuol dire?
         {charTag(FirstCharacter, "annoyed")}:                   Vuol dire che so fare i conti, {charNameThree}.
@@ -1137,6 +1146,8 @@
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "jester")}:            Anche se da piccoli andavamo tutti a casa loro d'estate a guardarcela mentre se ne stava stesa nel giardino in costume.
                                                                 C'è un'età in cui ti arrapi anche con un frigorifero, cazzo.
+                                                                        //Check parolacce da parte di Mentore
+                                                                        ~ fifthChar_slurDetectorFunction()
                                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Suo padre invece era uno che lavorava tantissimo all'estero.

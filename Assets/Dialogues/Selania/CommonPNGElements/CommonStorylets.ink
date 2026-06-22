@@ -860,6 +860,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
         {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, Gesù licantropo!
+                                                                                        //Check parolacce da parte di Mentore
+                                                                                        ~ fifthChar_slurDetectorFunction()
         {charTag(ThirdCharacter, "neutral")}:                                   Prima cosa: ci si trova e si fa un'asta per comprare i giocatori.
                 {
                 - are_two_entities_together(SecondCharacter, PG): 

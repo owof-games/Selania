@@ -120,32 +120,38 @@
 {fifthChar_slurDetector:
 
     - 0:
-    {charTag(FifthCharacter, "neutral")}:       {charNameThree}! 
-                                                Controlla il tuo linguaggio per favore, non sai chi potrebbe sentirti, o ripetere quello che hai detto.
-    {charTag(ThirdCharacter, "neutral")}:       Hai ragione zia, scusa.                                            
+    {charTag(FifthCharacter, "neutral")}:       Sarebbe meglio evitare bestemmie e parolacce in questo luogo.
+                                                Non è rispettoso verso persone che non conosci.
+    {charTag(ThirdCharacter, "neutral")}:       Hai ragione zia.
 
     - 1:
+    {charTag(FifthCharacter, "neutral")}:       {charNameThree}! 
+                                                Controlla il tuo linguaggio per favore, non sai chi potrebbe sentirti, o ripetere quello che hai detto.
+    {charTag(ThirdCharacter, "neutral")}:       Hai ragione, scusa.                                          
+
+    - 2:
     {charTag(FifthCharacter, "sorry")}:         {charNameThree}! 
                                                 Non voglio risultare pesante, ma non è un posto adatto alle parolacce.
     {charTag(ThirdCharacter, "neutral")}:       Giusto, me l'hai pure già detto.                                            
 
-    - 2:
+    - 3:
     {charTag(FifthCharacter, "sad")}:           Mi sembra di aver a che fare con un bambino.
                                                 {charNameThree}, basta parolacce.
     {charTag(ThirdCharacter, "jester")}:        Ci sto provando, giuro!                                           
 
-    - 3:
-    {charTag(FifthCharacter, "bored")}:         Quelle cavolo di parolacce!
+    - 4:
+    {charTag(FifthCharacter, "bored")}:         Quella boccaccia!
     {charTag(FifthCharacter, "sad")}:           Scusa, ma mi danno sui nervi tantissimo {charNameThree}.
     {charTag(ThirdCharacter, "jester")}:        Non so che farci, mi emoziono e dico parolacce, è più forte di me!
-    - 4:
+    
+    - 5:
     {charTag(FifthCharacter, "sad")}:           Mi arrendo.
                                                 Mi arrendo.
-                                                ~ change_entity_place(FifthCharacter)
+                                                    ~ change_entity_place(FifthCharacter)
 
     - else:
         //Da qui in avanti Mentore se ne andrà.
-        {charTag(FifthCharacter, "bored")}:             {~ Di nuovo!|Un'altra parolaccia.|Non sopporto più questo modo di fare.|Che mancanza di rispetto proprio.}
-        ~ change_entity_place(FifthCharacter)
+        {charTag(FifthCharacter, "bored")}:             {~ Di nuovo!|Un'altra parolaccia.|Non sopporto più questo modo di fare.|Che mancanza di rispetto.}
+                ~ change_entity_place(FifthCharacter)
 
 }
