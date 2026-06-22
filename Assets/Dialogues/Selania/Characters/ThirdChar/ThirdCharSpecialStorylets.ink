@@ -112,7 +112,7 @@
                                                                         Però finisco sempre per passare per lo stronzo, perché ho la bocca troppo larga.
         {charTag(ThirdCharacter, "bored")}:                             Magari a volte parlo troppo, ma non ho mai picchiato nessuna ragazza.            
 
-        + \ {charTag(PG, "neutral")}:                                   Non sei un filosofo, ma hai un tuo senso pratico.
+        + \ {charTag(PG, "neutral")}:                                   Magari non sei un filosofo, ma apprezzo il tuo forte senso pratico.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -282,7 +282,7 @@
                 {charTag(FirstCharacter, "curious")}:                   Non sa ancora quante cose non normali penso di lui!
                 }
         
-        + \ {charTag(PG, "neutral")}:                                   Per quanto soddisfacente sul momento, nel lungo periodo la violenza non fa bene a nessuno.
+        + \ {charTag(PG, "neutral")}:                                   Sul momento è appagante, ma nel lungo periodo la violenza non fa bene a nessuno.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -439,7 +439,7 @@
     {charTag(ThirdCharacter, "jester")}:                                E magari non sono così perfetto come ti può sembrare, {player_name}.
     {charTag(ThirdCharacter, "neutral")}:                               Ma sono molto più uomo di quanto lui non sia mai stato.                                                                        
     
-    + \ {charTag(PG, "neutral")}:                                       Che forse gli amici che hai non sono poi così grandi amici.
+    + \ {charTag(PG, "neutral")}:                                       Che gli amici che hai non sono poi così grandi amici.
             -> glyph_choice_manager(false, earthC)->
             {//Blocco per reazioni e commenti legati al genere.
             - thirdChar_recordedPlayerPronoun != him:

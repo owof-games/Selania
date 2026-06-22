@@ -374,7 +374,7 @@
                                                                                 Ma per lui?
         {charTag(ThirdCharacter, "bored")}:                                     Non credo.
 
-        + \ {charTag(PG, "neutral")}:                                           Se le proprie basi sono solide, non si è mai totalmente soli.
+        + \ {charTag(PG, "neutral")}:                                           Se le proprie basi sono solide, non si è mai soli.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "jester")}:                                    Ah ah allora le mie basi fanno proprio cacare, vecio.
         {charTag(ThirdCharacter, "neutral")}:                                   C'è.
@@ -504,7 +504,7 @@
                                                                     
 
         
-        + \ {charTag(PG, "neutral")}:                                           Ti va di raccontarmi come l'hai conosciuta?
+        + \ {charTag(PG, "neutral")}:                                           Partiamo dalle fondamenta: dimmi come l'hai conosciuta.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Me ne ha parlato un cliente una sera.
                                                                                 Lui...
@@ -660,7 +660,7 @@
         {charTag(ThirdCharacter, "jester")}:                                    Sono più Jason, ma senza la roba della chiesa.
                                                                                 Odio quella serie, Dona me l'avrà fatta vedere otto volte almeno.
 
-        + \ {charTag(PG, "neutral")}:                                           Quindi tu e Ava non fate sesso?
+        + \ {charTag(PG, "neutral")}:                                           Deduco che tu e Ava non fate sesso.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "jester")}:                                    Boom, diretto come un treno merci, vecio!
         {charTag(ThirdCharacter, "neutral")}:                                   Non.
@@ -1074,7 +1074,7 @@
                                                                                 Un tipo da rispettare, se non proprio sempre, almeno nel suo campo.
                                                                                                                                                                               
 
-        + \ {charTag(PG, "neutral")}:                                           Quindi vorresti essere un riferimento, po' come {charNameFive}.
+        + \ {charTag(PG, "neutral")}:                                           Quindi vorresti essere un riferimento, un po' come {charNameFive}.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1232,7 +1232,7 @@
                                                                                 Nessuno ti dà niente per avere nulla in cambio, nessuno.
         {charTag(ThirdCharacter, "bored")}:                                     Così ora sono in debito con lui, e vuoi che non venga a riscuotere un giorno o l'altro?        
 
-        + \ {charTag(PG, "neutral")}:                                           Magari tuo padre ti ha aiutato a ottenere il lavoro, ma l'hai ancora per le tue capacità.
+        + \ {charTag(PG, "neutral")}:                                           Tuo padre ti ha aiutato a trovare lavoro, ma l'hai ancora per le tue capacità.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Non risolve il fatto che sono in debito con lui.
                                                                                 Ma è vero.
