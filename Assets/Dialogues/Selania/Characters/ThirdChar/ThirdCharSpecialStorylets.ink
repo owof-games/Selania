@@ -492,3 +492,60 @@
 
     -> third_char_closing_storylet ->
     ->-> 
+
+
+
+    === third_char_second_char_departure_comment  
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        {charTag(ThirdCharacter, "jester")}:                            Ma vedi tu che il fratellino se ne è andato prima di me.
+        {charTag(ThirdCharacter, "neutral")}:                           Mi mancherà il piccoletto.
+
+    {
+
+    - secondChar_ActualName has Grizzly:
+        {charTag(ThirdCharacter, "neutral")}:                           Ha scelto di diventare un orso incazzato.
+        {charTag(ThirdCharacter, "angry")}:                             Chissà che ora quel coglione di suo padre non lo rispetta un po'!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                   Perché di sicuro la violenza lo aiuterà a risolvere la situazione.
+                {charTag(ThirdCharacter, "bored")}:                     Sempre di più delle cazzo di paturnie mentali che gli facevi.                                                  
+                }
+    
+    - secondChar_ActualName has Lupo:
+        {charTag(ThirdCharacter, "neutral")}:                           Ha deciso di fare il lupo che protegge il branco.
+                                                                        La famiglia.
+                                                                        Commento sincero?
+                                                                        Spero non lo prenda nel culo.
+        {charTag(ThirdCharacter, "angry")}:                             Finisce sempre così con genitori e fratelli e tutta quella merda lì.                                                               
+        
+    - secondChar_ActualName has Delfino:
+        {charTag(ThirdCharacter, "jester")}:                            Ma ho capito bene o t'ha detto: "Basta Riccio: ora sarò un coglione?".
+                                                                        Qualcosa da me allora l'ha imparato, vero?!
+                {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "annoyed")}:                   Povero {charNameTwo}.
+                                                                        Povero povero povero {charNameTwo}.                                                
+                }
+                
+    - secondChar_ActualName has Capibara:
+        {charTag(ThirdCharacter, "neutral")}:                           Posso dire una cosa?
+                                                                        "Finalmente".
+                                                                        Ha deciso di farsi dei cazzo di amici, ci voleva.
+                                                                        Basta con la nonna il fratello la mamma e quel coglione del padre.
+                                                                        C'ha bisogno di coetanei, il fratellino.
+
+    - secondChar_ActualName has Corvo:
+        {charTag(ThirdCharacter, "jester")}:                            Comunque mi ha conosciuto, ha pensato: "Questo è tutto scemo!".
+                                                                        E ha deciso di non diventare come me e di diventare intelligente.
+        {charTag(ThirdCharacter, "neutral")}:                           Un corvo, pensa te.
+                                                                        Magari un giorno si ricorda di noi quando prende il Nobel per qualche cosa sugli animali.
+
+}
+
+    -> third_char_closing_storylet ->
+    ->-> 

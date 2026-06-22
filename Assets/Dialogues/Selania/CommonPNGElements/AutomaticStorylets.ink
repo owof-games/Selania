@@ -208,6 +208,10 @@
     //Commento su fuga Boccale
         -  are_two_entities_together(FirstCharacter, PG) && thirdChar_storyStatus == story_storyRemote && grimoire_firstChar hasnt grimFirstCharThirdCharDepartureComment:    
             -> first_char_third_char_departure_comment
+
+    //Commento su partenza Riccio
+        -  are_two_entities_together(FirstCharacter, PG) && secondChar_storyStatus == story_storyPostal && grimoire_firstChar hasnt grimFirstCharSecondCharDepartureComment:    
+            -> first_char_second_char_departure_comment        
 }
 
 //Storylets speciali Second Char
@@ -239,6 +243,10 @@
     //Commento sul cane    
         - are_two_entities_together(ThirdCharacter, PG) && (grimoire_firstChar has grimFirstCharLetterOne or grimoire_secondChar has grimSecondCharLetterOne) && grimoire_thirdChar hasnt grimThirdCharDog:
             -> dog_third_char        
+
+    //Commento su partenza Riccio
+        -  are_two_entities_together(ThirdCharacter, PG) && secondChar_storyStatus == story_storyPostal && grimoire_thirdChar hasnt grimThirdCharSecondCharDepartureComment:    
+            -> third_char_second_char_departure_comment              
 } 
 
 

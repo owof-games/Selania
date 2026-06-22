@@ -246,6 +246,52 @@
         ->->
 
 
+
+=== first_char_second_char_departure_comment  
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charTag(FirstCharacter, "sad")}:                           Quindi il bimbetto se ne è andato.
+    {charTag(FirstCharacter, "neutral")}:                       Chi l'avrebbe detto che mi sarebbe dispiaciuto.
+                                                                Ma è davvero una forza della natura.
+                                                                Spero che tornando a casa riesca a gestire meglio le cose con la sua famiglia.
+    {charTag(FirstCharacter, "annoyed")}:                       Anche se non dovrebbe essere qualcosa in carico a qualcuno di così piccolo.
+    {
+
+    - secondChar_ActualName has Grizzly:
+    {charTag(FirstCharacter, "neutral")}:                       Ha abbracciato il suo lato violento.
+                                                                Un po' mi preoccupa.
+                                                                Ma spero sappia utilizzare quella rabbia per qualcosa di costruttivo.
+    
+    - secondChar_ActualName has Lupo:
+    {charTag(FirstCharacter, "neutral")}:                       E questa svolta da lupo.
+                                                                Mmm.
+    {charTag(FirstCharacter, "neutral")}:                       Ho paura che possa farsi del male.
+        
+    - secondChar_ActualName has Delfino:
+    {charTag(FirstCharacter, "neutral")}:                       L'approccio più chiassoso mi ha quasi sorpresa.
+    {charTag(FirstCharacter, "affectionate")}:                  Ma con la fantasia che ha sono sicura che sentiremo parlare ancora di lui.
+
+                
+    - secondChar_ActualName has Capibara:
+    {charTag(FirstCharacter, "neutral")}:                       Non mi aspettavo la svolta socievole.
+                                                                Spero sia una cosa che riesca a gestire.
+
+            
+    - secondChar_ActualName has Corvo:
+    {charTag(FirstCharacter, "affectionate")}:                  Sono contenta comunque che abbia abbracciato il lato di sé più curioso e intelligente.
+                                                                Col cervello che ha farà qualcosa di magico, ne sono certa!
+    {charTag(FirstCharacter, "neutral")}:                       O darà fuoco per sbaglio a qualcosa di molto grande.    
+
+}
+                                                                  
+        
+        -> first_char_closing_storylet ->
+        ->->
+
 === first_char_third_char_departure_comment
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

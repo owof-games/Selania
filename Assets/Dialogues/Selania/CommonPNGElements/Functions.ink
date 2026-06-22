@@ -802,7 +802,13 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - first_char_third_char_departure_comment && grimoire_firstChar hasnt grimFirstCharThirdCharDepartureComment:
                 ~ grimoire_firstChar += grimFirstCharThirdCharDepartureComment
+        }
+
+        {
+            - first_char_second_char_departure_comment && grimoire_firstChar hasnt grimFirstCharSecondCharDepartureComment:
+                ~ grimoire_firstChar += grimFirstCharSecondCharDepartureComment
         } 
+
 
         {
             - dog_first_char && grimoire_firstChar hasnt grimFirstCharDog:
@@ -1105,6 +1111,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimThirdCharDog
 
         }
+
+        {
+            - third_char_second_char_departure_comment && grimoire_thirdChar hasnt grimThirdCharSecondCharDepartureComment:
+                ~ grimoire_thirdChar += grimThirdCharSecondCharDepartureComment
+        } 
 
                         /******************************
 
