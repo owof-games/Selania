@@ -97,7 +97,7 @@
     {charTag(FirstCharacter, "neutral")}:                       Credi abbia senso?
     
     
-        + \ {charTag(PG, "neutral")}:                           E se le relazioni fossero comunicazione e compromesso?
+        + \ {charTag(PG, "neutral")}:                           Credo che le relazioni siano comunicazione e compromesso.
             -> glyph_choice_manager(false, earthC)->
         {charTag(FirstCharacter, "neutral")}:                   Che è la roba che mi sento dire da che sono piccola.
         {charTag(FirstCharacter, "annoyed")}:                   Ma posso anche dire "no"?
@@ -326,7 +326,7 @@
                                                                 Fedeltà ma non a letto, quanto agli impegni presi.
             {charTag(FirstCharacter, "sad")}:                   Ma quali sono gli impegni presi, se non se ne parla, se non vengono concordati?                                                    
             
-        + \ {charTag(PG, "neutral")}:                           Una lingua esprime ciò che la sua cultura ritiene importante.
+        + \ {charTag(PG, "neutral")}:                           Una lingua esprime quello che la sua cultura ritiene importante.
             -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "annoyed")}:               Ma una lingua è una roba viva.
                                                                 La cultura, pure.
@@ -432,12 +432,12 @@
                                                                 E le voglio cambiare.
         {charTag(FirstCharacter, "sad")}:                       Questo è ufficialmente il discorso più sconclusionato che abbia mai fatto.
         
-            + \ {charTag(PG, "neutral")}:                       Non è che prima di battere un mostro lo studi, no?
+            + \ {charTag(PG, "neutral")}:                       In ogni gruppo c'è chi sa e chi fa, e sono entrambe cose fondamentali.
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "neutral")}:               Ehm.
-                                                                Dovresti chiedere a Ennio, è lui quello bravo coi videogiochi.
-                                                                Ma un po' sì, no?
-                                                                Nel senso, me lo ricordo su <i>Hollow Knight</i> a studiarsi i pattern dei mostri col coinquilino.
+            {charTag(FirstCharacter, "neutral")}:               Credo di sì.
+                                                                Ma è a me che non piace l'idea di fare senza sapere.
+                                                                Perché se fai le cose senza sapere, non puoi nemmeno capire davvero se serviranno a qualcosa.
+                                                                E il mondo è pieno di belle azioni che hanno fatto disastri.
              
             + \ {charTag(PG, "neutral")}:                       Non è sconclusionato: lottare ci rende viv3!
                 -> glyph_choice_manager(false, fireC)->
@@ -686,9 +686,9 @@
             {charTag(FirstCharacter, "affectionate")}:          E ti sciogli.
                                                                 Ed è tutto così vivo.
 
-            + \ {charTag(PG, "neutral")}:                       Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronoun has him:o|{player_pronoun has her:a|ə}}, vero?
+            + \ {charTag(PG, "neutral")}:                       Quando tutto è dovere il piacere è rivoluzionario. Sono saggi{player_pronoun has him:o|{player_pronoun has her:a|ə}}, vero?
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "curious")}:               Inaspettatamente saggia. 
+            {charTag(FirstCharacter, "curious")}:               Inaspettatamente saggi{player_pronoun has him:o|{player_pronoun has her:a|ə}}. 
             {charTag(FirstCharacter, "neutral")}:               Ma è una cosa sensata.
             {charTag(FirstCharacter, "affectionate")}:          Talco l'avrebbe apprezzata proprio tanto questa cosa.
             {charTag(FirstCharacter, "neutral")}:               E un po' anche io.
@@ -800,7 +800,7 @@
                                                                 Un po' come se provassi a vedere quello che non ho, non sono, non sono stata.
                                                                 Così poi posso anche fare cose nel mondo, fuori, diverse.
                
-            + \ {charTag(PG, "neutral")}:                       Non ti capita mai di creare cose che ti fanno stare male.
+            + \ {charTag(PG, "neutral")}:                       Non ti capita mai di creare cose che ti fanno stare male?
                     -> glyph_choice_manager(false, airC)->
             {charTag(FirstCharacter, "neutral")}:               Spesso.
             {charTag(FirstCharacter, "sad")}:                   Corri per giorni e non ti fermi, ma le cose non smettono di far male.
@@ -820,14 +820,15 @@
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:               A farmi un pisolino?
 
-            //più terra
-            + \ {charTag(PG, "neutral")}:                       Immaginare plasma il cervello, per cui sì, è empiricamente sensato.
+
+            + \ {charTag(PG, "neutral")}:                       Cosa succede se hai bisogno di creare, ma non hai spazio o tempo?
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(FirstCharacter, "neutral")}:               Ora facciamo un gioco, {player_name}.
-            {charTag(FirstCharacter, "affectionate")}:          Prova a immaginare di essere una persona affettuosa, gentile.
-                                                                Empatica.
-            {charTag(FirstCharacter, "annoyed")}:               Lo senti?
-                                                                Lo senti il tuo cervello cambiare?
+            {charTag(FirstCharacter, "sad")}:                   Soffro fisicamente.
+                                                                Mi manca l'aria.
+                                                                Non riesco a pensare lucidamente.
+                                                                Il cuore mi batte a mille e tutto mi sembra minaccioso.
+            {charTag(FirstCharacter, "neutral")}:               Mi sembra una tortura.
+                                                                E se passa troppo tempo, divento o incagabilmente triste o incagabilmente intrattabile.
             -    
 
         {charTag(FirstCharacter, "neutral")}:                   Ciotole pulite!
@@ -892,13 +893,12 @@
         {charTag(FirstCharacter, "neutral")}:                   Perché l'ho fatto da sempre, {player_name}.
                                                                 Papà dice sempre che ho imparato prima a creare con lo xilofono che a parlare.
                                                                 Puoi essere ancora te se perdi qualcosa che ti ha sempre caratterizzatə?
-        //Rendi terra
-            + \ {charTag(PG, "neutral")}:                       Il carattere è solo una funzione del tuo cervello.
+     
+            + \ {charTag(PG, "neutral")}:                       Il carattere è solo l'insieme delle cose che fai.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "affectionate")}:          Questa è una bellissima notizia!
             {charTag(FirstCharacter, "annoyed")}:               Perché a questo punto posso smettere di essere un disastro ansioso.
-            {charTag(FirstCharacter, "affectionate")}:          Dai, dimmi come fare {player_name}!
-                                                                Dimmi come resettarmi il cervello!
+            {charTag(FirstCharacter, "affectionate")}:          Stupida io a non averci pensato prima, {player_name}!
                
             + \ {charTag(PG, "neutral")}:                       Sei le relazioni che hai. Finché ci sono loro, non potrai mai perderti.
                     -> glyph_choice_manager(false, waterC)->
@@ -908,7 +908,6 @@
             {charTag(FirstCharacter, "neutral")}:               Ma per me è il contrario: è tipo come avere delle boe dentro di me con cui orientarmi.
                                                                 Ha senso?
 
-            //rendi aria
             + \ {charTag(PG, "neutral")}:                       Se non riesci a suonare, la tua creatività trova altri sfoghi?
                     -> glyph_choice_manager(false, airC)->
                 {charTag(FirstCharacter, "affectionate")}:      Sì, tantissimo.

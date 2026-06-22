@@ -137,7 +137,7 @@
                                                                 Pensa poi alla passione con cui hai fatto una partaccia a {charNameThree} per difendere la sua ex compagna, e per fargli vedere in che modo giudica tutte le donne.
                 }                                                
                 
-            + \ {charTag(PG, "neutral")}:                       Forse perché la tua stabilità è altrove: è con Talco.
+            + \ {charTag(PG, "neutral")}:                       Forse perché la tua stabilità è altrove: con Talco.
                 -> glyph_choice_manager(false, earthC)->
                 {charTag(PG, "neutral")}:                       La cartolina è una porta aperta: Talco ti attende.
                {
@@ -185,7 +185,7 @@
         {charTag(PG, "neutral")}:                               È evidente quanto siano importanti le relazioni per te.
                                                                 E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
                                                     
-            //RAFFORZARE FUOCO E ACQUA
+
             + \ {charTag(PG, "neutral")}:                       Talco e un'ondata di cambiamenti ti aspettano in Islanda.
                 -> glyph_choice_manager(false, fireC)->
             {charTag(PG, "neutral")}:                           Pensavi Ennio fosse noioso, e te ne sei innamorata.
@@ -219,9 +219,9 @@
                                                                 Sei piena d'amore, non trovi?
                 }
                 
-            + \ {charTag(PG, "neutral")}:                       Ma le aspettative non sono fatti//qualcosa sulla relazione con sé stesse.
+            + \ {charTag(PG, "neutral")}:                       Ma tutto questo non può esistere se non rendi più solida te stessa.
                 -> glyph_choice_manager(false, earthC)->
-            {charTag(PG, "neutral")}:                           Ed essere adulti significa sopravvivere alle proprie aspettative.
+            {charTag(PG, "neutral")}:                           Essere adulti significa sopravvivere alle proprie aspettative.
                                                                 Ma non è una sconfitta.
                {
                 - grimoire_firstChar has grimFirstCharTwelve:
@@ -276,7 +276,7 @@
                                                                 O come hai detto per <b>Luna vergine</b>, puoi abbracciare il tuo essere mostro.
                 }
 
-            + \ {charTag(PG, "neutral")}:                       È questione di numeri: nessunə salva il mondo da solə.
+            + \ {charTag(PG, "neutral")}:                       Ma se restiamo sul concreto: nessunə salva il mondo da solə.
                     -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:                           È inevitabile, ma non è un fallimento.
                 {
@@ -350,7 +350,7 @@
 
             {charTag(PG, "neutral")}:                           Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.
     
-            + \ {charTag(PG, "neutral")}:                       Ma non è vero forse che ogni fallimento è una nuova occasione di cambiamento?
+            + \ {charTag(PG, "neutral")}:                       Ma ogni fallimento è un'occasione di cambiamento.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(PG, "neutral")}:                           Lo dice Ennio quando gioca.
                                                                 L'hai visto quando Talco ha mollato il Conservatorio, eppure si è fattə la sua vita.
