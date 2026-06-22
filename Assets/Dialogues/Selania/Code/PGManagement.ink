@@ -512,3 +512,322 @@
 
 
 
+//TRACCIAMENTO DELLE SCELTE PERSONALI IN CUCINA (GLI INGREDIENTI)
+//Scelte con Chitarra
+    //Primo tema
+    VAR player_FirstCharFirstThemeFirstQuestion = ()
+    VAR player_FirstCharFirstThemeSecondQuestion = ()
+    VAR player_FirstCharFirstThemeThirdQuestion = ()
+    //Secondo tema
+    VAR player_FirstCharSecondThemeFirstQuestion = ()
+    VAR player_FirstCharSecondThemeSecondQuestion = ()
+    VAR player_FirstCharSecondThemeThirdQuestion = ()
+    //Terzo tema
+    VAR player_FirstCharThirdThemeFirstQuestion = ()
+    VAR player_FirstCharThirdThemeSecondQuestion = ()
+    VAR player_FirstCharThirdThemeThirdQuestion = ()
+
+//Scelte con Riccio
+    //Primo tema
+    VAR player_SecondCharFirstThemeFirstQuestion = ()
+    VAR player_SecondCharFirstThemeSecondQuestion = ()
+    VAR player_SecondCharFirstThemeThirdQuestion = ()
+    //Secondo tema
+    VAR player_SecondCharSecondThemeFirstQuestion = ()
+    VAR player_SecondCharSecondThemeSecondQuestion = ()
+    VAR player_SecondCharSecondThemeThirdQuestion = ()
+    //Terzo tema
+    VAR player_SecondCharThirdThemeFirstQuestion = ()
+    VAR player_SecondCharThirdThemeSecondQuestion = ()
+    VAR player_SecondCharThirdThemeThirdQuestion = ()
+
+//Scelte con Boccale
+    //Primo tema
+    VAR player_ThirdCharFirstThemeFirstQuestion = ()
+    VAR player_ThirdCharFirstThemeSecondQuestion = ()
+    VAR player_ThirdCharFirstThemeThirdQuestion = ()
+    //Secondo tema
+    VAR player_ThirdCharSecondThemeFirstQuestion = ()
+    VAR player_ThirdCharSecondThemeSecondQuestion = ()
+    VAR player_ThirdCharSecondThemeThirdQuestion = ()
+    //Terzo tema
+    VAR player_ThirdCharThirdThemeFirstQuestion = ()
+    VAR player_ThirdCharThirdThemeSecondQuestion = ()
+    VAR player_ThirdCharThirdThemeThirdQuestion = ()
+
+//Scelte con Nonna
+    //Primo tema
+    VAR player_FourthCharFirstThemeFirstQuestion = ()
+    VAR player_FourthCharFirstThemeSecondQuestion = ()
+    VAR player_FourthCharFirstThemeThirdQuestion = ()
+    //Secondo tema
+    VAR player_FourthCharSecondThemeFirstQuestion = ()
+    VAR player_FourthCharSecondThemeSecondQuestion = ()
+    VAR player_FourthCharSecondThemeThirdQuestion = ()
+    //Terzo tema
+    VAR player_FourthCharThirdThemeFirstQuestion = ()
+    VAR player_FourthCharThirdThemeSecondQuestion = ()
+    VAR player_FourthCharThirdThemeThirdQuestion = ()
+
+
+//Scelte con Mostro
+    //Primo tema
+    VAR player_FifthCharFirstThemeFirstQuestion = ()
+    VAR player_FifthCharFirstThemeSecondQuestion = ()
+    VAR player_FifthCharFirstThemeThirdQuestion = ()
+    //Secondo tema
+    VAR player_FifthCharSecondThemeFirstQuestion = ()
+    VAR player_FifthCharSecondThemeSecondQuestion = ()
+    VAR player_FifthCharSecondThemeThirdQuestion = ()
+    //Terzo tema
+    VAR player_FifthCharThirdThemeFirstQuestion = ()
+    VAR player_FifthCharThirdThemeSecondQuestion = ()
+    VAR player_FifthCharThirdThemeThirdQuestion = ()
+
+//Scelte con Franco
+    VAR player_CookingAloneFirstQuestion = ()
+    VAR player_CookingAloneSecondQuestion = ()
+    VAR player_CookingAloneThirdQuestion = ()
+    VAR player_CookingAloneFourthQuestion = ()
+
+
+=== function player_updateKitchenPersonalChoices(Glyph)
+{
+    - are_two_entities_together(FirstCharacter, PG):
+            {
+            - cooking_with_first_char.first_theme:
+                {
+                - player_FirstCharFirstThemeFirstQuestion == ():
+                    ~ player_FirstCharFirstThemeFirstQuestion = Glyph
+
+                - player_FirstCharFirstThemeSecondQuestion == ():
+                    ~ player_FirstCharFirstThemeSecondQuestion = Glyph
+
+                - player_FirstCharFirstThemeThirdQuestion == ():
+                    ~ player_FirstCharFirstThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.second_theme:
+                {
+                - player_FirstCharSecondThemeFirstQuestion == ():
+                    ~ player_FirstCharSecondThemeFirstQuestion = Glyph
+
+                - player_FirstCharSecondThemeSecondQuestion == ():
+                    ~ player_FirstCharSecondThemeSecondQuestion = Glyph
+
+                - player_FirstCharSecondThemeThirdQuestion == ():
+                    ~ player_FirstCharSecondThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.third_theme:
+                {
+                - player_FirstCharThirdThemeFirstQuestion == ():
+                    ~ player_FirstCharThirdThemeFirstQuestion = Glyph
+
+                - player_FirstCharThirdThemeSecondQuestion == ():
+                    ~ player_FirstCharThirdThemeSecondQuestion = Glyph
+
+                - player_FirstCharThirdThemeThirdQuestion == ():
+                    ~ player_FirstCharThirdThemeThirdQuestion = Glyph
+
+                }
+            
+            }
+
+    - are_two_entities_together(SecondCharacter, PG):
+            {
+            - cooking_with_first_char.first_theme:
+                {
+                - player_SecondCharFirstThemeFirstQuestion == ():
+                    ~ player_SecondCharFirstThemeFirstQuestion = Glyph
+
+                - player_SecondCharFirstThemeSecondQuestion == ():
+                    ~ player_SecondCharFirstThemeSecondQuestion = Glyph
+
+                - player_SecondCharFirstThemeThirdQuestion == ():
+                    ~ player_SecondCharFirstThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.second_theme:
+                {
+                - player_SecondCharSecondThemeFirstQuestion == ():
+                    ~ player_SecondCharSecondThemeFirstQuestion = Glyph
+
+                - player_SecondCharSecondThemeSecondQuestion == ():
+                    ~ player_SecondCharSecondThemeSecondQuestion = Glyph
+
+                - player_SecondCharSecondThemeThirdQuestion == ():
+                    ~ player_SecondCharSecondThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.third_theme:
+                {
+                - player_SecondCharThirdThemeFirstQuestion == ():
+                    ~ player_SecondCharThirdThemeFirstQuestion = Glyph
+
+                - player_SecondCharThirdThemeSecondQuestion == ():
+                    ~ player_SecondCharThirdThemeSecondQuestion = Glyph
+
+                - player_SecondCharThirdThemeThirdQuestion == ():
+                    ~ player_SecondCharThirdThemeThirdQuestion = Glyph
+
+                }
+            
+            }
+
+    - are_two_entities_together(ThirdCharacter, PG):
+            {
+            - cooking_with_first_char.first_theme:
+                {
+                - player_ThirdCharFirstThemeFirstQuestion == ():
+                    ~ player_ThirdCharFirstThemeFirstQuestion = Glyph
+
+                - player_ThirdCharFirstThemeSecondQuestion == ():
+                    ~ player_ThirdCharFirstThemeSecondQuestion = Glyph
+
+                - player_ThirdCharFirstThemeThirdQuestion == ():
+                    ~ player_ThirdCharFirstThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.second_theme:
+                {
+                - player_ThirdCharSecondThemeFirstQuestion == ():
+                    ~ player_ThirdCharSecondThemeFirstQuestion = Glyph
+
+                - player_ThirdCharSecondThemeSecondQuestion == ():
+                    ~ player_ThirdCharSecondThemeSecondQuestion = Glyph
+
+                - player_ThirdCharSecondThemeThirdQuestion == ():
+                    ~ player_ThirdCharSecondThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.third_theme:
+                {
+                - player_ThirdCharThirdThemeFirstQuestion == ():
+                    ~ player_ThirdCharThirdThemeFirstQuestion = Glyph
+
+                - player_ThirdCharThirdThemeSecondQuestion == ():
+                    ~ player_ThirdCharThirdThemeSecondQuestion = Glyph
+
+                - player_ThirdCharThirdThemeThirdQuestion == ():
+                    ~ player_ThirdCharThirdThemeThirdQuestion = Glyph
+
+                }
+            
+            }
+
+    - are_two_entities_together(FourthCharacter, PG):
+            {
+            - cooking_with_first_char.first_theme:
+                {
+                - player_FourthCharFirstThemeFirstQuestion == ():
+                    ~ player_FourthCharFirstThemeFirstQuestion = Glyph
+
+                - player_FourthCharFirstThemeSecondQuestion == ():
+                    ~ player_FourthCharFirstThemeSecondQuestion = Glyph
+
+                - player_FourthCharFirstThemeThirdQuestion == ():
+                    ~ player_FourthCharFirstThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.second_theme:
+                {
+                - player_FourthCharSecondThemeFirstQuestion == ():
+                    ~ player_FourthCharSecondThemeFirstQuestion = Glyph
+
+                - player_FourthCharSecondThemeSecondQuestion == ():
+                    ~ player_FourthCharSecondThemeSecondQuestion = Glyph
+
+                - player_FourthCharSecondThemeThirdQuestion == ():
+                    ~ player_FourthCharSecondThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.third_theme:
+                {
+                - player_FourthCharThirdThemeFirstQuestion == ():
+                    ~ player_FourthCharThirdThemeFirstQuestion = Glyph
+
+                - player_FourthCharThirdThemeSecondQuestion == ():
+                    ~ player_FourthCharThirdThemeSecondQuestion = Glyph
+
+                - player_FourthCharThirdThemeThirdQuestion == ():
+                    ~ player_FourthCharThirdThemeThirdQuestion = Glyph
+
+                }
+            
+            }
+    
+    - are_two_entities_together(FifthCharacter, PG):
+            {
+            - cooking_with_first_char.first_theme:
+                {
+                - player_FifthCharFirstThemeFirstQuestion == ():
+                    ~ player_FifthCharFirstThemeFirstQuestion = Glyph
+
+                - player_FifthCharFirstThemeSecondQuestion == ():
+                    ~ player_FifthCharFirstThemeSecondQuestion = Glyph
+
+                - player_FifthCharFirstThemeThirdQuestion == ():
+                    ~ player_FifthCharFirstThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.second_theme:
+                {
+                - player_FifthCharSecondThemeFirstQuestion == ():
+                    ~ player_FifthCharSecondThemeFirstQuestion = Glyph
+
+                - player_FifthCharSecondThemeSecondQuestion == ():
+                    ~ player_FifthCharSecondThemeSecondQuestion = Glyph
+
+                - player_FifthCharSecondThemeThirdQuestion == ():
+                    ~ player_FifthCharSecondThemeThirdQuestion = Glyph
+
+                }
+
+            - cooking_with_first_char.third_theme:
+                {
+                - player_FifthCharThirdThemeFirstQuestion == ():
+                    ~ player_FifthCharThirdThemeFirstQuestion = Glyph
+
+                - player_FifthCharThirdThemeSecondQuestion == ():
+                    ~ player_FifthCharThirdThemeSecondQuestion = Glyph
+
+                - player_FifthCharThirdThemeThirdQuestion == ():
+                    ~ player_FifthCharThirdThemeThirdQuestion = Glyph
+
+                }
+            
+            }
+    - are_two_entities_together(Franco, PG):
+            {
+
+                - player_CookingAloneFirstQuestion == ():
+                    ~ player_CookingAloneFirstQuestion = Glyph
+
+                - player_CookingAloneSecondQuestion == ():
+                    ~ player_CookingAloneSecondQuestion = Glyph
+
+                - player_CookingAloneThirdQuestion == ():
+                    ~ player_CookingAloneThirdQuestion = Glyph
+
+                - player_CookingAloneFourthQuestion == ():
+                    ~ player_CookingAloneFourthQuestion = Glyph
+            }
+
+
+}
+
+
+
+
+
+
