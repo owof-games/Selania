@@ -283,7 +283,7 @@
                 {charTag(FifthCharacter, "sad")}:               Povera stella.   
                 }
         
-        + \ {charTag(PG, "neutral")}:                           Ti ci vedo a occuparti di cibo e tenere compagnia alle persone.
+        + \ {charTag(PG, "neutral")}:                           Ti vedo bene a occuparti di cibo e tenere compagnia alle persone.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "jester")}:                    Perché non hai visto come cucino, a quel punto sarebbe reato!
         {charTag(ThirdCharacter, "neutral")}:                   Però non ci sei andat{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} molto lontan{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
@@ -866,7 +866,7 @@
         {charTag(ThirdCharacter, "angry")}:                     Le ha dato tutto.
         {charTag(ThirdCharacter, "neutral")}:                   E lei l'ha abbandonato.
             
-        + \ {charTag(PG, "neutral")}:                           Sembra che a questo tizio importi tanto dei suoi soldi, dell'età, del tipo di amici che ha, vero?
+        + \ {charTag(PG, "neutral")}:                           A questo tizio importa tanto dei suoi soldi, dell'età e del tipo di amici che ha.
                 -> glyph_choice_manager(false, earthC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun != him:
@@ -1056,7 +1056,7 @@
                                                                 Una roba da Nobel proprio.                                                       
                 }                                                         
 
-        + \ {charTag(PG, "neutral")}:                           I trattori fanno un lavoro enorme per farci vivere e mangiare.
+        + \ {charTag(PG, "neutral")}:                           I trattori fanno un lavoro enorme per farci mangiare.
                 -> glyph_choice_manager(false, earthC)->
         {charTag(ThirdCharacter, "neutral")}:                   Esatto.
                                                                 Mia sorella è proprio quel tipo di persona.
@@ -1395,16 +1395,12 @@
 
         + (air)\ {charTag(PG, "neutral")}:                      Chiedigli cosa è successo, senza scappatoie: ti deve una risposta ragionevole, zero scappatoie.
 
-                
         + (earth)\ {charTag(PG, "neutral")}:                    Accetta che la cosa è cambiata, e continua a costruirti una vita senza di lui.
-                
 
         + (fire)\ {charTag(PG, "neutral")}:                     Dai fuoco a tutto e fagli capire quanto sei incazzato.
                 
-
         + (water)\ {charTag(PG, "neutral")}:                    Mostragli con sincerità quanto ti manca, senza che sia la rabbia a parlare al posto tuo.
                 
-
         + (aether)\ {charTag(PG, "neutral")}:                   Offri in modo sincero il tuo aiuto per la raccolta fondi.
                 
         -
@@ -1423,16 +1419,12 @@
 
         + (air)\ {charTag(PG, "neutral")}:                      Che siano Poggi o Donatella, i pareri degli altri mostrano solo la loro prospettiva, non la tua realtà.
 
-                
         + (earth)\ {charTag(PG, "neutral")}:                    Non farlo ora, aspetta di sbatterle in faccia l'uomo nuovo che diventerai.
                 
-
         + (fire)\ {charTag(PG, "neutral")}:                     Per ricominciare da capo serve distruggere tutto, bruciare il passato.
-                
 
         + (water)\ {charTag(PG, "neutral")}:                    Sei ancora ferito dalla conversazione con Poggi: lascia perdere Donatella e chiedi aiuto a chi ti vuole bene.
                 
-
         + (aether)\ {charTag(PG, "neutral")}:                   {charNameThree} non hai bisogno di una spirale autodistruttiva ma di un aiuto, che sia psicologico o spirituale.
                 
         -
@@ -1451,16 +1443,12 @@
 
         + (air)\ {charTag(PG, "neutral")}:                      Fallo per telefono: niente distrazioni fisiche o espressioni facciali, pura lucidità.
 
-                
         + (earth)\ {charTag(PG, "neutral")}:                    Al Baretto, per ricordargli cosa ha perso.
-                
 
         + (fire)\ {charTag(PG, "neutral")}:                     Al campetto di calcio, così gli fai vedere nel mentre quanto sei forte.
-                
 
         + (water)\ {charTag(PG, "neutral")}:                    Un posto legato a tua madre, così che tu possa sentirla vicina.
                 
-
         + (aether)\ {charTag(PG, "neutral")}:                   Invita anche tua sorella, così che possa aiutarvi ad affrontare il discorso.
                 
         -
