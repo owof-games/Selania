@@ -298,6 +298,7 @@ namespace Selania.Rework.Components
             SetupChoices();
             SetupAudio();
             SetupGrimoire();
+            SetupGrimoireChanged();
             SetupSigilSupport();
             SetupStoryStartedSupport();
         }
@@ -307,11 +308,12 @@ namespace Selania.Rework.Components
         {
             CleanupStoryStartedSupport();
             CleanupSigilSupport();
-            CleanupRoomContents();
-            CleanupLinearProgression();
-            CleanupChoices();
-            CleanupAudio();
+            CleanupGrimoireChanged();
             CleanupGrimoire();
+            CleanupAudio();
+            CleanupChoices();
+            CleanupLinearProgression();
+            CleanupRoomContents();
         }
 
         private static void DisposeAndSetToNull<T>(ref T? t) where T : class, IDisposable
@@ -2439,6 +2441,74 @@ namespace Selania.Rework.Components
         #region grimoire changes
 
         /// <summary>
+        ///     The last result of the call to <see cref="BuildGrimoireTree" />, or <c>null</c> if no call to the method has been
+        ///     invoked yet.
+        /// </summary>
+        private GrimoireTree? _latestGrimoireTree;
+
+        /// <summary>
+        ///     The grimoire page identifiers that has changes. Only the actual node with changes is marked.
+        /// </summary>
+        private readonly HashSet<GrimoirePageIdentifier> _changedGrimoirePageIdentifiers = new();
+
+        /// <summary>
+        ///     Update the <see cref="_changedGrimoirePageIdentifiers" /> and potentially emit <see cref="GrimoireChanged" /> if
+        ///     necessary.
+        /// </summary>
+        private void UpdateGrimoireChanges()
+        {
+            // navigate the whole grimoire
+            var currentGrimoireTree = BuildGrimoireTree();
+
+            var changed = false;
+
+            // if there's no "previous" grimoire, all the nodes are new
+            if (_latestGrimoireTree == null)
+                foreach (var id in currentGrimoireTree.IdentifierToContent.Keys)
+                {
+                    _changedGrimoirePageIdentifiers.Add(id);
+                    changed = true;
+                }
+            // otherwise, we navigate the two trees in parallel and find the differences
+            else
+                changed = CompareGrimoireTrees(_latestGrimoireTree, currentGrimoireTree, _latestGrimoireTree.TreeRoot,
+                    currentGrimoireTree.TreeRoot);
+
+            if (changed) _grimoireChanged!.OnNext(Unit.Default);
+        }
+
+        private bool CompareGrimoireTrees(GrimoireTree previousTree, GrimoireTree currentTree,
+            GrimoirePageIdentifier? previousTreeNode, GrimoirePageIdentifier currentTreeNode)
+        {
+            var changed = false;
+
+            // compare the corresponding current and previous node
+            var previousPageContent =
+                previousTreeNode == null ? null : previousTree.IdentifierToContent[previousTreeNode];
+            var currentPageContent = currentTree.IdentifierToContent[currentTreeNode];
+            if (previousTreeNode == null || !currentTreeNode.Equals(previousTreeNode) ||
+                !currentPageContent.Equals(previousPageContent))
+            {
+                _changedGrimoirePageIdentifiers.Add(currentTreeNode);
+                changed = true;
+            }
+
+            // navigate the links
+            foreach (var currentLink in currentPageContent.GrimoireLinks)
+            {
+                var currentChildNode = currentTree.LinkToIdentifier[currentLink];
+                var previousChildNode =
+                    previousTreeNode == null || !previousTree.LinkToIdentifier.TryGetValue(currentLink, out var value)
+                        ? null
+                        : value;
+                changed = CompareGrimoireTrees(previousTree, currentTree, previousChildNode, currentChildNode) ||
+                          changed;
+            }
+
+            return changed;
+        }
+
+        /// <summary>
         ///     Check if a grimoire page identifier needs the marker of something changed (it has changed, or one of the children
         ///     pages has changed).
         /// </summary>
@@ -2447,6 +2517,25 @@ namespace Selania.Rework.Components
         /// <seealso cref="MarkAsSeen" />
         private bool HasChanged(GrimoirePageIdentifier identifier)
         {
+            // if the tree hasn't been visited yet, there's no change for sure
+            if (_latestGrimoireTree == null) return false;
+
+            // create a stack of identifier to examine, and start with the current one
+            var identifiersToCheck = new Stack<GrimoirePageIdentifier>();
+            identifiersToCheck.Push(identifier);
+
+            // until there's at least one to examine
+            while (identifiersToCheck.Count > 0)
+            {
+                // check if that identifier specifically has changed
+                var identifierToCheck = identifiersToCheck.Pop();
+                if (_changedGrimoirePageIdentifiers.Contains(identifierToCheck)) return true;
+
+                // run over all the links and add their children identifiers
+                var grimoireLinks = _latestGrimoireTree.IdentifierToContent[identifierToCheck].GrimoireLinks;
+                foreach (var link in grimoireLinks) identifiersToCheck.Push(_latestGrimoireTree.LinkToIdentifier[link]);
+            }
+
             return false;
         }
 
@@ -2457,9 +2546,22 @@ namespace Selania.Rework.Components
         /// <seealso cref="HasChanged" />
         private void MarkAsSeen(GrimoirePageIdentifier identifier)
         {
+            _changedGrimoirePageIdentifiers.Remove(identifier);
         }
 
-        public Observable<Unit> GrimoireChanged => throw new NotImplementedException();
+        private Subject<Unit>? _grimoireChanged;
+
+        private void SetupGrimoireChanged()
+        {
+            _grimoireChanged = new Subject<Unit>();
+        }
+
+        private void CleanupGrimoireChanged()
+        {
+            DisposeAndSetToNull(ref _grimoireChanged);
+        }
+
+        public Observable<Unit> GrimoireChanged => _grimoireChanged!.AsObservable();
 
         /// <summary>
         ///     A representation of the tree of pages of a grimoire, where locked pages are not present.
@@ -2476,7 +2578,7 @@ namespace Selania.Rework.Components
         ///     Visit the whole grimoire in a separate flow and returns the data structure that represents the contents
         ///     of the grimoire itself.
         /// </summary>
-        private GrimoireTree BuildTree()
+        private GrimoireTree BuildGrimoireTree()
         {
             // data structure to perform the depth-first search: see InkBridge.md for details on the algorithm
             Dictionary<GrimoirePageIdentifier, List<GrimoireLink>> visitedLinks = new();
