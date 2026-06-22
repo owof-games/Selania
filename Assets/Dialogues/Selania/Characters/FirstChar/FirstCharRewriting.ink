@@ -46,7 +46,8 @@
                                                                 Vedersene andare tutte le mie amiche?
                                                                 O perdere anche Ennio, e rimanere sola e infelice con gatto e vibratore?
         {charTag(FirstCharacter, "neutral")}:                   E non è vero che la chitarra fa schifo, Mark Bowen sei un dio, ma non è il mio strumento.
-                                                                Non sono nel mio strumento.
+                                                                Perché una chitarra funziona perché lascia la sua pancia aperta, le sue vulnerabilità esposte.
+        {charTag(FirstCharacter, "sad")}:                       Mentre io ora ho bisogno di sicurezza e risposte.
         {charTag(FirstCharacter, "annoyed")}:                   {player_name}: devo continuare a vivere una vita che non è la mia?
         {charTag(FirstCharacter, "sad")}:                       O fare il salto e rischiare di perdere tutto?
         - 
