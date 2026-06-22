@@ -285,3 +285,65 @@
     
         -> second_char_closing_storylet ->
         ->-> 
+
+
+===  second_char_first_char_departure_comment
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charTag(SecondCharacter, "melanchonic")}:                  Mi manca già {charNameOne}.
+                                                                Lei è sempre stata così carina con me!
+                                                                Anche se non mi ha trovato le caramelle.
+    {charTag(SecondCharacter, "energy")}:                       Spero che ne troverà tantissime ora che arriva a casa.
+          
+    {
+        - firstChar_ActualName has Triangolo:
+        {charTag(SecondCharacter, "neutral")}:                  Le piaceranno davvero le cose quotidiane?
+                                                                Perché a me mi sembrava che le piaceva soprattutto il vino.
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "jester")}:           E bisogna fidarsi solo di chi beve birra!
+                } 
+                
+        - firstChar_ActualName has Orchestra:
+        {charTag(SecondCharacter, "energy")}:                   Chissà se va davvero in Islanda!
+                                                                Magari possiamo andare a trovarla?
+                                                                Così vedo i geyser!
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "bored")}:             Possiamo non nominarla per dieci minuti?
+                }                                                 
+                
+        - firstChar_ActualName has FlautoDolce:
+        {charTag(SecondCharacter, "energy")}:                   Quando esco da qui chiedo a mio fratello di portarmi a un suo concerto!
+        {charTag(SecondCharacter, "melanchonic")}:              Anche se prima devo capire come trovarla!
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "bored")}:             Possiamo non nominarla per dieci minuti?
+                }  
+                
+        - firstChar_ActualName has Ocarina:
+        {charTag(SecondCharacter, "neutral")}:                  Ha deciso di tornare dai genitori.
+        {charTag(SecondCharacter, "angry")}:                    Ma io avevo capito che quando sono grande non devo più vederli!
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "neutral")}:           Giuro che non sei obbligato a vederli, fratellino.
+                }  
+
+        - firstChar_ActualName has Violino:
+        {charTag(FirstCharacter, "neutral")}:                   Bleah però.
+                                                                Quella cosa del fidanzato.
+                                                                Bleah.
+        {charTag(SecondCharacter, "energy")}:                   Meglio studiare le lucertole.
+                                                                Chissà se faranno dei bambini!
+                {
+                - are_two_entities_together(ThirdCharacter, PG):
+                {charTag(ThirdCharacter, "bored")}:             Così poi lo cresce isterico.
+                }  
+    }
+    
+        -> second_char_closing_storylet ->
+        ->->         

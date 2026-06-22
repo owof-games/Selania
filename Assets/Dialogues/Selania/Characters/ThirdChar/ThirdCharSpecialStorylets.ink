@@ -549,3 +549,22 @@
 
     -> third_char_closing_storylet ->
     ->-> 
+
+
+
+    === third_char_first_char_departure_comment  
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        {charTag(ThirdCharacter, "jester")}:                            La senti {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}?
+                                                                        La pace.
+        {charTag(ThirdCharacter, "neutral")}:                           La pace.
+                                                                        Finalmente {charNameOne} se ne è andata.
+                                                                        Ora posso respirare.
+
+
+    -> third_char_closing_storylet ->
+    ->-> 

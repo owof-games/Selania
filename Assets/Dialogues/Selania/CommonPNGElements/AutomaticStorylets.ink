@@ -226,7 +226,11 @@
 
     //Commento su fuga Boccale
         -  are_two_entities_together(SecondCharacter, PG) && thirdChar_storyStatus == story_storyRemote && grimoire_secondChar hasnt grimSecondCharThirdCharDepartureComment:    
-            -> second_char_third_char_departure_comment        
+            -> second_char_third_char_departure_comment
+
+    //Commento su partenza Chitarra
+        -  are_two_entities_together(SecondCharacter, PG) && firstChar_storyStatus == story_storyPostal && grimoire_secondChar hasnt grimSecondCharFirstCharDepartureComment:    
+            -> second_char_first_char_departure_comment              
 
 }
 
@@ -247,6 +251,10 @@
     //Commento su partenza Riccio
         -  are_two_entities_together(ThirdCharacter, PG) && secondChar_storyStatus == story_storyPostal && grimoire_thirdChar hasnt grimThirdCharSecondCharDepartureComment:    
             -> third_char_second_char_departure_comment              
+
+    //Commento su partenza Chitarra
+        -  are_two_entities_together(ThirdCharacter, PG) && firstChar_storyStatus == story_storyPostal && grimoire_thirdChar hasnt grimThirdCharFirstCharDepartureComment:    
+            -> third_char_first_char_departure_comment             
 } 
 
 
