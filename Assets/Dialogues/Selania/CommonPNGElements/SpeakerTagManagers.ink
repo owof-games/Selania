@@ -187,7 +187,7 @@
     - FourthCharacter:
         {
 
-            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+            - !fifth_char_intro.waterChoice && !fifth_char_intro.selfName:
                 ~ return "???"
             
             - fourthChar_ActualName == NonnaMolotov:
@@ -212,7 +212,7 @@
 
     - FifthCharacter:
         {
-            - !tutorial_mentorTalkingChoiceRelationship.waterChoice && !tutorial_mentorTalkingChoiceRelationship.selfName:
+            - !fifth_char_intro.waterChoice && !fifth_char_intro.selfName:
                 {
                     - gm_rm_activation.witch.riscrittura:
                         ~ return "Mentore"

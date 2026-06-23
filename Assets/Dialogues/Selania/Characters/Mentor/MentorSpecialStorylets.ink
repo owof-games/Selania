@@ -5,6 +5,199 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        {charTag(FifthCharacter, "hurry")}:                     Oh, quanto ho sperato nel tuo arrivo!
+                                                                Scusa, ma sono così felice che tu sia qui.
+
+            {
+            - grimoire_fifthChar has grimMentorLiar:
+            {charTag(FifthCharacter, "sad")}:                   Con tutto il trambusto causato da quel bambino non ho nemmeno fatto una buona figura.
+            }
+
+        {charTag(FifthCharacter, "hurry")}:                     Avrai un milione di domande, vero?
+        
+        + (airChoice) \ {charTag(PG, "neutral")}:               Un milione e uno, ma la prima è: dove mi trovo?
+            -> glyph_choice_manager(Mentor, airC) ->
+
+            {
+                - contentsTrainStop has PG:
+                    {charTag(FifthCharacter, "neutral")}:       Questa? È la fermata del treno.
+                                                                Da qui arrivano le persone che hanno bisogno del nostro aiuto.
+                - contentsForest has PG:    
+                    {charTag(FifthCharacter, "neutral")}:       Ora siamo nella foresta.
+                                                                O meglio, la chiamo così perché.
+                                                                Beh, ci sono tanti alberi.
+                                                            
+                - contentsPond has PG:
+                    {charTag(FifthCharacter, "neutral")}:       Questo è lo stagno.
+                                                                Regno di ninfee, libellule e calura.
+
+                - contentsLibrary has PG:
+                    {charTag(FifthCharacter, "neutral")}:       Questa è la biblioteca.
+                                                                Posto di libri e scaffali infiniti da spolverare.
+
+                - contentsDump has PG:
+                    {charTag(FifthCharacter, "neutral")}:       Questa è la discarica.
+                                                                Il posto meno elegante dove presentarci, direi.                                              
+            }
+            {charTag(FifthCharacter, "neutral")}:               Ma forse volevi sapere cos'è questo luogo in generale, vero?
+            {charTag(FifthCharacter, "hurry")}:                 Non ha un vero nome, ma il lo chiamo <b><i>Il giardino</b></i>.
+            {charTag(FifthCharacter, "neutral")}:               E faccio di tutto per renderlo un posto sicuro.
+                                                                Un posto dove prenderti cura di te.
+            {charTag(FifthCharacter, "hurry")}:                 Non male, no?
+        
+        + (waterChoice) \ {charTag(PG, "neutral")}:             Davvero sei felice che sono qui? È una cosa dolcissima!
+            -> glyph_choice_manager(Mentor, waterC) ->
+
+            {charTag(FifthCharacter, "hurry")}:                 Certo che sono felice!
+            {charTag(FifthCharacter, "neutral")}:               Perché io sono <b><i>{charNameFive}</b></i>.
+
+                ~ grimoire_fifthChar += grimMentorPresentation
+
+            {charTag(FifthCharacter, "hurry")}:                 La tua {charNameFive}.
+                                                                E ora che sei qui, ho uno scopo.
+
+
+        + (aetherChoice) \ {charTag(PG, "neutral")}:            C'è qualcosa che non stiamo vedendo, vero?
+            -> glyph_choice_manager(Mentor, aetherC) ->
+
+            {charTag(FifthCharacter, "neutral")}:               Io.
+            {charTag(FifthCharacter, "sorry")}:                 Uh, è una domanda inaspettata.
+            {charTag(FifthCharacter, "hurry")}:                 Sicuramente c'è qualcosa di magico.
+            {charTag(FifthCharacter, "neutral")}:               Ma nulla viene tenuto nascosto.
+                                                                Nulla.
+            {charTag(FifthCharacter, "hurry")}:                 Al contrario: hai in me una guida.
+
+                
+        + (fireChoice) \ {charTag(PG, "neutral")}:              Dimmi come torno a casa.
+            -> glyph_choice_manager(Mentor, fireC) ->
+
+            {charTag(FifthCharacter, "sad")}:                   Vuoi già andartene?
+                                                                Forse devo rivedere il mio benvenuto.
+            {charTag(FifthCharacter, "sorry")}:                 Forse sono stata troppo formale?
+            {charTag(FifthCharacter, "hurry")}:                 O dovrei essere più autorevole?
+                                                                Ma non devo essere scortese ora.
+            {charTag(FifthCharacter, "neutral")}:               Mi hai fatto una domanda, e vedrò di rispondere.
+            {
+                - contentsTrainStop has PG:
+                                                                Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
+                                                                Basta che ti stenderai a dormire, e tornerai nel mondo da cui vieni.
+                - else:
+                                                                A est della stazione troverai una porta, e da lì, la tua camera da letto.
+                                                                Stenditi a dormire, e ti troverai nel mondo da cui vieni.
+            }
+                                                                E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
+            {charTag(FifthCharacter, "hurry")}:                 Prima però lascia che ti rubi giusto un secondo!
+            
+        + (earthChoice) \ {charTag(PG, "neutral")}:             <i>Mi godo la tranquillità della natura che mi circonda.</i>
+            -> glyph_choice_manager(Mentor, earthC) ->
+
+            {charTag(FifthCharacter, "hurry")}:                 È una pace per il cuore, vero?
+            {charTag(FifthCharacter, "neutral")}:               Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
+            {charTag(FifthCharacter, "hurry")}:                 Continua a stupirmi, giorno per giorno.
+        
+        -
+
+        {charTag(FifthCharacter, "hurry")}:                     Ma come ti devo chiamare?
+                                                                E quali pronomi usi?
+        {charTag(FifthCharacter, "neutral")}:                   Puoi usare un nome qualsiasi e i pronomi che preferisci: prendi questa occasione come un nuovo inizio.
+            -> name_choice.top2 ->
+            -> gender ->
+        {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
+                                                                E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
+                                                                Con me usa pure i pronomi femminili.
+            {
+            - not waterChoice:
+            {charTag(FifthCharacter, "neutral")}:               Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.
+
+                    ~ grimoire_fifthChar += grimMentorPresentation
+                    
+            - else:
+            {charTag(FifthCharacter, "neutral")}:               Come {charNameFive} il mio unico obiettivo è farti stare bene.
+            }
+        - (selfName)
+            {
+            - tutorial_MentorTutorial == true:
+            {charTag(FifthCharacter, "hurry")}:                 Arriverà anche il momento in cui dovrò spiegarti perché sei qui, che cosa dovrei fare.
+            {charTag(FifthCharacter, "neutral")}:               Ma prima pensiamo al tuo benessere.
+                {
+                - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
+                {charTag(FirstCharacter, "annoyed")}:           Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
+                {charTag(FifthCharacter, "neutral")}:           Allucinazione?
+                }
+            }
+
+        {charTag(FifthCharacter, "neutral")}:                   c'è una cosa importante che devo dirti, {player_name}: qui avrai a che fare con cose viventi piene di storie.
+                                                                E ogni storia ha le sue complessità.
+        {charTag(FifthCharacter, "sorry")}:                     Per questo potresti incontrare tematiche per te faticose.
+        {charTag(FifthCharacter, "neutral")}:                   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
+                                                                Ma quando si tratta di essere viventi, accogliere le loro ferite farà parte del tuo lavoro.
+                                                                Per questo ricorda: fermarsi o rinunciare non è un fallimento.
+                                                                Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronoun has him:arrivato|{player_pronoun has her:arrivata|arrivatə}}, e stenderti sul letto.
+                                                                Al risveglio, troverai tutto come l'hai lasciato.
+        {charTag(FifthCharacter, "hurry")}:                     E se non vorrai più tornare, ci saranno sicuramente altre persone pronte ad aiutare chi viene qui in cerca di risposte.
+
+
+        + \ {charTag(PG, "neutral")}:                           <i>Annuisco: non c'è altro da aggiungere.</i>
+            -> glyph_choice_manager(Mentor, aetherC) ->
+
+            {charTag(FifthCharacter, "sad")}:                   Mi sento una gran chiacchierona, davanti al tuo silenzio.
+            {charTag(FifthCharacter, "neutral")}:               Ma ci sta: alla fine sono io quella che deve spiegare le cose, vero?
+        
+        +  \ {charTag(PG, "neutral")}:                          Faccio tanta fatica a non sentirmi addosso il dolore degli altri.
+            -> glyph_choice_manager(Mentor, waterC) ->
+            
+            {charTag(FifthCharacter, "sad")}:                   Ti capisco, {player_name}.
+            {charTag(FifthCharacter, "neutral")}:               Proprio per questo è importante prendersi i propri tempi, staccare.
+                                                                E capire quando è il caso di fermarsi.
+
+            
+        + \ {charTag(PG, "neutral")}:                           Capita che qualcunə se ne vada e non torni più?
+            -> glyph_choice_manager(Mentor, airC) ->
+
+            {charTag(FifthCharacter, "neutral")}:               Uh.
+                                                                Non.
+                                                                Credo di sì.
+            {charTag(FifthCharacter, "sad")}:                   Sì, sicuramente sì.
+                                                                Alla fine non esiste una cosa che possa andare bene a tutte le persone, no?                                                   
+
+
+        + \ {charTag(PG, "neutral")}:                           Quando si tratta di farsi una pausa, non serve dirmelo due volte.
+            -> glyph_choice_manager(Mentor, earthC) ->
+
+            {charTag(FifthCharacter, "neutral")}:               La cosa mi fa piacere.
+            {charTag(FifthCharacter, "sad")}:                   Vorrei poter dire lo stesso.
+            {charTag(FifthCharacter, "hurry")}:                 Ma se mi fermassi crollerebbe tutto, no?
+                                                                Per cui riposa anche per me {player_name}!
+
+            
+        + \ {charTag(PG, "neutral")}:                           Non mi pesa correre qualche rischio!
+            -> glyph_choice_manager(Mentor, fireC) ->
+
+            {charTag(FifthCharacter, "sad")}:                   Non si tratta di correre dei rischi o meno, amic{player_pronoun has him:o|{player_pronoun has her:a|ə}} mi{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+            {charTag(FifthCharacter, "neutral")}:               Anche la persona più scavezzacollo al mondo a un certo punto può spezzarsi.
+                                                                E per questo è importante capire quali siano i propri confini prima di farsi male.
+
+        -
+
+            {charTag(FifthCharacter, "hurry")}:                 Comunque questo luogo è pieno di spazi di ristoro e cura, anche per te.
+                                                                E se avrai bisogno del mio aiuto, ti basterà cercarmi.
+            {charTag(FifthCharacter, "neutral")}:               Ho sempre qualche dritta su come affrontare i momenti più difficili.
+                                                                Ma ora vai: incontra nuove persone, esplora nuovi luoghi!
+            {charTag(FifthCharacter, "sad")}:                   Ma che sbadata: ti ho aperto la serra, <>                                                    
+
+                                        {
+                                            - contentsPond has PG:
+                                                                è quell'edificio lì a destra.
+                                            - else:
+                                                                la trovi nei pressi dello stagno.
+                                        }
+                                                                //Apertura della serra
+                                                                ~ opening_places()
+
+        {charTag(FifthCharacter, "hurry")}:                     La serra è un bel posto dove rilassarsi, e non solo.
+        {charTag(FifthCharacter, "bored")}:                     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!                                                    
+        {charTag(FifthCharacter, "hurry")}:                     E ora mi metto a spazzare un po' di foglie.
+
 
         -> mentor_closing_storylet ->
         -> main

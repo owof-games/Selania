@@ -17,7 +17,7 @@
     //Main story come Mentore
     {
         - grimoire_fifthChar has grimMentorIntro:
-        Al suo arrivo {player_name} ha conosciuto {charNameFive}, che ha iniziato a raccontare a {player_name} un po' del funzionamento di questo luogo.
+        Al suo arrivo {player_name} ha conosciuto {charNameFive}, che dopo essersi presentata, ha aperto a {player_name} la serra.
     }
     {
         - grimoire_fifthChar has grimMentorOne:
