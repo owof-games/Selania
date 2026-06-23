@@ -102,7 +102,18 @@
                                                     Sono ufficialmente in pausa.
                                                     Lei vada a fare le sue cose così imporanti, prego.
 
-    -> carla_closing_storylet
+    {
+        - entity_location(PG) == Bedroom:
+            //Se lo stiamo ascoltando in camera allora la sposto nel deposito, faccio il check di chiusura, e poi faccio in modo che si passi alla scelta della modalità di gioco e tutorial.
+            ~ move_entity(Carla, Safekeeping)
+            -> carla_closing_storylet ->
+            -> gm_rm_activation
+
+        - else:
+            -> carla_closing_storylet    
+
+    }
+    
 
 
 

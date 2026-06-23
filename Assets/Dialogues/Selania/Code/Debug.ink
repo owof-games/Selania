@@ -338,3 +338,87 @@
 ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
 ~ move_entity(CookingWithThirdCharOBJ, Kitchen)
 ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+
+
+
+
+=== debug_dialogue_text
+// Tutto questo primo blocco me lo tengo se serve testare di nuovo il nuovo sistema di scelte
+- (top)
+~ move_entity(FirstCharacter, Bedroom)
+Chitarra ci dice qualcosa.
+
+    + Risposta fuoco.
+    -> glyph_choice_manager(false, fireC) ->
+
+    + Risposta aria.
+    -> glyph_choice_manager(false, airC) ->
+
+    + Risposta terra.
+    -> glyph_choice_manager(false, earthC) ->
+
+    + Risposta acqua.
+    -> glyph_choice_manager(false, waterC) ->
+
+    + Risposta spirito.
+    -> glyph_choice_manager(false, aetherC) ->
+
+    + Voglio andare avanti
+    -> gm_rm_activation.witch
+
+- (top2)
+METTO IN EVIDENZA
+Dopo la scelta:
+        firstChar_last_aether è {firstChar_last_aether}
+        firstChar_last_earth è {firstChar_last_earth}
+        firstChar_last_air è {firstChar_last_air}
+        firstChar_last_water è {firstChar_last_water}
+        firstChar_last_fire è {firstChar_last_fire}
+
+        firstChar_aether è {firstChar_aether}
+        firstChar_earth è {firstChar_earth}
+        firstChar_air è {firstChar_air}
+        firstChar_water è {firstChar_water}
+        firstChar_fire è {firstChar_fire}
+
+        player_fire_first_char è {player_fire_first_char}
+        player_earth_first_char è {player_earth_first_char}
+        player_air_first_char è {player_air_first_char}
+        player_water_first_char è {player_water_first_char}
+        player_aether_first_char è {player_aether_first_char}
+
+        firstChar_usedSigil è {firstChar_usedSigil}
+        firstChar_totalChoices è {firstChar_totalChoices}
+
+        firstChar_lastRelationshipIndicator è {firstChar_lastRelationshipIndicator}
+        firstChar_relationshipIndicator è {firstChar_relationshipIndicator}
+
+        player_fire è {player_fire}
+        player_earth è {player_earth}
+        player_air è {player_air}
+        player_water è {player_water}
+        player_aether è {player_aether}
+IL SIGILLO ATTUALE è {glyph_actualActiveSigil}
+UTILIZZI RIMASTI = {glyph_actualSigilUses}
+
++ Rifaccio una domanda a Chitarra.
++ Attivo un sigillo di prova
+    ~ glyph_actualActiveSigil = AirFireWater
+    ~ glyph_actualSigilUses = glyph_maxSigilUses
+
++ Scelte PG testing
+    + + Scelta PG fire
+        -> glyph_choice_manager(true, fireC) -> top2
+    + + Scelta PG air
+        -> glyph_choice_manager(true, airC) ->  top2
+    + + Scelta PG water
+        -> glyph_choice_manager(true, waterC) -> top2
+    + + Scelta PG earth
+        -> glyph_choice_manager(true, earthC) ->  top2
+    + + Scelta PG aether
+        -> glyph_choice_manager(true, aetherC) ->  top2
+
++ Voglio andare avanti
+    -> gm_rm_activation.witch
+-
+-> top

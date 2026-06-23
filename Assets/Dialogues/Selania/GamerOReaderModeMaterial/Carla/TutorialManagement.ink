@@ -34,27 +34,26 @@ VAR tutorial_CarlaInkIndicator = ink_low
 //Tutti i tutorial di Carla passano da qui, a parte quello sui sigilli, che va sbloccato subito dopo aver parlato con Boccale
 
     {
-        - are_two_entities_together(PG, Carla) && not tutorial_carlaChoicesRelationshipStorylet && settings_gamerMode == true:
-            -> tutorial_carlaChoicesRelationshipStorylet
+        - are_two_entities_together(PG, Carla) && not tutorial_carlaChoicesRelationshipStorylet && tutorial_CarlaTutorial == true:
+                -> tutorial_carlaChoicesRelationshipStorylet
 
-        //questa è una posizione temporanea, poi faremo in modo di farlo partire all'avvio del gioco.
-        // - are_two_entities_together(PG, Carla)  && entity_location(PG) == Forest && not tutorial_carlaInterfaceStorylets && settings_gamerMode == true:
-        //     -> tutorial_carlaInterfaceStorylets
+        - are_two_entities_together(PG, Carla)  && entity_location(PG) == Bedroom && not tutorial_carlaInterfaceStorylets && tutorial_CarlaTutorial == true:
+                -> tutorial_carlaInterfaceStorylets
 
-        - are_two_entities_together(PG, Carla) && tutorial_rereadingActive == true && not tutorial_carlaRereadingStorylet && settings_gamerMode == true:
+        - are_two_entities_together(PG, Carla) && tutorial_rereadingActive == true && not tutorial_carlaRereadingStorylet && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaRereadingStorylet
 
         //parte dopo che mi è stato dato il libro da Mentore
-        - are_two_entities_together(PG, Carla) && grimoire_isEnabled == true && not tutorial_carlaGrimoireStorylet && settings_gamerMode == true:
+        - are_two_entities_together(PG, Carla) && grimoire_isEnabled == true && not tutorial_carlaGrimoireStorylet && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaGrimoireStorylet        
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Greenhouse && not tutorial_carlaGreenhouseGiftsInkStorylet && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaGreenhouseGiftsInkStorylet
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && not tutorial_carlaKitchenStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && not tutorial_carlaKitchenStorylet && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaKitchenStorylet
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Nest && not tutorial_carlaNestStorylet && settings_gamerMode == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Nest && not tutorial_carlaNestStorylet && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaNestStorylet
 
     }

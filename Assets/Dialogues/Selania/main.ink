@@ -19,10 +19,11 @@
         {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
 }
 
+//Soluzione temporanea per spiegazione cursori etc lato Carla + attivazione modalità di gioco.
 
 {
     - not gm_rm_activation:
-    -> gm_rm_activation
+    -> tutorial_carlaInterfaceStorylets
 }
 
 
