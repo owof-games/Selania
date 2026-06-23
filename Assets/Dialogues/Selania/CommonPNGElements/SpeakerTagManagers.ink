@@ -285,7 +285,7 @@
 
     - Carla:
         {
-            - tutorial_carlaChoicesRelationshipStorylet.nameDiscovered:
+            - tutorial_carlaChoicesRelationshipStorylet.nameDiscovered or tutorial_carlaInterfaceStorylets.nameDiscovered:
                 ~ return "Carla"
 
             - else:

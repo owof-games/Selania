@@ -8,7 +8,13 @@
     
     {charTag(Carla, "bored")}:              Perché non sono andata a vivere nei boschi da sola, quando avevo vent'anni, perché?
                                             Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.
+    {
+        - tutorial_carlaInterfaceStorylets.nameDiscovered:
+    {charTag(Carla, "neutral")}:            Ci siamo già presentate, vero?
+                                            Mi tocca spiegarle al volo cosa deve fare.
+        - else:
     {charTag(Carla, "neutral")}:            Mi chiamo Carla, e sono qui per dirle al volo cosa deve fare.
+    }
     - (nameDiscovered)
     {charTag(Carla, "bored")}:              Il perché non è di mia competenza.
 
@@ -102,20 +108,9 @@
                                                     Sono ufficialmente in pausa.
                                                     Lei vada a fare le sue cose così imporanti, prego.
 
-    {
-        - entity_location(PG) == Bedroom:
-            //Se lo stiamo ascoltando in camera allora la sposto nel deposito, faccio il check di chiusura, e poi faccio in modo che si passi alla scelta della modalità di gioco e tutorial.
-            ~ move_entity(Carla, Safekeeping)
-            -> carla_closing_storylet ->
-            -> gm_rm_activation
+    -> carla_closing_storylet                                                    
 
-        - else:
-            -> carla_closing_storylet    
-
-    }
     
-
-
 
 
 === tutorial_carlaRereadingStorylet ===
@@ -227,6 +222,7 @@
             {charTag(Carla, "bored")}:                  Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
     {charTag(Carla, "bored")}:                          Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
+    - (nameDiscovered)
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
                 -> top2
@@ -262,7 +258,9 @@
 
     {charTag(Carla, "happy")}:                      Se sa parlare, si ferma quando lo sfiora.
                                                     Se non sa parlare, si muove quando lo sfiora.
-                                                    E il cursore cambia.
+                                                    E il cursore cambierà, appena verrà implementato.
+    {charTag(Carla, "bored")}:                      Chi lo implementerà?
+    {charTag(Carla, "happy")}:                      Per fortuna non io.
 
         @sprite:tutorial_carlaInterfaceStorylets_3
 
@@ -270,6 +268,7 @@
     {charTag(Carla, "bored")}:                      Se se lo chiede, forse ha sbagliato lavoro.
     {charTag(Carla, "neutral")}:                    Terza informazione: in camera troverà un citofono.
                                                     Lo può usare per modificare le impostazioni.
+                                                    Una volta che sarà implementato e sì, anche quello non è a carico mio.
 
         @sprite:tutorial_carlaInterfaceStorylets_4
 
@@ -278,7 +277,7 @@
                                                     Perché un citofono nel libro?
     {charTag(Carla, "bored")}:                      Direttive dalla sede centrale.
                                                     Quarta informazione: quello che fa viene salvato in automatico.
-                                                    Se vede questa icona, non deve fare niente.
+                                                    // Se vede questa icona, non deve fare niente.
 
         @sprite:tutorial_carlaInterfaceStorylets_5
 
@@ -305,7 +304,16 @@
     {charTag(Carla, "sad")}:                        Infine dovrei spiegarle il sistema di relazioni.
     {charTag(Carla, "happy")}:                      Ma è arrivata l'ora della mia pausa.
 
--> carla_closing_storylet
+    {
+        - entity_location(PG) == Bedroom:
+            //Se lo stiamo ascoltando in camera allora faccio il check di chiusura, e poi faccio in modo che si passi alla scelta della modalità di gioco e tutorial.
+            -> carla_closing_storylet ->
+            -> gm_rm_activation
+
+        - else:
+            -> carla_closing_storylet    
+
+    }
 
 === tutorial_carlaGrimoireStorylet ===
 

@@ -107,13 +107,17 @@
                         // se non funziona, cercare di capire come mai invece di mettere il divert
                         // -> greenhouse_entry_check
                         ->->
-                
+
+                - entity_location(Carla) == Bedroom:
+                        ~ move_entity(Carla, Safekeeping)
+
                 - entity_location(Carla) != Forest:
                         ~ move_entity(Carla, Forest)
                         // tolto il divert perché noi entriamo qua come tunnel e così finiamo di fare il resto del lavoro
                         // se non funziona, cercare di capire come mai invece di mettere il divert
                         // -> main
                         ->->
+                
                 - else:
                         ->->
         }

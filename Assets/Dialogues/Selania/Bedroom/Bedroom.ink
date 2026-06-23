@@ -31,8 +31,6 @@
 
 
 
-
-
 === gm_rm_activation
 {debug_dialogues:
     -> debug_dialogue_text
@@ -81,14 +79,14 @@
         //Aggiungere spiegazione delle due modalità per il testing
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Gamer Mode.</i>
                 ~ gamerMode_activation ()
-                //Fino a quando non ho sbloccato la parte sotto, attivo anche Carla
-                ~ tutorial_CarlaTutorialActivation()
+                // //Se non ho sbloccato la parte sotto, attivo anche Carla
+                // ~ tutorial_CarlaTutorialActivation()
                 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Reader Mode.</i>
     -
     {charTag(TheWitch, witch_state())}:                                 <i>Infine, puoi decidere che tipo di tutorial attivare.</i>.
-                                                                        <i>Puoi affidarti a <b>Mentore</b>, che ha un approccio più narrativo, non sempre diretto, e per questo ti permette di esplorare questo mondo con i tuoi tempi. Il suo supporto è particolarmente adatto al Reader Mode.</i>
-                                                                        <i>Oppure c'è <b>Carla</b>: più diretta, ti spiegherà tutto quello che devi fare con degli esempi che vengono dalla sua enorme conoscenza come Sacra Capra Burocratica. Il suo supporto è particolarmente adatto per il Gamer Mode.</i>
+                                                                        <i>Puoi affidarti a <b>Mentore</b>, che ha un approccio più narrativo e meno diretto. Il suo supporto è particolarmente adatto per una modalità di gioco esplorativa e meditativa, come quella del Reader Mode.</i>
+                                                                        <i>Oppure c'è <b>Carla</b>: più diretta, ti spiegherà tutto quello che devi fare con degli esempi che vengono dalla sua enorme conoscenza come Sacra Capra Burocratica. Il suo supporto è particolarmente adatto per una modalità di gioco più pragmatica, come il Gamer Mode.</i>
                                                                         <i>C'è anche la possibilità di andare senza guida alcuna, o di chiedere l'aiuto di entrambe.</i>
                                                                         <i>Cosa sceglierai?</i>
 
