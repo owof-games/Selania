@@ -207,6 +207,7 @@
     {charTag(Carla, "angry")}:                          E quando sono insicure, chiedono troppi perché.
     {charTag(Carla, "neutral")}:                        Facciamo una prova veloce.
                                                         Mettiamo che l'ho trovata così adorabile, da darle addirittura una goccia di inchiostro.
+        ~ tutorial_CarlaInkIndicator = ink_low                                            
                                                         Mi ha sentito raccontare così tante cose su quella piaga di mio figlio, e così decide di dirmi.
                                                         <i>Carla: so che pensi che tuo figlio è un idiota, ma sono qui per dirti che poi guardarlo in modo diverso.</i>
 
