@@ -142,16 +142,12 @@
 
 
         {       
-                - entity_location(Carla) == Greenhouse:
-                        ~ move_entity(Carla, Forest)
-                        // tolto il divert perché noi entriamo qua come tunnel e così finiamo di fare il resto del lavoro
-                        // se non funziona, cercare di capire come mai invece di mettere il divert
-                        // -> greenhouse_entry_check
-                        ->->
-
+                
+                //Passaggio dalla camera al safekeeping dopo tutorial interazione
                 - entity_location(Carla) == Bedroom:
                         ~ move_entity(Carla, Safekeeping)
 
+                //Ritorno alla foresta se in giro per qualche motivo (es: dopo tutorial cucina)
                 - entity_location(Carla) != Forest:
                         ~ move_entity(Carla, Forest)
                         // tolto il divert perché noi entriamo qua come tunnel e così finiamo di fare il resto del lavoro

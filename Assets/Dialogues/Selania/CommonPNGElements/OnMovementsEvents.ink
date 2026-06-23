@@ -100,6 +100,13 @@ VAR letters_doggoPause = false
             ~ thirdChar_pauseDuration = 1
    } 
 
+                
+//Spostamento Carla al Nest se Nest disponibile e non ci ha fatto il tutorial
+    {
+        - entity_location(Carla) != Nest && player_accessiblePlaces has Nest && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
+                ~ move_entity(Carla, Nest)
+    }                    
+                
 
 //Elementi per la camera da letto
     //Chiusura gioco
