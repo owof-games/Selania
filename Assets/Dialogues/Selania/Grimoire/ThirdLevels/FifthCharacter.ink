@@ -9,7 +9,7 @@
 
     // {//qui sarà più uno storylet ad hoc ad attivarci un po' di roba. Da vedere se prima o dopo la mostrificazione.
     // - fifthChar_storyStatus == story_storyStarted: 
-    //     <b>Lista delle persone importanti per {charNameFive}</b>.
+    //     <b>Lista delle persone importanti per {charNameFive}</b>
     //     <i>Dona</i>: la ex di {charNameFive}.
     //     <i>Il Poggi</i>: il migliore amico di {charNameFive}.  
     // }
@@ -17,6 +17,7 @@
     //Main story come Mentore
     {
         - grimoire_fifthChar has grimMentorIntro:
+        <b>Appunti dalle conversazioni</b>
         Al suo arrivo {player_name} ha conosciuto {charNameFive}, che dopo essersi presentata, ha aperto a {player_name} la serra.
     }
     {

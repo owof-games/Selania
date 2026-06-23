@@ -9,7 +9,7 @@
 
     {
     - grimoire_secondChar has grimSecondCharOne:
-        <b>Lista delle persone importanti per {charNameTwo}</b>.
+        <b>Lista delle persone importanti per {charNameTwo}</b>
         {
             - grimoire_secondChar hasnt grimSecondCharOne:
                 <i>Mamma</i>: la mamma di {charNameTwo}. L'ha mandato qui per la sua festa di compleanno?
@@ -39,6 +39,7 @@
     //Main story
     {
         - grimoire_secondChar has grimSecondCharOne:
+        <b>Appunti dalle conversazioni</b>
             È comparso un bambino. È partito chiedendo a {player_name} come mai fosse qui senza presentarsi e senza chiedere a {player_name} il suo nome. Poi ha raccontato che è il suo compleanno, che sua mamma gli ha promesso una festa FIGHISSIMA (l'ha urlato). E che suo padre gli ha rubato le action figures lo scorso anno, e per questo non potrà venire qui alla festa quest'anno. E ha chiesto a {player_name} di cercare i suoi compagni di scuola.
     }
 

@@ -115,7 +115,7 @@
                         ~ grimoire_appendices += tutorialRereading
         }
         {
-                - tutorial_carlaInterfaceStorylets.top2 && grimoire_appendices hasnt tutorialInterface:ace
+                - tutorial_carlaInterfaceStorylets.top2 && grimoire_appendices hasnt tutorialInterface:
                         ~ grimoire_appendices += tutorialInterface
         }
         {

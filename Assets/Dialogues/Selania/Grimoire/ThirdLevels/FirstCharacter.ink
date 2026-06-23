@@ -10,7 +10,7 @@
 
     {
     - grimoire_firstChar has grimFirstCharOne:
-        <b>Lista delle persone importanti per {charNameOne}</b>.
+        <b>Lista delle persone importanti per {charNameOne}</b>
         {
             - grimoire_firstChar has grimFirstCharOne:
                 Talco: è l'amə di {charNameOne}. {grimoire_firstChar has grimFirstCharSeven: Di recente si è trasferitə in Islanda}
@@ -36,6 +36,7 @@
     //Main story
     {
         - grimoire_firstChar has grimFirstCharOne:
+        <b>Appunti dalle conversazioni</b>
             C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo a {player_name} dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {tutorial_mentorTalkingChoiceRelationship: è arrivata {charNameFive}|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
     }
 

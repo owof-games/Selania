@@ -36,12 +36,17 @@
     
     + \ {charTag(PG, "neutral")}:                           Come hai fatto ad entrare? Il pontile era rotto.
         -> glyph_choice_manager(false, airC)->
-        {charTag(FirstCharacter, "neutral")}:               Ehm, mi sono fatta aiutare da Franco.
+        
         {
             - are_two_entities_together(Franco, PG):
+                {charTag(FirstCharacter, "neutral")}:       Ehm, mi sono fatta aiutare da Franco.
                 {charTag(Franco, "party")}:                 Che sono io!
+                {charTag(FirstCharacter, "neutral")}:       Mi ha mostrato un passaggio sotto al pontile.
+            - else:
+                {charTag(FirstCharacter, "neutral")}:       Diciamo che ho seguito il mio istinto.
+                                                            Che mi ha detto che lì dietro sicuramente c'era qualcosa.    
         }
-        {charTag(FirstCharacter, "neutral")}:               Mi ha mostrato un passaggio sotto al pontile.
+        
         {
             - player_accessiblePlaces has Dump:            
                                                             E dove trovare vecchie assi e qualche mobile dalle parti del pozzo.

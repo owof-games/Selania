@@ -9,7 +9,7 @@
 
     {
     - grimoire_fourthChar != (): 
-        <b>Lista delle persone importanti per {charNameFour}</b>.
+        <b>Lista delle persone importanti per {charNameFour}</b>
         <i>Dona</i>: la ex di {charNameFour}.
         <i>Il Poggi</i>: il migliore amico di {charNameFour}.  
     }
@@ -17,6 +17,7 @@
     //Main story
     {
         - grimoire_fourthChar has grimFourthCharOne:
+        <b>Appunti dalle conversazioni</b>
 
     }
 

@@ -9,7 +9,7 @@
 
     {
     - grimoire_thirdChar has grimThirdCharOne:
-        <b>Lista delle persone importanti per {charNameThree}</b>.
+        <b>Lista delle persone importanti per {charNameThree}</b>
         {
             - grimoire_thirdChar has grimThirdCharOne:
             <i>Stracciamaroni</i>: coinquilino di {charNameThree}.
@@ -48,6 +48,7 @@
     //Main story
     {
         - grimoire_thirdChar has grimThirdCharOne:
+        <b>Appunti dalle conversazioni</b>
             {player_name} ha conosciuto {charNameThree}, che è sembrato molto incuriosito dalla sua forma temporanea. Ha raccontato a {player_name} di lavorare in una birreria, e di essere un grande lavoratore. È l'unica birreria della frazione in cui vive, e un tempo era in gestione a suo padre.
     }
 

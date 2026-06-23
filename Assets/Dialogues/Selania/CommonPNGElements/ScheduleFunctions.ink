@@ -110,7 +110,7 @@
 
     //Apertura serra
     {
-        - grimoire_fifthChar has grimChoicesMentor && (entity_location(FromPondToGreenhouse) == Safekeeping) && greenhouse_findedCultivables hasnt Olobino:
+        - grimoire_fifthChar has grimMentorIntro && (entity_location(FromPondToGreenhouse) == Safekeeping) && greenhouse_findedCultivables hasnt Olobino:
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)

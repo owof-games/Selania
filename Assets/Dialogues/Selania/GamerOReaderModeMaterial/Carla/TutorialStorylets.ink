@@ -111,7 +111,7 @@
 
     {
         - settings_gamerMode == true:
-        {charTag(Carla, "happy")}:                  Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo libro un riepilogo delle scelte fatte, con questo indicatore grafico.
+        {charTag(Carla, "happy")}:                  Per facilitarle il lavoro, l'ufficio centrale ha inserito nel suo grimorio un riepilogo delle scelte fatte, con questo indicatore grafico.
                                                         
         @sprite:tutorial_carlaChoicesRelationshipStorylet_1
 
@@ -330,14 +330,14 @@
         {
             - settings_gamerMode:
             TODO: in realtà qui non sarà "gamerMode" ma il setting che abilita l'upload
-            {charTag(Carla, "happy")}:              può tornare indietro nel tempo cliccando questa icona.
+                                                    può tornare indietro nel tempo cliccando questa icona.
 
                 @sprite:tutorial_carlaInterfaceStorylets_6
 
                                                     Appena le daranno il libro.
 
             - else:
-            {charTag(Carla, "happy")}:              trova questa icona nelle impostazioni.
+                                                    trova questa icona nelle impostazioni.
 
                 @sprite:tutorial_carlaInterfaceStorylets_6
                 

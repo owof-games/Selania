@@ -126,7 +126,7 @@
                 }
             }
 
-        {charTag(FifthCharacter, "neutral")}:                   c'è una cosa importante che devo dirti, {player_name}: qui avrai a che fare con cose viventi piene di storie.
+        {charTag(FifthCharacter, "neutral")}:                   C'è una cosa importante che devo dirti, {player_name}: qui avrai a che fare con cose viventi piene di storie.
                                                                 E ogni storia ha le sue complessità.
         {charTag(FifthCharacter, "sorry")}:                     Per questo potresti incontrare tematiche per te faticose.
         {charTag(FifthCharacter, "neutral")}:                   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
@@ -221,7 +221,7 @@
         {
         
             - mentor_riccioMentoreViciniColpo == true:
-                {charTag(FifthCharacter, "sad")}:                       {grimoire_appendices hasnt grimChoicesMentor: Ti prego|{player_name}}, almeno tu sii ragionevole. Non ho fatto male a nessuno.
+                {charTag(FifthCharacter, "sad")}:                       {grimoire_appendices hasnt grimMentorIntro: Ti prego|{player_name}}, almeno tu sii ragionevole. Non ho fatto male a nessuno.
                 {charTag(SecondCharacter, "angry")}:                    Bugiarda!
                                                                         Sei vecchia e cattiva e bugiarda!
                     {
@@ -232,7 +232,7 @@
                         ~ change_entity_place(SecondCharacter)
             
             - else:
-                {charTag(FifthCharacter, "neutral")}:                   {grimoire_appendices hasnt grimChoicesMentor: Perdonami,|{player_name}}, hai rispedito quel bambino a casa?
+                {charTag(FifthCharacter, "neutral")}:                   {grimoire_appendices hasnt grimMentorIntro: Perdonami|{player_name}}, hai rispedito quel bambino a casa?
                     {
                         - are_two_entities_together(SecondCharacter, PG):
                         {charTag(FifthCharacter, "bored")}:             A quanto vedo no.
