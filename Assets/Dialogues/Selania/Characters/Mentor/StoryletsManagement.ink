@@ -113,61 +113,59 @@
     {
     //Fine demo
         - not ending_demo && LIST_COUNT(story_endedStories) == 3:
-            -> ending_demo
+                -> ending_demo
             
     //Commenti sui luoghi aperti
 
         //Sulla funzione della serra, disponibile solo se tutorial mentore == true
         - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor && tutorial_MentorTutorial == true:
-            -> about_greenhouse
+                -> about_greenhouse
             
         //Sulla funzione della cucina
         - player_accessiblePlaces has Kitchen && grimoire_fifthChar hasnt grimKitchenMentor:
-            -> about_kitchen
+                -> about_kitchen
         
         //Sulla funzione del nido    
         - player_accessiblePlaces has Nest && grimoire_appendices hasnt grimSigilsMentor:
-            -> about_nest    
+                -> about_nest    
 
      //Commenti a situazioni, eventi o altro.
         //Commento sul cane    
         - grimoire_firstChar has grimFirstCharLetterOne && grimoire_secondChar has grimSecondCharLetterOne && grimoire_thirdChar has grimThirdCharLetterOne && grimoire_fifthChar hasnt grimMentorDog:
-            -> dog_mentor
+                -> dog_mentor
         
         //Lettura Mentore
         - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && grimoire_fifthChar hasnt grimMentorNovel:
-            -> a_story_of_transformation      
+                -> a_story_of_transformation      
 
     //Scene speciali
         //Crescita olobino
         - contentsPond has FromPondToGreenhouseBlooming && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoUno:
-            -> about_olobino
+                -> about_olobino
 
         - about_olobino && are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorOlobinoDue:
-            -> again_about_olobino 
+                -> again_about_olobino 
 
         //Mentore esplode
         // - are_two_entities_together(Mentor, PG) && LIST_COUNT(story_endedStories) == 3 and grimoire_fifthChar hasnt grimMentorRage:
         //     -> mentor_rage
 
 
-
-
     //Storylets principali
-        - grimoire_fifthChar hasnt grimMentorOne:
-            -> knowing_mentor_character.one
+        // - grimoire_fifthChar hasnt grimMentorOne:
+        //     -> knowing_mentor_character.one
 
-        - grimoire_fifthChar hasnt grimMentorTwo && firstChar_storyStatus == story_storyPostal:
-            -> knowing_mentor_character.two
+        // - grimoire_fifthChar hasnt grimMentorTwo && firstChar_storyStatus == story_storyPostal:
+        //     -> knowing_mentor_character.two
 
-        - grimoire_fifthChar hasnt grimMentorThree && LIST_COUNT(story_endedStories) > 0:
-            -> knowing_mentor_character.three
+        // - grimoire_fifthChar hasnt grimMentorThree && LIST_COUNT(story_endedStories) > 0:
+        //     -> knowing_mentor_character.three
 
-        - grimoire_fifthChar hasnt grimMentorFour && secondChar_storyStatus == story_storyPostal:
-            -> knowing_mentor_character.four
+        // - grimoire_fifthChar hasnt grimMentorFour && secondChar_storyStatus == story_storyPostal:
+        //     -> knowing_mentor_character.four
 
-        - grimoire_fifthChar hasnt grimMentorFive && secondChar_storyStatus == story_storyPostal:
-            -> knowing_mentor_character.five
+        // - grimoire_fifthChar hasnt grimMentorFive && secondChar_storyStatus == story_storyPostal:
+        //     -> knowing_mentor_character.five
 
         // //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
         // - not knowing_mentor_character.six && thirdChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
