@@ -231,6 +231,44 @@
 
             //Offrire un dono
                 + {secondChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                                                     Ti voglio dare questa cosa.
+
+                {//Ma non ho ascoltato il tutorial (se attivo)
+                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(SecondCharacter, "emotional")}:            Regaliiii! Ma prima c'è qualcuno che vuole spiegarti qualcosa mi sa.
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Che sarei io, {player_name}!
+                                    }
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Una non può manco mangiare la sua erba in pace, che subito qualcuno la cerca.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                        
+                                    -> main
+                        
+                        - tutorial_MentorTutorial == true:
+                            {charTag(SecondCharacter, "emotional")}:            Regaliiii! Ma prima c'è qualcuno che vuole spiegarti qualcosa mi sa.   
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Che sarei io, {player_name}!
+                                    }                                               
+                                    -> main
+
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(SecondCharacter, "emotional")}:            Regaliiii! Ma prima c'è qualcuno che vuole spiegarti qualcosa mi sa.   
+         
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Una non può manco mangiare la sua erba in pace, che subito qualcuno la cerca.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                             
+                                    -> main
+                        }
+                - else:
                     //Prima accedo al grimorio
                     -> grimoire_greenhouse_gifts_and_ingredient ->
 
@@ -268,8 +306,8 @@
                             -> main    
 
                     }
-
-
+                }
+                   
 
             //Cucinare assieme
             + {player_accessiblePlaces has Kitchen && grimoire_secondChar has grimSecondCharOne && grimoire_secondChar hasnt grimSecondCharKitchenEnded && kitchen_secondCharIsCooking==false}\ {charTag(PG, "neutral")}:         Ti va di cucinare qualcosa assieme?

@@ -165,6 +165,51 @@
 
             //Offrire un dono
                 + {thirdChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                                                                                                              Vorrei regalarti questa cosa.
+
+                {//Ma non ho ascoltato il tutorial (se attivo)
+                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
+                                                                                Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Sono io quella con due spiegazioni da darti, {player_name}!
+                                    }
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Non so se è un problema culturale, ma {charNameThree} mi mette a disagio.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                        
+                                    -> main
+                        
+                        - tutorial_MentorTutorial == true:
+                            {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
+                                                                                Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Sono io quella con due spiegazioni da darti, {player_name}!
+                                    }                                               
+                                    -> main
+
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
+                                                                                Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+         
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Non so se è un problema culturale, ma {charNameThree} mi mette a disagio.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                             
+                                    -> main
+                        }
+
+                - else:
                     //Prima accedo al grimorio
                     -> grimoire_greenhouse_gifts_and_ingredient ->
 
@@ -173,29 +218,31 @@
                     //E svuoto la variabile del grimorio
                     ~ grimoire_chosenPlant = ()
 
-                //Check effetto del dono, se è stata compiuta una scelta
-                {
-                    - thirdChar_giftedObject != ():
+                    //Check effetto del dono, se è stata compiuta una scelta
+                    {
+                        - thirdChar_giftedObject != ():
 
-                    ~ object_value_for_PNG(thirdChar_giftedObject, Backpack, ThirdCharacter)
+                        ~ object_value_for_PNG(thirdChar_giftedObject, Backpack, ThirdCharacter)
 
-                    {    
-                
-                        - thirdChar_favouritesGifts has thirdChar_giftedObject or thirdChar_goodGifts has thirdChar_giftedObject:
+                        {    
+                    
+                            - thirdChar_favouritesGifts has thirdChar_giftedObject or thirdChar_goodGifts has thirdChar_giftedObject:
 
-                            {charTag(ThirdCharacter, "bored")}:                 Come diceva la mia maestra alle medie: cinque per l'impegno.
-                                                                                Zero per l'esecuzione.
+                                {charTag(ThirdCharacter, "bored")}:                 Come diceva la mia maestra alle medie: cinque per l'impegno.
+                                                                                    Zero per l'esecuzione.
 
-                        - else:
-                            {charTag(ThirdCharacter, "jester")}:                Non so mai cosa dire coi regali, non ne ricevo tanti.
-                                                                                Quindi la cosa giusta credo sia: grazie.
+                            - else:
+                                {charTag(ThirdCharacter, "jester")}:                Non so mai cosa dire coi regali, non ne ricevo tanti.
+                                                                                    Quindi la cosa giusta credo sia: grazie.
+                        }
+
+                        //Commento    
+                        {charTag(TheWitch, witch_state())}:                         <i>Dopo il dono di {player_name} {inkTranslator(ThirdCharacter)}.</i>
+                        -> achievements_onGame_statusUpdate_GM ->    
+                        -> main    
+
                     }
-
-                    //Commento    
-                    {charTag(TheWitch, witch_state())}:                         <i>Dopo il dono di {player_name} {inkTranslator(ThirdCharacter)}.</i>
-                    -> achievements_onGame_statusUpdate_GM ->    
-                    -> main    
-
+                
                 }
 
 

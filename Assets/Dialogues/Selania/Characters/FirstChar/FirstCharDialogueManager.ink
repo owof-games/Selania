@@ -134,7 +134,14 @@
                                     {
                                     - are_two_entities_together(Mentor,PG):
                                     {charTag(FifthCharacter, "neutral")}:       Esatto, {charNameOne}, c'è un'ultima cosa importante che devo dire a {player_name}.
-                                    }                                            
+                                    }
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Anche {charNameOne} sarebbe sfavata se avesse a che fare ogni giorno con domande inutili.
+                                                                                "Perché serve anche questo modulo per avere accesso al parcheggio del comune?!?"
+                                                                                "In che senso il parco comunale rimarrà senza entità chtuloidi? Domani è il compleanno di mio figlio!"
+                                                                                "Mamma, perché c'è un essere mostruoso nel mio armadio?"
+                                    }                                       
                                     -> main
                         - tutorial_MentorTutorial == true:
                             {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.
@@ -148,6 +155,13 @@
                         - tutorial_CarlaTutorial == true:
                             {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la capretta sfavata, così ti dice giusto due cose due importanti.
                                                                                 Tanto non scappo.
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Anche {charNameOne} sarebbe sfavata se avesse a che fare ogni giorno con domande inutili.
+                                                                                "Perché serve anche questo modulo per avere accesso al parcheggio del comune?!?"
+                                                                                "In che senso il parco comunale rimarrà senza entità chtuloidi? Domani è il compleanno di mio figlio!"
+                                                                                "Mamma, perché c'è un essere mostruoso nel mio armadio?"
+                                    }                                             
                                     -> main
                         }
 
@@ -166,46 +180,86 @@
     
         //Offrire un dono
             + {firstChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                          Ti vorrei dare questa cosa.
-
-                //Prima accedo al grimorio
-                -> grimoire_greenhouse_gifts_and_ingredient ->
-
-                //Dopo di che associo la scelta fatta alla PNG
-                ~ firstChar_giftedObject = grimoire_chosenPlant
-                //E svuoto la variabile del grimorio
-                ~ grimoire_chosenPlant = ()
-
-                //Check effetto del dono, se è stata compiuta una scelta
-                {
-                    - firstChar_giftedObject != ():
-
-                        ~ object_value_for_PNG(firstChar_giftedObject, Backpack, FirstCharacter)
-
-                            {    
+            
+            {//Ma non ho ascoltato il tutorial (se attivo)
+                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(FirstCharacter, "affectionate")}:          Sono curiosissima, ma proprio tanto, ma mi sa che prima devi sentire cosa hanno da dire le due regine dello spiegone!
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Non sono una regina dello spiegone, {charNameOne}!
+                                                                                E il mio supporto a {player_name} è fondamentale!
+                                    }
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Quanto odio questo lavoro.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                        
+                                    -> main
                         
-                                - firstChar_favouritesGifts has firstChar_giftedObject:
-                                    {charTag(FirstCharacter, "affectionate")}:          Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
-                                                                                        Mi piace stare con te, {player_name}.
+                        - tutorial_MentorTutorial == true:
+                            {charTag(FirstCharacter, "affectionate")}:          Sono curiosissima, ma proprio tanto, ma mi sa che prima devi sentire cosa ha da dire la regina dello spiegone!
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Non sono una regina dello spiegone, {charNameOne}!
+                                                                                E il mio supporto a {player_name} è fondamentale!
+                                    }                                               
+                                    -> main
 
-                                - firstChar_goodGifts has firstChar_giftedObject:
-                                    {charTag(FirstCharacter, "neutral")}:               I regali mi mettono sempre in imbarazzo, sai?
-                                    {charTag(FirstCharacter, "affectionate")}:          Ma il tuo dono mi ha fatto sentire ascoltata.
-                                    
-                                - else:
-                                    {charTag(FirstCharacter, "neutral")}:               Non mi aspettavo un regalo.
-                                    {charTag(FirstCharacter, "annoyed")}:               Per cui non dovrei nemmeno esserne delusa, giusto?
-                            }
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(FirstCharacter, "affectionate")}:          Sono curiosissima, ma proprio tanto, ma mi sa che prima devi sentire cosa ha da dire la regina dello spiegone!
+                                                                                
+                                    {
+                                    - are_two_entities_together(Carla,PG):
+                                    {charTag(Carla, "bored")}:                  Quanto odio questo lavoro.
+                                                                                La aspetto in serra, {player_name}.
+                                                                                ~ move_entity(Carla, Greenhouse)
+                                    }                                             
+                                    -> main
+                        }
+                    - else:
+                    //Prima accedo al grimorio
+                    -> grimoire_greenhouse_gifts_and_ingredient ->
 
-                        //Commento    
-                        {charTag(TheWitch, witch_state())}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
-                        -> achievements_onGame_statusUpdate_GM ->    
-                        -> main    
+                    //Dopo di che associo la scelta fatta alla PNG
+                    ~ firstChar_giftedObject = grimoire_chosenPlant
+                    //E svuoto la variabile del grimorio
+                    ~ grimoire_chosenPlant = ()
+
+                    //Check effetto del dono, se è stata compiuta una scelta
+                    {
+                        - firstChar_giftedObject != ():
+
+                            ~ object_value_for_PNG(firstChar_giftedObject, Backpack, FirstCharacter)
+
+                                {    
+                            
+                                    - firstChar_favouritesGifts has firstChar_giftedObject:
+                                        {charTag(FirstCharacter, "affectionate")}:          Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
+                                                                                            Mi piace stare con te, {player_name}.
+
+                                    - firstChar_goodGifts has firstChar_giftedObject:
+                                        {charTag(FirstCharacter, "neutral")}:               I regali mi mettono sempre in imbarazzo, sai?
+                                        {charTag(FirstCharacter, "affectionate")}:          Ma il tuo dono mi ha fatto sentire ascoltata.
+                                        
+                                    - else:
+                                        {charTag(FirstCharacter, "neutral")}:               Non mi aspettavo un regalo.
+                                        {charTag(FirstCharacter, "annoyed")}:               Per cui non dovrei nemmeno esserne delusa, giusto?
+                                }
+
+                            //Commento    
+                            {charTag(TheWitch, witch_state())}:   <i>Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.</i>
+                            -> achievements_onGame_statusUpdate_GM ->    
+                            -> main    
+
+                    }    
 
                 }
-                
-            
-            
-        
+
+
+
         //Cucinare assieme    
             + {player_accessiblePlaces has Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking==false}\ {charTag(PG, "neutral")}:         Ti va di cucinare qualcosa assieme?
             
