@@ -1,20 +1,20 @@
 //Tutorial sul game play principale
 === tutorial_carlaChoicesRelationshipStorylet ===
 
-{
-    - tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship:
+        {
+        - tutorial_CarlaDiscoveredTutorials has tutorialChoicesRelationship:
         {charTag(Carla, "neutral")}:        Le ricordo che ripeto sempre lo stesso script della prima volta, ok?
-}
+        }
     
     {charTag(Carla, "bored")}:              Perché non sono andata a vivere nei boschi da sola, quando avevo vent'anni, perché?
                                             Non risponda, è una domanda retorica, e l'ufficio domande retoriche è al 5° piano, stanza 13.
-    {
+        {
         - tutorial_carlaInterfaceStorylets.nameDiscovered:
-    {charTag(Carla, "neutral")}:            Ci siamo già presentate, vero?
+        {charTag(Carla, "neutral")}:        Ci siamo già presentate, vero?
                                             Mi tocca spiegarle al volo cosa deve fare.
         - else:
-    {charTag(Carla, "neutral")}:            Mi chiamo Carla, e sono qui per dirle al volo cosa deve fare.
-    }
+        {charTag(Carla, "neutral")}:        Mi chiamo Carla, e sono qui per dirle al volo cosa deve fare.
+        }
     - (nameDiscovered)
     {charTag(Carla, "bored")}:              Il perché non è di mia competenza.
 
@@ -27,8 +27,19 @@
 
     - (top1)
    {charTag(Carla, "neutral")}:                     Vuole sentire, la spiegazione?
+
         + \ {charTag(PG, "neutral")}:               Certo!
             {charTag(Carla, "bored")}:              Anche meno entusiasmo, che poi mi fanno fare gli straordinari.
+                {
+                - grimoire_appendices has grimChoicesMentor:
+                {charTag(Carla, "bored")}:           E poi gliel'ha già spiegato anche l'altra collega!
+                    {
+                    - are_two_entities_together(FifthCharacter, PG):
+                    {charTag(Mentor, "neutral")}:   Per me non è un peso, Carla.
+                    {charTag(Carla, "bored")}:      Il peso è quest{player_pronoun has him:o|{player_pronoun has her:a|ə}} qui che mi richiede le cose che già sa.                                       
+                    }
+                }
+
         + \ {charTag(PG, "neutral")}:               Passo.
             {charTag(Carla, "happy")}:              Meglio per me.
             {charTag(Carla, "bored")}:              Le ricordo che l'ufficio Incidenti e Svenimenti è chiuso fino a data indefinita.
@@ -112,7 +123,7 @@
     }
     
     {
-        - grimoire_appendices hasnt grimChoicesMentor:
+        - grimoire_isEnabled == false:
             {charTag(Carla, "sad")}:                Ma non ha ancora un grimorio?
             {charTag(Carla, "neutral")}:            Strano, di solito lo consegnano in automatico all'arrivo.
             {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.
@@ -129,6 +140,12 @@
 
 
 === tutorial_carlaRereadingStorylet ===
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     
     {charTag(Carla, "bored")}:                      Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.
         {
@@ -147,6 +164,16 @@
     {charTag(Carla, "sad")}:                            Vuole ascoltare?
         + \ {charTag(PG, "neutral")}:                   Con piacere!
             {charTag(Carla, "bored")}:                  Dubito.
+                {
+                - grimoire_appendices has grimRewritingMentor:
+                {charTag(Carla, "bored")}:              Soprattutto dopo che gliel'ha già spiegato {charNameFive}.
+                    {
+                    - are_two_entities_together(FifthCharacter, PG):
+                    {charTag(Mentor, "hurry")}:         Di questo passo ti rubo il lavoro, Carla.
+                    {charTag(Carla, "happy")}:          Sarebbe il più bel giorno della mia vita.
+                                                        A parte quando mio figlio è scomparso per mezz'ora nel centro commerciale.                                  
+                    }
+                }
         + \ {charTag(PG, "neutral")}:                   No, grazie.
             {charTag(Carla, "neutral")}:                Saggia scelta.
             {charTag(Carla, "neutral")}:                Per me per lo meno.
@@ -421,6 +448,16 @@
     {charTag(Carla, "neutral")}:                È pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}?
     + \ {charTag(PG, "neutral")}:               Adoro le piante!
         {charTag(Carla, "bored")}:              Le assicuro che la cosa non è reciproca.
+                {
+                - grimoire_appendices has grimInkMentor:
+                {charTag(Carla, "bored")}:      E poi metà delle cose le sono già state spiegate dall'altra mia collega.
+                                                Detesto le persone troppo zelanti, mi fanno passare per pigra.
+                    {
+                    - are_two_entities_together(FifthCharacter, PG):
+                    {charTag(Mentor, "hurry")}:     Non sono zelante, solo mi piace fare le cose per bene.
+                    {charTag(Carla, "bored")}:      Che è la definizione di zelante.                                   
+                    }                           
+                }
     + \ {charTag(PG, "neutral")}:               Non serve, ho il pollice verde.
         {charTag(Carla, "neutral")}:            Allora dovrebbe fare segnalazione al Ministero per i Malanni Immaginari.
         {charTag(Carla, "neutral")}:            Ottavo piano, a destra dopo l'ascensore guasto.
@@ -428,7 +465,8 @@
         -
 
     - (top2)    
-    {charTag(Carla, "neutral")}:                Ci fa crescere le piante ed è fatta.
+    {charTag(Carla, "neutral")}:                Nella serra ci si fa crescere le piante.
+                                                Risolta.
                                                 Arrivederci.
                                                 Mmm, ah.
     {charTag(Carla, "angry")}:                  La responsabile dice che c'è fila in mensa, e devo ammazzare il tempo.

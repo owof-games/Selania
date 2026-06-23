@@ -178,7 +178,7 @@
                                                                 E per questo è importante capire quali siano i propri confini prima di farsi male.
 
         -
-
+        
             {charTag(FifthCharacter, "hurry")}:                 Comunque questo luogo è pieno di spazi di ristoro e cura, anche per te.
                                                                 E se avrai bisogno del mio aiuto, ti basterà cercarmi.
             {charTag(FifthCharacter, "neutral")}:               Ho sempre qualche dritta su come affrontare i momenti più difficili.
@@ -195,7 +195,14 @@
                                                                 ~ opening_places()
 
         {charTag(FifthCharacter, "hurry")}:                     La serra è un bel posto dove rilassarsi, e non solo.
-        {charTag(FifthCharacter, "bored")}:                     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!                                                    
+        {charTag(FifthCharacter, "bored")}:                     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!       
+        {charTag(FifthCharacter, "neutral")}:                   Ora ti saluto e no, cavolo, che sbadata parte due!
+        {charTag(FifthCharacter, "hurry")}:                     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
+        
+                                                                    //Sblocco del grimorio
+                                                                    ~ grimoire_isEnabled = true
+
+        {charTag(FifthCharacter, "neutral")}:                   Consultalo ogni volta che sei in difficoltà.
         {charTag(FifthCharacter, "hurry")}:                     E ora mi metto a spazzare un po' di foglie.
 
 

@@ -11,8 +11,16 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
             {charTag(FifthCharacter, "hurry")}:                 Rieccoci {player_name}!
-                                                                Sono contenta che hai parlato un po' con {charNameOne}!
+                                                                Sono contenta che hai parlato un po' con le persone che hai incontrato in giro per questo luogo!
             {charTag(FifthCharacter, "neutral")}:               Dire che ora sei pront{player_pronoun has him:o|{player_pronoun has her:a|ə}} per ascoltare il mio primo insegnamento sul tuo lavoro.
+                {
+                - grimoire_appendices has tutorialChoicesRelationship:
+                {charTag(FifthCharacter, "sad")}:               Anche se ho visto che ne hai parlato anche con la capra.
+                    {
+                    - are_two_entities_together(Carla, PG):
+                     {charTag(Carla, "bored")}:                 Ti avrei lasciato volentieri l'onore, collega.    
+                    }
+                }
             {charTag(FifthCharacter, "hurry")}:                 Parliamo di <b>dialogo</b>!
             {charTag(FifthCharacter, "neutral")}:               Il dialogo è tutto nel tuo lavoro, come nella vita.
                                                                 Ogni volta che dirai qualcosa le persone presenti si faranno un'idea su di te.
@@ -57,14 +65,6 @@
         {charTag(FifthCharacter, "hurry")}:                     Capire il modo in cui vedono il mondo ti aiuterà a conquistare la loro fiducia.
         {charTag(FifthCharacter, "neutral")}:                   Che è la parte davvero fondamentale per compiere il tuo lavoro.
         {charTag(FifthCharacter, "hurry")}:                     Ma ne parleremo dopo.
-        {charTag(FifthCharacter, "neutral")}:                   Prima di salutarti, voglio darti questo in dono.
-        {charTag(FifthCharacter, "hurry")}:                     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
-        
-                            //Sblocco del grimorio
-                            ~ grimoire_isEnabled = true
-
-        {charTag(FifthCharacter, "neutral")}:                   Consultalo ogni volta che sei in difficoltà.
-
                                                                 Più tardi ti spiegherò perché sei qui.
         {charTag(FifthCharacter, "hurry")}:                     Io devo raccogliere le foglie dalla foresta.
 
@@ -80,9 +80,17 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(FifthCharacter, "hurry")}:                     Ho visto che ci hai preso gusto a chiacchierare, e la cosa mi fa solo che piacere.
-        {charTag(FifthCharacter, "neutral")}:                   Direi quindi che è giunto il momento di spiegarti il tuo lavoro.
-                                                                Questo non è solo un posto magnifico di per sé, {player_name}.
+        {charTag(FifthCharacter, "hurry")}:                     {player_name}!
+        {charTag(FifthCharacter, "neutral")}:                   È giunto il momento di spiegarti il tuo lavoro.
+                {
+                - grimoire_appendices has tutorialRereading:
+                {charTag(FifthCharacter, "sad")}:               O meglio, a rispiegartelo, visto che Carla mi ha battuta.
+                    {
+                    - are_two_entities_together(Carla, PG):
+                     {charTag(Carla, "happy")}:                 Se sapevo che c'era una gara mi sarei data malata.
+                    } 
+                }
+        {charTag(FifthCharacter, "neutral")}:                   Questo non è solo un posto magnifico di per sé, {player_name}.
         {charTag(FifthCharacter, "hurry")}:                     È un luogo con uno scopo, uno scopo che riguarda soprattutto te.
         {charTag(FifthCharacter, "neutral")}:                   Le persone che incontrerai qui sono rimaste bloccate in qualcosa: rimpianti, rimorsi, vecchie ferite e quant'altro.
             {
@@ -187,10 +195,22 @@
             
             }
         {charTag(FifthCharacter, "hurry")}:                     Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.
-        {charTag(FifthCharacter, "neutral")}:                   Se glielo proporrai la persona sarà finalmente capace di condividere con te come si legge, cosa la blocca qui.
+        {charTag(FifthCharacter, "neutral")}:                   Se lo farai, la persona sarà finalmente capace di condividere con te come si legge, cosa la blocca qui.
                                                                 E a quel punto tu potrai proporre una riscrittura.
                                                                 O meglio: <b><i>delle riscritture</b></i>.
-        {charTag(FifthCharacter, "hurry")}:                     Hai presente l'inchiostro di cui parlavamo prima? 
+        {charTag(FifthCharacter, "hurry")}:                     Hai presente l'inchiostro di cui parlavamo prima?
+                {
+                - grimoire_appendices has tutorialGreenhouse:
+                {charTag(FifthCharacter, "sad")}:               Quello di cui ti ha parlato anche Carla?
+                    {
+                    - are_two_entities_together(Carla, PG):
+                    {charTag(Carla, "bored")}:                 Hanno mandato qui quest{player_pronoun has him:o|{player_pronoun has her:a|ə}} tizi{player_pronoun has him:o|{player_pronoun has her:a|ə}} totalmente impreparat{player_pronoun has him:o|{player_pronoun has her:a|ə}} per fare il suo lavoro.
+                                                                Come al solito.
+                                                                Che dovevo fare?
+                    {charTag(FifthCharacter, "neutral")}:       Lasciare fare a me, ad esempio.                                            
+                    }
+                {charTag(FifthCharacter, "neutral")}:           Dicevo.
+                }
                                                                 Ogni goccia di inchiostro è una possibilità in più di proporre una riscrittura di un aspetto della vita della persona.
         {charTag(FifthCharacter, "neutral")}:                   E quindi la logica diventa: più fiducia uguale più inchiostro uguale più riscritture uguale maggiori occasioni di successo!
                                                                 Ma se anche non dovessi avere una sola goccia di inchiostro, non disperare, perché ogni riscrittorə ha in sé un terzo strumento: lo strumento dell'<b><i>epilogo</b></i>.
@@ -282,14 +302,22 @@
         - are_two_entities_together(SecondCharacter, PG):
             {charTag(SecondCharacter, "emotional")}:            Io so di essere una persona che vuole le caramelle.
                 
-        } 
+        }
 
     {charTag(FifthCharacter, "neutral")}:                       Anche per questo esistono doni sbagliati.
     {charTag(FifthCharacter, "bored")}:                         O mediocri.
         {
             - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:           Come sa chiunque riceva regali di Natale dai parenti. 
-        } 
+        }
+        {
+            - grimoire_appendices has tutorialGreenhouse:
+            {charTag(FifthCharacter, "sad")}:                   Ma sicuramente te l'avrà spiegato meglio la tua amica Carla.
+                {
+                - are_two_entities_together(Carla, PG):
+                {charTag(Carla, "bored")}:                      E a forza di domande mi ha fatto anche saltare il pranzo, maledizione!                                          
+                }
+        }
     {charTag(FifthCharacter, "hurry")}:                         La serra, con le sue piante magnifiche, è personalmente il posto migliore dove coltivare e recuperare doni.
     {charTag(FifthCharacter, "neutral")}:                       Gli effetti dei doni tra l'altro sono immediati e permanenti.
                                                                 Ed è per questo che ogni riscrittorə può darne solo uno a persona.
@@ -313,19 +341,28 @@
     {charTag(FifthCharacter, "sad")}:                           Non mi fa impazzire che tu vada in luoghi così malmessi.
     {charTag(FifthCharacter, "neutral")}:                       Ma l'idea della cucina non è così cattiva in sé: cucinare assieme è un momento di intimità.
                                                                 E mangiare è uno spazio di bella condivisione.
-                                                                E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
         {
-            - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
-            {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
-            {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
+        - tutorial_MentorTutorial == true:
+        {charTag(FifthCharacter, "hurry")}:                     E magari puoi aggiungere anche l'ingrediente giusto, e far felice la persona con cui stai ai fornelli.
+        }                                                        
+                                                                
+        {
+        - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "curious")}:                   Ci facciamo una pastasciutta assieme, {charNameFive}?
+        {charTag(FifthCharacter, "hurry")}:                     Magari più tardi?
+        {charTag(FifthCharacter, "sorry")}:                     Ho da pulire la cera delle candele.
                 
         } 
     {charTag(FifthCharacter, "neutral")}:                       Passare del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
-                                                                E per capire che piega stia prendendo la vostra relazione.
+        
         {
-            - are_two_entities_together(SecondCharacter, PG): 
-            {charTag(SecondCharacter, "energy")}:                   O per bruciare cose strane e vedere cosa succede!
+        - tutorial_MentorTutorial == true:
+        {charTag(FifthCharacter, "neutral")}:                   E per capire che piega stia prendendo la vostra relazione.
+        }    
+
+        {
+        - are_two_entities_together(SecondCharacter, PG): 
+        {charTag(SecondCharacter, "energy")}:                   O per bruciare cose strane e vedere cosa succede!
                 
         }
     
@@ -349,7 +386,7 @@
             }
     {charTag(FifthCharacter, "neutral")}:                       Ho dei sentimenti contrastanti verso quello che si può fare su quella spiaggia.
     {charTag(FifthCharacter, "sad")}:                           Da una parte i Sigilli mi danno l'impressione di essere una forma di controllo.
-    {charTag(FifthCharacter, "neutral")}:                       Ma la cosa che penso ogni volta che li vedo è che rendano la comunicazione più chiara.
+    {charTag(FifthCharacter, "neutral")}:                       Ma la prima cosa che pensato vedendoli, è che rendano la comunicazione più chiara.
     {charTag(FifthCharacter, "sad")}:                           È così difficile far capire alle altre persone quello che si prova e si pensa, e sarebbe bello avere uno strumento, un codice, qualcosa che ti faccia sapere sin da subito che verrai capita.
     {charTag(FifthCharacter, "neutral")}:                       Immagino che sarà il modo in cui ne farai uso a definirne il valore.
     {charTag(FifthCharacter, "hurry")}:                         Un giorno mi piacerebbe impararne qualcuno.
