@@ -659,7 +659,7 @@
                         - kitchen_firstCharExtraIngredient == universalIngredient:
                             {charTag(FourthCharacter, "neutral")}:       AGGIUNGI RICORDO IMPORTANTE DI BOCCALE.
                     }
-                        @animation:RewriterBook
+                        //@animation:RewriterBook
 
                         -> relationship_feedback
                 

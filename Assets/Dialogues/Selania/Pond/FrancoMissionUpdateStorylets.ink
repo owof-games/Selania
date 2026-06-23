@@ -850,7 +850,7 @@
 
         //Associo ~ glyph_actualActiveSigil al sigillo di Franco
         ~ glyph_actualActiveSigil = nest_francoChosenSigil
-        @animation:RewriterBook
+        //@animation:RewriterBook
 
         {charTag(Franco, "party")}:                 Girino, ma che carino questo sigillo!
         {charTag(TheWitch, witch_state())}:         {player_name} ha trovato {sigils_translator(nest_francoChosenSigil)}.

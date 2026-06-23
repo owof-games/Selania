@@ -224,7 +224,7 @@ VAR relationshipIndicatorNeutralValue = 0
 //Elementi non dipendenti dallx PNG
 ~ temp currentPlace = entity_location(PG)
 ~ move_entity(TrainNoiseGoingAway, currentPlace)
-@animation:RewriterBook
+//@animation:RewriterBook
 
 -> achievements_onGame_statusUpdate_GM ->        
 -> main  
@@ -1542,7 +1542,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         //Cooldown storylets comuni, per evitare catena.
             ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
-            @animation:RewriterBook  
+            //@animation:RewriterBook  
         //Gestione crescita piante
             -> growing_check ->
         //Check stato achievements

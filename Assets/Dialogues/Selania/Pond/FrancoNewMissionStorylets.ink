@@ -24,7 +24,7 @@
                                                         E se c'è una rana, sarà felice di sapere anche lei che {player_name} ha letto il suo libro.
         {charTag(Franco, "neutral")}:                   Per cui girino: leggi un po' del tuo libro e poi torna da me.
 
-            @animation:RewriterBook
+            //@animation:RewriterBook
              -> main
 
 === mission_two
@@ -54,7 +54,7 @@
                                                         Per cui facciamo le formiche.
                                                         E facciamole felici: torna quando avrai coltivato almeno tre piante!
 
-            @animation:RewriterBook
+            //@animation:RewriterBook
                 -> main
     
 
@@ -128,7 +128,7 @@
             }
 
 
-            @animation:RewriterBook    
+            //@animation:RewriterBook    
                 -> main
 
 
@@ -163,7 +163,7 @@
 
         {charTag(Franco, "neutral")}:                   Io intanto vado a salutare bisnonno Ninfeo.
 
-            @animation:RewriterBook
+            //@animation:RewriterBook
                 -> main
 
 
@@ -212,7 +212,7 @@
             }
         {charTag(Franco, "party")}:                     Magari anche loro si mettono a nuotare!
 
-        @animation:RewriterBook    
+        //@animation:RewriterBook    
             -> main
 
 
@@ -266,7 +266,7 @@
         {charTag(Franco, "question")}:                  O era qualcosa sulla minestra?
         {charTag(Franco, "neutral")}:                   A dopo girino!
 
-            @animation:RewriterBook     
+            //@animation:RewriterBook     
                 -> main
 
 
@@ -312,7 +312,7 @@
                                                         Spera sempre di diventare famoso.
                                                         A dopo {player_name}!
 
-            @animation:RewriterBook    
+            //@animation:RewriterBook    
                 -> main
 
 === mission_eight
@@ -343,7 +343,7 @@
                                                         E forse anche le lettere.
         {charTag(Franco, "question")}:                  Uh, è da un po' che non mi scrivono.
         
-            @animation:RewriterBook  
+            //@animation:RewriterBook  
                 -> main
 
 === mission_nine
@@ -376,7 +376,7 @@
                                                         "Sono sicuro che possiamo raggiungere un accordo per far accedere mio marito ai vostri corsi."
                                                         "Vi piacciono le nocciole?"
 
-            @animation:RewriterBook  
+            //@animation:RewriterBook  
                 -> main
 
 
@@ -407,7 +407,7 @@
                                                         E poi torna da me.
         {charTag(Franco, "party")}:                     Potresti fare molto felice la persona che cucina con te.
 
-            @animation:RewriterBook  
+            //@animation:RewriterBook  
                 -> main
 
 //Missioni speciali, con script ad hoc per dare premi o cose del genere.
@@ -427,7 +427,7 @@
         ~ move_entity(earthGlyph, Nest)
         ~ move_entity(Franco, Nest)
         
-    @animation:RewriterBook    
+    //@animation:RewriterBook    
     -> main
     
 === special_mission_one_contents
@@ -461,7 +461,7 @@
                                                         Creane uno, io me lo prendo e poi glielo dono e vediamo che succede.
         {charTag(Franco, "party")}:                     Grazie, girino!
 
-    @animation:RewriterBook  
+    //@animation:RewriterBook  
 
     -> main
 
@@ -499,6 +499,6 @@
         ~ move_entity(Franco, Safekeeping)
         ~ move_entity(FrancoCucina, Kitchen)
         ~ kitchen_kitchenOccupied = true
-        @animation:RewriterBook    
+        //@animation:RewriterBook    
         -> main
     
