@@ -1,3 +1,14 @@
+=== fifth_char_intro
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+
+        -> mentor_closing_storylet ->
+        -> main
+
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
     ~ temp charNameOne = translator(firstChar_ActualName)

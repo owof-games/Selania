@@ -22,8 +22,8 @@
 //Testi prioritari per la storia principale o le relazioni con l3 PNG
     {
        //Presentazione generale
-        - grimoire_appendices hasnt grimChoicesMentor:
-            -> tutorial_mentorTalkingChoiceRelationship 
+        - grimoire_fifthChar hasnt grimMentorIntro:
+            -> fifth_char_intro
     }
 
     //Third Char
@@ -117,8 +117,8 @@
             
     //Commenti sui luoghi aperti
 
-        //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
+        //Sulla funzione della serra, disponibile solo se tutorial mentore == true
+        - player_accessiblePlaces has Greenhouse && grimoire_appendices hasnt grimGreenhouseMentor && tutorial_MentorTutorial == true:
             -> about_greenhouse
             
         //Sulla funzione della cucina

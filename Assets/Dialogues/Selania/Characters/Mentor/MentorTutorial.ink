@@ -3,7 +3,6 @@
        Storylets tutorial
 
  ----------------------------------*/
-///RIORDINO TUTORIAL
 === tutorial_mentorTalkingChoiceRelationship
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -108,12 +107,21 @@
             {charTag(FifthCharacter, "neutral")}:                   Come mentore, il mio unico obiettivo è farti stare bene.
             }
         - (selfName)
+
+                        //Frase solo col tutorial
+
                                                                 Tra poco ti spiegherò anche il tuo lavoro, {player_name}.
+
+
+
             {
                 - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
                 {charTag(FirstCharacter, "annoyed")}:               Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
                 {charTag(FifthCharacter, "neutral")}:               Allucinazione?
             }
+
+                        //Commento che lascerei sempre
+
         {charTag(FifthCharacter, "neutral")}:                   Prima però una cosa importante: qui avrai a che fare con cose viventi piene di storie.
                                                                 E ogni storia ha le sue complessità.
         {charTag(FifthCharacter, "sorry")}:                     Per questo potresti incontrare tematiche per te faticose.
@@ -167,9 +175,15 @@
 
         -
 
-            {charTag(FifthCharacter, "hurry")}:                 Comunque questo luogo è comunque pieno di spazi di ristoro e cura, anche per te.
+
+        
+
+            {charTag(FifthCharacter, "hurry")}:                 Comunque questo luogo è pieno di spazi di ristoro e cura, anche per te.
                                                                 E se avrai bisogno del mio aiuto, ti basterà cercarmi.
             {charTag(FifthCharacter, "neutral")}:               Ho sempre qualche dritta su come affrontare i momenti più difficili.
+
+
+        //Questo diventa un altro pezzo di tutorial, prima ci invita a farci due passi, chiacchierare in giro.
             {charTag(FifthCharacter, "hurry")}:                 E risposte alla maggior parte delle tue domande.
             {charTag(FifthCharacter, "neutral")}:               Ma a proposito di risposte.
                                                                 La maggior parte delle cose che dirai in questo luogo influenzeranno il rapporto che hai con le persone che incontri.
@@ -356,8 +370,8 @@
         {charTag(FifthCharacter, "hurry")}:                     {player_name}!
                                                                 Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}}.
             {
-                - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "angry")}:                Uffa. Sembra di stare a scuola.
             
             }
         {charTag(FifthCharacter, "hurry")}:                     Quando avrai parlato a sufficienza con una persona, sentirai di poterle proporre di rileggere assieme la sua storia.
@@ -453,8 +467,8 @@
     {charTag(FifthCharacter, "neutral")}:                       Il dono giusto mostra comprensione, è la dimostrazione di aver ascoltato l'altra persona.
                                                                 So chi sei.
         {
-            - are_two_entities_together(SecondCharacter, PG):
-                {charTag(SecondCharacter, "emotional")}:            Io so di essere una persona che vuole le caramelle.
+        - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "emotional")}:            Io so di essere una persona che vuole le caramelle.
                 
         } 
 

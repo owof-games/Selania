@@ -10,7 +10,6 @@ VAR settings_gamerMode = false
     ~ notification_gamerNotification = true
 
 
-
 === function tutorial_CarlaTutorialActivation()
     //Attivo il tutorial
     ~ tutorial_CarlaTutorial = true

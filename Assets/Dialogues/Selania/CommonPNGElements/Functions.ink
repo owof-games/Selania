@@ -1170,10 +1170,16 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - about_nest && grimoire_appendices hasnt grimSigilsMentor:
                 ~ grimoire_appendices += grimSigilsMentor                  
         }
-        
-        {
+
 
             //Main storylets
+        {
+           - fifth_char_intro && grimoire_fifthChar hasnt grimMentorIntro:
+            ~ grimoire_fifthChar += grimMentorIntro
+        }    
+        
+        {
+    
             - knowing_mentor_character.one && grimoire_fifthChar hasnt grimMentorOne:
                 ~ grimoire_fifthChar += grimMentorOne
         }
