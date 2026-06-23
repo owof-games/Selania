@@ -46,8 +46,15 @@
         {
             - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(ThirdCharacter, PG) or are_two_entities_together(FourthCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
         {charTag(Carla, "bored")}:                  Per non complicarmi e complicarle le cose, durante questa prova le persone presenti non saranno influenzate dal suo commento.                                            
-        }                                            
-        ~ tutorial_CarlaRelationshipIndicator_enabled  = true
+        } 
+
+                //Cose dette solo se siamo in gamer mode
+                {
+                    - settings_gamerMode == true:
+                    ~ tutorial_CarlaRelationshipIndicator_enabled  = true
+
+                }                                         
+        
 
     {charTag(Carla, "neutral")}:                    Mio figlio dice che a sessant'anni devo smetterla di farmi la cresta viola.
     {charTag(Carla, "neutral")}:                    Gli ho risposto che ha quarant'anni e che ancora non sa lavarsi le mutande da solo.
@@ -71,13 +78,20 @@
         
         - else:
             {charTag(Carla, "happy")}:              Concordo.
-                                                    Non che me ne importi molto della sua opinione.    
+                                                    Non che me ne importi molto della sua opinione. 
     }
-    {charTag(Carla, "neutral")}:                    Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
-    {charTag(Carla, "sad")}:                        Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
-    {charTag(Carla, "bored")}:                      Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
 
-        ~ tutorial_CarlaRelationshipIndicator_enabled  = false
+        //Cose dette solo se siamo in gamer mode
+                {
+                    - settings_gamerMode == true:
+                    {charTag(Carla, "neutral")}:                    Come avrà notato, l'indicatore sotto il mio ritratto è cambiato.
+                    {charTag(Carla, "sad")}:                        Se parla con una persona, e quella persona ha un indicatore sotto al ritratto, vuol dire che l'idea che quella persona si farà di lei è importante per il suo lavoro.
+                    {charTag(Carla, "bored")}:                      Ora disattivo il mio, non voglio che veda quanto mi sta infastidendo.
+
+                        ~ tutorial_CarlaRelationshipIndicator_enabled  = false
+
+                }   
+
         
                                                     Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
                                                     Cosa?
