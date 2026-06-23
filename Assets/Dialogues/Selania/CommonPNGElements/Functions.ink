@@ -1534,6 +1534,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         - fifth_character_notes.four && grimoire_fifthChar hasnt grimFifthCharLetterFour:
                 ~ grimoire_fifthChar += grimFifthCharLetterFour
     }
+        
+
+
 
     //Azioni condivise
         //Cooldown storylets comuni, per evitare catena.

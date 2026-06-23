@@ -27,13 +27,10 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 {
-    //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor:
+    //Se voglio avviare la riscrittura:
+        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal:
                 -> ask
-
-    //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices has grimRewritingMentor:
-                -> ask
+        
 
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
         - grimoire_thirdChar has grimThirdCharFirstProposal:
@@ -52,21 +49,21 @@
             - thirdChar_justTalked == false:
             {shuffle:
 
-                - {charTag(ThirdCharacter, "bored")}:           Una volta sono uscito con una tipa che era carina, per carità, però palesemente non è che voleva stare con me, sentiva solo l’orologio biologico che stava per scadere e voleva un figlio. Anche io voglio un figlio, ma non con una di quarant'anni.
+                - {charTag(ThirdCharacter, "bored")}:                   Una volta sono uscito con una tipa che era carina, per carità, però palesemente non è che voleva stare con me, sentiva solo l’orologio biologico che stava per scadere e voleva un figlio. Anche io voglio un figlio, ma non con una di quarant'anni.
 
-                - {charTag(ThirdCharacter, "bored")}:           Sei lì sulle app ed è un incubo perché le donne matchano con tutti, hanno tutte le possibilità, mentre tu ti becchi solo quella tipa ogni milione d’anni e o te la fai andare bene o resti solo.
+                - {charTag(ThirdCharacter, "bored")}:                   Sei lì sulle app ed è un incubo perché le donne matchano con tutti, hanno tutte le possibilità, mentre tu ti becchi solo quella tipa ogni milione d’anni e o te la fai andare bene o resti solo.
 
-                - {charTag(ThirdCharacter, "bored")}:           Tutte ormai c'hanno l'ex tossico. Sicuro che Donatella va in dire in giro che io sono tossico, sicuro. 
+                - {charTag(ThirdCharacter, "bored")}:                   Tutte ormai c'hanno l'ex tossico. Sicuro che Donatella va in dire in giro che io sono tossico, sicuro. 
                 
-                - {charTag(ThirdCharacter, "bored")}:           Sono uscita con una che mi piaceva tanto ma lei zero, non ne vuole sapere, perché “tutti i maschi sono delle merde”. Ma se dici che le donne son tutte stronze, ti mangiano vivo.
+                - {charTag(ThirdCharacter, "bored")}:                   Sono uscita con una che mi piaceva tanto ma lei zero, non ne vuole sapere, perché “tutti i maschi sono delle merde”. Ma se dici che le donne son tutte stronze, ti mangiano vivo.
 
-                - {charTag(ThirdCharacter, "jester")}:          Alla fine c’hanno quarant'anni, trenta, ma sono tutte delle bambine.
+                - {charTag(ThirdCharacter, "jester")}:                  Alla fine c’hanno quarant'anni, trenta, ma sono tutte delle bambine.
 
-                - {charTag(ThirdCharacter, "neutral")}:         Le donne si lamentano del patriarcato tutto il tempo ma poi le porti fuori a cena e si aspettano che paghi tu.
+                - {charTag(ThirdCharacter, "neutral")}:                 Le donne si lamentano del patriarcato tutto il tempo ma poi le porti fuori a cena e si aspettano che paghi tu.
 
-                - {charTag(ThirdCharacter, "jester")}:          Dopo il divorzio, Dario era così umiliato che non gli veniva nemmeno duro. C'ha messo un anno per andare di nuovo con una tipa.
+                - {charTag(ThirdCharacter, "jester")}:                  Dopo il divorzio, Dario era così umiliato che non gli veniva nemmeno duro. C'ha messo un anno per andare di nuovo con una tipa.
 
-                - {charTag(ThirdCharacter, "jester")}:          Questo posto non è malaccio, ma si vede che non c'è nessuno in giro capace di riparare le cose importanti.
+                - {charTag(ThirdCharacter, "jester")}:                  Questo posto non è malaccio, ma si vede che non c'è nessuno in giro capace di riparare le cose importanti.
 
             }
                 -> main
@@ -74,13 +71,13 @@
             - grimoire_thirdChar has grimThirdCharSix:
             {shuffle:
 
-                - {charTag(ThirdCharacter, "neutral")}:         Quando si inizia questa riscrittura?
+                - {charTag(ThirdCharacter, "neutral")}:                 Quando si inizia questa riscrittura?
 
-                - {charTag(ThirdCharacter, "bored")}:           Ma la riscrittura?
+                - {charTag(ThirdCharacter, "bored")}:                   Ma la riscrittura?
 
-                - {charTag(ThirdCharacter, "jester")}:          Sei qui per la riscrittura?
+                - {charTag(ThirdCharacter, "jester")}:                  Sei qui per la riscrittura?
 
-                - {charTag(ThirdCharacter, "angry")}:           Sto iniziando a innervosirmi, {player_name}: facciamo la riscrittura?
+                - {charTag(ThirdCharacter, "angry")}:                   Sto iniziando a innervosirmi, {player_name}: facciamo la riscrittura?
 
             }
             - else:
@@ -100,28 +97,64 @@
     
 
         {
-            - grimoire_thirdChar has grimThirdCharOne:
-                {charTag(ThirdCharacter, "jester")}:                            Vuoi chiedermi qualcosa {player_name}? 
+        - grimoire_thirdChar has grimThirdCharOne:
+            {charTag(ThirdCharacter, "jester")}:                            Vuoi chiedermi qualcosa {player_name}? 
 
-            - else:
-                {charTag(ThirdCharacter, "jester")}:                            Sì? 
+        - else:
+            {charTag(ThirdCharacter, "jester")}:                            Sì? 
         }
 
         ~ thirdChar_justTalked = false
 
         //Azioni legate alla riscrittura
-            //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {(grimoire_thirdChar has thirdChar_minStoryletsForRewriting) && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:          {charNameThree}, facciamo la riscrittura?
-                    {charTag(ThirdCharacter, "neutral")}:                       Io ti direi anche subito di sì.
-                                                                                Ma la zia prima vuole dirti due cosine.
-                    {charTag(ThirdCharacter, "jester")}:                        Chissà se l'hai fatta arrabbiare.
-                   
-                    -> main
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
+            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         {charNameThree}, iniziamo la riscrittura?
 
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:             {charNameThree}, facciamo la riscrittura?
+                {//Ma non ho ascoltato il tutorial (se attivo)
+                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(ThirdCharacter, "neutral")}:                       Io ti direi anche subito di sì.
+                                                                                        Ma la zia prima vuole dirti due cosine.
+                            {charTag(ThirdCharacter, "jester")}:                        Chissà se l'hai fatta arrabbiare.
+                                                                                        E anche la capra ha qualcosa da belare.
+                                {
+                                - are_two_entities_together(Mentor,PG):
+                                {charTag(FifthCharacter, "neutral")}:                   No no {player_name}, ma è arrivato il momento di dirti l'ultima cosa fondamentale!
+                                }
+                                {
+                                - are_two_entities_together(Carla,PG):
+                                {charTag(Carla, "bored")}:                              Protocollo 115.89: le battute sulle capre sono punite con una settimana di servizio presso gli uffici Zanzare e Tafani.
+                                {charTag(ThirdCharacter, "jester")}:                    Scherzo scherzo scherzo, giuro!
+                                }   
+                                    -> main
+                        
+                        - tutorial_MentorTutorial == true:
+                            {charTag(ThirdCharacter, "neutral")}:                       Io ti direi anche subito di sì.
+                                                                                        Ma la zia prima vuole dirti due cosine.
+                            {charTag(ThirdCharacter, "jester")}:                        Chissà se l'hai fatta arrabbiare.
+                                {
+                                - are_two_entities_together(Mentor,PG):
+                                {charTag(FifthCharacter, "neutral")}:                   No no {player_name}, ma è arrivato il momento di dirti l'ultima cosa fondamentale!
+                                }
+                                    -> main
 
-                    -> rewriting_proposal_third_character
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(ThirdCharacter, "neutral")}:                       Io sono qui che non voglio fare altro, ma la capra ha qualcosa da belare con te prima.
+                                {
+                                - are_two_entities_together(Carla,PG):
+                                {charTag(Carla, "bored")}:                              Protocollo 115.89: le battute sulle capre sono punite con una settimana di servizio presso gli uffici Zanzare e Tafani.
+                                {charTag(ThirdCharacter, "jester")}:                    Scherzo scherzo scherzo, giuro!
+                                }
+                                    -> main
+                        }
+
+                //Ho ascoltato il tutorial, o non è attivo.
+                    - else:
+                        -> rewriting_proposal_third_character
+                }
+
+
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
                 + {grimoire_thirdChar has grimThirdCharFirstProposal} \ {charTag(PG, "neutral")}:                                                                                                                       Iniziamo la riscrittura?

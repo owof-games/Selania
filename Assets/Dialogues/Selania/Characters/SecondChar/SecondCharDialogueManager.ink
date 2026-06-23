@@ -15,14 +15,6 @@
         + {are_two_entities_together(SecondCharacterCucina, PG) && secondChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [SecondCharacter]
             -> kitchen_storylets_dispatcher    
 
-        // //Chiacchiera a fine storia
-        // + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyPostal} [SecondCharacter]
-        //     -> second_char_story_ended
-
-        // + ->
-
-        // -> DONE
-
 
 === talk_with_second_character ===
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -48,12 +40,8 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 {
-    //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
-        - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal  && grimoire_appendices hasnt grimRewritingMentor:
-                -> ask
-        
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, e ho fatto il tutorial su come funziona                    
-        - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal && grimoire_appendices has grimRewritingMentor:
+    //Se voglio avviare la riscrittura
+        - grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal:
                 -> ask
         
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
@@ -74,8 +62,8 @@
             {
                 - grimoire_secondChar hasnt grimSecondCharEight:
                     {shuffle:
-                        - {charTag(SecondCharacter, "energy")}:        {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
-                        - {charTag(SecondCharacter, "energy")}:        {horizontalS_discoveredDocs != ():Tutti quei bigliettini che trovi sulla panchina, chissà chi te li manda!|Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.}
+                        - {charTag(SecondCharacter, "energy")}:             {grimoire_witch has grimWitchIntro:Ho sentito che hai un'amica magica nella testa, woah!|A un anno sapevo già dire tuuuutto il pi greco!}
+                        - {charTag(SecondCharacter, "energy")}:             {horizontalS_discoveredDocs != ():Tutti quei bigliettini che trovi sulla panchina, chissà chi te li manda!|Una volta ho salvato un bambino da un incendio e la sua mamma mi ha fatto una torta gigante.}
 
                         - {charTag(SecondCharacter, "neutral")}:            Sai che so volare? Ma solo quando non mi vede nessuno. E quindi non mi credono.
 
@@ -192,20 +180,57 @@
                         }
                                 -> main
 
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
-                    //Incremento le variazioni del libro della Riscrittora
-                    -> rewriting_proposal_second_character
+
+        //Azioni legate alla riscrittura
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
+            + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
+
+                {//Ma non ho ascoltato il tutorial (se attivo)
+                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(SecondCharacter, "neutral")}:              Mi sa che {charNameFive} vuole dirti qualcosa prima. O Carla. O tutte e due. boh.
+                                {
+                                - are_two_entities_together(Mentor,PG):
+                                {charTag(FifthCharacter, "neutral")}:           Sì {player_name}, raggiungimi un attimo!
+                                }
+                                {
+                                - are_two_entities_together(Carla,PG):
+                                {charTag(Carla, "bored")}:                    Carla apprezza le persone che non la fanno lavorare troppo, {charNameTwo}.
+                                }   
+                                    -> main
+                        - tutorial_MentorTutorial == true:
+                            {charTag(SecondCharacter, "neutral")}:              Mi sa che {charNameFive} vuole dirti qualcosa prima.
+                                {
+                                - are_two_entities_together(Mentor,PG):
+                                {charTag(FifthCharacter, "neutral")}:           Sì {player_name}, raggiungimi un attimo!
+                                }
+                                    -> main
+
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(SecondCharacter, "neutral")}:              Mi sa che Carla prima vuole dirti qualcosa.
+                                {
+                                - are_two_entities_together(Carla,PG):
+                                {charTag(Carla, "bored")}:                    Carla apprezza le persone che non la fanno lavorare troppo, {charNameTwo}.
+                                } 
+                                    -> main
+                        }
+
+                //Ho ascoltato il tutorial, o non è attivo.
+                    - else:
+                        -> rewriting_proposal_second_character
+                }
+
 
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
-                + {grimoire_secondChar has grimSecondCharProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
+                + {grimoire_secondChar has grimSecondCharProposal} \ {charTag(PG, "neutral")}:                                                                  Iniziamo la riscrittura?
                     -> rewriting_proposal_second_character
 
 
         //Azioni legate alla costruzione della relazione
 
             //Offrire un dono
-                + {secondChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:         Ti voglio dare questa cosa.
+                + {secondChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                                                     Ti voglio dare questa cosa.
                     //Prima accedo al grimorio
                     -> grimoire_greenhouse_gifts_and_ingredient ->
 

@@ -9,15 +9,6 @@
                 -> kitchen_storylets_dispatcher
 
 
-            // //Chiacchiera a fine storia
-            // + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyPostal} [FirstCharacter]
-            //     -> first_char_story_ended
-            // + ->
-            //     -> DONE
-
-
-
-
 === talk_with_first_character
     ~ temp charNameOne = translator(firstChar_ActualName)
         {
@@ -38,14 +29,10 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
     {   
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, ma non ho fatto il tutorial su come funziona
-        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices hasnt grimRewritingMentor:
+        //Se voglio avviare la riscrittura
+        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal:
                 -> ask
-        
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylets, e ho fatto il tutorial su come funziona                    
-        - grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices has grimRewritingMentor:
-                -> ask
-        
+
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
         - grimoire_firstChar has grimFirstCharProposal:
                 -> ask
@@ -55,7 +42,7 @@
                 -> ask
         
         //Vogliamo cucinare assieme          
-        - player_accessiblePlaces has Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking==false:
+        - player_accessiblePlaces has Kitchen && grimoire_firstChar hasnt grimFirstCharKitchenEnded && kitchen_firstCharIsCooking == false:
                 -> ask
         
         -else:
@@ -63,45 +50,45 @@
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - firstChar_justTalked == false:   
                 {shuffle:
-                    - {charTag(FirstCharacter, "curious")}:     {horizontalS_discoveredDocs != ():Non capisco perché qualcuno debba lasciare in giro quei bigliettini, invece di darteli direttamente.|Mi piacerebbe una volta leggere quei documenti che trovi in giro.Le farfalle qui giocano per ore!}
+                    - {charTag(FirstCharacter, "curious")}:             {horizontalS_discoveredDocs != ():Non capisco perché qualcuno debba lasciare in giro quei bigliettini, invece di darteli direttamente.|Mi piacerebbe una volta leggere quei documenti che trovi in giro.Le farfalle qui giocano per ore!}
 
-                    - {charTag(FirstCharacter, "curious")}:     {grimoire_witch has grimWitchIntro:Quindi parli con una tizia nella tua testa. Che sta alla discarica. Utile.|No dai, ma hai visto quanto sono carini gli scoiattoli?}
+                    - {charTag(FirstCharacter, "curious")}:             {grimoire_witch has grimWitchIntro:Quindi parli con una tizia nella tua testa. Che sta alla discarica. Utile.|No dai, ma hai visto quanto sono carini gli scoiattoli?}
 
-                    - {charTag(FirstCharacter, "emotional")}:   {grimoire_witch has grimWitchIntro:Quella tipa con cui parli, boh, non so perché ma mi dà fiducia. Credo di sentirla a volte. Forse anche io sono una riscrittora? Poveri noi.|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
+                    - {charTag(FirstCharacter, "emotional")}:           {grimoire_witch has grimWitchIntro:Quella tipa con cui parli, boh, non so perché ma mi dà fiducia. Credo di sentirla a volte. Forse anche io sono una riscrittora? Poveri noi.|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
 
-                    - {charTag(FirstCharacter, "sad")}:         {thirdChar_storyStatus == story_storyRemote: È una mia impressione, o {charNameFive} ha preso malissimo la fuga di quel coglione di {charNameThree}?|Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte.}
+                    - {charTag(FirstCharacter, "sad")}:                 {thirdChar_storyStatus == story_storyRemote: È una mia impressione, o {charNameFive} ha preso malissimo la fuga di quel coglione di {charNameThree}?|Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte.}
 
-                    - {charTag(FirstCharacter, "curious")}:     Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre. 
+                    - {charTag(FirstCharacter, "curious")}:             Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre. 
 
-                    - {charTag(FirstCharacter, "curious")}:     Forse è la fame, ma prima ho sentito odore di lasagna, giuro! 
+                    - {charTag(FirstCharacter, "curious")}:             Forse è la fame, ma prima ho sentito odore di lasagna, giuro! 
 
-                    - {charTag(FirstCharacter, "neutral")}:     Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace. 
+                    - {charTag(FirstCharacter, "neutral")}:             Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace. 
 
-                    - {charTag(FirstCharacter, "neutral")}:     Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola. 
+                    - {charTag(FirstCharacter, "neutral")}:             Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola. 
 
-                    - {charTag(FirstCharacter, "annoyed")}:     Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno. 
+                    - {charTag(FirstCharacter, "annoyed")}:             Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno. 
 
-                    - {charTag(FirstCharacter, "annoyed")}:     Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno. 
+                    - {charTag(FirstCharacter, "annoyed")}:             Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno. 
 
-                    - {charTag(FirstCharacter, "sad")}:         Chissà cosa starà facendo Ennio in questo momento. 
+                    - {charTag(FirstCharacter, "sad")}:                 Chissà cosa starà facendo Ennio in questo momento. 
 
-                    - {charTag(FirstCharacter, "neutral")}:     Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze. 
+                    - {charTag(FirstCharacter, "neutral")}:             Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze. 
 
-                    - {charTag(FirstCharacter, "sad")}:         Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina. 
+                    - {charTag(FirstCharacter, "sad")}:                 Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina. 
 
-                    - {charTag(FirstCharacter, "neutral")}:     Quando nello stagno non ho visto il mio riflesso ma quello di una Chitarra ho avuto un momento di realizzazione totale.
+                    - {charTag(FirstCharacter, "neutral")}:             Quando nello stagno non ho visto il mio riflesso ma quello di una Chitarra ho avuto un momento di realizzazione totale.
 
-                    - {charTag(FirstCharacter, "annoyed")}:     Lavorare è sopravvalutato. 
+                    - {charTag(FirstCharacter, "annoyed")}:             Lavorare è sopravvalutato. 
                     
-                    - {charTag(FirstCharacter, "sad")}:         Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
+                    - {charTag(FirstCharacter, "sad")}:                 Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
 
-                    - {charTag(FirstCharacter, "sad")}:         Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
+                    - {charTag(FirstCharacter, "sad")}:                 Ti dicono che se sei la migliore il mondo ti si aprirà davanti, ma poi puoi laurearti in modo grandioso, e finire comunque a fare la cameriera.
 
-                    - {charTag(FirstCharacter, "curious")}:     Eppure più ci penso più sono sicura che {charNameFive} sia arrivata qui con me.
+                    - {charTag(FirstCharacter, "curious")}:             Eppure più ci penso più sono sicura che {charNameFive} sia arrivata qui con me.
                         {
-                            - are_two_entities_together(Mentor, PG):
-                                {charTag(FifthCharacter, "bored")}:             Impossibile, è una vita che sto qui.
-                                {charTag(FirstCharacter, "annoyed")}:           Sicuramente mi confondo.
+                        - are_two_entities_together(Mentor, PG):
+                        {charTag(FifthCharacter, "bored")}:             Impossibile, è una vita che sto qui.
+                        {charTag(FirstCharacter, "annoyed")}:           Sicuramente mi confondo.
                         }
                 }
                     -> main
@@ -123,11 +110,10 @@
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
             - grimoire_firstChar has grimFirstCharOne:
-                {charTag(FirstCharacter, "curious")}: C'è qualcosa che vuoi chiedermi ama? 
+                {charTag(FirstCharacter, "curious")}:                   C'è qualcosa che vuoi chiedermi ama? 
 
             - else:
-                {charTag(FirstCharacter, "annoyed")}:   Serve qualcosa?    
-
+                {charTag(FirstCharacter, "annoyed")}:                   Serve qualcosa?    
 
         }
 
@@ -135,28 +121,51 @@
         
 
     //Azioni legate alla riscrittura
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
             + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
+
                 
-                {charTag(FirstCharacter, "annoyed")}:   Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.
-                Tanto non scappo.
-                        -> main
-        
-        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices has grimRewritingMentor} \ {charTag(PG, "neutral")}:         Ti va di riscrivere la tua storia con me?
-                
-                //Incremento le variazioni del libro della Riscrittora           
-                    -> rewriting_proposal_first_character
-    
+                {//Ma non ho ascoltato il tutorial (se attivo)
+                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                        {
+                        - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
+                            {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, o con la capretta sfavata, così ti dicono giusto due cose due importanti.
+                                                                                Tanto non scappo.
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Esatto, {charNameOne}, c'è un'ultima cosa importante che devo dire a {player_name}.
+                                    }                                            
+                                    -> main
+                        - tutorial_MentorTutorial == true:
+                            {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.
+                                                                                Tanto non scappo.
+                                    {
+                                    - are_two_entities_together(Mentor,PG):
+                                    {charTag(FifthCharacter, "neutral")}:       Esatto, {charNameOne}, c'è un'ultima cosa importante che devo dire a {player_name}.
+                                    }                                               
+                                    -> main
+
+                        - tutorial_CarlaTutorial == true:
+                            {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la capretta sfavata, così ti dice giusto due cose due importanti.
+                                                                                Tanto non scappo.
+                                    -> main
+                        }
+
+                //Ho ascoltato il tutorial, o non è attivo.
+                    - else:
+                        -> rewriting_proposal_first_character
+                }
+
+
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {grimoire_firstChar has grimFirstCharProposal} \ {charTag(PG, "neutral")}:         Iniziamo la riscrittura?
+            + {grimoire_firstChar has grimFirstCharProposal} \ {charTag(PG, "neutral")}:                                        Iniziamo la riscrittura?
                     -> rewriting_proposal_first_character
             
         
     //Azioni legate alla costruzione della relazione
     
         //Offrire un dono
-            + {firstChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:         Ti vorrei dare questa cosa.
+            + {firstChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                          Ti vorrei dare questa cosa.
 
                 //Prima accedo al grimorio
                 -> grimoire_greenhouse_gifts_and_ingredient ->

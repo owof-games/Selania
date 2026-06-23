@@ -74,27 +74,35 @@
         {
                 - tutorial_carlaChoicesRelationshipStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialChoicesRelationship:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialChoicesRelationship
+                        ~ grimoire_appendices += tutorialChoicesRelationship
 
                 - tutorial_carlaRereadingStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialRereading:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialRereading
+                        ~ grimoire_appendices += tutorialRereading
 
                 - tutorial_carlaInterfaceStorylets && tutorial_CarlaDiscoveredTutorials hasnt tutorialInterface:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialInterface
+                        ~ grimoire_appendices += tutorialInterface
 
                 - tutorial_carlaGrimoireStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialGrimoire:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialGrimoire
+                        ~ grimoire_appendices += tutorialGrimoire
 
                 - tutorial_carlaGreenhouseGiftsInkStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialGreenhouse:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialGreenhouse
+                        ~ grimoire_appendices += tutorialGreenhouse
 
                 - tutorial_carlaKitchenStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialKitchen
+                        ~ grimoire_appendices += tutorialKitchen
 
                 - tutorial_carlaNestStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialNest
+                        ~ grimoire_appendices += tutorialNest
 
                 - tutorial_carlaSigilsActivationStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialSigils:
-                        ~ tutorial_CarlaDiscoveredTutorials += tutorialSigils                                                
+                        ~ tutorial_CarlaDiscoveredTutorials += tutorialSigils
+                        ~ grimoire_appendices += tutorialSigils                                           
 
         }
 
