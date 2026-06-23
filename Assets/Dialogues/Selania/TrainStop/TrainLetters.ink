@@ -124,7 +124,7 @@
 
             {
 
-                - secondChar_ActualName has Grizzly:
+                - secondChar_ActualName has Orso:
                     Oggi per la prima volta ho litigato con papà. Nel senso che non è stato mica lui a cominciare ma io. Ha cercato di picchiarmi e gli ho urlato che è un bullo. E poi ho preso i miei libri e glieli ho tirati contro. Lui si è arrabbiato così tanto, {player_name}! E allora ho urlato. Urlato come un orso. Che si dice che ho bramito quindi. E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente. Però sono felice perché ho meno paura ora. Mamma mi guarda strano. Ma so che tu mica mi avresti guardato così. Salutami Franco! <>
                     
                 - secondChar_ActualName has Lupo:
@@ -153,7 +153,7 @@
             Ho lasciato l'altra lettera sul comodino di notte. E poi è sparita. Non so mica se ti è arrivata. O se papà l'ha buttata. <>
             
             {
-                - secondChar_ActualName has Grizzly:
+                - secondChar_ActualName has Orso:
                     Se l'ha buttata urlo di nuovo, vediamo che mi dice poi. Però ti dovevo dire questa cosa: sono nella squadra di calcio. Non sono mica bravo. Questa roba delle forza e della velocità non è roba mia proprio. Però dice l'allenatore che ho strategia. Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino". E non mi chiama più bambino. Negli spogliatoi ci sono state delle risse. Ho dato un pugno straforte a uno più grande. E ora a scuola non mi rompono più le scatole. Se qualcuno ti rompe le scatole {player_name} chiamami. E ti aiuto io. Ciao! <>
     
                 - secondChar_ActualName has Lupo:
@@ -183,7 +183,7 @@
                 
                 {
      
-                - secondChar_ActualName has Grizzly:
+                - secondChar_ActualName has Orso:
                     Sono SUPER ARRABBIATO. CON MIO FRATELLO. Non avevamo mai litigato, mai. Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà. Papà si è incazzato con lui e mi ha difeso. Mio fratello dice che sto diventando un bullo. Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli. Papà gli ha detto che mi faccio rispettare. E che non sono una checca come lui. Lui mio fratello. Non sono mica abituato a mio padre così. Ma poi in camera mi è preso male tutto. Mi manca mio fratello. Mi manca la nonna. Mi mancate voi. Vorrei sapere cosa fare. <>
                     
                 - secondChar_ActualName has Lupo:
@@ -214,7 +214,7 @@
                 
                 {
      
-                - secondChar_ActualName has Grizzly:
+                - secondChar_ActualName has Orso:
                     Sono giorni che non esco di casa. Mi hanno sospeso da scuola per una rissa. Mamma è preoccupata, papà è sparito di nuovo. Sono in castigo, e ne sono felice: non voglio uscire, perché se esco faccio male a qualcuno. Alcune cose sono così difficili e non so che fare e non mi piaccio. Non mi piace arrabbiarmi così tanto, {player_name}. Mamma ha chiamato un dottore e dice che è la pubertà. Ho dovuto cercare su internet cosa fosse. Mio fratello è passato a trovarmi prima, e mi ha portato un nuovo libro sugli animali. Non l'ho ancora aperto. <>
                     
                 - secondChar_ActualName has Lupo:

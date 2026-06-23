@@ -261,7 +261,7 @@
     {charTag(FirstCharacter, "annoyed")}:                       Anche se non dovrebbe essere qualcosa in carico a qualcuno di così piccolo.
     {
 
-    - secondChar_ActualName has Grizzly:
+    - secondChar_ActualName has Orso:
     {charTag(FirstCharacter, "neutral")}:                       Ha abbracciato il suo lato violento.
                                                                 Un po' mi preoccupa.
                                                                 Ma spero sappia utilizzare quella rabbia per qualcosa di costruttivo.

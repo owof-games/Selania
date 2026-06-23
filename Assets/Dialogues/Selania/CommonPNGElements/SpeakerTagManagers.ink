@@ -138,8 +138,8 @@
             - secondChar_ActualName == Riccio:
                 ~ return "Riccio"
             
-            - secondChar_ActualName == Grizzly:
-                ~ return "Grizzly"
+            - secondChar_ActualName == Orso:
+                ~ return "Orso"
                 
             - secondChar_ActualName == Lupo:
                 ~ return "Lupo"

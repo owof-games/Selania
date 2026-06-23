@@ -510,7 +510,7 @@
     
 {
 
-    - secondChar_ActualName has Grizzly:
+    - secondChar_ActualName has Orso:
     {
         - ending.fire:
                                                         E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.

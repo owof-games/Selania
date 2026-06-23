@@ -39,7 +39,7 @@
             - secondChar_ActualName has Riccio:
                 ~ return "Un insieme di aculei, rabbia e curiosità"
 
-            - secondChar_ActualName has Grizzly:
+            - secondChar_ActualName has Orso:
                 ~ return "Ha ritrovato nella lotta la sua strada"
 
             - secondChar_ActualName has Lupo:
@@ -63,7 +63,7 @@
             - thirdChar_ActualName has Boccale:
                 ~ return "frase"
 
-            - thirdChar_ActualName has Grizzly:
+            - thirdChar_ActualName has Orso:
                 ~ return "frase"
 
             - thirdChar_ActualName has Lupo:
@@ -87,7 +87,7 @@
             - fourthChar_ActualName has NonnaMolotov:
                 ~ return "frase"
 
-            - fourthChar_ActualName has Grizzly:
+            - fourthChar_ActualName has Orso:
                 ~ return "frase"
 
             - fourthChar_ActualName has Lupo:

@@ -42,8 +42,8 @@
     LIST listCharactersAndVariations = 
     FirstCharacter, FirstCharacterTriangolo, FirstCharacterOrchestra, FirstCharacterFlautoDolce, FirstCharacterOcarina, FirstCharacterViolino, FirstCharacterCucina,
     PaintTriangolo, PaintOrchestra, PaintFlautoDolce, PaintOcarina, PaintViolino, SecondCharacterCucina,
-    SecondCharacter, SecondCharacterGrizzly, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
-    PaintGrizzly, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo,
+    SecondCharacter, SecondCharacterOrso, SecondCharacterLupo, SecondCharacterDelfino, SecondCharacterCapibara, SecondCharacterCorvo, 
+    PaintOrso, PaintLupo, PaintDelfino, PaintCapibara, PaintCorvo,
     ThirdCharacter, ThirdCharacterCucina, ThirdCharacterForum, ThirdCharacterCanovaccio, ThirdCharacterSigaro, ThirdCharacterGuantone, ThirdCharacterCerchio,
     PaintForum, PaintCanovaccio, PaintSigaro, PaintGuantone, PaintCerchio,
     FourthCharacter, FourthCharacterCucina, 

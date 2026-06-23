@@ -180,12 +180,12 @@
             - earthC:
                 ~ secondChar_ActualName += Capibara
             - fireC:
-                ~ secondChar_ActualName += Grizzly
+                ~ secondChar_ActualName += Orso
             - aetherC:
                 ~ secondChar_ActualName += Delfino
             - else:
                 //La lettura negativa per Riccio è quella violenta.
-                ~ secondChar_ActualName += Grizzly
+                ~ secondChar_ActualName += Orso
         }
 
     - ThirdCharacter:
@@ -273,8 +273,8 @@ Funzione di traduzione da variabile a stringa
     //Personaggia Due       
         - Riccio:
             ~ return "Riccio"
-        - Grizzly:
-            ~ return "Grizzly"
+        - Orso:
+            ~ return "Orso"
         - Lupo:
             ~ return "Lupo"
         - Delfino:

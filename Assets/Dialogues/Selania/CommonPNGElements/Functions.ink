@@ -169,7 +169,7 @@ VAR relationshipIndicatorNeutralValue = 0
         ~ secondChar_storyStatus = story_storyPostal
         ~ secondChar_mailPause = secondChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
-            ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            ~ move_entity(SecondCharacterOrso, Safekeeping)
             ~ move_entity(SecondCharacterDelfino, Safekeeping)
             ~ move_entity(SecondCharacterLupo, Safekeeping)
             ~ move_entity(SecondCharacterCapibara, Safekeeping)
@@ -196,7 +196,7 @@ VAR relationshipIndicatorNeutralValue = 0
         ~ fourthChar_storyStatus = story_storyPostal
         ~ fourthChar_mailPause = fourthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
-            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            // ~ move_entity(SecondCharacterOrso, Safekeeping)
             // ~ move_entity(SecondCharacterDelfino, Safekeeping)
             // ~ move_entity(SecondCharacterLupo, Safekeeping)
             // ~ move_entity(SecondCharacterCapibara, Safekeeping)
@@ -208,7 +208,7 @@ VAR relationshipIndicatorNeutralValue = 0
         ~ fifthChar_storyStatus = story_storyPostal
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             //Spostiamo poi le varianti della PNG
-            // ~ move_entity(SecondCharacterGrizzly, Safekeeping)
+            // ~ move_entity(SecondCharacterOrso, Safekeeping)
             // ~ move_entity(SecondCharacterDelfino, Safekeeping)
             // ~ move_entity(SecondCharacterLupo, Safekeeping)
             // ~ move_entity(SecondCharacterCapibara, Safekeeping)
@@ -293,8 +293,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         ~ move_entity(SecondCharacter, Safekeeping)
 
         {
-            - secondChar_ActualName == Grizzly:
-                ~ return "grizzly"
+            - secondChar_ActualName == Orso:
+                ~ return "orso"
 
             - secondChar_ActualName == Lupo:
                 ~ return "lupo"
@@ -419,9 +419,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         ~ move_entity(SecondCharacter, Safekeeping)
 
         {
-            - secondChar_ActualName == Grizzly:
-                ~ move_entity(SecondCharacterGrizzly, currentLocation)
-                ~ move_entity(PaintGrizzly, Bedroom)
+            - secondChar_ActualName == Orso:
+                ~ move_entity(SecondCharacterOrso, currentLocation)
+                ~ move_entity(PaintOrso, Bedroom)
                 
             - secondChar_ActualName == Lupo:
                 ~ move_entity(SecondCharacterLupo, currentLocation)

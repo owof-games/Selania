@@ -201,7 +201,7 @@
     {charTag(FifthCharacter, "neutral")}:                                   Il nostro piccoletto ha scelto il nome di {charNameTwo}. 
 
     {
-            - secondChar_ActualName == Grizzly:
+            - secondChar_ActualName == Orso:
                 {charTag(FifthCharacter, "neutral")}:                       Ha deciso di abbracciare il suo lato rabbioso.
                                                                             E invece di combatterlo, l'ha fatto proprio.
                 {charTag(FifthCharacter, "sad")}:                           Personalmente, la rabbia non mi convince mai molto.

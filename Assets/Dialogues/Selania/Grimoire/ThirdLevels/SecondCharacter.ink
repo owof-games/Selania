@@ -316,7 +316,7 @@
             Dopo la riscrittura, ha scelto un nuovo nome: <b><i>{translator(secondChar_ActualName)}.</b></i>
     }
     {
-        - secondChar_ActualName has Grizzly:
+        - secondChar_ActualName has Orso:
             Ha deciso che combatterà la sua paura e diventerà il più forte di tutti, imbattibile.
             
         - secondChar_ActualName has Lupo:
@@ -337,7 +337,7 @@
             {charNameFive} ha detto a {player_name} che <>
 
             {
-                - secondChar_ActualName has Grizzly:
+                - secondChar_ActualName has Orso:
                     "il nostro bambino" ha abbracciato il lato rabbioso, e l'ha fatto proprio. E lei non è una fan della rabbia.
                 
                 - secondChar_ActualName has Lupo: 

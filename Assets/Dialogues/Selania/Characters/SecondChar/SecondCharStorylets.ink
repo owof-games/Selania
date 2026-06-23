@@ -1422,7 +1422,7 @@
             {charTag(SecondCharacter, "melanchonic")}:          Ma voglio capirla.
             {charTag(SecondCharacter, "energy")}:               Magari mi dico che è un animale così so meglio come funziona.
             {charTag(SecondCharacter, "energy")}:               Tutta segreta e paziente come un coccodrillo.
-                                                                O fortissima come i denti di un grizzly.
+                                                                O fortissima come i denti di un orso.
             {charTag(SecondCharacter, "melanchonic")}:          O spaventata come un riccio.  
 
             + \ {charTag(PG, "neutral")}:                       Hai pensato a qualcosa di pratico da fare per sfogare la rabbia?

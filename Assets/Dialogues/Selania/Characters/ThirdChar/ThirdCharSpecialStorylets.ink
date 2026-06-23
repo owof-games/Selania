@@ -507,7 +507,7 @@
 
     {
 
-    - secondChar_ActualName has Grizzly:
+    - secondChar_ActualName has Orso:
         {charTag(ThirdCharacter, "neutral")}:                           Ha scelto di diventare un orso incazzato.
         {charTag(ThirdCharacter, "angry")}:                             Chissà che ora quel coglione di suo padre non lo rispetta un po'!
                 {

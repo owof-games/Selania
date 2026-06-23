@@ -30,7 +30,7 @@
 
 //Stato della PNG
     //Gestione nomi
-    LIST secondChar_possibleStates = Riccio, (Grizzly), (Lupo), (Delfino), (Capibara), (Corvo)
+    LIST secondChar_possibleStates = Riccio, (Orso), (Lupo), (Delfino), (Capibara), (Corvo)
     VAR secondChar_ActualName = Riccio
 
     //Registro delle scelte prese
