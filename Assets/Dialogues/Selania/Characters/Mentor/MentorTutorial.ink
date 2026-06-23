@@ -9,44 +9,43 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
 
-       
-
-        //Questo diventa un altro pezzo di tutorial, prima ci invita a farci due passi, chiacchierare in giro.
-            {charTag(FifthCharacter, "hurry")}:                 E risposte alla maggior parte delle tue domande.
-            {charTag(FifthCharacter, "neutral")}:               Ma a proposito di risposte.
-                                                                La maggior parte delle cose che dirai in questo luogo influenzeranno il rapporto che hai con le persone che incontri.
-                                                                Ogni frase in fondo rappresenta un modo di vedere il mondo.
-                                                                E non tutte le visioni vanno d'accordo.
+            {charTag(FifthCharacter, "hurry")}:                 Rieccoci {player_name}!
+                                                                Sono contenta che hai parlato un po' con {charNameOne}!
+            {charTag(FifthCharacter, "neutral")}:               Dire che ora sei pront{player_pronoun has him:o|{player_pronoun has her:a|ə}} per ascoltare il mio primo insegnamento sul tuo lavoro.
+            {charTag(FifthCharacter, "hurry")}:                 Parliamo di <b>dialogo</b>!
+            {charTag(FifthCharacter, "neutral")}:               Il dialogo è tutto nel tuo lavoro, come nella vita.
+                                                                Ogni volta che dirai qualcosa le persone presenti si faranno un'idea su di te.
+                                                                Parlare è agire, e le nostre azioni raccontano sempre il modo in cui vediamo il mondo.
+                                                                E non tutte le visioni del mondo sanno conciliarsi.
 
         {
             - fifth_char_intro.fireChoice:
-                {charTag(FifthCharacter, "sad")}:               Quando prima hai cercato di andartene, ad esempio, mi sono sentita ferita.
+                {charTag(FifthCharacter, "sad")}:               Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, la prima cosa che hai fatto è stata cercare di andartene, ad esempio, mi sono sentita ferita.
                 {charTag(FifthCharacter, "hurry")}:             Poi fortunatamente la mia preparazione mi ha aiutato a sopprimere quel sentimento.
                 {charTag(FifthCharacter, "sad")}:               Un'altra persona magari si sarebbe offesa.
                 {charTag(FifthCharacter, "neutral")}:           O avrebbe apprezzato la tua propensione per l'azione.
 
             - fifth_char_intro.aetherChoice:
-                {charTag(FifthCharacter, "neutral")}:           Quando prima mi hai chiesto se questo sia un luogo misterico, hai mostrato con tranquillità un interesse verso l'occulto e le cose spirituali.
+                {charTag(FifthCharacter, "neutral")}:           Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, la prima cosa che mi hai chiesto è se questo sia un luogo misterico, mostrando con tranquillità un interesse verso l'occulto e le cose spirituali.
                 {charTag(FifthCharacter, "hurry")}:             Ed è una cosa che mi risuona molto.
                 {charTag(FifthCharacter, "sad")}:               Altre persone potrebbero giudicarti poco razionale, scollegat{player_pronoun has him:o|{player_pronoun has her:a|ə}} dalla realtà.
                 {charTag(FifthCharacter, "neutral")}:           Oppure potrebbero ritrovare in te un{player_pronoun has him:o|{player_pronoun has her:a|ə}} compagn{player_pronoun has him:o|{player_pronoun has her:a|ə}} con cui confidare le esperienze più insolite.
 
             - fifth_char_intro.earthChoice:
-                {charTag(FifthCharacter, "hurry")}:             Quando prima ti sei abbandotat{player_pronoun has him:o|{player_pronoun has her:a|ə}} a tutta questa natura, ho scoperto di aver già un punto di contatto con te.
+                {charTag(FifthCharacter, "hurry")}:             Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, la prima cosa che ha fatto è stata abbandonarti a tutta questa natura, e ho scoperto di aver già un punto di contatto con te.
                 {charTag(FifthCharacter, "sad")}:               Non tutte le persone potrebbero trovarsi d'accordo: c'è chi ama gli spazi urbani e chi ha paura dell'imprevedibilità di un bosco.
                 {charTag(FifthCharacter, "neutral")}:           Oppure potresti trovare qualcunə che non aspettava altro che di parlarti di tutti i suoi animali preferiti.
 
             - fifth_char_intro.airChoice:
-                {charTag(FifthCharacter, "neutral")}:           La prima cosa che mi hai chiesto è stata dove siamo.
+                {charTag(FifthCharacter, "neutral")}:           Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, la prima cosa che mi hai chiesto è stata dove siamo.
                 {charTag(FifthCharacter, "hurry")}:             E l'hai chiesto con una curiosità che ho apprezzato molto: le domande sono strade aperte verso il sapere.
                 {charTag(FifthCharacter, "sad")}:               Ma potresti trovare qualcunə che invece preferisce un approccio più emotivo, o spirituale, e potrebbe mettersi sulla difensiva.
                 {charTag(FifthCharacter, "neutral")}:           Oppure unə compagnə di curiosità, studio e analisi.
                                                                 Qualcunə con cui passare le ore a chiacchierare.
 
             - fifth_char_intro.waterChoice:
-                {charTag(FifthCharacter, "neutral")}:           La prima cosa che mi hai detto è stata parlare di dolcezza, e l'hai fatto con un sacco di gioia.
+                {charTag(FifthCharacter, "neutral")}:           Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, una delle prima parole che hai usato è stata <i>dolcezza</i>, e l'hai fatto con un carico enorme di gioia.
                 {charTag(FifthCharacter, "hurry")}:             L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
                 {charTag(FifthCharacter, "sad")}:               Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
         }
@@ -54,21 +53,15 @@
         {charTag(FifthCharacter, "neutral")}:                   Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.
         {charTag(FifthCharacter, "hurry")}:                     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
         {charTag(FifthCharacter, "neutral")}:                   E capire le loro reazioni è la prima parte del tuo lavoro.
-                                                                Prima di riempirti di troppe informazioni, ti invito per un po' <>
-            {
-                - grimoire_firstChar != ():
-                                                                    a continuare a parlare con le persone che incontrerai qui in giro, <>
-                - else:
-                                                                    a parlare con le persone che incontrerai qui in giro, <>
-            }
-                                                                e a capire meglio come ragionano.
-        {charTag(FifthCharacter, "hurry")}:                     Capire come ragionano ti aiuterà a conquistare la loro fiducia.
+                                                                Prima di riempirti di troppe informazioni, a continuare a parlare con le persone che incontrerai qui in giro, e a capire meglio come ragionano.
+        {charTag(FifthCharacter, "hurry")}:                     Capire il modo in cui vedono il mondo ti aiuterà a conquistare la loro fiducia.
         {charTag(FifthCharacter, "neutral")}:                   Che è la parte davvero fondamentale per compiere il tuo lavoro.
-        {charTag(FifthCharacter, "hurry")}:                     Ma!
-        {charTag(FifthCharacter, "neutral")}:                   Prima di salutarti, due cose che potrebbero aiutarti.
+        {charTag(FifthCharacter, "hurry")}:                     Ma ne parleremo dopo.
+        {charTag(FifthCharacter, "neutral")}:                   Prima di salutarti, voglio darti questo in dono.
         {charTag(FifthCharacter, "hurry")}:                     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
-            //Sblocco del grimorio
-            ~ grimoire_isEnabled = true
+        
+                            //Sblocco del grimorio
+                            ~ grimoire_isEnabled = true
 
         {charTag(FifthCharacter, "neutral")}:                   Consultalo ogni volta che sei in difficoltà.
 

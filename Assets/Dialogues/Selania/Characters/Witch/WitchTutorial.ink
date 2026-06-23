@@ -6,10 +6,18 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 
-        {charTag(TheWitch, witch_state())}:                         <i>Quando vi siete conosciut3, {charNameFive} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
+
+                {
+                - grimoire_appendices has grimChoicesMentor:
+                {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciut3, {charNameFive} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
                                                                     <i>Apprezziamo gli sforzi di {charNameFive}, ma non siamo d'accordo con questo aspetto.
+                - else:
+                {charTag(TheWitch, witch_state())}:                 <i>La visione di {charNameFive} è più pratica della nostra, {player_name}.
+                                                                    <i>Sappiamo ad esempio che ritiene che le cose che {player_name} dice alle persone che incontra siano un modo di vedere il mondo.
+                                                                    <i>Apprezziamo gli sforzi di {charNameFive}, ma non siamo d'accordo con questo aspetto.                                                    
+                }    
                                                                     <i>Quando {player_name} compie una scelta su cosa dire, non sta parlando del mondo che vede, ma di come lo vive.
-                                                                    <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è, punto.
+                                                                    <i>E crediamo sia importante, perché una visione è qualcosa di contrattabile, ma ciò che si vive è.
                                                                     <i>Esprimere sé in una relazione è più importante che concordare con l'altra persona.
                                                                     <i>Il lichene prospera perché i bisogni si sovrappongono, non perché l'alga è uguale al fungo.
                                                                     <i>Cosa ne pensa {player_name}?</i>
