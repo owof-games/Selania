@@ -101,12 +101,13 @@
         - grimoire_appendices hasnt grimChoicesMentor:
             {charTag(Carla, "sad")}:                Ma non ha ancora un grimorio?
             {charTag(Carla, "neutral")}:            Strano, di solito lo consegnano in automatico all'arrivo.
-            {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.  
+            {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.
+                                                    Magari l'ha preso una delle nuove arrivate?
     }
 
     {charTag(Carla, "bored")}:                      Eeeee... perfetto! 
                                                     Sono ufficialmente in pausa.
-                                                    Lei vada a fare le sue cose così imporanti, prego.
+                                                    Lei vada a fare le sue cose così importanti, prego.
 
     -> carla_closing_storylet                                                    
 
@@ -152,8 +153,9 @@
         @sprite:tutorial_carlaRereadingStorylet_1
 
     {charTag(Carla, "bored")}:                          Non una di più, c'è scritto anche sul sito.
-    {charTag(Carla, "neutral")}:                        Tre: a quel punto lei avrà diritto al suo monologo per dimostrare alla persona che la conosce davvero bene.
-                                                        Il monologo si chiama <i>epilogo</i>.
+                                                        Con ogni goccia potrà fare una riscrittura, ovvero: prendere un tema centrale per la persona, e provare a dargli una lettura diversa.
+    {charTag(Carla, "neutral")}:                        Tre: finito l'inchiostro, lei avrà la possibilità di dare un consiglio alla persona su come affrontare il futuro.
+                                                        Il consiglio si chiama <i>epilogo</i>.
     {charTag(Carla, "bored")}:                          Perché?
                                                         Perché l'addetto del Ministero sperava di diventare uno scrittore ma gli è andata male e ora ci appesta le giornate.                                                    
     {charTag(Carla, "neutral")}:                        Comunque: questa possibilità l'avrà sempre, a prescindere dalla quantità di inchiostro accumulato.
@@ -384,12 +386,16 @@
     }
 
     {charTag(Carla, "bored")}:                  Deve parlare con la responsabile.
-        {
-            - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
-                                                Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
-        }
     {charTag(Carla, "neutral")}:                Ah no scusi, è l'abitudine.
-    {charTag(Carla, "sad")}:                    Mi è stato chiesto di spiegarle come funziona la serra.
+
+            {
+            - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
+            {charTag(Carla, "bored")}:          Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
+            - else:
+            {charTag(Carla, "sad")}:            Mi è stato chiesto di spiegarle come funziona la serra.                                    
+            }
+
+    
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
                 -> top2
@@ -428,11 +434,11 @@
         + \ {charTag(PG, "neutral")}:           Non aumenta dal 1976.
         + \ {charTag(PG, "neutral")}:           È stata accreditata per sbaglio a quel deficiente dell'ufficio Parcheggi e Paracadute.
         -
-    {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di mistico in questa simulazione.</i>    
+    {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di <b>mistico</b> in questa simulazione.</i>    
     {charTag(Carla, "neutral")}:                Bene.
                                                 La serra farà le sue cose e poi le dirà che qualcosa è cambiato.
                                                 A questo punto lei va in giro a chiacchierare, la pianta cresce e quando tornerà in serra la voce mistica le dirà qualcosa tipo.
-    {charTag(Carla, "bored")}:                  <i>Gengive infiammate e sciatica che urla: è cresciuta la pianta del <b>Mannaggia perché sono nata?</b></i>
+    {charTag(Carla, "bored")}:                  <i>Gengive infiammate e sciatica che urla: è cresciuta una cipolla del <b>Mannaggia perché sono nata?</b></i>.
     {charTag(Carla, "neutral")}:                A quel punto potrà raccoglierla.
                                                 Ma perché raccoglierla?
     {charTag(Carla, "bored")}:                  Sì, anticipo le sue domande così facciamo prima.                                          

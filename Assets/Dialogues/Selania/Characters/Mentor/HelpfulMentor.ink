@@ -99,7 +99,7 @@
     {charTag(FifthCharacter, "bored")}:                                         Vai.
     }
     
-        + {tutorial_mentorInkAndYouAreARewriter}\ {charTag(PG, "neutral")}:     Mi ripeteresti cosa devo fare?
+        + {tutorial_mentorInkAndYouAreARewriter && tutorial_MentorTutorial == true}\ {charTag(PG, "neutral")}:     Mi ripeteresti cosa devo fare?
             -> to_do
         
         + \ {charTag(PG, "neutral")}:                                           C'è una cosa che mi riguarda.

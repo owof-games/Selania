@@ -47,6 +47,18 @@ La logica di comparsa delle appendici è:
 
     /*************************
 
+        Commento Carla se sbloccato
+
+    **************************/
+
+    {
+        - grimoire_appendices has tutorialChoicesRelationship:
+        <i><b>Commento di Carla</i></b>
+            Carla ha detto a {player_name} che ogni scelta ha un valore diverso, ma che non sta a Carla spiegarlo a {player_name}, ma all'addetta alla discarica. Carla inoltre ha detto a {player_name} che ogni persona ragiona in modo diverso, per cui {player_name} dovrà capire da sé cosa apprezza o meno chi ha davanti.
+    }
+
+    /*************************
+
         Commento Strega se sbloccato
 
     **************************/
@@ -99,6 +111,18 @@ La logica di comparsa delle appendici è:
         - grimoire_appendices has grimGreenhouseMentor:
         <i><b>Commento di {charNameFive}</i></b>
             {charNameFive} ha informato {player_name} sul fatto che, tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato. La serra, con le sue piante magnifiche, è secondo {charNameFive} il posto migliore dove coltivare e recuperare doni. Gli effetti dei doni sono immediati e permanenti. Ed è per questo che ogni riscrittorə può darne solo uno a persona, poiché qualcosa di così forte non può certo essere usato senza coscienza.
+    }
+
+    /*************************
+
+        Commento Carla se sbloccato
+
+    **************************/
+
+    {
+        - grimoire_appendices has tutorialGreenhouse:
+        <i><b>Commento di Carla</i></b>
+            Carla ha detto a {player_name} che per far crescere una pianta nella serra deve rispondere a due domande, a seconda di come se la sente. A pianta cresciuta sarà possibile raccoglierne solo un pezzo, per evitare che muoia. Con la pianta raccolta {player_name} potrà effettuare un dono. {player_name} dovrà solo parlare con la persona interessata, dire alla persona che vuole farle un dono, e selezionarlo dal grimorio. Se il dono è stato apprezzato, {player_name} riceverà due gocce di inchiostro; se il dono è stato abbastanza apprezzato, una; altrimenti, zero.
     }
 
 
@@ -164,6 +188,18 @@ La logica di comparsa delle appendici è:
             {charNameFive} ha condiviso la sua saggezza con {player_name}, dicendo che cucinare assieme è un momento di intimità, e che con l'ingrediente giusto, può far felice la persona con cui sta ai fornelli. Secondo {charNameFive}, passare del tempo in cucina con qualcunə può essere un bel modo per conoscersi meglio, e capire che piega stia prendendo la relazione.
     }
 
+/*************************
+
+    Commento Carla se sbloccato
+
+**************************/
+
+    {
+        - grimoire_appendices has tutorialKitchen:
+        <i><b>Commento di Carla</i></b>
+            Carla ha detto a {player_name} che può cucinare una sola volta per persona. Che {player_name}  in cucina può approfondire un argomento già trattato. Che gli argomenti di solito sono tre, e che se {player_name}  ne percepisce meno, vuol dire che deve conoscere meglio la persona con cui sta parlando. Le scelte che {player_name} farà in cucina sono una pausa dal mondo, e riceverà dei feedback sul rapporto con la persona con cui sta parlando. E se {player_name} aggiungerà l'ingrediente adatto, la persona potrà dire meglio a come ragiona. Inoltre, {player_name} può rispondere a domande personali aggiungendo degli ingredienti.
+    }
+
     + [Index #bookmark:index]
         -> grimoire
     + [Appendici #bookmark:secondLevel]
@@ -215,6 +251,18 @@ La logica di comparsa delle appendici è:
         <i><b>Commento di {charNameFive}</i></b>
             {charNameFive} ha offerto un'ultima guida a {player_name}, spiegando la funzione della riscrittura. Arriverà il momento in cui {player_name} potrà proporre alla persona di rileggere assieme la sua storia. A proposta fatta, la persona confiderà cosa la tiene bloccata, e a quel punto {player_name} potrà procedere con le riscritture: per ogni goccia di inchiostro ottenuta durante la relazione, {player_name} potrà proporre una rilettura di un aspetto della vita di quella persona.
             E infine {charNameFive} ha spiegato lo strumento dell'epilogo: una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso. Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio. {charNameFive} ha detto a {player_name} che non c'è un esito buono o cattivo per la riscrittura, ma che comunque lei come mentore si permetterà di dare dei feedback d'aiuto.
+    }
+
+/*************************
+
+    Commento Carla se sbloccato
+
+**************************/
+
+    {
+        - grimoire_appendices has tutorialRereading:
+        <i><b>Commento di Carla</i></b>
+            Carla ha detto a {player_name} che dopo aver conosciuto abbastanza una persona, può proporre di rileggere la sua storia. Doni e relazione determinano quanto inchiostro {player_name} riceverà:, con un minimo di zero gocce fino a un massimo di quattro. Ogni goccia di inchiostro permette una riscrittura, ovvero un modo per {player_name} di far rileggere alla persona un suo tema in modo diverso. A fine inchiostro {player_name} potrà usare anche l'epilogo, un consiglio per il futuro della persona con cui {player_name} sta interagendo. Tutto questo porterà la persona a scegliere un nuovo nome. E a quel punto se ne andrà.
     }
 
     + [Index #bookmark:index]
@@ -299,6 +347,23 @@ La logica di comparsa delle appendici è:
         <i><b>Commento di {witch_actualName}</i></b>
             Abbiamo condiviso con {player_name} la nostra conoscenza sui sigilli, che sono uno strumento che sembra complesso ma è molto semplice, ma abbiamo anche espresso la timore che il confine tra sostegno e manipolazione sia sottile. E abbiamo suggerito a {player_name} di comprendere a fondo la natura dei glifi che compongono i sigilli. Perché ogni glifo, come ogni scelta, è una strada. Un vicolo di curiosità e conoscenza. Un sentiero di azione e passione. Un cammino di praticità e radicamento. Un viottolo di affetto e cura. Una calle di saggezza e spiritualità.
     }
+    
+/*************************
+
+    Commento Carla se sbloccato
+
+**************************/
+
+    {
+        - grimoire_appendices has tutorialSigils:
+        <i><b>Commento di Carla</i></b>
+            Carla ha letto a {player_name} una comunicazione ministeriale in cui è stato spiegato l'uso della SISSI, Servizio di Indicazione Stato Sigillo Integrato. La SISSI informerà {player_name} durante la conversazione sia sulla quantità di utilizzi a disposizione del sigillo attualmente attivo, sia se la persona è o meno condizionata dal sigillo stesso. La SISSI è integrata anche all'interno di questo grimorio, e aggiornerà i descrittori dei sigilli. Ma ci teniamo a dire a {player_name} che i servizi di cui parla Carla sono cose che stiamo facendo noi, e non abbiamo assolutamente idea di cosa sia una SISSI e cosa ci faccia qui o se esista davvero.
+    }
+    {
+        - grimoire_appendices has tutorialNest:
+        <i><b>Commento di Carla</i></b>
+            Carla ha detto a {player_name} che i sassi presenti al Nido si chiamano glifi e che un sigillo è composto da tre glifi diversi tra loro.
+    }   
 
     + [Index #bookmark:index]
         -> grimoire

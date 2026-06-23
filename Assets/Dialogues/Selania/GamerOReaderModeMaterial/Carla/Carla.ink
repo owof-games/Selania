@@ -70,40 +70,73 @@
         //Pausa per non far partire altri tutorial o cose simili
         ~ png_commonPauseTalking = true
 
-
+        //Parte tracciamento dialogo, per abilitare tasti per chiedere a Carla di ripetermi la roba.
         {
                 - tutorial_carlaChoicesRelationshipStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialChoicesRelationship:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialChoicesRelationship
-                        ~ grimoire_appendices += tutorialChoicesRelationship
-
+        }
+        {
                 - tutorial_carlaRereadingStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialRereading:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialRereading
-                        ~ grimoire_appendices += tutorialRereading
-
+        }
+        {
                 - tutorial_carlaInterfaceStorylets && tutorial_CarlaDiscoveredTutorials hasnt tutorialInterface:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialInterface
-                        ~ grimoire_appendices += tutorialInterface
-
+        }
+        {
                 - tutorial_carlaGrimoireStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialGrimoire:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialGrimoire
-                        ~ grimoire_appendices += tutorialGrimoire
-
+        }
+        {
                 - tutorial_carlaGreenhouseGiftsInkStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialGreenhouse:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialGreenhouse
-                        ~ grimoire_appendices += tutorialGreenhouse
-
+        }
+        {
                 - tutorial_carlaKitchenStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialKitchen
-                        ~ grimoire_appendices += tutorialKitchen
-
+        }
+        {
                 - tutorial_carlaNestStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
                         ~ tutorial_CarlaDiscoveredTutorials += tutorialNest
-                        ~ grimoire_appendices += tutorialNest
-
+        }
+        {
                 - tutorial_carlaSigilsActivationStorylet && tutorial_CarlaDiscoveredTutorials hasnt tutorialSigils:
-                        ~ tutorial_CarlaDiscoveredTutorials += tutorialSigils
-                        ~ grimoire_appendices += tutorialSigils                                           
+                        ~ tutorial_CarlaDiscoveredTutorials += tutorialSigils                                        
 
+        }
+
+        //Parte tracciamento appendice, separata perché popolo l'appendice SOLO se il tutorial è stato ascoltato.
+        {
+                - tutorial_carlaChoicesRelationshipStorylet.top2 && grimoire_appendices hasnt tutorialChoicesRelationship:
+                        ~ grimoire_appendices += tutorialChoicesRelationship
+        }
+        {
+                - tutorial_carlaRereadingStorylet.top2 && grimoire_appendices hasnt tutorialRereading:
+                        ~ grimoire_appendices += tutorialRereading
+        }
+        {
+                - tutorial_carlaInterfaceStorylets.top2 && grimoire_appendices hasnt tutorialInterface:ace
+                        ~ grimoire_appendices += tutorialInterface
+        }
+        {
+                - tutorial_carlaGrimoireStorylet.top2 && grimoire_appendices hasnt tutorialGrimoire:
+                        ~ grimoire_appendices += tutorialGrimoire
+        }
+        {
+                - tutorial_carlaGreenhouseGiftsInkStorylet.top2 && grimoire_appendices hasnt tutorialGreenhouse:
+                        ~ grimoire_appendices += tutorialGreenhouse
+        }
+        {
+                - tutorial_carlaKitchenStorylet.top2 && grimoire_appendices hasnt tutorialKitchen:
+                        ~ grimoire_appendices += tutorialKitchen
+        }
+        {
+                - tutorial_carlaNestStorylet.top2 && grimoire_appendices hasnt tutorialNest:
+                        ~ grimoire_appendices += tutorialNest
+        }
+        {
+                - tutorial_carlaSigilsActivationStorylet.top2 && grimoire_appendices hasnt tutorialSigils:
+                        ~ grimoire_appendices += tutorialSigils                                           
         }
 
 
