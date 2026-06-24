@@ -11,9 +11,9 @@
         {
         - tutorial_carlaInterfaceStorylets.nameDiscovered:
         {charTag(Carla, "neutral")}:        Ci siamo già presentate, vero?
-                                            Mi tocca spiegarle al volo cosa deve fare.
+                                            Sappia che ora mi tocca spiegarle cosa deve fare.
         - else:
-        {charTag(Carla, "neutral")}:        Mi chiamo Carla, e sono qui per dirle al volo cosa deve fare.
+        {charTag(Carla, "neutral")}:        Mi chiamo Carla, e sono qui per spiegarle cosa deve fare.
         }
     - (nameDiscovered)
     {charTag(Carla, "bored")}:              Il perché non è di mia competenza.
@@ -26,7 +26,7 @@
         }
 
     - (top1)
-   {charTag(Carla, "neutral")}:                     Vuole sentire, la spiegazione?
+   {charTag(Carla, "neutral")}:                     Iniziamo?
 
         + \ {charTag(PG, "neutral")}:               Certo!
             {charTag(Carla, "bored")}:              Anche meno entusiasmo, che poi mi fanno fare gli straordinari.
@@ -48,10 +48,10 @@
 
 
     - (top2)
-    {charTag(Carla, "sad")}:                        Lei deve parlare con le persone che trova qui in giro.
-                                                    Le diranno cose più o meno personali, e si aspetteranno da lei una risposta.
+    {charTag(Carla, "sad")}:                        La cosa principale: deve parlare con le persone che trova qui in giro.
+                                                    Ogni persona le dirà cose più o meno personali, e si aspetterà da lei una risposta.
                                                     La risposta influenzerà il modo in cui quella persona la vede.
-                                                    E anche il giudizio che hanno su di lei le persone presenti in quel momento.
+                                                    E anche l'opinione che le altre persone presenti avranno su di lei.
     {charTag(Carla, "neutral")}:                    Facciamo una prova.
                                                     Ora le racconto una cosa, e lei mi dà la sua opinione.
         {
@@ -104,10 +104,12 @@
                 }   
 
         
-                                                    Le scelte saranno più complesse di quelle dell'esempio, e ogni scelta rappresenta una cosa diversa.
+                                                    Le situazioni a cui dovrà rispondere saranno più complesse di quella fatta assieme.
+                                                    E ognuna delle cinque scelte che avrà a disposizione rappresenteranno una cosa diversa.
                                                     Cosa?
     {charTag(Carla, "bored")}:                      Lo chieda all'addetta alla discarica, se non è di nuovo in malattia.
-    {charTag(Carla, "neutral")}:                    Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa apprezza o meno chi ha davanti.
+                                                    Io sono già piena di lavoro.
+    {charTag(Carla, "neutral")}:                    Sono tenuta infine a ricordarle che ogni persona ragiona in modo diverso, per cui dovrà capire da sé cosa viene apprezzato e cosa no.
 
     {
         - settings_gamerMode == true:
@@ -119,20 +121,22 @@
                                                     Tiene traccia dell'ultima e penultima scelta fatte, così può monitorare da sé le variazioni, senza stressare me.
 
         - else:
-        {charTag(Carla, "bored")}:                  Se la cosa le sembra difficile, provi a pensare al mio di lavoro e a tutti i protocolli che devo ricordare.                                            
+        {charTag(Carla, "bored")}:                  Se le sembra un lavoro difficile, provi a pensare cosa significa spiegare questa cosa centinaia di volte al giorno.                                            
     }
     
     {
         - grimoire_isEnabled == false:
-            {charTag(Carla, "sad")}:                Ma non ha ancora un grimorio?
-            {charTag(Carla, "neutral")}:            Strano, di solito lo consegnano in automatico all'arrivo.
-            {charTag(Carla, "bored")}:              Ma qui non possiamo fare niente per aiutarla.
+            {charTag(Carla, "sad")}:                Ma vedo che non ha ancora un grimorio!
+            {charTag(Carla, "neutral")}:            Mannaggia al Ministero: devono consegnarlo in automatico all'arrivo!
+            {charTag(Carla, "bored")}:              Ma non posso aiutarla: è responsabilità dell'ufficio Sbaragli e Sbadigli.
                                                     Magari l'ha preso una delle nuove arrivate?
-    }
+                                                    Intanto vado a farmi la mia pausa.
 
-    {charTag(Carla, "bored")}:                      Eeeee... perfetto! 
+        - else:
+            {charTag(Carla, "bored")}:              Eeeee... timing perfetto! 
                                                     Sono ufficialmente in pausa.
                                                     Lei vada a fare le sue cose così importanti, prego.
+    }
 
     -> carla_closing_storylet                                                    
 

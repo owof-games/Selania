@@ -57,13 +57,13 @@
                                                                 E ora che sei qui, ho uno scopo.
 
 
-        + (aetherChoice) \ {charTag(PG, "neutral")}:            C'è qualcosa che non stiamo vedendo, vero?
+        + (aetherChoice) \ {charTag(PG, "neutral")}:            C'è qualcosa di insolito in questo posto, vero?
             -> glyph_choice_manager(Mentor, aetherC) ->
 
             {charTag(FifthCharacter, "neutral")}:               Io.
             {charTag(FifthCharacter, "sorry")}:                 Uh, è una domanda inaspettata.
             {charTag(FifthCharacter, "hurry")}:                 Sicuramente c'è qualcosa di magico.
-            {charTag(FifthCharacter, "neutral")}:               Ma nulla viene tenuto nascosto.
+            {charTag(FifthCharacter, "neutral")}:               Ma nulla di insolito, o di nascosto.
                                                                 Nulla.
             {charTag(FifthCharacter, "hurry")}:                 Al contrario: hai in me una guida.
 
@@ -93,7 +93,7 @@
 
             {charTag(FifthCharacter, "hurry")}:                 È una pace per il cuore, vero?
             {charTag(FifthCharacter, "neutral")}:               Ogni angolo di questo spazio mi rasserena, anche quando mi sento fuori fuoco.
-            {charTag(FifthCharacter, "hurry")}:                 Continua a stupirmi, giorno per giorno.
+            {charTag(FifthCharacter, "hurry")}:                 Continua a stupirmi, giorno dopo giorno.
         
         -
 
@@ -104,33 +104,47 @@
             -> gender ->
         {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
                                                                 E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
-                                                                Con me usa pure i pronomi femminili.
+                                                                {player_pronoun has her:Anche io uso i pronomi femminili.|Con me invece usa pure i pronomi femminili.}.
+
             {
             - not waterChoice:
-            {charTag(FifthCharacter, "neutral")}:               Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.
+            {charTag(FifthCharacter, "neutral")}:               Ah, che sbadata, non mi sono presentata!
+                                                                Mi chiamo <b><i>{charNameFive}</b></i>.
+                                                                E il mio obiettivo è farti stare bene.
 
                     ~ grimoire_fifthChar += grimMentorPresentation
                     
             - else:
-            {charTag(FifthCharacter, "neutral")}:               Come {charNameFive} il mio unico obiettivo è farti stare bene.
+            {charTag(FifthCharacter, "neutral")}:               E come {charNameFive} il mio unico obiettivo è farti stare bene.
             }
         - (selfName)
             {
             - tutorial_MentorTutorial == true:
             {charTag(FifthCharacter, "hurry")}:                 Arriverà anche il momento in cui dovrò spiegarti perché sei qui, che cosa dovrei fare.
-            {charTag(FifthCharacter, "neutral")}:               Ma prima pensiamo al tuo benessere.
+
+                {
+                - grimoire_appendices has tutorialChoicesRelationship:
+                {charTag(FifthCharacter, "sad")}:               Anche se la capretta ti ha già dato un bel po' di informazioni.
+                    {
+                    - are_two_entities_together(Carla, PG):
+                     {charTag(Carla, "bored")}:                 E probabilmente non se ne ricorderà mezza.   
+                    }
+                }
+
                 {
                 - are_two_entities_together(FirstCharacter, PG) && grimoire_firstChar hasnt grimFirstCharTwo:
-                {charTag(FirstCharacter, "annoyed")}:           Cioè, {player_pronoun has him:uno|{player_pronoun has her:una|unə}} deve lavorare anche in una allucinazione?
+                {charTag(FirstCharacter, "annoyed")}:           Cioè, si deve lavorare anche in una allucinazione?
                 {charTag(FifthCharacter, "neutral")}:           Allucinazione?
                 }
+
+            {charTag(FifthCharacter, "neutral")}:               Ma prima pensiamo al tuo benessere.
             }
 
         {charTag(FifthCharacter, "neutral")}:                   C'è una cosa importante che devo dirti, {player_name}: qui avrai a che fare con cose viventi piene di storie.
                                                                 E ogni storia ha le sue complessità.
         {charTag(FifthCharacter, "sorry")}:                     Per questo potresti incontrare tematiche per te faticose.
         {charTag(FifthCharacter, "neutral")}:                   Ci saranno occasioni in cui potrai evitarle e non ti perderai nulla di questa esperienza.
-                                                                Ma quando si tratta di essere viventi, accogliere le loro ferite farà parte del tuo lavoro.
+                                                                Ma quando si tratta di esseri viventi, accogliere le loro ferite farà parte del tuo lavoro.
                                                                 Per questo ricorda: fermarsi o rinunciare non è un fallimento.
                                                                 Se senti il bisogno di staccare puoi tornare in camera, il posto da cui sei {player_pronoun has him:arrivato|{player_pronoun has her:arrivata|arrivatə}}, e stenderti sul letto.
                                                                 Al risveglio, troverai tutto come l'hai lasciato.
@@ -183,7 +197,7 @@
                                                                 E se avrai bisogno del mio aiuto, ti basterà cercarmi.
             {charTag(FifthCharacter, "neutral")}:               Ho sempre qualche dritta su come affrontare i momenti più difficili.
                                                                 Ma ora vai: incontra nuove persone, esplora nuovi luoghi!
-            {charTag(FifthCharacter, "sad")}:                   Ma che sbadata: ti ho aperto la serra, <>                                                    
+            {charTag(FifthCharacter, "sad")}:                   Dimenticavo: ti ho aperto la serra, <>                                                    
 
                                         {
                                             - contentsPond has PG:
@@ -196,8 +210,12 @@
 
         {charTag(FifthCharacter, "hurry")}:                     La serra è un bel posto dove rilassarsi, e non solo.
         {charTag(FifthCharacter, "bored")}:                     Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!       
-        {charTag(FifthCharacter, "neutral")}:                   Ora ti saluto e no, cavolo, che sbadata parte due!
-        {charTag(FifthCharacter, "hurry")}:                     Questo è un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
+        {charTag(FifthCharacter, "neutral")}:                   Ora ti saluto e 
+        {charTag(FifthCharacter, "hurry")}:                     No!
+        {charTag(FifthCharacter, "sad")}:                       Cavoletti. 
+        {charTag(FifthCharacter, "sorry")}:                     Perché dimentico sempre tutto ?!?
+        {charTag(FifthCharacter, "hurry")}:                     Questo è per te.
+                                                                È un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
         
                                                                     //Sblocco del grimorio
                                                                     ~ grimoire_isEnabled = true
