@@ -1157,7 +1157,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
         {
             - about_greenhouse && grimoire_appendices hasnt grimGreenhouseMentor:
-                ~ grimoire_appendices += grimGreenhouseMentor  
+                ~ grimoire_appendices += grimGreenhouseMentor
         }
 
         {

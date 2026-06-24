@@ -16,8 +16,8 @@
                 - else:  
                 {charTag(ThirdCharacter, "jester")}:            No, questo non è il frigo.   
                 }
-                                                                Volevo prendermi una Kilkenny, giusto per rilassarmi.
-                                                                E invece eccomi qui.
+                {charTag(ThirdCharacter, "neutral")}:           Volevo prendermi una Kilkenny, giusto per rilassarmi.
+                {charTag(ThirdCharacter, "bored")}:             E invece eccomi qui.
                 {charTag(ThirdCharacter, "jester")}:            Gesù licantropo, che colpo che mi sono preso!
                                                                         //Check parolacce da parte di Mentore
                                                                         ~ fifthChar_slurDetectorFunction()                                           
@@ -49,7 +49,7 @@
         {charTag(ThirdCharacter, "jester")}:                    Meno male.
                                                                 ME NO MA LE!
                                                                 Dieci su dieci.
-        {charTag(ThirdCharacter, "neutral")}:                   Perché tra {charNameOne} e {charNameFive} mi serviva qualcuno con cui parlare di calcio e non solo di "cose emotive".
+        {charTag(ThirdCharacter, "neutral")}:                   Perché con tutt queste donne mi serviva qualcuno con cui parlare di calcio e non solo di "cose emotive".
 
                 {
                 - are_two_entities_together(FirstCharacter, PG):
@@ -57,7 +57,7 @@
                 }
 
         - thirdChar_recordedPlayerPronoun == her:
-        {charTag(ThirdCharacter, "jester")}:                    Io sono sicuro che con {charNameOne} e {charNameFive} sei felice che ci sia qualcuno con cui non devi parlare della posta del cuore.
+        {charTag(ThirdCharacter, "jester")}:                    Io sono sicuro che con tutte queste donne sei felice che ci sia qualcuno con cui non devi parlare della posta del cuore.
                                                                 Non che ci sia qualcosa di male se ti piace!
         {charTag(ThirdCharacter, "neutral")}:                   Ma non è la mia roba.
         {charTag(ThirdCharacter, "bored")}:                     Zero proprio!
@@ -83,8 +83,8 @@
                                                                 Ho cercato il mio riflesso.
         {charTag(ThirdCharacter, "bored")}:                     Un po' ci sono rimasto male: tutte quelle ore spese in palestra e nessuno le vedrà!
         {charTag(ThirdCharacter, "jester")}:                    Detto tra noi, le ore sono state due.
-                                                                Tre se contiamo il tempo dell'iscrizione.
-                                                                Però la mia pancetta da birra alle tipe piace, almeno un otto me lo piglio.
+        {charTag(ThirdCharacter, "bored")}:                     Tre se contiamo il tempo dell'iscrizione.
+        {charTag(ThirdCharacter, "jester")}:                    Però la mia pancetta da birra alle tipe piace, almeno un otto me lo piglio.
         {charTag(ThirdCharacter, "neutral")}:                   E ora sono una birra.
                                                                 Ma birra o non birra, che si combina da queste parti?
                                                                 
@@ -201,8 +201,8 @@
                                                                 Anche se ti giuro che non si vede quando non sempre un pezzo di vetro.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
-                {charTag(ThirdCharacter, "jester")}:            Ma tra l'altro come piscio?
-                                                                E vuol dire che sono nudo ora?
+                {charTag(ThirdCharacter, "neutral")}:           Ma tra l'altro come piscio?
+                {charTag(ThirdCharacter, "jester")}:            E vuol dire che sono nudo ora?
                                                                 Dove mi è finito il?
                 {charTag(ThirdCharacter, "neutral")}:           Oh.
                 {charTag(ThirdCharacter, "bored")}:             Oh.

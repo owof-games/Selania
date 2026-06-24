@@ -576,20 +576,20 @@
                                                 E {charNameOne} ha fatto il possibile con quello che aveva.
                                                 Due: prima di cucinare, proporrà alla persona di approfondire un argomento che avete già affrontato.
                                                 Ogni persona di solito ha tre argomenti a disposizione.
-                                                Se ne percepisce meno a disposizione, di solito vuole dire che deve conoscere meglio quella persona per potergliene poi parlare.
+                                                Se ne percepisce meno a disposizione, di solito vuole dire che deve conoscere meglio quella persona.
     {charTag(Carla, "neutral")}:                Tre: farà delle scelte, come sempre.
-                                                Ma la cucina è una pausa dal mondo, e per questo la persona le darà un feedback sull'impressione che si è fatta su di lei mentre cucinavate.
+                                                Ma la cucina è una pausa dal mondo, e per questo la persona le darà un feedback sull'impressione che si è fatta su di lei mentre cucinavate, ignorando il resto.
                                                 Questo è molto utile per capire che tipo di rapporto state creando, e se ci sono correzioni da fare.
-                                                Ad esempio, dopo tutte le nostre conversazioni, le posso dire che <>
+                                                
                                                 ~ temp carlaDice = RANDOM (1, 3)
         {carlaDice:
             - 1:
-        {charTag(Carla, "neutral")}:            non mi annoiavo così tanto con qualcuno da quando mi sono ritrovata bloccata in ascensore con il responsabile dei premi assicurativi per i dipendenti.                                                                                   
+        {charTag(Carla, "neutral")}:            Ad esempio, dopo tutte le nostre conversazioni, le posso dire che non mi annoiavo così tanto con qualcuno da quando mi sono ritrovata bloccata in ascensore con il responsabile dei premi assicurativi per i dipendenti.                                                                                   
             - 2:
-        {charTag(Carla, "bored")}:              un po' lei mi disgusta, mi spiace.
+        {charTag(Carla, "bored")}:              Ad esempio, dopo tutte le nostre conversazioni, le posso dire che un po' lei mi disgusta, mi spiace.
                                                 No, non è vero: non mi dispiace.
             - 3:
-        {charTag(Carla, "happy")}:              non è male chiacchierare con lei.
+        {charTag(Carla, "happy")}:              Ad esempio, dopo tutte le nostre conversazioni, le posso dire che non è male chiacchierare con lei.
                                                 Anche se preferirei non chiacchierare affatto.        
         }                                                                                
     {charTag(Carla, "happy")}:                  Quattro: in cucina le persone le faranno domande personali.

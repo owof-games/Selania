@@ -408,7 +408,8 @@
         {charTag(FifthCharacter, "neutral")}:                                   Ma non ti ho mai mai visto in giro.
                                                                                 E ogni giorno vengo a sistemare il sentiero e pulire la serra.
         {charTag(Franco, "neutral")}:                                           Forse allora non sei venuta ogni giorno.
-                                                                                O forse mi hai scambiato per Tullio? A volte succede.
+                                                                                O forse mi hai scambiato per Tullio?
+                                                                                A volte succede.
         {charTag(Franco, "question")}:                                          O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
                                                                                 Un po' come zio Gracco e il suo problema con l'alcool.
                                                                                 E i combustibili in generale.
@@ -438,7 +439,7 @@
                 {charTag(ThirdCharacter, "jester")}:                            Adoro questa rana, è completamente suonata.
                                                                                 Completamente!
                 }                                                                   
-        {charTag(Franco, "question")}:                                          E comunque io non me lo ricordo un Mentore da queste parti.
+        {charTag(Franco, "question")}:                                          E comunque io non me lo ricordo una Mentore da queste parti.
                                                                                 E neanche un Nasore o un Orecchiore se è per questo.
         {
         - are_two_entities_together(FirstCharacter, PG):

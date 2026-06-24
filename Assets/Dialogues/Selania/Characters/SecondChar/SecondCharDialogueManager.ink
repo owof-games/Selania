@@ -233,7 +233,7 @@
                 + {secondChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                                                     Ti voglio dare questa cosa.
 
                 {//Ma non ho ascoltato il tutorial (se attivo)
-                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimGreenhouseMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(SecondCharacter, "emotional")}:            Regaliiii! Ma prima c'è qualcuno che vuole spiegarti qualcosa mi sa.

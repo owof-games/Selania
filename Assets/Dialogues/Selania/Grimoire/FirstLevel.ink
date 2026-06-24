@@ -29,7 +29,7 @@
         + {grimoire_witch has grimWitchIntro}[TheWitch]
             -> grimoire_witchRecap
 
-        + {grimoire_franco != ()}[Franco]
+        + {grimoire_franco has grimFrancoFirst}[Franco]
             -> grimoire_francoRecap
 
         //Guide

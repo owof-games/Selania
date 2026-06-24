@@ -40,7 +40,7 @@
         
 
         //Commento sul libro
-        - grimoire_witch has grimWitchIntro && grimoire_appendices has grimChoicesMentor && grimoire_witch hasnt grimWitchBook:
+        - grimoire_witch has grimWitchIntro && grimoire_fifthChar has grimMentorIntro && grimoire_witch hasnt grimWitchBook:
             -> about_the_book
 
         //Dialogo su Franco

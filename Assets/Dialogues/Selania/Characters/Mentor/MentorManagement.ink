@@ -43,7 +43,7 @@
 
     - else:
     {
-        - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor:
+        - are_two_entities_together(Mentor, PG) && grimoire_fifthChar has grimMentorIntro:
         {
         - thirdChar_storyStatus != story_storyRemote:
             { 

@@ -150,7 +150,7 @@
             -> first_mentor_about_third_char
         
         //Chiacchiere tra Franco e Mentore
-        - are_two_entities_together(Mentor, PG) && grimoire_appendices has grimChoicesMentor && are_two_entities_together (Franco, PG) && grimoire_fifthChar hasnt grimMentorFranco && frog_commonStoryletsPause == 0:
+        - are_two_entities_together(Mentor, PG) && grimoire_fifthChar has grimMentorIntro && are_two_entities_together (Franco, PG) && grimoire_fifthChar hasnt grimMentorFranco && frog_commonStoryletsPause == 0:
             -> frog_and_mentor_chit_chat
         
         //Chiacchiera tra PNG3 e Mentore

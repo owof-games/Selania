@@ -118,7 +118,7 @@
 
             {
                 - grimoire_secondChar != ():
-                    {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {grimoire_appendices hasnt grimChoicesMentor:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
+                    {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {grimoire_fifthChar has grimMentorIntro:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
                         {
                             - are_two_entities_together(FirstCharacter, PG): 
                                     {charTag(FirstCharacter, "annoyed")}:       Ehm, non so se ti sei visto riflesso ama, ma, ehm. 
@@ -267,10 +267,6 @@
   
             -> name_choice.top2 ->
             -> gender ->
-
-        {charTag(SecondCharacter, "energy")}:                   Io mi faccio chiamare {charNameTwo} qui.
-                                                                E i ricci mi piacciono.
-        {charTag(SecondCharacter, "neutral")}:                  Ma non so mica se voglio essere uno di loro.
     	        
             {
                 - player_pronoun has him:
@@ -289,7 +285,7 @@
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
             
-        {charTag(SecondCharacter, "emotional")}:                Comunque sono contento che sei un maschio.
+        {charTag(SecondCharacter, "emotional")}:                Sono contento che sei un maschio.
                                                                 Le ragazze sono appiccicose.
             {
             - are_two_entities_together(ThirdCharacter, PG):
@@ -302,7 +298,7 @@
                 {charTag(SecondCharacter, "angry")}:                Non sono <i>così</i> piccolo!
             }
             {
-                -grimoire_appendices hasnt grimChoicesMentor:
+                - grimoire_fifthChar has grimMentorIntro:
                 {charTag(SecondCharacter, "neutral")}:              Il fiore parlante è appiccicoso.
                 - else:
                 {charTag(SecondCharacter, "neutral")}:              {charNameFive} è appiccicosa.

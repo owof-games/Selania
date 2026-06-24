@@ -204,12 +204,12 @@
             - are_two_entities_together(Mentor, PG):
             {charTag(FifthCharacter, "sorry")}:                 Questo posto non sarà mai abbastanza sicuro.
         }  
-        {charTag(FirstCharacter, "neutral")}:                   Però il male mi ha fatto capire che questa non è un altro trip.
-                                                                Peccato
+        {charTag(FirstCharacter, "neutral")}:                   Però il male mi ha fatto capire che questo non è un altro trip.
+                                                                Peccato.
         {charTag(FirstCharacter, "affectionate")}:              Dovrei essere preoccupata, vero?
                                                                 Perché invece ho solo sonno.
-        {charTag(FirstCharacter, "sad")}:                       Mi spiace giusto perché le mie coinquiline saranno di sicuro preoccupate.
-        {charTag(FirstCharacter, "affectionate")}:              Non me l'aspettavo ma sono diventate la mia famiglia.
+        {charTag(FirstCharacter, "sad")}:                       Mi spiace giusto perché le mie coinquiline saranno strapreoccupate.
+        {charTag(FirstCharacter, "affectionate")}:              Non me l'aspettavo, ma sono diventate la mia famiglia.
         {charTag(FirstCharacter, "neutral")}:                   Sono le persone con cui cazzeggio e piango e con cui ho anche una band.
                                                                 Una band davvero figa!
         {charTag(FirstCharacter, "affectionate")}:              Le amo.
