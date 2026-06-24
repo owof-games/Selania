@@ -341,15 +341,15 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 //Assegnazione parlante
 {
     - are_two_entities_together(FirstCharacter,PG) && entity_location(PG) == Kitchen:
-        ~ kitchen_actualChef = translator(firstChar_ActualName)
+        ~ kitchen_actualChef = FirstCharacter
         ~ kitchen_actualChefPronouns = her
 
     - are_two_entities_together(SecondCharacter,PG) && entity_location(PG) == Kitchen:
-        ~ kitchen_actualChef = translator(secondChar_ActualName)
+        ~ kitchen_actualChef = SecondCharacter
         ~ kitchen_actualChefPronouns = him
 
     - are_two_entities_together(ThirdCharacter,PG) && entity_location(PG) == Kitchen:
-        ~ kitchen_actualChef = translator(thirdChar_ActualName)
+        ~ kitchen_actualChef = ThirdCharacter
         ~ kitchen_actualChefPronouns = him
 
     - are_two_entities_together(FrancoCucina,PG) && entity_location(PG) == Kitchen:
@@ -381,7 +381,7 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 
     = reset_indicator
 
-            {charTag(TheWitch, witch_state())}:     <i>La cucina è un momento di ristoro, e per questo, temporaneamente, la relazione tra {kitchen_actualChef} e {player_name} riparte da zero.</i>
+            {charTag(TheWitch, witch_state())}:     <i>La cucina è un momento di ristoro, e per questo, temporaneamente, la relazione tra {translator(kitchen_actualChef)} e {player_name} riparte da zero.</i>
                                                     <i>Quando {kitchen_actualChef} uscirà dalla cucina, si ricorderà sia di com'era la reazione prima dell'ingresso, sia delle cose dette qui.
         ->->
 
@@ -393,19 +393,19 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 
     = first_time_good_reaction
 
-            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente adorato da {kitchen_actualChef}, e quindi riceverà un consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente adorato da {translator(kitchen_actualChef)}, e quindi riceverà un consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 
     = first_time_meh_reaction
 
-            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {kitchen_actualChef}, e quindi riceverà un consiglio fumoso su cosa fare parlando con {kitchen_actualChefPronouns == him:lui|lei}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente abbastanza apprezzato da {translator(kitchen_actualChef)}, e quindi riceverà un consiglio fumoso su cosa fare parlando con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 
     = first_time_bad_reaction
 
-            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente detestato da {kitchen_actualChef}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} ha aggiunto un ingrediente detestato da {translator(kitchen_actualChef)}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con {kitchen_actualChefPronouns == him:lui|lei}.</i>
         
         ->->
 

@@ -773,6 +773,7 @@
     {charTag(SecondCharacter, "energy")}:                               CRAAAAAAC!
     {charTag(Franco, "question")}:                                      E sai saltare?
     {charTag(SecondCharacter, "energy")}:                               Sìì!
+    {charTag(Franco, "neutral")}:                                       Io no.
     {charTag(Franco, "question")}:                                      E hai uno zio che si chiama Gracco?
     {charTag(SecondCharacter, "melanchonic")}:                          No.
     {charTag(Franco, "neutral")}:                                       Forse però non è così importante.

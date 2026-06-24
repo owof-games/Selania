@@ -51,13 +51,13 @@
                 -> kitchen_moon_feedback -> 
                 -> first_theme
 
-        + \ {grimoire_secondChar has grimSecondCharSix} {charTag(PG, "neutral")}:               Della scuola.
+        + {grimoire_secondChar has grimSecondCharSix}\ {charTag(PG, "neutral")}:                Della scuola.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(SecondCharacter)
                 -> kitchen_moon_feedback -> 
                 -> second_theme
 
-        + \ {grimoire_secondChar has grimSecondCharEight} {charTag(PG, "neutral")}:                 Delle bugie.
+        + {grimoire_secondChar has grimSecondCharEight}\ {charTag(PG, "neutral")}:                 Delle bugie.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(SecondCharacter)
                 -> kitchen_moon_feedback -> 
@@ -256,7 +256,7 @@
                 {charTag(SecondCharacter, "emotional")}:        Spaventiamo {charNameOne}?
                                                                 Mi fa ridere tantissimissimo quando urla!   
             -
-        {charTag(SecondCharacter, "energy")}:                   Il profumo è buono.
+        {charTag(SecondCharacter, "energy")}:                   Sta salendo un odorino magnifico da questa roba!
                                                                 Ma quindi mangiamo solo dolce oggi?
         {charTag(SecondCharacter, "emotional")}:                Questa è una cosa bellissima!
         {charTag(SecondCharacter, "energy")}:                   Ma tu capisci sempre le persone?
@@ -328,7 +328,7 @@
                 {charTag(SecondCharacter, "melanchonic")}:      Voglio che sono curiosi con me.
                 {charTag(SecondCharacter, "neutral")}:          Come qualcosa che non hanno mai visto.
                                                                 Ma una cosa bella.
-                                                                Non una specie di broccolo ancora più disgustoso di quelli reali.    
+                                                                Non una specie di broccolo che sa di caccola e se lo tocchi sembra una medusa.  
              
             + \ {charTag(PG, "neutral")}:                       La stranezza è qualcosa che arricchisce il mondo.
                     -> glyph_choice_manager(false, aetherC)->
@@ -1210,12 +1210,12 @@
     {charTag(SecondCharacter, "energy")}:                       E poi questo {piatto} sembra una cosa da cinema.
     {
         - firstChar_storyStatus == story_storyStarted:
-            {charTag(SecondCharacter, "emotional")}:            Secondo me a {charNameOne} gli sarebbe piaciuto TAN-TIS-SI-MO!
-                                                                Dovevo lasciarle un pezzetto!
+            {charTag(SecondCharacter, "emotional")}:            Secondo me a {charNameOne} le sarebbe piaciuto TAN-TIS-SI-MO!
+                                                                Non dirglielo che non gliene ho lasciato neanche un pezzo!
         
         - else:
-            {charTag(SecondCharacter, "emotional")}:            Secondo me a {charNameOne} gli sarebbe piaciuto TAN-TIS-SI-MO!
-                                                                Un po' mi manca.
+            {charTag(SecondCharacter, "emotional")}:            Secondo me a {charNameOne} le sarebbe piaciuto TAN-TIS-SI-MO!
+                                                                Mi manca.
     }
 
     {charTag(SecondCharacter, "neutral")}:                      A me mi piace parlare, ma gli adulti non mi ascoltano mai così tanto.

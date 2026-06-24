@@ -4,7 +4,7 @@
 
  ----------------------------------*/
 === pre_start_cooking_with_fourth_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -20,7 +20,7 @@
  
 
 === cooking_with_fourth_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -225,7 +225,7 @@
             
     
     = second_theme
-        ~ temp charNameOne = translator(thirdChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -381,7 +381,7 @@
                 
     
     = third_theme
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -552,7 +552,7 @@
         }
     
         = add_ingredient
-        ~ temp charNameOne = translator(thirdChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -585,7 +585,7 @@
 === at_table_with_fourth_char
     -> grimoire_storylets_updater -> 
 
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -646,7 +646,7 @@
 
         
                 = good_reaction
-                ~ temp charNameOne = translator(thirdChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -664,7 +664,7 @@
                         -> relationship_feedback
                 
                 = bad_reaction
-                ~ temp charNameOne = translator(thirdChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -678,7 +678,7 @@
             
                 
                 = meh_reaction
-                ~ temp charNameOne = translator(thirdChar_ActualName)
+                ~ temp charNameOne = translator(firstChar_ActualName)
                 ~ temp charNameTwo = translator(secondChar_ActualName)
                 ~ temp charNameThree = translator(thirdChar_ActualName)
                 ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -724,7 +724,7 @@
             
         
 === ending_cooking_with_fourth_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -762,7 +762,7 @@
 
 
 === fourth_char_cooking_alone
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -809,7 +809,7 @@
 
 === food_gift_fourth_char
 {debug: passo per food_gift_third_char.}
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)

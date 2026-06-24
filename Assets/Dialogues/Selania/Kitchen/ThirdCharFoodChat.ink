@@ -4,7 +4,7 @@
 
  ----------------------------------*/
 === pre_start_cooking_with_third_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -20,7 +20,7 @@
  
 
 === cooking_with_third_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -487,7 +487,7 @@
     
     = second_theme
     //ragazze
-        ~ temp charNameOne = translator(thirdChar_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -553,7 +553,7 @@
                 -> glyph_choice_manager(false, airC)->
         {charTag(ThirdCharacter, "neutral")}:                                   Pochissimi.
                                                                                 La cosa più difficile è la gelosia.
-        {charTag(ThirdCharacter, "bored")}:                                     C'ho messo un bel po' ad accettare che lei conosca anche con altri uomini.
+        {charTag(ThirdCharacter, "bored")}:                                     C'ho messo un bel po' ad accettare che parla anche con altri uomini.
         {charTag(ThirdCharacter, "neutral")}:                                   Però siamo arrivati a un accordo: con gli altri può essere qualunque persona, ma solo con me sarà Ava.
 
 
@@ -645,7 +645,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Sembra una cosa da film, ma ho perso la verginità a quattordici anni con un'amica di mia mamma.
                                                                                 In macchina.
                                                                                 Mentre i miei genitori e suo marito erano a messa.
-        {charTag(ThirdCharacter, "jester")}:                                    Quella ha chiamato Dio più volte in quella macchina che in tutta la sua vita in Chiesa.
+        {charTag(ThirdCharacter, "jester")}:                                    Quella ha chiamato Dio più volte in quella macchina che in tutta la sua vita in chiesa.
         {charTag(ThirdCharacter, "neutral")}:                                   Un mese dopo la fine con Dona, qualche cliente ha iniziato a provarci.
                                                                                 Qualche vecchia fiamma.
                                                                                 Ho retto tre mesi, ma poi, una sera smorta.
@@ -661,7 +661,7 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Le volte dopo...
                                                                                 Il sesso è un po' come la birra.
         {charTag(ThirdCharacter, "jester")}:                                    Ti distrae sul momento, ma se esageri il giorno dopo te ne penti.
-        {charTag(ThirdCharacter, "neutral")}:                                   Ora mi manca, sinceramente.
+        {charTag(ThirdCharacter, "neutral")}:                                   Ora mi manca, il sesso.
                                                                                 Ava mi lascia andare con altre donne, ma non è la stessa cosa.
         {charTag(ThirdCharacter, "melanchonic")}:                               Ho voglia di qualcosa di più.
         {charTag(ThirdCharacter, "jester")}:                                    Comunque 'sto cazzo di posto mi rende melenso, vecio!
@@ -857,10 +857,9 @@
         + \ {charTag(PG, "neutral")}:                                           Il passato non è qualcosa che si supera, ma che si trasforma.
                 -> glyph_choice_manager(false, aetherC)->
         {charTag(ThirdCharacter, "bored")}:                                     Mi sembri la zia, vecio.
-        {charTag(ThirdCharacter, "neutral")}:                                   Se stai parlando di mio papà, il passato è una cosa che prendi e metti in una scatola e dimentichi.
-                                                                                E se si ostina a chiamarti, o si presenta in birreria senza avvisarti, lo ignori.
-                                                                                Fino a quando non si stanca.
-                                                                                E tu intanto vai avanti.        
+        {charTag(ThirdCharacter, "neutral")}:                                   Se stai parlando della roba delle pillole, il passato è una cosa che prendi e ci metti sopra una grossa luce.
+                                                                                Una con le scritte, come <i>stronza</i>.
+        {charTag(ThirdCharacter, "bored")}:                                     Così la prossima volta te lo ricordi!      
             -
 
              //Intermezzo culinario
@@ -935,7 +934,7 @@
     
     = third_theme
     //lavoro
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1412,7 +1411,7 @@
                 }
     
     = add_ingredient
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1446,7 +1445,7 @@
 === at_table_with_third_char
     -> grimoire_storylets_updater -> 
 
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1513,7 +1512,7 @@
     
                 
     = bad_reaction
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1534,7 +1533,7 @@
             
                 
     = meh_reaction
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1573,7 +1572,7 @@
     
         
     = relationship_feedback
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
@@ -1643,7 +1642,7 @@
             
         
 === ending_cooking_with_third_char
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
@@ -1698,7 +1697,7 @@
 
 
 === third_char_cooking_alone
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1745,7 +1744,7 @@
 
 === food_gift_third_char
 {debug: passo per food_gift_third_char.}
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
@@ -1885,7 +1884,7 @@
 
 
 === function third_char_kitchen_comments(step)
-    ~ temp charNameOne = translator(thirdChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
