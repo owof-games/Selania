@@ -144,40 +144,54 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 
 VAR grimoire_isEnabled = false
 
+LIST step = (FirstStep), SecondStep, ThirdStep, FourthStep
+
 
 -> start
 
 === start
 @interact
-TheWitch, , witch_first_quarter: Questo è un dialogo.
-TheWitch, , witch_first_quarter: Abilito il grimorio.
-~ grimoire_isEnabled = true
-TheWitch, , witch_first_quarter: Il grimorio è abilitato.
-~ firstChar_aether        = 5
-~ firstChar_earth         = -2
-~ firstChar_air           = 5
-~ firstChar_water         = 9
-~ firstChar_fire          = -9
-~ firstChar_last_aether   = 5
-~ firstChar_last_earth    = -2
-~ firstChar_last_air      = 7
-~ firstChar_last_water    = 9
-~ firstChar_last_fire     = -9
-TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
-~ firstChar_aether        = -5
-~ firstChar_earth         = 2
-~ firstChar_air           = -5
-~ firstChar_water         = -9
-~ firstChar_fire          = 9
-~ firstChar_last_aether   = -5
-~ firstChar_last_earth    = 2
-~ firstChar_last_air      = -7
-~ firstChar_last_water    = -9
-~ firstChar_last_fire     = 9
-TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.
-TheWitch, , witch_first_quarter: Questa è la seconda riga.
-TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
--> grimoire_greenhouse_in_dialogue ->
+{step:
+    - FirstStep:
+        TheWitch, , witch_first_quarter: Questo è un dialogo.
+        TheWitch, , witch_first_quarter: Abilito il grimorio.
+        ~ grimoire_isEnabled = true
+        TheWitch, , witch_first_quarter: Il grimorio è abilitato.
+    - SecondStep:
+        ~ firstChar_aether        = 5
+        ~ firstChar_earth         = -2
+        ~ firstChar_air           = 5
+        ~ firstChar_water         = 9
+        ~ firstChar_fire          = -9
+        ~ firstChar_last_aether   = 5
+        ~ firstChar_last_earth    = -2
+        ~ firstChar_last_air      = 7
+        ~ firstChar_last_water    = 9
+        ~ firstChar_last_fire     = -9
+        TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
+    - ThirdStep:
+        ~ firstChar_aether        = -5
+        ~ firstChar_earth         = 2
+        ~ firstChar_air           = -5
+        ~ firstChar_water         = -9
+        ~ firstChar_fire          = 9
+        ~ firstChar_last_aether   = -5
+        ~ firstChar_last_earth    = 2
+        ~ firstChar_last_air      = -7
+        ~ firstChar_last_water    = -9
+        ~ firstChar_last_fire     = 9
+        TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.
+    - FourthStep:
+        TheWitch, , witch_first_quarter: Questa è la seconda riga.
+        TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
+        -> grimoire_greenhouse_in_dialogue ->
+}
+
+{step == LIST_MAX(LIST_ALL(step)):
+    ~ step = LIST_MIN(LIST_ALL(step))
+- else:
+    ~ step++
+}
 -> start
 
 === grimoire
@@ -305,7 +319,7 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
         -> grimoire_greenhouse_third_in_dialogue
     + [Close #bookmark:close]
         @grimoireClose
-        -> start
+        ->->
 
 
 === grimoire_greenhouse_third_in_dialogue
@@ -428,7 +442,7 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
 
 === grimoire_first_character
 
-    @grimoireCharacter #character:FirstCharacter #characterName:Chitarra #characterDescription:Una ragazza in cerca della sua melodia
+    @grimoireCharacter #character:FirstCharacter #characterName:Chitarra #characterDescription:Una ragazza in cerca della sua melodia #aether:{firstChar_aether} #air:{firstChar_air} #fire:{firstChar_fire} #water:{firstChar_water} #earth:{firstChar_earth}
     Regalale qualcosa che le ricordi il nonno.
     In cucina aggiungi qualcosa che parli di riposo.
     Leggi una storia di ribellione.

@@ -2477,15 +2477,26 @@ namespace Selania.Rework.Components
             // otherwise, we navigate the two trees in parallel and find the differences
             else
                 changed = CompareGrimoireTrees(_latestGrimoireTree, currentGrimoireTree, _latestGrimoireTree.TreeRoot,
-                    currentGrimoireTree.TreeRoot);
+                    currentGrimoireTree.TreeRoot, 0, new HashSet<GrimoirePageIdentifier>());
 
             // emit the changed event only if something actually changed
             if (changed) _grimoireChanged!.OnNext(Unit.Default);
+
+            // remember what was the latest grimoire tree
+            _latestGrimoireTree = currentGrimoireTree;
         }
 
         private bool CompareGrimoireTrees(GrimoireTree previousTree, GrimoireTree currentTree,
-            GrimoirePageIdentifier? previousTreeNode, GrimoirePageIdentifier currentTreeNode)
+            GrimoirePageIdentifier? previousTreeNode, GrimoirePageIdentifier currentTreeNode, int depth,
+            HashSet<GrimoirePageIdentifier> visitedIdentifiers)
         {
+            // we have self-referencing nodes: if a node is already visited, let's say it has no changes. if it had, it's been already picked up earlier.
+            if (!visitedIdentifiers.Add(currentTreeNode)) return false;
+
+            // security check to avoid infinite recursion
+            if (depth > 10) throw new InvalidOperationException("Grimoire trees comparison entered a loop");
+
+            // actually check for changes
             var changed = false;
 
             // compare the corresponding current and previous node
@@ -2502,13 +2513,15 @@ namespace Selania.Rework.Components
             // navigate the links
             foreach (var currentLink in currentPageContent.GrimoireLinks)
             {
+                if (currentLink.NavigationKind != NavigationKind.Forward) continue;
                 var currentChildNode = currentTree.LinkToIdentifier[(currentTreeNode, currentLink)];
                 var previousChildNode =
                     previousTreeNode == null ||
                     !previousTree.LinkToIdentifier.TryGetValue((previousTreeNode, currentLink), out var value)
                         ? null
                         : value;
-                changed = CompareGrimoireTrees(previousTree, currentTree, previousChildNode, currentChildNode) ||
+                changed = CompareGrimoireTrees(previousTree, currentTree, previousChildNode, currentChildNode,
+                              depth + 1, visitedIdentifiers) ||
                           changed;
             }
 

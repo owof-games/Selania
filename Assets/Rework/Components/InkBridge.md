@@ -69,4 +69,6 @@ else
     end the algorithm
 ```
 
-This avoids using the stack of DFS, but we have instead a map from nodes to list of nodes
+This avoids using the stack of DFS, but we have instead a map from nodes to list of nodes.
+
+Note well: we currently have loops in this tree, in form of nodes linking to themselves (text nodes). Because of this, some extra checks are needed.

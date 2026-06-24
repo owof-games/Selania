@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebe5e072a1d4ae09987d1fbf98f1188, type: 3}
   m_Name: GrimoireNotificationsInkBridge
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.InkBridge
-  inkAssetJson: {fileID: 4900000, guid: 52d9d8f7c9096e149b45e4d2918ac46c, type: 3}
+  inkAssetJson: {fileID: 4900000, guid: 1abdb97b0739b1448b51b97c7c9834f1, type: 3}
   debugWordsToDisable: []
   pgListName: listCharacters
   pgListItemName: PG
