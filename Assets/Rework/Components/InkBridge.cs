@@ -2502,9 +2502,10 @@ namespace Selania.Rework.Components
             // navigate the links
             foreach (var currentLink in currentPageContent.GrimoireLinks)
             {
-                var currentChildNode = currentTree.LinkToIdentifier[currentLink];
+                var currentChildNode = currentTree.LinkToIdentifier[(currentTreeNode, currentLink)];
                 var previousChildNode =
-                    previousTreeNode == null || !previousTree.LinkToIdentifier.TryGetValue(currentLink, out var value)
+                    previousTreeNode == null ||
+                    !previousTree.LinkToIdentifier.TryGetValue((previousTreeNode, currentLink), out var value)
                         ? null
                         : value;
                 changed = CompareGrimoireTrees(previousTree, currentTree, previousChildNode, currentChildNode) ||
@@ -2539,7 +2540,8 @@ namespace Selania.Rework.Components
 
                 // run over all the links and add their children identifiers
                 var grimoireLinks = _latestGrimoireTree.IdentifierToContent[identifierToCheck].GrimoireLinks;
-                foreach (var link in grimoireLinks) identifiersToCheck.Push(_latestGrimoireTree.LinkToIdentifier[link]);
+                foreach (var link in grimoireLinks)
+                    identifiersToCheck.Push(_latestGrimoireTree.LinkToIdentifier[(identifierToCheck, link)]);
             }
 
             return false;
@@ -2578,7 +2580,7 @@ namespace Selania.Rework.Components
         private record GrimoireTree(
             GrimoirePageIdentifier TreeRoot,
             Dictionary<GrimoirePageIdentifier, GrimoirePageContent> IdentifierToContent,
-            Dictionary<GrimoireLink, GrimoirePageIdentifier> LinkToIdentifier);
+            Dictionary<(GrimoirePageIdentifier, GrimoireLink), GrimoirePageIdentifier> LinkToIdentifier);
 
         /// <summary>
         ///     Visit the whole grimoire in a separate flow and returns the data structure that represents the contents
@@ -2589,8 +2591,8 @@ namespace Selania.Rework.Components
             // data structure to perform the depth-first search: see InkBridge.md for details on the algorithm
             Dictionary<GrimoirePageIdentifier, List<GrimoireLink>> visitedLinks = new();
             Dictionary<GrimoirePageIdentifier, GrimoirePageContent> identifierToContent = new();
-            Dictionary<GrimoireLink, GrimoirePageIdentifier> linkToIdentifier = new();
-            GrimoireLink? lastFollowedLink = null;
+            Dictionary<(GrimoirePageIdentifier, GrimoireLink), GrimoirePageIdentifier> linkToIdentifier = new();
+            (GrimoirePageIdentifier, GrimoireLink)? lastFollowedLinkFromIdentifier = null;
             GrimoirePageIdentifier? root = null;
 
             // get the story
@@ -2598,6 +2600,7 @@ namespace Selania.Rework.Components
 
             // jump to the grimoire in a different flow
             var startingFlowName = story.currentFlowName;
+            Logger.ZLogTrace($"Starting grimoire navigation");
             story.SwitchFlow("grimoireTreeBuilder");
             story.ChoosePathString(grimoireInkNodeName);
             try
@@ -2610,11 +2613,12 @@ namespace Selania.Rework.Components
                     // get out identifier and content of this node
                     var identifier = GetIdentifier();
                     var content = GetContent();
+                    Logger.ZLogTrace($"Visiting {identifier}");
                     // store the root, correspondences identifier => content and link => identifier, with some runtime checks
                     root ??= identifier;
-                    if (lastFollowedLink != null)
-                        if (!linkToIdentifier.TryAdd(lastFollowedLink, identifier) &&
-                            !linkToIdentifier[lastFollowedLink].Equals(identifier))
+                    if (lastFollowedLinkFromIdentifier is (not null, not null) lastFollowed)
+                        if (!linkToIdentifier.TryAdd(lastFollowed, identifier) &&
+                            !linkToIdentifier[lastFollowed].Equals(identifier))
                             throw new InvalidOperationException("Found the same link with two different identifiers");
 
                     if (!identifierToContent.TryAdd(identifier, content) &&
@@ -2622,7 +2626,7 @@ namespace Selania.Rework.Components
                         throw new InvalidOperationException(
                             "Found the same identifier with two different contents");
 
-                    // check the first link we can follow that is a forward navigation and we haven't visited yet
+                    // check the first link we can follow that is a forward navigation, and we haven't visited yet
                     if (!visitedLinks.ContainsKey(identifier)) visitedLinks[identifier] = new List<GrimoireLink>();
 
                     var currentVisitedLinks = visitedLinks[identifier];
@@ -2633,7 +2637,8 @@ namespace Selania.Rework.Components
                     ).FirstOrDefault();
                     if (forwardLink != null)
                     {
-                        lastFollowedLink = forwardLink;
+                        Logger.ZLogTrace($"Found a forward link: {forwardLink}");
+                        lastFollowedLinkFromIdentifier = (identifier, forwardLink);
                         currentVisitedLinks.Add(forwardLink);
                         story.ChooseChoiceIndex(forwardLink.ChoiceIndex);
                         continue;
@@ -2644,38 +2649,43 @@ namespace Selania.Rework.Components
                         content.GrimoireLinks.FirstOrDefault(link => link.NavigationKind == NavigationKind.Back);
                     if (backLink != null)
                     {
-                        lastFollowedLink = null;
+                        Logger.ZLogTrace($"No more forward links, backtracking: {backLink}");
+                        lastFollowedLinkFromIdentifier = null;
                         story.ChooseChoiceIndex(backLink.ChoiceIndex);
                         continue;
                     }
 
                     // otherwise, we got back to root and we have nothing more to visit!
+                    Logger.ZLogTrace($"No more forward links nor back links: stopping.");
                     break;
                 }
-
-                Logger.ZLogTrace(
-                    $"Traversed {identifierToContent.Count} grimoire nodes and {linkToIdentifier.Count} links.");
             }
             finally
             {
                 // revert back to the normal flow
+                Logger.ZLogTrace($"Grimoire navigation completed");
                 story.SwitchFlow(startingFlowName);
             }
 
             // sanity checks - if they end up being costly, we can move them under a #if UNITY_EDITOR once we're sure the code is ok
+            Logger.ZLogTrace($"Sanity checks");
             if (root == null)
                 throw new InvalidOperationException("Finished the visit of build tree without producing the root");
-            foreach (var content in identifierToContent.Values)
+            foreach (var (sourceIdentifier, content) in identifierToContent)
             foreach (var link in content.GrimoireLinks)
             {
-                var identifier = linkToIdentifier.GetValueOrDefault(link) ??
-                                 throw new InvalidOperationException($"Missing identifier for link {link}");
+                if (link.NavigationKind != NavigationKind.Forward) continue;
+                var identifier = linkToIdentifier.GetValueOrDefault((sourceIdentifier, link)) ??
+                                 throw new InvalidOperationException(
+                                     $"Missing target identifier for link {sourceIdentifier} => {link}");
                 if (!identifierToContent.ContainsKey(identifier))
                     throw new InvalidOperationException(
-                        $"Link {link} points to identifier {identifier} which has not been visited");
+                        $"Link {link} from {sourceIdentifier} points to identifier {identifier} which has not been visited");
             }
 
             // return the result
+            Logger.ZLogTrace(
+                $"Traversed {identifierToContent.Count} grimoire nodes and {linkToIdentifier.Count} links.");
             return new GrimoireTree(root, identifierToContent, linkToIdentifier);
 
             GrimoirePageIdentifier GetIdentifier()
@@ -2693,7 +2703,7 @@ namespace Selania.Rework.Components
                 while (story.canContinue)
                 {
                     story.Continue();
-                    sb.Append(story.currentText.Trim());
+                    sb.Append(story.currentText);
                 }
 
                 var storyCurrentChoices = story.currentChoices;

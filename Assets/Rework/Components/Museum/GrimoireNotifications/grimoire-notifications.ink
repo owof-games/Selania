@@ -145,7 +145,7 @@ LIST allGlyphs = Fire, Air, Water, Earth, Aether
 VAR grimoire_isEnabled = false
 
 
--> grimoire
+-> start
 
 === start
 @interact
@@ -204,33 +204,33 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
 
 === grimoire_greenhouse
     @grimoireGreenhouse
-    + {RANDOM(1, 6) <= 3} [BaccaDellaAddolorata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [BaccaDellaAddolorata #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [BarbaDellInciampo #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [BarbaDellInciampo #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [BastoneDellOzioso #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [BastoneDellOzioso #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [BrinaDellImpossibile #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [BrinaDellImpossibile #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [CantoDelleCompagne #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [CantoDelleCompagne #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [CardoAspinato #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [CardoAspinato #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [EderaDelleAmanti #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [EderaDelleAmanti #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [ErbaLiccia #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [ErbaLiccia #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [FalsaPalude #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [FalsaPalude #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [LanaNotturna #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [LanaNotturna #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [LicheneDegliAbissi #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [LicheneDegliAbissi #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [NonTiScordarDiTe #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [NonTiScordarDiTe #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
-    + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [Olobino #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [LaSpazzata #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
     + [Index #bookmark:index]
         -> grimoire
@@ -275,33 +275,33 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
 
 === grimoire_greenhouse_in_dialogue
     @grimoireGreenhouse
-    + {RANDOM(1, 6) <= 3} [BaccaDellaAddolorata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [BaccaDellaAddolorata #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [BarbaDellInciampo #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [BarbaDellInciampo #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [BastoneDellOzioso #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [BastoneDellOzioso #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [BrinaDellImpossibile #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [BrinaDellImpossibile #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [CantoDelleCompagne #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [CantoDelleCompagne #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [CardoAspinato #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [CardoAspinato #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [EderaDelleAmanti #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [EderaDelleAmanti #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [ErbaLiccia #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [ErbaLiccia #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [FalsaPalude #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [FalsaPalude #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [LanaNotturna #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [LanaNotturna #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [LicheneDegliAbissi #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [LicheneDegliAbissi #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [NonTiScordarDiTe #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {true} [NonTiScordarDiTe #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + {false} [Olobino #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [LaSpazzata #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
     + [Close #bookmark:close]
         @grimoireClose
@@ -354,45 +354,45 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
 
 === grimoire_sigils
     @grimoireSigils
-    + {RANDOM(1, 6) <= 3} [{Fire}{Air} #enabled:{hasSigilStartingWith(glyph_fireAirSigils)}]
+    + {true} [{Fire}{Air} #enabled:{hasSigilStartingWith(glyph_fireAirSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Fire}{Water} #enabled:{hasSigilStartingWith(glyph_fireWaterSigils)}]
+    + {false} [{Fire}{Water} #enabled:{hasSigilStartingWith(glyph_fireWaterSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Fire}{Earth} #enabled:{hasSigilStartingWith(glyph_fireEarthSigils)}]
+    + {true} [{Fire}{Earth} #enabled:{hasSigilStartingWith(glyph_fireEarthSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Fire}{Aether} #enabled:{hasSigilStartingWith(glyph_fireAetherSigils)}]
+    + {true} [{Fire}{Aether} #enabled:{hasSigilStartingWith(glyph_fireAetherSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Air}{Fire} #enabled:{hasSigilStartingWith(glyph_airFireSigils)}]
+    + {true} [{Air}{Fire} #enabled:{hasSigilStartingWith(glyph_airFireSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Air}{Water} #enabled:{hasSigilStartingWith(glyph_airWaterSigils)}]
+    + {true} [{Air}{Water} #enabled:{hasSigilStartingWith(glyph_airWaterSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Air}{Earth} #enabled:{hasSigilStartingWith(glyph_airEarthSigils)}]
+    + {false} [{Air}{Earth} #enabled:{hasSigilStartingWith(glyph_airEarthSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Air}{Aether} #enabled:{hasSigilStartingWith(glyph_airAetherSigils)}]
+    + {false} [{Air}{Aether} #enabled:{hasSigilStartingWith(glyph_airAetherSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Water}{Fire} #enabled:{hasSigilStartingWith(glyph_WaterFireSigils)}]
+    + {true} [{Water}{Fire} #enabled:{hasSigilStartingWith(glyph_WaterFireSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Water}{Air} #enabled:{hasSigilStartingWith(glyph_WaterAirSigils)}]
+    + {true} [{Water}{Air} #enabled:{hasSigilStartingWith(glyph_WaterAirSigils)}]
         -> grimoire_sigils_third
     + [{Water}{Earth} #enabled:{hasSigilStartingWith(glyph_WaterEarthSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Water}{Aether} #enabled:{hasSigilStartingWith(glyph_WaterAetherSigils)}]
+    + {false} [{Water}{Aether} #enabled:{hasSigilStartingWith(glyph_WaterAetherSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Earth}{Fire} #enabled:{hasSigilStartingWith(glyph_earthFireSigils)}]
+    + {false} [{Earth}{Fire} #enabled:{hasSigilStartingWith(glyph_earthFireSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Earth}{Air} #enabled:{hasSigilStartingWith(glyph_earthAirSigils)}]
+    + {false} [{Earth}{Air} #enabled:{hasSigilStartingWith(glyph_earthAirSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Earth}{Water} #enabled:{hasSigilStartingWith(glyph_earthWaterSigils)}]
+    + {true} [{Earth}{Water} #enabled:{hasSigilStartingWith(glyph_earthWaterSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Earth}{Aether} #enabled:{hasSigilStartingWith(glyph_earthAetherSigils)}]
+    + {false} [{Earth}{Aether} #enabled:{hasSigilStartingWith(glyph_earthAetherSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Aether}{Fire} #enabled:{hasSigilStartingWith(glyph_aetherFireSigils)}]
+    + {true} [{Aether}{Fire} #enabled:{hasSigilStartingWith(glyph_aetherFireSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Aether}{Air} #enabled:{hasSigilStartingWith(glyph_aetherAirSigils)}]
+    + {false} [{Aether}{Air} #enabled:{hasSigilStartingWith(glyph_aetherAirSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Aether}{Water} #enabled:{hasSigilStartingWith(glyph_aetherWaterSigils)}]
+    + {false} [{Aether}{Water} #enabled:{hasSigilStartingWith(glyph_aetherWaterSigils)}]
         -> grimoire_sigils_third
-    + {RANDOM(1, 6) <= 3} [{Aether}{Earth} #enabled:{hasSigilStartingWith(glyph_aetherEarthSigils)}]
+    + {true} [{Aether}{Earth} #enabled:{hasSigilStartingWith(glyph_aetherEarthSigils)}]
         -> grimoire_sigils_third
     + [Index #bookmark:index]
         -> grimoire
