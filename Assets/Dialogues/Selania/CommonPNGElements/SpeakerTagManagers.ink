@@ -87,7 +87,10 @@
             - else: 
                     ~ return "Mentor, {displayName}, Mentore_{mood}"
 
-        }             
+        }
+
+    -TheWitch:
+        ~ return "{PNG}, {displayName}, witch_{mood}"                       
 
     - else:
         ~ return "{PNG}, {displayName}, {mood}"  
@@ -339,15 +342,15 @@
     //- else:
        {
         - witch_moonState == NewMoon:
-            ~ return "witch_new_moon"
+            ~ return "new_moon"
         - witch_moonState == FirstQuarter:
-            ~ return "witch_first_quarter"
+            ~ return "first_quarter"
         - witch_moonState == FullMoon:
-            ~ return "witch_full_moon"
+            ~ return "full_moon"
         - witch_moonState == ThirdQuarter:
-            ~ return "witch_third_quarter"
+            ~ return "third_quarter"
         - witch_moonState == RedMoon:
-            ~ return "witch_red_moon"
+            ~ return "red_moon"
        
        }
 //}
