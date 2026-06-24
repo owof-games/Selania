@@ -6,11 +6,11 @@ namespace Selania.Rework.Components.Museum.GrimoireStory
 {
     public class GrimoireStoryController : MonoBehaviour, IAutomaticEditorInject
     {
-        [Inject] internal IStoryLinear StoryLinear = null!;
+        [Inject] internal IStoryStateSerializer StoryStateSerializer = null!;
 
         public void Start()
         {
-            StoryLinear.Continue();
+            StoryStateSerializer.StartStory(null);
         }
     }
 }
