@@ -180,6 +180,7 @@ VAR relationshipIndicatorNeutralValue = 0
             - thirdChar_storyStatus == story_storyStarted:
                 ~ thirdChar_storyStatus = story_storyRemote
                 ~ thirdChar_mailPause = thirdChar_mailPauseDuration
+                 ~ move_entity(ThirdCharacter, Safekeeping)
 
             - thirdChar_storyStatus == story_storyRemote:
                 ~ story_endedStories += story_thirdCharStoryEnded

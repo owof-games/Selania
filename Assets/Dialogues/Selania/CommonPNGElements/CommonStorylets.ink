@@ -208,6 +208,10 @@
     {charTag(FifthCharacter, "hurry")}:                                 Anche tu hai uno scopo, {charNameOne}.
                                                                         Tutti l'abbiamo.
     {charTag(FirstCharacter, "sad")}:                                   E quale sarebbe il mio?
+        {
+        - are_two_entities_together(ThirdCharacter, PG):
+        {charTag(ThirdCharacter, "jester")}:                            Rompermi le balle.
+        }
     {charTag(FifthCharacter, "hurry")}:                                 Un po' lo scoprirai da te, parlando con {player_name}.
     {charTag(FifthCharacter, "neutral")}:                               Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
     {charTag(FifthCharacter, "hurry")}:                                 La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.

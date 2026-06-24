@@ -31,7 +31,6 @@
         - grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal:
                 -> ask
         
-
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo
         - grimoire_thirdChar has grimThirdCharFirstProposal:
                 -> ask
@@ -108,7 +107,7 @@
 
         //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
-            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         {charNameThree}, iniziamo la riscrittura?
+            + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal} \ {charTag(PG, "neutral")}:                           {charNameThree}, iniziamo la riscrittura?
 
                 {//Ma non ho ascoltato il tutorial (se attivo)
                     - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):

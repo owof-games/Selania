@@ -122,7 +122,7 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
-            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal && grimoire_appendices hasnt grimRewritingMentor} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
+            + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
 
                 
                 {//Ma non ho ascoltato il tutorial (se attivo)
