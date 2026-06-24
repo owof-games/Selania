@@ -71,7 +71,7 @@
         {charTag(SecondCharacter, "melanchonic")}:              Come i bambini piccoli. No no no.
         {charTag(FirstCharacter, "affectionate")}:              Mi ci riconosco, totale.
 
-        + \ {charTag(PG, "neutral")}:                           Se gli alieni mi leggono la mente penso che li fanno scappare dalla paura!
+        + \ {charTag(PG, "neutral")}:                           Se gli alieni mi leggono la mente penso cose che li fanno scappare dalla paura!
             -> glyph_choice_manager(false, fireC)->
         {charTag(SecondCharacter, "energy")}:                   Sarebbe divertentissimo!
                                                                 Ora provo a pensare tantissimo alla cacca!
@@ -1564,13 +1564,13 @@
 
         {charTag(Carla, "neutral")}:                                    Per ogni chiarimento richiesto da un minore, è necessaria la presenza di un adulto.
         {charTag(SecondCharacter, "energy")}:                           Ecco ecco, ora c'è qui {player_name}!
-                                                                        E {player_name} è un{player_pronoun has her:a|ə} adult{player_pronoun has him:o|{player_pronoun has her:a|ə}}.
+                                                                        E {player_name} è adult{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
                                                                         Quindi ora puoi rispondermi.
         {charTag(Carla, "neutral")}:                                    Mi ripeta la domanda.
         {charTag(SecondCharacter, "energy")}:                           È vero che le capre recitano?
         {charTag(Carla, "bored")}:                                      Decreto legislativo 134/2022, sezione 65.
         {charTag(Carla, "neutral")}:                                    "È previsto che ogni capra svezzata segua un corso di recitazione di anni tre presso la Royal Academy of Dramatic Art."
-                                                                        "Il costo è a carico dell'allevatore, o di chi ne fa ne veci."
+                                                                        "Il costo è a carico dell'allevatore, o di chi ne fa le veci."
                                                                         "Il percorso sarà ritenuto concluso quando la suddetta capra avrà mangiato almeno una delle seguenti opere."
                                                                         "<i>Sogno di una capra di mezza estate.</i>"
                                                                         "<i>Gli allegri somari di Windsor.</i>"

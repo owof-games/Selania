@@ -14,7 +14,7 @@
         {charTag(SecondCharacter, "neutral")}:              Sono il secondo meno alto della classe!   
     }
     {
-        - thirdChar_storyStatus == story_storyStarted:
+        - grimoire_thirdChar != ():
         {charTag(FirstCharacter, "annoyed")}:               Per non parlare di quell'altro.                                      
     } 
     {charTag(FirstCharacter, "neutral")}:                   E {charNameFive} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
@@ -28,7 +28,7 @@
     {charTag(FirstCharacter, "affectionate")}:              E man mano mi sono ricordata delle belle chiacchiere che mi sono fatta a tavola.
                                                             Il cibo apre alle confidenze.
     {charTag(FirstCharacter, "neutral")}:                   E quindi, ecco un regalo per te, {player_name}: un posto dove cucinare in compagnia, per conoscerci meglio.
-                                                            E visto che di solito siamo noi a decidere di cosa parlarti, ho già avvisato tutti che a questo giro sarai tu a decidere di cosa parlare.
+                                                            E ho già avvisato tutt3 che a questo giro sarai tu a decidere di cosa parlare.
     {charTag(FirstCharacter, "curious")}:                   Per cui: quando ti butta bene invita qualcunə di noi a cucinare, e vediamo che salta fuori.
                                                             Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     {charTag(FirstCharacter, "affectionate")}:              Che ne dici?
