@@ -25,7 +25,7 @@
                         -> second_char_main_storylets.two
                 }   
 
-            - grimoire_secondChar hasnt grimSecondCharThreeHer or grimoire_secondChar hasnt grimSecondCharThreeHim or grimoire_secondChar hasnt grimSecondCharThreeThey:
+            - (grimoire_secondChar hasnt grimSecondCharThreeHer) or (grimoire_secondChar hasnt grimSecondCharThreeHim) or (grimoire_secondChar hasnt grimSecondCharThreeThey):
                         -> second_char_main_storylets.three
                 
             - grimoire_secondChar hasnt grimSecondCharFour:

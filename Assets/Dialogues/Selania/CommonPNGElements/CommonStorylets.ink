@@ -885,7 +885,7 @@
         {charTag(Franco, "party")}:                                             E dare dei soldi ai tuoi amici.
         {charTag(Franco, "question")}:                                          Ma non fai prima a darglieli direttamente se ne hanno bisogno?
         {charTag(ThirdCharacter, "jester")}:                                    Vecio, ma hai mai giocato a qualcosa?
-                                                                                Perché ogni gioco è gara, competizione!
+                                                                                Perché il bello è la competizione!
         {charTag(Franco, "neutral")}:                                           No perché le gare fanno stare male chi perde.
         {charTag(ThirdCharacter, "jester")}:                                    Ma dai, è un gioco, chi ci sta male?
         {charTag(Franco, "question")}:                                          Quindi a te va bene se perdi?
@@ -898,7 +898,7 @@
         {charTag(Franco, "neutral")}:                                           Quindi non ti piace perdere.
         {charTag(Franco, "party")}:                                             Allora io non compro nessun giocatore e prendo una pizza per tutti.
         {charTag(ThirdCharacter, "bored")}:                                     Ma che c'entra la pizza?
-        {charTag(Franco, "party")}:                                             La pizza fa felice tutti!
+        {charTag(Franco, "party")}:                                             La pizza rende le persone felici!
         {charTag(Franco, "neutral")}:                                           Ma senza salumi o cose del genere, l'ho promesso alle formiche.
         {charTag(ThirdCharacter, "bored")}:                                     Le formiche?
                                                                                 Dio mio Franchì, dio mio.
