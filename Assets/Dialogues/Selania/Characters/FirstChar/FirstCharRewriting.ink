@@ -101,7 +101,7 @@
         {charTag(PG, "neutral")}:                               {charNameOne}, prima hai detto che ti aspettavi concerti e viaggi nel mondo.
                                                                 Ma che ora sei mediocre e hai un lavoro di merda.
                                                                 Però possiamo raccontare la tua storia in un altro modo.
-                                                                Tu dici che sei un <b>concentrato di rinunce</b>.
+                                                                Tu dici che sei un concentrato di rinunce.
 
             + \ {charTag(PG, "neutral")}:                       Ma è davvero possibile avere tutto quello che si desidera?
                 -> glyph_choice_manager(false, airC)->
@@ -421,7 +421,7 @@
                                                                 Come avanzare.
                                                                 Come uscire da una vita che non senti più tua.
             {
-                - firstChar_InkLevel == ink_empty:
+                - firstChar_maximum_inkLevel == ink_empty:
                     {charTag(PG, "neutral")}:                   Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi.
             } 
                                                                 Non sta a me dirti cosa fare, ma se posso darti un consiglio, eccolo.
@@ -658,11 +658,10 @@
         {charTag(FirstCharacter, "neutral")}:                   Direi che sono pronta per andarmene, {player_name}.
                                                                 Abbiamo fatto un viaggio enorme assieme, ora è giunto il tempo per me di riprendere in mano la mia vita.
                                                                 Grazie di tutto, davvero.
-                                                                Grazie di tutto.
                                                                 Salutami {charNameFive}, e dille di riposarsi.
         {
             - secondChar_storyStatus == story_storyStarted:
-                                                                Salutami anche quella bestiola di {charNameTwo}.
+                                                                E quella bestiola di {charNameTwo}.
 
         }
         {

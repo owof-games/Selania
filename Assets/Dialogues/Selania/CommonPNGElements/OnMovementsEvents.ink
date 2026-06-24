@@ -239,7 +239,7 @@ VAR letters_doggoPause = false
     }
 
     {
-        - thirdChar_storyStatus == story_storyPostal && thirdChar_mailPause < 0 && grimoire_thirdChar hasnt grimThirdCharLetterFour && letters_doggoPause == false:
+        - thirdChar_storyStatus == story_storyRemote && thirdChar_mailPause < 0 && grimoire_thirdChar hasnt grimThirdCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoThirdLetters, TrainStop)
                 {debug: Ho messo la nota del third personaggio alla fermata del bus.}
@@ -248,7 +248,7 @@ VAR letters_doggoPause = false
 
         - else:
             {
-                - thirdChar_storyStatus == story_storyPostal:
+                - thirdChar_storyStatus == story_storyRemote:
                     ~ thirdChar_mailPause --   
             }        
 

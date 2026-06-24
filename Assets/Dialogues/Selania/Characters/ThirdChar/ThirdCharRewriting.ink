@@ -753,7 +753,7 @@
             } 
 
             {
-            - thirdChar_InkLevel == ink_empty:
+            - thirdChar_maximum_inkLevel == ink_empty:
             {charTag(PG, "neutral")}:                           Mi spiace non esser stat{player_pronoun has him:o|{player_pronoun has her:a|ə}} capace di creare un rapporto di fiducia con te.
                                                                 Spero sarai però disposto ad accogliere quello che sto per dirti.
                                                                 

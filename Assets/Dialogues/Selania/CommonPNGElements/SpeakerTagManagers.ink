@@ -64,7 +64,7 @@
 
     - FifthCharacter:
         {   
-            - firstChar_storyStatus == story_storyPostal:
+            - fifthChar_storyStatus == story_storyPostal:
                 ~ return "{PNG}, {displayName}, {mood}"
 
             //Chiamo sempre FifthCharacter, senza separazione da Mentore, ma faccio un check a seconda che la storia come Mostro sia partita o meno.

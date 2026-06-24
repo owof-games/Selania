@@ -421,6 +421,12 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
+            {
+            - secondChar_maximum_inkLevel == ink_empty:
+            {charTag(PG, "neutral")}:                   Sono consapevole di non aver guadagnato la tua fiducia.
+                                                        Ma ti chiedo di ascoltarmi giusto per qualche minuto.
+                                                                
+            }  
 
     {charTag(PG, "neutral")}:                           Credo di aver compreso quale sia il tuo blocco, perché sei qui.
                                                         E riguarda gli adulti.
