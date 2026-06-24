@@ -89,7 +89,7 @@
                                                                 Ma birra o non birra, che si combina da queste parti?
                                                                 
    
-        + \ {charTag(PG, "neutral")}:                           Sto provando ad aiutarvi a stare meglio con voi stess3.
+        + \ {charTag(PG, "neutral")}:                           Sto provando ad aiutarvi a stare meglio con voi stessə.
                 -> glyph_choice_manager(false, waterC)->
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
@@ -1295,7 +1295,7 @@
                                                                 <i>Cosa vorrebbe rispondere {player_name}?</i>
         
 
-        + (air)\ {charTag(PG, "neutral")}:                      Perché non cercare online persone con la tua esperienza? Potresti scoprire soluzioni che altr3 hanno già trovato.
+        + (air)\ {charTag(PG, "neutral")}:                      Perché non cercare online persone con la tua esperienza? Potresti scoprire soluzioni che altrə hanno già trovato.
 
         + (earth)\ {charTag(PG, "neutral")}:                    Migliora la tua situazione economica, così vedrà che sei più solido di quello che pensa.
                 

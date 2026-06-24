@@ -383,7 +383,7 @@
        
        + \ {charTag(PG, "neutral")}:                        Ma puoi essere un adulto che si prende cura delle persone, come {charNameFive}.
             -> glyph_choice_manager(false, waterC)->
-           {charTag(PG, "neutral")}:                        E rendere più facile la vita all3 altr3.
+           {charTag(PG, "neutral")}:                        E rendere più facile la vita allə altrə.
         {
             - grimoire_secondChar has grimSecondCharKitchenTwo:
                                                             Una brava persona, come ti ha detto tuo fratello.

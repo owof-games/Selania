@@ -86,7 +86,7 @@
                                                                 Viviamo per poter guardare i pinguini!
         {charTag(FirstCharacter, "affectionate")}:              Forse la risposta mi spaventerebbe, ma potrebbe rendermi la vita più facile.
         -    
-    {charTag(FirstCharacter, "neutral")}:                       Bene, direi che abbiamo tutt3 qualcosa a cui pensare.
+    {charTag(FirstCharacter, "neutral")}:                       Bene, direi che abbiamo tuttə qualcosa a cui pensare.
     {charTag(FirstCharacter, "affectionate")}:                  Tipo, dove schiacciarmi quel pisolino.
 
         -> second_char_closing_storylet ->
@@ -148,7 +148,7 @@
                 {charTag(FirstCharacter, "neutral")}:                       Sai che non è una gara, vero?
                 }
 
-        + \ {charTag(PG, "neutral")}:                                   Quello che puoi fare è cercare di perdonare te stessa: ne trarrete entramb3 beneficio.
+        + \ {charTag(PG, "neutral")}:                                   Quello che puoi fare è cercare di perdonare te stessa: ne trarrete entrambə beneficio.
                 -> glyph_choice_manager(Mentor, aetherC)->
         {charTag(FifthCharacter, "sad")}:                               Non.
                                                                         No.
@@ -354,7 +354,7 @@
         + \ {charTag(PG, "neutral")}:                                           Le informazioni per cambiare sono ovunque: a un certo punto uno deve anche farsi il mazzo e smetterla con le scuse.
                 -> glyph_choice_manager(false, fireC)->
         {charTag(FirstCharacter, "neutral")}:                                   La parte stanca di me ti dà ragione, ama.
-                                                                                Ma non è una cosa per tutt3.
+                                                                                Ma non è una cosa per tuttə.
                                                                                 Devi sapere dove cercare, capire quali sono cazzate scritte da bot AI e quali risposte invece sono sensate.
         {charTag(Mentor, "neutral")}:                                           Devi superare la paura di farti domande che possono capovolgere il tuo mondo.
         {charTag(TheWitch, "{witch_state()}")}:                                 <i>E sapere che quella domanda esiste, visto che potrebbe non fare proprio parte del tuo mondo, del tuo quotidiano.</i>                                                                         
@@ -609,7 +609,7 @@
                                                                         <i>E anche se ora non ti sembra possibile, c'è sempre qualcuno che vorrà bene a una persona che è totalmente sé stessa, senza maschere o menzogne.</i>
                                                                         <i>Come è stato con il signor Poggi.</i>
         {charTag(ThirdCharacter, "bored")}:                             Decisamente frocio.                                                                
-                                                                        <i>Noi ci abbiamo messo una vita per fare questo passo, e ora siamo tutt3.</i>
+                                                                        <i>Noi ci abbiamo messo una vita per fare questo passo, e ora siamo tuttə.</i>
                                                                         <i>E {charNameThree} può essere chiunque voglia essere.</i>
         {charTag(ThirdCharacter, "jester")}:                            Anche Elon Musk?
                                                                         Mi farebbero comodo tutti i suoi soldi!                                                                

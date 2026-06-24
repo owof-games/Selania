@@ -577,7 +577,7 @@
         
     ~ temp recoveredCultivable = LIST_RANDOM(frog_recoveredCultivables)
 
-        {charTag(Franco, "party")}:                     Signori e signore e signor3, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
+        {charTag(Franco, "party")}:                     Signori e signore e signorə, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
                                                         Direttamente nella collezione di {player_name}!
 
             ~ backpack_findedGifts += recoveredCultivable

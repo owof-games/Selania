@@ -459,7 +459,7 @@
                                                                 Pensa a quando ti sei messo lì ad ascoltare Petra per capire perché era arrabbiata per la rissa che avevi scatenato per difenderla.   
                 }                                               
                                 
-            + (air) \ {charTag(PG, "neutral")}:                 Avete tutt3 un interesse comune: Armando. Perché non riparti da lì con la tua famiglia?
+            + (air) \ {charTag(PG, "neutral")}:                 Avete tuttə un interesse comune: Armando. Perché non riparti da lì con la tua famiglia?
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
                 {charTag(PG, "neutral")}:                       Lo stesso piccolo Armando che, mentre cucinavamo assieme, vedevi come "una vittoria" di tua sorella su di te.
@@ -688,7 +688,7 @@
                                                                 In cucina mi ha raccontato che ti paragonavano a Joe Manganiello.
                                                                 Non è l'età a dettare il successo, ma il lavoro che fai su di te.
                 } 
-                                                                Anche se ricordo ancora quando ci siamo presentat3, e mi hai detto che le ragazze adorano la tua pancetta da birra.
+                                                                Anche se ricordo ancora quando ci siamo presentatə, e mi hai detto che le ragazze adorano la tua pancetta da birra.
         
         + (water) \ {charTag(PG, "neutral")}:                   Ma perché non prendere come riferimento tuo padre, che ha messo i suoi valori davanti al denaro?
         {charTag(PG, "neutral")}:                               L'hai descritto come un fallito, per poi raccontarmi di qualcuno capace di mettere i propri valori e le persone a cui tiene davanti a tutto il resto.

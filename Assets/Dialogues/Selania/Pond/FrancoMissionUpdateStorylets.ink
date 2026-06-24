@@ -386,7 +386,7 @@
         {charTag(Franco, "neutral")}:               Quando ero ancora un girino, mamma Craazia mi diceva sempre:
                                                     "Tuo fratello Clodoveo ha preso la mia intelligenza."
                                                     "Tua sorella Boemonda la bellezza di tuo padre."
-                                                    E poi continuava così elencando tutt3 l3 mi3 centottantasei fradell3.
+                                                    E poi continuava così elencando tuttə lə miə centottantasei fradellə.
                                                     E infine.
                                                     "Tu, Franco. Hai delle belle pupille."
         {charTag(Franco, "party")}:                 Mi piacciono le mie pupille, mi fanno vedere tante cose.

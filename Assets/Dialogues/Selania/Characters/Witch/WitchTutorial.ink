@@ -9,7 +9,7 @@
 
                 {
                 - grimoire_appendices has grimChoicesMentor:
-                {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciut3, {charNameFive} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
+                {charTag(TheWitch, witch_state())}:                 <i>Quando vi siete conosciutə, {charNameFive} ha detto a {player_name} che le cose che dice alle persone sono un modo di vedere il mondo.
                                                                     <i>Apprezziamo gli sforzi di {charNameFive}, ma non siamo d'accordo con questo aspetto.
                 - else:
                 {charTag(TheWitch, witch_state())}:                 <i>La visione di {charNameFive} è più pratica della nostra, {player_name}.
@@ -48,7 +48,7 @@
                                                                     <i>Il tempo come sabbia.
                                                                     <i>E la voce di {player_name} come una traccia.
                     
-                + \ {charTag(PG, "neutral")}:                       Siamo uman3, e la nostra crescita prospera nella contraddizione.
+                + \ {charTag(PG, "neutral")}:                       Siamo umanə, e la nostra crescita prospera nella contraddizione.
                         -> glyph_choice_manager(true, aetherC)->
                     {charTag(TheWitch, witch_state())}:             <i>Ricordo poco della vita umana, ma la natura stessa prospera nel tentativo, nell'errore.
                                                                     <i>E noi parliamo non del prosperare, ma del valore delle azioni di {player_name}.

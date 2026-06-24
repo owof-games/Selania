@@ -10,7 +10,7 @@
     -> debug_richGrimoire ->
     -> debug_knot
 
-+ [Imposta l3 prim3 3 PNG come pront3 per la riscrittura]
++ [Imposta lə primə 3 PNG come prontə per la riscrittura]
     ~ debugRewriting()
    -> debug_knot 
     

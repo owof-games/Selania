@@ -86,7 +86,7 @@
 
     {
         - grimoire_secondChar has grimSecondCharNine:
-            {charNameTwo} ha parlato a {player_name} di lavoro. Ovvero: tutt3 l3 su3 compagn3 fanno mille cose, e lui invece è interessato solo agli animali. Ma ha paura che non esisteranno più animali quando sarà grande per via del cambiamento climatico. E per questo non vuole diventare grande, ma nemmeno restare bambino. Però gli piacerebbe fare il veterinario. 
+            {charNameTwo} ha parlato a {player_name} di lavoro. Ovvero: tuttə lə suə compagnə fanno mille cose, e lui invece è interessato solo agli animali. Ma ha paura che non esisteranno più animali quando sarà grande per via del cambiamento climatico. E per questo non vuole diventare grande, ma nemmeno restare bambino. Però gli piacerebbe fare il veterinario. 
     }
 
     {

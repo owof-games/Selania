@@ -75,7 +75,7 @@
                         - {charTag(FifthCharacter, "bored")}:             Andarsene così, senza nemmeno farsi riscrivere, ma io dico.
                         - {charTag(FifthCharacter, "bored")}:             La mancanza di rispetto di quell'uomo. Che nervi.
                         - {charTag(FifthCharacter, "bored")}:             Tutti rispettiamo delle regole, e lui? Lui se ne va così, perché gli va.
-                        - {charTag(FifthCharacter, "bored")}:             Arriva qui, ed è un <b>privilegio</b>! E lui invece ci abbandona tutt3. Quel maleducato.
+                        - {charTag(FifthCharacter, "bored")}:             Arriva qui, ed è un <b>privilegio</b>! E lui invece ci abbandona tuttə. Quel maleducato.
                     }
         }    
                 

@@ -106,7 +106,7 @@
 
         + \ {charTag(PG, "neutral")}:                           Tuo padre è super! Voglio anche io cose che fanno rumore!
             -> glyph_choice_manager(false, airC)->
-        {charTag(FirstCharacter, "affectionate")}:              Se ci fossimo incontrat3 da piccol3 avremmo fatto casino assieme.
+        {charTag(FirstCharacter, "affectionate")}:              Se ci fossimo incontratə da piccolə avremmo fatto casino assieme.
         {charTag(FirstCharacter, "curious")}:                   A volte poi lo faccio ancora con papà. 
         {charTag(FirstCharacter, "neutral")}:                   Gli piace fare musica con gli oggetti in casa, o le cose che ha nel laboratorio.
         {charTag(FirstCharacter, "annoyed")}:                   Mamma lo chiama "casino".
@@ -309,7 +309,7 @@
                                                                 E non c'è molto linguaggio per raccontare con vulnerabilità queste cose.
     {charTag(FirstCharacter, "sad")}:                           Quando ho detto "Ti amo" a Talco una volta, ubriaca, per un poco le cose si sono fatte strane.
                                                                 Perché dietro quella parola c'è una botta infinita di aspettative.
-    {charTag(FirstCharacter, "affectionate")}:                  Per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
+    {charTag(FirstCharacter, "affectionate")}:                  Per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capitə.
     {charTag(FirstCharacter, "neutral")}:                       Ha senso vero?
     
         + \ {charTag(PG, "neutral")}:                           L'alcool ci aiuta a dire cose che sono nascoste dentro di noi.
@@ -454,7 +454,7 @@
                                                                 Perché se fai le cose senza sapere, non puoi nemmeno capire davvero se serviranno a qualcosa.
                                                                 E il mondo è pieno di belle azioni che hanno fatto disastri.
              
-            + \ {charTag(PG, "neutral")}:                       Non è sconclusionato: lottare ci rende viv3!
+            + \ {charTag(PG, "neutral")}:                       Non è sconclusionato: lottare ci rende vivə!
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:               Sì, credo?
                                                                 Però non sempre sei prontə ad agire.
@@ -567,7 +567,7 @@
         {charTag(FirstCharacter, "curious")}:                   E ci fa bene, no? 
         {charTag(FirstCharacter, "neutral")}:                   Alla fine cose buonissime sono nate da errori.
         {charTag(FirstCharacter, "curious")}:                   Come il gorgonzola. 
-        {charTag(FirstCharacter, "affectionate")}:              Dovremmo fare meno l3 poliziott3, e perdonarci di più.
+        {charTag(FirstCharacter, "affectionate")}:              Dovremmo fare meno lə poliziottə, e perdonarci di più.
         
             + \ {charTag(PG, "neutral")}:                       Serve del metodo. Se la base non è solida, crolla tutta la casa.
                 -> glyph_choice_manager(false, earthC)->
@@ -610,7 +610,7 @@
             {charTag(FirstCharacter, "neutral")}:               Però è un bel punto di partenza. 
             -
         
-        {charTag(FirstCharacter, "affectionate")}:              <i>Più gorgonzola, meno poliziott3.</i>
+        {charTag(FirstCharacter, "affectionate")}:              <i>Più gorgonzola, meno poliziottə.</i>
                                                                 Devo proporlo a Valeria.
         {charTag(FirstCharacter, "neutral")}:                   Aspetta, mescolo o si attacca tutto.
         {charTag(FirstCharacter, "curious")}:                   Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura? 
@@ -685,7 +685,7 @@
         {charTag(FirstCharacter, "affectionate")}:              Ammazza se picchia 'sto vino.
         {charTag(FirstCharacter, "neutral")}:                   Sto imparando tanto da Valeria, sai?
                                                                 Talco è statə la persona che mi ha insegnato ad accogliere la creatività del caos.
-                                                                Valeria mi sta mostrando quanto si possa fare unit3.
+                                                                Valeria mi sta mostrando quanto si possa fare unitə.
                                                                 Ma non c'è solo quello: c'è un aspetto di piacere.
         {charTag(FirstCharacter, "annoyed")}:                   Lei è sfavata quando vede i modi seriosi e pesanti di comunicare, di fare le cose.
         {charTag(FirstCharacter, "neutral")}:                   Crede che il cambiamento, la lotta debba essere piacevole.
@@ -884,7 +884,7 @@
                 ~ player_updateKitchenPersonalChoices(airC)
             {charTag(FirstCharacter, "affectionate")}:          Lo sapevo!
             {charTag(FirstCharacter, "neutral")}:               Ecco perché mi sento capita da te.
-                                                                {player_pronoun has her:unite|unit3} dalla creatività!
+                                                                {player_pronoun has her:unite|unitə} dalla creatività!
 
             + (fire1)\ {charTag(PG, "neutral")}:                <i>Arrostisco attivamente delle melanzane.</i>
                ~ kitchen_recipeNoun = "Melanzane"
@@ -1064,7 +1064,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Che mi fa tanto "Critico J.K.Rowling ma spendo soldi in roba di Harry Potter e chi se ne frega se poi quella stronza finanzia pericolose associazioni transfobiche".
             {charTag(FirstCharacter, "affectionate")}:          Però l'idea del rapporto con chi mi ascolta mi piace molto molto molto.
 
-            + \ {charTag(PG, "neutral")}:                       Dell'acqua, dall3 antenat3, e dall'inconscio collettivo a cui attingiamo.
+            + \ {charTag(PG, "neutral")}:                       Dell'acqua, dallə antenatə, e dall'inconscio collettivo a cui attingiamo.
                 -> glyph_choice_manager(false, aetherC)->
             {charTag(FirstCharacter, "affectionate")}:          È una bella visione.
                                                                 Così mi inserisco in una lunga conversazione, che non è né l'inizio né la fine.

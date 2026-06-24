@@ -1268,7 +1268,7 @@
             {
                 - are_two_entities_together(FirstCharacter, PG):
                 {charTag(FirstCharacter, "annoyed")}:               Sono già stanca solo a sentire tutta questa roba.
-                                                                    Non dovrebbero, che ne so, fare l3 bambin3 e bona?
+                                                                    Non dovrebbero, che ne so, fare lə bambinə e bona?
                 {
                 - are_two_entities_together(ThirdCharacter, PG):
                 {charTag(ThirdCharacter, "jester")}:                Ti stupirà, ma per una volta sono d'accordo con te.                     

@@ -17,7 +17,7 @@
 
         - {charTag(FirstCharacter, "neutral")}:         Quando Talco ha lasciato il Conservatorio, il prof di composizione ha pianto. Aveva molto stima di ləi.
 
-        - {charTag(FirstCharacter, "neutral")}:         La gente sottovaluta il lavoro dellə camerierə. E per questo veniamo trattat3 come dell3 serv3. In quel caso sputare nei piatti è un dovere politico.
+        - {charTag(FirstCharacter, "neutral")}:         La gente sottovaluta il lavoro dellə camerierə. E per questo veniamo trattatə come dellə servə. In quel caso sputare nei piatti è un dovere politico.
 
         - {charTag(FirstCharacter, "neutral")}:         Quando Ennio è giù di corda si spara tutta la saga di Dragon Age dall'inizio. Ma non parliamo mai di Veilguard. Veilguard è vietato.
 

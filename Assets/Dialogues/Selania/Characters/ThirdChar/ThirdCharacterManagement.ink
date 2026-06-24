@@ -60,7 +60,7 @@
     //Moltiplicatore per la riscrittura
     VAR thirdChar_glyphVariation = 2
 
-    //Variabile per bloccare le reazioni dell3 altr3 PNG mentre rispondiamo alle lettere
+    //Variabile per bloccare le reazioni dellə altrə PNG mentre rispondiamo alle lettere
     VAR ThirdCharacterLetters = false
 
 
@@ -278,7 +278,7 @@
 
 //Funzione per la trasformazione della relazione tra prima e seconda fase
 === function third_char_relationshipFromLiveToLetters()
-//Il passaggio è un ribaltamento dello stato relazionale precedente: se all'inizio verremo premiat3 per l'uso per esempio del fuoco, ora deve essere al contrario la cosa.
+//Il passaggio è un ribaltamento dello stato relazionale precedente: se all'inizio verremo premiatə per l'uso per esempio del fuoco, ora deve essere al contrario la cosa.
 //Tengo conto delle soglie espresse per gestire affinity_calc e le ribalto (ovvero: se thirdChar_relationshipIndicator è minore uguale del valore negativo, ora lo porto al valore entusiasta)
 {
     - thirdChar_relationshipIndicator <= relationshipIndicatorNegativeValue:

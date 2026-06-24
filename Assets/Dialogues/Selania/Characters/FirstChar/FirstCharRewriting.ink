@@ -26,8 +26,8 @@
         {charTag(FirstCharacter, "neutral")}:                   Io...
         {charTag(FirstCharacter, "sad")}:                       Forse ho frainteso tutto il discorso sulla chitarra.
         {charTag(FirstCharacter, "neutral")}:                   Non è tanto "il piano b", la cosa facile.
-                                                                Ma la cosa che possono fare tutt3.
-        {charTag(FirstCharacter, "sad")}:                       E non ero pronta ad essere "tutt3".
+                                                                Ma la cosa che possono fare tuttə.
+        {charTag(FirstCharacter, "sad")}:                       E non ero pronta ad essere "tuttə".
         {charTag(FirstCharacter, "neutral")}:                   Mi aspettavo concerti e viaggi nel mondo.
                                                                 Mi aspettavo amicizie eterne e una casa in campagna e aiuto reciproco.
                                                                 Mi aspettavo un amore folle, di quelli su cui ci fanno i film.
@@ -298,7 +298,7 @@
                                                                 E sei stata tu a dirmi che bisogna perdonarsi in queste situazioni.
                                                                 Sbagliare.
                                                                 Provare cose nuove.
-                                                                <i>Più gorgonzola, meno poliziott3.</i>
+                                                                <i>Più gorgonzola, meno poliziottə.</i>
                                                                 Ricordi?
                 }
 
@@ -510,9 +510,9 @@
     - firstChar_ActualName has Triangolo:
         {
             - ending.air:
-                                                                E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                                                                E se ripenso a tutto quello che ci siamo dettə fino ad ora, credo che questa sia la mia canzone.
             - else:
-                                                                Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                                                                Ma se ripenso a tutto quello che ci siamo dettə fino ad ora, è un'altra la mia canzone.
         }
         
                                                                 Io sono...
@@ -533,15 +533,15 @@
     - firstChar_ActualName has Orchestra:
     {
         - ending.fire:
-                                                                E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                                                                E se ripenso a tutto quello che ci siamo dettə fino ad ora, credo che questa sia la mia canzone.
         - else:
-                                                                Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                                                                Ma se ripenso a tutto quello che ci siamo dettə fino ad ora, è un'altra la mia canzone.
     }
 
                                                                 Rullo di tamburi: io sono...
         ~  characterChangingObjects(FirstCharacter)                                            
     {charTag(FirstCharacter, "neutral")}:                       <b><i>{charNameOne}</b></i>!
-                                                                Signore e signor3 e signori: sono la gioia del cambiamento.
+                                                                Signore e signorə e signori: sono la gioia del cambiamento.
                                                                 Le infinite possibilità.
                                                                 Sono colei che può provare tutto.
                                                                 Incluso il cambiare paese.
@@ -550,9 +550,9 @@
     - firstChar_ActualName has FlautoDolce:
     {
         - ending.aether:
-                                                                E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                                                                E se ripenso a tutto quello che ci siamo dettə fino ad ora, credo che questa sia la mia canzone.
         - else:
-                                                                Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                                                                Ma se ripenso a tutto quello che ci siamo dettə fino ad ora, è un'altra la mia canzone.
     }
 
                                                                 Ho scelto come nome...
@@ -566,9 +566,9 @@
     - firstChar_ActualName has Ocarina:
     {
         - ending.earth:
-                                                                E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                                                                E se ripenso a tutto quello che ci siamo dettə fino ad ora, credo che questa sia la mia canzone.
         - else:
-                                                                Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                                                                Ma se ripenso a tutto quello che ci siamo dettə fino ad ora, è un'altra la mia canzone.
     }
                                                                 Il mio nome è...
         ~  characterChangingObjects(FirstCharacter)
@@ -576,14 +576,14 @@
                                                                 E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
                                                                 Per ricominciare a giocare, a esplorare quello che già conosco.
                                                                 Per prendermi cura dei miei e della mia terra.
-                                                                Per permettere ad altr3 di non doversene andare.
+                                                                Per permettere ad altrə di non doversene andare.
 
     - firstChar_ActualName has Violino:
     {
         - ending.water:
-                                                                E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                                                                E se ripenso a tutto quello che ci siamo dettə fino ad ora, credo che questa sia la mia canzone.
         - else:
-                                                                Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                                                                Ma se ripenso a tutto quello che ci siamo dettə fino ad ora, è un'altra la mia canzone.
     }
 
                                                                 Io sono...

@@ -124,7 +124,7 @@
                                                                     <i>E fa in modo che tutte le mancanze vengano risanate.
                                                                     <i>Attento a chi ha troppo, attento a chi ha poco.
                                                                     <i>Un vecchio detto dice: "Quando la palude piange, la rana ascolta".
-                                                                    <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
+                                                                    <i>Franco sorride sempre, ma conosce il pianto di tuttə noi.
                                                                     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.</i>
         -> witch_closing_storylet ->
         -> main

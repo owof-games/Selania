@@ -168,9 +168,9 @@
             
             
             - fifthChar_InkLevel == ink_high:
-                {charTag(FifthCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separat3 alla nascita?
+                {charTag(FifthCharacter, "affectionate")}:          E mi chiedevo: ma che ci hanno separatə alla nascita?
                                                                     Perché mi sento tipo come se avessimo un unico neurone.
-                                                                    Unit3 in tutto.
+                                                                    Unitə in tutto.
                                                                     Ed è figa come cosa.
                                                                     Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         }

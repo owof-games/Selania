@@ -91,10 +91,10 @@
     //Quando questa è a zero, non ci sono spostamenti.
     VAR movements_changeLocationTimer = 0
     
-    //Questo è invece il valore che indica quando far partire la randomizzazione dei luoghi dell3 PNG.
+    //Questo è invece il valore che indica quando far partire la randomizzazione dei luoghi dellə PNG.
     VAR movements_changeLocationTrigger = 9
     
-    //Questa è la lista dei luoghi dove l3 PNG possono andare. Se serve, posso ampliarla quando si aprono i luoghi, ma è da valutare col bilanciamento.
+    //Questa è la lista dei luoghi dove lə PNG possono andare. Se serve, posso ampliarla quando si aprono i luoghi, ma è da valutare col bilanciamento.
     //Posti dove potremmo trovarle e che per ora sono chiusi: Dump, Greenhouse, Library.
     //Posti sicuramente vietati, salvo scene speciali: Bedroom, Nest. Kitchen solo per scene ad hoc (es: cucina da solx).
     VAR movements_randomablePlaces = (Forest, TrainStop, Pond)

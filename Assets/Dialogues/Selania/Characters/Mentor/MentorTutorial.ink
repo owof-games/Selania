@@ -55,7 +55,7 @@
 
             - fifth_char_intro.waterChoice:
                 {charTag(FifthCharacter, "neutral")}:           Quando prima ti ho incontrat{player_pronoun has him:o|{player_pronoun has her:a|ə}}, una delle prima parole che hai usato è stata <i>dolcezza</i>, e l'hai fatto con un carico enorme di gioia.
-                {charTag(FifthCharacter, "hurry")}:             L'emotività attrae molte persone, perché in tant3 abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
+                {charTag(FifthCharacter, "hurry")}:             L'emotività attrae molte persone, perché in tantə abbiamo bisogno di parlare di ciò che proviamo, di condividere gli aspetti profondi del nostro cuore.
                 {charTag(FifthCharacter, "sad")}:               Ma allontana altrettante persone, vuoi perché quello non è il loro linguaggio, vuoi perché non se la sentono di parlarne con chi non conoscono.
         }
 
@@ -120,7 +120,7 @@
                 {charTag(FifthCharacter, "neutral")}:           Non c'è un'autorità, se è quello che mi stai chiedendo.
                                                                 C'è qualcosa in questo luogo che chiama chi ne ha il bisogno.
                 {charTag(FifthCharacter, "sad")}:               Forse poche persone si rendono conto dell'importanza di un nuovo nome?
-                {charTag(FifthCharacter, "neutral")}:           Non serve a tutt3, comunque.
+                {charTag(FifthCharacter, "neutral")}:           Non serve a tuttə, comunque.
                                                                 Non a me per esempio.
                                                                 Questo è stato, è e sarà sempre il mio nome.
                                                                 Ma alla fine il nome è solo un simbolo, non è l'obiettivo in sé.       
@@ -133,7 +133,7 @@
                                                                 E tra te e quello strumento, che è l'inchiostro, c'è di mezzo la fiducia dell'altra persona.
         
                     
-            + \ {charTag(PG, "neutral")}:                       Preparo la mia spalla per farl3 piangere, e l'orecchio per ascoltarl3.
+            + \ {charTag(PG, "neutral")}:                       Preparo la mia spalla per farlə piangere, e l'orecchio per ascoltarlə.
                     -> glyph_choice_manager(Mentor, waterC)->
 
                 {charTag(FifthCharacter, "neutral")}:           Ottima attitudine.

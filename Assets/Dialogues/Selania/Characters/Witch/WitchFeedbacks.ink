@@ -370,7 +370,7 @@
                                                                     <i>La storia di {charNameThree} è una storia di cura.
                                                                     <i>Così come quella di {charNameOne}, {charNameTwo}, {charNameFour}, {charNameFive}.
                                                                     <i>Ma la cura chiede lotta.
-                                                                    <i>Come lottava {player_name}, prima di ritrovare quest3 nuov3 amic3?
+                                                                    <i>Come lottava {player_name}, prima di ritrovare questə nuovə amicə?
 
 
 

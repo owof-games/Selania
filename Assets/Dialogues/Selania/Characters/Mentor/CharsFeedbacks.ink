@@ -96,7 +96,7 @@
                 
             - firstChar_ActualName ==  FlautoDolce:
                 {charTag(FifthCharacter, "neutral")}:                       E dopo il percorso fatto con te, {charNameOne} ha deciso di fare un passo enorme.
-                {charTag(FifthCharacter, "hurry")}:                         Mettere al centro della propria vita la propria passione, non è cosa da tutt3.
+                {charTag(FifthCharacter, "hurry")}:                         Mettere al centro della propria vita la propria passione, non è cosa da tuttə.
 
             - firstChar_ActualName == Ocarina:
                 {charTag(FifthCharacter, "hurry")}:                         L'idea di tornare dalla sua famiglia di origine è qualcosa che ha fatto tremare il mio cuore.
@@ -134,7 +134,7 @@
        
     
     {charTag(FifthCharacter, "neutral")}:                                   Hai finito il percorso con {charNameTwo}, {player_name}!
-                                                                            Ed entramb3 mi avete stupita: non pensavo davvero che un bambino avrebbe tratto giovamento da questo luogo.
+                                                                            Ed entrambə mi avete stupita: non pensavo davvero che un bambino avrebbe tratto giovamento da questo luogo.
         {
         - thirdChar_storyStatus == story_storyRemote:
         {charTag(FifthCharacter, "bored")}:                                 Un comportamento molto più maturo di quello di {charNameThree}.   

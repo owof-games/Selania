@@ -19,7 +19,7 @@
 
 === mentor_and_chars_related_storylets ===
 
-//Testi prioritari per la storia principale o le relazioni con l3 PNG
+//Testi prioritari per la storia principale o le relazioni con lə PNG
     {
        //Presentazione generale
         - grimoire_fifthChar hasnt grimMentorIntro:
@@ -50,7 +50,7 @@
 
     }
 
-//Testi di relazione con l3 png
+//Testi di relazione con lə png
 
     //First Char
     {   

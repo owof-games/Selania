@@ -18,7 +18,7 @@ VAR tutorial_CarlaInkIndicator = ink_empty
 
 
 === on_movement_tutorial_steps ===
-//Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con l3 PNG
+//Prima di tutto vedo se attivare o meno le variabili legate al livello di rapporto con lə PNG
 
     //Tutorial scelte (per Mentore). Basta aver parlato una volta con Chitarra
     {

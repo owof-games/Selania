@@ -622,9 +622,9 @@
             <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
             <i>L'euforia riempie i polmoni di {player_name}, sente la gioia di sapere che non è mai stata davvero {player_pronoun has him:solo|{player_pronoun has her:sola|solə}}.
             <i>I piedi spingono il suo corpo nella stanza.
-            <i>La sua voce si alza e canta, chiama l3 compagn3.
+            <i>La sua voce si alza e canta, chiama lə compagnə.
             <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
-            <i>Ridendo feroci di chi l3 teme.
+            <i>Ridendo feroci di chi lə teme.
             
                 ~ backpack_findedGifts += CantoDelleCompagne
                 ~ move_entity(RedBee, Greenhouse)
@@ -810,7 +810,7 @@
     
     = step_three
        {charTag(TheWitch, witch_state())}:   <i>Nella calma della serra il pavimento sembra vivo.
-       <i>Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
+       <i>Foglie e fiori e pistilli avanzano lə unə verso lə altrə.
        <i>Il sentimento si è fatto movimento.
        <i>Forse {player_name} non è {player_pronoun has him:solo|{player_pronoun has her:sola|solə}} nel vivere certe emozioni?
             -> main
@@ -958,7 +958,7 @@
             <i><b>Non ti scordar di te</b> è la pianta del ricordo.
             <i>E del costruire.
             <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
-            <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
+            <i>Del sentirci eredi e messaggerə, parte di un percorso intessuto di nomi.
                     -> ending_cultivation
                     
             + \ {charTag(PG, "neutral")}:         <i>Preferisco aspettare.

@@ -26,7 +26,7 @@
     - {player_accessiblePlaces has Kitchen:Il cibo è un momento di unione anche con l'essere che l'ha generato.|->saluto}
     - {player_accessiblePlaces has Kitchen:La luce che si riflette sull'acqua della cucina è appagante.|->saluto}
     - {player_accessiblePlaces has Kitchen:Gli alberi della cucina sono diversi da quelli della foresta, sono più ampi e muschiosi.|->saluto}
-    - {player_accessiblePlaces has Kitchen:Dalla cucina arrivano sempre profumi insoliti. Ve la cavate tutt3 molto bene!|->saluto}
+    - {player_accessiblePlaces has Kitchen:Dalla cucina arrivano sempre profumi insoliti. Ve la cavate tuttə molto bene!|->saluto}
 
     //Sulla biblioteca
     - {player_accessiblePlaces has Library:Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|->saluto}

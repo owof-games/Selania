@@ -445,7 +445,7 @@
         {charTag(SecondCharacter, "emotional")}:                Mettiamo le noccioline?
         {charTag(SecondCharacter, "angry")}:                    Le punizioni sono stupide.
                 
-            + \ {charTag(PG, "neutral")}:                       E l3 ribelli si oppongono alle punizioni!
+            + \ {charTag(PG, "neutral")}:                       E lə ribelli si oppongono alle punizioni!
                     -> glyph_choice_manager(false, fireC)->
                 {charTag(SecondCharacter, "neutral")}:          Però poi mi sgridano di più.
                                                                 Una volta ci ho provato ma hanno chiamato mamma.

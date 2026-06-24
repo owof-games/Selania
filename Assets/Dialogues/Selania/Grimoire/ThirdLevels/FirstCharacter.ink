@@ -67,7 +67,7 @@
 
     {
         - grimoire_firstChar has grimFirstCharSeven:
-            Per la prima volta {charNameOne} ha parlato del suo litigio con Talco. Si erano ripromess3 di non aver figli, di non aver ostacoli al loro rapporto. Ma poi Talco è rimastə incintə, e ha deciso di trasferirsi in Islanda con il compagno, Thomas. E ha invitato {charNameOne} con ləi. Ma {charNameOne} è scappata a casa, ha fatto sesso con Ennio e pianto tutta la notte. Ma comunque, mesi dopo, Talco le ha inviato una foto dellə figliə con l'invito di nuovo a vivere con loro.
+            Per la prima volta {charNameOne} ha parlato del suo litigio con Talco. Si erano ripromessə di non aver figli, di non aver ostacoli al loro rapporto. Ma poi Talco è rimastə incintə, e ha deciso di trasferirsi in Islanda con il compagno, Thomas. E ha invitato {charNameOne} con ləi. Ma {charNameOne} è scappata a casa, ha fatto sesso con Ennio e pianto tutta la notte. Ma comunque, mesi dopo, Talco le ha inviato una foto dellə figliə con l'invito di nuovo a vivere con loro.
     } 
 
     {
@@ -77,7 +77,7 @@
 
     {
         - grimoire_firstChar has grimFirstCharNine:
-            {charNameOne} ama scrivere comporre la notte, quando a casa tutt3 dormono. E sente la creatività come l'immergersi in un fiume, una "acqua antica" l'ha chiamata, che raccoglie tutte le storie del mondo. E quel posto, quell'acqua la rassicura, perché le dice che i problemi di tutti i giorni sono problemi che come persone abbiamo affrontato miliardi di volte, e siamo ancora qui. Questo le offre speranza.
+            {charNameOne} ama scrivere comporre la notte, quando a casa tuttə dormono. E sente la creatività come l'immergersi in un fiume, una "acqua antica" l'ha chiamata, che raccoglie tutte le storie del mondo. E quel posto, quell'acqua la rassicura, perché le dice che i problemi di tutti i giorni sono problemi che come persone abbiamo affrontato miliardi di volte, e siamo ancora qui. Questo le offre speranza.
     }
 
     {
@@ -229,7 +229,7 @@
     }
     {
         - grimoire_firstChar has grimFirstCharKitchenTwo:
-            Durante l'incontro in cucina, {charNameOne} ha parlato del suo desiderio di salvare il mondo. E delle sue difficoltà: non si sente brava a parlare di cose politiche, e La Rifugia è nata perché ha potuto vedere un problema concreto e decidere di fare qualcosa, mentre altre parole cariche la fanno sentire inadeguata. E crede che parte di questa inadeguatezza venga dalle dinamiche social e dal giudizio costante. Ritiene che questo tolga la possibilità di sbagliare, ma gli sbagli creano possibilità impreviste. Come il gorgonzola. E poi ha citato la sua amica Valeria, che dice che l'attivismo deve dare piacere, e che a {charNameOne} piace addormentarsi sapendo di aver portato qualcosa di buono nel mondo. E poi: <i>più gorgonzola, meno poliziott3.</i>
+            Durante l'incontro in cucina, {charNameOne} ha parlato del suo desiderio di salvare il mondo. E delle sue difficoltà: non si sente brava a parlare di cose politiche, e La Rifugia è nata perché ha potuto vedere un problema concreto e decidere di fare qualcosa, mentre altre parole cariche la fanno sentire inadeguata. E crede che parte di questa inadeguatezza venga dalle dinamiche social e dal giudizio costante. Ritiene che questo tolga la possibilità di sbagliare, ma gli sbagli creano possibilità impreviste. Come il gorgonzola. E poi ha citato la sua amica Valeria, che dice che l'attivismo deve dare piacere, e che a {charNameOne} piace addormentarsi sapendo di aver portato qualcosa di buono nel mondo. E poi: <i>più gorgonzola, meno poliziottə.</i>
     }
     {
         - grimoire_firstChar has grimFirstCharKitchenThree:
@@ -296,7 +296,7 @@
 
     {
         - grimoire_firstChar has grimFirstCharProposal:
-            Prima della riscrittura, {charNameOne} ha detto a {player_name} di aver capito perché si sia ritrovata con questo nome. Crede che la chitarra sia la cosa media, la cosa che possono fare tutt3. Lei si aspettava grandi cose dalla vita, e invece ora ha una vita comune. E si chiede se questo è il massimo che può aspettarsi dalla vita, e se le cose non andranno sempre peggio. Ha aggiunto che a volte vorrebbe che fosse il mondo a scegliere al posto suo.
+            Prima della riscrittura, {charNameOne} ha detto a {player_name} di aver capito perché si sia ritrovata con questo nome. Crede che la chitarra sia la cosa media, la cosa che possono fare tuttə. Lei si aspettava grandi cose dalla vita, e invece ora ha una vita comune. E si chiede se questo è il massimo che può aspettarsi dalla vita, e se le cose non andranno sempre peggio. Ha aggiunto che a volte vorrebbe che fosse il mondo a scegliere al posto suo.
     } 
     {
         - firstAffinityFeedback:
@@ -322,7 +322,7 @@
     
         - firstChar_ActualName has Ocarina:
     
-            L'ha definito un riabbraccio della sua infanzia, gli spazi in cui è cresciuta. Per ricominciare a giocare, a esplorare quello che già conosco. Per prendersi cura dei suoi genitori e della sua terra. Per permettere ad altr3 di non doversene andare.
+            L'ha definito un riabbraccio della sua infanzia, gli spazi in cui è cresciuta. Per ricominciare a giocare, a esplorare quello che già conosco. Per prendersi cura dei suoi genitori e della sua terra. Per permettere ad altrə di non doversene andare.
 
         - firstChar_ActualName has Violino:
 
@@ -338,7 +338,7 @@
                     
                 - firstChar_ActualName has Orchestra: è rimasta colpita dalla partenza di {translator(firstChar_ActualName)} per l'Islanda, perché ha già vicine persone che le vogliono bene. E che i problemi seguono le persone anche quando se ne vanno.
                                 
-                - firstChar_ActualName has FlautoDolce: mettere al centro della propria vita la propria passione, come ha fatto {translator(firstChar_ActualName)} non è cosa da tutt3.
+                - firstChar_ActualName has FlautoDolce: mettere al centro della propria vita la propria passione, come ha fatto {translator(firstChar_ActualName)} non è cosa da tuttə.
                                 
                 - firstChar_ActualName has Ocarina: il suo cuoricino ha tremato dopo che {translator(firstChar_ActualName)} ha deciso di tornare a vivere coi suoi genitori, riscoprendo le sue radici.
 

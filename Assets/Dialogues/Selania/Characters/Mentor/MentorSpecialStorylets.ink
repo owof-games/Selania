@@ -372,7 +372,7 @@
                                                                         Non dovevo.
     {
         - are_two_entities_together(PG, FirstCharacter):
-        {charTag(FirstCharacter, "annoyed")}:                           E fino a qui c'eravamo tutt3.
+        {charTag(FirstCharacter, "annoyed")}:                           E fino a qui c'eravamo tuttə.
     }
     {charTag(FifthCharacter, "neutral")}:                               Non mi piace arrabbiarmi, {player_name}.
     {charTag(FifthCharacter, "sad")}:                                   E quando accade non so cosa fare.

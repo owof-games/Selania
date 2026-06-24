@@ -32,7 +32,7 @@
                                                                 Il tempo che hai iniziato a capire meglio un suo nuovo interesse, ed eccolə che è già su altro.
         {charTag(FirstCharacter, "affectionate")}:              Ma lə voglio bene per questo, perché è una botta di energia anche nei momenti peggiori.                                                     
         
-        + (air)\ {charTag(PG, "neutral")}:                      Siete arrivat3 qui assieme?
+        + (air)\ {charTag(PG, "neutral")}:                      Siete arrivatə qui assieme?
                 -> glyph_choice_manager(false, airC)->
         {charTag(FirstCharacter, "annoyed")}:                   Dovrei essere io quella che fa le domande.
         {charTag(FirstCharacter, "neutral")}:                   Ma no, non che io ricordi.
@@ -135,7 +135,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Perché perdonami ama ma è una roba un po' passivo aggressiva!
         }
         {charTag(FirstCharacter, "neutral")}:                   Comunque ok, messaggio arrivato: sei reale.
-                                                                O siamo tutt3 e due in un sogno.
+                                                                O siamo tuttə e due in un sogno.
                 
 
         + (water2) \ {charTag(PG, "neutral")}:                  Facessimo un bel respiro e ripartiamo da capo, con dolcezza.
@@ -316,7 +316,7 @@
                                                                 E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
         {charTag(FirstCharacter, "annoyed")}:                   Tipo una versione emo di Dungeons & Dragons.
         {charTag(FirstCharacter, "affectionate")}:              Stavo per dirle: guarda, mi fido già di {player_name}!
-                                                                Sono un labrador e mi fido sempre di tutt3 subito.
+                                                                Sono un labrador e mi fido sempre di tuttə subito.
         {charTag(FirstCharacter, "neutral")}:                   Poi ho pensato che non è vero.
         {charTag(FirstCharacter, "sad")}:                       Mi fido fino in fondo solo di Talco.
         {charTag(FirstCharacter, "annoyed")}:                   Si dice spesso “La cosa x mi ha salvato la vita”, e ho sempre creduto che fosse una cazzata.
@@ -330,7 +330,7 @@
                                                                 E quando ho incontrato Talco, ero bloccata in un brutto film che durava dalla fine del liceo.
         {charTag(FirstCharacter, "neutral")}:                   E ləi mi ha buttato nel mondo.
         {charTag(FirstCharacter, "curious")}:                   Mi ha fatto fare cose piccole che mi hanno aperto la testa.
-                                                                Come quando ci siamo stes3 in piazza per vedere come le persone reagivano.
+                                                                Come quando ci siamo stesə in piazza per vedere come le persone reagivano.
         {charTag(FirstCharacter, "affectionate")}:              O riempito di stickers le Tesla con scritto "NaziMachine".
         {
         - are_two_entities_together(ThirdCharacter, PG):
@@ -472,7 +472,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Ma non era quello il punto per me.
         
 
-        + \ {charTag(PG, "neutral")}:                           Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!
+        + \ {charTag(PG, "neutral")}:                           Siamo vivə solo quando lottiamo, {charNameOne}! Vai di sindacato!
                 -> glyph_choice_manager(false, fireC)-> 
             {charTag(FirstCharacter, "affectionate")}:          Quando si torna nel mondo tu vieni con me.
                                                                 Che con questa energia risolviamo tutti i problemi in quindici giorni.
@@ -687,7 +687,7 @@
                                                                 Prendendoci cura dell'ambiente.
             {charTag(FirstCharacter, "sad")}:                   Ha senso?
         
-        + \ {charTag(PG, "neutral")}:                           Credo che siamo pien3 di emozioni, non di fatti.
+        + \ {charTag(PG, "neutral")}:                           Credo che siamo pienə di emozioni, non di fatti.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:          Esatto ama, esatto.
             {charTag(FirstCharacter, "neutral")}:               Cioè: bellini i fatti, davvero.
@@ -760,7 +760,7 @@
         {charTag(FirstCharacter, "annoyed")}:                   Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
         {charTag(FirstCharacter, "affectionate")}:              Abbiamo trovato un incrocio sui calendari, e la sera che l'ho rivistə mi si è spalancato il cuore.
         {charTag(FirstCharacter, "affectionate")}:              E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
-                                                                E se andassimo a vivere tutt3 assieme in campagna?
+                                                                E se andassimo a vivere tuttə assieme in campagna?
                                                                 Talco, io, le ragazze della band?
         {charTag(FirstCharacter, "neutral")}:                   Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana, no?
                                                                 Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
@@ -772,7 +772,7 @@
         }
         {charTag(FirstCharacter, "sad")}:                       E {player_name}, tutto è diventato grigio.
         {charTag(FirstCharacter, "neutral")}:                   Zero, il vuoto nella testa.
-                                                                Ci eravamo ripromess3 mille volte che non sarebbe successo.
+                                                                Ci eravamo ripromessə mille volte che non sarebbe successo.
         {charTag(FirstCharacter, "annoyed")}:                   Niente figli.
         {
             - are_two_entities_together(SecondCharacter, PG):
@@ -944,7 +944,7 @@
             {charTag(FirstCharacter, "annoyed")}:               Ma sono una che si perde spesso per strada, ama.
         
     
-        + (air)\ {charTag(PG, "neutral")}:                      Ad essere pratic3, sì: siamo bestie sociali, le persone ci influenzano.
+        + (air)\ {charTag(PG, "neutral")}:                      Ad essere praticə, sì: siamo bestie sociali, le persone ci influenzano.
                 -> glyph_choice_manager(false, earthC)->
             {charTag(FirstCharacter, "neutral")}:               Sei una brava persona, non mi fraintendere.
             {charTag(FirstCharacter, "annoyed")}:               Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
@@ -1022,7 +1022,7 @@
                                                             E gli sembra di sentire sulla tastiera tutte le mani di tutte le persone che hanno costruito qualcosa nel passato.
             {charTag(FirstCharacter, "neutral")}:           Un'immagine che un po' mi spaventa, ma non è molto diversa, no?                                                
         
-        + \ {charTag(PG, "neutral")}:                       Fa sentire meno sol3, e più parte di una lunga rete di storie.
+        + \ {charTag(PG, "neutral")}:                       Fa sentire meno solə, e più parte di una lunga rete di storie.
                 -> glyph_choice_manager(false, waterC)->
             {charTag(FirstCharacter, "affectionate")}:      Sì!
                                                             E dà sicurezza, fiducia.
@@ -1135,7 +1135,7 @@
                 -> glyph_choice_manager(false, fireC)->
             {charTag(FirstCharacter, "neutral")}:           Ehm.
                                                             Senza sapere come funziona il treno?
-                                                            E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
+                                                            E con tuttə lə altrə passeggerə che magari devono andare in altri luoghi?
                                                             O non andare via affatto?
             {charTag(FirstCharacter, "annoyed")}:           Non è egoista?
             {charTag(FirstCharacter, "affectionate")}:      Però sarebbe divertente.
