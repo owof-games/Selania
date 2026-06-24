@@ -427,7 +427,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il mio bellissimo gatto</b> di Adri Allora(ləi).</i>
                 -> adri_allora
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro
@@ -437,7 +437,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).</i>
                 -> alexias_d_avino
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro            
@@ -446,7 +446,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Luna vergine</b> di Aza (any).
                 -> aza
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro                 
@@ -456,7 +456,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).</i>
                 -> steno_artico
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -466,7 +466,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il tocco della rabbia</b> di K.(she/her).</i>
                 -> b
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -476,7 +476,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>La rete non esiste</b> di Beatrice (she/her).</i>
                 -> beatrice
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -486,7 +486,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).</i>
                 -> beatrice_y_bottura
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -499,7 +499,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Fuochino</b> di Cecilia Formicola (she/her).</i>
                 -> cecilia_formicola
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -509,7 +509,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Trecentotrenta metri</b> di Francesca Tosca Raimondi (she/her).</i>
                 -> francesca_tosca_raimondi
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -520,7 +520,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).</i>
                 -> kayleig
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro  
@@ -530,7 +530,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Chiarirsi, divertirsi</b> di Jae (she/they).</i>
                 -> jae
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro  
@@ -540,7 +540,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il sassolino</b> di Lamia (she/they).</i>
                 -> lamia
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -550,7 +550,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Volevo essere solo cervello</b> di Loris Casagrandi (he/him - she/her).</i>
                 -> loris_casagrandi
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro             
@@ -560,7 +560,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Home</b> di Val Fausto Lattanzio (he/they).</i>
                 -> val_fausto_lattanzio
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro        
@@ -570,7 +570,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il principe sbagliato</b> di Romi (any).</i>
                 -> romi
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro   
@@ -581,7 +581,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Il cancello</b> di Salvo (he/him).</i>
                 -> salvo
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -591,7 +591,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Polvere</b> di Maura (she/they).</i>
                 -> maura
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro        
@@ -601,7 +601,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>SCP</b> di Simo (they/he).</i>
                 -> simo
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
@@ -611,7 +611,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
         +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Dodici Stelle</b> di Letizia Vaccarella (she/her).</i>
                 -> letizia_vaccarella
-        +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro     
@@ -621,7 +621,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
     //     +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).</i>
     //             -> queerginia_wolf
-    //     +  \ {charTag(PG, "neutral")}:       {LIST_COUNT(library_readStories) > 1}<i>Vorrei rileggere qualcosa di diverso.</i>
+    //     +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
     //             -> reread
     //     +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
     //             -> book_test_intro 
