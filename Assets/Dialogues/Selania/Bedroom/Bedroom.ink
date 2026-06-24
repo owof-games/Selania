@@ -75,7 +75,8 @@
 
 
     - (top3)
-    {charTag(TheWitch, witch_state())}:                                 <i>Che modalità di gioco vuoi attivare?
+    {charTag(TheWitch, witch_state())}:                                 <i>Il viaggio sta per iniziare.
+                                                                        <i>Che modalità di gioco vuoi attivare?
         //Aggiungere spiegazione delle due modalità per il testing
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Gamer Mode.</i>
                 ~ gamerMode_activation ()
@@ -104,6 +105,6 @@
             -
 
     {charTag(TheWitch, witch_state())}:                                 <i>Perfetto.
-                                                                        <i>Ti auguriamo inizio di questo tuo viaggio.</i>
+                                                                        <i>Ti auguriamo il migliore degli inizi per questo tuo viaggio.</i>
 
 -> main

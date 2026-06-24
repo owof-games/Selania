@@ -278,7 +278,7 @@
     {charTag(Carla, "sad")}:                            Iniziamo?
         + \ {charTag(PG, "neutral")}:                   Non vedo l'ora.
             {charTag(Carla, "neutral")}:                Buffo.
-            {charTag(Carla, "bored")}:                  Anche io non vedo l'ora che finisca il mio turno.
+            {charTag(Carla, "bored")}:                  Io non vedo l'ora che finisca il mio turno.
         + \ {charTag(PG, "neutral")}:                   So già tutto, grazie.
             {charTag(Carla, "bored")}:                  Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
             {charTag(Carla, "neutral")}:                Buona continuazione.
@@ -321,12 +321,12 @@
                                                     Perché un citofono nel libro?
     {charTag(Carla, "bored")}:                      Direttive dalla sede centrale.
                                                     Quarta informazione: quello che fa viene salvato in automatico.
-                                                    // Se vede questa icona, non deve fare niente.
+                                                    //Se vede questa icona, non deve fare niente.
+                                                    //Per qualcuno può essere difficile: abbiate pazienza.
 
-        @sprite:tutorial_carlaInterfaceStorylets_5
+        // @sprite:tutorial_carlaInterfaceStorylets_5
 
-    {charTag(Carla, "angry")}:                      Non è difficile.
-                                                    Quinta informazione: se qualcosa va storto <>
+    {charTag(Carla, "angry")}:                      Quinta informazione: se qualcosa va storto <>
         {
             - settings_gamerMode:
             TODO: in realtà qui non sarà "gamerMode" ma il setting che abilita l'upload
@@ -337,13 +337,13 @@
                                                     Appena le daranno il libro.
 
             - else:
-                                                    trova questa icona nelle impostazioni.
+                                                    troverà questa icona nelle impostazioni.
 
                 @sprite:tutorial_carlaInterfaceStorylets_6
                 
                                                     La farà viaggiare nel tempo.
                                                     Come?
-            {charTag(Carla, "bored")}:              Sta parlando con una capra ed è questa la cosa che la perplime?!?!
+            {charTag(Carla, "bored")}:              Sta parlando con una capra ed è questa la cosa che la confonde?!?!
         }
     {charTag(Carla, "sad")}:                        Infine dovrei spiegarle il sistema di relazioni.
     {charTag(Carla, "happy")}:                      Ma è arrivata l'ora della mia pausa.
