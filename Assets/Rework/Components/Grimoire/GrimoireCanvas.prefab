@@ -369,6 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.Grimoire
   grimoireBackground: {fileID: 6731398204704311497}
   openGrimoireButton: {fileID: 1197396072271955494}
+  rootGrimoireNotification: {fileID: 4804170180516492788}
 --- !u!1 &7784579863941009633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,6 +4996,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c42b5180fac9c8143825dcc39e3cb949, type: 3}
+--- !u!114 &4804170180516492788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6266321472062963589, guid: c42b5180fac9c8143825dcc39e3cb949, type: 3}
+  m_PrefabInstance: {fileID: 1467511018279307889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a359f952e347b786a4c116ab9fabb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Selania::Selania.Rework.Components.Grimoire.GrimoireNotification
 --- !u!224 &8557425264757287506 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7106593963096481827, guid: c42b5180fac9c8143825dcc39e3cb949, type: 3}

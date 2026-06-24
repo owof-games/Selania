@@ -761,6 +761,9 @@ MonoBehaviour:
     title: Prefab Particles
     description: Mostra come utilizzare il componente Prefab Particles, che serve
       per creare sistemi particellari con dei prefab come oggetti di base.
+  - prefab: {fileID: 5900152936520379775, guid: c689cb49aae4819429a2202956e936a3, type: 3}
+    title: Grimoire Notifications
+    description: Check for notifications
 --- !u!4 &1073972271
 Transform:
   m_ObjectHideFlags: 0

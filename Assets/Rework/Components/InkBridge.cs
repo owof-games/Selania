@@ -608,8 +608,12 @@ namespace Selania.Rework.Components
                 // Lines starting with "@" have a special handling, and are never about dialogue
                 _conversationInProgressSubject!.OnNext(false);
 
-                // @interact is the moment we enter a room or finish a dialogue, and we try to save
-                if (currentText == "@interact") actionsAfterUpdate.saveIfNeeded = true;
+                // @interact is the moment we enter a room or finish a dialogue, and we perform some bookkeeping
+                if (currentText == "@interact")
+                {
+                    actionsAfterUpdate.saveIfNeeded = true;
+                    UpdateGrimoireChanges();
+                }
             }
 
             return actionsAfterUpdate;
@@ -2469,11 +2473,13 @@ namespace Selania.Rework.Components
                     _changedGrimoirePageIdentifiers.Add(id);
                     changed = true;
                 }
+
             // otherwise, we navigate the two trees in parallel and find the differences
             else
                 changed = CompareGrimoireTrees(_latestGrimoireTree, currentGrimoireTree, _latestGrimoireTree.TreeRoot,
                     currentGrimoireTree.TreeRoot);
 
+            // emit the changed event only if something actually changed
             if (changed) _grimoireChanged!.OnNext(Unit.Default);
         }
 
@@ -2596,10 +2602,12 @@ namespace Selania.Rework.Components
             story.ChoosePathString(grimoireInkNodeName);
             try
             {
-                for (;;)
+                for (var i = 0;; i++)
                 {
+                    if (i > 1000)
+                        throw new InvalidOperationException("grimoire navigation exceeded maximum node limit");
+
                     // get out identifier and content of this node
-                    story.Continue();
                     var identifier = GetIdentifier();
                     var content = GetContent();
                     // store the root, correspondences identifier => content and link => identifier, with some runtime checks
@@ -2644,6 +2652,9 @@ namespace Selania.Rework.Components
                     // otherwise, we got back to root and we have nothing more to visit!
                     break;
                 }
+
+                Logger.ZLogTrace(
+                    $"Traversed {identifierToContent.Count} grimoire nodes and {linkToIdentifier.Count} links.");
             }
             finally
             {
@@ -2669,6 +2680,9 @@ namespace Selania.Rework.Components
 
             GrimoirePageIdentifier GetIdentifier()
             {
+                if (!story.canContinue)
+                    throw new InvalidOperationException("Cannot obtain a page identifier here: cannot continue");
+
                 story.Continue();
                 return GetCurrentGrimoirePageIdentifier(story);
             }
@@ -2679,16 +2693,18 @@ namespace Selania.Rework.Components
                 while (story.canContinue)
                 {
                     story.Continue();
-                    sb.Append(story.currentText);
+                    sb.Append(story.currentText.Trim());
                 }
 
                 var storyCurrentChoices = story.currentChoices;
                 // find the "back" entry, if any
-                var backChoiceIndex =
-                    (story.currentChoices.FirstOrDefault(choice =>
-                         choice.tags.Contains($"{bookmarkTagCategory}:{secondLevelBookmarkTagValue}")) ??
-                     story.currentChoices.FirstOrDefault(choice =>
-                         choice.tags.Contains($"{bookmarkTagCategory}:{indexBookmarkTagValue}")))?.index;
+                var secondLevelChoice = story.currentChoices.FirstOrDefault(choice =>
+                    (choice.tags ?? new List<string>()).Contains(
+                        $"{bookmarkTagCategory}:{secondLevelBookmarkTagValue}"));
+                var indexChoice = story.currentChoices.FirstOrDefault(choice =>
+                    (choice.tags ?? new List<string>()).Contains(
+                        $"{bookmarkTagCategory}:{indexBookmarkTagValue}"));
+                var backChoiceIndex = (secondLevelChoice ?? indexChoice)?.index;
                 var previousTag = $"{bookmarkTagCategory}:{backBookmarkTagValue}";
                 var nextTag = $"{bookmarkTagCategory}:{forwardBookmarkTagValue}";
 
@@ -2699,15 +2715,21 @@ namespace Selania.Rework.Components
                     // extract choice information
                     var text = choice.text;
                     var index = choice.index;
+                    var tags = choice.tags ?? new List<string>();
+
+                    // in case we have both a second level back and an index back, let's completely skip the "index"
+                    // back, since it just complicates the topology without any additional benefit
+                    if (index == indexChoice?.index && index != backChoiceIndex) continue;
+
+                    // sort and don't consider navigation tags for identity
                     var nonBookmarkTags = (
-                        // sort and don't consider navigation tags for identity
-                        from tag in choice.tags
+                        from tag in tags
                         where !tag.StartsWith(bookmarkTagCategory)
                         orderby tag
                         select tag
                     ).ToList();
                     var navigationTagValue =
-                        choice.tags.SingleOrDefault(tag => tag.StartsWith(bookmarkTagCategory));
+                        tags.SingleOrDefault(tag => tag.StartsWith(bookmarkTagCategory));
                     var navigationKind = NavigationKind.Forward;
                     if (backChoiceIndex == index)
                         navigationKind = NavigationKind.Back;
@@ -2738,8 +2760,8 @@ namespace Selania.Rework.Components
                     $"Grimoire page identifiers should start with '@grimoire', not be {story.currentText}");
             }
 
-            return new GrimoirePageIdentifier(story.currentText,
-                story.currentTags.OrderBy(tag => tag).ToList());
+            return new GrimoirePageIdentifier(story.currentText.Trim(),
+                (story.currentTags ?? new List<string>()).OrderBy(tag => tag).ToList());
         }
 
         /// <summary>
@@ -2762,9 +2784,9 @@ namespace Selania.Rework.Components
                 _tags = tags;
             }
 
-            public virtual bool Equals(GrimoirePageIdentifier? other)
+            public override bool Equals(object? obj)
             {
-                return _name == other?._name && _tags.SequenceEqual(other._tags);
+                return obj is GrimoirePageIdentifier other && _name == other._name && _tags.SequenceEqual(other._tags);
             }
 
             public override int GetHashCode()
@@ -2812,9 +2834,9 @@ namespace Selania.Rework.Components
 
             public GrimoireLink[] GrimoireLinks { get; }
 
-            public virtual bool Equals(GrimoirePageContent? other)
+            public override bool Equals(object? obj)
             {
-                return _text == other?._text && other.GrimoireLinks
+                return obj is GrimoirePageContent other && _text == other._text && other.GrimoireLinks
                     .Where(l => l.NavigationKind == NavigationKind.Forward)
                     .SequenceEqual(GrimoireLinks.Where(l => l.NavigationKind == NavigationKind.Forward));
             }
@@ -2901,9 +2923,9 @@ namespace Selania.Rework.Components
             public int ChoiceIndex { get; }
             public NavigationKind NavigationKind { get; }
 
-            public virtual bool Equals(GrimoireLink? other)
+            public override bool Equals(object? obj)
             {
-                return _text == other?._text && NavigationKind == other.NavigationKind &&
+                return obj is GrimoireLink other && _text == other._text && NavigationKind == other.NavigationKind &&
                        _tags.SequenceEqual(other._tags);
             }
 
@@ -2948,7 +2970,14 @@ namespace Selania.Rework.Components
         #region ink
 
         [Header("ink variable levels")] [SerializeField]
-        private string[] inkVariableLevels = null!;
+        private string[] inkVariableLevels =
+        {
+            "ink_empty",
+            "ink_low",
+            "ink_normal",
+            "ink_medium",
+            "ink_high"
+        };
 
         /// <inheritdoc />
         public Observable<int> GetInkLevelObservable(string inkVariableName)
@@ -2958,7 +2987,7 @@ namespace Selania.Rework.Components
                 var currentItem = inkList.Keys.First().itemName;
                 var index = inkVariableLevels.IndexOf(level => level == currentItem);
                 if (index >= 0) return index;
-                Logger.ZLogWarning($"Unknown ink level ${currentItem} from variable ${inkVariableName}");
+                Logger.ZLogWarning($"Unknown ink level {currentItem} from variable {inkVariableName}");
                 return (int?)null;
             }).Where(i => i.HasValue).Select(i => i!.Value);
         }
