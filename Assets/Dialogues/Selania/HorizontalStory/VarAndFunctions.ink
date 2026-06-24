@@ -38,9 +38,9 @@ VAR horizontalS_greenhouseFourthTier = 3
 
 //Variabili per le notifiche del nido
 VAR horizontalS_nestDocs = false
-VAR horizontalS_nestFirstTier = 12
-VAR horizontalS_nestSecondTier = 24
-VAR horizontalS_nestThirdTier = 36
+VAR horizontalS_nestFirstTier = 6
+VAR horizontalS_nestSecondTier = 18
+VAR horizontalS_nestThirdTier = 30
 VAR horizontalS_nestFourthTier = 48
 VAR horizontalS_nestFifth = 60
     //Per evitare che allo stesso tier venga dato più di un documento, blocco il dispatch fino alla condizione successiva.
