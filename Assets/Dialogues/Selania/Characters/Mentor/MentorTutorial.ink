@@ -25,7 +25,8 @@
             {charTag(FifthCharacter, "neutral")}:               Il dialogo è tutto nel tuo lavoro, come nella vita.
                                                                 Ogni volta che dirai qualcosa le persone presenti si faranno un'idea su di te.
                                                                 Parlare è agire, e le nostre azioni raccontano sempre il modo in cui vediamo il mondo.
-                                                                E non tutte le visioni del mondo sanno conciliarsi.
+            {charTag(FifthCharacter, "sorry")}:                 E non tutte le visioni del mondo sanno conciliarsi.
+            {charTag(FifthCharacter, "hurry")}:                 Ad esempio:
 
         {
             - fifth_char_intro.fireChoice:
@@ -61,12 +62,11 @@
         {charTag(FifthCharacter, "neutral")}:                   Le cose non sono poi così lineari, perché giustamente il modo in cui ognunə di noi vede il mondo è molto molto molto complesso.
         {charTag(FifthCharacter, "hurry")}:                     La cosa bella però è che le persone tendono sempre a reagire a ciò che diciamo.
         {charTag(FifthCharacter, "neutral")}:                   E capire le loro reazioni è la prima parte del tuo lavoro.
-                                                                Prima di riempirti di troppe informazioni, a continuare a parlare con le persone che incontrerai qui in giro, e a capire meglio come ragionano.
+                                                                Prima di riempirti di troppe informazioni, ti invito a continuare a parlare con le persone che incontrerai qui in giro, e a capire meglio come ragionano.
         {charTag(FifthCharacter, "hurry")}:                     Capire il modo in cui vedono il mondo ti aiuterà a conquistare la loro fiducia.
-        {charTag(FifthCharacter, "neutral")}:                   Che è la parte davvero fondamentale per compiere il tuo lavoro.
-        {charTag(FifthCharacter, "hurry")}:                     Ma ne parleremo dopo.
-                                                                Più tardi ti spiegherò perché sei qui.
-        {charTag(FifthCharacter, "hurry")}:                     Io devo raccogliere le foglie dalla foresta.
+        {charTag(FifthCharacter, "neutral")}:                   Che è la parte davvero fondamentale del tuo lavoro.
+        {charTag(FifthCharacter, "hurry")}:                     Più tardi ti spiegherò perché sei qui.
+        {charTag(FifthCharacter, "hurry")}:                     Intanto vedo cosa c'è da spolverare.
 
             -> mentor_closing_storylet ->
             -> main

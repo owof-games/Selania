@@ -115,20 +115,29 @@
             {charTag(SecondCharacter, "neutral")}:              Detesto quando fa così.
             -
         {charTag(SecondCharacter, "angry")}:                    Ma sai che io non mi ricordo mica il mio nome?
-        {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {grimoire_appendices hasnt grimChoicesMentor:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
+
+            {
+                - grimoire_secondChar != ():
+                    {charTag(SecondCharacter, "neutral")}:                  Però non so come mai ma {grimoire_appendices hasnt grimChoicesMentor:il fiore parlante|{charNameFive}} e {charNameOne} mi chiamano {charNameTwo}.
+                        {
+                            - are_two_entities_together(FirstCharacter, PG): 
+                                    {charTag(FirstCharacter, "annoyed")}:       Ehm, non so se ti sei visto riflesso ama, ma, ehm. 
+                        }
+                        {
+                            - are_two_entities_together(Mentor, PG): 
+                                    {charTag(FifthCharacter, "sad")}:           Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.
+                        }
+                - else:
+                    {charTag(SecondCharacter, "neutral")}:                      Però nel riflesso della fermata ho visto che ora sembro un {charNameTwo}!
+
+            }
         - (nameSecond)
             ~ grimoire_secondChar += grimSecondCharPresentation
 
-        {
-            - are_two_entities_together(FirstCharacter, PG): 
-                    {charTag(FirstCharacter, "annoyed")}:       Ehm, non so se ti sei visto riflesso ama, ma, ehm. 
-        }
-        {
-            - are_two_entities_together(Mentor, PG): 
-                    {charTag(FifthCharacter, "sad")}:           Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.
-        }  
-        {charTag(SecondCharacter, "energy")}:                   Dove saranno i miei compagni di scuola?
-                                                                Devi assolutamente trovarli!
+    
+        {charTag(SecondCharacter, "energy")}:                   Mi piacciono i ricci!
+        {charTag(SecondCharacter, "emotional")}:                Ma dove saranno i miei compagni di scuola?
+        {charTag(SecondCharacter, "energy")}:                   Devi assolutamente trovarli!
         {
             - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "sad")}:               Altri bambini? Ma questo posto è pieno di pericoli!
