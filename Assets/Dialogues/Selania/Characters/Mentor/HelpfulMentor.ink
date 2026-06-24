@@ -75,7 +75,7 @@
         + \ {charTag(PG, "neutral")}:                                           Avrei bisogno di una mano.
             -> support
         
-        + {player_somethingStrange != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
+        + {player_somethingStrangeTalkable != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
             -> little_storylets
     
         + \ {charTag(PG, "neutral")}:                                           Ho cambiato idea.
@@ -192,13 +192,13 @@
     {charTag(PG, "neutral")}:                                                                       Vorrei raccontarti una cosa strana.
 
 
-        * (fugaBoccale) {player_somethingStrange has strangeBoccale}\ {charTag(PG, "neutral")}:     {charNameThree} se ne è andato arrabbiato e senza farsi riscrivere.
+        * (fugaBoccale) {player_somethingStrangeTalkable has strangeBoccale}\ {charTag(PG, "neutral")}:     {charNameThree} se ne è andato arrabbiato e senza farsi riscrivere.
             {charTag(FifthCharacter, "bored")}:                                                     NON NOMINARLO MAI PIù!
                                                                                                     MAI PIù, CAPITO? 
-                ~ player_somethingStrange -= strangeBoccale
+                ~ player_somethingStrangeTalkable -= strangeBoccale
                 -> helping_mentor.top
 
-        * (voices) {player_somethingStrange has strangeVoice}\ {charTag(PG, "neutral")}:            C'è una voce che mi dice cose nella mia testa.
+        * (voices) {player_somethingStrangeTalkable has strangeVoice}\ {charTag(PG, "neutral")}:            C'è una voce che mi dice cose nella mia testa.
             
             {charTag(FifthCharacter, "neutral")}:                                                   Voce?
             {charTag(PG, "neutral")}:                                                               Sì.
@@ -209,10 +209,10 @@
             {charTag(FifthCharacter, "hurry")}:                                                     Un intuito latente che ora è più forte.
             {charTag(FifthCharacter, "sad")}:                                                       Meglio della stanchezza dell'essere mentore, fidati.
 
-                ~ player_somethingStrange -= strangeVoice
+                ~ player_somethingStrangeTalkable -= strangeVoice
                 -> helping_mentor.top
         
-        * (talkingWitch) {player_somethingStrange has strangeVase} \ {charTag(PG, "neutral")}:      Prima ho parlato con un pozzo, in una discarica.
+        * (talkingWitch) {player_somethingStrangeTalkable has strangeVase} \ {charTag(PG, "neutral")}:      Prima ho parlato con un pozzo, in una discarica.
             {charTag(PG, "neutral")}:                                                               Sembra che veda e senta tutto quello che accade qui.
             {charTag(PG, "neutral")}:                                                               E mi ha, anzi, mi hanno chiesto come stavo dopo aver concluso la prima riscrittura.
             {
@@ -229,10 +229,10 @@
                                                                                                     Il tuo aiuto.
             {charTag(FifthCharacter, "sad")}:                                                       Se senti ancora una volte delle voci, prenditi un po' di riposo.
 
-                ~ player_somethingStrange -= strangeVase
+                ~ player_somethingStrangeTalkable -= strangeVase
                 -> helping_mentor.top
         
-        * {player_somethingStrange has strangeFrog} \ {charTag(PG, "neutral")}:                     C'è una rana blu, e parla.
+        * {player_somethingStrangeTalkable has strangeFrog} \ {charTag(PG, "neutral")}:                     C'è una rana blu, e parla.
             {
                 - are_entities_together_in(Mentor, PG, Pond):
                 {charTag(FifthCharacter, "bored")}:                                                 L'ho notata.
@@ -270,10 +270,10 @@
                     {charTag(FifthCharacter, "neutral")}:                                           Molte cose qui stanno cambiando dal tuo arrivo.
                     {charTag(FifthCharacter, "sad")}:                                               Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
             }
-                ~ player_somethingStrange -= strangeFrog
+                ~ player_somethingStrangeTalkable -= strangeFrog
                 -> helping_mentor.top
         
-        * {player_somethingStrange has strangeGrimoire}\ {charTag(PG, "neutral")}:                  Il libro che mi hai dato si aggiorna da solo.
+        * {player_somethingStrangeTalkable has strangeGrimoire}\ {charTag(PG, "neutral")}:                  Il libro che mi hai dato si aggiorna da solo.
 
             {charTag(PG, "neutral")}:                                                               E raccoglie informazioni su questo posto.
             {
@@ -294,11 +294,11 @@
             {charTag(FifthCharacter, "neutral")}:                                                   Usalo con saggezza, {player_name}.
             {charTag(FifthCharacter, "hurry")}:                                                     E fidati solo di me.
 
-                ~ player_somethingStrange -= strangeGrimoire
+                ~ player_somethingStrangeTalkable -= strangeGrimoire
                 -> helping_mentor.top
 
    
-        * (mentor) {player_somethingStrange has strangeMentor}\ {charTag(PG, "neutral")}:           Prima Franco ha detto di non aver mai incontrato nessun mentore da queste parti.
+        * (mentor) {player_somethingStrangeTalkable has strangeMentor}\ {charTag(PG, "neutral")}:           Prima Franco ha detto di non aver mai incontrato nessun mentore da queste parti.
             
             {charTag(FifthCharacter, "neutral")}:                                                   Franco?
                                                                                                     Franco è anche convinto che la luna gli parli!
@@ -322,7 +322,7 @@
                                                                                                     Se il mio unico scopo non fosse quello di aiutarti?
             {charTag(FifthCharacter, "sad")}:                                                       Mi prenderei tutta questa stanchezza senza motivo?
 
-                ~ player_somethingStrange -= strangeMentor
+                ~ player_somethingStrangeTalkable -= strangeMentor
                 -> helping_mentor.top
 
                     

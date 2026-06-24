@@ -406,7 +406,7 @@ VAR letters_doggoPause = false
     ~ player_lastRestingSession ++
 
 //Aggiornamento per la parte di argomenti "strani" per mentore
-//Step uno: verifico se c'è un nuovo argomento strano
+//L'idea è: uso player_somethingStrange come lista per verificare se un tema è già stato aggiunto, e player_somethingStrangeTalkable per vedere se posso parlarne o meno con Mentore
 
     {
         - grimoire_franco has grimFrancoFirst && player_somethingStrange hasnt strangeFrog:
