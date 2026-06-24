@@ -12,7 +12,7 @@
 
             {charTag(FifthCharacter, "hurry")}:                 Rieccoci {player_name}!
                                                                 Sono contenta che hai parlato un po' con le persone che hai incontrato in giro per questo luogo!
-            {charTag(FifthCharacter, "neutral")}:               Dire che ora sei pront{player_pronoun has him:o|{player_pronoun has her:a|ə}} per ascoltare il mio primo insegnamento sul tuo lavoro.
+            {charTag(FifthCharacter, "neutral")}:               Direi che ora sei pront{player_pronoun has him:o|{player_pronoun has her:a|ə}} per ascoltare il mio primo insegnamento sul tuo lavoro.
                 {
                 - grimoire_appendices has tutorialChoicesRelationship:
                 {charTag(FifthCharacter, "sad")}:               Anche se ho visto che ne hai parlato anche con la capra.

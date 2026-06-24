@@ -59,7 +59,7 @@
                                                                 Non è che ho preso dei funghi?
                                                                 Come con quel risotto allucinogeno dopo l'esame di composizione.
         {charTag(FirstCharacter, "affectionate")}:              Ma manco mi sono presentata.
-                                                                Mi chiamo {charNameOne}.
+                                                                Mi chiamo <b>{charNameOne}</b>.
             - (firstPresentation)
             ~ grimoire_firstChar += grimFirstCharPresentation
         
@@ -68,7 +68,7 @@
         {charTag(FirstCharacter, "neutral")}:                   <i>{charNameOne}</i>.
                                                                 Ma.
         {charTag(FirstCharacter, "curious")}:                   Se lo dico al contrario?
-        {charTag(FirstCharacter, "annoyed")}:                   Arratihc.
+        {charTag(FirstCharacter, "annoyed")}:                   <i>Arratihc.</i>
         {charTag(FirstCharacter, "neutral")}:                   Uh.
                                                                 Prova tu.
                                                                 Come ti chiami?
@@ -82,8 +82,13 @@
                                                                 Ha senso?
                                                                 Forse mi sono di nuovo addormentata a lavoro?
         {charTag(FirstCharacter, "annoyed")}:                   Merda, il capo mi farà il culo.
-            ~ move_entity(Mentor, TrainStop)
+            ~ temp my_location = entity_location(PG)
+            ~ move_entity(Mentor, my_location)
+            {
+            - are_two_entities_together(FifthCharacter, PG):    
                                                                 Ed ecco di nuovo quel fiore parlante!
+            }
+                                                                
         {charTag(FirstCharacter, "neutral")}:                   {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
                                                                 Fai il tuo dovere da inconscio, così mi ripiglio e vedo di non mandare in merda il lavoro.
        
@@ -148,14 +153,21 @@
                                                                 Ma potrò prima o poi dire il mio nome.
         -
     
-        {
-            - grimoire_appendices hasnt grimChoicesMentor:
-            {charTag(FifthCharacter, "hurry")}:                 Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
-            {charTag(FifthCharacter, "neutral")}:               E tu quando puoi parlami, e ti spiegherò un po' di cose.
+            {
             
+            - are_two_entities_together(FifthCharacter, PG):    
+                {
+                - grimoire_fifthChar hasnt grimMentorIntro:
+                {charTag(FifthCharacter, "hurry")}:                 Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
+                {charTag(FifthCharacter, "neutral")}:               E tu quando puoi parlami, e ti spiegherò un po' di cose.
+                
+                - else:
+                {charTag(FifthCharacter, "hurry")}:                 Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
+                }
+                
             - else:
-            {charTag(FifthCharacter, "hurry")}:                 Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
-        }
+                                                                E inizio a sentire caldo.    
+            }
             
         {charTag(FirstCharacter, "annoyed")}:                   Oook.
         {charTag(FirstCharacter, "neutral")}:                   Ok.

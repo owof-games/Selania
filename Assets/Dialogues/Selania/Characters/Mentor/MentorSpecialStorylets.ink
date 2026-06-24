@@ -104,7 +104,7 @@
             -> gender ->
         {charTag(FifthCharacter, "hurry")}:                     Piacere di conoscerti, {player_name}.
                                                                 E {player_pronoun has him:benvenuto|{player_pronoun has her:benvenuta|benvenutə}}.
-                                                                {player_pronoun has her:Anche io uso i pronomi femminili.|Con me invece usa pure i pronomi femminili.}.
+                                                                {player_pronoun has her:Anche io uso i pronomi femminili.|Con me invece usa pure i pronomi femminili.}
 
             {
             - not waterChoice:
@@ -127,7 +127,7 @@
                 {charTag(FifthCharacter, "sad")}:               Anche se la capretta ti ha già dato un bel po' di informazioni.
                     {
                     - are_two_entities_together(Carla, PG):
-                     {charTag(Carla, "bored")}:                 E probabilmente non se ne ricorderà mezza.   
+                     {charTag(Carla, "bored")}:                 E probabilmente {player_name} non se ne ricorderà mezza.   
                     }
                 }
 
@@ -177,7 +177,10 @@
 
         + \ {charTag(PG, "neutral")}:                           Quando si tratta di farsi una pausa, non serve dirmelo due volte.
             -> glyph_choice_manager(Mentor, earthC) ->
-
+                    {
+                    - are_two_entities_together(Carla, PG):
+                     {charTag(Carla, "happy")}:                 Siamo in due.
+                    }
             {charTag(FifthCharacter, "neutral")}:               La cosa mi fa piacere.
             {charTag(FifthCharacter, "sad")}:                   Vorrei poter dire lo stesso.
             {charTag(FifthCharacter, "hurry")}:                 Ma se mi fermassi crollerebbe tutto, no?
@@ -196,7 +199,6 @@
             {charTag(FifthCharacter, "hurry")}:                 Comunque questo luogo è pieno di spazi di ristoro e cura, anche per te.
                                                                 E se avrai bisogno del mio aiuto, ti basterà cercarmi.
             {charTag(FifthCharacter, "neutral")}:               Ho sempre qualche dritta su come affrontare i momenti più difficili.
-                                                                Ma ora vai: incontra nuove persone, esplora nuovi luoghi!
             {charTag(FifthCharacter, "sad")}:                   Dimenticavo: ti ho aperto la serra, <>                                                    
 
                                         {
@@ -213,7 +215,7 @@
         {charTag(FifthCharacter, "neutral")}:                   Ora ti saluto e 
         {charTag(FifthCharacter, "hurry")}:                     No!
         {charTag(FifthCharacter, "sad")}:                       Cavoletti. 
-        {charTag(FifthCharacter, "sorry")}:                     Perché dimentico sempre tutto ?!?
+        {charTag(FifthCharacter, "sorry")}:                     Perché dimentico sempre tutto?!?
         {charTag(FifthCharacter, "hurry")}:                     Questo è per te.
                                                                 È un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
         

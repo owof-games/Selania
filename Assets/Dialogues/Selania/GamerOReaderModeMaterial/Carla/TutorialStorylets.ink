@@ -471,16 +471,17 @@
 
     - (top2)    
     {charTag(Carla, "neutral")}:                Nella serra ci si fa crescere le piante.
-                                                Risolta.
+                                                Spiegazione finita.
                                                 Arrivederci.
-                                                Mmm, ah.
-    {charTag(Carla, "angry")}:                  La responsabile dice che c'è fila in mensa, e devo ammazzare il tempo.
+    {charTag(Carla, "bored")}:                  Mmm, ah.
+    {charTag(Carla, "angry")}:                  La responsabile dice che c'è fila in mensa.
+                                                Ammazziamo il tempo, va.
     {charTag(Carla, "neutral")}:                Uno: se non sta crescendo niente, la serra le farà due domande, e lei deve rispondere come se la sente.
-                                                A quel punto inizierà a crescere una pianta.
-                                                E dopo un po' potrà raccoglierne un pezzo.
-                                                Perché uno solo?
+    {charTag(Carla, "happy")}:                  A quel punto inizierà a crescere una pianta.
+    {charTag(Carla, "neutral")}:                E dopo un po' potrà raccoglierne un pezzo.
+    {charTag(Carla, "bored")}:                  Perché uno solo?
     {charTag(Carla, "angry")}:                  Perché sennò muoiono, no?
-    {charTag(Carla, "bored")}:                  Facciamo une esempio di domande sulla serra.
+    {charTag(Carla, "bored")}:                  Facciamo una prova.
                                                 Farò la voce mistica da serra.
     {charTag(TheWitch, witch_state())}:         <i>Quella è la nostra voce.</i>
     {charTag(Carla, "bored")}:                  <i>Il figlio di Carla...</i>
@@ -491,15 +492,15 @@
         + \ {charTag(PG, "neutral")}:           Non aumenta dal 1976.
         + \ {charTag(PG, "neutral")}:           È stata accreditata per sbaglio a quel deficiente dell'ufficio Parcheggi e Paracadute.
         -
-    {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di <b>mistico</b> in questa simulazione.</i>    
+    {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di mistico in questa conversazione.</i>    
     {charTag(Carla, "neutral")}:                Bene.
                                                 La serra farà le sue cose e poi le dirà che qualcosa è cambiato.
-                                                A questo punto lei va in giro a chiacchierare, la pianta cresce e quando tornerà in serra la voce mistica le dirà qualcosa tipo.
-    {charTag(Carla, "bored")}:                  <i>Gengive infiammate e sciatica che urla: è cresciuta una cipolla del <b>Mannaggia perché sono nata?</b></i>.
+    {charTag(Carla, "happy")}:                  A questo punto lei va in giro a chiacchierare, la pianta cresce e quando tornerà in serra la voce mistica le dirà qualcosa tipo.
+    {charTag(Carla, "bored")}:                  <i>Gengive infiammate e sciatica che urla: è cresciuta una cipolla del <b>Mannaggia perché sono nata</b></i>.
     {charTag(Carla, "neutral")}:                A quel punto potrà raccoglierla.
                                                 Ma perché raccoglierla?
     {charTag(Carla, "bored")}:                  Sì, anticipo le sue domande così facciamo prima.                                          
-    {charTag(Carla, "neutral")}:                Alcune persone possono accettare in dono da parte sua una pianta.
+    {charTag(Carla, "neutral")}:                Alcune persone possono accettare in dono un pezzo di pianta.
         {
             - player_accessiblePlaces has Kitchen:
                                                 Oppure può usarle come ingrediente in cucina.
@@ -523,7 +524,6 @@
     {charTag(Carla, "angry")}:                  In che senso stanno finendo i germogli? 
                                                 Un po' di gramigna è rimasta?
                                                 Volo!
-    {charTag(Carla, "bored")}:                  Ah: se rimane a stomaco vuoto, non è un problema di mia competenza.
 
 -> carla_closing_storylet
 
