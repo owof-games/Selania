@@ -596,14 +596,14 @@
                                                                         <i>Per poi rinchiudersi nella paura.</i>
         {charTag(ThirdCharacter, "jester")}:                            Ah no, quella è la pressione alta, zia.
         {charTag(ThirdCharacter, "bored")}:                             Un altro regalo di mio padre.                                                             
-                                                                        <i>Senti che potresti provare ad essere qualcosa di diverso, ma non sai cosa.</i>
+        {charTag(PG, "neutral")}:                                       <i>Senti che potresti provare ad essere qualcosa di diverso, ma non sai cosa.</i>
                                                                         <i>E ti spaventa, perché i tuoi amici, gli amici del calcetto, te lo ricordano ogni giorno: o sei come loro, o sei fuori.</i>
         {charTag(PG, "neutral")}:                                       <i>Solo.</i>
         {charTag(ThirdCharacter, "neutral")}:                           Non esageriamo.
         {charTag(PG, "neutral")}:                                       <i>E ci sono altre persone, persone come {charNameOne} a cui potresti chiedere una mano.</i>
                                                                         <i>Ma che vedono solo quello che sei stato, non quello che puoi diventare.</i>
-        {charTag(ThirdCharacter, "bored")}:                             Tutto questo è molto da froci, zia.                               
-                                                                        <i>E così vedi un'unica strada: schiacciarti ancora di più in qualcosa che ti sta facendo del male, guadagnandoti l'odio di chi ti potrebbe mostrare una vita diversa.</i>
+        {charTag(ThirdCharacter, "bored")}:                             Tutto questo è molto da froci {witch_actualName} o quel che sei.                               
+        {charTag(PG, "neutral")}:                                       <i>E così vedi un'unica strada: schiacciarti ancora di più in qualcosa che ti sta facendo del male, guadagnandoti l'odio di chi ti potrebbe mostrare una vita diversa.</i>
                                                                         <i>Ma sono qui per dirti che le tue strade sono infinite, {charNameThree}.</i>
                                                                         <i>Tante quante le persone che puoi immaginare.</i>
                                                                         <i>E anche se ora non ti sembra possibile, c'è sempre qualcuno che vorrà bene a una persona che è totalmente sé stessa, senza maschere o menzogne.</i>
@@ -626,7 +626,7 @@
         + [<i>la mia bocca è intorpidita</i>]
         + [<i>la mente limpida</i>]
         + [<i>e tutto ciò che mi spaventa</i>]
-        + [<i>scomparso.</>]
+        + [<i>scomparso.<i/>]
         -
         {charTag(ThirdCharacter, "jester")}:                            Ma che faccia c'hai?!?
         {charTag(ThirdCharacter, "bored")}:                             Che posto di matti.
@@ -1182,14 +1182,14 @@
         {charTag(SecondCharacter, "neutral")}:                                  Non gli piace il calcio.
         {charTag(SecondCharacter, "energy")}:                                   Però è bravissimo coi videogiochi.
                                                                                 A te piacciono i videogiochi?
-        {charTag(SecondCharacter, "neutral")}:                                  Fratellino, il mondo non è nei videogiochi, è fuori!
+        {charTag(ThirdCharacter, "neutral")}:                                   Fratellino, il mondo non è nei videogiochi, è fuori!
         {charTag(ThirdCharacter, "jester")}:                                    E poi ero una schiappa a FIFA 2000!                                                               
         {charTag(ThirdCharacter, "jester")}:                                    Senti a me: allo stadio ti ci porto io quando usciamo da qui, che dici?
                                                                                 Ci spariamo il derby!
                                                                                 Immagina: tu, io e il Franchì a urlare contro i milanisti.
                 {
                 - are_two_entities_together(Franco, PG):
-                {charTag(FirstCharacter, "neutral")}:                           Inizio a prepararmi l'ugola!
+                {charTag(Franco, "neutral")}:                           Inizio a prepararmi l'ugola!
                 {charTag(Franco, "question")}:                                  Ma cos'è un milanista?
                                                                                 È qualcosa che si mangia?
                 {charTag(ThirdCharacter, "jester")}:                            Sì Franchì, ce li mangeremo tutti!                                                                
@@ -1216,7 +1216,7 @@
                                                                                 Sempre che non ci spaventa tutti i pesci.
                 {
                 - are_two_entities_together(Franco, PG):
-                {charTag(FirstCharacter, "neutral")}:                           È mio sacro dovere proteggerli tutti dai pescatori!
+                {charTag(Franco, "neutral")}:                           È mio sacro dovere proteggerli tutti dai pescatori!
                                                                                 E da zio Gracco.
                 }                                                                  
          {charTag(ThirdCharacter, "neutral")}:                                  Sai pescare, fratellino?
@@ -1224,7 +1224,8 @@
         {charTag(ThirdCharacter, "jester")}:                                    Sei proprio un ragazzo di città.
         {charTag(SecondCharacter, "neutral")}:                                  Io sto in periferia, non in città.
                                                                                 E poi a me piacciono gli animali, non voglio fargli del male.
-        {charTag(ThirdCharacter, "neutral")}:                                   Quali animali? Gli orsi? I lupi? I leoni?
+        {charTag(ThirdCharacter, "neutral")}:                                   Quali animali? 
+                                                                                Gli orsi? I lupi? I leoni?
         {charTag(SecondCharacter, "neutral")}:                                  No, preferisco quelli strani, come l'ornitorinco o l'aye-aye o l'uacari.
         {charTag(ThirdCharacter, "neutral")}:                                   Uacari?
         {charTag(SecondCharacter, "energy")}:                                   Ha la faccia tutta rossa.
@@ -1408,7 +1409,7 @@
         {charTag(FirstCharacter, "neutral")}:                                   Non è vero.
         {charTag(ThirdCharacter, "bored")}:                                     Dona ha letteralmente fatto così.
         {charTag(FirstCharacter, "neutral")}:                                   Ma mi hai detto che Donatella ti ha lasciato "per trovare sé stessa", non per andare con un altro tipo.
-        {charTag(ThirdCharacter, "angry")}:                                     "Un altro tipo" è sempre un altro cazzo.
+        {charTag(ThirdCharacter, "angry")}:                                     "Trovare sé stessa" seduta su un cazzo più grosso.
                                                                                         //Check parolacce da parte di Mentore
                                                                                         ~ fifthChar_slurDetectorFunction()
         {charTag(FirstCharacter, "neutral")}:                                   E anche se non fosse così.
@@ -1423,7 +1424,7 @@
                                                                                 Tua madre?
         {charTag(ThirdCharacter, "angry")}:                                     Lascia fuori mia mamma da questa roba.
         {charTag(FirstCharacter, "neutral")}:                                   Ce l'hai portata te nel momento in cui hai detto "Tutte le donne sono troie", no?
-        {charTag(ThirdCharacter, "neutral")}:                                   E allora anche la roba di <i>Tutti gli uomini sono stupratori</i> che dite sempre voi, no?
+        {charTag(ThirdCharacter, "neutral")}:                                   E allora anche la roba di "Tutti gli uomini sono stupratori" che dite sempre voi, no?
                                                                                 Tuo padre è uno stupratore?
                 {
                 - are_two_entities_together(FifthCharacter, PG):

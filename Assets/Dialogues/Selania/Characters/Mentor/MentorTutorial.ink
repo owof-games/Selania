@@ -207,14 +207,14 @@
                     {charTag(Carla, "bored")}:                 Hanno mandato qui quest{player_pronoun has him:o|{player_pronoun has her:a|ə}} tizi{player_pronoun has him:o|{player_pronoun has her:a|ə}} totalmente impreparat{player_pronoun has him:o|{player_pronoun has her:a|ə}} per fare il suo lavoro.
                                                                 Come al solito.
                                                                 Che dovevo fare?
-                    {charTag(FifthCharacter, "neutral")}:       Lasciare fare a me, ad esempio.                                            
+                    {charTag(FifthCharacter, "neutral")}:       Lasciare fare a me, ad esempio.
+                    {charTag(FifthCharacter, "neutral")}:       Dicevo.                                         
                     }
-                {charTag(FifthCharacter, "neutral")}:           Dicevo.
                 }
                                                                 Ogni goccia di inchiostro è una possibilità in più di proporre una riscrittura di un aspetto della vita della persona.
         {charTag(FifthCharacter, "neutral")}:                   E quindi la logica diventa: più fiducia uguale più inchiostro uguale più riscritture uguale maggiori occasioni di successo!
-                                                                Ma se anche non dovessi avere una sola goccia di inchiostro, non disperare, perché ogni riscrittorə ha in sé un terzo strumento: lo strumento dell'<b><i>epilogo</b></i>.
-                                                                L'<b><i>epilogo</b></i> è una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso.
+        {charTag(FifthCharacter, "hurry")}:                     Ma se anche non dovessi avere una sola goccia di inchiostro, non disperare, perché ogni riscrittorə ha in sé un terzo strumento: lo strumento dell'<b><i>epilogo</b></i>.
+        {charTag(FifthCharacter, "neutral")}:                   L'<b><i>epilogo</b></i> è una dichiarazione finale dellə riscrittorə, con l'obiettivo di far mettere alla persona un punto sul suo presente e iniziare a guardare al futuro in modo diverso.
         {charTag(FifthCharacter, "hurry")}:                     Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
 
     

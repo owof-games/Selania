@@ -34,7 +34,7 @@
                     ~ move_entity(SecondCharacter, Pond)
             }
         //Step due: la strega ci invita a raggiungerla.
-        {charTag(TheWitch, "{witch_state()}")}:             Chiediamo a {player_name} di raggiungerci al pozzo, abbiamo bisogno della sua intermediazione.
+        {charTag(TheWitch, "{witch_state()}")}:                 <i>Chiediamo a {player_name} di raggiungerci al pozzo, abbiamo bisogno della sua intermediazione.
 
         //Step tre: attivo il blocco per evitare che Boccale venga randomizzato fino a quando non gli abbiamo parlato, e che la frase sopra venga ripetuta di nuovo.
             ~ witch_thirdCharSummoned = true

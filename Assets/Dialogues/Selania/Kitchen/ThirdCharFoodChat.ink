@@ -1765,7 +1765,7 @@
                                                                                 Iniziava due giorni prima a sfornellare torte dolci troppo dure.
                                                                                 Parmigiane troppo salate.
         {charTag(ThirdCharacter, "jester")}:                                    E tartine col burro e uova di lompo che attiravano le vespe in un millisecondo.
-        {charTag(ThirdCharacter, "neutral")}:                                   Per sopravvivere mia sorella e io iniziavamo a nasconderci negli zainetti pacchetti di patatine e popcorn che rubavamo al bar per una settimana.
+        {charTag(ThirdCharacter, "neutral")}:                                   Per sopravvivere mia sorella e io abbiamo iniziato a nasconderci negli zainetti pacchetti di patatine e popcorn.
                                                                                 E ce li mangiavamo mentre facevamo finta di giocare a nascondino o robe simili.
                                                                                 Papà invece stoicamente mangiava tutto, facendosi aiutare da litrate di aranciata.
                                                                                 Odio quel fallito, ma si impegnava in tutti i modi per non far sentire mai mamma sbagliata.
@@ -1781,7 +1781,7 @@
                 }
         {charTag(ThirdCharacter, "neutral")}:                                   Comunque ho trovato in giro un po' di roba e ho ricreato un set da pic nic.
                                                                                 Te l'ho lasciato in cucina.
-        {charTag(ThirdCharacter, "jester")}:                                    Chi ci porteresti di noi?                                                                                                                                        
+        {charTag(ThirdCharacter, "jester")}:                                    Con chi di noi vuoi sparartelo un pic nic?                                                                                                                                        
 
     
         + \ {charTag(PG, "neutral")}:                                           Franco, ho un sacco di domande da fargli, voglio capire come ragiona!

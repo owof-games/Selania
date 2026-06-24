@@ -188,7 +188,7 @@
     {charTag(Carla, "angry")}:                          Sbrighiamoci.
     {charTag(Carla, "neutral")}:                        Non so se gliel'hanno già detto, ma lei è qui per aiutare le persone a trovare un nuovo nome.
                                                         Perché?
-    {charTag(Carla, "bored")}:                          Non ne ho idea, io eseguo solo le indicazioni del ministero.
+    {charTag(Carla, "bored")}:                          Non ne ho idea, io eseguo solo le indicazioni del Ministero.
     {charTag(Carla, "neutral")}:                        Quando avrà conosciuto abbastanza una persona, potrà proporle di rileggere la sua storia e scegliersi un nuovo nome.
                                                         Quindi.
     {charTag(Carla, "happy")}:                          Uno: dice alla persona una cosa tipo "Ti va di rileggere la tua storia con me?".
@@ -207,10 +207,10 @@
                                                         Riepilogando: più inchiostro ha accumulato, più cose potrà dire, facendo riferimento alle confidenze fatte da quella persona.
                                                         Quindi: più inchiostro uguale lavoro più facile.
                                                         Perché?
-    {charTag(Carla, "happy")}:                          Perché le persone sono insicure, e devi sempre spiegargli le cose mille volte mentre tu vorresti solo andare a casa coi gatti e la switch.
+    {charTag(Carla, "happy")}:                          Perché le persone sono insicure, e devi sempre spiegargli le cose mille volte mentre tu vorresti solo andare a casa coi gatti e la Steam Deck.
     {charTag(Carla, "angry")}:                          E quando sono insicure, chiedono troppi perché.
     {charTag(Carla, "neutral")}:                        Facciamo una prova veloce.
-                                                        Mettiamo che l'ho trovata così adorabile, da darle addirittura una goccia di inchiostro.
+                                                        Mettiamo che l'ho trovata così adorabile da darle addirittura una goccia di inchiostro.
         ~ tutorial_CarlaInkIndicator = ink_low                                            
                                                         Mi ha sentito raccontare così tante cose su quella piaga di mio figlio, e così decide di dirmi.
                                                         <i>Carla: so che pensi che tuo figlio è un idiota, ma sono qui per dirti che poi guardarlo in modo diverso.</i>
@@ -229,11 +229,11 @@
         + \ {charTag(PG, "neutral")}:                   È arrivato il momento di abbandonare tuo figlio sull'autostrada.
         + \ {charTag(PG, "neutral")}:                   Svuota le casse del comune e scappa sull'Isola delle Capre insieme alla tua migliore amica!
         + \ {charTag(PG, "neutral")}:                   Cambia colore di capelli!
-        + \ {charTag(PG, "neutral")}:                   Fatti spostare all'ufficio <i>Reclami dei defunti</i> così non devi più lavorare!
+        + \ {charTag(PG, "neutral")}:                   Fatti spostare all'ufficio <i>Reclami dai defunti</i> così non devi più lavorare!
         + \ {charTag(PG, "neutral")}:                   Ignora il dottore e riprendi a mangiare i libri della biblioteca!
         -
-    {charTag(Carla, "neutral")}:                        A quel punto la persona dirà che ha ascoltato con attenzione le sue parole, e che ripensando anche a tutte le vostre chiacchierate, e che quindi il suo nuovo nome è qualcosa di diverso.
-                                                        Il mio rimane Carla, perché adoro odiare la mia vita e mi sta bene così.
+    {charTag(Carla, "neutral")}:                        A quel punto la persona dirà che ha ascoltato con attenzione le sue parole, e che ripensando anche a tutte le vostre chiacchierate, ha scelto un nuovo nome.
+                                                        Ma il mio rimane Carla, perché adoro odiare la mia vita e mi sta bene così.
     {
     - amore:
     {charTag(Carla, "bored")}:                          Ma non provi di nuovo a dire che mio figlio è frutto di un atto d'amore: non amo quel caprone di mio marito dal Settantasei.    
@@ -243,7 +243,7 @@
                                                         Se non l'ha capita, può sempre richiedermela.
     {charTag(Carla, "bored")}:                          Ma non lo faccia.
 
-    {charTag(Carla, "neutral")}:                        Sono tenuta infine a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, sette chiacchierate, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
+    {charTag(Carla, "neutral")}:                        Sono tenuta infine a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, un'ora di chiacchiere, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
                                                         Anche perché dopo la riscrittura, quella persona se ne andrà.
                                                         Non mi chieda dove, perché non è di mia competenza.
                                                         Ah, dimenticavo!

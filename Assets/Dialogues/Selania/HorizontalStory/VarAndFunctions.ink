@@ -336,7 +336,7 @@ VAR horizontalS_libraryThirdTier = 5
             -> horizontalSEndingStorylet 
         
         - docEighteen:
-            {charTag(Documents, "docGreenhouse")}:      Oggi Franco mi ha portato alla fontana.
+            {charTag(Documents, "docGreenhouse")}:      Oggi Franco mi ha portato al pozzo.
             ~ docEighteen_storylet()
             -> horizontalSEndingStorylet 
         

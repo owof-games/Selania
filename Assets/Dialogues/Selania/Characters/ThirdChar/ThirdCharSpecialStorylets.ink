@@ -1,6 +1,6 @@
 //Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
     === pre_open_the_nest
-        ~ temp charNameTwo = translator(thirdChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
 
@@ -25,7 +25,7 @@
 
     
     === open_the_nest
-    ~ temp charNameTwo = translator(thirdChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
