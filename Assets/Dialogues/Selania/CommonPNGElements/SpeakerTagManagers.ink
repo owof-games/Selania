@@ -33,11 +33,19 @@
 
     - ThirdCharacter:
         {   
-            - thirdChar_storyStatus == story_storyPostal:
+            - thirdChar_storyStatus == story_storyRemote:
             {
                 //Torna alla festa e non ci ha ancora detto il suo nome nuovo
                 - ! third_char_post_rewriting.naming:
-                    ~ return "{PNG}, ???, {displayName}_{mood}"
+                    {
+                        //Dal vivo
+                        - grimoire_thirdChar has grimThirdCharLetterEight:
+                            ~ return "{PNG}, ???, {displayName}_{mood}"        
+                        
+                        //Lettere
+                        - else:
+                            ~ return "{PNG}, {displayName}, {mood}"
+                    }
 
                 - else:
                     ~ return "{PNG}, {displayName}, {mood}"

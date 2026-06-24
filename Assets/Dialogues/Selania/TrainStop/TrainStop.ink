@@ -179,49 +179,49 @@
         }
         
     = one
-     {charTag(Documents, "writer_thirdChar")}:      Ti odio.
+     {charTag(ThirdCharacter, "writer")}:      Ti odio.
         -> letters_thirdCharLetters_one -> 
         -> third_char_letters_choices.one ->
         -> third_char_closing_letters -> main
 
     = two
-    {charTag(Documents, "writer_thirdChar")}:      C'ho messo un po' a risponderti, {player_name}.
+    {charTag(ThirdCharacter, "writer")}:      C'ho messo un po' a risponderti, {player_name}.
         -> letters_thirdCharLetters_two ->
         -> third_char_letters_choices.two ->
         -> third_char_closing_letters -> main
     
     = three
-    {charTag(Documents, "writer_thirdChar")}:      Ma io non ti saluto mai all'inizio delle lettere?!?
+    {charTag(ThirdCharacter, "writer")}:      Ma io non ti saluto mai all'inizio delle lettere?!?
         -> letters_thirdCharLetters_three -> 
         -> third_char_letters_choices.three ->
         -> third_char_closing_letters -> main
 
     = four
-    {charTag(Documents, "writer_thirdChar")}:      Ciao {player_name}!
+    {charTag(ThirdCharacter, "writer")}:      Ciao {player_name}!
         -> letters_thirdCharLetters_four -> 
         -> third_char_letters_choices.four ->
         -> third_char_closing_letters -> main
 
     = five
-    {charTag(Documents, "writer_thirdChar")}:      Sto una merda.
+    {charTag(ThirdCharacter, "writer")}:      Sto una merda.
         -> letters_thirdCharLetters_five -> 
         -> third_char_letters_choices.five ->
         -> third_char_closing_letters -> main
 
     = six
-    {charTag(Documents, "writer_thirdChar")}:      Immagina.
+    {charTag(ThirdCharacter, "writer")}:      Immagina.
         -> letters_thirdCharLetters_six -> 
         -> third_char_letters_choices.six ->
         -> third_char_closing_letters -> main
 
     = seven
-    {charTag(Documents, "writer_thirdChar")}:      È andata.
+    {charTag(ThirdCharacter, "writer")}:      È andata.
         -> letters_thirdCharLetters_seven -> 
         -> third_char_letters_choices.seven ->
         -> third_char_closing_letters -> main
 
     = eight
-     {charTag(Documents, "writer_thirdChar")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}.
+     {charTag(ThirdCharacter, "writer")}:      {player_pronoun has him:Vecio|{player_pronoun has her:Zia|Bomber}}.
         -> letters_thirdCharLetters_eight -> 
         -> third_char_closing_letters -> 
         -> main

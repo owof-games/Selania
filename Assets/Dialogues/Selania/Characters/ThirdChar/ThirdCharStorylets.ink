@@ -1291,7 +1291,7 @@
                                                                 <i>La cagnolina consegnerà le risposte di {player_name} a {charNameThree}.</i>
                                                                 <i>La prima cosa che ha chiesto {charNameThree} sono i pronomi di {player_name}.</i>
                                                                         -> gender.top ->
-                                                                <i>E poi {charNameThree} chiede: <b>Come faccio capire a mia sorella che sono pronto a cambiare?</b></i>
+                                                                <i>E poi {charNameThree} chiede: Come faccio capire a mia sorella che sono pronto a cambiare?</i>
                                                                 <i>Cosa vorrebbe rispondere {player_name}?</i>
         
 

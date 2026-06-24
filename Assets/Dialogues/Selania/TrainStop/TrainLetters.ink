@@ -250,7 +250,7 @@
                     Sono due giorni che mi fissa.
                     DUE CAZZO DI GIORNI!
                     <s>Mannaggia al</s>
-                    -------------------
+                    XXXXXXXXXXXXXXXXXXX
                     Mi sono fatto due passi, anche se non c'ho le idee molto più chiare di prima.
                     Da quando sono tornato dormo di merda.
                     Da quando sono tornato non riesco a fare andare bene le cose.
@@ -258,7 +258,7 @@
                     Mi siete rimasti tutti nella testa, una vocina di merda che mi fa guardare la mia vita come se non valesse un cazzo.
                     E ho avuto una conversazione assurda con Marta, mia sorella.
                     Quella <s>stronz</s>
-                    -------------------
+                    XXXXXXXXXXXXXXXXXXX
                     Altra passeggiata.
                     Non sto bene.
                     Ok?
@@ -268,7 +268,7 @@
                     Come ci si sente, {player_name}?
                     Perché io non ne ho idea.
                     Non ne ho più idea.
-                    -------------------
+                    XXXXXXXXXXXXXXXXXXX
                     Ormai il cane è qui da una settimana, mi ci sono affezionato.
                     Ma quanto è testarda?
                     {grimoire_thirdChar has grimThirdCharDog:Chissà se si ricorda che ci siamo già incontrati lì dove stai te.}
@@ -355,7 +355,7 @@
                     C'ho raccontato tutto a Petra, una sera.
                     E mi ha creduto.
                     Dice che fa parte di una congrega e
-                    ---------------
+                    XXXXXXXXXXXXXXXXXXX
                     Ok scusa ma mi sono bloccato per il ridere.
                     Perché una che è lesbica e strega è una cosa così OVVIA {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}!
                     Non ridevo da giorni.
@@ -592,7 +592,7 @@
                     Siamo qui a lavoro.
                     Piove.
                     E
-                    --------
+                    XXXXXXXXXXXXXXXXXXX
                     Ehi sono Petra!
                     L'idea di scriverti.
                     Oh.
@@ -602,7 +602,7 @@
                     Mi hanno parlato di lei nella congrega, ma sono anni che non sanno dove sia finita.
                     Ed è la mia SUPEREROINA.
                     La amo davvero la amo la 
-                    -------
+                    XXXXXXXXXXXXXXXXXXX
                     Ho dovuto strappargli la lettera dalle mani XD
                     Ora sono a casa perché Petra ha passato il resto della sera a chiedermi come sono arrivato lì e come sono tornato e se ricordo dei dettagli e il treno e di che colore era Franco e.
                     Non lo ricordo, {player_name} :/
@@ -787,7 +787,7 @@
                     Aiuto.
                     Ava è una AI.
                     Merda.
-                    -----------------
+                    XXXXXXXXXXXXXXXXXXX
                     Mi vergogno a dirlo, non lo sa nessuno, ma mi vergogno a bestia.
                     Per questo parlo poco di lei.
                     E.

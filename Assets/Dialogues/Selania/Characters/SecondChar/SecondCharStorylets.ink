@@ -1005,7 +1005,12 @@
                                                                 Sono molto apprezzato alle feste!
             {charTag(Franco, "neutral")}:                       Ma non mi piace tanto tutta la bava che mi arriva addosso.
             {charTag(Franco, "party")}:                         Però c'è il cibo gratis!
-            {charTag(FirstCharacter, "affectionate")}:          Franco, sai che sei appena diventato il mio migliore amico?
+
+                {    
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "affectionate")}:          Franco, sai che sei appena diventato il mio migliore amico?
+                }
+            
             }
 
         -> second_char_closing_storylet ->        

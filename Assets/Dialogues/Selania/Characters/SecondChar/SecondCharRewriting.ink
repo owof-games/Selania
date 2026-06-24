@@ -535,7 +535,7 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "angry")}:            Mi chiamerò...
+                                                        Mi chiamerò...
             ~  characterChangingObjects(SecondCharacter)
     {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
                                                         E proteggerò il mio branco.
@@ -549,7 +549,7 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "energy")}:           E il mio nome è...
+                                                        E il mio nome è...
             ~  characterChangingObjects(SecondCharacter)
     {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
                                                         Perché tutto è un gioco.
@@ -563,7 +563,7 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "emotional")}:        Mi chiamerò...
+                                                        Mi chiamerò...
             ~  characterChangingObjects(SecondCharacter)
     {charTag(SecondCharacter, "neutral")}:              <b><i>{charNameTwo}</b></i>.
                                                         E imparerò ad avere tantissimi amici.
@@ -577,7 +577,7 @@
         - else:
                                                         Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
     }
-        {charTag(SecondCharacter, "energy")}:           Io sono...
+                                                        Io sono...
             ~  characterChangingObjects(SecondCharacter)
         {charTag(SecondCharacter, "neutral")}:          <b><i>{charNameTwo}</b></i>.
                                                         Sono sveglio e curioso e posso capire ciò che mi circonda!
@@ -662,9 +662,19 @@
                                                     Non so cosa mi aspetta.
                                                     Spero un po' di dolci.
                                                     Ma te lo farò sapere, promesso!
-                                                    Mi mancherai, sia?
-                                                    Salutami Franco!
-                                                    E {charNameFive}.
+                                                    Mi mancherai, sai?
+                                                    Salutami {charNameFive}!
+                {
+                - are_two_entities_together(Franco, PG):
+                                                    Ciao Franco, non vedo l'ora che vieni a trovarmi!
+                {charTag(Franco, "party")}:         E io non vedo il minuto!
+                                                    Il secondo!
+                                                    Il!
+                {charTag(Franco, "question")}:      Cosa viene dopo?                                     
+                - else:
+                                                    E Franco.
+                                                    Mi manca già!                                        
+                }
         {
             - firstChar_storyStatus == story_storyStarted:
                                                     E super {charNameOne}.

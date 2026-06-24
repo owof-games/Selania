@@ -217,7 +217,7 @@
     {charTag(FifthCharacter, "hurry")}:                                 La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
         {
         - are_two_entities_together(ThirdCharacter, PG):
-        {charTag(ThirdCharacter, "bored")}:                             Gesù Licantropo che rottura di balle.
+        {charTag(ThirdCharacter, "bored")}:                             Gesù licantropo che rottura di balle.
         ~ change_entity_place(ThirdCharacter)
         }
     {charTag(FirstCharacter, "neutral")}:                               Mmm.
