@@ -1,30 +1,31 @@
 === main
 //Main è il punto da cui passiamo costantemente per caricare i thread di tutto ciò che genera testo in ogni area del gioco.
-{debug and (library_shortStories + library_averageStories + library_longStories) != library_unreadStories:
-    Errore nella biblioteca!
-    -> DONE
-} 
 
-{
-//disabilito missione rana con passaggio da libro riscrittora, così da non doverlo attivare durante testing stocastico
-    - debug_stochastic && frog_availableCommonMissions has missionOne:
-        ~ frog_availableCommonMissions -= missionOne
-        {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
-}
+        //COSE DI TESTING ETC.
+        {debug and (library_shortStories + library_averageStories + library_longStories) != library_unreadStories:
+            Errore nella biblioteca!
+            -> DONE
+        } 
 
-{
-//disabilito missione rana con passaggio da biblioteca, visto che è bloccata
-    - debug_stochastic && frog_availableCommonMissions has missionEight:
-        ~ frog_availableCommonMissions -= missionEight
-        {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
-}
+        {
+        //Disabilito missione rana con passaggio da libro riscrittora, così da non doverlo attivare durante testing stocastico
+            - debug_stochastic && frog_availableCommonMissions has missionOne:
+                ~ frog_availableCommonMissions -= missionOne
+                {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
+        }
 
-//Soluzione temporanea per spiegazione cursori etc lato Carla + attivazione modalità di gioco.
+        {
+        //Disabilito missione rana con passaggio da biblioteca, visto che è bloccata
+            - debug_stochastic && frog_availableCommonMissions has missionEight:
+                ~ frog_availableCommonMissions -= missionEight
+                {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
+        }
 
-{
-    - not gm_rm_activation:
-    -> tutorial_carlaInterfaceStorylets
-}
+        //Soluzione temporanea per spiegazione cursori etc lato Carla + attivazione modalità di gioco.
+        {
+            - not gm_rm_activation:
+            -> tutorial_carlaInterfaceStorylets
+        }
 
 
 ~ temp my_location = entity_location(PG)

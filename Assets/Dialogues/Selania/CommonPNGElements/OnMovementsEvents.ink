@@ -33,6 +33,8 @@ VAR letters_doggoPause = false
     -> achievements_onGame_statusUpdate_GM ->
 
     // -> notification_system ->
+        //Chiamo questo nodo prima dei tutorial per evitare che ci siano situazioni (es: Nido) in cui il tutorial batta la spiegazione del personaggio che deve aprirmi il luogo e si scasina tutto.
+    -> opening_places_storylets ->
     -> on_movement_tutorial_steps ->
 
 ->->

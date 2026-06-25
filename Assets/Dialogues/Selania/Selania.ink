@@ -38,6 +38,7 @@
     INCLUDE CommonPNGElements\SpeakerTagManagers.ink
     INCLUDE CommonPNGElements\Functions.ink
     INCLUDE CommonPNGElements\AutomaticStorylets.ink
+    INCLUDE CommonPNGElements\OpeningPlacesStorylets.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
