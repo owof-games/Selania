@@ -9,6 +9,7 @@ VAR tutorial_CarlaRelationshipIndicator = 0
 
 //Variabili per attivare i tutorial
 VAR tutorial_inkActive = false
+VAR tutorial_inkActive_requested = false
 VAR tutorial_rereadingActive = false
 VAR tutorial_choicesActive = false
 
@@ -25,10 +26,13 @@ VAR tutorial_CarlaInkIndicator = ink_empty
         - grimoire_firstChar != ():
                 ~ tutorial_choicesActive = true
     }
-    //Tutorial inchiostro
+    //Tutorial inchiostro e dono
     {
         - (grimoire_firstChar has grimFirstCharThree) or (grimoire_secondChar has grimSecondCharFour) or (grimoire_thirdChar has grimThirdCharThree):
                 ~ tutorial_inkActive = true
+        //Serve anche un'altra condizione per cui io cerco di fare il dono, e mi viene detto che devo parlare con Mentore o Carla, e a questo punto tutorial_inkActive diventa vero.
+        - tutorial_inkActive_requested = true:
+                ~ tutorial_inkActive = true      
     }
 
     //Tutorial riscrittura

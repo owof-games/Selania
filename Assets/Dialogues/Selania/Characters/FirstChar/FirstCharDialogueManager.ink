@@ -182,7 +182,10 @@
             + {firstChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                          Ti vorrei dare questa cosa.
             
             {//Ma non ho ascoltato il tutorial (se attivo)
-                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimGreenhouseMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                        //Traccio che è stato richiesto sostanzialmente il tutorial sui doni:
+                            ~ tutorial_inkActive_requested = true
+                            
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(FirstCharacter, "affectionate")}:          Sono curiosissima, ma proprio tanto, ma mi sa che prima devi sentire cosa hanno da dire le due regine dello spiegone!
