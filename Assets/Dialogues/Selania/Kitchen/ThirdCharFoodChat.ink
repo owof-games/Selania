@@ -79,6 +79,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
        
         {charTag(ThirdCharacter, "jester")}:                                    Ahah, potrebbe diventare il mio momento preferito da quando sono qui.
         {charTag(ThirdCharacter, "neutral")}:                                   E scusa se non ti ho chiesto che squadra tifi, ma voglio avere ancora rispetto per te, vecio.
@@ -486,11 +489,13 @@
             
     
     = second_theme
-    //ragazze
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
     
         {charTag(ThirdCharacter, "jester")}:                                    Veciooooooooooooooo!
                                                                                 Tu mi vuoi morto!
@@ -933,12 +938,14 @@
                 
     
     = third_theme
-    //lavoro
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive= translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
 
 
         {charTag(ThirdCharacter, "jester")}:                                    Ah ah, ci sta.
@@ -1749,6 +1756,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive= translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
 
     
         {charTag(ThirdCharacter, "neutral")}:                                   Prima mi son messo a sfornellare da solo.

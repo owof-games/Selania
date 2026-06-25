@@ -46,6 +46,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
 
     {charTag(SecondCharacter, "neutral")}:                      Ehi {player_name}!
@@ -140,6 +143,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
 
     {charTag(SecondCharacter, "energy")}:                       Ehi {player_name}!

@@ -80,6 +80,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
         
 
         {charTag(SecondCharacter, "energy")}:                   Animaliiiiiiiiiiii!
@@ -424,6 +427,9 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
+
 
         {charTag(SecondCharacter, "angry")}:                    Bleah.
                                                                 Ma questa è una punizione!
@@ -784,7 +790,10 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
 
+        
         {charTag(SecondCharacter, "angry")}:                    Mi vuoi sgridare di nuovo?
                                                                 Ti ho già chiesto scusa.
         {charTag(SecondCharacter, "melanchonic")}:              Ho imparato la lezione.
@@ -1455,6 +1464,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+                //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
 {debug: passo per food_gift_second_char.}
 

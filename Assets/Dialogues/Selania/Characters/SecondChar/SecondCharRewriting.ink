@@ -58,7 +58,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
 
     {charTag(SecondCharacter, "neutral")}:                  Va bene.
                                                             Ma stavo pensando una cosa però prima.
@@ -85,8 +87,6 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-
-
     {charTag(SecondCharacter, "neutral")}:                  Comunque possiamo cominciare quando vuoi.
         
     //Affrontiamo gli adulti in generale

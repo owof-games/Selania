@@ -8,6 +8,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
         
         {charTag(SecondCharacter, "energy")}:                   Ma tu perché sei qui?
@@ -153,7 +156,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
+                    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
 
         {charTag(SecondCharacter, "emotional")}:                Non sai che cosa fighissima!
                                                                 Prima ho visto una rana allo stagno.
@@ -258,6 +263,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
 
         {charTag(SecondCharacter, "energy")}:                   Mica mi hai detto come ti chiami.
@@ -483,6 +491,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
 
         {charTag(SecondCharacter, "melanchonic")}:              Mi sono ricordato ora che non ho invitato nessun amico.
@@ -659,6 +670,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
             {
                 - are_two_entities_together(Mentor, PG):
@@ -790,6 +804,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
         {charTag(SecondCharacter, "neutral")}:                  Prima, con {charNameFive}.
                                                                 Mi ha fatto male perché mi ha fatto pensare a scuola.
@@ -906,6 +923,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
@@ -1022,6 +1042,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
@@ -1169,6 +1192,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
@@ -1379,6 +1405,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
         {
             - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
@@ -1484,6 +1513,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
             {
                 - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):
@@ -1602,6 +1634,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
     
     {
         - grimoire_fifthChar hasnt grimSecondCharMentorPeace && are_two_entities_together(Mentor, PG):

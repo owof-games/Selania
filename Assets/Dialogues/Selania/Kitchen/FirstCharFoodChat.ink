@@ -80,6 +80,9 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
+
     {charTag(FirstCharacter, "affectionate")}:                  Quindi hai già capito che per me le relazioni sono il centro di tutto.
     {charTag(FirstCharacter, "curious")}:                       Vediamo, cosa ti posso raccontare? 
     {charTag(FirstCharacter, "sad")}:                           Da piccola ero un disastro sociale.
@@ -418,6 +421,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
     
 
         {charTag(FirstCharacter, "neutral")}:                   Woah, pesa.
@@ -809,6 +815,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
 
 
         {charTag(FirstCharacter, "neutral")}:                   Cavolo.
@@ -1449,6 +1458,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+            //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
 
     
     {charTag(FirstCharacter, "neutral")}:                   Cucinare da sola prima è stato un momento terapeutico.
