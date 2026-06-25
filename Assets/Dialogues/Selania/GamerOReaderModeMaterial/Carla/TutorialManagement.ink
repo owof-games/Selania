@@ -31,7 +31,8 @@ VAR tutorial_CarlaInkIndicator = ink_empty
         - (grimoire_firstChar has grimFirstCharThree) or (grimoire_secondChar has grimSecondCharFour) or (grimoire_thirdChar has grimThirdCharThree):
                 ~ tutorial_inkActive = true
         //Serve anche un'altra condizione per cui io cerco di fare il dono, e mi viene detto che devo parlare con Mentore o Carla, e a questo punto tutorial_inkActive diventa vero.
-        - tutorial_inkActive_requested = true:
+        
+        - tutorial_inkActive_requested == true:
                 ~ tutorial_inkActive = true      
     }
 

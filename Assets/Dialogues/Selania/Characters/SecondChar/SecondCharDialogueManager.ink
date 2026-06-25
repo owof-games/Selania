@@ -232,11 +232,21 @@
             //Offrire un dono
                 + {secondChar_giftedObject == () && backpack_findedGifts != ()} \ {charTag(PG, "neutral")}:                                                     Ti voglio dare questa cosa.
 
-                {//Ma non ho ascoltato il tutorial (se attivo)
-                - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimInkMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialGreenhouse):
+                //Check per vedere se ho ascoltato o meno il tutorial necessario
+                ~ temp tutorialConditions = false
+                {
+                  -  tutorial_MentorTutorial && grimoire_appendices has grimInkMentor:
+                        ~ tutorialConditions = true
+
+                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialGreenhouse:
+                        ~ tutorialConditions = true      
+                }
+
+            {//Ma non ho ascoltato il tutorial (se attivo)
+                - tutorialConditions == false:
                     //Traccio che è stato richiesto sostanzialmente il tutorial sui doni:
                             ~ tutorial_inkActive_requested = true
-                            
+
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(SecondCharacter, "emotional")}:            Regaliiii! Ma prima c'è qualcuno che vuole spiegarti qualcosa mi sa.

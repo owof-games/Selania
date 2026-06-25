@@ -286,7 +286,16 @@
         + \ {charTag(PG, "neutral")}:                   So già tutto, grazie.
             {charTag(Carla, "bored")}:                  Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
             {charTag(Carla, "neutral")}:                Buona continuazione.
-                -> carla_closing_storylet
+                {
+                    - entity_location(PG) == Bedroom:
+                        //Se lo stiamo ascoltando in camera allora faccio il check di chiusura, e poi faccio in modo che si passi alla scelta della modalità di gioco e tutorial.
+                        -> carla_closing_storylet ->
+                        -> gm_rm_activation
+
+                    - else:
+                        -> carla_closing_storylet    
+
+                    }
         -
 
     - (top2)    

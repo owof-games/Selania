@@ -162,6 +162,10 @@
             -
 
         {charTag(FifthCharacter, "neutral")}:                   Un modo per dimostrare a una persona che l'hai compresa, è farle un <b>dono</b>, ed è per questo che ti ho sbloccato la serra.
+            {
+            - tutorial_inkActive_requested == true:
+                                                                Cosa che stavi già facendo in autonomia, ed è grandioso!    
+            }
         {charTag(FifthCharacter, "hurry")}:                     Il dono giusto è un modo per dire "Ehi, ti vedo, ti capisco".
                                                                 Migliorare il rapporto.
                                                                 E ottenere più inchiostro.
