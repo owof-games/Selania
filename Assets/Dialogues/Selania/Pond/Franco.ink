@@ -17,13 +17,13 @@
 
     {//Discrepanza tra dono a Boccale e sua reazione
         
-        - frog_third_char_gift == thirdChar_giftedObject && thirdChar_giftedObject != ():
+        - frog_third_char_object_gift == thirdChar_giftedObject && thirdChar_giftedObject != ():
             ~ thirdCharFailedIngredient = true
 
-        - frog_third_char_ingredient == kitchen_thirdCharExtraIngredient && frog_third_char_ingredient != ():
+        - frog_third_char_object_ingredient == kitchen_thirdCharExtraIngredient && frog_third_char_object_ingredient != ():
             ~ thirdCharFailedIngredient = true    
 
-        - frog_third_char_ingredient == universalIngredient:
+        - frog_third_char_object_ingredient == universalIngredient:
             ~ thirdCharFailedIngredient = true    
         
     }

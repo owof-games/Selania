@@ -82,8 +82,9 @@
     VAR thirdChar_favouritesGifts = (CardoAspinato, FalsaPalude)
     VAR thirdChar_goodGifts = (BastoneDellOzioso, EderaDelleAmanti, Olobino)
     //Dono consigliato dalla rana
-    VAR frog_third_char_gift = ()
+    VAR frog_third_char_gift = ""
     VAR frog_third_temp_growing_gift = false
+    VAR frog_third_char_object_gift  =()
     //Dono effettuato
     VAR thirdChar_giftedObject = ()
 
@@ -107,7 +108,8 @@
         //Ricetta creata
         VAR kitchen_thirdCharRecipe = ""
         //Suggerimento rana
-        VAR frog_third_char_ingredient = ()
+        VAR frog_third_char_ingredient = ""
+        VAR frog_third_char_object_ingredient = ()
         VAR frog_third_temp_growing_ingredient = false
             
     //Valore ingredienti

@@ -71,6 +71,8 @@
     //Dono consigliato dalla rana
     VAR frog_first_char_gift = ""
     VAR frog_first_temp_growing_gift = false
+    VAR frog_first_char_object_gift = ()
+
     //Dono effettuato
     VAR firstChar_giftedObject = ()
 
@@ -102,6 +104,7 @@
         VAR kitchen_firstCharRecipeAdjective = ""
         VAR kitchen_firstCharRecipeComplement = ""
         VAR kitchen_firstCharExtraIngredient = ()
+            VAR frog_first_char_object_ingredient = ()
         VAR kitchen_firstCharExtraIngredientReaction = notReaction
 
 //Tracciamento del racconto

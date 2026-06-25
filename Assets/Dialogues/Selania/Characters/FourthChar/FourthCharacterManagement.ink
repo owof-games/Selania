@@ -71,8 +71,10 @@
     //Dono consigliato dalla rana
     VAR frog_fourth_char_gift = ""
     VAR frog_fourth_temp_growing_gift = false
+    VAR frog_fourth_char_object_gift = ()
     //Dono effettuato
     VAR fourthChar_giftedObject = ()
+    
 
 
 //Tracciamento cucina
@@ -96,6 +98,7 @@
         //Suggerimento rana
         VAR frog_fourth_char_ingredient = ""
         VAR frog_fourth_temp_growing_ingredient = false
+        VAR frog_fourth_char_object_ingredient = ()
             
     //Valore ingredienti
         VAR kitchen_fourthCharRecipeNoun = ""

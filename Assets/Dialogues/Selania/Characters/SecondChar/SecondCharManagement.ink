@@ -98,6 +98,7 @@
     //Dono consigliato dalla rana
     VAR frog_second_char_gift = ""
     VAR frog_second_temp_growing_gift = false
+    VAR frog_second_char_object_gift = ()
     //Dono effettuato
     VAR secondChar_giftedObject = ()
 
@@ -124,6 +125,7 @@
         //Suggerimento rana
         VAR frog_second_char_ingredient = ""
         VAR frog_second_temp_growing_ingredient = false
+        VAR frog_second_char_object_ingredient = ()
             
     //Valore ingredienti
         VAR kitchen_secondCharRecipeNoun = ""

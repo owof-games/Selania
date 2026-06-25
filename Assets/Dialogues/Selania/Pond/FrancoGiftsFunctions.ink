@@ -179,13 +179,21 @@
     
 === franco_giftsPlants(PNG, Location)
 {debug_frog: passo per franco_giftsPlants}
-~ temp frog_temp_char_gift = ""
-~ temp frog_temp_temp_growing_gift = false
-~ temp tempChar_favouritesGifts = ()
-~ temp speaker = ()
-~ temp frog_temp_char_ingredient = ""
+//VAR temporanee legate al regalo
+    ~ temp frog_temp_char_gift = ""
+    ~ temp frog_temp_temp_growing_gift = false
+    ~ temp tempChar_favouritesGifts = ()
+    ~ temp frog_temp_object_gift = ()
+
+//VAR temporanea soggetto
+    ~ temp speaker = ()
+
+//VAR temporanee cucina
+    ~ temp frog_temp_object_ingredient = ()
+    ~ temp frog_temp_char_ingredient = ""
+
 //questo mi traccia se ho già donato qualcosa in cucina, o direttamente 
-~ temp usedGift = ()
+    ~ temp usedGift = ()
 
     //Check preliminare    
     {
@@ -252,18 +260,23 @@
             }    
                 ~ frog_temp_char_gift = "sta crescendo ora in serra!"
                 ~ frog_temp_temp_growing_gift = true
+                ~ frog_temp_object_ingredient = greenhouse_chosenCultivable
+                ~ frog_temp_object_gift = greenhouse_chosenCultivable
 
         //Caso due: il dono è nello zaino
         - backpack_findedGifts ^ tempChar_favouritesGifts != ():
             ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
             ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
+            ~ frog_temp_object_ingredient = backGift
+            ~ frog_temp_object_gift = backGift
             {debug_frog: il dono è nello zaino ed è {backGift}.}
 
             {charTag(Franco, "party")}:                     Girino!
                                                             Sai che hai già la pianta giusta?
             {charTag(Franco, "neutral")}:                   Ti do un indizio.
 
+                //Capire perché aggiorno frog_temp_char_ingredient ora e non guardo in fondo se devo aggiornare ingredient o frog_temp_char_gift. Avendo sotto per ogni PNG una divisione kitchen/else, avrebbe più senso farlo lì
                 {backGift:
                     - BaccaDellaAddolorata:
                         Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
@@ -373,6 +386,8 @@
             }                                                
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
+                ~ frog_temp_object_ingredient = perfectGift
+                ~ frog_temp_object_gift = perfectGift
             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
 
             {
@@ -406,6 +421,8 @@
         - else:
 
             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
+            ~ frog_temp_object_ingredient = perfectGiftTwo
+            ~ frog_temp_object_gift = perfectGiftTwo
 
             {charTag(Franco, "party")}:                     Girino!
                                                             Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
@@ -430,6 +447,8 @@
             ~ frog_first_char_gift = frog_temp_char_gift
             ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
             ~ frog_first_char_ingredient = frog_temp_char_ingredient
+            ~ frog_first_char_object_ingredient = frog_temp_object_ingredient
+            ~ frog_first_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
                     ~ frog_firstCharAchievableGifts -= ingredientGift
@@ -441,6 +460,8 @@
             ~ frog_second_char_gift = frog_temp_char_gift
             ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
             ~ frog_second_char_ingredient = frog_temp_char_ingredient
+            ~ frog_second_char_object_ingredient = frog_temp_object_ingredient
+            ~ frog_second_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
                     ~ frog_secondCharAchievableGifts -= ingredientGift
@@ -452,6 +473,8 @@
             ~ frog_third_char_gift = frog_temp_char_gift
             ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
             ~ frog_third_char_ingredient = frog_temp_char_ingredient
+            ~ frog_third_char_object_ingredient = frog_temp_object_ingredient
+            ~ frog_third_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
                     ~ frog_thirdCharAchievableGifts -= ingredientGift
@@ -464,6 +487,8 @@
             ~ frog_fourth_char_gift = frog_temp_char_gift
             ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
             ~ frog_fourth_char_ingredient = frog_temp_char_ingredient
+            ~ frog_fourth_char_object_ingredient = frog_temp_object_ingredient
+            ~ frog_fourth_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
                     ~ frog_fourthCharAchievableGifts -= ingredientGift
@@ -476,6 +501,8 @@
             ~ frog_fifth_char_gift = frog_temp_char_gift
             ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
             ~ frog_fifth_char_ingredient = frog_temp_char_ingredient
+            ~ frog_fifth_char_object_ingredient = frog_temp_object_ingredient
+            ~ frog_fifth_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
                     ~ frog_fifthCharAchievableGifts -= ingredientGift
