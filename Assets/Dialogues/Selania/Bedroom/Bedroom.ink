@@ -51,16 +51,16 @@
         {charTag(TheWitch, witch_state())}:                             <i>Cosa serve?</i>
             
 
-            + \ {charTag(PG, "neutral")}:                               <i>Sono qui per testare il Grimorio.</i>
+            * \ {charTag(PG, "neutral")}:                               <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
             {charTag(TheWitch, witch_state())}:                         <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
                                                                         <i>Ho inoltre sbloccato tutti i sigilli e le piante.</i>
 
-            + (riscrittura) \ {charTag(PG, "neutral")}:                 <i>Impostami le prime 3 png come pronte per la riscrittura.
+            * (riscrittura) \ {charTag(PG, "neutral")}:                 <i>Impostami le prime 3 png come pronte per la riscrittura.
                 ~ debugRewriting()
                                                     
 
-            + \ {charTag(PG, "neutral")}:                               <i>Aprimi tutti i luoghi del gioco.
+            * \ {charTag(PG, "neutral")}:                               <i>Aprimi tutti i luoghi del gioco.
                 ~ debug_places_open()
 
             + \ {charTag(PG, "neutral")}:                               <i>Non mi serve nulla.</i>  

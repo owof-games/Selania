@@ -2060,7 +2060,7 @@
             {charNameThree}.
 
             {
-            - grimoire_secondChar has grimSecondThirdChar && ! secondChar_storyStatus == story_storyStarted:
+            - grimoire_secondChar has grimSecondThirdChar && secondChar_storyStatus != story_storyStarted:
                 PS: Alla fine grazie alla cagnolina postina sono riuscito ad organizzarmi, e sono andato all'acquario con {charNameTwo}.
                 Il bimbo sta crescendo a vista d'occhio!
                 E alla fine si capiva che allo stadio ci voleva venire solo perché me l'aveva promesso, e così ci siamo organizzati per un giro allo zoo safari.

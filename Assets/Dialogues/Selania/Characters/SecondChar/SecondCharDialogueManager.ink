@@ -192,7 +192,10 @@
                         ~ tutorialRewritingConditions = true
 
                   -  tutorial_CarlaTutorial && grimoire_appendices has tutorialRereading:
-                        ~ tutorialRewritingConditions = true      
+                        ~ tutorialRewritingConditions = true
+
+                  - tutorial_CarlaTutorial == false && tutorial_MentorTutorial == false:
+                         ~ tutorialRewritingConditions = true        
                 }
 
             {//Ma non ho ascoltato il tutorial (se attivo)
@@ -251,7 +254,10 @@
                         ~ tutorialConditions = true
 
                   -  tutorial_CarlaTutorial && grimoire_appendices has tutorialGreenhouse:
-                        ~ tutorialConditions = true      
+                        ~ tutorialConditions = true
+
+                  - tutorial_CarlaTutorial == false && tutorial_MentorTutorial == false:
+                         ~ tutorialConditions = true        
                 }
 
             {//Ma non ho ascoltato il tutorial (se attivo)

@@ -241,7 +241,7 @@ VAR letters_doggoPause = false
     }
 
     {
-        - thirdChar_storyStatus == story_storyRemote && thirdChar_mailPause < 0 && grimoire_thirdChar hasnt grimThirdCharLetterFour && letters_doggoPause == false:
+        - thirdChar_storyStatus == story_storyRemote && thirdChar_mailPause <= 0 && grimoire_thirdChar hasnt grimThirdCharLetterEight && letters_doggoPause == false:
         
                 ~ move_entity(DoggoThirdLetters, TrainStop)
                 {debug: Ho messo la nota del third personaggio alla fermata del bus.}
@@ -258,7 +258,7 @@ VAR letters_doggoPause = false
     }
 
     {
-        - fourthChar_storyStatus == story_storyPostal && fourthChar_mailPause < 0 && grimoire_fourthChar hasnt grimFourthCharLetterFour  && letters_doggoPause == false:
+        - fourthChar_storyStatus == story_storyPostal && fourthChar_mailPause < 0 && grimoire_fourthChar hasnt grimFourthCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoFourthLetters, TrainStop)
                 {debug: Ho messo la nota del fourth personaggio alla fermata del bus.}
@@ -275,7 +275,7 @@ VAR letters_doggoPause = false
     }   
 
     {
-        - fifthChar_storyStatus == story_storyPostal && fifthChar_mailPause < 0 && grimoire_fifthChar hasnt grimFifthCharLetterFour  && letters_doggoPause == false:
+        - fifthChar_storyStatus == story_storyPostal && fifthChar_mailPause < 0 && grimoire_fifthChar hasnt grimFifthCharLetterFour && letters_doggoPause == false:
         
                 ~ move_entity(DoggoFifthLetters, TrainStop)
                 {debug: Ho messo la nota del fifth personaggio alla fermata del bus.}

@@ -555,7 +555,7 @@ VAR list_currentActors = ()
         {reaction:
             - neutral:
                 {
-                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
+                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacter:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Ok.
                     - {charTag(ThirdCharacter, "neutral")}:             Certo.
@@ -573,7 +573,7 @@ VAR list_currentActors = ()
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
                 {
-                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
+                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacter:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
                     - {charTag(ThirdCharacter, "neutral")}:             Oooh!
@@ -591,7 +591,7 @@ VAR list_currentActors = ()
 
             - negative:
                 {
-                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
+                - glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacter:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
                     - {charTag(ThirdCharacter, "neutral")}:             Oooh!

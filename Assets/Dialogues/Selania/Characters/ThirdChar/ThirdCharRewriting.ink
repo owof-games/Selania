@@ -427,7 +427,7 @@
                     }                                             
             
 
-            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra{!letters_thirdCharLetterTwoChoice has airC && !letters_thirdCharLetterTwoChoice has fireC && !letters_thirdCharLetterTwoChoice has earthC:, un buono fratello per tua sorella }: costruisci nuove relazioni partendo da questa certezza.
+            + (earth) \ {charTag(PG, "neutral")}:               Sei un buon amico per Petra{letters_thirdCharLetterTwoChoice hasnt airC && letters_thirdCharLetterTwoChoice hasnt fireC && letters_thirdCharLetterTwoChoice hasnt earthC:, un buono fratello per tua sorella}: costruisci nuove relazioni partendo da questa certezza.
             {charTag(PG, "neutral")}:                           Non serve per forza essere quello che esce con mille ragazze.
                 {
                 - grimoire_thirdChar has grimThirdCharKitchenTwo:
