@@ -1023,8 +1023,8 @@
         {charTag(ThirdCharacter, "neutral")}:                                   Le regole servono per tenere un minimo di ordine.
                                                                                 Meglio una regola stupida ma che non fa creare casini, che nessuna regola e solo casini.
                 {
-                - are_two_entities_together(FifthCharacter, PG): 
-                {charTag(Mentor, "hurry")}:                                     Siamo d'accordo con te, {charNameThree}.
+                - are_two_entities_together(Mentor, PG): 
+                {charTag(Mentor, "hurry")}:                                     Sono d'accordo con te, {charNameThree}.
                 {charTag(ThirdCharacter, "jester")}:                            Per fortuna che ci sei tu, zia, a capirmi!           
                 }
                 {
@@ -1241,7 +1241,7 @@
         {charTag(SecondCharacter, "neutral")}:                                  Ti piacciono le patatine?                                                                        
         {charTag(SecondCharacter, "neutral")}:                                  Mh mh.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "neutral")}:                                   {charNameThree}, questo bambino è palesemente a disagio.
                         {
                         - are_two_entities_together(FirstCharacter, PG):
@@ -1441,7 +1441,7 @@
                                                                                 Stavo solo parlando con {charNameTwo}!
         {charTag(FirstCharacter, "annoyed")}:                                   Sì, dicendogli che tutte le donne sono delle troie.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "sad")}:                                       {charNameOne}!
                         {
                         - fifthChar_slurDetector > 0:
@@ -1473,9 +1473,9 @@
         {charTag(ThirdCharacter, "neutral")}:                                   E allora anche la roba di "Tutti gli uomini sono stupratori" che dite sempre voi, no?
                                                                                 Tuo padre è uno stupratore?
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "sad")}:                                       Siamo arrivate a questo?
-                        ~ change_entity_place(FifthCharacter)
+                        ~ change_entity_place(Mentor)
                 }
                 {
                 - are_two_entities_together(SecondCharacter, PG):

@@ -352,9 +352,9 @@
 
 
     {
-        - are_two_entities_together(FifthCharacter, PG):
+        - are_two_entities_together(Mentor, PG):
             Uh, Franco sa tantissime cose di me!
-                ~ move_entity(FifthCharacter, Forest)
+                ~ move_entity(Mentor, Forest)
     }
 
     {shuffle once:

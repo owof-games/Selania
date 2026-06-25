@@ -88,7 +88,7 @@
             ~ temp my_location = entity_location(PG)
             ~ move_entity(Mentor, my_location)
             {
-            - are_two_entities_together(FifthCharacter, PG):    
+            - are_two_entities_together(Mentor, PG):    
                                                                 Ed ecco di nuovo quel fiore parlante!
             }
                                                                 
@@ -158,11 +158,13 @@
     
             {
             
-            - are_two_entities_together(FifthCharacter, PG):    
+            - are_two_entities_together(Mentor, PG):    
                 {
                 - grimoire_fifthChar hasnt grimMentorIntro:
                 {charTag(FifthCharacter, "hurry")}:                 Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
                 {charTag(FifthCharacter, "neutral")}:               E tu quando puoi parlami, e ti spiegherò un po' di cose.
+                {charTag(FirstCharacter, "annoyed")}:                   Oook.
+                {charTag(FirstCharacter, "neutral")}:                   Ok.
                 
                 - else:
                 {charTag(FifthCharacter, "hurry")}:                 Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
@@ -172,8 +174,7 @@
                                                                 E inizio a sentire caldo.    
             }
             
-        {charTag(FirstCharacter, "annoyed")}:                   Oook.
-        {charTag(FirstCharacter, "neutral")}:                   Ok.
+        
         {charTag(FirstCharacter, "neutral")}:                   Devo idratarmi.
                                                                 Devo assolutamente idratarmi.
         ~ move_entity(FirstCharacter, Pond)

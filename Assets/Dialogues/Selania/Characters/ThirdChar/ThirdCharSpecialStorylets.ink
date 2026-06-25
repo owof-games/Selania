@@ -240,7 +240,7 @@
                 {charTag(FirstCharacter, "annoyed")}:                   L'unica volta che ti preoccupi per {charNameTwo} guarda caso è per un racconto con una donna incazzata.
                                                                         Non per tutte le parolacce che stai usando da quando sei qui, per dire.
                         {
-                        - are_two_entities_together(FifthCharacter, PG) && fifthChar_slurDetector > 2:
+                        - are_two_entities_together(Mentor, PG) && fifthChar_slurDetector > 2:
                         {charTag(Mentor, "neutral")}:                   Nonostante ti abbia già chiesto più volte di non dirle.                                                     
                         }
                 }
@@ -257,7 +257,7 @@
                 {charTag(ThirdCharacter, "bored")}:                     Ovvio che vai subito a difendere anche altre donne immaginarie.
                 }
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "neutral")}:                           E per anni lei ha cercato di spiegargli le cose con calma, ma lui non l'ha mai ascoltata. 
                 }
         {charTag(ThirdCharacter, "bored")}:                             Sembra la stessa logica di uno che spara preventivamente a un altro tizio solo perché potrebbe entrargli in casa a rubare.
@@ -398,7 +398,7 @@
         ~ list_currentActors += ThirdCharacter
 
         {
-        - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
+        - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(Mentor, PG):
         {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
             {
             - are_two_entities_together(FirstCharacter, PG):
@@ -409,11 +409,11 @@
             {charTag(SecondCharacter, "energy")}:                       È il momento per {charNameTwo} di scoprire un nuovo animale!
                 ~ change_entity_place(SecondCharacter)
 
-            - are_two_entities_together(FifthCharacter, PG):
+            - are_two_entities_together(Mentor, PG):
             {charTag(Mentor, "sad")}:                                   Spero non sia niente di grave {charNameThree}.
             {charTag(ThirdCharacter, "jester")}:                        Tranquilla zia, giusto un piccolo chiarimento tra me e {player_name}.
             {charTag(Mentor, "neutral")}:                               A dopo allora!
-                ~ change_entity_place(FifthCharacter)
+                ~ change_entity_place(Mentor)
 
             - are_two_entities_together(Franco, PG):
             {charTag(Franco, "neutral")}:                               Non fate caso a me.

@@ -10,6 +10,9 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+
             {charTag(FifthCharacter, "hurry")}:                 Rieccoci {player_name}!
                                                                 Sono contenta che hai parlato un po' con le persone che hai incontrato in giro per questo luogo!
             {charTag(FifthCharacter, "neutral")}:               Direi che ora sei pront{player_pronoun has him:o|{player_pronoun has her:a|ə}} per ascoltare il mio primo insegnamento sul tuo lavoro.
@@ -78,6 +81,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "hurry")}:                     {player_name}!
@@ -189,6 +195,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "hurry")}:                     {player_name}!

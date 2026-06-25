@@ -5,6 +5,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+
         {charTag(FifthCharacter, "hurry")}:                     Oh, quanto ho sperato nel tuo arrivo!
                                                                 Scusa, ma sono così felice che tu sia qui.
 
@@ -236,6 +239,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
     
         
         {
@@ -342,6 +348,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
     
 
         {
@@ -474,6 +483,9 @@
         -> main
     
 === a_story_of_transformation
+
+//Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
 
     {charTag(FifthCharacter, "neutral")}:                               Sono un po' pensierosa {player_name}.
                                                                         Prima mi sono concessa una pausa in biblioteca.

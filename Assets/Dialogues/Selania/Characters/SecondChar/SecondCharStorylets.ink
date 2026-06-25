@@ -1139,7 +1139,7 @@
                                                                 Non si arrabbia se mi distraggo, o se gli faccio tante domande.
             {charTag(SecondCharacter, "energy")}:               Però puoi insegnarmi ad arrampicarmi sugli alberi!
                     {
-                    - are_two_entities_together(FifthCharacter, PG):
+                    - are_two_entities_together(Mentor, PG):
                     {charTag(Mentor, "neutral")}:               {player_name}: hai il divieto ASSOLUTO di fare questa cosa.
                                                                 AS-SO-LU-TO!
                     {charTag(Mentor, "sad")}:                   Mi farete venire un infarto, povera me.                                           

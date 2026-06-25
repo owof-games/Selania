@@ -28,7 +28,7 @@
         {charTag(ThirdCharacter, "jester")}:                    E anche qui mi sono trovato bene con tutti.
         {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
             {
-            - are_two_entities_together(FifthCharacter, PG):
+            - are_two_entities_together(Mentor, PG):
             {charTag(Mentor, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
             }   
         {charTag(ThirdCharacter, "neutral")}:                   Per {secondChar_storyStatus == story_storyStarted: fratellino|{charNameTwo}} sono come un secondo fratello.
@@ -105,9 +105,9 @@
                 ~  change_entity_place(SecondCharacter)                          
             }
             {
-            - are_two_entities_together(FifthCharacter, PG):
+            - are_two_entities_together(Mentor, PG):
             {charTag(Mentor, "sad")}:                           {charNameThree}, sono sicura che {player_name} abbia compreso ciò di cui hai davvero bisogno.
-                ~  change_entity_place(FifthCharacter)                          
+                ~  change_entity_place(Mentor)                          
             }
             {
             - are_two_entities_together(Franco, PG):

@@ -25,6 +25,10 @@
                     ~ move_entity(FifthCharacter, Pond)
             }
             {
+                - entity_location(Mentor) == Dump:
+                    ~ move_entity(Mentor, Pond)
+            }
+            {
                 - entity_location(FirstCharacter) == Dump:
                     ~ move_entity(FirstCharacter, Pond)
             }

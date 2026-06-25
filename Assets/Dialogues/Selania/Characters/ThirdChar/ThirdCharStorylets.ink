@@ -191,7 +191,7 @@
                                                                 Ma fa ridere, perché è come la cacca.
                                                                 Stronza.
                                 {
-                                - are_two_entities_together(FifthCharacter, PG):
+                                - are_two_entities_together(Mentor, PG):
                                 {charTag(Mentor, "sad")}:       Per l'appunto.        
                                 }                                                        
                         }                           
@@ -915,7 +915,7 @@
         {charTag(ThirdCharacter, "bored")}:                     Chi ti ha chiesto qualcosa a te, Gesù licantropo?
         {charTag(FirstCharacter, "neutral")}:                   Sei qui a raccontare la tua storia da vittima di 'sto cazzo davanti a tutti, per cui un po' diventano anche cazzi miei.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(Mentor, "sad")}:                       {charNameOne}, {charNameThree}: siamo qui per stare bene assieme, non per farci del male.
                 {charTag(ThirdCharacter, "bored")}              Guarda che è questa pazza che ha cominciato a rompere i coglioni!     
                 }
@@ -973,13 +973,13 @@
                                                                 Che sono io a dirti che mi devi riscrivere.
                                                                 Ma non riesco a chiedertelo, e secondo lei è perché non ho preso un punto importante.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "neutral")}:           Esattamente.  
                 }                                                        
         {charTag(ThirdCharacter, "bored")}:                     Secondo me è colpa di qualcosa qui.
         {charTag(ThirdCharacter, "neutral")}:                   Mi avete drogato?
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "sad")}:               No no no cosa dici?  
                 }  
                                                                 Vabbè, per ora reggiamo il gioco.
@@ -1018,7 +1018,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   Anche la tipa di mio padre, che ha sempre un po' detestato Marta, sembra un'altra persona.
         {charTag(ThirdCharacter, "bored")}:                     Gira che ti rigira alla fine alle donne basta avere un figlio e zac, vita risolta.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "neutral")}:           Posso assicurarti che le cose sono molto più complicate di così.
                                                                 E si risolvono gran poche cose con un figlio.
                 }  
@@ -1097,7 +1097,7 @@
                                                                 Ti prende a calci sui denti e ti lascia lì, a terra.
                                                                 Solo.
                 {
-                - are_two_entities_together(FifthCharacter, PG):
+                - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "sad")}:               Povera stellina.                  
                 }                                                 
             
