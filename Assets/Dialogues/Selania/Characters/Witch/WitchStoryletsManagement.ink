@@ -5,6 +5,14 @@
         - grimoire_witch hasnt grimWitchIntro:
             -> witch_intro
 
+        //Conversazione con Boccale
+        - are_two_entities_together (ThirdCharacter, PG) && are_two_entities_together(TheWitch, PG) && grimoire_thirdChar hasnt grimWitchThirdChar:
+            -> the_witch_and_the_men
+        
+        //Gli storylets sopra devono comparire a prescindere dalla pausa, poi è la pausa a dettare se gli altri ci saranno o meno
+        -  witch_pauseTalking > 0:
+            -> descriptions
+
         //Feedback post riscrittura
         - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 0 && grimoire_witch hasnt grimWitchFirstDebrief:
             -> witch_first_debrief
@@ -40,13 +48,12 @@
         
 
         //Commento sul libro
-        - grimoire_witch has grimWitchIntro && grimoire_fifthChar has grimMentorIntro && grimoire_witch hasnt grimWitchBook:
+        - grimoire_witch has grimWitchIntro && grimoire_isEnabled && grimoire_witch hasnt grimWitchBook:
             -> about_the_book
 
         //Dialogo su Franco
         - grimoire_witch has grimWitchIntro && grimoire_franco != () && grimoire_witch hasnt grimWitchFrog:
             -> the_witch_and_the_frog    
-        
         
         - else:
             -> descriptions
