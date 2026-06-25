@@ -75,6 +75,20 @@
                 ~ secondChar_ForestWaiting = chars_MaxOpenPlacesWaiting
                 ->->   
 
+    //Comparsa Franco
+    //Per rendere prioritaria la sua comparsa, copio qui la condizione presente anche in knowing_second_character
+            {
+            - grimoire_secondChar hasnt grimSecondCharTwo:
+                {
+                    - entity_location(PG) == Pond:
+                        {charTag(SecondCharacter, "energy")}:       C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.
+                            ~ move_entity(SecondCharacter, Forest)
+                                -> main
+                    - else: 
+                        -> second_char_main_storylets.two
+                } 
+            }  
+
 
     //Apertura biblioteca    
         - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
