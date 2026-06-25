@@ -95,9 +95,9 @@
     VAR movements_changeLocationTrigger = 9
     
     //Questa è la lista dei luoghi dove lə PNG possono andare. Se serve, posso ampliarla quando si aprono i luoghi, ma è da valutare col bilanciamento.
-    //Posti dove potremmo trovarle e che per ora sono chiusi: Dump, Greenhouse, Library.
-    //Posti sicuramente vietati, salvo scene speciali: Bedroom, Nest. Kitchen solo per scene ad hoc (es: cucina da solx).
-    VAR movements_randomablePlaces = (Forest, TrainStop, Pond)
+    //Posti dove possiamo trovarne solo unx: Dump, Library.
+    //Posti sicuramente vietati, salvo scene speciali: Bedroom, Nest, Greenhouse. Kitchen solo per scene ad hoc (es: cucina da solx). Tolta fermata del treno per favorire incontri.
+    VAR movements_randomablePlaces = (Forest, Pond)
 
 
 //Gestione spostamenti: personagge
@@ -212,8 +212,8 @@
         - secondChar_storyStatus == story_storyStarted:
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina, o se non gli abbiamo mai parlato
             {
-                - grimoire_secondChar == ():
-                    ~ movements_randomizable_characters -= SecondCharacter 
+                // - grimoire_secondChar == ():
+                //     ~ movements_randomizable_characters -= SecondCharacter 
                 
                 - kitchen_secondCharIsCooking == true:
                     ~ movements_randomizable_characters -= SecondCharacter
@@ -245,8 +245,8 @@
         - thirdChar_storyStatus == story_storyStarted:
         //Evitiamo che venga tolto dalla cucina se sta cucinando o se ci sta aspettando in cucina
             {
-                - grimoire_thirdChar == ():
-                    ~ movements_randomizable_characters -= ThirdCharacter 
+                // - grimoire_thirdChar == ():
+                //     ~ movements_randomizable_characters -= ThirdCharacter 
 
                 - kitchen_thirdCharIsCooking == true:
                     ~ movements_randomizable_characters -= ThirdCharacter
