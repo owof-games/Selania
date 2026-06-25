@@ -457,27 +457,28 @@ VAR letters_doggoPause = false
 
     //Primo check: la cucina è occupata?
     {
-        - contentsKitchen has FirstCharacter:
+        - contentsKitchen has FirstCharacterCucina:
             ~ kitchen_kitchenOccupied = true
 
-        - contentsKitchen has SecondCharacter:
+        - contentsKitchen has SecondCharacterCucina:
             ~ kitchen_kitchenOccupied = true
 
-        - contentsKitchen has ThirdCharacter:
+        - contentsKitchen has ThirdCharacterCucina:
             ~ kitchen_kitchenOccupied = true
 
-        - contentsKitchen has FourthCharacter:
+        - contentsKitchen has FourthCharacterCucina:
             ~ kitchen_kitchenOccupied = true
         
-        - contentsKitchen has FifthCharacter:
+        - contentsKitchen has FifthCharacterCucina:
             ~ kitchen_kitchenOccupied = true
 
-        - contentsKitchen has Franco:
+        - contentsKitchen has FrancoCucina:
             ~ kitchen_kitchenOccupied = true
 
         - else:
             ~ kitchen_kitchenOccupied = false            
     }
+
 
     //Secondo check: stato personagge
     //Riccio
@@ -658,6 +659,7 @@ VAR letters_doggoPause = false
         {   
             - kitchen_thirdCharCookingTogetherInvite == true:
             {debug_kitchen: boccale ci aspetta in cucina}
+            
             
             {
                 - kitchen_thirdCharCookingTogetherWaiting < kitchen_thirdCharCookingMAXTogetherWaiting:

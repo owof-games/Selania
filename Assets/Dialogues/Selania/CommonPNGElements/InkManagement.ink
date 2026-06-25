@@ -384,19 +384,19 @@
     
     {ink_status:
         - ink_empty:
-            {charTag(TheWitch, witch_state())}:   <i>non ha raccolto alcuna goccia di inchiostro
+            <i>non ha raccolto alcuna goccia di inchiostro
         
         - ink_low:
-            {charTag(TheWitch, witch_state())}:   <i>ha raccolto una goccia di inchiostro
+            <i>ha raccolto una goccia di inchiostro
         
         - ink_normal:
-            {charTag(TheWitch, witch_state())}:   <i>ha raccolto due gocce di inchiostro
+            <i>ha raccolto due gocce di inchiostro
         
         - ink_medium:
-            {charTag(TheWitch, witch_state())}:   <i>ha raccolto tre gocce di inchiostro     
+            <i>ha raccolto tre gocce di inchiostro     
         
         - ink_high:
-            {charTag(TheWitch, witch_state())}:   <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
+            <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
                 {Character:
                     - FirstCharacter:
                         {translator(firstChar_ActualName)} <>

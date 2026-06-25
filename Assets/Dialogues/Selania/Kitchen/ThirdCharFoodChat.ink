@@ -15,7 +15,7 @@
         + \ {charTag(PG, "neutral")}:                                       Sono pront{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
             -> cooking_with_third_char
         
-        + \ {charTag(PG, "neutral")}:                                       Vorrei pensarci un attimo {charNameOne}.
+        + \ {charTag(PG, "neutral")}:                                       Vorrei pensarci un attimo {charNameThree}.
             -> main
  
 

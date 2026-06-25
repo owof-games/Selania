@@ -29,7 +29,7 @@
 
     {
         //Quinta commissione: assistere a una conversazione a due.
-        - (grimoire_firstChar has grimFirstSecondChar) or (grimoire_firstChar has grimFirstThirdChar) or (grimoire_firstChar has grimFirstCharMentor) or (grimoire_secondChar has grimSecondCharMentorOne) or (grimoire_secondChar has grimSecondCharMentorPeace) or (grimoire_secondChar has grimSecondThirdChar) or (grimoire_thirdChar has grimThirdCharMentor) or (grimoire_fourthChar has grimFourthFifthChar) && frog_allMissionsCompleted hasnt missionFive:
+        - (grimoire_firstChar has grimFirstSecondChar) or (grimoire_firstChar has grimFirstThirdChar) or (grimoire_firstChar has grimFirstCharMentor) or (grimoire_secondChar has grimSecondCharMentorOne) or (grimoire_secondChar has grimSecondCharMentorPeace) or (grimoire_secondChar has grimSecondThirdChar) or (grimoire_thirdChar has grimThirdCharMentor) or (grimoire_fourthChar has grimFourthFifthChar) or (grimoire_thirdChar has grimThirdCharFranco)  or (grimoire_secondChar has grimSecondCharFranco) or (grimoire_firstChar has grimFirstCharFranco) && frog_allMissionsCompleted hasnt missionFive:
             ~ frog_updatedMissions += missionFive
 
     }

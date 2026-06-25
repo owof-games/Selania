@@ -16,13 +16,13 @@
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false
     VAR debug_testNest = false
-    VAR debug_testFrog = true
+    VAR debug_testFrog = false
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false
     VAR debug_dialogues = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debug_stochastic = true
+    VAR debug_stochastic = false
 
 
 {debug_seedRandom:
