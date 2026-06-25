@@ -6,6 +6,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
         
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -55,6 +57,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:      Frase
@@ -84,6 +88,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -117,6 +123,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
         
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -146,6 +154,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
         
 
@@ -177,6 +187,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -208,6 +220,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         
@@ -240,6 +254,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -270,6 +286,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -299,6 +317,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase
@@ -328,6 +348,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         
@@ -357,6 +379,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
 
         {charTag(FifthCharacter, "neutral")}:       Frase

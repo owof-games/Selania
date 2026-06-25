@@ -4,7 +4,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
 
     {charTag(FifthCharacter, "neutral")}:       Racconto letto in biblioteca.
     A racconto scelto, cambia anche logica in Special Storylets
@@ -39,6 +40,8 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
     
    
    {charTag(FifthCharacter, "neutral")}:       {charNameFive} e Ursula.

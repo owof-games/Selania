@@ -35,6 +35,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+            //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FifthCharacter
+
             Va bene.
 
             //Funzione di preparazione alla riscrittura

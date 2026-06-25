@@ -4,6 +4,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+            ~ list_currentActors += FourthCharacter
     
 
     {charTag(FourthCharacter, "neutral")}:       Racconto letto in biblioteca.
