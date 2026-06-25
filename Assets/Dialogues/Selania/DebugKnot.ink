@@ -6,6 +6,10 @@
     ~ grimoire_isEnabled = true
     -> debug_knot
 
++ [Abilita sin da subito Franco]
+    ~ debug_Franco()
+    -> debug_knot
+
 + [Popola tutti gli elementi del grimorio]
     -> debug_richGrimoire ->
     -> debug_knot
@@ -14,7 +18,8 @@
     ~ debugRewriting()
    -> debug_knot 
     
-+ [Imposta come se fossimo a gioco completo]
+
++ [Imposta tutto come se fossimo a gioco completo]
     ~ debug_places_open()
     ~ grimoire_isEnabled = true
     ~ debug_allGraphicsElementsEndingMode()
@@ -26,8 +31,6 @@
     ~ settings_gamerMode = true
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = true
-    //Attivo il tutorial
-    ~ tutorial_CarlaTutorial = true
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, TrainStop)
     -> debug_knot
@@ -37,8 +40,6 @@
     ~ settings_gamerMode = false
     //Attivo le notifiche da gamer
     ~ notification_gamerNotification = false
-    //Attivo il tutorial
-    ~ tutorial_CarlaTutorial = false
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, Safekeeping)
     -> debug_knot

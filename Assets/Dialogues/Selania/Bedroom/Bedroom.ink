@@ -63,6 +63,9 @@
             * \ {charTag(PG, "neutral")}:                               <i>Aprimi tutti i luoghi del gioco.
                 ~ debug_places_open()
 
+            * \ {charTag(PG, "neutral")}:                               <i>Attiva sin da subito Franco.
+                ~ debug_Franco()
+
             + \ {charTag(PG, "neutral")}:                               <i>Non mi serve nulla.</i>  
                                    
             -

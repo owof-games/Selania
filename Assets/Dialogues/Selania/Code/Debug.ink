@@ -16,7 +16,7 @@
     VAR debug_testLibrary = false
     VAR debug_testKitchen = false
     VAR debug_testNest = false
-    VAR debug_testFrog = false
+    VAR debug_testFrog = true
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false
     VAR debug_dialogues = false
@@ -28,6 +28,11 @@
 {debug_seedRandom:
     ~ SEED_RANDOM(246)
 }
+
+
+=== function debug_Franco()
+    ~ debug_testFrog = true
+    ~ move_entity(Franco, Pond)
 
 
 === function debugRewriting()
