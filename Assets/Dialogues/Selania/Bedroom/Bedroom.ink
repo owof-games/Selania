@@ -88,7 +88,7 @@
                 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Reader Mode.</i>
     -
-    {charTag(TheWitch, witch_state())}:                                 <i>Infine, puoi decidere che tipo di tutorial attivare.</i>
+    {charTag(TheWitch, witch_state())}:                                 <i>Puoi anche decidere che tipo di tutorial attivare.</i>
                                                                         <i>Puoi affidarti a <b>Mentore</b>, che ha un approccio più narrativo e meno diretto. Il suo supporto è particolarmente adatto per una modalità di gioco esplorativa e meditativa, come quella del Reader Mode.</i>
                                                                         <i>Oppure c'è <b>Carla</b>: più diretta, ti spiegherà tutto quello che devi fare con degli esempi che vengono dalla sua enorme conoscenza come Sacra Capra Burocratica. Il suo supporto è particolarmente adatto per una modalità di gioco più pratica, come il Gamer Mode.</i>
                                                                         <i>C'è anche la possibilità di andare senza guida alcuna, o di chiedere l'aiuto di entrambe.</i>
@@ -106,6 +106,14 @@
             
             + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>                                                            
             -
+    {charTag(TheWitch, witch_state())}:                                 <i>Infine: possiamo notificarti quando alcune cose sono cambiate (es: una pianta è cresciuta, hai raggiunto gli obiettivi di Franco, hai completato un achievement).
+                                                                        <i>Vuoi ricevere questi miei promemoria?
+
+            + \ {charTag(PG, "neutral")}:                               <i>Sì.</i>
+                ~ notification_gamerNotification = true  
+            + \ {charTag(PG, "neutral")}:                               <i>No.</i>
+            -                                                            
+
 
     {charTag(TheWitch, witch_state())}:                                 <i>Perfetto.
                                                                         <i>Ti auguriamo il migliore degli inizi per questo tuo viaggio.</i>

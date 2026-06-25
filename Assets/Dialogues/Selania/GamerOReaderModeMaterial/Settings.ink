@@ -6,8 +6,8 @@ VAR settings_gamerMode = false
 === function gamerMode_activation()
     //Attivo gli achievements ad hoc
     ~ settings_gamerMode = true
-    //Attivo le notifiche da gamer
-    ~ notification_gamerNotification = true
+    // //Attivo le notifiche da gamer
+    // ~ notification_gamerNotification = true
 
 
 === function tutorial_CarlaTutorialActivation()
