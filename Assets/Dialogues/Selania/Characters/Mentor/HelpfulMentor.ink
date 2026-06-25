@@ -55,7 +55,7 @@
 
     }
 - else:
-{charTag(FifthCharacter, "bored")}:                         ???
+{charTag(FifthCharacter, "bored")}:                                                     ???
 }
 
 
@@ -64,23 +64,29 @@
 - (top)
     {
     - thirdChar_storyStatus != story_storyRemote:
-    {charTag(FifthCharacter, "hurry")}:                     Come posso esserti utile, {player_pronoun has him: amico mio|{player_pronoun has her: amica mia|amicə miə}}?
+    {charTag(FifthCharacter, "hurry")}:                                                 Come posso esserti utile, {player_pronoun has him: amico mio|{player_pronoun has her: amica mia|amicə miə}}?
 
     - else:
-    {charTag(FifthCharacter, "bored")}:                     Dimmi.
+    {charTag(FifthCharacter, "bored")}:                                                 Dimmi.
     }
 
 
     
-        + \ {charTag(PG, "neutral")}:                                           Avrei bisogno di una mano.
+        + \ {charTag(PG, "neutral")}:                                                   Avrei bisogno di una mano.
             -> support
         
         + {player_somethingStrangeTalkable != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
             -> little_storylets
-    
-        + \ {charTag(PG, "neutral")}:                                           Ho cambiato idea.
+
+        + {grimoire_fifthChar has grimMentorIntro}\ {charTag(PG, "neutral")}:           Mi è scomparso il grimorio, potresti riattivarmelo?
+            ~ grimoire_isEnabled = true
+        {charTag(FifthCharacter, "hurry")}:                                             Fatto.     
+            -> top
+
+        + \ {charTag(PG, "neutral")}:                                                   Ho cambiato idea.
             -> notification_system ->
             -> main
+              
 
 /* ---------------------------------
 
