@@ -109,8 +109,21 @@
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
             + {grimoire_thirdChar has thirdChar_minStoryletsForRewriting && grimoire_thirdChar hasnt grimThirdCharFirstProposal} \ {charTag(PG, "neutral")}:                           {charNameThree}, iniziamo la riscrittura?
 
-                {//Ma non ho ascoltato il tutorial (se attivo)
-                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                //Check per vedere se ho ascoltato o meno il tutorial necessario
+                ~ temp tutorialRewritingConditions = false
+                {
+                  -  tutorial_MentorTutorial && grimoire_appendices has grimRewritingMentor:
+                        ~ tutorialRewritingConditions = true
+
+                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialRereading:
+                        ~ tutorialRewritingConditions = true      
+                }
+
+            {//Ma non ho ascoltato il tutorial (se attivo)
+                - tutorialRewritingConditions == false:
+                    //Sollecitiamo il tutorial
+                    ~ tutorial_rereadingActive_requested = true
+
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(ThirdCharacter, "neutral")}:                       Io ti direi anche subito di sì.

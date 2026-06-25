@@ -125,8 +125,20 @@
             + {grimoire_firstChar has firstChar_minStoryletsForRewriting && grimoire_firstChar hasnt grimFirstCharProposal} \ {charTag(PG, "neutral")}:         Vorrei aiutarti a leggere la tua storia diversamente.
 
                 
-                {//Ma non ho ascoltato il tutorial (se attivo)
-                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                //Check per vedere se ho ascoltato o meno il tutorial necessario
+                ~ temp tutorialRewritingConditions = false
+                {
+                  -  tutorial_MentorTutorial && grimoire_appendices has grimRewritingMentor:
+                        ~ tutorialRewritingConditions = true
+
+                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialRereading:
+                        ~ tutorialRewritingConditions = true      
+                }
+
+            {//Ma non ho ascoltato il tutorial (se attivo)
+                - tutorialRewritingConditions == false:
+                    //Sollecitiamo il tutorial
+                    ~ tutorial_rereadingActive_requested = true
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(FirstCharacter, "annoyed")}:               Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, o con la capretta sfavata, così ti dicono giusto due cose due importanti.

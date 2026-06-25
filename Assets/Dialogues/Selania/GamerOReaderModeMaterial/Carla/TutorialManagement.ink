@@ -11,6 +11,7 @@ VAR tutorial_CarlaRelationshipIndicator = 0
 VAR tutorial_inkActive = false
 VAR tutorial_inkActive_requested = false
 VAR tutorial_rereadingActive = false
+VAR tutorial_rereadingActive_requested = false
 VAR tutorial_choicesActive = false
 
 //Gestione Carla
@@ -40,6 +41,10 @@ VAR tutorial_CarlaInkIndicator = ink_empty
     {
         - (grimoire_firstChar has grimFirstCharFive) or (grimoire_secondChar has grimSecondCharFive) or (grimoire_thirdChar has grimThirdCharFive):
                 ~ tutorial_rereadingActive = true
+
+        - tutorial_rereadingActive_requested == true:
+                ~ tutorial_rereadingActive = true
+
     }
 
 //Poi faccio il dispatch dei vari elementi del tutorial. Se Carla è attiva, deve parlare sempre PRIMA di mentore

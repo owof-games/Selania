@@ -185,8 +185,20 @@
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet.
             + {grimoire_secondChar has secondChar_minStoryletsForRewriting && grimoire_secondChar hasnt grimSecondCharProposal} \ {charTag(PG, "neutral")}:         Ehi {charNameTwo}, ti va di rileggere assieme le cose in modo diverso?
 
-                {//Ma non ho ascoltato il tutorial (se attivo)
-                    - (tutorial_MentorTutorial == true && grimoire_appendices hasnt grimRewritingMentor) or (tutorial_CarlaTutorial == true && grimoire_appendices hasnt tutorialRereading):
+                //Check per vedere se ho ascoltato o meno il tutorial necessario
+                ~ temp tutorialRewritingConditions = false
+                {
+                  -  tutorial_MentorTutorial && grimoire_appendices has grimRewritingMentor:
+                        ~ tutorialRewritingConditions = true
+
+                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialRereading:
+                        ~ tutorialRewritingConditions = true      
+                }
+
+            {//Ma non ho ascoltato il tutorial (se attivo)
+                - tutorialRewritingConditions == false:
+                    //Sollecitiamo il tutorial
+                    ~ tutorial_rereadingActive_requested = true
                         {
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(SecondCharacter, "neutral")}:              Mi sa che {charNameFive} vuole dirti qualcosa prima. O Carla. O tutte e due. boh.
