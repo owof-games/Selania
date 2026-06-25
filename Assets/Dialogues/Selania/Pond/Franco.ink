@@ -6,7 +6,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     
     
-+ {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond && !debug_stochastic} [Franco]
++ {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
     
     //Aggiorniamo lo stato delle varie commissioni
         ~ franco_missionsStateUpdater()
