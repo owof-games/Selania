@@ -7,6 +7,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "neutral")}:                   Ehi, ciao!
@@ -187,6 +190,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "affectionate")}:              {player_name}, ma hai sentito che silenzio che c'è in questo posto?
@@ -302,6 +308,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "neutral")}:                   Ehi {player_name}!
@@ -400,6 +409,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
         
         {charTag(FirstCharacter, "neutral")}:                   Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.
@@ -515,6 +527,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "neutral")}:                   Prima mi sono tuffata nello stagno.
@@ -632,6 +647,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         
@@ -749,6 +767,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         
@@ -875,6 +896,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "neutral")}:                   Tornare dai miei è come un viaggio nel tempo.
@@ -977,6 +1001,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
         
         {charTag(FirstCharacter, "curious")}:               Ciao {player_name}, e benvenut{player_pronoun has him:o|{player_pronoun has her:a|ə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
@@ -1082,6 +1109,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
         
         {charTag(FirstCharacter, "neutral")}:               Sai, {player_name}, l'amore non è come me l'aspettavo.
@@ -1177,6 +1207,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
 
         {charTag(FirstCharacter, "neutral")}:               C'è questa cosa che mi stupisce sempre.
@@ -1290,6 +1323,9 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
+
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
         
         
         {charTag(FirstCharacter, "neutral")}:               Sai perché litigo tantissimo con mamma?

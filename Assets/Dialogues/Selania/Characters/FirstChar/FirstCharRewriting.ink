@@ -69,6 +69,9 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
 
+         //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
+
         {charTag(FirstCharacter, "neutral")}:                   Bene, {player_name}.
                                                                 Direi che dopo tutti i pipponi che ti ho tirato, è giunto il momento di fare questa roba.
                                                                 Chissà cosa accadrà!

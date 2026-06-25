@@ -4,6 +4,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
     
     {charTag(FirstCharacter, "curious")}:                   Dopo che {charNameFive} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?
     {charTag(FirstCharacter, "neutral")}:                   Alla fine ti stai ascoltando le mie seghe mentali da un bel po'.
@@ -115,6 +118,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
     
     
     {charTag(FirstCharacter, "neutral")}:                   Ehi {player_name}.
