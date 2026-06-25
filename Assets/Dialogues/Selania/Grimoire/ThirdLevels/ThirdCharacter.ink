@@ -162,7 +162,7 @@
 
 
     {
-        - frog_third_char_gift != "":
+        - frog_third_char_gift != ():
             Franco ha consigliato a {player_name} di regalare a {charNameThree} <b>{ingredientTranslator(frog_third_char_gift)}</b>.
     }
 

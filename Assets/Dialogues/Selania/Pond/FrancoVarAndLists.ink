@@ -57,10 +57,12 @@
     //Questa lista si segna quale sigillo abbiamo riabilitato e se è possibile o meno recuperarne uno.
     VAR frog_recoveredSigil = ()
     VAR frog_sigilGiftable = false
-    
 
     //Dono in sospeso
     VAR frog_suspended_gift = false
+
+    //Check per dono/ingrediente con boccale
+    VAR thirdCharFailedIngredient = false
 
     //Stato donabilità
     VAR frog_giftability = true

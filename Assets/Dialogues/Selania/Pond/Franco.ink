@@ -13,13 +13,27 @@
     //E quello dei doni
         ~ franco_giftsStateUpdater()
 
+        
+
+    {//Discrepanza tra dono a Boccale e sua reazione
+        
+        - frog_third_char_gift == thirdChar_giftedObject && thirdChar_giftedObject != ():
+            ~ thirdCharFailedIngredient = true
+
+        - frog_third_char_ingredient == kitchen_thirdCharExtraIngredient && frog_third_char_ingredient != ():
+            ~ thirdCharFailedIngredient = true    
+
+        - frog_third_char_ingredient == universalIngredient:
+            ~ thirdCharFailedIngredient = true    
+        
+    }
+
     //Facciamo passare dei commentini speciali
     {   //Prima presentazione
         - are_two_entities_together(PG, Franco) && grimoire_franco hasnt grimFrancoFirst:
             -> franco_intro
 
-        //Discrepanza tra dono a Boccale e sua reazione
-        - are_two_entities_together(PG, Franco) && (frog_third_char_gift == thirdChar_giftedObject or frog_third_char_ingredient == kitchen_thirdCharExtraIngredient or frog_third_char_ingredient == universalIngredient) && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
+        - are_two_entities_together(PG, Franco) && thirdCharFailedIngredient == true && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
             -> franco_third_ingredient_failure    
 
         - not franco_open_kitchen && entity_location(PG) == Pond && player_accessiblePlaces has Kitchen:

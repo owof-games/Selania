@@ -124,7 +124,7 @@
 
 
     {
-        - frog_third_char_gift != "" && thirdChar_giftedObject == ():
+        - frog_third_char_gift != () && thirdChar_giftedObject == ():
             Regalagli <b>{ingredientTranslator(frog_third_char_gift)}</b>.
 
         - thirdChar_giftedObject != ():
@@ -132,7 +132,7 @@
     }
     
     {
-        - frog_third_char_ingredient != "" && kitchen_thirdCharExtraIngredient == ():
+        - frog_third_char_ingredient != () && kitchen_thirdCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_third_char_ingredient)}</b>.
 
         - kitchen_thirdCharExtraIngredient != ():
