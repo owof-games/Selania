@@ -32,7 +32,7 @@ LIST grimoire_allElements =
     grimMentorIntro, grimMentorOne, grimMentorPresentation, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorSeven, grimMentorEight, grimMentorNine, grimMentorTen, grimMentorEleven, grimMentorTwelve, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorRage, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimMentorThirdSecretEnding, grimMentorFourthSecretEnding, grimMentorFifthSecretEnding,
 
 //Storylets strega
-    grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened,
+    grimWitchFirstDebrief, grimWitchSecondDebrief, grimWitchThirdDebrief, grimWitchFourthDebrief, grimWitchFifthDebrief, grimWitchIntro, grimWitchFrog, grimWitchMainOne, grimWitchMainTwo, grimWitchMainThree, grimWitchMainFour, grimWitchMainFive, grimWitchBook, grimWitchOpenDump, grimWitchAllSigilsOpened, grimWitchAboutAppendices,
 
 //Storylets Franco
     grimFrancoFirst, grimFrancoAllDocuments, grimFrancoSpecialMissionOneFeedback, grimFrancoThirdIngredientFailure,

@@ -289,7 +289,10 @@
 
         {charTag(FifthCharacter, "neutral")}:                   Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
                                                                 Anche per questo non c'è un buon esito o un cattivo esito di una riscrittura.
-        {charTag(FifthCharacter, "sorry")}:                     Ma mi permetterò comunque di darti dei feedback, per aiutarti nel tuo percorso.                                                    
+        {charTag(FifthCharacter, "sorry")}:                     Ma mi permetterò comunque di darti dei feedback, per aiutarti nel tuo percorso.
+        {charTag(FifthCharacter, "hurry")}:                     Aggiungo un consiglio.
+                                                                Quando una persona si dimostra disponibile a farsi riscrivere, di solito ha ancora diverse cose da condividere.
+                                                                Non affrettare una riscrittura, così da avere più informazioni su quella persona.                                      
         {charTag(FifthCharacter, "neutral")}:                   Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
         
                 -> mentor_closing_storylet ->

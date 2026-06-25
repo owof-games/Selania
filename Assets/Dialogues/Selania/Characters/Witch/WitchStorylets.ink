@@ -11,6 +11,25 @@
             -> witch_closing_storylet ->
             ->-> 
 
+
+=== witch_about_appendices
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charTag(TheWitch, witch_state())}:                             <i>{player_name} ha sbloccato una voce del grimorio: le appendici.
+                                                                    <i>Le appendici raccolgono materiale importante per comprendere la natura di questo luogo.
+                                                                    <i>E la saggezza di chi l'ha attraversato prima di {player_name}.
+                                                                    <i>Ma se {player_name} è quel tipo di persona che preferisce comprendere le cose in autonomia, consigliamo di attendere prima di esplorarne le pagine.
+                                                                    <i>Se invece {player_name} si sente smarrit{player_pronoun has him:o|{player_pronoun has her:a|ə}}, lì può trovarci informazioni importanti.
+
+
+            -> witch_closing_storylet ->
+            ->-> 
+
+
 === witch_intro
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

@@ -167,8 +167,12 @@
 //Speciali della strega
 {
     //Apertura di tutti i sigilli
-    - LIST_COUNT(story_endedStories) > 4 && grimoire_witch hasnt grimWitchAllSigilsOpened: 
-        -> witch_allSigils_opening    
+    - LIST_COUNT(story_endedStories) > 2 && grimoire_witch hasnt grimWitchAllSigilsOpened && grimoire_thirdChar has grimThirdCharLetterSeven: 
+        -> witch_allSigils_opening
+
+    //Commento sulle appendici
+    - grimoire_appendices != () && grimoire_appendices hasnt grimWitchAboutAppendices:
+        -> witch_about_appendices
 }
 
 //Infine:

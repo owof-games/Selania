@@ -151,12 +151,12 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
     
-    {charTag(Carla, "bored")}:                      Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.
+    {charTag(Carla, "bored")}:                          Questa roba è di competenza di quelli dell'amministrazione centrale, non mia.
         {
         - tutorial_CarlaDiscoveredTutorials has tutorialRereading: 
-        {charTag(Carla, "bored")}:                  Ripetiamo la pappardella.
+        {charTag(Carla, "bored")}:                      Ripetiamo la pappardella.
         }
-    {charTag(Carla, "neutral")}:                    Sto per spiegarle come funziona la riscrittura.
+    {charTag(Carla, "neutral")}:                        Sto per spiegarle come funziona la riscrittura.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialRereading:
                 -> top2
@@ -244,7 +244,8 @@
     {charTag(Carla, "bored")}:                          Ma non lo faccia.
 
     {charTag(Carla, "neutral")}:                        Sono tenuta infine a ricordarle che anche se potrà fare la riscrittura dopo, che ne so, un'ora di chiacchiere, le può convenire continuare a conoscere meglio la persona, prima di iniziare il processo.
-                                                        Anche perché dopo la riscrittura, quella persona se ne andrà.
+                                                        Ci sono leggende su delle soddisfazioni speciali per chi è capace di sentirsi tutta la solfa.
+                                                        Ad ogni modo dopo la riscrittura, quella persona se ne andrà.
                                                         Non mi chieda dove, perché non è di mia competenza.
                                                         Ah, dimenticavo!
     {charTag(Carla, "happy")}:                          Le scelte fatte durante la riscrittura hanno un valore molto più alto di quelle durante il resto del vostro rapporto.

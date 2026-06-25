@@ -1326,6 +1326,13 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_witch += grimWitchAllSigilsOpened
         }
 
+
+        {
+            - witch_about_appendices && grimoire_appendices hasnt grimWitchAboutAppendices:
+                ~ grimoire_appendices += grimWitchAboutAppendices
+                ~ grimoire_witch += grimWitchAboutAppendices
+        }
+
         {
         
             //Debrief
