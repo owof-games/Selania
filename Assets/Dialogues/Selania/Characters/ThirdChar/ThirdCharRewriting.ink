@@ -81,6 +81,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+
         {charTag(ThirdCharacter, "neutral")}:                   Ho una buona vita, non c'hai molto su cui lavorare, {player_name}.
         {charTag(ThirdCharacter, "jester")}:                    Quindi: spara tutte le tue cartucce e facciamola finita.
         
@@ -93,7 +96,7 @@
         -
             {
             - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "annoyed")}:               Fagli il culo {player_name}.
+            {charTag(FirstCharacter, "annoyed")}:               Liberaci da lui {player_name}.
                 ~  change_entity_place(FirstCharacter)                          
             }
             {

@@ -5,6 +5,10 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
+        ~ list_currentActors += SecondCharacter
+
     {charTag(FirstCharacter, "curious")}:                       Quindi anche tu non ricordi come sei arrivato qui?
     {charTag(SecondCharacter, "melanchonic")}:                  Sì no boh.
     {charTag(SecondCharacter, "neutral")}:                      No.
@@ -99,6 +103,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+        ~ list_currentActors += SecondCharacter
 
     
     {charTag(SecondCharacter, "neutral")}:                              Non hai detto "Ti devo chiedere scusa {charNameTwo}?
@@ -195,6 +203,10 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+        ~ list_currentActors += FirstCharacter
+
     
     {charTag(FirstCharacter, "affectionate")}:                          No, non scherzo, {charNameFive}, ti invidio un sacco.
     {charTag(FirstCharacter, "neutral")}:                               Hai uno scopo chiaro.
@@ -278,6 +290,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+        ~ list_currentActors += FirstCharacter
 
         {charTag(FirstCharacter, "annoyed")}:                                   Dai, {thirdChar_storyStatus == story_storyRemote: sei stata|sei} sottona totale con lui.
         {charTag(Mentor, "sad")}:                                               Ma non è vero {charNameOne}.
@@ -406,6 +422,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+
 
         {charTag(FifthCharacter, "neutral")}:                                   Però non ti ho mai visto in giro.
         {charTag(Franco, "neutral")}:                                           Però sono sempre stato cra!
@@ -470,6 +489,8 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
 
     {charTag(FifthCharacter, "neutral")}:                                       Quindi puoi parlare con, con questo pozzo?
                                                                                 Perché mi piacerebbe.
@@ -651,6 +672,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FirstCharacter
+
 
     {charTag(FirstCharacter, "annoyed")}:                               Credo di avere il mal di testa.
     {charTag(Franco, "neutral")}:                                       Lo dice sempre anche Giulio.
@@ -750,6 +774,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
 
 
     {charTag(Franco, "neutral")}:                                       E Franco ti dice che non è vero, {charNameTwo}.
@@ -863,6 +890,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
 
         {charTag(ThirdCharacter, "bored")}:                                     No no no Franco, seguimi, Gesù licantropo!
                                                                                         //Check parolacce da parte di Mentore
@@ -1018,6 +1048,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+        
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += FifthCharacter
+        ~ list_currentActors += ThirdCharacter
 
         {charTag(Mentor, "sad")}:                                               Oh povera stella!
                                                                                 Ma quindi Donatella ti ha lasciato all'altare?
@@ -1174,6 +1208,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += SecondCharacter
+        ~ list_currentActors += ThirdCharacter
 
 
         {charTag(ThirdCharacter, "neutral")}:                                   No no credimi: Lautaro Martinez è uno dei migliori di sempre.
@@ -1381,6 +1419,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+        ~ list_currentActors += FirstCharacter
 
         {charTag(ThirdCharacter, "angry")}:                                     Ma smettila di parlare come le influsceme su Instagram, Gesù licantropo!
                                                                                 Ma ce l'hai una personalità tua {charNameOne}?!?!?

@@ -1540,6 +1540,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
 
     //Azioni condivise
+        //Svuotiamo la lista dei parlanti che decide se mostrare o meno una reazione davanti a una scelta
+            ~ list_currentActors = ()
         //Cooldown storylets comuni, per evitare catena.
             ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova

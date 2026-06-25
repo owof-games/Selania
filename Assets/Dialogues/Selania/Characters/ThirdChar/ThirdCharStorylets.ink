@@ -7,6 +7,9 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+
                 //Commento diverso a seconda che sia il primo storylet con noi, o se invece ha assistito ad altri storylets.
                 {
                 - thirdChar_recordedPlayerPronoun != ():
@@ -352,6 +355,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+        
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
     
 
         {charTag(ThirdCharacter, "bored")}:                     Certo che quando mi hai rapito potevi portare qui il mio cellulare.
@@ -596,7 +602,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+
 
         {charTag(ThirdCharacter, "neutral")}:                   La zia insiste perché ti parli di me, dice che se sono qui c'è un motivo, qualcosa che mi tormenta.
                 {
@@ -759,6 +768,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
     
         
         {charTag(ThirdCharacter, "bored")}:                     Sembra che non me ne posso andare fino a quando non ho risolto il mio blocco, dice la zia.
@@ -944,7 +956,10 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+        
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "bored")}:             Da uomo a uomo: inizio a perdere la pazienza.
@@ -1121,6 +1136,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
     
 
         {charTag(ThirdCharacter, "neutral")}:                   Forse col Poggi qui saprei cosa dire per andarmene.
@@ -1277,9 +1295,6 @@
 
     ///Scelte legate alle lettere
     === third_char_letters_choices
-
-
-
     = one
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)

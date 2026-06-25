@@ -1,3 +1,7 @@
+//Questa lista serve per evitare le reazioni alle scelte (senza sigillo) di chi sta parlando, e non creare confusione.
+VAR list_currentActors = ()
+
+
 === glyph_choice_manager(isPG, GlyphC)
 {isPG:
     -> updatePGCounters(GlyphC)
@@ -154,6 +158,7 @@
 - glyph_actualActiveSigil:
     -> sigilUpdates
 - else:
+    //Svuotiamo list_currentActors
     ->->
 }
 
@@ -432,7 +437,7 @@
     - FirstCharacter:
         {reaction:
             - neutral:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FirstCharacter:
                     {shuffle:
                         - {charTag(FirstCharacter, "neutral")}:         Già.
                         - {charTag(FirstCharacter, "neutral")}:         Chiaro.
@@ -449,7 +454,7 @@
 
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FirstCharacter:
                     {shuffle:
                     - {charTag(FirstCharacter, "affectionate")}:        Woah!
                     - {charTag(FirstCharacter, "affectionate")}:        Totale!
@@ -466,7 +471,7 @@
                 }    
 
             - negative:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FirstCharacter:
                     {shuffle:
                     - {charTag(FirstCharacter, "sad")}:                 Bah.
                     - {charTag(FirstCharacter, "annoyed")}:             Vabbè.
@@ -485,7 +490,7 @@
     - SecondCharacter:
         {reaction:
             - neutral:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt SecondCharacter:
                     {shuffle:
                     - {charTag(SecondCharacter, "neutral")}:            Ok.
                     - {charTag(SecondCharacter, "neutral")}:            Certo.
@@ -502,7 +507,7 @@
 
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt SecondCharacter:
                     {shuffle:
                     - {charTag(SecondCharacter, "emotional")}:          Uuuuh!
                     - {charTag(SecondCharacter, "emotional")}:          Oooh!
@@ -519,7 +524,7 @@
                 }        
 
             - negative:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt SecondCharacter:
                     {shuffle:
                     - {charTag(SecondCharacter, "angry")}:              No?
                     - {charTag(SecondCharacter, "angry")}:              ???
@@ -542,7 +547,7 @@
 
         {reaction:
             - neutral:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Ok.
                     - {charTag(ThirdCharacter, "neutral")}:             Certo.
@@ -559,7 +564,7 @@
 
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
                     - {charTag(ThirdCharacter, "neutral")}:             Oooh!
@@ -576,7 +581,7 @@
                 }        
 
             - negative:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt ThirdCharacterLetters:
                     {shuffle:
                     - {charTag(ThirdCharacter, "neutral")}:             Uuuuh!
                     - {charTag(ThirdCharacter, "neutral")}:             Oooh!
@@ -598,7 +603,7 @@
     - FourthCharacter:
         {reaction:
             - neutral:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FourthCharacter:
                     {shuffle:
                         - Reazione neutra al sigillo.
                         - Altra reazione neutra al sigillo.
@@ -614,7 +619,7 @@
                 }
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FourthCharacter:
                     {shuffle:
                     - Reazione positiva al sigillo.
                     - Altra reazione positiva al sigillo.
@@ -630,7 +635,7 @@
                 }    
 
             - negative:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FourthCharacter:
                     {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
@@ -649,7 +654,7 @@
     - FifthCharacter:
         {reaction:
             - neutral:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FifthCharacter:
                     {shuffle:
                         - Reazione neutra al sigillo.
                         - Altra reazione neutra al sigillo.
@@ -665,7 +670,7 @@
                 }
             //Per la parte positiva o negativa se c'è sigillo attivo scrivo anche un commento.
             - positive:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FifthCharacter:
                     {shuffle:
                     - Reazione positiva al sigillo.
                     - Altra reazione positiva al sigillo.
@@ -681,7 +686,7 @@
                 }    
 
             - negative:
-                {glyph_actualActiveSigil == ():
+                {glyph_actualActiveSigil == () && list_currentActors hasnt FifthCharacter:
                     {shuffle:
                     - Reazione negativa al sigillo.
                     - Altra reazione negativa al sigillo.
@@ -697,7 +702,7 @@
                 }   
         }     
 
-    - Mentor:
+    - Mentor && list_currentActors hasnt Mentor or list_currentActors hasnt FifthCharacter:
     {shuffle:
     - {charTag(FifthCharacter, "neutral")}:                             Sì sì.
     - {charTag(FifthCharacter, "neutral")}:                             Ok.
@@ -730,126 +735,58 @@
 
 
 === function updateFirstCharacterRelation()
-~ firstChar_relationshipIndicator = firstChar_aether + firstChar_water - firstChar_air
+    ~ firstChar_relationshipIndicator = firstChar_aether + firstChar_water - firstChar_air
 
 
 
 === function updateSecondCharacterRelation()
 
-~ temp max = MAX(secondChar_aether, MAX(secondChar_earth, MAX(secondChar_air, MAX(secondChar_water, secondChar_fire))))
-~ temp min = MIN(secondChar_aether, MIN(secondChar_earth, MIN(secondChar_air, MIN(secondChar_water, secondChar_fire))))
-~ temp sum = secondChar_aether + secondChar_earth + secondChar_air + secondChar_water + secondChar_fire
+    ~ temp max = MAX(secondChar_aether, MAX(secondChar_earth, MAX(secondChar_air, MAX(secondChar_water, secondChar_fire))))
+    ~ temp min = MIN(secondChar_aether, MIN(secondChar_earth, MIN(secondChar_air, MIN(secondChar_water, secondChar_fire))))
+    ~ temp sum = secondChar_aether + secondChar_earth + secondChar_air + secondChar_water + secondChar_fire
 
-// calcola il risultato
-~ temp result = 2 * (max - min) - sum
+    // calcola il risultato
+    ~ temp result = 2 * (max - min) - sum
 
-// limitalo tra -9 e +9
-{
-	- result < relationship_indicator_minValue:
-		~ result = relationship_indicator_minValue
-	- result > relationship_indicator_maxValue:
-		~ result = relationship_indicator_maxValue
-}
+    // limitalo tra -9 e +9
+    {
+        - result < relationship_indicator_minValue:
+            ~ result = relationship_indicator_minValue
+        - result > relationship_indicator_maxValue:
+            ~ result = relationship_indicator_maxValue
+    }
 
-// ritorna il risultato
-~ secondChar_relationshipIndicator  = result
-
-// // DA CREARE
-// //Step uno: calcolo qual è il colore dominante.
-//     {
-//         - (secondChar_aether > secondChar_water) && (secondChar_aether > secondChar_fire) && (secondChar_aether > secondChar_air) && (secondChar_aether > secondChar_earth):
-//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_aether
-//                 ~ secondChar_relationshipActualDominantGlyph  = aetherC
-    
-//         - (secondChar_water > secondChar_aether) && (secondChar_water > secondChar_fire) && (secondChar_water > secondChar_air) && (secondChar_water > secondChar_earth):
-//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_water
-//                 ~ secondChar_relationshipActualDominantGlyph  = waterC
-           	
-        
-//         - (secondChar_fire > secondChar_water) && (secondChar_fire > secondChar_aether) && (secondChar_fire > secondChar_air) && (secondChar_fire > secondChar_earth):
-//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_fire
-//                 ~ secondChar_relationshipActualDominantGlyph  = fireC
-         
-        
-//         - (secondChar_earth > secondChar_water) && (secondChar_earth > secondChar_aether) && (secondChar_earth > secondChar_air) && (secondChar_earth > secondChar_fire):
-//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_earth
-//                 ~ secondChar_relationshipActualDominantGlyph  = earthC
-          
-        
-//         - (secondChar_air > secondChar_water) && (secondChar_air > secondChar_aether) && (secondChar_air > secondChar_earth) && (secondChar_air > secondChar_fire):
-//                 ~ secondChar_relationshipActualDominantGlyphValue = secondChar_air
-//                 ~ secondChar_relationshipActualDominantGlyph  = airC
-
-//         - else:
-//             //In caso di pareggio problemi: se faccio all'inizio cinque scelte diverse, se vado avanti a due colori dominanti.
-//             ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-//                     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-              
-//     }
-
-
-
-// //Step due: calcolo il risultato    
-//     {
-        
-//         - secondChar_relationshipActualDominantGlyph == secondChar_relationshipLastDominantGlyph:
-//             {
-//                 //Se non cambia glifo dominante ma aumenta il valore, cosa buona
-//                 -secondChar_relationshipActualDominantGlyphValue >= secondChar_relationshipLastDominantGlyphValue:
-//                         ~ secondChar_relationshipIndicator ++
-                
-//                 //Se non cambia glifo dominante ma diminuisce il valore, cosa cattiva
-//                 -secondChar_relationshipActualDominantGlyphValue < secondChar_relationshipLastDominantGlyphValue:
-//                         ~ secondChar_relationshipIndicator --        
-//             }
-        
-//         //Eccezione con la prima scelta
-//         - secondChar_relationshipLastDominantGlyph == ():
-//             ~ secondChar_relationshipIndicator = 0
-        
-//         //Se cambia glifo dominante, cosa brutta    
-//         - secondChar_relationshipActualDominantGlyph != secondChar_relationshipLastDominantGlyph:
-//             ~ secondChar_relationshipIndicator --
-        
-//         //Il resto è neutro        
-
-//     }
-
-//     //Aggiorno i valori di tracciamento
-//     ~ secondChar_relationshipLastDominantGlyphValue = secondChar_relationshipActualDominantGlyphValue
-//     ~ secondChar_relationshipLastDominantGlyph = secondChar_relationshipActualDominantGlyph
-// , per ora la soluzione è che comunque vada a registrare l'ultimo dominante e il suo valore come quello attuale. L'idea è che il pareggio debba essere per forza temporaneo: nessuna scelta genera un valore di incremento o decremento uguale per due glifi diversi, e quindi la volta successiva comunque riemergerà la "rottura" dell'equilibro.
-//             //questa cosa crea due
-
+    // ritorna il risultato
+    ~ secondChar_relationshipIndicator  = result
 
 
 === function updateThirdCharacterRelation()
-//Prima di tutto facciamo un check per vedere se thirdChar_recordedPlayerPronoun ha un valore assegnato. Questo perché Boccale ci leggerà in base alla prima interazione che ascolterà passivamente, nel caso in cui non abbiamo avuto lo storylet di presentazione con lui.
-{
-    - thirdChar_recordedPlayerPronoun == ():
-        ~ thirdChar_recordedPlayerPronoun += player_pronoun
-}
+    //Prima di tutto facciamo un check per vedere se thirdChar_recordedPlayerPronoun ha un valore assegnato. Questo perché Boccale ci leggerà in base alla prima interazione che ascolterà passivamente, nel caso in cui non abbiamo avuto lo storylet di presentazione con lui.
+    {
+        - thirdChar_recordedPlayerPronoun == ():
+            ~ thirdChar_recordedPlayerPronoun += player_pronoun
+    }
 
-//Poi si fa il check legato al genere a seconda dello stato della storia.
-{
-    //Se siamo nella prima fase:
-    - thirdChar_storyStatus == story_storyStarted:
-        {
-            - thirdChar_recordedPlayerPronoun == him:
-                ~ thirdChar_relationshipIndicator = thirdChar_air + thirdChar_fire + thirdChar_earth - thirdChar_aether - thirdChar_water
-            
-            - thirdChar_recordedPlayerPronoun == her:
-                ~ thirdChar_relationshipIndicator = thirdChar_water - thirdChar_fire - thirdChar_earth - thirdChar_aether - thirdChar_air
+    //Poi si fa il check legato al genere a seconda dello stato della storia.
+    {
+        //Se siamo nella prima fase:
+        - thirdChar_storyStatus == story_storyStarted:
+            {
+                - thirdChar_recordedPlayerPronoun == him:
+                    ~ thirdChar_relationshipIndicator = thirdChar_air + thirdChar_fire + thirdChar_earth - thirdChar_aether - thirdChar_water
+                
+                - thirdChar_recordedPlayerPronoun == her:
+                    ~ thirdChar_relationshipIndicator = thirdChar_water - thirdChar_fire - thirdChar_earth - thirdChar_aether - thirdChar_air
 
-            - thirdChar_recordedPlayerPronoun == they:
-                ~ thirdChar_relationshipIndicator = thirdChar_aether - thirdChar_fire - thirdChar_earth - thirdChar_water - thirdChar_air     
+                - thirdChar_recordedPlayerPronoun == they:
+                    ~ thirdChar_relationshipIndicator = thirdChar_aether - thirdChar_fire - thirdChar_earth - thirdChar_water - thirdChar_air     
 
-        }
-    //Se siamo nella seconda fase sono considerate positive le scelte acqua e spirito:
-    - thirdChar_storyStatus == story_storyRemote:
-        ~ thirdChar_relationshipIndicator = thirdChar_water + thirdChar_aether - thirdChar_earth - thirdChar_fire - thirdChar_air
+            }
+        //Se siamo nella seconda fase sono considerate positive le scelte acqua e spirito:
+        - thirdChar_storyStatus == story_storyRemote:
+            ~ thirdChar_relationshipIndicator = thirdChar_water + thirdChar_aether - thirdChar_earth - thirdChar_fire - thirdChar_air
 
-}
+    }
 
 
 === function updateFourthCharacterRelation()

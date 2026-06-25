@@ -28,7 +28,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
 
         {charTag(ThirdCharacter, "neutral")}:                           Non è che amo proprio proprio la pioggia.
                                                                         Ma.
@@ -209,6 +211,9 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
     
 
         {charTag(ThirdCharacter, "neutral")}:                           Non leggevo dall'ottantaquattro e sai una cosa {player_name}?
@@ -388,7 +393,10 @@
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
+        //Aggiungiamo a lista list_currentActors
+        ~ list_currentActors += ThirdCharacter
+
         {
         - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(FifthCharacter, PG):
         {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
