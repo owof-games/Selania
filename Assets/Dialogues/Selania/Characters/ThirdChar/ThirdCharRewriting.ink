@@ -401,7 +401,7 @@
             {charTag(PG, "neutral")}:                           Tanto vale rischiare di perderli del tutto, no?
                                                                 E magari potresti pure stupirti della loro reazione.
                 {
-                - letters_thirdCharLetterThreeChoice has fire: 
+                - letters_thirdCharLetterThreeChoice has fireC: 
                                                                 Alla fine hai già urlato a tutti una volta quando ti sei trovato coi due sostituti portati dal Merlo, no?    
                 }
                 {

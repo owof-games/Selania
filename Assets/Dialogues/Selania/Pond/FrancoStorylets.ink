@@ -103,10 +103,10 @@
     {charTag(Franco, "neutral")}:                           Ed è strano girino, perché Franco ha sempre delle risposte.
                                                             Anche se non sono sempre giuste.
     {
-    - frog_third_char_gift == thirdChar_giftedObject:
+    - frog_third_char_object_gift == thirdChar_giftedObject:
                                                             Ho visto che hai dato a {charNameThree} il dono che ti ho consigliato, ma ha reagito male.
 
-    - frog_third_char_ingredient == universalIngredient:
+    - frog_third_char_object_ingredient == universalIngredient:
                                                             Ho visto che cucinando con {charNameThree} hai aggiunto la Zandelia, che dovrebbe piacere a tutti, ma lui ha reagito male.
 
     - else:
