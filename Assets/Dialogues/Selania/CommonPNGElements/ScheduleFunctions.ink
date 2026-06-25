@@ -50,10 +50,11 @@
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ secondChar_storyStatus = story_storyStarted
     
-        //Dopo quattro dialoghi con Chitarra o due con Riccio, compare il terzo PNG.
+        //Dopo quattro dialoghi con Chitarra o due con Riccio, compare il terzo PNG, in un punto random tra quelli disponibili.
         - ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar)) > thirdChar_delay) && thirdChar_storyStatus == story_storyNotStarted:
             {debug: introduco {ThirdCharacter} in scena.}
-                ~ move_entity(ThirdCharacter, TrainStop)
+                ~ temp location = LIST_RANDOM(movements_randomablePlaces)
+                ~ move_entity(ThirdCharacter, location)
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ thirdChar_storyStatus = story_storyStarted
                 
