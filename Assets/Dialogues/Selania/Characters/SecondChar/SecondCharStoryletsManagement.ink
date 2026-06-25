@@ -7,10 +7,6 @@
     
         //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {   
-            //secondo check di sicurezza per parlare della apertura della biblioteca
-            - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
-                -> open_the_library
-
             - grimoire_secondChar hasnt grimSecondCharOne:
                 -> second_char_main_storylets.one
                 

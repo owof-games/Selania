@@ -2,10 +2,6 @@
 
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
     {           
-
-        -       are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest && grimoire_thirdChar hasnt grimThirdOpenNest:
-                        -> open_the_nest 
-
         -       grimoire_thirdChar hasnt grimThirdCharOne:
                         -> third_char_main_storylets.one
             

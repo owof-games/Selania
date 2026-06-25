@@ -9,9 +9,6 @@
         
     //Storylets principali 
         {
-            //Apertura cucina
-            - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) == Pond && player_accessiblePlaces hasnt Kitchen && openingPlacesPause <= 0:
-                -> open_the_kitchen
 
             - grimoire_firstChar hasnt grimFirstCharOne:
                 -> first_char_main_storylets.one
