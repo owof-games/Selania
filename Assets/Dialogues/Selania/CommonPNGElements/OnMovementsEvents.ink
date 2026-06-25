@@ -206,6 +206,22 @@ VAR letters_doggoPause = false
 {debug: passo da on_movement_letters_management.}
 ~ temp currentPlace = entity_location(PG)
 
+    {//Vista la quantità e il tipo di storyline, messe prioritarie
+        - thirdChar_storyStatus == story_storyRemote && thirdChar_mailPause <= 0 && grimoire_thirdChar hasnt grimThirdCharLetterEight && letters_doggoPause == false:
+        
+                ~ move_entity(DoggoThirdLetters, TrainStop)
+                {debug: Ho messo la nota del third personaggio alla fermata del bus.}
+                ~ letters_doggoPause = true
+                {debug: ho messo in pausa le altre lettere.}
+
+        - else:
+            {
+                - thirdChar_storyStatus == story_storyRemote:
+                    ~ thirdChar_mailPause --   
+            }        
+
+                
+    }
 
 
     {
@@ -240,22 +256,7 @@ VAR letters_doggoPause = false
                 
     }
 
-    {
-        - thirdChar_storyStatus == story_storyRemote && thirdChar_mailPause <= 0 && grimoire_thirdChar hasnt grimThirdCharLetterEight && letters_doggoPause == false:
-        
-                ~ move_entity(DoggoThirdLetters, TrainStop)
-                {debug: Ho messo la nota del third personaggio alla fermata del bus.}
-                ~ letters_doggoPause = true
-                {debug: ho messo in pausa le altre lettere.}
-
-        - else:
-            {
-                - thirdChar_storyStatus == story_storyRemote:
-                    ~ thirdChar_mailPause --   
-            }        
-
-                
-    }
+    
 
     {
         - fourthChar_storyStatus == story_storyPostal && fourthChar_mailPause < 0 && grimoire_fourthChar hasnt grimFourthCharLetterFour && letters_doggoPause == false:
