@@ -16,6 +16,8 @@
         VAR secondChar_specialEvent = false
         //Conteggio totale delle scelte prese con la PNG
         VAR secondChar_totalChoices = 0
+        //Pausa per parlare di Franco
+        VAR secondChar_frogPresentationPause = false
 
     //Ritmo della storia    
         //Variabili per mettere in pausa la conversazione

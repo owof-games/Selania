@@ -19,13 +19,14 @@
                     - entity_location(PG) == Pond:
                         {charTag(SecondCharacter, "energy")}:       C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.
                             ~ move_entity(SecondCharacter, Forest)
+                            ~ secondChar_frogPresentationPause = true
                                 -> main
                     
                     - else: 
                         -> second_char_main_storylets.two
                 }   
 
-            - (grimoire_secondChar hasnt grimSecondCharThreeHer) or (grimoire_secondChar hasnt grimSecondCharThreeHim) or (grimoire_secondChar hasnt grimSecondCharThreeThey):
+            - (grimoire_secondChar hasnt grimSecondCharThreeHer) && (grimoire_secondChar hasnt grimSecondCharThreeHim) && (grimoire_secondChar hasnt grimSecondCharThreeThey):
                         -> second_char_main_storylets.three
                 
             - grimoire_secondChar hasnt grimSecondCharFour:

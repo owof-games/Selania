@@ -840,6 +840,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {    
             - second_char_main_storylets.two && grimoire_secondChar hasnt grimSecondCharTwo:
                 ~ grimoire_secondChar += grimSecondCharTwo
+                //sblocco a Riccio la possibilità di avere storylets automatici
+                ~ secondChar_frogPresentationPause = false
         }
 
         {

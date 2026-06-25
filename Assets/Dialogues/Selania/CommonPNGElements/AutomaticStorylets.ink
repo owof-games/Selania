@@ -14,8 +14,8 @@
 
 *******************************************/
 
-{
-
+{   
+    
     //Tra PNG e la strega
         - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && grimoire_fifthChar hasnt grimMentorWitchOne:
             -> the_witch_and_the_mentor
@@ -25,11 +25,11 @@
     
     //Tra PNG
         //Chiacchiere tra Riccio e Chitarra
-        - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_firstChar hasnt grimFirstSecondChar:
+        - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_firstChar hasnt grimFirstSecondChar && secondChar_frogPresentationPause == false:
             -> first_second_chit_chat
 
         //Chiacchiere tra Riccio e PNG3
-        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar && grimoire_thirdChar has grimThirdCharOne:
+        - are_two_entities_together(ThirdCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar hasnt grimSecondThirdChar && grimoire_thirdChar has grimThirdCharOne&& secondChar_frogPresentationPause == false:
             -> third_second_chit_chat        
 
         //Chiacchiere tra Chitarra e PNG3
@@ -78,7 +78,7 @@
     
     //Altre
         //Scambio tra Riccio e Carla
-        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Carla, PG) && grimoire_secondChar hasnt grimSecondCharCarla:
+        - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Carla, PG) && grimoire_secondChar hasnt grimSecondCharCarla && secondChar_frogPresentationPause == false:
             -> carla_and_second_char_chit_chat
         
         //Primo commento di Franco quando entriamo nel nest con lui

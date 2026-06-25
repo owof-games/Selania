@@ -79,7 +79,7 @@ VAR tutorial_CarlaInkIndicator = ink_empty
 //C'è una parte commentata perché prima Mentore aspettava i commenti di Carla per proporre tutorial, ma ora credo abbia senso che sia autonoma.
     {
         //Come funzionano le chiacchierate
-        - are_two_entities_together(PG, Mentor) && tutorial_choicesActive == true && grimoire_appendices hasnt grimChoicesMentor && tutorial_MentorTutorial == true:
+        - are_two_entities_together(PG, Mentor) && tutorial_choicesActive == true && grimoire_appendices hasnt grimChoicesMentor && grimoire_fifthChar has grimMentorIntro && tutorial_MentorTutorial == true:
 
                 -> tutorial_mentorTalkingChoiceRelationship
 
@@ -120,7 +120,7 @@ VAR tutorial_CarlaInkIndicator = ink_empty
             // }
             
         //Riscrittura e inchiostro
-        - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive == true && grimoire_appendices hasnt grimRewritingMentor && tutorial_MentorTutorial == true:
+        - are_two_entities_together(PG, Mentor) && tutorial_rereadingActive == true && grimoire_appendices hasnt grimRewritingMentor && tutorial_MentorTutorial == true && grimoire_fifthChar has grimMentorIntro:
 
                 -> tutorial_mentorInkAndRewriting
 
