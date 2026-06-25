@@ -142,9 +142,13 @@
 
 //Storylets speciali Third Char
 {
+    //Commento post incontro con la strega
+    - grimoire_thirdChar has grimWitchThirdChar && grimoire_thirdChar hasnt grimWitchThirdCharFollowUp:
+            -> third_witch_follow_up
+    
     //Boccale ha cucinato, e vediamo la scena del dono
         - are_two_entities_together(ThirdCharacter, PG)  && kitchen_thirdCharHasCooked == true  && kitchen_thirdCharIsCooking == false && grimoire_thirdChar hasnt grimThirdCharKitchenAlone:
-            -> food_gift_third_char            
+            -> food_gift_third_char        
 
     //Lettura Boccale
         - are_two_entities_together(ThirdCharacter, PG) && library_readStories has Maura && grimoire_thirdChar hasnt grimThirdCharNovel:

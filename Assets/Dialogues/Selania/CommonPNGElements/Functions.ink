@@ -234,31 +234,28 @@ VAR relationshipIndicatorNeutralValue = 0
 === rewriting_witch_feedback(point) ===
 LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 //Assegnazione parlante
+    {
+        - story_endedStories != ():
+            ->->
+    }
 
-{
-    - point == oneR && story_endedStories == ():
-        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
+    {
+        - point == oneR:
+            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua prima goccia di inchiostro per compiere una riscrittura.</i>
 
-    - point == twoR && story_endedStories == ():
-        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
+        - point == twoR:
+            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la sua seconda goccia di inchiostro per procedere con la riscrittura.</i>
 
-    - point == threeR && story_endedStories == ():
-        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
+        - point == threeR:
+            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la terza goccia di inchiostro, proponendo una riscrittura.</i>
 
-    - point == fourR && story_endedStories == ():
-        {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
+        - point == fourR:
+            {charTag(TheWitch, witch_state())}:   <i>{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.</i>
 
-    - point == endR && story_endedStories == ():
-        {
-            - story_endedStories == ():
-                {charTag(TheWitch, witch_state())}:     <i>{player_name} sta per utilizzare per la prima volta il potere dell'<b><i>epilogo</b></i>.
-                                                        <i>Quale epilogo proporrà?
-            
-            - else:
-                {charTag(TheWitch, witch_state())}:     <i>Quale <b><i>epilogo</b></i> proporrà {player_name}?</i>   
-        }    
+        - point == endR:
+            {charTag(TheWitch, witch_state())}:     <i>{player_name} sta per utilizzare per la prima volta il potere dell'<b><i>epilogo</b></i>.
 
-}
+    }
 
 ->->
 

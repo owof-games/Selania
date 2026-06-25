@@ -2,8 +2,6 @@
 
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
     {           
-        -       grimoire_thirdChar has grimWitchThirdChar && grimoire_thirdChar hasnt grimWitchThirdCharFollowUp:
-                        -> third_witch_follow_up
 
         -       are_two_entities_together(ThirdCharacter, PG) && entity_location(PG) == Nest && grimoire_thirdChar hasnt grimThirdOpenNest:
                         -> open_the_nest 
