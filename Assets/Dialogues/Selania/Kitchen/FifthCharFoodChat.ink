@@ -85,7 +85,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -134,7 +134,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -185,7 +185,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -246,7 +246,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -297,7 +297,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -348,7 +348,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -411,7 +411,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -462,7 +462,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -512,7 +512,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
@@ -845,7 +845,7 @@
             + \ {charTag(PG, "neutral")}:         Cosa vuoi? Come puoi cambiare questa situazione?
                     -> glyph_choice_manager(false, fireC)->
                 
-            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:         Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                     
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?

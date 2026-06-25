@@ -13,7 +13,7 @@
     A racconto scelto, cambia anche logica in Special Storylets
     Prenderei il racconto di Ceci.
     - 
-            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero (”davvero” è importante, è un andare in fondo alle emozioni)?
+            + \ {charTag(PG, "neutral")}:               Cosa senti/hai sentito davvero ("davvero" è importante, è un andare in fondo alle emozioni)?
                     -> glyph_choice_manager(false, waterC)->
                 
                 

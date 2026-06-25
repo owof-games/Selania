@@ -54,7 +54,7 @@
 
                 - {charTag(ThirdCharacter, "bored")}:                   Tutte ormai c'hanno l'ex tossico. Sicuro che Donatella va in dire in giro che io sono tossico, sicuro. 
                 
-                - {charTag(ThirdCharacter, "bored")}:                   Sono uscita con una che mi piaceva tanto ma lei zero, non ne vuole sapere, perché “tutti i maschi sono delle merde”. Ma se dici che le donne son tutte stronze, ti mangiano vivo.
+                - {charTag(ThirdCharacter, "bored")}:                   Sono uscita con una che mi piaceva tanto ma lei zero, non ne vuole sapere, perché "tutti i maschi sono delle merde". Ma se dici che le donne son tutte stronze, ti mangiano vivo.
 
                 - {charTag(ThirdCharacter, "jester")}:                  Alla fine c’hanno quarant'anni, trenta, ma sono tutte delle bambine.
 

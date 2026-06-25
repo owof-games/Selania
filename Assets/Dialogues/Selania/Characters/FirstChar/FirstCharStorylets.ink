@@ -329,7 +329,7 @@
                                                                 Sono un labrador e mi fido sempre di tuttə subito.
         {charTag(FirstCharacter, "neutral")}:                   Poi ho pensato che non è vero.
         {charTag(FirstCharacter, "sad")}:                       Mi fido fino in fondo solo di Talco.
-        {charTag(FirstCharacter, "annoyed")}:                   Si dice spesso “La cosa x mi ha salvato la vita”, e ho sempre creduto che fosse una cazzata.
+        {charTag(FirstCharacter, "annoyed")}:                   Si dice spesso "La cosa x mi ha salvato la vita", e ho sempre creduto che fosse una cazzata.
                                                                 Pensavo che niente salvasse nessunə.
         {charTag(FirstCharacter, "neutral")}:                   Poi ho conosciuto Talco.
                                                                 Abbiamo iniziato il Conservatorio assieme, ma ləi l'ha lasciato dopo un anno.
@@ -352,7 +352,7 @@
         {charTag(ThirdCharacter, "bored")}:                     Ma che c'entrano le macchine dei poveracci?    
         }
         }          
-        {charTag(FirstCharacter, "neutral")}:                   O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
+        {charTag(FirstCharacter, "neutral")}:                   O tutte le volte che davanti a una cosa ingiusta ha detto "no"!
                                                                 Mi ha fatto capire che per me è importante fare qualcosa di utile per il mondo.
                                                                 E che mi piace quando posso farlo con altre persone.
         {charTag(FirstCharacter, "sad")}:                       Io non so se sono davvero bloccata in qualcosa, come dice {charNameFive}.
@@ -546,7 +546,7 @@
         {charTag(FirstCharacter, "sad")}:                       Ultimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi.
                                                                 Mi fa sentire precaria, tipo.
         {charTag(FirstCharacter, "neutral")}:                   Poi c'è la casa dei miei.
-                                                                Continuo a dire “torno a casa” quando scendo a trovarli.
+                                                                Continuo a dire "torno a casa" quando scendo a trovarli.
         {charTag(FirstCharacter, "affectionate")}:              Ma se vogliamo dircela davvero è un bel posto pieno di ricordi.
         {charTag(FirstCharacter, "sad")}:                       Ma non qualcosa dove restare.
         {charTag(FirstCharacter, "neutral")}:                   Credo.
@@ -658,7 +658,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         {charTag(FirstCharacter, "sad")}:                       Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
         {charTag(FirstCharacter, "affectionate")}:              È che vivere con le ragazze mi fa strafelice.
-                                                                Il mese scorso abbiamo fatto un piccolo concerto per raccogliere fondi per una associazione, “La Rifugia”.
+                                                                Il mese scorso abbiamo fatto un piccolo concerto per raccogliere fondi per una associazione, "La Rifugia".
         {charTag(FirstCharacter, "neutral")}:                   È questa specie di antiAirbnb che mette in contatto persone per offrire un letto o un divano di supporto.
         {charTag(FirstCharacter, "annoyed")}:                   Cosa sempre più utile con questi affitti assurdi e le case che non ci sono.
         {charTag(FirstCharacter, "affectionate")}:              Le persone che la gestiscono sono fuori di testa in modo bello.
@@ -778,16 +778,16 @@
         {charTag(FirstCharacter, "neutral")}:                   Continuo a parlare al passato di Talco, l'avrai notato.
         {charTag(FirstCharacter, "sad")}:                       Ed è perché non ci sentiamo da mesi.
                                                                 E ora ti racconterò il perché e tu mi giudicherai una stronza epocale, e me lo merito.
-        {charTag(FirstCharacter, "affectionate")}:              Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, “come ai vecchi tempi”.
+        {charTag(FirstCharacter, "affectionate")}:              Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, "come ai vecchi tempi".
         {charTag(FirstCharacter, "annoyed")}:                   Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
         {charTag(FirstCharacter, "affectionate")}:              Abbiamo trovato un incrocio sui calendari, e la sera che l'ho rivistə mi si è spalancato il cuore.
         {charTag(FirstCharacter, "affectionate")}:              E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
                                                                 E se andassimo a vivere tuttə assieme in campagna?
                                                                 Talco, io, le ragazze della band?
         {charTag(FirstCharacter, "neutral")}:                   Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana, no?
-                                                                Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
+                                                                Quando Talco mi ha detto "devo dirti qualcosa di importante", ero già nel pieno del mio film.
         {charTag(FirstCharacter, "neutral")}:                   Mi ha preso la mano, tesə a bestia come non l'avevo mai vistə.
-                                                                “Aspetto un bambino”.
+                                                                "Aspetto un bambino".
         {
         - are_two_entities_together(Mentor, PG):
             {charTag(FifthCharacter, "hurry")}:                 Ma che cosa adorabile!   
@@ -819,9 +819,9 @@
                                                                 Mi ha solo detto che era un passo importante per ləi.
                                                                 Perché anche se è una cosa inaspettata, ama Thomas, e sa che è l'uomo giusto.
                                                                 E poi il colpo finale.
-                                                                “Mi trasferisco da lui a Reykjavík. Qui non mi rimane nulla, nulla a parte te.”
-                                                                “E per questo, voglio che ti trasferisci con noi.”
-                                                                “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
+                                                                "Mi trasferisco da lui a Reykjavík. Qui non mi rimane nulla, nulla a parte te."
+                                                                "E per questo, voglio che ti trasferisci con noi."
+                                                                "Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas."
                                                                 E…
         {charTag(FirstCharacter, "annoyed")}:                   Madonna, quanto vorrei del vino ora.
         {charTag(FirstCharacter, "neutral")}:                   Tu come ti saresti {player_pronoun has him:sentito|{player_pronoun has her:sentita|sentitə}} al mio posto?
@@ -884,7 +884,7 @@
         }         
         {charTag(FirstCharacter, "neutral")}:                   Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
                                                                 Una foto dellə bimbə.
-                                                                “Ora siamo in due ad aspettare un tuo abbraccio.”
+                                                                "Ora siamo in due ad aspettare un tuo abbraccio."
 
             -> first_char_closing_storylet ->
             -> options_first_character          
@@ -930,7 +930,7 @@
         {charTag(FirstCharacter, "sad")}:                       Non è che è per questo che mi chiamo {charNameOne}?                                                        
                                                                 Tornare giù è un'opzione.
         {charTag(FirstCharacter, "affectionate")}:              Voglio molto bene ai miei.
-                                                                Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.
+                                                                Conosco poche persone che possono dire "Scendo a casa e sono felice di suonare e ubriacarmi con mio padre".
         {
             - are_two_entities_together(SecondCharacter, PG):
                 ~change_entity_place(SecondCharacter)
@@ -943,7 +943,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Farmi salire e studiare è stato uno sforzo enorme per loro.
                                                                 E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
                                                                 Prendermi cura di loro.
-        {charTag(FirstCharacter, "sad")}:                       Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
+        {charTag(FirstCharacter, "sad")}:                       Ma una parte di me ha paura che tornare voglia dire "Ok, ho sbagliato tutto".
         {charTag(FirstCharacter, "neutral")}:                   E ho paura di finire in un certo tipo di gruppo.
         {charTag(FirstCharacter, "annoyed")}:                   Quello delle amiche sposate.
         {charTag(FirstCharacter, "neutral")}:                   Non è un crimine contro l'umanità, lo so.
@@ -1139,7 +1139,7 @@
                                                             Mi sento un po' come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
         {charTag(FirstCharacter, "annoyed")}:               E tu guardi fuori e c'è movimento ma non riesci proprio a capire se stai riprendendo a viaggiare, o se è l'altro treno che si sta spostando.
         {charTag(FirstCharacter, "sad")}:                   Ultimamente Ennio mi sembra insofferente, dice che ha il bisogno di passare più tempo assieme.
-        {charTag(FirstCharacter, "neutral")}:               Non mi dice mai “Devi rinunciare a qualcosa per stare con me”.
+        {charTag(FirstCharacter, "neutral")}:               Non mi dice mai "Devi rinunciare a qualcosa per stare con me".
                                                             Ma è lì, negli sbuffi quando gli dico che quel fine settimana faccio doppio turno.
                                                             O che farò tardi perché Valeria è stata di nuovo lasciata e ha bisogno di supporto.
         {charTag(FirstCharacter, "sad")}:                   Sono mesi che non viene manco a vedere un nostro concerto.
@@ -1222,12 +1222,12 @@
         {charTag(FirstCharacter, "neutral")}:               Una cosa che non mi aspettavo della vita adulta, è di poter dimenticare le altre persone.
         {charTag(FirstCharacter, "annoyed")}:               Mi fa sentire una merda.
         {charTag(FirstCharacter, "neutral")}:               Ma ti svegli, vai a lavoro, torni, cerchi di tenere in piedi le relazioni che hai qui, di lavarti e dormire, di prenderti cura dei tuoi interessi.
-        {charTag(FirstCharacter, "sad")}:                   E ti dici “Cazzo, devo scrivere a Cristina” oppure il calendario ti ricorda che è il compleanno di Stefano.
+        {charTag(FirstCharacter, "sad")}:                   E ti dici "Cazzo, devo scrivere a Cristina" oppure il calendario ti ricorda che è il compleanno di Stefano.
         {charTag(FirstCharacter, "neutral")}:               E allora magari vi sentite per uno, due giorni ma poi gli audio rimangono lì appesi.
                                                             E un po' ti senti una merda, ti senti in colpa, e alla fine non scrivi fino a quando non riaccade qualcosa che sia una scusa per farlo.
-        {charTag(FirstCharacter, "sad")}:                   Molte delle ame che sono tornare giù sono diventate “amiche da ricorrenza”.
+        {charTag(FirstCharacter, "sad")}:                   Molte delle ame che sono tornare giù sono diventate "amiche da ricorrenza".
                                                             E forse c'è questa cosa che mi spaventa, all'idea di scegliere di andare da Talco, o di finire per tornare dai miei.
-                                                            Di diventare anche per Valeria e le altre ragazze, per le colleghe, una “amica da ricorrenza”.
+                                                            Di diventare anche per Valeria e le altre ragazze, per le colleghe, una "amica da ricorrenza".
         {charTag(FirstCharacter, "neutral")}:               Per non parlare di Ennio.
         {charTag(FirstCharacter, "sad")}:                   Credo che mi lascerebbe prima.
         {charTag(FirstCharacter, "neutral")}:               E non è solo questo.
@@ -1346,7 +1346,7 @@
         {charTag(FirstCharacter, "neutral")}:               Dio, darei tutto a volte per la loro vita.
                                                             E so che non è vero, non è vero fino in fondo.
                                                             So che in un certo senso quella roba è parte di un problema più grande.
-        {charTag(FirstCharacter, "annoyed")}:               Lo so, ma non lo “capisco” davvero.
+        {charTag(FirstCharacter, "annoyed")}:               Lo so, ma non lo "capisco" davvero.
         {charTag(FirstCharacter, "sad")}:                   Non lo sento fino in fondo.
                                                             Vorrei solo essere loro.
                                                             Per un po' almeno.
