@@ -85,13 +85,19 @@
                                                                 Ha senso?
                                                                 Forse mi sono di nuovo addormentata a lavoro?
         {charTag(FirstCharacter, "annoyed")}:                   Merda, il capo mi farà il culo.
+
+
+        {
+        - tutorial_MentorTutorial == true:
             ~ temp my_location = entity_location(PG)
             ~ move_entity(Mentor, my_location)
             {
             - are_two_entities_together(Mentor, PG):    
                                                                 Ed ecco di nuovo quel fiore parlante!
             }
-                                                                
+                
+        }
+                                                            
         {charTag(FirstCharacter, "neutral")}:                   {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
                                                                 Fai il tuo dovere da inconscio, così mi ripiglio e vedo di non mandare in merda il lavoro.
        
@@ -153,26 +159,25 @@
                                                                 Espiro.
             {charTag(FirstCharacter, "annoyed")}:               Urlo dentro.
             {charTag(FirstCharacter, "curious")}:               Piacere di nuovo, sono {charNameOne} anche se non è vero.
-                                                                Ma potrò prima o poi dire il mio nome.
-        -
-    
-            {
-            
-            - are_two_entities_together(Mentor, PG):    
+                                                                Ma potrò prima o poi dire il mio nome.      
+
+        - 
+                {
+                - are_two_entities_together(Mentor, PG) && tutorial_MentorTutorial == true:    
                 {
                 - grimoire_fifthChar hasnt grimMentorIntro:
-                {charTag(FifthCharacter, "hurry")}:                 Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
-                {charTag(FifthCharacter, "neutral")}:               E tu quando puoi parlami, e ti spiegherò un po' di cose.
+                {charTag(FifthCharacter, "hurry")}:                     Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
+                {charTag(FifthCharacter, "neutral")}:                   E tu quando puoi parlami, e ti spiegherò un po' di cose.
                 {charTag(FirstCharacter, "annoyed")}:                   Oook.
                 {charTag(FirstCharacter, "neutral")}:                   Ok.
                 
                 - else:
-                {charTag(FifthCharacter, "hurry")}:                 Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
+                {charTag(FifthCharacter, "hurry")}:                     Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
                 }
-                
-            - else:
-                                                                E inizio a sentire caldo.    
-            }
+                    
+                - else:
+                                                                    E inizio a sentire caldo.    
+                }
             
         
         {charTag(FirstCharacter, "neutral")}:                   Devo idratarmi.

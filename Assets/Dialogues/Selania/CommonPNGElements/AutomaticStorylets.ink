@@ -175,7 +175,7 @@
         -> witch_allSigils_opening
 
     //Commento sulle appendici
-    - grimoire_appendices != () && grimoire_appendices hasnt grimWitchAboutAppendices:
+    - grimoire_appendices != () && grimoire_appendices hasnt grimWitchAboutAppendices && player_nameChosen == true:
         -> witch_about_appendices
 }
 
