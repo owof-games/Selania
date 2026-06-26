@@ -81,6 +81,7 @@
 
 
     - (top3)
+            // ~ debug_Franco()
     {charTag(TheWitch, witch_state())}:                                 <i>Il viaggio sta per iniziare.
                                                                         <i>Che modalità di gioco vuoi attivare?
                                                                         <i>La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.

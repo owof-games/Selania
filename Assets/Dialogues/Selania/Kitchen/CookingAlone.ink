@@ -314,7 +314,7 @@
                 {charTag(Franco, "party")}:                     Ma ciao {player_name}!
                                                                 Che piacere vederti cra!
 
-            + \ {charTag(PG, "neutral")}:                       <i>Mi offro un goccio dil distillato di curiosità.</i>
+            + \ {charTag(PG, "neutral")}:                       <i>Mi offro un goccio di distillato di curiosità.</i>
                     ~ kitchen_recipePP = "e contorno di curiosità"
                     -> glyph_choice_manager(true, airC)->
                     ~ player_updateKitchenPersonalChoices(airC)
