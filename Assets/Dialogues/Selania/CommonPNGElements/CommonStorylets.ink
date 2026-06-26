@@ -583,10 +583,10 @@
                                                                         <i>E {player_name} ricorderà tutto quello che è stato detto.</i>
                 -> top
 
-        * \ {charTag(PG, "neutral")}:                                   Va bene.
+        + (yes) \ {charTag(PG, "neutral")}:                                   Va bene.
                 -> forward
 
-        * \ {charTag(PG, "neutral")}:                                   Non me la sento.
+        + (no) \ {charTag(PG, "neutral")}:                                   Non me la sento.
         {charTag(ThirdCharacter, "jester")}:                            Ehi {player_name}, non mi ero accordo che eri qui!    
         {charTag(TheWitch, witch_state())}:                             <i>Uh.</i>
                                                                         <i>Capiamo.</i>

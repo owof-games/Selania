@@ -589,6 +589,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - the_witch_and_the_men.forward && grimoire_thirdChar hasnt grimWitchThirdChar:
                 ~ grimoire_thirdChar += grimWitchThirdChar
                 ~ grimoire_witch += grimWitchThirdChar
+
+            - the_witch_and_the_men.no && grimoire_thirdChar hasnt grimWitchThirdCharNo:
+                ~ grimoire_thirdChar += grimWitchThirdCharNo
+                ~ grimoire_witch += grimWitchThirdCharNo
+
         }
         {   
             //Il .end è sia se dono che no il mio corpo a Strega.

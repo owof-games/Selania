@@ -17,10 +17,10 @@
 {   
     
     //Tra PNG e la strega
-        - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && grimoire_fifthChar hasnt grimMentorWitchOne:
+        - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && (little_storylets.talkingWitch or little_storylets.voices) && grimoire_fifthChar hasnt grimMentorWitchOne:
             -> the_witch_and_the_mentor
 
-        - are_two_entities_together (ThirdCharacter, PG) && are_two_entities_together(TheWitch, PG) && grimoire_thirdChar hasnt grimWitchThirdChar:
+        - are_two_entities_together (ThirdCharacter, PG) && are_two_entities_together(TheWitch, PG) && (grimoire_thirdChar hasnt grimWitchThirdChar or grimoire_witch has grimWitchThirdCharNo):
             -> the_witch_and_the_men
     
     //Tra PNG
