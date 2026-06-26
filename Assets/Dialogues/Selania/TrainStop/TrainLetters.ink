@@ -316,7 +316,7 @@
                                 }
                             Sul momento davvero ti ho odiato fino a sentirmi le palle bollire.
                             Ma era la cosa che mi serviva davvero.
-                            {frog_third_char_gift == thirdChar_giftedObject:Dì a Franchì che c'aveva ragione, povero.}
+                            {frog_third_char_object_gift == thirdChar_giftedObject:Dì a Franchì che c'aveva ragione, povero.}
                             {
                             //Se prima volta che passo da qui, aumento valore inchiostro
                             - grimoire_thirdChar hasnt grimThirdCharLetterOne:
