@@ -10,6 +10,13 @@
         //Aggiungiamo a lista list_currentActors
         ~ list_currentActors += ThirdCharacter
 
+        //Assegniamo nome e pronomi
+        {
+        - thirdChar_recordedPlayerPronoun == ():
+            ~ thirdChar_recordedPlayerPronoun += player_pronoun
+        }
+
+
                 //Commento diverso a seconda che sia il primo storylet con noi, o se invece ha assistito ad altri storylets.
                 {
                 - thirdChar_recordedPlayerPronoun != ():
@@ -19,6 +26,7 @@
                 - else:  
                 {charTag(ThirdCharacter, "jester")}:            No, questo non è il frigo.   
                 }
+
                 {charTag(ThirdCharacter, "neutral")}:           Volevo prendermi una Kilkenny, giusto per rilassarmi.
                 {charTag(ThirdCharacter, "bored")}:             E invece eccomi qui.
                 {charTag(ThirdCharacter, "jester")}:            Gesù licantropo, che colpo che mi sono preso!
@@ -26,6 +34,7 @@
                                                                         ~ fifthChar_slurDetectorFunction()                                           
                 {charTag(ThirdCharacter, "neutral")}:           Però per lo meno non si sente il miagolio del gatto dello Stracciamaroni.
                 {charTag(ThirdCharacter, "bored")}:             O il puzzo dello Stracciamaroni.
+
 
                 {
                 - thirdChar_recordedPlayerPronoun == ():
@@ -46,6 +55,8 @@
                 {charTag(ThirdCharacter, "neutral")}:           Prima ti hanno chiamato {player_name}, e ho sentito che sei una persona non binaria.
                 }
                 }   
+        
+        
         {
         - thirdChar_recordedPlayerPronoun == him:
         {charTag(ThirdCharacter, "neutral")}:                   Te la posso dire una cosa?
