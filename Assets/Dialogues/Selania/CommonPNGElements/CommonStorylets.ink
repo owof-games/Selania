@@ -1517,7 +1517,7 @@
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:                           {player_name}, te che stai fuori da queste cose tra donne e uomini, falla ragionare!
                 }                                                                
-                                                                                Diglielo che sono un bravo ragazzo.
+        {charTag(ThirdCharacter, "neutral")}:                                   Diglielo che sono un bravo ragazzo.
                                                                                 Un coglione magari, ma bravo.
 
         //In una delle risposte lui dice che "loro" però se ne possono andare e ricominciare, mentre gli uomini no.

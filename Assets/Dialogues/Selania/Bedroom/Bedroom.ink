@@ -83,7 +83,7 @@
     - (top3)
     {charTag(TheWitch, witch_state())}:                                 <i>Il viaggio sta per iniziare.
                                                                         <i>Che modalità di gioco vuoi attivare?
-                                                                        <i>La modalità <i>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
+                                                                        <i>La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
                                                                         <i>La modalità <b>Gamer Mode</b> è pensata per chi preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. L'esperienza è più facile rispetto al Reader Mode.
 
         //Aggiungere spiegazione delle due modalità per il testing

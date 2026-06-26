@@ -110,10 +110,10 @@
                 - tutorial_carlaRereadingStorylet.top2 && grimoire_appendices hasnt tutorialRereading:
                         ~ grimoire_appendices += tutorialRereading
         }
-        {
-                - tutorial_carlaInterfaceStorylets.top2 && grimoire_appendices hasnt tutorialInterface:
-                        ~ grimoire_appendices += tutorialInterface
-        }
+        // {
+        //         - tutorial_carlaInterfaceStorylets.top2 && grimoire_appendices hasnt tutorialInterface:
+        //                 ~ grimoire_appendices += tutorialInterface
+        // }
         {
                 - tutorial_carlaGrimoireStorylet.top2 && grimoire_appendices hasnt tutorialGrimoire:
                         ~ grimoire_appendices += tutorialGrimoire

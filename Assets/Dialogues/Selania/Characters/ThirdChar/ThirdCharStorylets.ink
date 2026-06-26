@@ -20,7 +20,7 @@
                 //Commento diverso a seconda che sia il primo storylet con noi, o se invece ha assistito ad altri storylets.
                 {
                 - thirdChar_recordedPlayerPronoun != ():
-                {charTag(PG, "neutral")}:                       Immagina: arrivo qui e la prima cosa che penso qual è?
+                {charTag(ThirdCharacter, "neutral")}:            Immagina: arrivo qui e la prima cosa che penso qual è?
                 {charTag(ThirdCharacter, "jester")}:            <i>No, questo non è proprio il frigo.</i>
 
                 - else:  
@@ -77,6 +77,11 @@
         {charTag(ThirdCharacter, "bored")}:                     Zero proprio!
         {charTag(ThirdCharacter, "neutral")}:                   Però posso spaccarti un po' di legna se serve!
         {charTag(ThirdCharacter, "jester")}:                    O difenderti dagli orsi!
+                {
+                - are_two_entities_together(FifthCharacter, PG):
+                {charTag(FifthCharacter, "sad")}:               Orsi?
+                                                                Ci sono degli orsi?!?!?
+                }
 
         - thirdChar_recordedPlayerPronoun == they:
         {charTag(ThirdCharacter, "neutral")}:                   Te lo dico già ora: supporto tantissimo tutto e tutti.
@@ -94,7 +99,7 @@
                 {charTag(SecondCharacter, "energy")}:           Anche se non la conoscevo la parola <i>boccale</i> e l'ho chiamato bicchiere!
                                                                 Ora conosco una parola nuova!
                 }
-                                                                Ho cercato il mio riflesso.
+        {charTag(ThirdCharacter, "neutral")}:                   Ho cercato il mio riflesso.
         {charTag(ThirdCharacter, "bored")}:                     Un po' ci sono rimasto male: tutte quelle ore spese in palestra e nessuno le vedrà!
         {charTag(ThirdCharacter, "jester")}:                    Detto tra noi, le ore sono state due.
         {charTag(ThirdCharacter, "bored")}:                     Tre se contiamo il tempo dell'iscrizione.
@@ -156,6 +161,12 @@
                                                                 Che non è roba da poco.
         {charTag(ThirdCharacter, "bored")}:                     In birreria vedi tanta di quella gente che non doveva proprio diventare genitore.
         {charTag(ThirdCharacter, "angry")}:                     E invece chi vorrebbe, zero.
+                {
+                - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "angry")}:            Non è che <i>c'ho la fissa</i>.
+                {charTag(SecondCharacter, "neutral")}:          Mi piacciono.
+                                                                E sono importanti!
+                }
         
         + \ {charTag(PG, "neutral")}:                           {charNameFive} sistema le cose rotte.
                 -> glyph_choice_manager(false, fireC)-> 
@@ -234,7 +245,7 @@
                 {charTag(ThirdCharacter, "jester")}:            Si fa per dire, zia!
                 {charTag(FifthCharacter, "sorry")}:             Scusa, è che non voglio che pensi male di noi.     
                 }
-                                                                Anche se avrei preferito passare la giornata a sistemare la formazione del fantacalcio.
+        {charTag(ThirdCharacter, "neutral")}:                   Anche se avrei preferito passare la giornata a sistemare la formazione del fantacalcio.
                                                                 Che Calhanoglu si è infortunato.
         {charTag(ThirdCharacter, "bored")}:                     Di nuovo.
                                                                     
@@ -490,7 +501,7 @@
                 {charTag(ThirdCharacter, "melanchonic")}:       Uno può fare il deficiente e comunque stare male no?
                 {charTag(ThirdCharacter, "bored")}:             Non è che si deve far vedere proprio tutto quando si è con gli altri.
                 }                                                      
-                                                                Le persone non si fanno mai i cazzi propri.
+        {charTag(ThirdCharacter, "bored")}:                     Le persone non si fanno mai i cazzi propri.
                                                                         //Check parolacce da parte di Mentore
                                                                         ~ fifthChar_slurDetectorFunction()                                                        
         {charTag(ThirdCharacter, "neutral")}:                   Con le turiste non c'è tutta 'sta fatica poi, alla fine arrivano qui e vogliono solo sfasciarsi di birra, e a quel punto non gli importa di nulla.
@@ -667,9 +678,9 @@
                                                 
                 - else:
                 {charTag(ThirdCharacter, "neutral")}:           Le relazioni sono strane, vero?
-                {charTag(ThirdCharacter, "jester")}:            E soprattutto <b>voi</b> siet{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}} stran{thirdChar_recordedPlayerPronoun has him:o|{thirdChar_recordedPlayerPronoun has her:a|ə}}.
+                {charTag(ThirdCharacter, "jester")}:            E soprattutto <b>voi</b> siete strane.
                 }                                                     
-                                                                Il Giova va avanti a start up o robe del genere.
+        {charTag(ThirdCharacter, "neutral")}:                   Il Giova va avanti a start up o robe del genere.
         {charTag(ThirdCharacter, "jester")}:                    Io non credo che nessuno abbia capito che diavolo faccia di lavoro, manco lui.
                                                                 Il Poggi diceva sempre che Giova gareggia in uno sport tutto suo e comunque arriva sempre secondo.
         {charTag(ThirdCharacter, "neutral")}:                   Ma c'ha la famiglia ricca quindi beato lui.
@@ -993,7 +1004,7 @@
                 - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "sad")}:               No no no cosa dici?  
                 }  
-                                                                Vabbè, per ora reggiamo il gioco.
+        {charTag(ThirdCharacter, "neutral")}:                   Vabbè, per ora reggiamo il gioco.
                                                                 {charNameFive} dice che spesso i problemi sono in famiglia.
                                                                 E magari c'ha pure ragione.
         {charTag(ThirdCharacter, "jester")}:                    Ora non ci crederai vedendo questo popo' di figo.

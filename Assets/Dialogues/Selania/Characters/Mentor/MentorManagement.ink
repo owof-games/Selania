@@ -152,12 +152,12 @@
     - 5:
     {charTag(FifthCharacter, "sad")}:           Mi arrendo.
                                                 Mi arrendo.
-                                                    ~ change_entity_place(FifthCharacter)
+                                                    ~ change_entity_place(Mentor)
         ~  fifthChar_slurDetector ++
     - else:
         //Da qui in avanti Mentore se ne andrà.
         {charTag(FifthCharacter, "bored")}:             {~ Di nuovo!|Un'altra parolaccia.|Non sopporto più questo modo di fare.|Che mancanza di rispetto.}
-                ~ change_entity_place(FifthCharacter)
+                ~ change_entity_place(Mentor)
                 ~  fifthChar_slurDetector ++
 
 }

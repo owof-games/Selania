@@ -11,10 +11,10 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_first_char_text_gift != "":
-            Regalale <b>{frog_first_char_text_gift}</b>.
+            Regalale <b>{frog_first_char_text_gift}</b>
 
         - frog_first_char_object_gift != () && firstChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_first_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_first_char_object_gift)}</b>
 
         - firstChar_giftedObject != ():
             Le hai regalato <b>{ingredientTranslator(firstChar_giftedObject)}</b>.
@@ -23,10 +23,10 @@
     
     {
         - frog_first_char_text_ingredient != "":
-            In cucina aggiungi <b>{frog_first_char_text_ingredient}</b>.
+            In cucina aggiungi <b>{frog_first_char_text_ingredient}</b>
         
         - frog_first_char_object_ingredient != () && kitchen_firstCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_first_char_object_ingredient)}</b>.
+            In cucina aggiungi <b>{ingredientTranslator(frog_first_char_object_ingredient)}</b>
 
         - kitchen_firstCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_firstCharExtraIngredient)}</b>.    
@@ -76,7 +76,7 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_second_char_text_gift != "":
-            Regalagli <b>{frog_second_char_text_gift}</b>.
+            Regalagli <b>{frog_second_char_text_gift}</b>
 
         - frog_second_char_object_gift != () && secondChar_giftedObject == ():
             Regalagli <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
@@ -88,7 +88,7 @@
     
     {
         - frog_second_char_text_ingredient != "":
-            In cucina aggiungi <b>{frog_second_char_text_ingredient}</b>.
+            In cucina aggiungi <b>{frog_second_char_text_ingredient}</b>
         
         - frog_second_char_object_ingredient != () && kitchen_secondCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_second_char_object_ingredient)}</b>.
@@ -142,7 +142,7 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_third_char_text_gift != "":
-            Regalagli <b>{frog_third_char_text_gift}</b>.
+            Regalagli <b>{frog_third_char_text_gift}</b>
 
         - frog_third_char_object_gift != () && thirdChar_giftedObject == ():
             Regalagli <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
@@ -154,7 +154,7 @@
     
     {
         - frog_third_char_text_ingredient != "":
-            In cucina aggiungi <b>{frog_third_char_text_ingredient}</b>.
+            In cucina aggiungi <b>{frog_third_char_text_ingredient}</b>
         
         - frog_third_char_object_ingredient != () && kitchen_thirdCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_third_char_object_ingredient)}</b>.
@@ -206,10 +206,10 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_fourth_char_text_gift != "":
-            Regalale <b>{frog_fourth_char_text_gift}</b>.
+            Regalale <b>{frog_fourth_char_text_gift}</b>
 
         - frog_fourth_char_object_gift != () && fourthChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_fourth_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_fourth_char_object_gift)}</b>
 
         - fourthChar_giftedObject != ():
             Le hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
@@ -218,10 +218,10 @@
     
     {
         - frog_fourth_char_text_ingredient != "":
-            In cucina aggiungi <b>{frog_fourth_char_text_ingredient}</b>.
+            In cucina aggiungi <b>{frog_fourth_char_text_ingredient}</b>
         
         - frog_fourth_char_object_ingredient != () && kitchen_fourthCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_object_ingredient)}</b>.
+            In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_object_ingredient)}</b>
 
         - kitchen_fourthCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fourthCharExtraIngredient)}</b>.    
@@ -271,10 +271,10 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_fifth_char_text_gift != "":
-            Regalale <b>{frog_fifth_char_text_gift}</b>.
+            Regalale <b>{frog_fifth_char_text_gift}</b>
 
         - frog_fifth_char_object_gift != () && fifthChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_fifth_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_fifth_char_object_gift)}</b>
 
         - fifthChar_giftedObject != ():
             Le hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
@@ -283,10 +283,10 @@
     
     {
         - frog_fifth_char_text_ingredient != "":
-            In cucina aggiungi <b>{frog_fifth_char_text_ingredient}</b>.
+            In cucina aggiungi <b>{frog_fifth_char_text_ingredient}</b>
         
         - frog_fifth_char_object_ingredient != () && kitchen_fifthCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_object_ingredient)}</b>.
+            In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_object_ingredient)}</b>
 
         - kitchen_fifthCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fifthCharExtraIngredient)}</b>.    

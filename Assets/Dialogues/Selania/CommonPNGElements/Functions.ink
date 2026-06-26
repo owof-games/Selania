@@ -1066,7 +1066,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - third_char_first_rewriting.close && grimoire_thirdChar hasnt grimThirdCharFirstRewriting:
                 ~ grimoire_thirdChar += grimThirdCharFirstRewriting
                 //per addressare la cosa a mentore
-                ~ player_somethingStrange += strangeBoccale
+                ~ player_somethingStrangeTalkable += strangeBoccale
         }       
 
         {

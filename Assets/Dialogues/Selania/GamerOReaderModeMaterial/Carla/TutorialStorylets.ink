@@ -270,7 +270,7 @@
         - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
             {charTag(Carla, "bored")}:                  Ripeterò le cose esattamente come la prima volta, voglio brucare in santa pace.
     }
-    {charTag(Carla, "bored")}:                          Sono Carla, e prima di entrare in Selanìa devo dirle cinque cose su come muoversi in questi luoghi.
+    {charTag(Carla, "bored")}:                          Sono Carla, e sono qui perché devo dirle cinque cose su come muoversi in questi luoghi.
     - (nameDiscovered)
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialInterface:
@@ -283,7 +283,7 @@
     {charTag(Carla, "sad")}:                            Iniziamo?
         + \ {charTag(PG, "neutral")}:                   Non vedo l'ora.
             {charTag(Carla, "neutral")}:                Buffo.
-            {charTag(Carla, "bored")}:                  Io non vedo l'ora che finisca il mio turno.
+            {charTag(Carla, "bored")}:                  Io invece non vedo l'ora di andare in pensione.
         + \ {charTag(PG, "neutral")}:                   So già tutto, grazie.
             {charTag(Carla, "bored")}:                  Allora mi spieghi perché a sessant'anni sono ancora in questo ufficio.
             {charTag(Carla, "neutral")}:                Buona continuazione.
@@ -323,7 +323,7 @@
         @sprite:tutorial_carlaInterfaceStorylets_3
 
                                                     Cos'è un cursore?
-    {charTag(Carla, "bored")}:                      Se se lo chiede, forse ha sbagliato lavoro.
+    {charTag(Carla, "bored")}:                      Se lo chiede, forse ha sbagliato lavoro.
     {charTag(Carla, "neutral")}:                    Terza informazione: in camera troverà un citofono.
                                                     Lo può usare per modificare le impostazioni.
                                                     Una volta che sarà implementato e sì, anche quello non è a carico mio.

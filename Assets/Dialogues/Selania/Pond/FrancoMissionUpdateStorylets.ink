@@ -205,7 +205,7 @@
         {charTag(Franco, "question")}:              Vediamo vediamo vediamo.
         {charTag(Franco, "neutral")}:               Interessante.
                                                     Ho dimenticato di ordinare del punteruolo.
-                                                    Devo assolutamente passare a prenderlo da qualche parte, prima che Tullio se ne accorga.
+                                                    Devo assolutamente passare a prenderlo dal fiorista prima che Tullio se ne accorga.
         {charTag(Franco, "party")}:                 Ehi, {player_name}!
         {charTag(Franco, "neutral")}:               Mi diceva zio Gracco che hai trovato un libro.
                                                     E che l'hai letto molto.

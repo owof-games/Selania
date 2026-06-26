@@ -203,7 +203,7 @@
                         - tutorial_MentorTutorial == true && tutorial_CarlaTutorial == true:   
                             {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
                                                                                 Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
-                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}.
                                     {
                                     - are_two_entities_together(Mentor,PG):
                                     {charTag(FifthCharacter, "neutral")}:       Sono io quella con due spiegazioni da darti, {player_name}!
@@ -219,7 +219,7 @@
                         - tutorial_MentorTutorial == true:
                             {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
                                                                                 Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
-                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}.
                                     {
                                     - are_two_entities_together(Mentor,PG):
                                     {charTag(FifthCharacter, "neutral")}:       Sono io quella con due spiegazioni da darti, {player_name}!
@@ -229,7 +229,7 @@
                         - tutorial_CarlaTutorial == true:
                             {charTag(ThirdCharacter, "jester")}:                Uh, ma allora siamo già in una storia seria {player_name}!
                                                                                 Ma prima c'è qualcuno che deve darti due dritte su come funziona un regalo.
-                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}
+                                                                                Ti aspetterò qui tutto carico, {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}}.
          
                                     {
                                     - are_two_entities_together(Carla,PG):
