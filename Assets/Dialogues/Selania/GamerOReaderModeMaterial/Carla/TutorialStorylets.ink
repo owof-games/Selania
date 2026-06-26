@@ -499,7 +499,7 @@
         + \ {charTag(PG, "neutral")}:           Osserva il soffitto, il cervello vuoto.
         -
     {charTag(Carla, "neutral")}:                <i>La busta paga di Carla...</i>
-        + \ {charTag(PG, "neutral")}:           Non aumenta dal 1976.
+        + \ {charTag(PG, "neutral")}:           Non aumenta dal 1974.
         + \ {charTag(PG, "neutral")}:           È stata accreditata per sbaglio a quel deficiente dell'ufficio Parcheggi e Paracadute.
         -
     {charTag(TheWitch, witch_state())}:         <i>Non abbiamo trovato molto di mistico in questa conversazione.</i>    

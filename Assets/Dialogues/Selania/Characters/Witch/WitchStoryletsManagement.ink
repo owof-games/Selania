@@ -9,9 +9,17 @@
         - are_two_entities_together (ThirdCharacter, PG) && are_two_entities_together(TheWitch, PG) && grimoire_thirdChar hasnt grimWitchThirdChar:
             -> the_witch_and_the_men
         
+        
         //Gli storylets sopra devono comparire a prescindere dalla pausa, poi è la pausa a dettare se gli altri ci saranno o meno
         -  witch_pauseTalking > 0:
             -> descriptions
+
+        //Tutorials
+        - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && grimoire_witch has grimWitchIntro && grimoire_fifthChar has grimMentorIntro && grimoire_witch hasnt grimChoicesWitch:
+            -> tutorial_witchRelationship
+
+        - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && player_accessiblePlaces has Nest && grimoire_witch has grimChoicesWitch && grimoire_witch hasnt grimSigilsWitch:
+            -> tutorial_witchSigils    
 
         //Feedback post riscrittura
         - grimoire_witch has grimWitchIntro && LIST_COUNT(story_endedStories) > 0 && grimoire_witch hasnt grimWitchFirstDebrief:

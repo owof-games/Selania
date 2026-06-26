@@ -16,7 +16,7 @@
         VAR firstChar_delay = 2
         VAR secondChar_delay= 2
         VAR thirdChar_delay = 4
-        VAR openingKitchen_delay = 4
+        VAR openingKitchen_delay = 5
         VAR openingLibrary_delay = 6
         VAR openingNest_delay = 8
         VAR openingPlacesPause = 0

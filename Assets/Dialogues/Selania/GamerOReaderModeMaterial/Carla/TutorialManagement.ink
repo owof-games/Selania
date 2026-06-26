@@ -142,14 +142,5 @@ VAR tutorial_CarlaInkIndicator = ink_empty
     }
 
 
-//E uno per la strega
-{
-    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && grimoire_witch has grimWitchIntro && grimoire_fifthChar has grimMentorIntro && grimoire_witch hasnt grimChoicesWitch:
-        -> tutorial_witchRelationship
-
-    - are_two_entities_together(TheWitch, PG) && entity_location(PG) == Dump && player_accessiblePlaces has Nest && grimoire_witch has grimChoicesWitch && grimoire_witch hasnt grimSigilsWitch:
-        -> tutorial_witchSigils
-
-}
 
 ->->
