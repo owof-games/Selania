@@ -10,10 +10,10 @@
     
     //Aggiorniamo lo stato delle varie commissioni
         ~ franco_missionsStateUpdater()
+    
     //E quello dei doni
         ~ franco_giftsStateUpdater()
 
-        
 
     {//Discrepanza tra dono a Boccale e sua reazione
         
@@ -47,9 +47,9 @@
     }
 
 
-    //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle commissioni in corso, concluse o meno che siano
-        -> franco_storyletsManagement ->
-    //Se supero anche questo nodo, significa che non ho commissioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova commissione
+    // //Vediamo poi se ci sono degli storylets speciali o dei commenti sulle commissioni in corso, concluse o meno che siano
+    //     -> franco_storyletsManagement ->
+    // //Se supero anche questo nodo, significa che non ho commissioni in corso e non ne ho concluse, per cui arrivano i saluti generali e poi la proposta di una nuova commissione
 
 
 - (top)
@@ -79,8 +79,13 @@
         
     + {entity_location(PG) == Pond && frog_currentMission == ()} \ {charTag(PG, "neutral")}:         Franco, {dimmi cosa devo fare.|hai qualcosa da farmi fare?}
 
-        //Prima di tutto: check stanchezza!
-        -> tired_frog
+        //Partiamo con un check di sicurezza per vedere se sono già state completate delle missioni   
+            ~ franco_missionsStateUpdater()
+            -> franco_storyletsManagement ->
+
+        //Poi:check stanchezza!
+            -> tired_frog
+
         //Se passato, controllo la disponibilità dei regali.
 
         

@@ -36,7 +36,7 @@
                 -> tutorial_carlaInterfaceStorylets -> questions_Carla.top
         
         //Cose varie di testing 
-        + {!debug_stochastic} \ {charTag(PG, "neutral")}:                                                               Mi farebbe sfogliare il grimorio? (solo per test ink!)
+        + \ {charTag(PG, "neutral")}:                                                                                   Mi farebbe sfogliare il grimorio? (solo per test ink!)
                 -> grimoire -> questions_Carla.top     
 
         

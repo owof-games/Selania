@@ -26,10 +26,39 @@
             ~ frog_updatedMissions += missionFour
 
     }
+        //Check per semplificare la verifica della quinta missione
+        ~ temp fiveMissionTrue = false
+        {
+            - grimoire_firstChar has grimFirstSecondChar:
+                ~ fiveMissionTrue = true
+            - grimoire_firstChar has grimFirstThirdChar:
+                ~ fiveMissionTrue = true
+            - grimoire_firstChar has grimFirstCharMentor:
+                ~ fiveMissionTrue = true
+            - grimoire_secondChar has grimSecondCharMentorOne:
+                ~ fiveMissionTrue = true
+            - grimoire_secondChar has grimSecondCharMentorPeace:
+                ~ fiveMissionTrue = true
+            - grimoire_secondChar has grimSecondThirdChar:
+                ~ fiveMissionTrue = true 
+            - grimoire_thirdChar has grimThirdCharMentor:
+                ~ fiveMissionTrue = true 
+            - grimoire_fourthChar has grimFourthFifthChar:
+                ~ fiveMissionTrue = true 
+            - grimoire_thirdChar has grimThirdCharFranco:
+                ~ fiveMissionTrue = true 
+            - grimoire_secondChar has grimSecondCharFranco:
+                ~ fiveMissionTrue = true
+            - grimoire_firstChar has grimFirstCharFranco:
+                ~ fiveMissionTrue = true
+            - else:
+                ~ fiveMissionTrue = false                               
+
+        }
 
     {
         //Quinta commissione: assistere a una conversazione a due.
-        - (grimoire_firstChar has grimFirstSecondChar) or (grimoire_firstChar has grimFirstThirdChar) or (grimoire_firstChar has grimFirstCharMentor) or (grimoire_secondChar has grimSecondCharMentorOne) or (grimoire_secondChar has grimSecondCharMentorPeace) or (grimoire_secondChar has grimSecondThirdChar) or (grimoire_thirdChar has grimThirdCharMentor) or (grimoire_fourthChar has grimFourthFifthChar) or (grimoire_thirdChar has grimThirdCharFranco)  or (grimoire_secondChar has grimSecondCharFranco) or (grimoire_firstChar has grimFirstCharFranco) && frog_allMissionsCompleted hasnt missionFive:
+        -   fiveMissionTrue == true && frog_allMissionsCompleted hasnt missionFive:
             ~ frog_updatedMissions += missionFive
 
     }

@@ -118,7 +118,7 @@
                 -> glyph_choice_manager(true, fireC)->
                 ~ witch_actualName += Fiamma
             - (nameChosen)
-                                                                    <i>E {witch_actualName} saremo.
+            {charTag(TheWitch, witch_state())}:                     <i>E {witch_actualName} saremo.
                                                                     <i>Ora altre voci ci chiamano, ma aspetteremo {player_name} per quando ne avrà bisogno.
     
             -> witch_closing_storylet ->

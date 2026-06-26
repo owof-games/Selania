@@ -50,13 +50,13 @@
                 -> kitchen_moon_feedback -> 
                 -> third_theme
                 
-        + {grimoire_thirdChar has grimThirdCharTwo}\ {charTag(PG, "neutral")}:          Di ragazze.
+        + {grimoire_thirdChar has grimThirdCharTwo && thirdChar_recordedPlayerPronoun == him}\ {charTag(PG, "neutral")}:          Di ragazze.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(ThirdCharacter)
                 -> kitchen_moon_feedback -> 
                 -> second_theme
   
-        + {grimoire_thirdChar has grimThirdCharThree}\ {charTag(PG, "neutral")}:        Di calcio.
+        + {grimoire_thirdChar has grimThirdCharThree && thirdChar_recordedPlayerPronoun == him}\ {charTag(PG, "neutral")}:        Di calcio.
                 ~ cooking_animations_on()
                 ~ storage_glyphs(ThirdCharacter)
                 -> kitchen_moon_feedback -> 

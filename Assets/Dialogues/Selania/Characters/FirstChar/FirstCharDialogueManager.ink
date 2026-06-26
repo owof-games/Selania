@@ -301,7 +301,7 @@
                             ->main
 
                     - kitchen_thirdCharIsCooking:
-                        {charTag(FirstCharacter, "annoyed")}:           Mi farebbe piacere ama, ma c'è {charNameThree} a fare non so cosa.
+                        {charTag(FirstCharacter, "annoyed")}:           Mi farebbe piacere ama, ma c'è {charNameThree} a cucinare qualche schifezza.
                             ->main        
 
                     - contentsKitchen has Franco:
