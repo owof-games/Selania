@@ -9,16 +9,16 @@
 
 
     {
-        - frog_first_char_gift != "" && firstChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_first_char_gift)}</b>.
+        - frog_first_char_object_gift != () && firstChar_giftedObject == ():
+            Regalale <b>{ingredientTranslator(frog_first_char_object_gift)}</b>.
 
         - firstChar_giftedObject != ():
             Le hai regalato <b>{ingredientTranslator(firstChar_giftedObject)}</b>.
     }
     
     {
-        - frog_first_char_ingredient != "" && kitchen_firstCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_first_char_ingredient)}</b>.
+        - frog_first_char_object_ingredient != () && kitchen_firstCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_first_char_object_ingredient)}</b>.
 
         - kitchen_firstCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_firstCharExtraIngredient)}</b>.    
@@ -66,16 +66,16 @@
 
 
     {
-        - frog_second_char_gift != "" && secondChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_second_char_gift)}</b>.
+        - frog_second_char_object_gift != () && secondChar_giftedObject == ():
+            Regalagli <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
 
         - secondChar_giftedObject != ():
             Gli hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
     }
     
     {
-        - frog_second_char_ingredient != "" && kitchen_secondCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_second_char_ingredient)}</b>.
+        - frog_second_char_object_ingredient != () && kitchen_secondCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_second_char_object_ingredient)}</b>.
 
         - kitchen_secondCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_secondCharExtraIngredient)}</b>.    
@@ -124,16 +124,16 @@
 
 
     {
-        - frog_third_char_gift != () && thirdChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_third_char_gift)}</b>.
+        - frog_third_char_object_gift != () && thirdChar_giftedObject == ():
+            Regalagli <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
 
         - thirdChar_giftedObject != ():
             Gli hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
     }
     
     {
-        - frog_third_char_ingredient != () && kitchen_thirdCharExtraIngredient == ():
-            In cucina aggiungi <b>{ingredientTranslator(frog_third_char_ingredient)}</b>.
+        - frog_third_char_object_ingredient != () && kitchen_thirdCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_third_char_object_ingredient)}</b>.
 
         - kitchen_thirdCharExtraIngredient != ():
             In cucina hai aggiunto <b>{ingredientTranslator(kitchen_thirdCharExtraIngredient)}</b>.    
@@ -180,29 +180,29 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    // {
-    //     - frog_fourth_char_gift != "" && fourthChar_giftedObject == ():
-    //         Regalale <b>{ingredientTranslator(frog_fourth_char_gift)}</b>.
+    {
+        - frog_fourth_char_object_gift != () && fourthChar_giftedObject == ():
+            Regalagli <b>{ingredientTranslator(frog_fourth_char_object_gift)}</b>.
 
-    //     - fourthChar_giftedObject != ():
-    //         Le hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
-    // }
+        - fourthChar_giftedObject != ():
+            Gli hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
+    }
     
-    // {
-    //     - frog_fourth_char_ingredient != "" && kitchen_fourthCharExtraIngredient == ():
-    //         In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_ingredient)}</b>.
+    {
+        - frog_fourth_char_object_ingredient != () && kitchen_fourthCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_object_ingredient)}</b>.
 
-    //     - kitchen_fourthCharExtraIngredient != ():
-    //         In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fourthCharExtraIngredient)}</b>.    
-    // }
+        - kitchen_fourthCharExtraIngredient != ():
+            In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fourthCharExtraIngredient)}</b>.    
+    }
     
-    // {
-    //     - frog_fourth_novel != "" && grimoire_fourthChar hasnt grimFourthCharNovel:
-    //         Il suo racconto preferito è {frog_fourth_novel}.
+    {
+        - frog_fourth_novel != "" && grimoire_fourthChar hasnt grimFourthCharNovel:
+            Il suo racconto preferito è {frog_fourth_novel}.
 
-    //     -  grimoire_fourthChar has grimFourthCharNovel:
-    //         Il suo racconto preferito è <b>Fuochino</b> di Cecilia Formicola.
-    // }
+        -  grimoire_fourthChar has grimFourthCharNovel:
+            Il suo racconto preferito è <b>Polvere</b> di Maura.
+    }
     
 
 
@@ -238,31 +238,30 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
 
-    // {
-    //     - frog_fifth_char_gift != "" && fifthChar_giftedObject == ():
-    //         Regalale <b>{ingredientTranslator(frog_fifth_char_gift)}</b>.
+    {
+        - frog_fifth_char_object_gift != () && fifthChar_giftedObject == ():
+            Regalagli <b>{ingredientTranslator(frog_fifth_char_object_gift)}</b>.
 
-    //     - fifthChar_giftedObject != ():
-    //         Le hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
-    // }
+        - fifthChar_giftedObject != ():
+            Gli hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
+    }
     
-    // {
-    //     - frog_fifth_char_ingredient != "" && kitchen_fifthCharExtraIngredient == ():
-    //         In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_ingredient)}</b>.
+    {
+        - frog_fifth_char_object_ingredient != () && kitchen_fifthCharExtraIngredient == ():
+            In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_object_ingredient)}</b>.
 
-    //     - kitchen_fifthCharExtraIngredient != ():
-    //         In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fifthCharExtraIngredient)}</b>.    
-    // }
+        - kitchen_fifthCharExtraIngredient != ():
+            In cucina hai aggiunto <b>{ingredientTranslator(kitchen_fifthCharExtraIngredient)}</b>.    
+    }
     
-    // {
-    //     - frog_fifth_novel != "" && grimoire_fifthChar hasnt grimFifthCharNovel:
-    //         Il suo racconto preferito è {frog_fifth_novel}.
+    {
+        - frog_fifth_novel != "" && grimoire_fifthChar hasnt grimFifthCharNovel:
+            Il suo racconto preferito è {frog_fifth_novel}.
 
-    //     -  grimoire_fifthChar has grimFifthCharNovel:
-    //         Il suo racconto preferito è <b>Luna vergine</b> di Aza.
-    // }
+        -  grimoire_fifthChar has grimFifthCharNovel:
+            Il suo racconto preferito è <b>Polvere</b> di Maura.
+    }
     
-
 
     + {grimoire_fifthChar != ()}[Conversation]
             -> grimoire_fifth_character_conversation

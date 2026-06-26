@@ -36,15 +36,11 @@
                 -> tutorial_carlaInterfaceStorylets -> questions_Carla.top
         
         //Cose varie di testing 
-        + {!debug_stochastic && !gm_rm_activation.witch.not_ink} \ {charTag(PG, "neutral")}:                           Grimorio (solo per test ink!)
+        + {!debug_stochastic} \ {charTag(PG, "neutral")}:                                                               Mi farebbe sfogliare il grimorio? (solo per test ink!)
                 -> grimoire -> questions_Carla.top     
 
-        + {!debug_stochastic && !gm_rm_activation.witch.not_ink} \ {charTag(PG, "neutral")}:                            Mi sbloccherebbe tutti i sigilli?
-                -> glyph_open_all_sigils ->
-                Fatto.
-                -> questions_Carla.top
         
-        + {!debug_stochastic && !gm_rm_activation.witch.not_ink}\ {charTag(PG, "neutral")}:                             Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
+        + {!debug_stochastic}\ {charTag(PG, "neutral")}:                                                                Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
                 ~ greenhouse_findedCultivables += greenhouse_allCultivables
                 ~ greenhouse_findedCultivables += universalIngredient
                 ~ backpack_findedGifts += greenhouse_allCultivables
