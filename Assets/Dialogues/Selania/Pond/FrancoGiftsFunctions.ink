@@ -444,69 +444,78 @@
 //Check in uscita    
     {
         - PNG == FirstCharacter:
-            ~ frog_first_char_gift = frog_temp_char_gift
-            ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
-            ~ frog_first_char_ingredient = frog_temp_char_ingredient
-            ~ frog_first_char_object_ingredient = frog_temp_object_ingredient
-            ~ frog_first_char_object_gift = frog_temp_object_gift
             {
                 - Location == Kitchen:
+                    ~ frog_first_char_ingredient = frog_temp_char_ingredient
+                    ~ frog_first_char_object_ingredient = frog_temp_object_ingredient
                     ~ frog_firstCharAchievableGifts -= ingredientGift
+                
                 - else:
+                    ~ frog_first_char_gift = frog_temp_char_gift
+                    ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
+                    ~ frog_first_char_object_gift = frog_temp_object_gift
                     ~ frog_firstCharAchievableGifts -= cultivableGift
             }
 
         - PNG == SecondCharacter:
-            ~ frog_second_char_gift = frog_temp_char_gift
-            ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
-            ~ frog_second_char_ingredient = frog_temp_char_ingredient
-            ~ frog_second_char_object_ingredient = frog_temp_object_ingredient
-            ~ frog_second_char_object_gift = frog_temp_object_gift
+            
             {
                 - Location == Kitchen:
+                    ~ frog_second_char_ingredient = frog_temp_char_ingredient
+                    ~ frog_second_char_object_ingredient = frog_temp_object_ingredient
                     ~ frog_secondCharAchievableGifts -= ingredientGift
+                
                 - else:
+                    ~ frog_second_char_gift = frog_temp_char_gift
+                    ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
+                    ~ frog_second_char_object_gift = frog_temp_object_gift
                     ~ frog_secondCharAchievableGifts -= cultivableGift
             }
 
         - PNG == ThirdCharacter:
-            ~ frog_third_char_gift = frog_temp_char_gift
-            ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
-            ~ frog_third_char_ingredient = frog_temp_char_ingredient
-            ~ frog_third_char_object_ingredient = frog_temp_object_ingredient
-            ~ frog_third_char_object_gift = frog_temp_object_gift
+            
             {
                 - Location == Kitchen:
+                    ~ frog_third_char_ingredient = frog_temp_char_ingredient
+                    ~ frog_third_char_object_ingredient = frog_temp_object_ingredient
                     ~ frog_thirdCharAchievableGifts -= ingredientGift
+                
                 - else:
+                    ~ frog_third_char_gift = frog_temp_char_gift
+                    ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
+                    ~ frog_third_char_object_gift = frog_temp_object_gift
                     ~ frog_thirdCharAchievableGifts -= cultivableGift
             }
     
 
         - PNG == FourthCharacter:
-            ~ frog_fourth_char_gift = frog_temp_char_gift
-            ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
-            ~ frog_fourth_char_ingredient = frog_temp_char_ingredient
-            ~ frog_fourth_char_object_ingredient = frog_temp_object_ingredient
-            ~ frog_fourth_char_object_gift = frog_temp_object_gift
+            
             {
                 - Location == Kitchen:
+                    ~ frog_fourth_char_ingredient = frog_temp_char_ingredient
+                    ~ frog_fourth_char_object_ingredient = frog_temp_object_ingredient
                     ~ frog_fourthCharAchievableGifts -= ingredientGift
+                
                 - else:
+                    ~ frog_fourth_char_gift = frog_temp_char_gift
+                    ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
+                    ~ frog_fourth_char_object_gift = frog_temp_object_gift
                     ~ frog_fourthCharAchievableGifts -= cultivableGift
             }
 
 
         - PNG == FifthCharacter:
-            ~ frog_fifth_char_gift = frog_temp_char_gift
-            ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
-            ~ frog_fifth_char_ingredient = frog_temp_char_ingredient
-            ~ frog_fifth_char_object_ingredient = frog_temp_object_ingredient
-            ~ frog_fifth_char_object_gift = frog_temp_object_gift
+            
             {
                 - Location == Kitchen:
+                    ~ frog_fifth_char_ingredient = frog_temp_char_ingredient
+                    ~ frog_fifth_char_object_ingredient = frog_temp_object_ingredient
                     ~ frog_fifthCharAchievableGifts -= ingredientGift
+                
                 - else:
+                    ~ frog_fifth_char_gift = frog_temp_char_gift
+                    ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
+                    ~ frog_fifth_char_object_gift = frog_temp_object_gift
                     ~ frog_fifthCharAchievableGifts -= cultivableGift
             }
                
