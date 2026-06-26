@@ -180,19 +180,14 @@
 === franco_giftsPlants(PNG, Location)
 {debug_frog: passo per franco_giftsPlants}
 //VAR temporanee legate al regalo
-    ~ temp frog_temp_char_gift = ""
     ~ temp frog_temp_temp_growing_gift = false
+
     ~ temp tempChar_favouritesGifts = ()
-    ~ temp frog_temp_object_gift = ()
-
-//VAR temporanea soggetto
     ~ temp speaker = ()
+    ~ temp frog_temp_object = ()
+    ~ temp frog_temp_text = ""
 
-//VAR temporanee cucina
-    ~ temp frog_temp_object_ingredient = ()
-    ~ temp frog_temp_char_ingredient = ""
-
-//questo mi traccia se ho già donato qualcosa in cucina, o direttamente 
+    //Questo mi traccia se ho già usato qualcosa in cucina o è stato donato 
     ~ temp usedGift = ()
 
     //Check preliminare    
@@ -258,84 +253,84 @@
                                                             {charTag(Franco, "party")}:             Forse potrei fiorare i fiori?
 
             }    
-                ~ frog_temp_char_gift = "sta crescendo ora in serra!"
+                ~ frog_temp_text = "sta crescendo ora in serra!"
                 ~ frog_temp_temp_growing_gift = true
-                ~ frog_temp_object_ingredient = greenhouse_chosenCultivable
-                ~ frog_temp_object_gift = greenhouse_chosenCultivable
+                ~ frog_temp_object = greenhouse_chosenCultivable
+        
 
         //Caso due: il dono è nello zaino
         - backpack_findedGifts ^ tempChar_favouritesGifts != ():
             ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
             ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
-            ~ frog_temp_object_ingredient = backGift
-            ~ frog_temp_object_gift = backGift
+            ~ frog_temp_object = backGift
+
             {debug_frog: il dono è nello zaino ed è {backGift}.}
 
             {charTag(Franco, "party")}:                     Girino!
                                                             Sai che hai già la pianta giusta?
             {charTag(Franco, "neutral")}:                   Ti do un indizio.
 
-                //Capire perché aggiorno frog_temp_char_ingredient ora e non guardo in fondo se devo aggiornare ingredient o frog_temp_char_gift. Avendo sotto per ogni PNG una divisione kitchen/else, avrebbe più senso farlo lì
+                //Capire perché aggiorno frog_temp_text ora e non guardo in fondo se devo aggiornare ingredient o frog_temp_char_gift. Avendo sotto per ogni PNG una divisione kitchen/else, avrebbe più senso farlo lì
                 {backGift:
                     - BaccaDellaAddolorata:
                         Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
-                            ~ frog_temp_char_ingredient = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
+                            ~ frog_temp_text = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
 
                     - BarbaDellInciampo:
                         C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve!
-                            ~ frog_temp_char_ingredient = "qualcosa che parla di colpa e responsabilità"
+                            ~ frog_temp_text = "qualcosa che parla di colpa e responsabilità"
 
                     - BastoneDellOzioso:
                         Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
-                            ~ frog_temp_char_ingredient = "qualcosa che parli del viversi le cose per il piacere di farle"
+                            ~ frog_temp_text = "qualcosa che parli del viversi le cose per il piacere di farle"
 
                     - BrinaDellImpossibile: 
                         Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
-                            ~ frog_temp_char_ingredient = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
+                            ~ frog_temp_text = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
 
                     - CantoDelleCompagne:
                         Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
-                             ~ frog_temp_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"    
+                             ~ frog_temp_text = "qualcosa che parli del piacere dello stare con persone amiche"    
 
                     - CardoAspinato:
                         C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella.
-                             ~ frog_temp_char_ingredient = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile." 
+                             ~ frog_temp_text = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile." 
 
                     - EderaDelleAmanti:
                         Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta.
-                             ~ frog_temp_char_ingredient = "qualcosa che parli di piacere, cibo e amore."
+                             ~ frog_temp_text = "qualcosa che parli di piacere, cibo e amore."
 
                     - ErbaLiccia:
                         C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta.
-                             ~ frog_temp_char_ingredient = "qualcosa che colleghi passato, presente e futuro."
+                             ~ frog_temp_text = "qualcosa che colleghi passato, presente e futuro."
 
                     - FalsaPalude:
                         Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa?
-                             ~ frog_temp_char_ingredient = "qualcosa legato alla collettività, al cambiamento senza capi."        
+                             ~ frog_temp_text = "qualcosa legato alla collettività, al cambiamento senza capi."        
 
                     - LanaNotturna:
                         Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando.
-                             ~ frog_temp_char_ingredient = "qualcosa legato al vedere la vita anche quando tutto sembra perduto." 
+                             ~ frog_temp_text = "qualcosa legato al vedere la vita anche quando tutto sembra perduto." 
 
                     - LicheneDegliAbissi:
                         Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
-                            ~ frog_temp_char_ingredient = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
+                            ~ frog_temp_text = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
 
                     - NonTiScordarDiTe: 
                         Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo.
-                             ~ frog_temp_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
+                             ~ frog_temp_text = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
 
                     - Olobino: 
                         C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
-                             ~ frog_temp_char_ingredient = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
+                             ~ frog_temp_text = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
 
                     - Spazzata: 
                         Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
-                             ~ frog_temp_char_ingredient = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
+                             ~ frog_temp_text = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
 
                 }
-                {debug_frog: frog_temp_char_ingredient è {frog_temp_char_ingredient}.}
+                {debug_frog: frog_temp_text è {frog_temp_text}.}
 
 
         //Caso tre: non abbiamo mai trovato il dono
@@ -386,34 +381,35 @@
             }                                                
 
                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
-                ~ frog_temp_object_ingredient = perfectGift
-                ~ frog_temp_object_gift = perfectGift
+                ~ frog_temp_object = perfectGift
+                ~ frog_temp_temp_growing_gift = true
+
             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
 
             {
                 - greenhouse_frog_nextCultivableOne == ():
                     ~ greenhouse_frog_nextCultivableOne = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
                 - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
                     ~ greenhouse_frog_nextCultivableTwo = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
                     
                 - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
                     ~ greenhouse_frog_nextCultivableThree = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
                 - greenhouse_frog_nextCultivableFour == () && greenhouse_frog_nextCultivableThree != ():
                     ~ greenhouse_frog_nextCultivableFour = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
                 - greenhouse_frog_nextCultivableFive == () && greenhouse_frog_nextCultivableFour != ():
                     ~ greenhouse_frog_nextCultivableFive = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
                 
                 - greenhouse_frog_nextCultivableSix == () && greenhouse_frog_nextCultivableFive != ():
                     ~ greenhouse_frog_nextCultivableSix = perfectGift
-                    ~ frog_temp_char_ingredient = "{ingredientTranslator(perfectGift)}"
+                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
             
             
             }
@@ -421,8 +417,7 @@
         - else:
 
             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
-            ~ frog_temp_object_ingredient = perfectGiftTwo
-            ~ frog_temp_object_gift = perfectGiftTwo
+            ~ frog_temp_object = perfectGiftTwo
 
             {charTag(Franco, "party")}:                     Girino!
                                                             Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
@@ -446,14 +441,14 @@
         - PNG == FirstCharacter:
             {
                 - Location == Kitchen:
-                    ~ frog_first_char_ingredient = frog_temp_char_ingredient
-                    ~ frog_first_char_object_ingredient = frog_temp_object_ingredient
+                    ~ frog_first_char_text_ingredient = frog_temp_text
+                    ~ frog_first_char_object_ingredient = frog_temp_object
                     ~ frog_firstCharAchievableGifts -= ingredientGift
                 
                 - else:
-                    ~ frog_first_char_gift = frog_temp_char_gift
+                    ~ frog_first_char_text_gift = frog_temp_text
                     ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_first_char_object_gift = frog_temp_object_gift
+                    ~ frog_first_char_object_gift = frog_temp_object
                     ~ frog_firstCharAchievableGifts -= cultivableGift
             }
 
@@ -461,14 +456,14 @@
             
             {
                 - Location == Kitchen:
-                    ~ frog_second_char_ingredient = frog_temp_char_ingredient
-                    ~ frog_second_char_object_ingredient = frog_temp_object_ingredient
+                    ~ frog_second_char_text_ingredient = frog_temp_text
+                    ~ frog_second_char_object_ingredient = frog_temp_object
                     ~ frog_secondCharAchievableGifts -= ingredientGift
                 
                 - else:
-                    ~ frog_second_char_gift = frog_temp_char_gift
+                    ~ frog_second_char_text_gift = frog_temp_text
                     ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_second_char_object_gift = frog_temp_object_gift
+                    ~ frog_second_char_object_gift = frog_temp_object
                     ~ frog_secondCharAchievableGifts -= cultivableGift
             }
 
@@ -476,14 +471,14 @@
             
             {
                 - Location == Kitchen:
-                    ~ frog_third_char_ingredient = frog_temp_char_ingredient
-                    ~ frog_third_char_object_ingredient = frog_temp_object_ingredient
+                    ~ frog_third_char_text_ingredient = frog_temp_text
+                    ~ frog_third_char_object_ingredient = frog_temp_object
                     ~ frog_thirdCharAchievableGifts -= ingredientGift
                 
                 - else:
-                    ~ frog_third_char_gift = frog_temp_char_gift
+                    ~ frog_third_char_text_gift = frog_temp_text
                     ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_third_char_object_gift = frog_temp_object_gift
+                    ~ frog_third_char_object_gift = frog_temp_object
                     ~ frog_thirdCharAchievableGifts -= cultivableGift
             }
     
@@ -492,14 +487,14 @@
             
             {
                 - Location == Kitchen:
-                    ~ frog_fourth_char_ingredient = frog_temp_char_ingredient
-                    ~ frog_fourth_char_object_ingredient = frog_temp_object_ingredient
+                    ~ frog_fourth_char_text_ingredient = frog_temp_text
+                    ~ frog_fourth_char_object_ingredient = frog_temp_object
                     ~ frog_fourthCharAchievableGifts -= ingredientGift
                 
                 - else:
-                    ~ frog_fourth_char_gift = frog_temp_char_gift
+                    ~ frog_fourth_char_text_gift = frog_temp_text
                     ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_fourth_char_object_gift = frog_temp_object_gift
+                    ~ frog_fourth_char_object_gift = frog_temp_object
                     ~ frog_fourthCharAchievableGifts -= cultivableGift
             }
 
@@ -508,17 +503,16 @@
             
             {
                 - Location == Kitchen:
-                    ~ frog_fifth_char_ingredient = frog_temp_char_ingredient
-                    ~ frog_fifth_char_object_ingredient = frog_temp_object_ingredient
+                    ~ frog_fifth_char_text_ingredient = frog_temp_text
+                    ~ frog_fifth_char_object_ingredient = frog_temp_object
                     ~ frog_fifthCharAchievableGifts -= ingredientGift
                 
                 - else:
-                    ~ frog_fifth_char_gift = frog_temp_char_gift
+                    ~ frog_fifth_char_text_gift = frog_temp_text
                     ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_fifth_char_object_gift = frog_temp_object_gift
+                    ~ frog_fifth_char_object_gift = frog_temp_object
                     ~ frog_fifthCharAchievableGifts -= cultivableGift
-            }
-               
+            } 
 
     }
 

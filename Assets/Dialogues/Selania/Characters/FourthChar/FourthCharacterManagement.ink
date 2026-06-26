@@ -69,7 +69,7 @@
     VAR fourthChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
     VAR fourthChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
     //Dono consigliato dalla rana
-    VAR frog_fourth_char_gift = ""
+    VAR frog_fourth_char_text_gift = ""
     VAR frog_fourth_temp_growing_gift = false
     VAR frog_fourth_char_object_gift = ()
     //Dono effettuato
@@ -96,7 +96,7 @@
         //Ricetta creata
         VAR kitchen_fourthCharRecipe = ""
         //Suggerimento rana
-        VAR frog_fourth_char_ingredient = ""
+        VAR frog_fourth_char_text_ingredient = ""
         VAR frog_fourth_temp_growing_ingredient = false
         VAR frog_fourth_char_object_ingredient = ()
             

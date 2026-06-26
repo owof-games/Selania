@@ -35,7 +35,7 @@
                 {charTag(Carla, "bored")}:           E poi gliel'ha già spiegato anche l'altra collega!
                     {
                     - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "neutral")}:   Per me non è un peso, Carla.
+                    {charTag(FifthCharacter, "neutral")}:   Per me non è un peso, Carla.
                     {charTag(Carla, "bored")}:      Il peso è quest{player_pronoun has him:o|{player_pronoun has her:a|ə}} qui che mi richiede le cose che già sa.                                       
                     }
                 }
@@ -173,7 +173,7 @@
                 {charTag(Carla, "bored")}:              Soprattutto dopo che gliel'ha già spiegato {charNameFive}.
                     {
                     - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "hurry")}:         Di questo passo ti rubo il lavoro, Carla.
+                    {charTag(FifthCharacter, "hurry")}:         Di questo passo ti rubo il lavoro, Carla.
                     {charTag(Carla, "happy")}:          Sarebbe il più bel giorno della mia vita.
                                                         A parte quando mio figlio è scomparso per mezz'ora nel centro commerciale.                                  
                     }
@@ -469,7 +469,7 @@
                                                 Detesto le persone troppo zelanti, mi fanno passare per pigra.
                     {
                     - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "hurry")}:     Non sono zelante, solo mi piace fare le cose per bene.
+                    {charTag(FifthCharacter, "hurry")}:     Non sono zelante, solo mi piace fare le cose per bene.
                     {charTag(Carla, "bored")}:      Che è la definizione di zelante.                                   
                     }                           
                 }

@@ -162,8 +162,8 @@
 
 
     {
-        - frog_third_char_gift != ():
-            Franco ha consigliato a {player_name} di regalare a {charNameThree} <b>{ingredientTranslator(frog_third_char_gift)}</b>.
+        - frog_third_char_text_gift != "":
+            Franco ha consigliato a {player_name} di regalare a {charNameThree} <b>{frog_third_char_text_gift}</b>.
     }
 
 

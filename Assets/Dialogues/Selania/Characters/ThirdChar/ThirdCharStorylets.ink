@@ -103,7 +103,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   O una roba tipo psicologo?
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "hurry")}:                     No, qualcosa di speciale!
+                {charTag(FifthCharacter, "hurry")}:                     No, qualcosa di speciale!
                 }
         {charTag(ThirdCharacter, "bored")}:                     Non me ne avere, ma non mi piace molto il discorso della terapia.
         {charTag(ThirdCharacter, "jester")}:                    Ne ho aiutati di più io al bar ubriachi che qualsiasi strizzacervelli, poco ma sicuro.
@@ -121,8 +121,8 @@
         {charTag(ThirdCharacter, "neutral")}:                   Anche se qui avete tutti un aspetto strano.
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "neutral")}:                   {charNameThree}, il nostro aspetto qui rispecchia le persone che siamo.
-                {charTag(Mentor, "hurry")}:                     Come un fiore che è una stella, una guida.
+                {charTag(FifthCharacter, "neutral")}:                   {charNameThree}, il nostro aspetto qui rispecchia le persone che siamo.
+                {charTag(FifthCharacter, "hurry")}:                     Come un fiore che è una stella, una guida.
                                                                 O un boccale di birra dissetante.
                 }
 
@@ -192,7 +192,7 @@
                                                                 Stronza.
                                 {
                                 - are_two_entities_together(Mentor, PG):
-                                {charTag(Mentor, "sad")}:       Per l'appunto.        
+                                {charTag(FifthCharacter, "sad")}:       Per l'appunto.        
                                 }                                                        
                         }                           
                 - else:
@@ -610,7 +610,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   La zia insiste perché ti parli di me, dice che se sono qui c'è un motivo, qualcosa che mi tormenta.
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "hurry")}:                     È carina questa cosa della zia, ma non sono così vecchia {charNameThree}.
+                {charTag(FifthCharacter, "hurry")}:                     È carina questa cosa della zia, ma non sono così vecchia {charNameThree}.
                 {charTag(ThirdCharacter, "jester")}:            Ma "zia" per me è un segno di rispetto.
                 {charTag(ThirdCharacter, "neutral")}:           Una zia è una che ha avuto una sua vita e che per questo è saggia.
                 {charTag(ThirdCharacter, "jester")}:            E quando sei più giovane ti fa fare le cose che i tuoi genitori non ti farebbero fare.    
@@ -916,7 +916,7 @@
         {charTag(FirstCharacter, "neutral")}:                   Sei qui a raccontare la tua storia da vittima di 'sto cazzo davanti a tutti, per cui un po' diventano anche cazzi miei.
                 {
                 - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "sad")}:                       {charNameOne}, {charNameThree}: siamo qui per stare bene assieme, non per farci del male.
+                {charTag(FifthCharacter, "sad")}:                       {charNameOne}, {charNameThree}: siamo qui per stare bene assieme, non per farci del male.
                 {charTag(ThirdCharacter, "bored")}              Guarda che è questa pazza che ha cominciato a rompere i coglioni!     
                 }
         {charTag(ThirdCharacter, "bored")}:                     Bene {charNameOne}: quando parlerai delle tue paranoie sul lavoro o il moroso o Sborotalco verrò a romperti i coglioni anch'io.

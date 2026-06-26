@@ -1140,9 +1140,9 @@
             {charTag(SecondCharacter, "energy")}:               Però puoi insegnarmi ad arrampicarmi sugli alberi!
                     {
                     - are_two_entities_together(Mentor, PG):
-                    {charTag(Mentor, "neutral")}:               {player_name}: hai il divieto ASSOLUTO di fare questa cosa.
+                    {charTag(FifthCharacter, "neutral")}:               {player_name}: hai il divieto ASSOLUTO di fare questa cosa.
                                                                 AS-SO-LU-TO!
-                    {charTag(Mentor, "sad")}:                   Mi farete venire un infarto, povera me.                                           
+                    {charTag(FifthCharacter, "sad")}:                   Mi farete venire un infarto, povera me.                                           
                     }   
                     
             + (ragione)\ {charTag(PG, "neutral")}:              {charNameTwo}: non devi dare sempre ragione ai grandi!

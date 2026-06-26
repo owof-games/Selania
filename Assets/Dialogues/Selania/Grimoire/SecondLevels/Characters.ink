@@ -9,14 +9,22 @@
 
 
     {
+        //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
+        - frog_first_char_text_gift != "":
+            Regalale <b>{frog_first_char_text_gift}</b>.
+
         - frog_first_char_object_gift != () && firstChar_giftedObject == ():
             Regalale <b>{ingredientTranslator(frog_first_char_object_gift)}</b>.
 
         - firstChar_giftedObject != ():
             Le hai regalato <b>{ingredientTranslator(firstChar_giftedObject)}</b>.
+        
     }
     
     {
+        - frog_first_char_text_ingredient != "":
+            In cucina aggiungi <b>{frog_first_char_text_ingredient}</b>.
+        
         - frog_first_char_object_ingredient != () && kitchen_firstCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_first_char_object_ingredient)}</b>.
 
@@ -66,14 +74,22 @@
 
 
     {
+        //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
+        - frog_second_char_text_gift != "":
+            Regalale <b>{frog_second_char_text_gift}</b>.
+
         - frog_second_char_object_gift != () && secondChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
 
         - secondChar_giftedObject != ():
-            Gli hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
+            Le hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
+        
     }
     
     {
+        - frog_second_char_text_ingredient != "":
+            In cucina aggiungi <b>{frog_second_char_text_ingredient}</b>.
+        
         - frog_second_char_object_ingredient != () && kitchen_secondCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_second_char_object_ingredient)}</b>.
 
@@ -86,7 +102,7 @@
             Il suo racconto preferito è {frog_second_novel}.
 
         -  grimoire_secondChar has grimSecondCharNovel:
-            Il suo racconto preferito è <b>Il sassolino</b> di Lamia
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
     }
     
 
@@ -124,14 +140,22 @@
 
 
     {
+        //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
+        - frog_third_char_text_gift != "":
+            Regalale <b>{frog_third_char_text_gift}</b>.
+
         - frog_third_char_object_gift != () && thirdChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
 
         - thirdChar_giftedObject != ():
-            Gli hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
+            Le hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
+        
     }
     
     {
+        - frog_third_char_text_ingredient != "":
+            In cucina aggiungi <b>{frog_third_char_text_ingredient}</b>.
+        
         - frog_third_char_object_ingredient != () && kitchen_thirdCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_third_char_object_ingredient)}</b>.
 
@@ -144,9 +168,8 @@
             Il suo racconto preferito è {frog_third_novel}.
 
         -  grimoire_thirdChar has grimThirdCharNovel:
-            Il suo racconto preferito è <b>Polvere</b> di Maura.
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
     }
-    
 
 
     + {grimoire_thirdChar != ()}[Conversation]
@@ -181,14 +204,22 @@
 
 
     {
+        //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
+        - frog_fourth_char_text_gift != "":
+            Regalale <b>{frog_fourth_char_text_gift}</b>.
+
         - frog_fourth_char_object_gift != () && fourthChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_fourth_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_fourth_char_object_gift)}</b>.
 
         - fourthChar_giftedObject != ():
-            Gli hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
+            Le hai regalato <b>{ingredientTranslator(fourthChar_giftedObject)}</b>.
+        
     }
     
     {
+        - frog_fourth_char_text_ingredient != "":
+            In cucina aggiungi <b>{frog_fourth_char_text_ingredient}</b>.
+        
         - frog_fourth_char_object_ingredient != () && kitchen_fourthCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_fourth_char_object_ingredient)}</b>.
 
@@ -201,9 +232,8 @@
             Il suo racconto preferito è {frog_fourth_novel}.
 
         -  grimoire_fourthChar has grimFourthCharNovel:
-            Il suo racconto preferito è <b>Polvere</b> di Maura.
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
     }
-    
 
 
     + {grimoire_fourthChar != ()}[Conversation]
@@ -239,14 +269,22 @@
 
 
     {
+        //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
+        - frog_fifth_char_text_gift != "":
+            Regalale <b>{frog_fifth_char_text_gift}</b>.
+
         - frog_fifth_char_object_gift != () && fifthChar_giftedObject == ():
-            Regalagli <b>{ingredientTranslator(frog_fifth_char_object_gift)}</b>.
+            Regalale <b>{ingredientTranslator(frog_fifth_char_object_gift)}</b>.
 
         - fifthChar_giftedObject != ():
-            Gli hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
+            Le hai regalato <b>{ingredientTranslator(fifthChar_giftedObject)}</b>.
+        
     }
     
     {
+        - frog_fifth_char_text_ingredient != "":
+            In cucina aggiungi <b>{frog_fifth_char_text_ingredient}</b>.
+        
         - frog_fifth_char_object_ingredient != () && kitchen_fifthCharExtraIngredient == ():
             In cucina aggiungi <b>{ingredientTranslator(frog_fifth_char_object_ingredient)}</b>.
 
@@ -259,7 +297,7 @@
             Il suo racconto preferito è {frog_fifth_novel}.
 
         -  grimoire_fifthChar has grimFifthCharNovel:
-            Il suo racconto preferito è <b>Polvere</b> di Maura.
+            Il suo racconto preferito è <b>Luna vergine</b> di Aza.
     }
     
 

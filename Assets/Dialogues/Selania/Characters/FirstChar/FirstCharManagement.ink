@@ -69,7 +69,7 @@
     VAR firstChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
     VAR firstChar_goodGifts = (Olobino, LanaNotturna)
     //Dono consigliato dalla rana
-    VAR frog_first_char_gift = ""
+    VAR frog_first_char_text_gift = ""
     VAR frog_first_temp_growing_gift = false
     VAR frog_first_char_object_gift = ()
 
@@ -96,7 +96,7 @@
         //Ricetta creata
         VAR kitchen_firstCharRecipe = ""
         //Suggerimento rana
-        VAR frog_first_char_ingredient = ""
+        VAR frog_first_char_text_ingredient = ""
         VAR frog_first_temp_growing_ingredient = false
             
     //Valore ingredienti

@@ -172,8 +172,8 @@
 
 
     {
-        - frog_second_char_gift != "":
-            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: <b>{ingredientTranslator(frog_second_char_gift)}</b>.
+        - frog_second_char_text_gift != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: <b>{frog_second_char_text_gift}</b>.
 
     }
 

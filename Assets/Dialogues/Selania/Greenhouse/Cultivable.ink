@@ -1077,27 +1077,78 @@
     {charTag(TheWitch, witch_state())}:   <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.
     
     //Questo è un codice che aggiorna le informazioni dei doni date da Franco nel caso in cui al momento del dono l'oggetto fosse in crescita.
-    {
-        - frog_first_temp_growing_gift == true:
-		    ~ frog_first_char_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
-            ~ frog_first_temp_growing_gift = false
-    }
-    {
-        - frog_first_temp_growing_ingredient == true:
-		    ~ frog_first_char_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
-            ~ frog_first_temp_growing_ingredient = false
-    }
-    {
-        - frog_second_temp_growing_gift == true:
-		    ~ frog_second_char_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
-            ~ frog_second_temp_growing_gift = false
-    }
-    {
-        - frog_second_temp_growing_ingredient == true:
-		    ~ frog_second_char_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
-            ~ frog_second_temp_growing_ingredient = false
-    }
     
+    //FIRST CHAR
+        //Dono
+        {
+            - frog_first_temp_growing_gift == true:
+                ~ frog_first_char_text_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_first_temp_growing_gift = false
+        }
+        //Ingrediente
+        {
+            - frog_first_temp_growing_ingredient == true:
+                ~ frog_first_char_text_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_first_temp_growing_ingredient = false
+        }
+
+    //SECOND CHAR
+        //Dono
+        {
+            - frog_second_temp_growing_gift == true:
+                ~ frog_second_char_text_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_second_temp_growing_gift = false
+        }
+        //Ingrediente
+        {
+            - frog_second_temp_growing_ingredient == true:
+                ~ frog_second_char_text_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_second_temp_growing_ingredient = false
+        }
+
+    //THIRD CHAR
+        //Dono
+        {
+            - frog_third_temp_growing_gift == true:
+                ~ frog_third_char_text_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_third_temp_growing_gift = false
+        }
+        //Ingrediente
+        {
+            - frog_third_temp_growing_ingredient == true:
+                ~ frog_third_char_text_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_third_temp_growing_ingredient = false
+        }
+
+    //FOURTH CHAR
+        //Dono
+        {
+            - frog_fourth_temp_growing_gift == true:
+                ~ frog_fourth_char_text_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_fourth_temp_growing_gift = false
+        }
+        //Ingrediente
+        {
+            - frog_fourth_temp_growing_ingredient == true:
+                ~ frog_fourth_char_text_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_fourth_temp_growing_ingredient = false
+        }
+
+    //FIFTH CHAR
+        //Dono
+        {
+            - frog_fifth_temp_growing_gift == true:
+                ~ frog_fifth_char_text_gift = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_fifth_temp_growing_gift = false
+        }
+        //Ingrediente
+        {
+            - frog_fifth_temp_growing_ingredient == true:
+                ~ frog_fifth_char_text_ingredient = "{ingredientTranslator(greenhouse_chosenCultivable)}"
+                ~ frog_fifth_temp_growing_ingredient = false
+        }
+
+
     ~ notification_greenhouseGrownRepropose = true
     ~ backpack_findedGifts += greenhouse_chosenCultivable
     ~ greenhouse_findedCultivables += greenhouse_chosenCultivable

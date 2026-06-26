@@ -96,7 +96,7 @@
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
     VAR secondChar_goodGifts = (Spazzata, NonTiScordarDiTe)
     //Dono consigliato dalla rana
-    VAR frog_second_char_gift = ""
+    VAR frog_second_char_text_gift = ""
     VAR frog_second_temp_growing_gift = false
     VAR frog_second_char_object_gift = ()
     //Dono effettuato
@@ -123,7 +123,7 @@
         //Ricetta creata
         VAR kitchen_secondCharRecipe = ""
         //Suggerimento rana
-        VAR frog_second_char_ingredient = ""
+        VAR frog_second_char_text_ingredient = ""
         VAR frog_second_temp_growing_ingredient = false
         VAR frog_second_char_object_ingredient = ()
             

@@ -166,9 +166,8 @@
 
 
     {
-        - frog_first_char_gift != "":
-            Franco ha consigliato a {player_name} di regalare a {charNameOne} <b>{ingredientTranslator(frog_first_char_gift)}</b>.
-
+        - frog_first_char_text_gift != "":
+            Franco ha consigliato a {player_name} di regalare a {charNameOne} <b>{frog_first_char_text_gift}</b>.
     }
 
 

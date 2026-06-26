@@ -29,7 +29,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   La zia mi adora.
             {
             - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
+            {charTag(FifthCharacter, "hurry")}:                         Sei sfacciato, {charNameThree}!                        
             }   
         {charTag(ThirdCharacter, "neutral")}:                   Per {secondChar_storyStatus == story_storyStarted: fratellino|{charNameTwo}} sono come un secondo fratello.
             {
@@ -106,7 +106,7 @@
             }
             {
             - are_two_entities_together(Mentor, PG):
-            {charTag(Mentor, "sad")}:                           {charNameThree}, sono sicura che {player_name} abbia compreso ciò di cui hai davvero bisogno.
+            {charTag(FifthCharacter, "sad")}:                           {charNameThree}, sono sicura che {player_name} abbia compreso ciò di cui hai davvero bisogno.
                 ~  change_entity_place(Mentor)                          
             }
             {

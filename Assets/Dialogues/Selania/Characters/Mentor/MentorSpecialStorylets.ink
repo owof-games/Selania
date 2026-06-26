@@ -446,7 +446,7 @@
                 -> glyph_choice_manager(Mentor, earthC)->
 
             {charTag(FifthCharacter, "bored")}:                         Essere {player_pronoun has him:riscrittore|{player_pronoun has her:riscrittora|riscrittorə}} chiede empatia, {player_name}.
-            {charTag(Mentor, "sorry")}:                                 Scusa, hai ragione.
+            {charTag(FifthCharacter, "sorry")}:                                 Scusa, hai ragione.
             {charTag(FifthCharacter, "sad")}:                           L'ho ferito, ed è la parte centrale di questa faccenda.
 
             

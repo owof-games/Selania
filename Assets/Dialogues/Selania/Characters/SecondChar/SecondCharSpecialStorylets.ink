@@ -101,7 +101,7 @@
         {charTag(SecondCharacter, "neutral")}:                  Tu e {charNameFive} siete uguali.
             {
             - are_two_entities_together(Mentor, PG):
-                {charTag(Mentor, "neutral")}:                   Non c'è niente di male nel pensare alle cose pratiche, {charNameTwo}.
+                {charTag(FifthCharacter, "neutral")}:                   Non c'è niente di male nel pensare alle cose pratiche, {charNameTwo}.
             }           
         {charTag(SecondCharacter, "neutral")}:                  No, è un posto interessante.
         {charTag(SecondCharacter, "energy")}:                   Ma c'è anche una poltrona!
