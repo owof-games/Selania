@@ -176,9 +176,10 @@
     {
         - are_two_entities_together(entity, PG):
             {
-                - entity_location(PG) == TrainStop:
-                    ~ move_entity(entity, Forest)
+                - entity_location(PG) == Forest:
+                    ~ move_entity(entity, Dump)
+                
                 - else:
-                    ~ move_entity(entity, TrainStop)
+                    ~ move_entity(entity, Forest)
             }
     }      
