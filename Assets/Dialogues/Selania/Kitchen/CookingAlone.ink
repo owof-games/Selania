@@ -379,7 +379,7 @@
                                                                 Mi sa che torno allo stagno, magari Giulio sa come aiutarmi.
         {charTag(Franco, "party")}:                             A dopo!
 
-        @animation:Backpack
+        //@animation:Backpack
                     
         ~ backpack_findedGifts += universalIngredient
         ~ greenhouse_findedCultivables += universalIngredient

@@ -297,7 +297,40 @@
             ~ temp charNameFour = translator(fourthChar_ActualName)
             ~ temp charNameFive = translator(fifthChar_ActualName)
         
+        {
+            - library_readStories has Maura:
+                {charTag(Franco, "party")}:                     Sembra che tu abbia già letto <b>Polvere</b>.
+                    {
+                        - grimoire_thirdChar has grimThirdCharNovel:
+                                                                E che ne avete già parlato con {charNameThree}.
+                        {charTag(Franco, "neutral")}:           Perché non scegli un altro dono?
+                                ~ frog_third_novel = "<b>Polvere</b> di Maura"
+                                    -> franco_giftsManagement.top
+                    
+                        - else:
+                        {charTag(Franco, "neutral")}:           Prova a parlare con lui e sono sicuro che avrà qualcosa da commentare!.
+                        {charTag(Franco, "party")}:             Anche perché è sicuro che ha letto <b>Polvere</b>!
+                        {charTag(Franco, "neutral")}:           L'hanno sentito tutti con quella cosa del licantropo.
+                        {charTag(Franco, "party")}:             Se un licantropo mi morde, divento una rana mannnara?
+                                ~ frog_third_novel = "<b>Polvere</b> di Maura"
+                                ~ frog_thirdCharAchievableGifts -= bookGift
+                                -> closed_exchange
+                    }
 
+            - else:
+                {charTag(Franco, "neutral")}:                   Secondo l'ultime novità in campo editoriale, {charNameThree} è uno che apprezza le cose rapide, e che bruciano.
+                {charTag(Franco, "question")}:                  Che non è una buona idea per un libro.
+                                                                Sapevi che i primi libri sapevano volare?
+                {charTag(Franco, "party")}:                     Si libravano in aria.
+                {charTag(Franco, "neutral")}:                   Ma poi era davvero difficile leggerli mentre si muovevano così tanto.
+                                                                Così cugina Sputt li ha addomesticati.
+                                                                E ora sonnecchiano tutto il giorno nelle biblioteche.
+                                                                Che avevano le teche proprio per non farli scappare.
+                {charTag(Franco, "party")}:                     Hai visto quante cose so?
+                    ~ frog_third_novel = "qualcosa di rapido e che brucia"
+                    ~ frog_thirdCharAchievableGifts -= bookGift
+                        -> closed_exchange
+        }
         -> closed_exchange 
 
 

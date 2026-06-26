@@ -8,10 +8,10 @@
     
 + {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
     
-    //Aggiorniamo lo stato delle varie commissioni
-        ~ franco_missionsStateUpdater()
+    // //Aggiorniamo lo stato delle varie commissioni
+    //     ~ franco_missionsStateUpdater()
     
-    //E quello dei doni
+    //Aggiorniamo lo stato dei doni
         ~ franco_giftsStateUpdater()
 
 

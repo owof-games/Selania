@@ -1072,7 +1072,7 @@
            @animation:Grimoire
     }
 
-    @animation:Backpack
+    //@animation:Backpack
     
     {charTag(TheWitch, witch_state())}:   <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.
     

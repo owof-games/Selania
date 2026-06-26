@@ -76,13 +76,13 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_second_char_text_gift != "":
-            Regalale <b>{frog_second_char_text_gift}</b>.
+            Regalagli <b>{frog_second_char_text_gift}</b>.
 
         - frog_second_char_object_gift != () && secondChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
+            Regalagli <b>{ingredientTranslator(frog_second_char_object_gift)}</b>.
 
         - secondChar_giftedObject != ():
-            Le hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
+            Gli hai regalato <b>{ingredientTranslator(secondChar_giftedObject)}</b>.
         
     }
     
@@ -142,13 +142,13 @@
     {
         //Tipi di informazioni diversificate da dare: quando è in crescita e non sappiamo cos'è, quando l'abbiamo raccolta, quando franco ci ha dato una dritta, quando ci ha dato il nome.
         - frog_third_char_text_gift != "":
-            Regalale <b>{frog_third_char_text_gift}</b>.
+            Regalagli <b>{frog_third_char_text_gift}</b>.
 
         - frog_third_char_object_gift != () && thirdChar_giftedObject == ():
-            Regalale <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
+            Regalagli <b>{ingredientTranslator(frog_third_char_object_gift)}</b>.
 
         - thirdChar_giftedObject != ():
-            Le hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
+            Gli hai regalato <b>{ingredientTranslator(thirdChar_giftedObject)}</b>.
         
     }
     
