@@ -35,22 +35,28 @@
                 ~ fiveMissionTrue = true
             - grimoire_firstChar has grimFirstCharMentor:
                 ~ fiveMissionTrue = true
+            - grimoire_firstChar has grimFirstCharFranco:
+                ~ fiveMissionTrue = true
+
             - grimoire_secondChar has grimSecondCharMentorOne:
                 ~ fiveMissionTrue = true
             - grimoire_secondChar has grimSecondCharMentorPeace:
                 ~ fiveMissionTrue = true
             - grimoire_secondChar has grimSecondThirdChar:
                 ~ fiveMissionTrue = true 
+            - grimoire_secondChar has grimSecondCharFranco:
+                ~ fiveMissionTrue = true
+            - grimoire_secondChar has grimSecondCharCarla:
+                ~ fiveMissionTrue = true     
+
             - grimoire_thirdChar has grimThirdCharMentor:
-                ~ fiveMissionTrue = true 
-            - grimoire_fourthChar has grimFourthFifthChar:
                 ~ fiveMissionTrue = true 
             - grimoire_thirdChar has grimThirdCharFranco:
                 ~ fiveMissionTrue = true 
-            - grimoire_secondChar has grimSecondCharFranco:
+
+            - grimoire_fifthChar has grimMentorFranco:
                 ~ fiveMissionTrue = true
-            - grimoire_firstChar has grimFirstCharFranco:
-                ~ fiveMissionTrue = true
+
             - else:
                 ~ fiveMissionTrue = false                               
 

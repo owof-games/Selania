@@ -39,6 +39,7 @@
                 {debug_frog: rimuovo ingredientGift da frog_thirdCharAchievableGifts.}
     
     }
+TODO: da fare anche per le altre png
 
 //Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
     {
@@ -168,8 +169,26 @@
 
 
     {
-        - (frog_firstCharGiftable == true) or (frog_secondCharGiftable == true) or (frog_thirdCharGiftable == true) or (frog_fourthCharGiftable == true) or (frog_fifthCharGiftable == true) or (frog_sigilGiftable == true) or (frog_cultivableGiftable == true):
+        - frog_firstCharGiftable == true:
             ~ frog_giftability = true
+
+        - frog_secondCharGiftable == true:
+            ~ frog_giftability = true
+
+        - frog_thirdCharGiftable == true:
+            ~ frog_giftability = true
+
+        - frog_fourthCharGiftable == true:
+            ~ frog_giftability = true
+
+        - frog_fifthCharGiftable == true:
+            ~ frog_giftability = true
+
+        - frog_sigilGiftable == true:
+            ~ frog_giftability = true
+
+        - frog_cultivableGiftable == true:
+            ~ frog_giftability = true                        
 
         - else:
             ~ frog_giftability = false    
