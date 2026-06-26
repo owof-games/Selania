@@ -26,6 +26,18 @@
     -> debug_richGrimoire ->
     -> debug_knot
 
++ [Sblocca tutti i sigilli]
+    -> glyph_open_all_sigils
+    -> debug_knot
+
++ [Sblocca tutte le piante]
+    ~ greenhouse_findedCultivables += greenhouse_backupCultivable
+    ~ greenhouse_findedCultivables += universalIngredient
+    ~ backpack_findedGifts += greenhouse_backupCultivable
+    ~ backpack_findedGifts += universalIngredient
+    ~ greenhouse_backupCultivable = ()
+    -> debug_knot
+
 + [Gamer mode]
     //Attivo gli achievements ad hoc
     ~ settings_gamerMode = true
