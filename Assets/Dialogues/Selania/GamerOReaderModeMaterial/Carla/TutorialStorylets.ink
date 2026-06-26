@@ -689,7 +689,7 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 
     {
-    - tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
+    - tutorial_CarlaDiscoveredTutorials hasnt tutorialNest && tutorial_CarlaTutorial == true:
             ~ move_entity(Carla, Nest)
     }
 

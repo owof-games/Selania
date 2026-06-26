@@ -196,7 +196,7 @@
             
             //Parte subito la spiegazione sui sigilli di Carla
             {
-                -  settings_gamerMode == true:
+                -  tutorial_CarlaTutorial == true:
                     ~ move_entity(Carla, Library)
                     -> tutorial_carlaSigilsActivationStorylet
                 - else:

@@ -76,7 +76,7 @@
                 ->->   
 
     //Apertura biblioteca    
-        - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
+        - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharOne && entity_location(PG) == Forest && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
             -> open_the_library
 
     //Invito in biblioteca per aprire il nido

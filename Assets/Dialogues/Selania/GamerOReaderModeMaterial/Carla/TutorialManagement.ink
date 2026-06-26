@@ -64,13 +64,13 @@ VAR tutorial_CarlaInkIndicator = ink_empty
         - are_two_entities_together(PG, Carla) && grimoire_isEnabled == true && tutorial_CarlaDiscoveredTutorials has tutorialGrimoire && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaGrimoireStorylet        
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Greenhouse && tutorial_CarlaDiscoveredTutorials hasnt tutorialGreenhouse && tutorial_CarlaTutorial == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Greenhouse && tutorial_CarlaDiscoveredTutorials hasnt tutorialGreenhouse:
                 -> tutorial_carlaGreenhouseGiftsInkStorylet
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen && tutorial_CarlaTutorial == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen:
                 -> tutorial_carlaKitchenStorylet
 
-        - tutorial_CarlaTutorial == true && entity_location(PG) == Nest && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest && tutorial_CarlaTutorial == true:
+        - tutorial_CarlaTutorial == true && entity_location(PG) == Nest && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
                 -> tutorial_carlaNestStorylet
 
     }

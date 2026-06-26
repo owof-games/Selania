@@ -78,10 +78,10 @@
         + {player_somethingStrangeTalkable != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
             -> little_storylets
 
-        + {grimoire_fifthChar has grimMentorIntro}\ {charTag(PG, "neutral")}:           Mi è scomparso il grimorio, potresti riattivarmelo?
-            ~ grimoire_isEnabled = true
-        {charTag(FifthCharacter, "hurry")}:                                             Fatto.     
-            -> top
+        // + {grimoire_fifthChar has grimMentorIntro}\ {charTag(PG, "neutral")}:           Mi è scomparso il grimorio, potresti riattivarmelo?
+        //     ~ grimoire_isEnabled = true
+        // {charTag(FifthCharacter, "hurry")}:                                             Fatto.     
+        //     -> top
 
         + \ {charTag(PG, "neutral")}:                                                   Ho cambiato idea.
             -> notification_system ->
