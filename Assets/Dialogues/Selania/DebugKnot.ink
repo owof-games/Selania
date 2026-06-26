@@ -18,16 +18,15 @@
     ~ debugRewriting()
    -> debug_knot 
     
-
-+ [Imposta tutto come se fossimo a gioco completo]
-    ~ debug_places_open()
-    ~ grimoire_isEnabled = true
-    ~ debug_allGraphicsElementsEndingMode()
-    -> debug_richGrimoire ->
-    -> debug_knot
+// + [Imposta tutto come se fossimo a gioco completo]
+//     ~ debug_places_open()
+//     ~ grimoire_isEnabled = true
+//     ~ debug_allGraphicsElementsEndingMode()
+//     -> debug_richGrimoire ->
+//     -> debug_knot
 
 + [Sblocca tutti i sigilli]
-    -> glyph_open_all_sigils
+    -> glyph_open_all_sigils ->
     -> debug_knot
 
 + [Sblocca tutte le piante]
