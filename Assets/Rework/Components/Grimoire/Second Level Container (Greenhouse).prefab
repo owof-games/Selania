@@ -2702,7 +2702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5552855265167498588, guid: a39fdde8992f3e04d9ab59b6a4c730a5, type: 3}
       propertyPath: <plantName>k__BackingField
-      value: LaSpazzata
+      value: Spazzata
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
