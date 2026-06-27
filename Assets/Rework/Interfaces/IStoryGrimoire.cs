@@ -199,7 +199,7 @@ namespace Selania.Rework.Interfaces
         ///     Descriptor for the data to show on the first page of the grimoire.
         /// </summary>
         /// <param name="isGamerMode">Whether the page should be displayed in gamer mode.</param>
-        /// <param name="enabledLeftButtonNames">Names of the left buttons enabled.</param>
+        /// <param name="enabledLeftButtonNames">Names of the left buttons enabled, together with a flag indicating whether to show a notification change.</param>
         /// <param name="achievements">
         ///     Descriptors of the achievements; if an achievement is missing, it's supposed to be at value
         ///     0.
@@ -209,7 +209,7 @@ namespace Selania.Rework.Interfaces
         /// <seealso cref="IStoryGrimoire.firstLevelGrimoirePageDescriptors" />
         record FirstLevelGrimoirePageDescriptor(
             bool isGamerMode,
-            IEnumerable<string> enabledLeftButtonNames,
+            IEnumerable<(string, bool)> enabledLeftButtonNames,
             IEnumerable<AchievementDescriptor> achievements,
             string francoMission,
             SigilDescriptor? sigilDescriptor) : BaseNavigationDescriptor(null, null, null, null, null);

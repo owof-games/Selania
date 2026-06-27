@@ -68,12 +68,12 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
         public void TunOnSomeLeftButtons()
         {
             grimoireBackground.DisableAllLeftButtons();
-            grimoireBackground.EnableLeftButton("FirstCharacter", true);
-            grimoireBackground.EnableLeftButton("Franco", true);
-            grimoireBackground.EnableLeftButton("Greenhouse", true);
-            grimoireBackground.EnableLeftButton("Rules", true);
-            grimoireBackground.EnableLeftButton("Lore", true);
-            grimoireBackground.EnableLeftButton("Settings", true);
+            grimoireBackground.EnableLeftButton("FirstCharacter", true, false);
+            grimoireBackground.EnableLeftButton("Franco", true, false);
+            grimoireBackground.EnableLeftButton("Greenhouse", true, true);
+            grimoireBackground.EnableLeftButton("Rules", true, false);
+            grimoireBackground.EnableLeftButton("Lore", true, true);
+            grimoireBackground.EnableLeftButton("Settings", true, false);
         }
 
         public void SetGamerMode()

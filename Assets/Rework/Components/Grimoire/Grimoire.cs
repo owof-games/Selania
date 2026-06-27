@@ -97,9 +97,9 @@ namespace Selania.Rework.Components.Grimoire
             // set up the grimoire to show the info described in descriptor
             grimoireBackground.SetGamerMode(descriptor.isGamerMode);
             grimoireBackground.DisableAllLeftButtons();
-            foreach (var leftButton in descriptor.enabledLeftButtonNames)
-                grimoireBackground.EnableLeftButton(leftButton, true);
-            grimoireBackground.EnableLeftButton("Load", true);
+            foreach (var (leftButton, hasNotification) in descriptor.enabledLeftButtonNames)
+                grimoireBackground.EnableLeftButton(leftButton, true, hasNotification);
+            grimoireBackground.EnableLeftButton("Load", true, false);
 
             foreach (var achievement in descriptor.achievements)
                 grimoireBackground.SetAchievementStatus(achievement.achievementName, achievement.amount,

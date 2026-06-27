@@ -1508,9 +1508,13 @@ namespace Selania.Rework.Components
             var gamerModeVariable = story.variablesState[gamerModeVariableName];
             var isGamerMode = (bool)gamerModeVariable;
 
-            // extract enabled left buttons from tags
+            // get pages with something to see
+            var myIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            var notificationChoiceIndices = GetLinksToChangedPages(myIdentifier).Select(l => l.ChoiceIndex).ToList();
 
-            var enabledLeftButtonNames = story.currentChoices.Select(choice => choice.text);
+            // extract enabled left buttons from tags
+            var enabledLeftButtonNames =
+                story.currentChoices.Select(choice => (choice.text, notificationChoiceIndices.Contains(choice.index)));
 
             // extract achievements from tags
             var achievements = new List<IStoryGrimoire.AchievementDescriptor>();
@@ -2558,6 +2562,21 @@ namespace Selania.Rework.Components
             }
 
             return false;
+        }
+
+        /// <summary>
+        ///     Get all the links from a page that send to a page that has changed.
+        /// </summary>
+        /// <param name="root">The page whose links we look for.</param>
+        /// <returns>The links pointing to changed pages.</returns>
+        private IEnumerable<GrimoireLink> GetLinksToChangedPages(GrimoirePageIdentifier root)
+        {
+            // if the tree hasn't been visited yet, there's no change for sure
+            if (_latestGrimoireTree == null) return Enumerable.Empty<GrimoireLink>();
+
+            var links = _latestGrimoireTree.IdentifierToContent[root].GrimoireLinks;
+            var linkToIdentifier = _latestGrimoireTree.LinkToIdentifier;
+            return links.Where(link => HasChanged(linkToIdentifier[(root, link)]));
         }
 
         /// <summary>

@@ -400,7 +400,8 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         /// <param name="buttonName">Name of the button, according to <see cref="topLevelButtons" />.</param>
         /// <param name="isButtonEnabled">Whether the button must be enabled or disabled.</param>
-        public void EnableLeftButton(string buttonName, bool isButtonEnabled)
+        /// <param name="hasNotification">Whether the button must show a notification too.</param>
+        public void EnableLeftButton(string buttonName, bool isButtonEnabled, bool hasNotification)
         {
             // var descriptor = leftButtonDescriptors.FirstOrDefault(descriptor => descriptor.name == buttonName);
             var topLevelButton =
@@ -413,6 +414,8 @@ namespace Selania.Rework.Components.Grimoire
             }
 
             topLevelButton.interactable = isButtonEnabled;
+
+            if (hasNotification) topLevelButton.ShowNotification();
         }
 
         /// <summary>
