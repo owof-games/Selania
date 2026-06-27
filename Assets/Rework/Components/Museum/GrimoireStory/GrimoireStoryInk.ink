@@ -230,7 +230,7 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
         -> grimoire_greenhouse_third
     + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third
-    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [Spazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third
     + [Index #bookmark:index]
         -> grimoire
@@ -301,7 +301,7 @@ TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
         -> grimoire_greenhouse_third_in_dialogue
     + {RANDOM(1, 6) <= 3} [Olobino #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + [LaSpazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
+    + [Spazzata #status:{RANDOM(1,6) <= 3:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
     + [Close #bookmark:close]
         @grimoireClose
