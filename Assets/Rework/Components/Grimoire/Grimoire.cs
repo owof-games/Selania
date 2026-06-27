@@ -82,7 +82,7 @@ namespace Selania.Rework.Components.Grimoire
 
         private void OnClose(Unit _)
         {
-            grimoireBackground.HideGrimoire();
+            OnGrimoireCloseButtonClick();
         }
 
         private void OnFirstLevelGrimoirePageDescriptors(IStoryGrimoire.FirstLevelGrimoirePageDescriptor descriptor)
