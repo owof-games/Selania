@@ -72,12 +72,14 @@ namespace Selania.Rework.Components.Grimoire
         private void OnGrimoireDisplayed(Unit _)
         {
             _isGrimoireOpened = true;
+            Logger.ZLogTrace($"Setting grimoire opened status to true: updating animation and status");
             UpdateAnimationAndStatus();
         }
 
         private void OnGrimoireEnabled(bool isEnabled)
         {
             _isGrimoireEnabled = isEnabled;
+            Logger.ZLogTrace($"Setting grimoire enabled status to {isEnabled}: updating animation and status");
             UpdateAnimationAndStatus();
         }
 
@@ -85,6 +87,8 @@ namespace Selania.Rework.Components.Grimoire
         {
             // the grimoire button is disabled if Ink says the grimoire is still disabled, or if the grimoire is opened
             var isDisabled = !_isGrimoireEnabled || _isGrimoireOpened;
+            Logger.ZLogTrace(
+                $"Since _isGrimoireEnabled = {_isGrimoireEnabled} and _isGrimoireOpened = {_isGrimoireOpened}, then isDisabled = {isDisabled}");
             _animator?.SetBool(Disabled, isDisabled);
             if (_button != null) _button.interactable = !isDisabled;
         }
@@ -106,6 +110,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             Logger.ZLogInformation($"Close grimoire request.");
             _isGrimoireOpened = false;
+            Logger.ZLogTrace($"Setting grimoire opened status to false: updating animation and status");
             UpdateAnimationAndStatus();
         }
     }
