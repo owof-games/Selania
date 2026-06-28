@@ -54,7 +54,7 @@
     {charTag(SecondCharacter, "neutral")}:                      Ehi {player_name}!
                                                                 Prima mi stavo annoiando tanto.
                                                                 Ma proprio taaaaaaaaaanto.
-    {charTag(SecondCharacter, "energy")}:                       E ho cercato di capire cosa c'era dietro tutti quei legni.
+    {charTag(SecondCharacter, "energy")}:                       E ho cercato di capire cosa c'era dietro quel masso.
                                                                 Perché {charNameFive} non me lo dice mica.
         {
             - second_char_main_storylets.eight.ragione:
