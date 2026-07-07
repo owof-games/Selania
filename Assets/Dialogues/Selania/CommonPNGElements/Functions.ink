@@ -1336,6 +1336,11 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_appendices += grimWitchAboutAppendices
                 ~ grimoire_witch += grimWitchAboutAppendices
         }
+        
+        {
+            - witch_notification_choice && grimoire_witch hasnt grimWitchNotificationChoice:
+                ~ grimoire_witch += grimWitchNotificationChoice
+        }
 
         {
         

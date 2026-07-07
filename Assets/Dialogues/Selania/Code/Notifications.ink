@@ -1,5 +1,5 @@
 //Abilitazione delle notifiche
-VAR notification_activeNotifications = false
+VAR notification_activeNotifications = true
 
 //Variabili per le notifiche
 VAR notification_greenhouseGrown = false
@@ -12,6 +12,12 @@ VAR notification_achievementName = ""
 //Check missioni franco notificato
 VAR notification_francoUpdatedMissions = ()
 
+//Check per proporre attivazione/disattivazione notifiche
+VAR notification_notificationCounter = 0
+VAR notification_notificationCounterChoiceProposal = 3
+VAR notification_notificationCounter_Achievements = false
+VAR notification_notificationCounter_Franco = false
+VAR notification_notificationCounter_Sigils = false
 
 
 === notification_system ===
@@ -22,6 +28,8 @@ VAR notification_francoUpdatedMissions = ()
         - nest_newSigilDiscovered != ():
             {charTag(TheWitch, witch_state())}:                                     <i>{player_name} ha scoperto <b>{sigils_translator(nest_newSigilDiscovered)}</b>.
                 ~ nest_newSigilDiscovered = ()
+                ~ notification_notificationCounter ++
+                ~ notification_notificationCounter_Sigils = true
             -> nest_reactivateGlyphs ->
             -> achievements_onGame_statusUpdate_GM ->
             -> main
@@ -50,6 +58,8 @@ VAR notification_francoUpdatedMissions = ()
                 {charTag(TheWitch, witch_state())}:                                 <i>{player_name} ha completato l'achievement {notification_achievementName}.
                     ~ notification_achievement = false
                     ~ notification_achievement = ""
+                    ~ notification_notificationCounter ++
+                    ~ notification_notificationCounter_Achievements = true
         }
 
 
@@ -66,6 +76,8 @@ VAR notification_francoUpdatedMissions = ()
                     - frog_updatedMissions has frog_currentMission && notification_activeNotifications == true:
                         {charTag(TheWitch, witch_state())}:             <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                 }
+                ~ notification_notificationCounter ++
+                ~ notification_notificationCounter_Franco = true
     
     }
 

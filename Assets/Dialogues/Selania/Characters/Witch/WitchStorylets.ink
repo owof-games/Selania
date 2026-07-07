@@ -29,6 +29,62 @@
             -> witch_closing_storylet ->
             ->-> 
 
+=== witch_notification_choice
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    {charTag(TheWitch, witch_state())}:                             <i>{player_name} avrà notato che a volte segnaliamo l'aggiornamento di alcune informazioni, <>
+            {
+                - notification_notificationCounter_Franco == true: 
+                                                                    come il completamento di una missione di Franco.
+                        {
+                            - notification_notificationCounter_Sigils == true:
+                                                                    O la scoperta di un nuovo sigillo.   
+                            
+                            - notification_notificationCounter_Achievements == true:
+                                                                    O il completamento di un achievement.
+                        }                                                
+                
+                - notification_notificationCounter_Achievements == true:
+                                                                    come il completamento di un achievement.
+                        {
+                            - notification_notificationCounter_Sigils == true:
+                                                                    O la scoperta di un nuovo sigillo.   
+                            
+                            - notification_notificationCounter_Franco == true:
+                                                                    O il completamento di una missione di Franco.
+                        }                                                
+                
+                - notification_notificationCounter_Sigils == true:
+                                                                    come la scoperta di un nuovo sigillo.
+                        {
+                            - notification_notificationCounter_Franco == true:
+                                                                    O il completamento di una missione di Franco.   
+                            
+                            - notification_notificationCounter_Achievements == true:
+                                                                    O il completamento di un achievement.
+                        }                                                                                      
+            }
+                                                                    <i>Queste informazioni distraggono {player_name} dalla sua esperienza, e quindi preferisce che smettiamo di condividerle?
+                
+                
+        + \ {charTag(PG, "neutral")}:                               <i>Preferirei non riceverle più.</i>
+            ~ notification_activeNotifications = false
+        {charTag(TheWitch, witch_state())}:                         <i>Perfetto, allora smetteremo.
+
+        + \ {charTag(PG, "neutral")}:                               <i>Voglio continuare a riceverle.</i>
+        {charTag(TheWitch, witch_state())}:                         <i>Perfetto, allora continueremo.
+        -               
+                                                                    <i>E ora lasciamo {player_name} alle sue esplorazioni.
+        
+        -> witch_closing_storylet ->
+        ->-> 
+
+
+
 
 === witch_intro
     ~ temp charNameOne = translator(firstChar_ActualName)

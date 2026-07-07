@@ -114,15 +114,7 @@
             
             + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>                                                            
             -
-    {charTag(Carla, "neutral")}:                                        Infine: può ricevere delle notifiche quando alcune cose sono cambiate (es: ha completato un achievement).
-                                                                        Vuole ricevere questi promemoria?
-
-            + \ {charTag(PG, "neutral")}:                               <i>Sì.</i>
-                ~ notification_activeNotifications = true  
-            + \ {charTag(PG, "neutral")}:                               <i>No.</i>
-            -                                                            
-
-
+                                                    
     {charTag(Carla, "sad")}:                                            Abbiamo finito.
     {charTag(Carla, "neutral")}:                                        Rispettando i protocolli del Ministero della Pubblica Umiliazione, le auguriamo un buon viaggio, e le ricordiamo che l'ufficio Lamentii e Lamentele è chiuso dal 1976.
 

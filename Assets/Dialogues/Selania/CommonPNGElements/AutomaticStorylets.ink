@@ -177,6 +177,11 @@
     //Commento sulle appendici
     - grimoire_appendices != () && grimoire_appendices hasnt grimWitchAboutAppendices && player_nameChosen == true:
         -> witch_about_appendices
+
+    //Abilitazione/disabilitazione notifiche
+    - notification_notificationCounter >= notification_notificationCounterChoiceProposal && grimoire_witch hasnt grimWitchNotificationChoice:
+        -> witch_notification_choice
+
 }
 
 //Infine:
