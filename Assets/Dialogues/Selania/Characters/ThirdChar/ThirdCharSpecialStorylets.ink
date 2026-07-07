@@ -160,7 +160,7 @@
 
             //Chiamiamo il primo, notifichiamo, ripetiamo  
             ~ png_random_sigils_opener ()
-                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                {player_name} ha ricevuto <b>{sigils_translator(nest_newSigilDiscovered)}</b>.
                 //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
                 ~ glyph_grimoireTripleSigilsUpdater()
                 ~ glyph_grimoireTripleSigilsUpdater()
@@ -171,7 +171,7 @@
                 ~ nest_newSigilDiscovered = ()
 
             ~ png_random_sigils_opener ()
-                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                {player_name} ha ricevuto <b>{sigils_translator(nest_newSigilDiscovered)}</b>.
                 //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
                 ~ glyph_grimoireTripleSigilsUpdater()
                 ~ glyph_grimoireTripleSigilsUpdater()
@@ -183,7 +183,7 @@
 
 
             ~ png_random_sigils_opener ()
-                {player_name} ha ricevuto {sigils_translator(nest_newSigilDiscovered)}.
+                {player_name} ha ricevuto <b>{sigils_translator(nest_newSigilDiscovered)}</b>.
                 //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
                 ~ glyph_grimoireTripleSigilsUpdater()
                 ~ glyph_grimoireTripleSigilsUpdater()

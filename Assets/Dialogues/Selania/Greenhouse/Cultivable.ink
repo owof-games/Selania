@@ -1072,7 +1072,7 @@
 
     //@animation:Backpack
     
-    {charTag(TheWitch, witch_state())}:   <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.
+    {charTag(TheWitch, witch_state())}:   <i>{~{player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} <i>{ingredientTranslator(greenhouse_chosenCultivable)}</i>.
     
     //Questo è un codice che aggiorna le informazioni dei doni date da Franco nel caso in cui al momento del dono l'oggetto fosse in crescita.
     

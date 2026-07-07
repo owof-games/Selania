@@ -18,7 +18,7 @@ VAR notification_francoUpdatedMissions = ()
 //Per ora la struttura è in ordine gerarchico di priorità, poi vediamo se ha senso. Per ora ho messo il tagging della strega, ma poi probabilmente metterò il simbolo più sensato.
 {
     - nest_newSigilDiscovered != ():
-        {charTag(TheWitch, witch_state())}:                                 <i>{player_name} ha scoperto {sigils_translator(nest_newSigilDiscovered)}.
+        {charTag(TheWitch, witch_state())}:                                 <i>{player_name} ha scoperto <b>{sigils_translator(nest_newSigilDiscovered)}</b>.
             ~ nest_newSigilDiscovered = ()
         -> nest_reactivateGlyphs ->
         -> achievements_onGame_statusUpdate_GM ->
