@@ -1557,8 +1557,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             ~ png_commonPauseTalking = true
         //L'animazione per via dell'informazione nuova
             //@animation:RewriterBook  
-        //Gestione crescita piante
-            -> growing_check ->
+        // //Gestione crescita piante -> SPOSTATA ALL'ACCESSO IN SERRA
+        //     -> growing_check ->
         //Check stato achievements
             -> achievements_onGame_statusUpdate_RM ->
             -> achievements_onGame_statusUpdate_GM ->

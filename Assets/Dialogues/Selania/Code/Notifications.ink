@@ -26,12 +26,12 @@ VAR notification_francoUpdatedMissions = ()
 }
 
 
-{
-    - notification_greenhouseGrown == true && notification_gamerNotification == true:
-        {charTag(TheWitch, witch_state())}:                                 <i>Qualcosa di nuovo è cresciuto in serra. 
-            ~ notification_greenhouseGrown = false
-            ~ notification_greenhouseGrownRepropose = false
-}
+// { -> COMMENTATO PERCHE' ORA LA CRESCITA E' SOLO CON L'ACCESSO IN SERRA
+//     - notification_greenhouseGrown == true && notification_gamerNotification == true:
+//         {charTag(TheWitch, witch_state())}:                                 <i>Qualcosa di nuovo è cresciuto in serra. 
+//             ~ notification_greenhouseGrown = false
+//             ~ notification_greenhouseGrownRepropose = false
+// }
 
 {
     - player_lastRestingSession >= player_maxPlayingTime && player_restingSessionNotification == true:

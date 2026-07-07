@@ -89,6 +89,8 @@
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
             -> on_movement_events ->
+            //Funzione per far crescere le piante (se in coltivazione)
+            -> growing_check ->
                 -> greenhouse
 
 

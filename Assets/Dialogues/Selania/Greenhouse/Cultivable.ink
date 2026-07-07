@@ -1,12 +1,10 @@
-//Nota: la crescita di una pianta viene chiamata alla fine di ogni conversazione.
-
 === growing_check
-{
-    //Aumentiamo il valore solo se greenhouse_growStep non ha stepFour
-    - greenhouse_growStep <= greenhouse_growingValueStepThree && greenhouse_chosenCultivable != ():
-        ~ greenhouse_cultivableGrowing ++
-}
--> growing_value_updater
+    {
+        //Aumentiamo il valore solo se greenhouse_growStep non ha stepFour
+        - greenhouse_growStep <= greenhouse_growingValueStepThree && greenhouse_chosenCultivable != ():
+            ~ greenhouse_cultivableGrowing ++
+    }
+    -> growing_value_updater
 
 
 === growing_value_updater
@@ -38,22 +36,22 @@
 
 {debug: vedo se attivare o meno la notifica di notification_greenhouseGrown. notification_greenhouseGrown {notification_greenhouseGrown}, PG location {entity_location(PG)}, stato greenhouse_growStep {greenhouse_growStep}.}
 
-{
+// {
     
-    - entity_location(PG) != Greenhouse:
-        {
-            - greenhouse_growStep == stepFour && notification_greenhouseGrownRepropose == true:
-                ~ notification_greenhouseGrown = true
-                ->->
-            - else:
-                ->->
-        }
+//     - entity_location(PG) != Greenhouse:
+//         {
+//             - greenhouse_growStep == stepFour && notification_greenhouseGrownRepropose == true:
+//                 ~ notification_greenhouseGrown = true
+//                 ->->
+//             - else:
+//                 ->->
+//         }
             
-    - else:
-    {debug: entity location {entity_location(PG)}, per cui vado a growing_updater}
+//     - else:
+//     {debug: entity location {entity_location(PG)}, per cui vado a growing_updater}
         -> growing_updater
 
-}
+// }
 
 === growing_updater
 {debug: passo per growing_updater}
