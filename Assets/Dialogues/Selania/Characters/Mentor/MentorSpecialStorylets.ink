@@ -276,7 +276,7 @@
         {charTag(FifthCharacter, "sorry")}:                             Questo posto non è adatto a chi è così giovane.
                                                                         Non ce l'ho con lui, ma i pericoli qui sono tanti: i binari, lo stagno, la serra pericolante, e le bestie della foresta.
         {charTag(FifthCharacter, "sad")}:                               E potrei continuare per ore.
-        {charTag(FifthCharacter, "neutral")}:                           E non è nemmeno è un bambino facilissimo.
+        {charTag(FifthCharacter, "neutral")}:                           E non è nemmeno un bambino facilissimo.
                                                                         Ho perso il conto delle bugie che mi ha detto da quando è arrivato.
             {
                 - are_two_entities_together(Franco, PG):

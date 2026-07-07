@@ -223,7 +223,7 @@
         {charTag(ThirdCharacter, "neutral")}:                   Ma non sono qui per parlare di lei.
                                                                 Non so proprio perché sono qui: non c'ho di sicuro le ansie di {charNameOne}.
         {charTag(ThirdCharacter, "jester")}:                    E l'età delle elementari è passata da, boh, trent'anni?
-                                                                Anche se ti giuro che non si vede quando non sempre un pezzo di vetro.
+                                                                Anche se ti giuro che quando non sembro un bicchiere mi danno secco secco dieci anni di meno.
                 {//Blocco per reazioni e commenti legati al genere.
                 - thirdChar_recordedPlayerPronoun == him:
                 {charTag(ThirdCharacter, "neutral")}:           Ma tra l'altro come piscio?

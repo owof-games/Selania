@@ -659,7 +659,7 @@
         
 
         
-        {charTag(FirstCharacter, "curious")}:                   Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
+        {charTag(FirstCharacter, "curious")}:                   Ma poi forse non sto già vivendo con la mia famiglia?
         {charTag(FirstCharacter, "neutral")}:                   Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         {charTag(FirstCharacter, "sad")}:                       Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
         {charTag(FirstCharacter, "affectionate")}:              È che vivere con le ragazze mi fa strafelice.
