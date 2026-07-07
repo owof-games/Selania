@@ -340,7 +340,7 @@
                 }  
 
         - firstChar_ActualName has Violino:
-        {charTag(FirstCharacter, "neutral")}:                   Bleah però.
+        {charTag(SecondCharacter, "neutral")}:                  Bleah però.
                                                                 Quella cosa del fidanzato.
                                                                 Bleah.
         {charTag(SecondCharacter, "energy")}:                   Meglio studiare le lucertole.
