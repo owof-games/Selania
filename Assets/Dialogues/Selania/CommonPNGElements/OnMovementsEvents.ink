@@ -103,9 +103,9 @@ VAR letters_doggoPause = false
    } 
 
                 
-//Spostamento Carla al Nest se Nest disponibile e non ci ha fatto il tutorial
+//Spostamento Carla al Nest se Nest disponibile e non ci ha fatto il tutorial e tutorial attivo
     {
-        - entity_location(Carla) != Nest && player_accessiblePlaces has Nest && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest:
+        - entity_location(Carla) != Nest && player_accessiblePlaces has Nest && tutorial_CarlaDiscoveredTutorials hasnt tutorialNest && tutorial_CarlaTutorial == true:
                 ~ move_entity(Carla, Nest)
     }                    
                 

@@ -89,7 +89,22 @@
                 - {charTag(ThirdCharacter, "neutral")}:             Merda, prima mi sono distratto e non ti ho fatto vedere quella roba in biblioteca, raggiungimi!
                 - {charTag(ThirdCharacter, "neutral")}:             Bah, vediamo se ce la facciamo: vieni in biblioteca {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}} e ti mostro una sorpresa.
                 - {charTag(ThirdCharacter, "neutral")}:             Mi arrendo. Vediamoci alla biblioteca.
-            }
+                }
+
+            //Per sicurezza vediamo anche se unx dellx altre PNG è in biblioteca, e lx spostiamo altrove con change_entity_place.
+                {
+                    - contentsLibrary has SecondCharacter:
+                        ~ change_entity_place(SecondCharacter)
+                }
+                {
+                - contentsLibrary has FirstCharacter:
+                    ~ change_entity_place(FirstCharacter)
+                }
+                {
+                - contentsLibrary has FifthCharacter:
+                    ~ change_entity_place(Mentor)
+                }
+
                     ~ move_entity(ThirdCharacter, Library)
                     ~ thirdChar_LibraryInvite = true
                     ~ thirdChar_LibraryWaiting = chars_MaxOpenPlacesWaiting
