@@ -51,8 +51,6 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 
 
 
-
-
 === function recipe_name_creator()
 {debug_kitchen: passo per recipeNameCreator.}
 
@@ -332,6 +330,9 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
     ~ kitchen_recipeComplement = ""
     ~ kitchen_recipePP = ""
     ~ kitchen_tempRecipeName = ""
+//E la gestione del "cuoco" e dei suoi pronomi, così da non avere una lista ampia
+    ~ kitchen_actualChef = ()
+    ~ kitchen_actualChefPronouns = ()
 
 
 {debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storageAether è {kitchen_storageAether}, di kitchen_storageEarth {kitchen_storageEarth}, kitchen_storageAir è {kitchen_storageAir}, di kitchen_storageWater {kitchen_storageWater}, di kitchen_storageFire {kitchen_storageFire}. cookingCompanion è {cookingCompanion}.} 
@@ -362,9 +363,11 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 //Il commento sul reset del rapporto c'è solo la prima volta.
     - not reset_indicator:
         -> reset_indicator
+
 //Il feedback per il primo ingrediente inserito da sole c'è alla prima volta che si cucina.
 	- not first_time_ingredient:
 		-> first_time_ingredient
+
 //Poi posso sfruttare il tracciamento delle reazioni.
 	- (kitchen_firstCharExtraIngredientReaction == goodReaction or kitchen_secondCharExtraIngredientReaction == goodReaction or kitchen_thirdCharExtraIngredientReaction == goodReaction) && not first_time_good_reaction:
 		-> first_time_good_reaction
