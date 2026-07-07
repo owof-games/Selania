@@ -1849,6 +1849,7 @@
             - grimoire_thirdChar hasnt grimThirdCharLetterSeven:
             //Se è il primo passaggio, chiamo la funzione di preparazione alla riscrittura
                 ~  rewriting_prep(ThirdCharacter)
+            {charTag(ThirdCharacter, "writer")}:                    Quante cose che c'ho in testa!    
             //Altrimenti stampo solo il feedback
             - else:
                                                                     Comunque è arrivato anche il momento di fare un po' i conti col nostro rapporto {player_pronoun has him:vecio|{player_pronoun has her:zia|bomber}}.
