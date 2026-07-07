@@ -61,7 +61,7 @@
     ~ secondChar_InkLevel = LIST_RANDOM(ink_possibileLevels)
     ~ thirdChar_InkLevel = LIST_RANDOM(ink_possibileLevels)
 
-    ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch)
+    ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch, tutorialChoicesRelationship, tutorialRereading, tutorialGrimoire, tutorialGreenhouse, tutorialKitchen, tutorialNest, tutorialSigils)
 
     ~ player_pronoun = LIST_RANDOM(possibile_player_pronouns)
     ~ player_name = get_random_name()

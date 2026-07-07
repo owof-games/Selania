@@ -38,7 +38,11 @@
         // //Cose varie di testing 
         // + \ {charTag(PG, "neutral")}:                                                                                   Mi farebbe sfogliare il grimorio? (solo per test ink!)
         //         -> grimoire -> questions_Carla.top     
-
+        
+        // + Mi attiva un sigillo?
+        //         ~ glyph_actualActiveSigil = (FireAetherAir)
+        //         ~ glyph_actualSigilUses = 3
+        //         ~ glyph_discoveredSigils = (FireAetherAir)
         
         // + {!debug_stochastic}\ {charTag(PG, "neutral")}:                                                                Mi darebbe tutte le piante da coltivare e l'ingrediente universale?
         //         ~ greenhouse_findedCultivables += greenhouse_allCultivables

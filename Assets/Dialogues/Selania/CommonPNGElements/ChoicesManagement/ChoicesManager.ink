@@ -1,5 +1,7 @@
 //Questa lista serve per evitare le reazioni alle scelte (senza sigillo) di chi sta parlando, e non creare confusione.
 VAR list_currentActors = ()
+VAR glyph_itIsRewriting = false
+VAR glyph_rewritingMultiplier = 3
 
 
 === glyph_choice_manager(isPG, GlyphC)
@@ -72,6 +74,8 @@ VAR list_currentActors = ()
         - glyph_thirdAether has glyph_actualActiveSigil:
             ~ variationAether -= 2
     }
+
+//Se sigillo non attivo
 - else:
        {GlyphC:
         - fireC:
@@ -86,6 +90,17 @@ VAR list_currentActors = ()
             ~ variationEarth += 1            
 
        } 
+}
+
+//Se siamo in riscrittura, moltiplichiamo per il valore previsto
+{glyph_itIsRewriting:
+
+    ~ variationFire = variationFire  * glyph_rewritingMultiplier
+    ~ variationAir = variationAir * glyph_rewritingMultiplier
+    ~ variationWater = variationWater  * glyph_rewritingMultiplier
+    ~ variationAether = variationAether * glyph_rewritingMultiplier
+    ~ variationEarth = variationEarth * glyph_rewritingMultiplier
+
 }
 
 
@@ -315,6 +330,7 @@ VAR list_currentActors = ()
     - Mentor:
         ~ mentor_totalChoices ++             
 }
+
 // Aggiorna contatore glifi con valore sigillo
 {currentCharacter:
     - FirstCharacter:

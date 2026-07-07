@@ -112,39 +112,18 @@ VAR relationshipIndicatorNeutralValue = 0
                 ~ inkLevel(PNG)
             //Salvo il massimo di inchiostro raggiunto con la personaggia
                 ~ maxInkLevelUpdater(PNG)
-            //Vado a svuotare i contatori di colore, così son tranquilla.
-                ~ storage_glyphs(PNG)
-
-
+            //Vario la variabile glyph_itIsRewriting, così sono sicura che choiceManager mi faccia le dovute moltiplicazioni
+                ~ glyph_itIsRewriting = true
 
 === function rewriting_end(PNG)
-~ temp char_glyphVariation = 0
-    {PNG:
-        - FirstCharacter:
-            ~ char_glyphVariation = firstChar_glyphVariation
 
-        - SecondCharacter:
-            ~ char_glyphVariation = secondChar_glyphVariation
-
-        - ThirdCharacter:
-            ~ char_glyphVariation = thirdChar_glyphVariation
-
-        - FourthCharacter:
-            ~ char_glyphVariation = fourthChar_glyphVariation
-
-        - FifthCharacter:
-            ~ char_glyphVariation = fifthChar_glyphVariation
-
-    }
-
-        //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-            ~ glyph_modifier(PNG, char_glyphVariation)
-        
-        //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
-            ~ update_glyphs(PNG)
+        //Disattivo la variabile glyph_itIsRewriting.
+            ~ glyph_itIsRewriting = false
     
-        //E infine genero il nome
+        //E  genero il nome
             ~ newName(PNG)
+
+
 
 
 === endingPNGstory(PNG)
@@ -220,6 +199,8 @@ VAR relationshipIndicatorNeutralValue = 0
 //Cose comuni
     ~ state_ending_stories(PNG)
     ~ tree_advance_management(PNG)
+    //Spengo anche qui per sicurezza il moltiplicatore legato alla riscrittura
+    ~ glyph_itIsRewriting = false
 
 
 //Elementi non dipendenti dallx PNG
