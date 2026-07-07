@@ -14,8 +14,8 @@
 
     //Variabili per far comparire i personaggi in scena.
         VAR firstChar_delay = 2
-        VAR secondChar_delay= 2
-        VAR thirdChar_delay = 4
+        VAR secondChar_delay= 3
+        VAR thirdChar_delay = 6
         VAR openingKitchen_delay = 5
         VAR openingLibrary_delay = 6
         VAR openingNest_delay = 8
@@ -37,8 +37,8 @@
                 ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ firstChar_storyStatus = story_storyStarted
 
-        //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus == story_storyNotStarted):
+        //Dopo essere arrivata per la prima volta allo stagno od aver parlato con chitarra, compare mentore, e attivo la sua storia
+        - (pond == true or grimoire_firstChar != ()) && (mentorChar_storyStatus == story_storyNotStarted):
         {debug: introduco mentore in scena.}
                 ~ move_entity(Mentor, Forest)
                 ~ mentorChar_storyStatus = story_storyStarted
