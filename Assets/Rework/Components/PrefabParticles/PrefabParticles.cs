@@ -214,7 +214,7 @@ namespace Selania.Rework.Components.PrefabParticles
                 if (delayTimeSpan > TimeSpan.Zero)
                     await UniTask.Delay(delayTimeSpan, cancellationToken: cancellationToken);
             }
-            catch (OperationCanceledException e)
+            catch (OperationCanceledException)
             {
                 Debug.Log(
                     "Skipping object despawn because the operation was cancelled (likely: the scene was unloaded)");
