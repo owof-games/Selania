@@ -126,9 +126,16 @@ namespace Selania.Rework.Components
 
                 story.ObserveVariable(variableName, EmitValue);
 
+                var storyStartedDisposable =
+                    _storyStarted!.Subscribe(_ => EmitValue(variableName, story.variablesState[variableName]));
+
                 EmitValue(variableName, story.variablesState[variableName]);
 
-                return Disposable.Create(() => story.RemoveVariableObserver(EmitValue));
+                return Disposable.Create(() =>
+                {
+                    storyStartedDisposable.Dispose();
+                    story.RemoveVariableObserver(EmitValue);
+                });
 
                 void EmitValue(string vName, object value)
                 {
@@ -156,7 +163,7 @@ namespace Selania.Rework.Components
 
                     observer.OnNext(result);
                 }
-            });
+            }).DistinctUntilChanged();
         }
 
         #endregion
@@ -292,11 +299,13 @@ namespace Selania.Rework.Components
             SetupAudio();
             SetupGrimoire();
             SetupSigilSupport();
+            SetupStoryStartedSupport();
         }
 
         /// <inheritdoc />
         protected override void GlobalCleanup()
         {
+            CleanupStoryStartedSupport();
             CleanupSigilSupport();
             CleanupRoomContents();
             CleanupLinearProgression();
@@ -774,6 +783,21 @@ namespace Selania.Rework.Components
         /// <seealso cref="StartStory" />
         private int _numPlayedSecondsAtTheBeginningOfCurrentSession;
 
+        /// <summary>
+        ///     A subject that produces a value whenever a story is started.
+        /// </summary>
+        private Subject<Unit>? _storyStarted;
+
+        private void SetupStoryStartedSupport()
+        {
+            _storyStarted = new Subject<Unit>();
+        }
+
+        private void CleanupStoryStartedSupport()
+        {
+            _storyStarted?.Dispose();
+        }
+
         /// <inheritdoc />
         public async UniTask StartStory(string? descriptor)
         {
@@ -813,6 +837,9 @@ namespace Selania.Rework.Components
                 Logger.ZLogInformation($"New story started.");
                 Continue();
             }
+
+            // notify that the story has started
+            _storyStarted?.OnNext(Unit.Default);
 
             Logger.ZLogTrace($"next automatic after {_minimumNextSaveTime}");
         }
