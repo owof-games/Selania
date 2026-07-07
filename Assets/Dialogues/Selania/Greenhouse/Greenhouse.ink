@@ -31,7 +31,12 @@
 
 
 === greenhouse_entry_check
-    {charTag(TheWitch, witch_state())}:   <i>La serra attende risposte.</i>
+    // {charTag(TheWitch, witch_state())}:   <i>La serra attende risposte.</i>
+    {
+    - greenhouse_entry_check != 1:
+        {charTag(TheWitch, witch_state())}:   <i>La serra attende risposte.</i>
+    }
+
         +  {greenhouse_backupCultivable != ()}\ {charTag(PG, "neutral")}:         <i>Voglio coltivare qualcosa.</i>
                 -> cultivable_test
         +  \ {charTag(PG, "neutral")}:         <i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}</i>
