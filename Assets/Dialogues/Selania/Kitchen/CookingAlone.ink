@@ -143,7 +143,7 @@
                 -> glyph_choice_manager(true, fireC)->
                 ~ player_updateKitchenPersonalChoices(fireC)    
                 {charTag(Franco, "neutral")}:                   Conosco quella sensazione, girino.
-                {charTag(Franco, "party")}                      Ma non disperarti: qui le cose vanno sempre bene.
+                {charTag(Franco, "party")}:                     Ma non disperarti: qui le cose vanno sempre bene.
                 {charTag(Franco, "neutral")}:                   Nel senso che chi riscrive non è che dice alle persone che cosa fare.
                                                                 Le aiuta solo ad uscire dallo stallo.
                                                                 Poi sta a loro decidere dove galoppare.

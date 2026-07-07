@@ -61,7 +61,7 @@
     {charTag(Franco, "question")}:                  Hai mai visto quante cose piccole finiscono con "ino?"
                                                     Tranne il pino.
                                                     Non dovrebbe chiamarsi "pone"?
-    {charTag(Franco, "neutral")}                    Ma non Pino il girino, che è grosso come, uh, una lettera da zia Graaak.
+    {charTag(Franco, "neutral")}:                   Ma non Pino il girino, che è grosso come, uh, una lettera da zia Graaak.
     {charTag(Franco, "reading")}:	                "Dice Pino di dire a {player_name} quella faccenda delle commissioni finite."
                                                     "E poi se gli riporti la sua crema solare."
     {charTag(Franco, "neutral")}:	                Vero!

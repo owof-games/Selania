@@ -939,7 +939,7 @@
                 {
                 - are_two_entities_together(Mentor, PG):
                 {charTag(FifthCharacter, "sad")}:                       {charNameOne}, {charNameThree}: siamo qui per stare bene assieme, non per farci del male.
-                {charTag(ThirdCharacter, "bored")}              Guarda che è questa pazza che ha cominciato a rompere i coglioni!     
+                {charTag(ThirdCharacter, "bored")}:             Guarda che è questa pazza che ha cominciato a rompere i coglioni!     
                 }
         {charTag(ThirdCharacter, "bored")}:                     Bene {charNameOne}: quando parlerai delle tue paranoie sul lavoro o il moroso o Sborotalco verrò a romperti i coglioni anch'io.
         {charTag(FirstCharacter, "annoyed")}:                   Come se tu avessi qualcosa di più importante da portare di "Oh povero me ho groomato questa tipa per un decennio e poi mi ha lasciato, sob."

@@ -390,7 +390,7 @@ TODO: da fare anche per le altre png
                                                                                             "Franco."
                                                             {charTag(Franco, "neutral")}:	Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
 
-                                                        -   {charTag(Franco, "neutral")}    Di nuovo senza la pianta giusta.
+                                                        -   {charTag(Franco, "neutral")}:    Di nuovo senza la pianta giusta.
                                                            {charTag(Franco, "reading")}:	"Care formiche, la solita richiesta."
                                                                                             "Una pianta che aiuti {player_name} con {translator(speaker)}."
                                                                                             "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
