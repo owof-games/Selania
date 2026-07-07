@@ -5,7 +5,7 @@
 {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
 
 {
-    - nest == 1:
+    - nest == 1 && png_commonPauseTalking == false:
         {charTag(TheWitch, witch_state())}:   <i>Vecchie piogge e onde come monito.</i>
         {
             - contentsNest has fireGlyph:

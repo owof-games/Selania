@@ -47,8 +47,16 @@ VAR tutorial_CarlaInkIndicator = ink_empty
 
     }
 
-//Poi faccio il dispatch dei vari elementi del tutorial. Se Carla è attiva, deve parlare sempre PRIMA di mentore
-//Tutti i tutorial di Carla passano da qui, a parte quello sui sigilli, che va sbloccato subito dopo aver parlato con Boccale
+
+//Poi faccio un check lato pausa dialogo, perché se c'è la pausa, non c'è nessuno storylet
+    {   
+        - png_commonPauseTalking == true:
+                ->->
+    }
+
+
+        //Poi faccio il dispatch dei vari elementi del tutorial. Se Carla è attiva, deve parlare sempre PRIMA di mentore
+        //Tutti i tutorial di Carla passano da qui, a parte quello sui sigilli, che va sbloccato subito dopo aver parlato con Boccale
 
     {
         - are_two_entities_together(PG, Carla) && tutorial_CarlaDiscoveredTutorials hasnt tutorialChoicesRelationship && tutorial_CarlaTutorial == true:

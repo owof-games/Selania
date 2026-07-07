@@ -5,7 +5,7 @@
 {debug: La lista degli oggetti nella stanza è: {contentsLibrary}.}
     
 {
-    -library == 1:
+    -library == 1 && png_commonPauseTalking == false:
         {charTag(TheWitch, witch_state())}:   <i>Nella biblioteca storie non lette cercano cuori accoglienti.
 }
 

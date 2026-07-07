@@ -5,7 +5,7 @@
 {debug: La lista degli oggetti nella stanza è: {contentsTrainStop}.}
 
 {
-    -train_stop == 1: 
+    -train_stop == 1 && png_commonPauseTalking == false: 
         {charTag(TheWitch, witch_state())}:   <i>La stazione profuma di aria nevosa e nuovi arrivi.</i>
 }
     

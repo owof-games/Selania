@@ -5,7 +5,7 @@
 {debug: <i>La lista degli oggetti nella stanza è: {contentsGreenhouse}.}
 
 {
-    - greenhouse == 1:
+    - greenhouse == 1 && png_commonPauseTalking == false:
         {charTag(TheWitch, witch_state())}:   <i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.</i>
 }
 

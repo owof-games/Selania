@@ -5,7 +5,7 @@
 {debug: <i>La lista degli oggetti nella stanza è: {contentsForest}.}
 
 {
-    - forest == 1:
+    - forest == 1 && png_commonPauseTalking == false:
         {charTag(TheWitch, witch_state())}:   <i>La foresta è canto sospeso.</i>
 }
 

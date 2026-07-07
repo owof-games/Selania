@@ -6,7 +6,7 @@
 
 
 {
-    -kitchen == 1:
+    -kitchen == 1 && png_commonPauseTalking == false:
         {charTag(TheWitch, witch_state())}:   <i>La cucina si apre a nuovi ingredienti e grandi confidenze.</i>
 }    
 
