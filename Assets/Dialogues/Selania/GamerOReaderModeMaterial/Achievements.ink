@@ -132,7 +132,7 @@ VAR achievements_goodReader = notActive
                     - achievements_oneRewrite_notified == false:
                         ~ notification_achievement = true
                         ~ achievements_oneRewrite_notified = true
-                        ~ notification_achievement = "{achievements_oneRewrite}"
+                        ~ notification_achievement = "Una riscrittura"
                 }
 
         - LIST_COUNT(story_endedStories) == 2:
@@ -150,7 +150,7 @@ VAR achievements_goodReader = notActive
                     - achievements_threeRewrite_notified == false:
                         ~ achievements_threeRewrite_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_threeRewrite}"
+                        ~ notification_achievement = "Tre riscritture"
                 }
 
         - LIST_COUNT(story_endedStories) == 4:
@@ -164,7 +164,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fiveRewrite_notified == false:
                         ~ achievements_fiveRewrite_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fiveRewrite}"
+                        ~ notification_achievement = "Cinque riscritture"
                 }          
     }
 
@@ -182,7 +182,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fullKitchen_notified == false:
                         ~ achievements_fullKitchen_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fullKitchen}"
+                        ~ notification_achievement = "Cucinare con tuttə"
                 } 
 
 
@@ -235,7 +235,7 @@ VAR achievements_goodReader = notActive
                     - achievements_onePerfectIngredient_notified == false:
                         ~ achievements_onePerfectIngredient_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_onePerfectIngredient}"
+                        ~ notification_achievement = "Un ingrediente perfetto"
                 } 
 
         - achievements_perfectIngredientsCounter == 5:
@@ -247,7 +247,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fivePerfectIngredients_notified == false:
                         ~ achievements_fivePerfectIngredients_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fivePerfectIngredients}"
+                        ~ notification_achievement = "Cinque ingredienti perfetti"
                 }            
     }
 
@@ -294,7 +294,7 @@ VAR achievements_goodReader = notActive
                     - achievements_onePerfectGift_notified == false:
                         ~ achievements_onePerfectGift_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_onePerfectGift}"
+                        ~ notification_achievement = "Un dono perfetto"
                 } 
 
          - achievements_fivePerfectGifts_actualValue == 5:
@@ -303,7 +303,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fivePerfectGifts_notified == false:
                         ~ achievements_fivePerfectGifts_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fivePerfectGifts}"
+                        ~ notification_achievement = "Cinque doni perfetti"
                 }  
         
         - achievements_fivePerfectGifts_actualValue > 1:
@@ -331,7 +331,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fullFranco_notified == false:
                         ~ achievements_fullFranco_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fullFranco}"
+                        ~ notification_achievement = "Tutte le missioni di Franco"
                 }        
 
     }
@@ -350,7 +350,7 @@ VAR achievements_goodReader = notActive
                     - achievements_allSigils_notified == false:
                         ~ achievements_allSigils_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_allSigils}"
+                        ~ notification_achievement = "Tutti i sigilli"
                 } 
 
         - achievements_allSigils_actualValue > 0:
@@ -363,27 +363,27 @@ VAR achievements_goodReader = notActive
 //Achievement lettere.
     //Preparazione.
     {
-        - achievements_allLetters_Receivers hasnt FirstCharacter && first_character_notes.one:
+        - achievements_allLetters_Receivers hasnt FirstCharacter && grimoire_firstChar has grimFirstCharLetterOne:
             ~ achievements_allLetters_Receivers += FirstCharacter
             ~ achievements_allLetters_Counter ++
     }
     {
-        - achievements_allLetters_Receivers hasnt SecondCharacter && second_character_notes.one:
+        - achievements_allLetters_Receivers hasnt SecondCharacter && grimoire_secondChar has grimSecondCharLetterOne:
             ~ achievements_allLetters_Receivers += SecondCharacter
             ~ achievements_allLetters_Counter ++
     }
     {
-        - achievements_allLetters_Receivers hasnt ThirdCharacter && third_character_notes.one:
+        - achievements_allLetters_Receivers hasnt ThirdCharacter && grimoire_thirdChar has grimThirdCharLetterOne:
             ~ achievements_allLetters_Receivers += ThirdCharacter
             ~ achievements_allLetters_Counter ++
     }
     {
-        - achievements_allLetters_Receivers hasnt FourthCharacter && fourth_character_notes.one:
+        - achievements_allLetters_Receivers hasnt FourthCharacter && grimoire_fourthChar has grimFourthCharLetterOne:
             ~ achievements_allLetters_Receivers += FourthCharacter
             ~ achievements_allLetters_Counter ++
     }
     {
-        - achievements_allLetters_Receivers hasnt FifthCharacter && fifth_character_notes.one:
+        - achievements_allLetters_Receivers hasnt FifthCharacter && grimoire_fifthChar has grimFifthCharLetterOne:
             ~ achievements_allLetters_Receivers += FifthCharacter
             ~ achievements_allLetters_Counter ++
     }
@@ -402,7 +402,7 @@ VAR achievements_goodReader = notActive
                 - achievements_allLetters_notified == false:
                     ~ achievements_allLetters_notified = true
                     ~ notification_achievement = true
-                    ~ notification_achievement = "{achievements_allLetters}"
+                    ~ notification_achievement = "Una lettera per personaggiə"
             } 
 
         - else:
@@ -424,7 +424,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fullGreenhouse_notified == false:
                         ~ achievements_fullGreenhouse_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fullGreenhouse}"
+                        ~ notification_achievement = "Tutte le piante"
                 }  
 
         - achievements_fullGreenhouse_actualValue > 0:
@@ -484,7 +484,7 @@ VAR achievements_goodReader = notActive
                     - achievements_goodListener_notified == false:
                         ~ achievements_goodListener_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_goodListener}"
+                        ~ notification_achievement = "Grande ascoltatricə"
                 }
 
     - achievements_goodListener_actualValue > 0 :
@@ -508,7 +508,7 @@ VAR achievements_goodReader = notActive
                     - achievements_fullLore_notified == false:
                         ~ achievements_fullLore_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_fullLore}"
+                        ~ notification_achievement = "Grande storicə"
                 }   
 
     - achievements_fullLore_actualValue > 0:
@@ -532,7 +532,7 @@ VAR achievements_goodReader = notActive
                     - achievements_goodReader_notified == false:
                         ~ achievements_goodReader_notified = true
                         ~ notification_achievement = true
-                        ~ notification_achievement = "{achievements_goodReader}"
+                        ~ notification_achievement = "Grande lettricə"
                 }   
     
     - readStories > 0:

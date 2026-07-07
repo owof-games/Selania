@@ -118,7 +118,7 @@
                                                                         Vuole ricevere questi promemoria?
 
             + \ {charTag(PG, "neutral")}:                               <i>Sì.</i>
-                ~ notification_gamerNotification = true  
+                ~ notification_activeNotifications = true  
             + \ {charTag(PG, "neutral")}:                               <i>No.</i>
             -                                                            
 

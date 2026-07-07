@@ -40,8 +40,8 @@
 + [Gamer mode]
     //Attivo gli achievements ad hoc
     ~ settings_gamerMode = true
-    //Attivo le notifiche da gamer
-    ~ notification_gamerNotification = true
+    //Attivo le notifiche
+    ~ notification_activeNotifications = true
     //Sposto Carla alla fermata del treno
     ~ move_entity(Carla, TrainStop)
     -> debug_knot
@@ -49,9 +49,9 @@
 + [Reader mode]
     //Attivo gli achievements ad hoc
     ~ settings_gamerMode = false
-    //Attivo le notifiche da gamer
-    ~ notification_gamerNotification = false
-    //Sposto Carla alla fermata del treno
+    //Attivo le notifiche
+    ~ notification_activeNotifications = false
+    //Sposto Carla nel safekeeping
     ~ move_entity(Carla, Safekeeping)
     -> debug_knot
 
