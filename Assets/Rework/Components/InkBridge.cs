@@ -2455,7 +2455,7 @@ namespace Selania.Rework.Components
         private GrimoireTree? _latestGrimoireTree;
 
         /// <summary>
-        ///     The grimoire page identifiers that has changes. Only the actual node with changes is marked.
+        ///     The grimoire page identifiers that has changes. Only the actual nodes with changes are marked, the parents are not (event if they must show the change marker in the UI).
         /// </summary>
         private readonly HashSet<GrimoirePageIdentifier> _changedGrimoirePageIdentifiers = new();
 
@@ -2468,7 +2468,9 @@ namespace Selania.Rework.Components
             // navigate the whole grimoire
             var currentGrimoireTree = BuildGrimoireTree();
 
+            // start with the assumption that nothing has changed
             var changed = false;
+            _changedGrimoirePageIdentifiers.Clear();
 
             // if there's no "previous" grimoire, all the nodes are new
             if (_latestGrimoireTree == null)
@@ -2494,7 +2496,7 @@ namespace Selania.Rework.Components
             GrimoirePageIdentifier? previousTreeNode, GrimoirePageIdentifier currentTreeNode, int depth,
             HashSet<GrimoirePageIdentifier> visitedIdentifiers)
         {
-            // we have self-referencing nodes: if a node is already visited, let's say it has no changes. if it had, it's been already picked up earlier.
+            // we have self-referencing nodes: if a node is already visited, let's say it has no changes. if it has, it's been already picked up earlier.
             if (!visitedIdentifiers.Add(currentTreeNode)) return false;
 
             // security check to avoid infinite recursion
@@ -2517,16 +2519,18 @@ namespace Selania.Rework.Components
             // navigate the links
             foreach (var currentLink in currentPageContent.GrimoireLinks)
             {
+                // only consider forward links
                 if (currentLink.NavigationKind != NavigationKind.Forward) continue;
+                // find the corresponding child nodes of the current and previous trees
                 var currentChildNode = currentTree.LinkToIdentifier[(currentTreeNode, currentLink)];
                 var previousChildNode =
                     previousTreeNode == null ||
                     !previousTree.LinkToIdentifier.TryGetValue((previousTreeNode, currentLink), out var value)
                         ? null
                         : value;
+                // recursively visit the children
                 changed = CompareGrimoireTrees(previousTree, currentTree, previousChildNode, currentChildNode,
-                              depth + 1, visitedIdentifiers) ||
-                          changed;
+                    depth + 1, visitedIdentifiers) || changed;
             }
 
             return changed;
@@ -2544,7 +2548,7 @@ namespace Selania.Rework.Components
             // if the tree hasn't been visited yet, there's no change for sure
             if (_latestGrimoireTree == null) return false;
 
-            // create a stack of identifier to examine, and start with the current one
+            // create a stack of identifiers to examine, and start with the current one
             var identifiersToCheck = new Stack<GrimoirePageIdentifier>();
             identifiersToCheck.Push(identifier);
 
@@ -2555,8 +2559,11 @@ namespace Selania.Rework.Components
                 var identifierToCheck = identifiersToCheck.Pop();
                 if (_changedGrimoirePageIdentifiers.Contains(identifierToCheck)) return true;
 
-                // run over all the links and add their children identifiers
-                var grimoireLinks = _latestGrimoireTree.IdentifierToContent[identifierToCheck].GrimoireLinks;
+                // run over all the forward links and add their children identifiers
+                var grimoireLinks = _latestGrimoireTree
+                    .IdentifierToContent[identifierToCheck]
+                    .GrimoireLinks
+                    .Where(link => link.NavigationKind == NavigationKind.Forward);
                 foreach (var link in grimoireLinks)
                     identifiersToCheck.Push(_latestGrimoireTree.LinkToIdentifier[(identifierToCheck, link)]);
             }
@@ -2565,7 +2572,7 @@ namespace Selania.Rework.Components
         }
 
         /// <summary>
-        ///     Get all the links from a page that send to a page that has changed.
+        ///     Get all the forward links that navigate towards changed pages.
         /// </summary>
         /// <param name="root">The page whose links we look for.</param>
         /// <returns>The links pointing to changed pages.</returns>
@@ -2574,9 +2581,12 @@ namespace Selania.Rework.Components
             // if the tree hasn't been visited yet, there's no change for sure
             if (_latestGrimoireTree == null) return Enumerable.Empty<GrimoireLink>();
 
-            var links = _latestGrimoireTree.IdentifierToContent[root].GrimoireLinks;
+            var links = _latestGrimoireTree
+                .IdentifierToContent[root]
+                .GrimoireLinks;
             var linkToIdentifier = _latestGrimoireTree.LinkToIdentifier;
-            return links.Where(link => HasChanged(linkToIdentifier[(root, link)]));
+            return links.Where(link =>
+                link.NavigationKind == NavigationKind.Forward && HasChanged(linkToIdentifier[(root, link)]));
         }
 
         /// <summary>
@@ -2608,7 +2618,7 @@ namespace Selania.Rework.Components
         /// </summary>
         /// <param name="TreeRoot">Identifier for the root page of the tree.</param>
         /// <param name="IdentifierToContent">A map from page identifiers to their contents.</param>
-        /// <param name="LinkToIdentifier">A map from links to the identifiers of the visited page.</param>
+        /// <param name="LinkToIdentifier">A map from (source page + link) to the identifiers of the page pointed by the link.</param>
         private record GrimoireTree(
             GrimoirePageIdentifier TreeRoot,
             Dictionary<GrimoirePageIdentifier, GrimoirePageContent> IdentifierToContent,
@@ -2646,12 +2656,13 @@ namespace Selania.Rework.Components
                     var identifier = GetIdentifier();
                     var content = GetContent();
                     Logger.ZLogTrace($"Visiting {identifier}");
-                    // store the root, correspondences identifier => content and link => identifier, with some runtime checks
+                    // store the root and the correspondences identifier => content and link => identifier, with some runtime checks
                     root ??= identifier;
-                    if (lastFollowedLinkFromIdentifier is (not null, not null) lastFollowed)
-                        if (!linkToIdentifier.TryAdd(lastFollowed, identifier) &&
-                            !linkToIdentifier[lastFollowed].Equals(identifier))
-                            throw new InvalidOperationException("Found the same link with two different identifiers");
+                    if (lastFollowedLinkFromIdentifier is (not null, not null) lastFollowed &&
+                        !linkToIdentifier.TryAdd(lastFollowed, identifier) &&
+                        !linkToIdentifier[lastFollowed].Equals(identifier))
+                        throw new InvalidOperationException(
+                            "Found the same link pointing to two different identifiers");
 
                     if (!identifierToContent.TryAdd(identifier, content) &&
                         !identifierToContent[identifier].Equals(content))
