@@ -28,9 +28,9 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         public Observable<string> click => GetComponent<Button>().OnClickAsObservable().Select(_ => buttonName);
 
-        public void ShowNotification()
+        public void ShowNotification(bool show)
         {
-            grimoireNotification.ShowNotification();
+            grimoireNotification.ShowNotification(show);
         }
     }
 }

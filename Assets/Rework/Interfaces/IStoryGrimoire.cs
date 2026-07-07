@@ -283,7 +283,7 @@ namespace Selania.Rework.Interfaces
         /// <param name="name">Name to display (Chitarra, Riccio, ...).</param>
         /// <param name="description">Description of this character.</param>
         /// <param name="tasks">List of tasks, joined by newlines.</param>
-        /// <param name="choices">List of available choice texts.</param>
+        /// <param name="choices">List of available choice texts, together with a flag that indicates if there's a notification to show for that choice.</param>
         /// <param name="pentacleDescriptor">Descriptor for the contents of the pentacle.</param>
         /// <param name="indexText">Text for the index choice.</param>
         record SecondLevelCharacterPageDescriptor(
@@ -291,7 +291,7 @@ namespace Selania.Rework.Interfaces
             string name,
             string description,
             string tasks,
-            IEnumerable<string> choices,
+            IEnumerable<(string, bool)> choices,
             PentacleDescriptor pentacleDescriptor,
             string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);

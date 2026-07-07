@@ -14,10 +14,10 @@ namespace Selania.Rework.Components.Grimoire
             _animator = GetComponent<Animator>();
         }
 
-        public void ShowNotification()
+        public void ShowNotification(bool show)
         {
             if (_animator == null) throw new InvalidOperationException("Wait for Awake()");
-            _animator.SetBool(NotificationVisible, true);
+            _animator.SetBool(NotificationVisible, show);
         }
     }
 }

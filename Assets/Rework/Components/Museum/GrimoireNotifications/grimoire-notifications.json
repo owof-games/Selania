@@ -5173,6 +5173,12 @@
         {
           "VAR=": "fifthChar_InkLevel"
         },
+        {
+          "VAR?": "ink_empty"
+        },
+        {
+          "VAR=": "tutorial_CarlaInkIndicator"
+        },
         0,
         {
           "VAR=": "firstChar_relationshipIndicator"

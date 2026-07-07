@@ -337,7 +337,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 Leggi una storia di ribellione.
                 """,
                 "FirstCharacter",
-                new List<string> { "Conversation", "Present", "Kitchen" });
+                new List<(string, bool)> { ("Conversation", true), ("Present", false), ("Kitchen", true) });
         }
 
         public void SetSecondLevelRiccio()
@@ -349,7 +349,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 Leggi una storia sulla rabbia.
                 """,
                 "SecondCharacter",
-                new List<string> { "Rewrite", "Letters" });
+                new List<(string, bool)> { ("Rewrite", true), ("Letters", false) });
         }
 
         public void SetPentacleRandomly()

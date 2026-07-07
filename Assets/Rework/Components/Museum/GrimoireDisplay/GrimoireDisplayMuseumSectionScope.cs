@@ -1,4 +1,7 @@
-﻿using R3;
+﻿using System;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using R3;
 using Selania.Rework.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -18,6 +21,21 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             builder.RegisterLogger();
             builder.RegisterInstance<IStoryGamerMode>(new GamerModeFake(gamerModeSubject));
             builder.RegisterInstance<IStoryCharacterRelationshipStatus>(new StoryCharacterRelationshipStatusFake());
+            builder.RegisterInstance<IStoryStateSerializer>(new StoryStateSerializerFake());
+        }
+
+        private class StoryStateSerializerFake : IStoryStateSerializer
+        {
+            public async IAsyncEnumerable<IStoryStateSerializer.SaveState> GetSaveStates()
+            {
+                await UniTask.CompletedTask;
+                yield break;
+            }
+
+            public UniTask StartStory(string? descriptor)
+            {
+                throw new NotSupportedException();
+            }
         }
 
         private class GamerModeFake : IStoryGamerMode

@@ -1823,6 +1823,10 @@ namespace Selania.Rework.Components
         {
             var story = GetStory();
 
+            // mark the character page identifier as seen
+            var currentPageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(currentPageIdentifier);
+
             // parse the tags
             var tags = MakeTags(story.currentTags);
             var inkName = tags.FirstOrDefault(tag => tag.category == "character")?.value;
@@ -1851,8 +1855,10 @@ namespace Selania.Rework.Components
             while (story.currentChoices.Count == 0) tasks.Add(story.Continue().Trim());
 
             // parse choices
+            var changedChoiceIndices =
+                GetLinksToChangedPages(currentPageIdentifier).Select(link => link.ChoiceIndex).ToList();
             var choices = story.currentChoices.Where(choice => choice.tags == null || choice.tags.Count == 0)
-                .Select(choice => choice.text)
+                .Select(choice => (choice.text, changedChoiceIndices.Contains(choice.index)))
                 .ToList();
 
             // navigation
@@ -2378,6 +2384,10 @@ namespace Selania.Rework.Components
         {
             var story = GetStory();
 
+            // mark this page as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
             // extract info from tags
             var tags = MakeTags(story.currentTags);
             var style = tags.FirstOrDefault(t => t.category == "style")?.value ?? "character";
@@ -2468,9 +2478,9 @@ namespace Selania.Rework.Components
             // navigate the whole grimoire
             var currentGrimoireTree = BuildGrimoireTree();
 
-            // start with the assumption that nothing has changed
+            // start with the assumption that nothing has changed (but don't clear _changedGrimoirePageIdentifiers
+            // because a page must be left as unseen until it's actually visited)
             var changed = false;
-            _changedGrimoirePageIdentifiers.Clear();
 
             // if there's no "previous" grimoire, all the nodes are new
             if (_latestGrimoireTree == null)
@@ -2552,11 +2562,19 @@ namespace Selania.Rework.Components
             var identifiersToCheck = new Stack<GrimoirePageIdentifier>();
             identifiersToCheck.Push(identifier);
 
+            // also keep track of those visited: third level sigil pages loop back to themselves and appear as forward links, but cause infinite loops
+            var checkedIdentifiers = new HashSet<GrimoirePageIdentifier>();
+
             // until there's at least one to examine
             while (identifiersToCheck.Count > 0)
             {
-                // check if that identifier specifically has changed
+                // sanity check
+                if (identifiersToCheck.Count > 500)
+                    throw new InvalidOperationException("Page change check got into an infinite loop");
+
+                // check if that identifier specifically has changed, and that we haven't visited it yet
                 var identifierToCheck = identifiersToCheck.Pop();
+                if (!checkedIdentifiers.Add(identifierToCheck)) continue;
                 if (_changedGrimoirePageIdentifiers.Contains(identifierToCheck)) return true;
 
                 // run over all the forward links and add their children identifiers

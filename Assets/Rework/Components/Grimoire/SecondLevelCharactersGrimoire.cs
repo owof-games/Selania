@@ -87,9 +87,9 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
-        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name (see <see cref="buttonInfo"/>).</param>
+        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name, together with a flag indicating if that button has a notification (see <see cref="buttonInfo"/>).</param>
         public void SetUpPage(string characterName, string characterDescription, string characterTasks,
-            string portraitName, ICollection<string> enabledButtonNames)
+            string portraitName, ICollection<(string, bool)> enabledButtonNames)
         {
             characterNameTextMeshPro.text = characterName;
             characterDescriptionTextMeshPro.text = characterDescription;
@@ -115,11 +115,15 @@ namespace Selania.Rework.Components.Grimoire
 
             foreach (var enabledButtonName in enabledButtonNames)
             {
-                var info = buttonInfo.FirstOrDefault(info => info.clickName == enabledButtonName);
+                var info = buttonInfo.FirstOrDefault(info => info.clickName == enabledButtonName.Item1);
                 if (info == null)
                     Logger.ZLogError($"Cannot find button with name {enabledButtonName}.");
                 else
+                {
                     info.button.interactable = true;
+                    var grimoireNotification = info.button.GetComponentInChildren<GrimoireNotification>();
+                    grimoireNotification.ShowNotification(enabledButtonName.Item2);
+                }
             }
         }
 

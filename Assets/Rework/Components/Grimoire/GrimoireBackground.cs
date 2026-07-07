@@ -415,7 +415,7 @@ namespace Selania.Rework.Components.Grimoire
 
             topLevelButton.interactable = isButtonEnabled;
 
-            if (hasNotification) topLevelButton.ShowNotification();
+            topLevelButton.ShowNotification(hasNotification);
         }
 
         /// <summary>
@@ -833,9 +833,9 @@ namespace Selania.Rework.Components.Grimoire
         ///     Name of the portrait (see <see cref="ISettingsBook.GetCharacterPortrait" />,
         ///     <see cref="SelaniaSettings.CharacterInfo.grimoirePortrait" />).
         /// </param>
-        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name.</param>
+        /// <param name="enabledButtonNames">The list of buttons enabled, identified by their name, together with a flag indicating if that button has a notification.</param>
         public void SetUpSecondLevelCharacterPage(string characterName, string characterDescription,
-            string characterTasks, string portraitName, ICollection<string> enabledButtonNames)
+            string characterTasks, string portraitName, ICollection<(string, bool)> enabledButtonNames)
         {
             secondLevelCharactersGrimoire.SetUpPage(characterName, characterDescription, characterTasks, portraitName,
                 enabledButtonNames);

@@ -16,6 +16,7 @@ VAR secondChar_InkLevel = ink_empty
 VAR thirdChar_InkLevel = ink_empty
 VAR fourthChar_InkLevel = ink_empty
 VAR fifthChar_InkLevel = ink_empty
+VAR tutorial_CarlaInkIndicator = ink_empty
 
 VAR firstChar_relationshipIndicator = 0
 VAR secondChar_relationshipIndicator = 0

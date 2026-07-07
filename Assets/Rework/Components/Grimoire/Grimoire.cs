@@ -395,7 +395,8 @@ namespace Selania.Rework.Components.Grimoire
         private void OnGrimoireChanged(Unit _)
         {
             // when anything changes in the grimoire, the root node has surely changed
-            rootGrimoireNotification.ShowNotification();
+            // TODO: is it, though? when do we hide it?
+            rootGrimoireNotification.ShowNotification(true);
         }
     }
 }
