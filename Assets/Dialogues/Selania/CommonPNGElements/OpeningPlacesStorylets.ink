@@ -97,12 +97,12 @@
                         ~ change_entity_place(SecondCharacter)
                 }
                 {
-                - contentsLibrary has FirstCharacter:
-                    ~ change_entity_place(FirstCharacter)
+                    - contentsLibrary has FirstCharacter:
+                        ~ change_entity_place(FirstCharacter)
                 }
                 {
-                - contentsLibrary has FifthCharacter:
-                    ~ change_entity_place(Mentor)
+                    - contentsLibrary has FifthCharacter:
+                        ~ change_entity_place(Mentor)
                 }
 
                     ~ move_entity(ThirdCharacter, Library)

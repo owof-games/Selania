@@ -2235,7 +2235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4449773367406173467, guid: 18d0a60e1cfae7640a3c7faa96873a75, type: 3}
       propertyPath: m_Name
-      value: 30 - ThirdCharacter
+      value: 38 - ThirdCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 4449773367406173467, guid: 18d0a60e1cfae7640a3c7faa96873a75, type: 3}
       propertyPath: m_IsActive
@@ -2243,7 +2243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6190357544502295237, guid: 18d0a60e1cfae7640a3c7faa96873a75, type: 3}
       propertyPath: m_SortingOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
