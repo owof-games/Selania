@@ -399,7 +399,7 @@
 
         {
         - are_two_entities_together(FirstCharacter, PG) or are_two_entities_together(SecondCharacter, PG) or are_two_entities_together(Mentor, PG):
-        {charTag(ThirdCharacter, "neutral")}:                           {charNameThree}, ho bisogno di parlarti, solo noi due.
+        {charTag(ThirdCharacter, "neutral")}:                           {player_name}, ho bisogno di parlarti, solo noi due.
             {
             - are_two_entities_together(FirstCharacter, PG):
             {charTag(FirstCharacter, "neutral")}:                       Volevo giusto segnarmi da qualche parte un'idea per una melodia.

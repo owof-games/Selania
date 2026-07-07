@@ -651,7 +651,7 @@
         + [<i>la mia bocca è intorpidita</i>]
         + [<i>la mente limpida</i>]
         + [<i>e tutto ciò che mi spaventa</i>]
-        + [<i>scomparso.<i/>]
+        + [<i>scomparso.</i>]
         -
         {charTag(ThirdCharacter, "jester")}:                            Ma che faccia c'hai?!?
         {charTag(ThirdCharacter, "bored")}:                             Che posto di matti.

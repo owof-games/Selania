@@ -4,6 +4,7 @@
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
+~ temp charNameFive= translator(fifthChar_ActualName)
 
 
 {
@@ -71,17 +72,11 @@
     }
 
 
-    
         + \ {charTag(PG, "neutral")}:                                                   Avrei bisogno di una mano.
             -> support
         
-        + {player_somethingStrangeTalkable != ()}\ {charTag(PG, "neutral")}:            Mi è successa una cosa strana.
+        + {player_somethingStrangeTalkable != ()}\ {charTag(PG, "neutral")}:            [<i>Racconto a {charNameFive} una cosa strana che mi è successa.</i>]
             -> little_storylets
-
-        // + {grimoire_fifthChar has grimMentorIntro}\ {charTag(PG, "neutral")}:           Mi è scomparso il grimorio, potresti riattivarmelo?
-        //     ~ grimoire_isEnabled = true
-        // {charTag(FifthCharacter, "hurry")}:                                             Fatto.     
-        //     -> top
 
         + \ {charTag(PG, "neutral")}:                                                   Ho cambiato idea.
             -> notification_system ->
@@ -99,22 +94,22 @@
     - (top)
     {
     - thirdChar_storyStatus != story_storyRemote:
-    {charTag(FifthCharacter, "hurry")}:                                         Hai bisogno dei miei consigli tesoro?
+    {charTag(FifthCharacter, "hurry")}:                                             Hai bisogno dei miei consigli tesoro?
 
     - else:
-    {charTag(FifthCharacter, "bored")}:                                         Vai.
+    {charTag(FifthCharacter, "bored")}:                                             Vai.
     }
     
         + {tutorial_mentorInkAndYouAreARewriter && tutorial_MentorTutorial == true}\ {charTag(PG, "neutral")}:     Mi ripeteresti cosa devo fare?
             -> to_do
         
-        + \ {charTag(PG, "neutral")}:                                           C'è una cosa che mi riguarda.
+        + \ {charTag(PG, "neutral")}:                                               C'è una cosa che mi riguarda.
             -> myself
         
-        + \ {charTag(PG, "neutral")}:                                           Vorrei consigli su come stare meglio.
+        + \ {charTag(PG, "neutral")}:                                               Vorrei consigli su come stare meglio.
             -> mindfulness -> support
     
-        + \ {charTag(PG, "neutral")}:                                           Vorrei parlare d'altro.
+        + \ {charTag(PG, "neutral")}:                                               Vorrei parlare d'altro.
             -> helping_mentor.top
         -
             -> top   
@@ -122,19 +117,19 @@
     = myself
     {
     - thirdChar_storyStatus != story_storyRemote:
-    {charTag(FifthCharacter, "hurry")}:                                         Come posso aiutarti?
+    {charTag(FifthCharacter, "hurry")}:                                             Come posso aiutarti?
 
     - else:
-    {charTag(FifthCharacter, "bored")}:                                         Vai.
+    {charTag(FifthCharacter, "bored")}:                                             Vai.
     }
             
-            + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare il mio nome.
+            + \ {charTag(PG, "neutral")}:                                           Vorrei cambiare il mio nome.
                     -> name_choice -> support
             
-            + \ {charTag(PG, "neutral")}:                                       Vorrei cambiare i miei pronomi.
+            + \ {charTag(PG, "neutral")}:                                           Vorrei cambiare i miei pronomi.
                     -> gender -> support
             
-            + \ {charTag(PG, "neutral")}:                                       A dire il vero sono a posto così.
+            + \ {charTag(PG, "neutral")}:                                           A dire il vero sono a posto così.
                     -> helping_mentor.top
  
  
@@ -321,7 +316,7 @@
                             {charTag(TheWitch, "{witch_state()}")}:                                 <i>E Franco ha ragione.</i>
                         }    
             }            
-            {charTag(PG, "sad")}:                                                                   Non mi fraintendere, ma ricordati chi ti sta aiutando dal tuo arrivo.
+            {charTag(FifthCharacter, "sad")}:                                                       Non mi fraintendere, ma ricordati chi ti sta aiutando dal tuo arrivo.
                                                                                                     Chi ti ha aperto la serra.
                                                                                                     Chi è qui ad ascoltare le cose strane che racconti.
             {charTag(FifthCharacter, "neutral")}:                                                   Farei tutto questo, se fossi una persona diversa?
