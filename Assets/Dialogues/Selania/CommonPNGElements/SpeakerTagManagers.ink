@@ -110,7 +110,7 @@
         {
             - grimoire_firstChar hasnt grimFirstCharPresentation:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Chitarra"
                     - else:
                         ~ return "???"
@@ -140,7 +140,7 @@
         {
             - ! second_char_main_storylets.one.nameSecond:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Riccio"
                     - else:
                         ~ return "???"
@@ -170,7 +170,7 @@
         {
             - ! third_char_main_storylets.one:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Boccale"
                     - else:
                         ~ return "Boccale"
@@ -225,7 +225,7 @@
         {
             - !fifth_char_intro.waterChoice && !fifth_char_intro.selfName:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Mentore"
                     - else:
                         ~ return "???"
@@ -278,7 +278,7 @@
         {
             - frog_nameDiscovered == false:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Franco La Rana"
                     - else:
                         ~ return "???"
@@ -301,7 +301,7 @@
 
             - else:
                 {
-                    - gm_rm_activation.witch.riscrittura:
+                    - gm_rm_activation.settings_and_choices.riscrittura:
                         ~ return "Carla"
                     - else:
                         ~ return "???"

@@ -35,15 +35,15 @@
 {debug_dialogues:
     -> debug_dialogue_text
 - else:
-    -> witch
+    -> settings_and_choices
 }
 
 
-= witch
+= settings_and_choices
     //saltiamo direttamente al top3 durante il testing su unity
     -> top3
 
-    {charTag(TheWitch, witch_state())}:                                 <i>Il testing è in ink?
+    {charTag(Carla, "bored")}:                                          Il testing è in ink?
             + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sì.</i>
                 -> top2
             + (not_ink) \ {charTag(PG, "neutral")}:                     <i>No.</i>
@@ -51,18 +51,17 @@
 
     - (top2)
 
-        {charTag(TheWitch, witch_state())}:                             <i>Cosa serve?</i>
+        {charTag(Carla, "bored")}:                                      Cosa serve?
             
 
             * \ {charTag(PG, "neutral")}:                               <i>Sono qui per testare il Grimorio.</i>
                 -> debug_richGrimoire ->
-            {charTag(TheWitch, witch_state())}:                         <i>Ho riempito il grimorio come se tu avessi finito la prima parte di gioco, ma senza lo sbrocco di Mentore.</i>
-                                                                        <i>Ho inoltre sbloccato tutti i sigilli e le piante.</i>
+            {charTag(Carla, "neutral")}:                                Ho riempito il grimorio come se lei avesse finito la prima parte di gioco, ma senza lo sbrocco di Mentore.
+                                                                        Le ho inoltre sbloccato tutti i sigilli e le piante.
 
             * (riscrittura) \ {charTag(PG, "neutral")}:                 <i>Impostami le prime 3 png come pronte per la riscrittura.
                 ~ debugRewriting()
                                                     
-
             * \ {charTag(PG, "neutral")}:                               <i>Aprimi tutti i luoghi del gioco.
                 ~ debug_places_open()
 
@@ -73,7 +72,7 @@
                                    
             -
 
-    {charTag(TheWitch, witch_state())}:                                 <i>Serve altro?
+    {charTag(Carla, "bored")}:                                          Serve altro?
             + {!debug_stochastic}\ {charTag(PG, "neutral")}:            <i>Sì.
                 -> top2
             + \ {charTag(PG, "neutral")}:                               <i>No.
@@ -82,10 +81,10 @@
 
     - (top3)
             // ~ debug_Franco()
-    {charTag(TheWitch, witch_state())}:                                 <i>Il viaggio sta per iniziare.
-                                                                        <i>Che modalità di gioco vuoi attivare?
-                                                                        <i>La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
-                                                                        <i>La modalità <b>Gamer Mode</b> è pensata per chi preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. L'esperienza è più facile rispetto al Reader Mode.
+    {charTag(Carla, "neutral")}:                                        Il viaggio sta per iniziare.
+                                                                        Che modalità di gioco vuole attivare?
+    {charTag(Carla, "happy")}:                                          La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
+    {charTag(Carla, "bored")}:                                          La modalità <b>Gamer Mode</b> è pensata per chi preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. L'esperienza è più facile rispetto al Reader Mode.
 
         //Aggiungere spiegazione delle due modalità per il testing
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Gamer Mode.</i>
@@ -95,11 +94,13 @@
                 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Reader Mode.</i>
     -
-    {charTag(TheWitch, witch_state())}:                                 <i>Puoi anche decidere che tipo di tutorial attivare.</i>
-                                                                        <i>Puoi affidarti a <b>Mentore</b>, che ha un approccio più narrativo e meno diretto. Il suo supporto è particolarmente adatto per una modalità di gioco esplorativa e meditativa, come quella del Reader Mode.</i>
-                                                                        <i>Oppure c'è <b>Carla</b>: più diretta, ti spiegherà tutto quello che devi fare con degli esempi che vengono dalla sua enorme conoscenza come Sacra Capra Burocratica. Il suo supporto è particolarmente adatto per una modalità di gioco più pratica, come il Gamer Mode.</i>
-                                                                        <i>C'è anche la possibilità di andare senza guida alcuna, o di chiedere l'aiuto di entrambe.</i>
-                                                                        <i>Cosa sceglierai?</i>
+    {charTag(Carla, "neutral")}:                                        Può anche decidere che tipo di tutorial attivare.
+                                                                        Può affidarsi a <b>Mentore</b>, che ha un approccio più narrativo e meno diretto. Il suo supporto è particolarmente adatto per una modalità di gioco esplorativa e meditativa, come quella del Reader Mode.</i>
+    {charTag(Carla, "bored")}:                                          Oppure ci sono io: più diretta, le spiegherò tutto quello che deve fare con degli esempi che vengono dalla mia enorme conoscenza come Sacra Capra Burocratica.
+                                                                        Il mio supporto è particolarmente adatto per una modalità di gioco più pratica, come il Gamer Mode.
+                                                                        C'è anche la possibilità di chiedere l'aiuto di entrambe, o di andare senza guida.
+    {charTag(Carla, "happy")}:                                          Così posso riposare.
+    {charTag(Carla, "neutral")}:                                        Cosa sceglie?
 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di Mentore.</i>
                     ~ tutorial_MentorTutorial = true
@@ -113,8 +114,8 @@
             
             + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>                                                            
             -
-    {charTag(TheWitch, witch_state())}:                                 <i>Infine: possiamo notificarti quando alcune cose sono cambiate (es: una pianta è cresciuta, hai raggiunto gli obiettivi di Franco, hai completato un achievement).
-                                                                        <i>Vuoi ricevere questi miei promemoria?
+    {charTag(Carla, "neutral")}:                                        Infine: può ricevere delle notifiche quando alcune cose sono cambiate (es: ha completato un achievement).
+                                                                        Vuole ricevere questi promemoria?
 
             + \ {charTag(PG, "neutral")}:                               <i>Sì.</i>
                 ~ notification_gamerNotification = true  
@@ -122,7 +123,7 @@
             -                                                            
 
 
-    {charTag(TheWitch, witch_state())}:                                 <i>Perfetto.
-                                                                        <i>Ti auguriamo il migliore degli inizi per questo tuo viaggio.</i>
+    {charTag(Carla, "sad")}:                                            Abbiamo finito.
+    {charTag(Carla, "neutral")}:                                        Rispettando i protocolli del Ministero della Pubblica Umiliazione, le auguriamo un buon viaggio, e le ricordiamo che l'ufficio Lamentii e Lamentele è chiuso dal 1976.
 
 -> main

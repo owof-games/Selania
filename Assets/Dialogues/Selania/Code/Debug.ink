@@ -369,7 +369,7 @@ Chitarra ci dice qualcosa.
     -> glyph_choice_manager(false, aetherC) ->
 
     + Voglio andare avanti
-    -> gm_rm_activation.witch
+    -> gm_rm_activation.settings_and_choices
 
 - (top2)
 METTO IN EVIDENZA
@@ -424,6 +424,6 @@ UTILIZZI RIMASTI = {glyph_actualSigilUses}
         -> glyph_choice_manager(true, aetherC) ->  top2
 
 + Voglio andare avanti
-    -> gm_rm_activation.witch
+    -> gm_rm_activation.settings_and_choices
 -
 -> top
