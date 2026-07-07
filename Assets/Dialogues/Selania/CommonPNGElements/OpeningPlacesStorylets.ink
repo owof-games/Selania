@@ -13,11 +13,13 @@
 *******************************************/
 {
     //Apertura della discarica
-        - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump && openingPlacesPause <= 0:
+        //Pausa dettata sia da openingPlacesPause, perché è un nuovo luogo, che da png_commonPauseTalking, perché è un dialogo.
+        - grimoire_thirdChar has grimThirdCharOne && (entity_location(FromForestToDump) == Safekeeping) && (entity_location(PG) != Forest) && grimoire_witch hasnt grimWitchOpenDump && openingPlacesPause <= 0 && png_commonPauseTalking == false:
             -> open_the_dump
 
     //Boccale dalla strega
-        - grimoire_thirdChar hasnt grimWitchThirdChar && ((grimoire_thirdChar has grimThirdCharMentor) or (grimoire_thirdChar has grimFirstThirdChar) or (thirdChar_firstCharRage == true)) && witch_thirdCharSummoned == false:
+        //Pausa dettata da png_commonPauseTalking, perché è un dialogo.
+        - grimoire_thirdChar hasnt grimWitchThirdChar && ((grimoire_thirdChar has grimThirdCharMentor) or (grimoire_thirdChar has grimFirstThirdChar) or (thirdChar_firstCharRage == true)) && witch_thirdCharSummoned == false && png_commonPauseTalking == false:
         //Step uno: sposto Boccale al dump e tutti gli altri altrove
                     ~ move_entity(ThirdCharacter, Dump)
             {
@@ -42,15 +44,15 @@
         //Step tre: attivo il blocco per evitare che Boccale venga randomizzato fino a quando non gli abbiamo parlato, e che la frase sopra venga ripetuta di nuovo.
             ~ witch_thirdCharSummoned = true
 
-
+    //Pausa: per questi storylets per ora è dettata solo da openingPlacesPause e non da png_commonPauseTalking sia perché ci sta che, essendo una sola frase, venga detta anche dopo un altro dialogo, sia perché ho paura si allarghino troppo i tempi di apertura dei luoghi
     //Invito allo stagno per aprire la cucina
     - are_two_entities_together(FirstCharacter, PG) && ((LIST_COUNT(grimoire_firstChar) + LIST_COUNT(grimoire_secondChar) + LIST_COUNT(grimoire_thirdChar)) > openingKitchen_delay) && entity_location(PG) != Pond && player_accessiblePlaces hasnt Kitchen && openingPlacesPause <= 0:
 
             {stopping:
-                - {charTag(FirstCharacter, "curious")}:       Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!
-                - {charTag(FirstCharacter, "curious")}:       Scusa, prima c'erano cose più importanti da fare, ma ritroviamoci allo stagno, è importante!
-                - {charTag(FirstCharacter, "curious")}:       La terza sarà la volta buona, spero. Ti aspetto allo stagno, preparati perché è una cosa fighissima!
-                - {charTag(FirstCharacter, "curious")}:       Bene, vediamo se è l'ultima volta. Vediamoci allo stagno {player_name}, così ti mostro quello che ho combinato!
+                - {charTag(FirstCharacter, "curious")}:             Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!
+                - {charTag(FirstCharacter, "curious")}:             Scusa, prima c'erano cose più importanti da fare, ma ritroviamoci allo stagno, è importante!
+                - {charTag(FirstCharacter, "curious")}:             La terza sarà la volta buona, spero. Ti aspetto allo stagno, preparati perché è una cosa fighissima!
+                - {charTag(FirstCharacter, "curious")}:             Bene, vediamo se è l'ultima volta. Vediamoci allo stagno {player_name}, così ti mostro quello che ho combinato!
             }
                 ~ move_entity(FirstCharacter, Pond)
                 ~ firstChar_PondInvite = true
@@ -65,10 +67,10 @@
     - are_two_entities_together(SecondCharacter, PG) && grimoire_secondChar has grimSecondCharTwo && entity_location(PG) != Forest && entity_location(PG) != Kitchen && player_accessiblePlaces hasnt Library && openingPlacesPause <= 0:
         
             {stopping:
-                - {charTag(SecondCharacter, "energy")}:       Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!
-                - {charTag(SecondCharacter, "energy")}:       Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla foresta, vieni!
-                - {charTag(SecondCharacter, "neutral")}:        Vieni alla foresta, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
-                - {charTag(SecondCharacter, "neutral")}:        Mi arrendo. Vediamoci alla foresta, ho una cosa da farti vedere.
+                - {charTag(SecondCharacter, "energy")}:             Ehi {player_name}! Troviamoci alla foresta. Ho una cosa che devi vedere!
+                - {charTag(SecondCharacter, "energy")}:             Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla foresta, vieni!
+                - {charTag(SecondCharacter, "neutral")}:            Vieni alla foresta, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
+                - {charTag(SecondCharacter, "neutral")}:            Mi arrendo. Vediamoci alla foresta, ho una cosa da farti vedere.
             }
                 ~ move_entity(SecondCharacter, Forest)
                 ~ secondChar_ForestInvite = true
@@ -83,10 +85,10 @@
         - are_two_entities_together(ThirdCharacter, PG) && grimoire_thirdChar has grimThirdCharTwo && entity_location(PG) != Library && entity_location(PG) != Kitchen && player_accessiblePlaces hasnt Nest && player_accessiblePlaces has Library && openingPlacesPause <= 0:
             
                 {stopping:
-                - {charTag(ThirdCharacter, "neutral")}:       Ehi {player_name}! Troviamoci alla biblioteca. Ho una cosa che devi vedere!
-                - {charTag(ThirdCharacter, "neutral")}:       Uffa, prima c'era una cosa più importante ma ora dobbiamo assolutamente parlare alla biblioteca, vieni!
-                - {charTag(ThirdCharacter, "neutral")}:       Vieni alla biblioteca, che ti dico quella cosa importante, che non c'è mica una quarta volta vero?
-                - {charTag(ThirdCharacter, "neutral")}:       Mi arrendo. Vediamoci alla biblioteca, ho una cosa da farti vedere.
+                - {charTag(ThirdCharacter, "neutral")}:             Ehi {player_name}! Troviamoci alla biblioteca, ti ho preparato una sorpresina da dieci!
+                - {charTag(ThirdCharacter, "neutral")}:             Merda, prima mi sono distratto e non ti ho fatto vedere quella roba in biblioteca, raggiungimi!
+                - {charTag(ThirdCharacter, "neutral")}:             Bah, vediamo se ce la facciamo: vieni in biblioteca {thirdChar_recordedPlayerPronoun has him:vecio|{thirdChar_recordedPlayerPronoun has her:zia|bomber}} e ti mostro una sorpresa.
+                - {charTag(ThirdCharacter, "neutral")}:             Mi arrendo. Vediamoci alla biblioteca.
             }
                     ~ move_entity(ThirdCharacter, Library)
                     ~ thirdChar_LibraryInvite = true
