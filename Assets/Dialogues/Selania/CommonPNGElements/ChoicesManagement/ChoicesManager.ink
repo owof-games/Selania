@@ -757,7 +757,7 @@ VAR glyph_rewritingMultiplier = 3
 // C'era un sigillo attivo e l'ho consumato completamente?
 {glyph_actualSigilUses == 0:
     // Messaggio di Luna
-    {charTag(TheWitch, witch_state())}:   L'effetto di {glyph_actualActiveSigil} si è esaurito.
+    {charTag(TheWitch, witch_state())}:                         <i>L'effetto di {sigils_translator(glyph_actualActiveSigil)}  si è esaurito.
     //poi aggiorno le informazioni sul sigillo principale
     ~ glyph_grimoireMainSigilsUpdater()
     //sposto il sigillo su quelli utilizzati
