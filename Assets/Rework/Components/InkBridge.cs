@@ -1964,6 +1964,10 @@ namespace Selania.Rework.Components
             // get the current story
             var story = GetStory();
 
+            // mark as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
             // extract info from tags
             var tags = MakeTags(story.currentTags);
             var favour = tags.FirstOrDefault(tag => tag.category == "favour")?.value ?? "";
