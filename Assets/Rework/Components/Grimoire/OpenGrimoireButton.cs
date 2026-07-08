@@ -14,8 +14,12 @@ namespace Selania.Rework.Components.Grimoire
         private static readonly int Hovered = Animator.StringToHash("Hovered");
         private static readonly int Disabled = Animator.StringToHash("Disabled");
 
+        [SerializeField] private GrimoireNotification rootGrimoireNotification = null!;
+
         private Animator? _animator;
         private Button? _button;
+
+        private bool _grimoireHasNotifications;
         private bool _isGrimoireEnabled;
 
         private bool _isGrimoireOpened;
@@ -48,6 +52,14 @@ namespace Selania.Rework.Components.Grimoire
 
             // whenever the enable status of the grimoire changes, update it
             StoryGrimoire.IsGrimoireEnabled.Subscribe(OnGrimoireEnabled).AddTo(this);
+
+            StoryGrimoire.GrimoireNotificationsChanged.DistinctUntilChanged().Subscribe(OnGrimoireChanged).AddTo(this);
+
+            StoryGrimoire.IsGrimoireEnabled
+                .Chunk(2, 1)
+                .Where(values => !values[0] && values[1])
+                .Select(_ => Unit.Default)
+                .Subscribe(OnGrimoireJustEnabled).AddTo(this);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -88,9 +100,10 @@ namespace Selania.Rework.Components.Grimoire
             // the grimoire button is disabled if Ink says the grimoire is still disabled, or if the grimoire is opened
             var isDisabled = !_isGrimoireEnabled || _isGrimoireOpened;
             Logger.ZLogTrace(
-                $"Since _isGrimoireEnabled = {_isGrimoireEnabled} and _isGrimoireOpened = {_isGrimoireOpened}, then isDisabled = {isDisabled}");
+                $"Since _isGrimoireEnabled = {_isGrimoireEnabled} and _isGrimoireOpened = {_isGrimoireOpened}, then isDisabled = {isDisabled}; _grimoireHasNotifications = {_grimoireHasNotifications}");
             _animator?.SetBool(Disabled, isDisabled);
             if (_button != null) _button.interactable = !isDisabled;
+            rootGrimoireNotification.ShowNotification(_grimoireHasNotifications && !isDisabled);
         }
 
         /// <summary>
@@ -111,6 +124,20 @@ namespace Selania.Rework.Components.Grimoire
             Logger.ZLogInformation($"Close grimoire request.");
             _isGrimoireOpened = false;
             Logger.ZLogTrace($"Setting grimoire opened status to false: updating animation and status");
+            UpdateAnimationAndStatus();
+        }
+
+        private void OnGrimoireChanged(bool stillSomethingToSee)
+        {
+            // when anything changes in the grimoire, the root node has surely changed
+            // TODO: is it, though? when do we hide it?
+            _grimoireHasNotifications = stillSomethingToSee;
+            UpdateAnimationAndStatus();
+        }
+
+        private void OnGrimoireJustEnabled(Unit _)
+        {
+            _grimoireHasNotifications = true;
             UpdateAnimationAndStatus();
         }
     }

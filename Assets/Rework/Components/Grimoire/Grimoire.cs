@@ -14,7 +14,6 @@ namespace Selania.Rework.Components.Grimoire
         [SerializeField] private GrimoireBackground grimoireBackground = null!;
         [SerializeField] private OpenGrimoireButton openGrimoireButton = null!;
 
-        [SerializeField] private GrimoireNotification rootGrimoireNotification = null!;
         [Inject] internal ILogger<Grimoire> Logger = null!;
         [Inject] internal IStoryChoicesSelector StoryChoicesSelector = null!;
         [Inject] internal IStoryGrimoire StoryGrimoire = null!;
@@ -50,7 +49,6 @@ namespace Selania.Rework.Components.Grimoire
             StoryGrimoire.thirdLevelTextPreviousPage
                 .Subscribe(OnThirdLevelTextPreviousPage)
                 .AddTo(this);
-            StoryGrimoire.GrimoireChanged.Subscribe(OnGrimoireChanged).AddTo(this);
             // grimoire events: navigation
             grimoireBackground.indexChoiceObservable.Subscribe(PickChoice).AddTo(this);
             grimoireBackground.backToLevelTwoObservable.Subscribe(PickChoice).AddTo(this);
@@ -394,13 +392,6 @@ namespace Selania.Rework.Components.Grimoire
             openGrimoireButton.OnGrimoireCloseButtonClick();
             grimoireBackground.HideGrimoire();
             StoryGrimoire.SwitchFromGrimoire();
-        }
-
-        private void OnGrimoireChanged(Unit _)
-        {
-            // when anything changes in the grimoire, the root node has surely changed
-            // TODO: is it, though? when do we hide it?
-            rootGrimoireNotification.ShowNotification(true);
         }
     }
 }

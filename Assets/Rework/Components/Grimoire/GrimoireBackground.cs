@@ -392,7 +392,11 @@ namespace Selania.Rework.Components.Grimoire
         public void DisableAllLeftButtons()
         {
             // foreach (var descriptor in leftButtonDescriptors) descriptor.target.interactable = false;
-            foreach (var topLevelButton in topLevelButtons) topLevelButton.interactable = false;
+            foreach (var topLevelButton in topLevelButtons)
+            {
+                topLevelButton.interactable = false;
+                topLevelButton.ShowNotification(false);
+            }
         }
 
         /// <summary>

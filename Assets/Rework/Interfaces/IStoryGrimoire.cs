@@ -71,9 +71,10 @@ namespace Selania.Rework.Interfaces
         public Observable<bool> IsGrimoireEnabled { get; }
 
         /// <summary>
-        ///     Observable emitted whenever something has changed in the grimoire.
+        ///     Observable emitted whenever something has changed in the grimoire, or something has been seen. If the
+        ///     argument is <c>true</c>, there's still at least one changed node that hasn't been seen.
         /// </summary>
-        public Observable<Unit> GrimoireChanged { get; }
+        public Observable<bool> GrimoireNotificationsChanged { get; }
 
         /// <summary>
         ///     An observable that produces a <c>Unit.Default</c> whenever a @grimoireClose command is raised.

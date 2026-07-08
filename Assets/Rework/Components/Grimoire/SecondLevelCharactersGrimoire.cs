@@ -111,7 +111,12 @@ namespace Selania.Rework.Components.Grimoire
                 .AddTo(this);
 
             // update buttons
-            foreach (var info in buttonInfo) info.button.interactable = false;
+            foreach (var info in buttonInfo)
+            {
+                info.button.interactable = false;
+                var grimoireNotification = info.button.GetComponentInChildren<GrimoireNotification>();
+                grimoireNotification.ShowNotification(false);
+            }
 
             foreach (var enabledButtonName in enabledButtonNames)
             {

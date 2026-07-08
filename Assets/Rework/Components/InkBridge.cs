@@ -1508,6 +1508,10 @@ namespace Selania.Rework.Components
             var gamerModeVariable = story.variablesState[gamerModeVariableName];
             var isGamerMode = (bool)gamerModeVariable;
 
+            // mark as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
             // get pages with something to see
             var myIdentifier = GetCurrentGrimoirePageIdentifier(story);
             var notificationChoiceIndices = GetLinksToChangedPages(myIdentifier).Select(l => l.ChoiceIndex).ToList();
@@ -2537,7 +2541,7 @@ namespace Selania.Rework.Components
                     currentGrimoireTree.TreeRoot, 0, new HashSet<GrimoirePageIdentifier>());
 
             // emit the changed event only if something actually changed
-            if (changed) _grimoireChanged!.OnNext(Unit.Default);
+            if (changed) _grimoireChanged!.OnNext(true);
 
             // remember what was the latest grimoire tree
             _latestGrimoireTree = currentGrimoireTree;
@@ -2656,21 +2660,28 @@ namespace Selania.Rework.Components
         private void MarkAsSeen(GrimoirePageIdentifier identifier)
         {
             _changedGrimoirePageIdentifiers.Remove(identifier);
+            _grimoireChanged!.OnNext(_changedGrimoirePageIdentifiers.Count > 0);
         }
 
-        private Subject<Unit>? _grimoireChanged;
+        private Subject<bool>? _grimoireChanged;
+        private ConnectableObservable<bool>? _grimoireChangedConnectableObservable;
+        private IDisposable? _grimoireChangedConnectableObservableConnection;
 
         private void SetupGrimoireChanged()
         {
-            _grimoireChanged = new Subject<Unit>();
+            _grimoireChanged = new Subject<bool>();
+            _grimoireChangedConnectableObservable = _grimoireChanged.DistinctUntilChanged().Replay(1);
+            _grimoireChangedConnectableObservableConnection = _grimoireChangedConnectableObservable.Connect();
         }
 
         private void CleanupGrimoireChanged()
         {
+            DisposeAndSetToNull(ref _grimoireChangedConnectableObservableConnection);
+            _grimoireChangedConnectableObservable = null;
             DisposeAndSetToNull(ref _grimoireChanged);
         }
 
-        public Observable<Unit> GrimoireChanged => _grimoireChanged!.AsObservable();
+        public Observable<bool> GrimoireNotificationsChanged => _grimoireChangedConnectableObservable!.AsObservable();
 
         /// <summary>
         ///     A representation of the tree of pages of a grimoire, where locked pages are not present.
