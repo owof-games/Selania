@@ -240,7 +240,12 @@ namespace Selania.Rework.Interfaces
         /// <param name="glyph1">First level glyph of the sigil group.</param>
         /// <param name="glyph2">Second level glyph of the sigil group.</param>
         /// <param name="enabled">Whether the currently enabled sigil is in this group.</param>
-        record SigilsGroupDescriptor(ISettingsSigils.GlyphType glyph1, ISettingsSigils.GlyphType glyph2, bool enabled);
+        /// <param name="isChanged">Whether the sigil is new from the last time it was seen.</param>
+        record SigilsGroupDescriptor(
+            ISettingsSigils.GlyphType glyph1,
+            ISettingsSigils.GlyphType glyph2,
+            bool enabled,
+            bool isChanged);
 
         /// <summary>
         ///     Descriptor of the second level page of the sigils.
@@ -324,10 +329,10 @@ namespace Selania.Rework.Interfaces
         /// <summary>
         ///     Descriptor of the second level page of the appendix.
         /// </summary>
-        /// <param name="choices">List of available choice texts.</param>
+        /// <param name="choices">List of available choice texts, plus a flag indicating if the page has changed since last visit.</param>
         /// <param name="indexText">Text for the index choice.</param>
         record SecondLevelAppendixPageDescriptor(
-            IEnumerable<string> choices,
+            IEnumerable<(string, bool)> choices,
             string indexText)
             : BaseNavigationDescriptor(indexText, null, null, null, null);
 

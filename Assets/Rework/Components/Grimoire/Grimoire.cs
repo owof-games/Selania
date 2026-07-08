@@ -153,7 +153,8 @@ namespace Selania.Rework.Components.Grimoire
                 grimoireBackground.SetSecondLevelSigilButtonStatus(buttonDescriptor.glyph1, buttonDescriptor.glyph2,
                     buttonDescriptor.enabled
                         ? GrimoireBackground.SecondLevelSigilButtonStatus.Enabled
-                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown);
+                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown,
+                    buttonDescriptor.isChanged);
 
             // set up navigation
             SetUpNavigation(descriptor);
@@ -220,6 +221,8 @@ namespace Selania.Rework.Components.Grimoire
             // show the grimoire (second level appendix)
             grimoireBackground.ShowGrimoire();
             grimoireBackground.SwitchToPage(GrimoireBackground.PageType.SecondLevelAppendix);
+
+            grimoireBackground.SecondLevelAppendixGrimoireSetChoices(descriptor.choices);
 
             // set up navigation
             SetUpNavigation(descriptor);

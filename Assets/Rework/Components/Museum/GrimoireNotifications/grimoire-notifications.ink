@@ -662,19 +662,36 @@ LIST step = (FirstStep), SecondStep, ThirdStep, FourthStep
     + [Index #bookmark:index]
         -> grimoire
 
+VAR grim_appendix_title = "Appendice"
+
 === grimoire_appendix
     @grimoireAppendix
     + [Conversation]
-        -> grimoire_appendix
+        ~ grim_appendix_title = "Conversazioni"
     + [Present]
-        -> grimoire_appendix
+        ~ grim_appendix_title = "Regalo"
     + [Kitchen]
-        -> grimoire_appendix
-    + [Rewrite]
-        -> grimoire_appendix
-    + [Nest]
-        -> grimoire_appendix
+        ~ grim_appendix_title = "Cucina"
+    // + [Rewrite]
+    //     ~ grim_appendix_title = "Riscrittura"
+    // + [Nest]
+    //     ~ grim_appendix_title = "Nido"
     + [Letters]
-        -> grimoire_appendix
+        ~ grim_appendix_title = "Lettere"
     + [Index #bookmark:index]
         -> grimoire
+    
+    - (continue)
+    @grimoireText #style:character #icon:AppendiceA #title:{grim_appendix_title} #description:Descrizione
+    Qua dovrebbe esserci un testo di appendice
+
+    + [Index #bookmark:index]
+        -> grimoire
+    + [Appendici #bookmark:secondLevel]
+        -> grimoire_appendix
+    + [precedente #bookmark:previous]
+        @grimoireTextPrevious
+        -> grimoire_appendix
+    + [prossima #bookmark:next]
+        @grimoireTextNext
+        -> grimoire_appendix

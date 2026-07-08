@@ -233,7 +233,8 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 grimoireBackground.SetSecondLevelSigilButtonStatus(glyphType1, glyphType2,
                     Random.value < 0.5
                         ? GrimoireBackground.SecondLevelSigilButtonStatus.Locked
-                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown);
+                        : GrimoireBackground.SecondLevelSigilButtonStatus.Shown,
+                    Random.value < 0.5);
             }
 
             for (;;)
@@ -242,7 +243,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
                 var glyphType2 = glyphTypes[Random.Range(0, glyphTypes.Length)];
                 if (glyphType1 == glyphType2) continue;
                 grimoireBackground.SetSecondLevelSigilButtonStatus(glyphType1, glyphType2,
-                    GrimoireBackground.SecondLevelSigilButtonStatus.Enabled);
+                    GrimoireBackground.SecondLevelSigilButtonStatus.Enabled, Random.value < 0.5);
                 break;
             }
         }

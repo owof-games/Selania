@@ -1763,8 +1763,16 @@ namespace Selania.Rework.Components
 
         private void EmitSecondLevelSigilsGrimoirePage()
         {
-            // parse the sigils choices
             var story = GetStory();
+
+            // mark this page as read
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
+            // extract the choice indices yet to be seen
+            var changedPages = GetLinksToChangedPages(pageIdentifier).Select(link => link.ChoiceIndex).ToList();
+
+            // parse the sigils choices
             var sigilsGroupDescriptors = story
                 .currentChoices
                 .Select(ParseChoice)
@@ -1819,7 +1827,8 @@ namespace Selania.Rework.Components
                             MakeTags(choice.tags).FirstOrDefault(t => t.category == enabledTagCategory)?.value ==
                             "true";
                         // return the result
-                        return new IStoryGrimoire.SigilsGroupDescriptor(glyph1, glyph2, enabled);
+                        return new IStoryGrimoire.SigilsGroupDescriptor(glyph1, glyph2, enabled,
+                            changedPages.Contains(choice.index));
                     }
                 }
 
@@ -2027,6 +2036,10 @@ namespace Selania.Rework.Components
         {
             var story = GetStory();
 
+            // mark as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
             // extract info from following text
             var contents = GetContentsUntilChoices(story);
 
@@ -2066,9 +2079,16 @@ namespace Selania.Rework.Components
         {
             var story = GetStory();
 
+            // mark as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
+
+            // get unseen links
+            var changedChoiceIndices = GetLinksToChangedPages(pageIdentifier).Select(link => link.ChoiceIndex).ToList();
+
             // parse choices
             var choices = story.currentChoices.Where(choice => choice.tags == null || choice.tags.Count == 0)
-                .Select(choice => choice.text)
+                .Select(choice => (choice.text, changedChoiceIndices.Contains(choice.index)))
                 .ToList();
 
             // navigation
@@ -2119,6 +2139,10 @@ namespace Selania.Rework.Components
         private void EmitThirdLevelSigilsGrimoirePage()
         {
             var story = GetStory();
+
+            // mark as seen
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
 
             // parse the headers
             var mainTags = MakeTags(story.currentTags);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using R3;
 using UnityEngine;
@@ -32,6 +33,25 @@ namespace Selania.Rework.Components.Grimoire
 
             // send the created observable, or the empty observable if we have no buttons (this should not happen)
             _clickObservables.OnNext(observable ?? Observable.Empty<string>());
+        }
+
+        public void SetUp(IEnumerable<(string, bool)> choices)
+        {
+            var choiceMapping = choices.ToDictionary(entry => entry.Item1, entry => entry.Item2);
+            foreach (var button in buttonInfo)
+            {
+                var notification = button.button.GetComponentInChildren<GrimoireNotification>();
+                if (choiceMapping.TryGetValue(button.clickName, out var isChanged))
+                {
+                    button.button.interactable = true;
+                    notification.ShowNotification(isChanged);
+                }
+                else
+                {
+                    button.button.interactable = false;
+                    notification.ShowNotification(false);
+                }
+            }
         }
 
         /// <summary>

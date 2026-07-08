@@ -4994,29 +4994,11 @@
           },
           "ev",
           "str",
-          "^Rewrite",
-          "/str",
-          "/ev",
-          {
-            "*": ".^.c-3",
-            "flg": 4
-          },
-          "ev",
-          "str",
-          "^Nest",
-          "/str",
-          "/ev",
-          {
-            "*": ".^.c-4",
-            "flg": 4
-          },
-          "ev",
-          "str",
           "^Letters",
           "/str",
           "/ev",
           {
-            "*": ".^.c-5",
+            "*": ".^.c-3",
             "flg": 4
           },
           "ev",
@@ -5028,14 +5010,23 @@
           "/str",
           "/ev",
           {
-            "*": ".^.c-6",
+            "*": ".^.c-4",
             "flg": 4
           },
           {
             "c-0": [
               "\n",
+              "ev",
+              "str",
+              "^Conversazioni",
+              "/str",
+              "/ev",
               {
-                "->": ".^.^.^"
+                "VAR=": "grim_appendix_title",
+                "re": true
+              },
+              {
+                "->": ".^.^.continue"
               },
               {
                 "#f": 5
@@ -5043,8 +5034,17 @@
             ],
             "c-1": [
               "\n",
+              "ev",
+              "str",
+              "^Regalo",
+              "/str",
+              "/ev",
               {
-                "->": ".^.^.^"
+                "VAR=": "grim_appendix_title",
+                "re": true
+              },
+              {
+                "->": ".^.^.continue"
               },
               {
                 "#f": 5
@@ -5052,8 +5052,17 @@
             ],
             "c-2": [
               "\n",
+              "ev",
+              "str",
+              "^Cucina",
+              "/str",
+              "/ev",
               {
-                "->": ".^.^.^"
+                "VAR=": "grim_appendix_title",
+                "re": true
+              },
+              {
+                "->": ".^.^.continue"
               },
               {
                 "#f": 5
@@ -5061,8 +5070,17 @@
             ],
             "c-3": [
               "\n",
+              "ev",
+              "str",
+              "^Lettere",
+              "/str",
+              "/ev",
               {
-                "->": ".^.^.^"
+                "VAR=": "grim_appendix_title",
+                "re": true
+              },
+              {
+                "->": ".^.^.continue"
               },
               {
                 "#f": 5
@@ -5071,27 +5089,128 @@
             "c-4": [
               "\n",
               {
-                "->": ".^.^.^"
-              },
-              {
-                "#f": 5
-              }
-            ],
-            "c-5": [
-              "\n",
-              {
-                "->": ".^.^.^"
-              },
-              {
-                "#f": 5
-              }
-            ],
-            "c-6": [
-              "\n",
-              {
                 "->": "grimoire"
               },
               {
+                "->": ".^.^.continue"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "continue": [
+              "^@grimoireText ",
+              "#",
+              "^style:character ",
+              "/#",
+              "#",
+              "^icon:AppendiceA ",
+              "/#",
+              "#",
+              "^title:",
+              "ev",
+              {
+                "VAR?": "grim_appendix_title"
+              },
+              "out",
+              "/ev",
+              "^ ",
+              "/#",
+              "#",
+              "^description:Descrizione",
+              "/#",
+              "\n",
+              "^Qua dovrebbe esserci un testo di appendice",
+              "\n",
+              "ev",
+              "str",
+              "^Index ",
+              "#",
+              "^bookmark:index",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-5",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^Appendici ",
+              "#",
+              "^bookmark:secondLevel",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-6",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^precedente ",
+              "#",
+              "^bookmark:previous",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-7",
+                "flg": 4
+              },
+              "ev",
+              "str",
+              "^prossima ",
+              "#",
+              "^bookmark:next",
+              "/#",
+              "/str",
+              "/ev",
+              {
+                "*": ".^.c-8",
+                "flg": 4
+              },
+              {
+                "c-5": [
+                  "\n",
+                  {
+                    "->": "grimoire"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-6": [
+                  "\n",
+                  {
+                    "->": ".^.^.^.^"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-7": [
+                  "\n",
+                  "^@grimoireTextPrevious",
+                  "\n",
+                  {
+                    "->": ".^.^.^.^"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
+                "c-8": [
+                  "\n",
+                  "^@grimoireTextNext",
+                  "\n",
+                  {
+                    "->": ".^.^.^.^"
+                  },
+                  {
+                    "#f": 5
+                  }
+                ],
                 "#f": 5
               }
             ]
@@ -5793,6 +5912,12 @@
         },
         {
           "VAR=": "step"
+        },
+        "str",
+        "^Appendice",
+        "/str",
+        {
+          "VAR=": "grim_appendix_title"
         },
         "/ev",
         "end",

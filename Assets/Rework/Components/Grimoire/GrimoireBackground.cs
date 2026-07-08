@@ -722,12 +722,13 @@ namespace Selania.Rework.Components.Grimoire
         {
             foreach (var secondLevelButton in secondLevelSigilsButtons)
                 SetSecondLevelSigilButtonStatus(secondLevelButton.firstLevelGlyph, secondLevelButton.secondLevelGlyph,
-                    SecondLevelSigilButtonStatus.Locked);
+                    SecondLevelSigilButtonStatus.Locked, false);
         }
 
         public void SetSecondLevelSigilButtonStatus(ISettingsSigils.GlyphType firstLevelGlyph,
             ISettingsSigils.GlyphType secondLevelGlyph,
-            SecondLevelSigilButtonStatus status)
+            SecondLevelSigilButtonStatus status,
+            bool isChanged)
         {
             var button = secondLevelSigilsButtons.FirstOrDefault(b =>
                 b.firstLevelGlyph == firstLevelGlyph && b.secondLevelGlyph == secondLevelGlyph);
@@ -741,6 +742,8 @@ namespace Selania.Rework.Components.Grimoire
             // TODO: should cache the selectable corresponding to each second level sigils button, maybe with a weak dict
             button.GetComponent<Selectable>().interactable = status != SecondLevelSigilButtonStatus.Locked;
             button.EnableAnimation(status == SecondLevelSigilButtonStatus.Enabled);
+
+            button.GetComponentInChildren<GrimoireNotification>().ShowNotification(isChanged);
         }
 
         /// <summary>
@@ -934,6 +937,11 @@ namespace Selania.Rework.Components.Grimoire
         public void SecondLevelRulesGrimoireSetText(string text)
         {
             secondLevelRulesGrimoire.SetRulesText(text);
+        }
+
+        public void SecondLevelAppendixGrimoireSetChoices(IEnumerable<(string, bool)> choices)
+        {
+            secondLevelAppendixGrimoire.SetUp(choices);
         }
 
         public void OnLoadClick()
