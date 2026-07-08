@@ -1699,6 +1699,9 @@ namespace Selania.Rework.Components
             var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
             var changedChoiceIndices = GetLinksToChangedPages(pageIdentifier).Select(link => link.ChoiceIndex).ToList();
 
+            // mark this page as seen
+            MarkAsSeen(pageIdentifier);
+
             // get the button descriptors
             var greenhouseButtonPlantDescriptors = story
                 .currentChoices
@@ -2245,6 +2248,10 @@ namespace Selania.Rework.Components
         private void EmitThirdLevelGreenhouseGrimoirePage()
         {
             var story = GetStory();
+
+            // mark as read
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            MarkAsSeen(pageIdentifier);
 
             // extract left and right data from tags
             var mainTags = MakeTags(story.currentTags);
