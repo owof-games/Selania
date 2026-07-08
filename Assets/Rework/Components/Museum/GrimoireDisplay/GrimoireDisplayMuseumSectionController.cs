@@ -219,7 +219,7 @@ namespace Selania.Rework.Components.Museum.GrimoireDisplay
             foreach (var button in buttonNames)
             {
                 var status = statuses[Random.Range(0, statuses.Length)];
-                grimoireBackground.SetGreenhouseButtonStatus(button, status);
+                grimoireBackground.SetGreenhouseButtonStatus(button, status, Random.value < 0.5f);
             }
         }
 

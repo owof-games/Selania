@@ -245,7 +245,7 @@ LIST step = (FirstStep), SecondStep, ThirdStep, FourthStep
         -> grimoire_greenhouse_third
     + {true} [Olobino #status:{false:owned|missing}]
         -> grimoire_greenhouse_third
-    + [LaSpazzata #status:{true:owned|missing}]
+    + [Spazzata #status:{true:owned|missing}]
         -> grimoire_greenhouse_third
     + [Index #bookmark:index]
         -> grimoire
@@ -316,7 +316,7 @@ LIST step = (FirstStep), SecondStep, ThirdStep, FourthStep
         -> grimoire_greenhouse_third_in_dialogue
     + {false} [Olobino #status:{false:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
-    + [LaSpazzata #status:{true:owned|missing}]
+    + [Spazzata #status:{true:owned|missing}]
         -> grimoire_greenhouse_third_in_dialogue
     + [Close #bookmark:close]
         @grimoireClose

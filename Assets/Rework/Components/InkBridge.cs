@@ -1693,8 +1693,13 @@ namespace Selania.Rework.Components
 
         private void EmitSecondLevelGreenhouseGrimoirePage()
         {
-            // get the button descriptors
             var story = GetStory();
+
+            // get the new page notifications
+            var pageIdentifier = GetCurrentGrimoirePageIdentifier(story);
+            var changedChoiceIndices = GetLinksToChangedPages(pageIdentifier).Select(link => link.ChoiceIndex).ToList();
+
+            // get the button descriptors
             var greenhouseButtonPlantDescriptors = story
                 .currentChoices
                 .Select(choice => (Choice: choice,
@@ -1702,7 +1707,8 @@ namespace Selania.Rework.Components
                 .Where(e => e.Tags.Any())
                 .Select(e => new IStoryGrimoire.GreenhouseButtonPlantDescriptor(
                     e.Tags.Any(t => t.value == "owned"),
-                    e.Choice.text.Trim()
+                    e.Choice.text.Trim(),
+                    changedChoiceIndices.Contains(e.Choice.index)
                 ));
 
             // navigation

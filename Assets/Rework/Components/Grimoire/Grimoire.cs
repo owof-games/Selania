@@ -132,7 +132,8 @@ namespace Selania.Rework.Components.Grimoire
                 grimoireBackground.SetGreenhouseButtonStatus(buttonDescriptor.name,
                     buttonDescriptor.owned
                         ? GrimoireBackground.GreenhouseButtonStatus.Shown
-                        : GrimoireBackground.GreenhouseButtonStatus.Exhausted);
+                        : GrimoireBackground.GreenhouseButtonStatus.Exhausted,
+                    buttonDescriptor.isChanged);
             }
 
             // set up navigation

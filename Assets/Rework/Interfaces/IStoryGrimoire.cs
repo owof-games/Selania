@@ -219,7 +219,8 @@ namespace Selania.Rework.Interfaces
         /// </summary>
         /// <param name="owned">Whether this plant is currently owned or not.</param>
         /// <param name="name">Name of the plant (as expressed in the ink items).</param>
-        record GreenhouseButtonPlantDescriptor(bool owned, string name);
+        /// <param name="isChanged">Whether a notification should be shown on the plant because it's new.</param>
+        record GreenhouseButtonPlantDescriptor(bool owned, string name, bool isChanged);
 
         /// <summary>
         /// Descriptor of the second level page of the greenhouse.

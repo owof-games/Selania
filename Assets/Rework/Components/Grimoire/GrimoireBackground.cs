@@ -678,7 +678,7 @@ namespace Selania.Rework.Components.Grimoire
         {
             foreach (var secondLevelButton in secondLevelGreenhouseButtons)
             {
-                SetGreenhouseButtonStatus(secondLevelButton.plantName, GreenhouseButtonStatus.Locked);
+                SetGreenhouseButtonStatus(secondLevelButton.plantName, GreenhouseButtonStatus.Locked, false);
             }
         }
 
@@ -687,7 +687,8 @@ namespace Selania.Rework.Components.Grimoire
         /// </summary>
         /// <param name="plantName">Name of the plant to set.</param>
         /// <param name="status">Status of the button.</param>
-        public void SetGreenhouseButtonStatus(string plantName, GreenhouseButtonStatus status)
+        /// <param name="isChanged">Whether this greenhouse section is changed since last visit.</param>
+        public void SetGreenhouseButtonStatus(string plantName, GreenhouseButtonStatus status, bool isChanged)
         {
             var button = secondLevelGreenhouseButtons.FirstOrDefault(button => button.plantName == plantName);
             if (button == null)
@@ -695,6 +696,8 @@ namespace Selania.Rework.Components.Grimoire
                 Logger.ZLogError($"Cannot find plant with name {plantName}");
                 return;
             }
+
+            button.GetComponentInChildren<GrimoireNotification>().ShowNotification(isChanged);
 
             switch (status)
             {
