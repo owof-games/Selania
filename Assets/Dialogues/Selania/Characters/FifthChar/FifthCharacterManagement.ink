@@ -3,6 +3,10 @@
                                                                 LISTE E VARIABILI
                                                         
                                                         ----------------------------------*/
+//REMIND IN MERITO A USO DIFFERENZIATO MENTOR/FIFTHCHARACTER
+// Allo stato attuale, Mentor è un oggetto, una variante di FifthCharacter allo stesso modo per cui Franco e FrancoCucina sono comunque due varianti di Franco. L'unica eccezione è per glyph_choice_manager, dove Mentor è qualcosa di gestito in modo totalmente diverso da FifthCharacter: preferisco comunque tenere i contatori separati tra Mentor e FifthCharacter per questioni di possibili scelte di design.
+// cosa a sé invece è Mentore (e non Mentor), che è una voce ad hoc per la parte dei ritratti su Unity, ma è sempre gestita da charTag.
+
 
 
 //Gestione del ritmo della storia
