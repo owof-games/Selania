@@ -232,7 +232,7 @@
         {charTag(Franco, "party")}:                     "Ah."
         {charTag(Franco, "question")}:                  O è meglio "Yeah"?
         {charTag(Franco, "neutral")}:                   Ah no, stavo parlando dell'incontro con gli insegnanti.
-                                                        Ci sono anni in cui un incontro dura settimane..
+                                                        Ci sono anni in cui un incontro dura settimane.
                                                         Ora però ci sono classi più piccole.
                                                         Soprattutto dopo <b>quel</b> fattaccio con l'airone.
                                                         Glielo avevano detto tutti a zio Gracco che non aveva davvero la faccia da critico gastronomico.
