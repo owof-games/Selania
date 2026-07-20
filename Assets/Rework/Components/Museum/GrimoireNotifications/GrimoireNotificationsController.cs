@@ -25,7 +25,19 @@ namespace Selania.Rework.Components.Museum.GrimoireNotifications
         {
             try
             {
-                await StoryStateSerializer.StartStory(null);
+                var found = false;
+                await foreach (var saveState in StoryStateSerializer.GetSaveStates())
+                {
+                    await StoryStateSerializer.StartStory(saveState.Descriptor);
+                    found = true;
+                    break;
+                }
+
+                if (!found)
+                {
+                    await StoryStateSerializer.StartStory(null);
+                }
+
                 StoryLinear.conversationInProgressObservable.Subscribe(ConversationInProgress).AddTo(this);
             }
             catch (Exception e)

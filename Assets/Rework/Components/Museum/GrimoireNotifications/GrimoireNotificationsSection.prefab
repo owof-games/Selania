@@ -301,6 +301,7 @@ Transform:
   m_Children:
   - {fileID: 1801895301450242619}
   - {fileID: 7103030227719766178}
+  - {fileID: 7817539876469773886}
   - {fileID: 270159764303245032}
   - {fileID: 9173920025201235501}
   - {fileID: 5756377905654414488}
@@ -566,8 +567,14 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects:
   - {fileID: 7114382698516698156}
+  - {fileID: 6573151279873375918}
   settings: {fileID: 11400000, guid: 8a2b787684fc7fa4e98d37b8b423934e, type: 2}
   inkBridge: {fileID: 11400000, guid: c615be5a0795c2c4ab8c9957e46aa133, type: 2}
+  rooms:
+  - name: Room1
+    prefab: {fileID: 7337977647418521128, guid: 8d6af2a29aec72842a34a700d270aee9, type: 3}
+  - name: Room2
+    prefab: {fileID: 7337977647418521128, guid: 968e49689cb72684da2fc5d6e4e1a138, type: 3}
 --- !u!1 &7883591725439923965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3394,73 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6659486126330021642, guid: 9ff3af995167c2c499d57d9f2aa14ff8, type: 3}
   m_PrefabInstance: {fileID: 2538746997381091623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2693665475415269961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 865231728256548766}
+    m_Modifications:
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104400726538181863, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+      propertyPath: m_Name
+      value: RoomsLoadManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+--- !u!1 &6573151279873375918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9104400726538181863, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+  m_PrefabInstance: {fileID: 2693665475415269961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7817539876469773886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5268271908254839927, guid: 81da379611b988a43aaf38c5e7974e68, type: 3}
+  m_PrefabInstance: {fileID: 2693665475415269961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2831685683420356054
 PrefabInstance:

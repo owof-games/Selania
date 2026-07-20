@@ -749,33 +749,6 @@ namespace Selania.Rework.Components
         private DateTime _minimumNextSaveTime;
 
         /// <summary>
-        ///     The class that gets serialized in the save file.
-        /// </summary>
-        [Serializable]
-        private class SaveData
-        {
-            /// <summary>
-            ///     See <see cref="IStoryStateSerializer.SaveState.Timestamp" />.
-            /// </summary>
-            public required long timestamp;
-
-            /// <summary>
-            ///     See <see cref="IStoryStateSerializer.SaveState.RoomInkName" />.
-            /// </summary>
-            public required string roomInkName;
-
-            /// <summary>
-            ///     See <see cref="IStoryStateSerializer.SaveState.NumRewritings" />.
-            /// </summary>
-            public required int numRewritings;
-
-            /// <summary>
-            ///     See <see cref="IStoryStateSerializer.SaveState.NumPlayedSeconds" />.
-            /// </summary>
-            public required int numPlayedSeconds;
-        }
-
-        /// <summary>
         ///     A timestamp that indicated when this session (new story or continue story) has begun.
         /// </summary>
         /// <seealso cref="_numPlayedSecondsAtTheBeginningOfCurrentSession" />
@@ -818,18 +791,27 @@ namespace Selania.Rework.Components
                 var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
 
-                // load the number of played seconds
+                // load the rest of the save state
                 var savePath = GetSaveFileAbsolutePath(descriptor);
                 var saveJson = await File.ReadAllTextAsync(savePath);
                 var saveData = JsonUtility.FromJson<SaveData>(saveJson);
+
+                // load the number of played seconds
                 _numPlayedSecondsAtTheBeginningOfCurrentSession = saveData.numPlayedSeconds;
+
+                // load the grimoire changed pages
+                _changedGrimoirePageIdentifiers.Clear();
+                foreach (var identifier in saveData.changedGrimoirePageIdentifiers)
+                {
+                    _changedGrimoirePageIdentifiers.Add(identifier);
+                }
 
                 // update timestamps
                 _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 _currentSessionStartTime = DateTime.UtcNow;
 
                 Logger.ZLogInformation(
-                    $"Save file {descriptor} loaded, played {_numPlayedSecondsAtTheBeginningOfCurrentSession} up to now.");
+                    $"Save file {descriptor} loaded, played {_numPlayedSecondsAtTheBeginningOfCurrentSession} up to now, {_changedGrimoirePageIdentifiers.Count} grimoire pages unread.");
 
                 LogAndNotifyCurrentState();
             }
@@ -847,7 +829,7 @@ namespace Selania.Rework.Components
             // notify that the story has started
             _storyStarted?.OnNext(Unit.Default);
 
-            Logger.ZLogTrace($"next automatic after {_minimumNextSaveTime}");
+            Logger.ZLogTrace($"next automatic save after {_minimumNextSaveTime}");
         }
 
         /// <inheritdoc />
@@ -956,7 +938,7 @@ namespace Selania.Rework.Components
             Logger.ZLogInformation(
                 $"Should wait until {_minimumNextSaveTime:G} to save, and it's currently {now:G}, so we're saving.");
 
-            // sanity checks and state updates
+            // sanity checks
             if (_currentRoomName == null)
                 throw new InvalidOperationException("Trying to save, but _currentRoomName hasn't a value yet");
             if (_inkListVariableNameWithCompletedStories == null)
@@ -990,7 +972,9 @@ namespace Selania.Rework.Components
                 timestamp = now.Ticks,
                 roomInkName = _currentRoomName,
                 numRewritings = numRewritings,
-                numPlayedSeconds = numPlayedSeconds
+                numPlayedSeconds = numPlayedSeconds,
+                changedGrimoirePageIdentifiers = _changedGrimoirePageIdentifiers
+                    .Select(x => (GrimoirePageIdentifierForSave)x).ToArray()
             };
             var jsonSaveData = JsonUtility.ToJson(saveData);
             var jsonInkStoryState = GetStory().state.ToJson();
@@ -2934,6 +2918,22 @@ namespace Selania.Rework.Components
 
                 sb.Append(']');
                 return sb.ToString();
+            }
+
+            public static implicit operator GrimoirePageIdentifierForSave(GrimoirePageIdentifier grimoirePageIdentifier)
+            {
+                return new GrimoirePageIdentifierForSave()
+                {
+                    name = grimoirePageIdentifier._name,
+                    tags = grimoirePageIdentifier._tags.ToArray()
+                };
+            }
+
+            public static implicit operator GrimoirePageIdentifier(
+                GrimoirePageIdentifierForSave grimoirePageIdentifierForSave)
+            {
+                return new GrimoirePageIdentifier(grimoirePageIdentifierForSave.name,
+                    grimoirePageIdentifierForSave.tags);
             }
         }
 

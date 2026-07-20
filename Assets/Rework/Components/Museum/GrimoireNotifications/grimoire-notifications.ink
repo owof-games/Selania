@@ -3,10 +3,13 @@
 */
 
 LIST listCharacters = PG
+LIST listObjects = ToRoom1, ToRoom2, Interaction
+LIST story_endedStories = first, second, third, fourth, fifth
 
 LIST Items = Item1
 
-VAR contentsRoom1 = (PG, Item1)
+VAR contentsRoom1 = (PG, ToRoom2, Interaction)
+VAR contentsRoom2 = (ToRoom1, Interaction)
 
 VAR settings_gamerMode = true
 
@@ -152,47 +155,55 @@ LIST step = (FirstStep), SecondStep, ThirdStep, FourthStep
 
 === start
 @interact
-{step:
-    - FirstStep:
-        TheWitch, , witch_first_quarter: Questo è un dialogo.
-        TheWitch, , witch_first_quarter: Abilito il grimorio.
-        ~ grimoire_isEnabled = true
-        TheWitch, , witch_first_quarter: Il grimorio è abilitato.
-    - SecondStep:
-        ~ firstChar_aether        = 5
-        ~ firstChar_earth         = -2
-        ~ firstChar_air           = 5
-        ~ firstChar_water         = 9
-        ~ firstChar_fire          = -9
-        ~ firstChar_last_aether   = 5
-        ~ firstChar_last_earth    = -2
-        ~ firstChar_last_air      = 7
-        ~ firstChar_last_water    = 9
-        ~ firstChar_last_fire     = -9
-        TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
-    - ThirdStep:
-        ~ firstChar_aether        = -5
-        ~ firstChar_earth         = 2
-        ~ firstChar_air           = -5
-        ~ firstChar_water         = -9
-        ~ firstChar_fire          = 9
-        ~ firstChar_last_aether   = -5
-        ~ firstChar_last_earth    = 2
-        ~ firstChar_last_air      = -7
-        ~ firstChar_last_water    = -9
-        ~ firstChar_last_fire     = 9
-        TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.
-    - FourthStep:
-        TheWitch, , witch_first_quarter: Questa è la seconda riga.
-        TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
-        -> grimoire_greenhouse_in_dialogue ->
-}
++ {contentsRoom1 has PG} [ToRoom2]
+  ~ contentsRoom1 -= PG
+  ~ contentsRoom2 += PG
++ {contentsRoom2 has PG} [ToRoom1]
+  ~ contentsRoom1 += PG
+  ~ contentsRoom2 -= PG
++ [Interaction]
+    {step:
+        - FirstStep:
+            TheWitch, , witch_first_quarter: Questo è un dialogo.
+            TheWitch, , witch_first_quarter: Abilito il grimorio.
+            ~ grimoire_isEnabled = true
+            TheWitch, , witch_first_quarter: Il grimorio è abilitato.
+        - SecondStep:
+            ~ firstChar_aether        = 5
+            ~ firstChar_earth         = -2
+            ~ firstChar_air           = 5
+            ~ firstChar_water         = 9
+            ~ firstChar_fire          = -9
+            ~ firstChar_last_aether   = 5
+            ~ firstChar_last_earth    = -2
+            ~ firstChar_last_air      = 7
+            ~ firstChar_last_water    = 9
+            ~ firstChar_last_fire     = -9
+            TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.
+        - ThirdStep:
+            ~ firstChar_aether        = -5
+            ~ firstChar_earth         = 2
+            ~ firstChar_air           = -5
+            ~ firstChar_water         = -9
+            ~ firstChar_fire          = 9
+            ~ firstChar_last_aether   = -5
+            ~ firstChar_last_earth    = 2
+            ~ firstChar_last_air      = -7
+            ~ firstChar_last_water    = -9
+            ~ firstChar_last_fire     = 9
+            TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.
+        - FourthStep:
+            TheWitch, , witch_first_quarter: Questa è la seconda riga.
+            TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.
+            -> grimoire_greenhouse_in_dialogue ->
+    }
 
-{step == LIST_MAX(LIST_ALL(step)):
-    ~ step = LIST_MIN(LIST_ALL(step))
-- else:
-    ~ step++
-}
+    {step == LIST_MAX(LIST_ALL(step)):
+        ~ step = LIST_MIN(LIST_ALL(step))
+    - else:
+        ~ step++
+    }
+-
 -> start
 
 === grimoire

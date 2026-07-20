@@ -17,340 +17,469 @@
     "done",
     {
       "start": [
-        "^@interact",
-        "\n",
-        "ev",
-        {
-          "VAR?": "step"
-        },
-        "/ev",
         [
-          "du",
+          "^@interact",
+          "\n",
           "ev",
+          "str",
+          "^ToRoom2",
+          "/str",
           {
-            "VAR?": "FirstStep"
+            "VAR?": "contentsRoom1"
           },
-          "==",
+          {
+            "VAR?": "PG"
+          },
+          "?",
           "/ev",
           {
-            "->": ".^.b",
-            "c": true
+            "*": ".^.c-0",
+            "flg": 5
           },
-          {
-            "b": [
-              "pop",
-              "\n",
-              "^TheWitch, , witch_first_quarter: Questo è un dialogo.",
-              "\n",
-              "^TheWitch, , witch_first_quarter: Abilito il grimorio.",
-              "\n",
-              "ev",
-              true,
-              "/ev",
-              {
-                "VAR=": "grimoire_isEnabled",
-                "re": true
-              },
-              "^TheWitch, , witch_first_quarter: Il grimorio è abilitato.",
-              "\n",
-              {
-                "->": "start.10"
-              },
-              null
-            ]
-          }
-        ],
-        [
-          "du",
           "ev",
+          "str",
+          "^ToRoom1",
+          "/str",
           {
-            "VAR?": "SecondStep"
+            "VAR?": "contentsRoom2"
           },
-          "==",
+          {
+            "VAR?": "PG"
+          },
+          "?",
           "/ev",
           {
-            "->": ".^.b",
-            "c": true
+            "*": ".^.c-1",
+            "flg": 5
           },
-          {
-            "b": [
-              "pop",
-              "\n",
-              "ev",
-              5,
-              "/ev",
-              {
-                "VAR=": "firstChar_aether",
-                "re": true
-              },
-              "ev",
-              -2,
-              "/ev",
-              {
-                "VAR=": "firstChar_earth",
-                "re": true
-              },
-              "ev",
-              5,
-              "/ev",
-              {
-                "VAR=": "firstChar_air",
-                "re": true
-              },
-              "ev",
-              9,
-              "/ev",
-              {
-                "VAR=": "firstChar_water",
-                "re": true
-              },
-              "ev",
-              -9,
-              "/ev",
-              {
-                "VAR=": "firstChar_fire",
-                "re": true
-              },
-              "ev",
-              5,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_aether",
-                "re": true
-              },
-              "ev",
-              -2,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_earth",
-                "re": true
-              },
-              "ev",
-              7,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_air",
-                "re": true
-              },
-              "ev",
-              9,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_water",
-                "re": true
-              },
-              "ev",
-              -9,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_fire",
-                "re": true
-              },
-              "^TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.",
-              "\n",
-              {
-                "->": "start.10"
-              },
-              null
-            ]
-          }
-        ],
-        [
-          "du",
           "ev",
-          {
-            "VAR?": "ThirdStep"
-          },
-          "==",
+          "str",
+          "^Interaction",
+          "/str",
           "/ev",
           {
-            "->": ".^.b",
-            "c": true
+            "*": ".^.c-2",
+            "flg": 4
           },
           {
-            "b": [
+            "c-0": [
+              "\n",
+              "ev",
+              {
+                "VAR?": "contentsRoom1"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "-",
+              {
+                "VAR=": "contentsRoom1",
+                "re": true
+              },
+              "/ev",
+              "ev",
+              {
+                "VAR?": "contentsRoom2"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "+",
+              {
+                "VAR=": "contentsRoom2",
+                "re": true
+              },
+              "/ev",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-1": [
+              "\n",
+              "ev",
+              {
+                "VAR?": "contentsRoom1"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "+",
+              {
+                "VAR=": "contentsRoom1",
+                "re": true
+              },
+              "/ev",
+              "ev",
+              {
+                "VAR?": "contentsRoom2"
+              },
+              {
+                "VAR?": "PG"
+              },
+              "-",
+              {
+                "VAR=": "contentsRoom2",
+                "re": true
+              },
+              "/ev",
+              {
+                "->": ".^.^.g-0"
+              },
+              {
+                "#f": 5
+              }
+            ],
+            "c-2": [
+              "\n",
+              "ev",
+              {
+                "VAR?": "step"
+              },
+              "/ev",
+              [
+                "du",
+                "ev",
+                {
+                  "VAR?": "FirstStep"
+                },
+                "==",
+                "/ev",
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "pop",
+                    "\n",
+                    "^TheWitch, , witch_first_quarter: Questo è un dialogo.",
+                    "\n",
+                    "^TheWitch, , witch_first_quarter: Abilito il grimorio.",
+                    "\n",
+                    "ev",
+                    true,
+                    "/ev",
+                    {
+                      "VAR=": "grimoire_isEnabled",
+                      "re": true
+                    },
+                    "^TheWitch, , witch_first_quarter: Il grimorio è abilitato.",
+                    "\n",
+                    {
+                      "->": ".^.^.^.9"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                "du",
+                "ev",
+                {
+                  "VAR?": "SecondStep"
+                },
+                "==",
+                "/ev",
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "pop",
+                    "\n",
+                    "ev",
+                    5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_aether",
+                      "re": true
+                    },
+                    "ev",
+                    -2,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_earth",
+                      "re": true
+                    },
+                    "ev",
+                    5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_air",
+                      "re": true
+                    },
+                    "ev",
+                    9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_water",
+                      "re": true
+                    },
+                    "ev",
+                    -9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_fire",
+                      "re": true
+                    },
+                    "ev",
+                    5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_aether",
+                      "re": true
+                    },
+                    "ev",
+                    -2,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_earth",
+                      "re": true
+                    },
+                    "ev",
+                    7,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_air",
+                      "re": true
+                    },
+                    "ev",
+                    9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_water",
+                      "re": true
+                    },
+                    "ev",
+                    -9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_fire",
+                      "re": true
+                    },
+                    "^TheWitch, , witch_first_quarter: Ho impostato aether=5, earth=-2, air=da 5 a 7, water=9, fire=-9 per Chitarra.",
+                    "\n",
+                    {
+                      "->": ".^.^.^.9"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                "du",
+                "ev",
+                {
+                  "VAR?": "ThirdStep"
+                },
+                "==",
+                "/ev",
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "pop",
+                    "\n",
+                    "ev",
+                    -5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_aether",
+                      "re": true
+                    },
+                    "ev",
+                    2,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_earth",
+                      "re": true
+                    },
+                    "ev",
+                    -5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_air",
+                      "re": true
+                    },
+                    "ev",
+                    -9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_water",
+                      "re": true
+                    },
+                    "ev",
+                    9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_fire",
+                      "re": true
+                    },
+                    "ev",
+                    -5,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_aether",
+                      "re": true
+                    },
+                    "ev",
+                    2,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_earth",
+                      "re": true
+                    },
+                    "ev",
+                    -7,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_air",
+                      "re": true
+                    },
+                    "ev",
+                    -9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_water",
+                      "re": true
+                    },
+                    "ev",
+                    9,
+                    "/ev",
+                    {
+                      "VAR=": "firstChar_last_fire",
+                      "re": true
+                    },
+                    "^TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.",
+                    "\n",
+                    {
+                      "->": ".^.^.^.9"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                "du",
+                "ev",
+                {
+                  "VAR?": "FourthStep"
+                },
+                "==",
+                "/ev",
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "pop",
+                    "\n",
+                    "^TheWitch, , witch_first_quarter: Questa è la seconda riga.",
+                    "\n",
+                    "^TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.",
+                    "\n",
+                    {
+                      "->t->": "grimoire_greenhouse_in_dialogue"
+                    },
+                    {
+                      "->": ".^.^.^.9"
+                    },
+                    null
+                  ]
+                }
+              ],
               "pop",
+              "nop",
               "\n",
               "ev",
-              -5,
-              "/ev",
               {
-                "VAR=": "firstChar_aether",
-                "re": true
+                "VAR?": "step"
               },
-              "ev",
-              2,
-              "/ev",
-              {
-                "VAR=": "firstChar_earth",
-                "re": true
-              },
-              "ev",
-              -5,
-              "/ev",
-              {
-                "VAR=": "firstChar_air",
-                "re": true
-              },
-              "ev",
-              -9,
-              "/ev",
-              {
-                "VAR=": "firstChar_water",
-                "re": true
-              },
-              "ev",
-              9,
-              "/ev",
-              {
-                "VAR=": "firstChar_fire",
-                "re": true
-              },
-              "ev",
-              -5,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_aether",
-                "re": true
-              },
-              "ev",
-              2,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_earth",
-                "re": true
-              },
-              "ev",
-              -7,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_air",
-                "re": true
-              },
-              "ev",
-              -9,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_water",
-                "re": true
-              },
-              "ev",
-              9,
-              "/ev",
-              {
-                "VAR=": "firstChar_last_fire",
-                "re": true
-              },
-              "^TheWitch, , witch_first_quarter: Ho invertito tutto di segno tutto per Chitarra.",
-              "\n",
-              {
-                "->": "start.10"
-              },
-              null
-            ]
-          }
-        ],
-        [
-          "du",
-          "ev",
-          {
-            "VAR?": "FourthStep"
-          },
-          "==",
-          "/ev",
-          {
-            "->": ".^.b",
-            "c": true
-          },
-          {
-            "b": [
-              "pop",
-              "\n",
-              "^TheWitch, , witch_first_quarter: Questa è la seconda riga.",
-              "\n",
-              "^TheWitch, , witch_first_quarter: E ora apro la scelta delle piante.",
-              "\n",
-              {
-                "->t->": "grimoire_greenhouse_in_dialogue"
-              },
-              {
-                "->": "start.10"
-              },
-              null
-            ]
-          }
-        ],
-        "pop",
-        "nop",
-        "\n",
-        "ev",
-        {
-          "VAR?": "step"
-        },
-        {
-          "VAR?": "step"
-        },
-        "LIST_ALL",
-        "LIST_MAX",
-        "==",
-        "/ev",
-        [
-          {
-            "->": ".^.b",
-            "c": true
-          },
-          {
-            "b": [
-              "\n",
-              "ev",
               {
                 "VAR?": "step"
               },
               "LIST_ALL",
-              "LIST_MIN",
+              "LIST_MAX",
+              "==",
               "/ev",
-              {
-                "VAR=": "step",
-                "re": true
-              },
+              [
+                {
+                  "->": ".^.b",
+                  "c": true
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    {
+                      "VAR?": "step"
+                    },
+                    "LIST_ALL",
+                    "LIST_MIN",
+                    "/ev",
+                    {
+                      "VAR=": "step",
+                      "re": true
+                    },
+                    "\n",
+                    {
+                      "->": ".^.^.^.20"
+                    },
+                    null
+                  ]
+                }
+              ],
+              [
+                {
+                  "->": ".^.b"
+                },
+                {
+                  "b": [
+                    "\n",
+                    "ev",
+                    {
+                      "VAR?": "step"
+                    },
+                    1,
+                    "+",
+                    {
+                      "VAR=": "step",
+                      "re": true
+                    },
+                    "/ev",
+                    {
+                      "->": ".^.^.^.20"
+                    },
+                    null
+                  ]
+                }
+              ],
+              "nop",
               "\n",
               {
-                "->": "start.21"
+                "->": ".^.^.g-0"
               },
-              null
+              {
+                "#f": 5
+              }
+            ],
+            "g-0": [
+              {
+                "->": "start"
+              },
+              {
+                "#f": 5
+              }
             ]
           }
         ],
-        [
-          {
-            "->": ".^.b"
-          },
-          {
-            "b": [
-              "\n",
-              "ev",
-              {
-                "VAR?": "step"
-              },
-              1,
-              "+",
-              {
-                "VAR=": "step",
-                "re": true
-              },
-              "/ev",
-              {
-                "->": "start.21"
-              },
-              null
-            ]
-          }
-        ],
-        "nop",
-        "\n",
-        {
-          "->": ".^"
-        },
         {
           "#f": 1
         }
@@ -5234,6 +5363,24 @@
         {
           "list": {},
           "origins": [
+            "listObjects"
+          ]
+        },
+        {
+          "VAR=": "listObjects"
+        },
+        {
+          "list": {},
+          "origins": [
+            "story_endedStories"
+          ]
+        },
+        {
+          "VAR=": "story_endedStories"
+        },
+        {
+          "list": {},
+          "origins": [
             "Items"
           ]
         },
@@ -5243,11 +5390,21 @@
         {
           "list": {
             "listCharacters.PG": 1,
-            "Items.Item1": 1
+            "listObjects.ToRoom2": 2,
+            "listObjects.Interaction": 3
           }
         },
         {
           "VAR=": "contentsRoom1"
+        },
+        {
+          "list": {
+            "listObjects.ToRoom1": 1,
+            "listObjects.Interaction": 3
+          }
+        },
+        {
+          "VAR=": "contentsRoom2"
         },
         true,
         {
@@ -5929,6 +6086,18 @@
   "listDefs": {
     "listCharacters": {
       "PG": 1
+    },
+    "listObjects": {
+      "ToRoom1": 1,
+      "ToRoom2": 2,
+      "Interaction": 3
+    },
+    "story_endedStories": {
+      "first": 1,
+      "second": 2,
+      "third": 3,
+      "fourth": 4,
+      "fifth": 5
     },
     "Items": {
       "Item1": 1
