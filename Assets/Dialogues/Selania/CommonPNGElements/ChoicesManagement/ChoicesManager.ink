@@ -735,7 +735,8 @@ VAR glyph_rewritingMultiplier = 3
         }     
 
     - Mentor:
-        {list_currentActors hasnt FifthCharacter:
+        {
+        - glyph_actualActiveSigil == () && list_currentActors hasnt FifthCharacter:
             {shuffle:
             - {charTag(FifthCharacter, "neutral")}:                             Sì sì.
             - {charTag(FifthCharacter, "neutral")}:                             Ok.
@@ -743,7 +744,14 @@ VAR glyph_rewritingMultiplier = 3
             - {charTag(FifthCharacter, "neutral")}:                             Mhm.
             - {charTag(FifthCharacter, "neutral")}:                             Chiaro.
             - {charTag(FifthCharacter, "neutral")}:                             Già.
-            } 
+            }
+
+        - glyph_actualActiveSigil != ():
+            {shuffle:
+            - {charTag(TheWitch, "{witch_state()}")}:           <i>L'utilizzo di un sigillo lascia {charNameFive} incuriosita.</i>
+            - {charTag(TheWitch, "{witch_state()}")}:           <i>Il sigillo nella voce di {player_name} stuzzica la curiosità di {charNameFive}.</i>
+            - {charTag(TheWitch, "{witch_state()}")}:           <i>{charNameFive} assapora con approvazione la presenza di un sigillo nella voce di {player_name}.</i>
+            }    
         }    
 }
 ->->
