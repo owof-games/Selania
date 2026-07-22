@@ -205,3 +205,56 @@
     -> grimoire_storylets_updater ->
 
 ->->
+
+
+VAR fifth_char_spoons_value = 0
+VAR fifth_char_restart_value = 7
+VAR fifth_char_min_restart_value = 2
+LIST list_fifth_char_event_values = fifthLightEvent, fifthMediumEvent, fifthStrongEvent
+
+=== function fifth_char_spoons_decrement(eventValue)
+//Chiamo questa funzione nei momenti critici di Mostro/Mentore per ridurre lo stato degli spoons e, nel caso, decrementarli
+// Da integrare: SPOONS. Se ci sono litigi, se ci sono rumori improvvisi (es: il treno) o se partecipa a molti dialoghi condivisi, un indicatore interno che traccia il “sensory overload” di Mentore (che chiameremo spoons) si riduce, e quando si azzera finisce che Mentore si ritira in serra, dove fa dei commenti generici tipo Certe cose per me sono davvero difficili a volte, o Vorrei essere più forte ma…. Vediamo anche dei pensieri fortemente negativi e dei commenti che ci fanno capire che questa cosa è stata un problema anche a casa etc. Così rendiamo anche il passaggio in serra poi col meltdown più ovvio.
+
+//Primo step: diminuire il valore
+    
+    {eventValue:
+        - fifthLightEvent: 
+            ~ fifth_char_spoons_value --
+
+        - fifthMediumEvent: 
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+
+        //Solo per fuga Boccale. Viene fatto un check unico in un posto comodo (es: appena parliamo con Mentore).
+        //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci dice qualcosa sul dover star da sola. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
+        - fifthStrongEvent: 
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value --
+            ~ fifth_char_spoons_value -- 
+    }
+
+
+//Poi, se il valore di fifth_char_spoons_value è <= di 0, spostiamo Mentore o Mostro in serra
+{
+    - fifth_char_spoons_value <= 0:
+        //Prima di tutto diminuisco il valore massimo degli spoons
+            {
+            - fifth_char_restart_value > fifth_char_min_restart_value:
+                ~ fifth_char_restart_value --
+            }
+            
+        {
+        //Se è Mostro    
+        - fifthChar_storyStatus != story_storyNotStarted:
+            ~ move_entity(FifthCharacter, Greenhouse)
+
+        //Se è Mentore
+        - else:
+            ~ move_entity(Mentor, Greenhouse)
+        }
+}
