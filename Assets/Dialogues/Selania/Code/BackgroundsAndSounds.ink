@@ -9,13 +9,13 @@
         - entity_location(PG) == Forest:
             ~ return "backForest"
             
-        - entity_location(PG) == TrainStop:
-            {
-                - not mentor_rage:
-                    ~ return "backTrainStop"
-                - else:
-                    ~ return "backTrainStopBroken"
-            }
+        // - entity_location(PG) == TrainStop:
+        //     {
+        //         - not mentor_meltdown:
+        //             ~ return "backTrainStop"
+        //         - else:
+        //             ~ return "backTrainStopBroken"
+        //     }
             
         - entity_location(PG) == Pond:
            ~ return "backPond"

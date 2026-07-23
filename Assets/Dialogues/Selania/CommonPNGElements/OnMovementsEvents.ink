@@ -377,6 +377,12 @@ VAR letters_doggoPause = false
                 ~ fifth_char_spoons_value ++
         }
 
+    //Gestione del meltdown per Mentore. Se il contatore del meltdown è stato attivato, allora diminuiamo il valore del timer, fino a quando Mentore non sbrocca.
+    {
+        - fifth_char_meltdown_activated == true && fifth_char_meltdown_countdown > 0:
+            ~ fifth_char_meltdown_countdown --
+    }    
+
     {   
         - mentor_pauseTalking > 0:
             ~ mentor_pauseTalking --    

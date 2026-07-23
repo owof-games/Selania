@@ -59,7 +59,7 @@
                 ~ thirdChar_storyStatus = story_storyStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
-        //- player_movementsCounter == delayFourthChar && mentor_rage:
+        //- player_movementsCounter == delayFourthChar && mentor_meltdown:
                 //{debug: introduco {FourthCharacter} in scena.}
                 //~ move_entity(FourthCharacter, Forest)
                 // ~ move_entity(chaletSmoke, Safekeeping)
