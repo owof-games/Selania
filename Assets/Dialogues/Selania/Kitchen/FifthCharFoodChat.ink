@@ -758,6 +758,9 @@
                 ~ kitchen_fifthCharCookingTogetherInvite = false
                 ~ kitchen_allChefs += FifthCharacter
                 ~ kitchen_kitchenOccupied = false
+                //Cucinare assieme aumenta anche il valore massimo di fifth_char_restart_value
+                ~ fifth_char_restart_value ++
+
             ~ update_glyphs(FifthCharacter)
             -> achievements_onGame_statusUpdate_GM ->
             -> fifth_char_closing_storylet ->

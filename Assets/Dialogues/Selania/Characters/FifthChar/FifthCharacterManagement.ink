@@ -189,6 +189,12 @@
     //Questo è per la gestione delle domande
     ~ fifthChar_justTalked = true
 
+    //Aggiorniamo il contatore degli spoons nel caso in cui fosse in conversazione con qualcuno.
+        {
+        - are_two_entities_together(Mentor, FourthCharacter):
+            ~ fifth_char_spoons_decrement(fifthLightEvent)
+        }
+
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
 
@@ -212,9 +218,24 @@ VAR fifth_char_restart_value = 7
 VAR fifth_char_min_restart_value = 2
 LIST list_fifth_char_event_values = fifthLightEvent, fifthMediumEvent, fifthStrongEvent
 
+TODO: da integrare in giro dopo il testing per i valori Medium.
+TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la prima volta, o meglio ancora, se ci sono state poche interazioni mentre era uovo), aumenta il valore di fifth_char_restart_value di uno.
 === function fifth_char_spoons_decrement(eventValue)
 //Chiamo questa funzione nei momenti critici di Mostro/Mentore per ridurre lo stato degli spoons e, nel caso, decrementarli
 // Da integrare: SPOONS. Se ci sono litigi, se ci sono rumori improvvisi (es: il treno) o se partecipa a molti dialoghi condivisi, un indicatore interno che traccia il “sensory overload” di Mentore (che chiameremo spoons) si riduce, e quando si azzera finisce che Mentore si ritira in serra, dove fa dei commenti generici tipo Certe cose per me sono davvero difficili a volte, o Vorrei essere più forte ma…. Vediamo anche dei pensieri fortemente negativi e dei commenti che ci fanno capire che questa cosa è stata un problema anche a casa etc. Così rendiamo anche il passaggio in serra poi col meltdown più ovvio.
+
+//Step zero: mi salvo location Mentore/Mostro per capire se siamo fuori dalla greenhouse
+~ temp fifthLocation = false
+{
+- entity_location(FifthCharacter) == Greenhouse:
+    ~ fifthLocation = true
+}
+
+{
+- entity_location(Mentor) == Greenhouse:
+    ~ fifthLocation = true
+}
+    
 
 //Primo step: diminuire il valore
     
@@ -227,7 +248,7 @@ LIST list_fifth_char_event_values = fifthLightEvent, fifthMediumEvent, fifthStro
             ~ fifth_char_spoons_value --
 
         //Solo per fuga Boccale. Viene fatto un check unico in un posto comodo (es: appena parliamo con Mentore).
-        //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci dice qualcosa sul dover star da sola. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
+        //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci dice qualcosa sul dover stare da sola. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
         - fifthStrongEvent: 
             ~ fifth_char_spoons_value --
             ~ fifth_char_spoons_value --
@@ -239,22 +260,25 @@ LIST list_fifth_char_event_values = fifthLightEvent, fifthMediumEvent, fifthStro
     }
 
 
-//Poi, se il valore di fifth_char_spoons_value è <= di 0, spostiamo Mentore o Mostro in serra
+
+//Poi, se il valore di fifth_char_spoons_value è <= di 0, spostiamo Mentore o Mostro in serra.
 {
-    - fifth_char_spoons_value <= 0:
+    //Se non siamo ancora in serra, diminuiamo anche il numero massimo di spoons per Mentore/Mostro
+    - fifth_char_spoons_value <= 0 && fifthLocation == false:
         //Prima di tutto diminuisco il valore massimo degli spoons
             {
             - fifth_char_restart_value > fifth_char_min_restart_value:
                 ~ fifth_char_restart_value --
             }
-            
-        {
-        //Se è Mostro    
-        - fifthChar_storyStatus != story_storyNotStarted:
-            ~ move_entity(FifthCharacter, Greenhouse)
 
-        //Se è Mentore
-        - else:
-            ~ move_entity(Mentor, Greenhouse)
-        }
+        //Poi procedo col cambio di luogo
+            {
+            //Se è Mostro    
+            - fifthChar_storyStatus != story_storyNotStarted:
+                ~ move_entity(FifthCharacter, Greenhouse)
+
+            //Se è Mentore
+            - else:
+                ~ move_entity(Mentor, Greenhouse)
+            }
 }

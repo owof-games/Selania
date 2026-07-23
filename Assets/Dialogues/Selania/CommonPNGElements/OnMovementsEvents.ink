@@ -357,7 +357,25 @@ VAR letters_doggoPause = false
     {    
         - fifthChar_pauseTalking > 0:
             ~ fifthChar_pauseTalking --
-    }  
+    }
+
+    //Gestione degli spoons di Mentore/Mostro
+        //Step uno: capire se Mostro o Mentore sono nella serra, perché la pausa scende solo in quel caso.
+        ~ temp fifthLocation = false
+        {
+        - entity_location(FifthCharacter) == Greenhouse:
+            ~ fifthLocation = true
+        }
+
+        {
+        - entity_location(Mentor) == Greenhouse:
+            ~ fifthLocation = true
+        }
+        //Step due: vedere se il valore di fifth_char_spoons_value è più basso del massimo e se siamo in cucina: in quel caso lo incrementiamo
+        {    
+            - fifth_char_spoons_value < fifth_char_restart_value && fifthLocation == true:
+                ~ fifth_char_spoons_value ++
+        }
 
     {   
         - mentor_pauseTalking > 0:
