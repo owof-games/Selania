@@ -166,7 +166,14 @@
         -  are_two_entities_together(ThirdCharacter, PG) && firstChar_storyStatus == story_storyPostal && grimoire_thirdChar hasnt grimThirdCharFirstCharDepartureComment:    
             -> third_char_first_char_departure_comment             
 } 
+//Speciali Mentore
+TODO: sbloccare dopo preparazione nuovo testing
+// {
+//     //Meltdown
+//     - are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorMeltdown && fifth_char_meltdown_countdown <= 0:
+//         -> mentor_meltdown
 
+// }
 
 //Speciali della strega
 {

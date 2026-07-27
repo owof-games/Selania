@@ -95,6 +95,11 @@
         ~ mentor_pauseTalking = mentor_pauseDuration
         //Aggiorno il contatore ansiosetto
         ~ mentor_lastTimeTalking = 0
+        // //Aggiorniamo il contatore degli spoons nel caso in cui fosse in conversazione con qualcuno.
+        // {
+        // - are_two_entities_together(Mentor, FirstCharacter) or are_two_entities_together(Mentor, SecondCharacter) or are_two_entities_together(Mentor, ThirdCharacter):
+        //     ~ fifth_char_spoons_decrement(fifthLightEvent)
+        // }
 
         //Aggiornamento storylets
         -> grimoire_storylets_updater ->

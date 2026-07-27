@@ -122,7 +122,7 @@
 
 
     {
-        - grimoire_fifthChar has grimMentorRage:
+        - grimoire_fifthChar has grimMentorMeltdown:
 
     }
     {

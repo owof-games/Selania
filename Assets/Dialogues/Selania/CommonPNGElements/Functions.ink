@@ -1277,8 +1277,10 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
         {
-            - mentor_rage && grimoire_fifthChar hasnt grimMentorRage:
-                ~ grimoire_fifthChar += grimMentorRage    
+            - mentor_meltdown && grimoire_fifthChar hasnt grimMentorMeltdown:
+                ~ grimoire_fifthChar += grimMentorMeltdown
+                //Disattiviamo anche l'attivazione del meltdown
+                ~ fifth_char_meltdown_activated = false
         }
 
         {
