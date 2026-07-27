@@ -1,5 +1,5 @@
     VAR debug_seedRandom = false
-    
+
 //Per abilitare o meno i debug
     VAR debug = false
     VAR debug_cultivable = false
@@ -20,8 +20,8 @@
     VAR debug_testDump = false
     VAR debug_testGreenhouse = false
     VAR debug_dialogues = false
-    
-//Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
+
+//Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico
     VAR debug_stochastic = false
 
 
@@ -65,7 +65,7 @@
 
     ~ player_pronoun = LIST_RANDOM(possibile_player_pronouns)
     ~ player_name = get_random_name()
-    
+
     //E assegniamo anche il nome della strega
     ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
 
@@ -133,7 +133,7 @@
     ~ debug_testDump = true
     ~ debug_testGreenhouse = true
     ~ debug_testFrog = true
-        
+
 
 {
     - debug_testDump == true && (entity_location(FromForestToDump) == Safekeeping):
@@ -141,7 +141,7 @@
         ~ move_entity(FromForestToDump, Forest)
         ~ move_entity(mapDump, TrainStop)
         ~ player_accessiblePlaces += Dump
-} 
+}
 {
     - debug_testKitchen == true && (entity_location(FromPondToKitchen) == Safekeeping):
         ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
@@ -157,7 +157,7 @@
         ~ move_entity(libraryOpened, Bedroom)
         ~ move_entity(mapLibrary, TrainStop)
         ~ player_accessiblePlaces += Library
-} 
+}
 {
     - debug_testNest == true && (entity_location(FromLibraryToNest) == Safekeeping):
         ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
@@ -176,13 +176,51 @@
 {
     - debug_testFrog == true && (entity_location(Franco) == Safekeeping) && grimoire_franco == ():
         ~ move_entity(Franco, Pond)
-}      
+}
 
 //Spostiamo anche il letto in camera, se non siamo in debug stocastico
 {
     - debug_stochastic == false:
         ~ move_entity(BedClosingGame, Bedroom)
 }
+
+//Elementi greenhouse
+~ growthBaccaDellaAddolorata = stepFour
+~ growthBarbaDellInciampo = stepFour
+~ growthBastoneDellOzioso = stepFour
+~ growthBrinaDellImpossibile = stepFour
+~ growthCantoDelleCompagne = stepFour
+~ growthCardoAspinato = stepFour
+~ growthEderaDelleAmanti = stepFour
+~ growthErbaLiccia = stepFour
+~ growthFalsaPalude = stepFour
+~ growthLanaNotturna = stepFour
+~ growthLicheneDegliAbissi = stepFour
+~ growthNonTiScordarDiTe = stepFour
+~ growthOlobino = stepFour
+~ growthSpazzata = stepFour
+
+~ move_entity(RedBee, Greenhouse)
+~ move_entity(PurpleBee, Greenhouse)
+~ move_entity(PinkBee, Greenhouse)
+
+~ move_entity(Snail, Greenhouse)  
+
+//Elementi cucina
+~ move_entity(CookingWithFirstCharOBJ, Kitchen)
+~ move_entity(CookingWithSecondCharOBJ, Kitchen)
+~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+~ move_entity(CookingWithFranco, Kitchen)
+~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
+~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
+~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+~ move_entity(CookingWithThirdCharOBJ, Kitchen)
+~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
 
 
 
