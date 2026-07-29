@@ -180,6 +180,8 @@
     INCLUDE Pond\FrancoMissionUpdateStorylets.ink
     INCLUDE Pond\FrancoGiftsManagement.ink
 
+    INCLUDE Pond\Franco2.ink
+
 //Nest
     INCLUDE Nest\Nest.ink
     INCLUDE Nest\NestVarsAndLists.ink
