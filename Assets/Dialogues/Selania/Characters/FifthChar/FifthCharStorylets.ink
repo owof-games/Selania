@@ -10,7 +10,8 @@
             ~ list_currentActors += FifthCharacter
     
         
-        {charTag(FifthCharacter, "neutral")}:       Frase
+        {charTag(FifthCharacter, "quiet")}:             Dissi che i fiori li avrei comprati io.
+                                                        Luba aveva già il suo daffare, e poi era una mattina così fresca!
             
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
@@ -29,7 +30,7 @@
                     -> glyph_choice_manager(false, aetherC)->
                 
         -    
-        {charTag(FifthCharacter, "neutral")}:       Ma lui mica ci può venire qui.
+        {charTag(FifthCharacter, "quiet")}:       Ma lui mica ci può venire qui.
         
 
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
@@ -47,7 +48,7 @@
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                     -> glyph_choice_manager(false, aetherC)->
             -
-
+        Forse avrei dovuto dire la verità sin da subito, ma a volte serve rispettare i propri tempi, vero?
         -> fifth_char_closing_storylet ->
         -> options_fifth_character
    
@@ -61,7 +62,7 @@
             ~ list_currentActors += FifthCharacter
     
 
-        {charTag(FifthCharacter, "neutral")}:      Frase
+        {charTag(FifthCharacter, "quiet")}:      Frase
 
         
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
@@ -92,7 +93,7 @@
             ~ list_currentActors += FifthCharacter
     
 
-        {charTag(FifthCharacter, "neutral")}:       Frase
+        {charTag(FifthCharacter, "quiet")}:       Frase
   
 
             
@@ -127,7 +128,7 @@
             ~ list_currentActors += FifthCharacter
     
         
-        {charTag(FifthCharacter, "neutral")}:       Frase
+        {charTag(FifthCharacter, "quiet")}:       Frase
             
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
@@ -159,7 +160,7 @@
     
         
 
-        {charTag(FifthCharacter, "neutral")}:       Frase
+        {charTag(FifthCharacter, "quiet")}:       Frase
         
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->
@@ -191,7 +192,7 @@
             ~ list_currentActors += FifthCharacter
     
 
-        {charTag(FifthCharacter, "neutral")}:       Frase
+        {charTag(FifthCharacter, "quiet")}:       Frase
        
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
                     -> glyph_choice_manager(false, airC)->

@@ -36,6 +36,11 @@
 //usare un interact counter
 //Quando si apre uovo, setto fifthChar_recovery su fifthChar_recoveryMaxValue
 //Gli stati saranno: uovo integro, uovo spezzato, uovo spezzato e uscita tentacolo primo step, uovo spezzato e tentacolo ritratto, uovo spezzato e tentacolo secondo step
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
     {fifthChar_growthMonsterEgg:
         - eggZero:
@@ -147,6 +152,12 @@
 
 === fifth_char_first_steps
 //Qui ci finiscono le cose che ci dice appena è uscita dall'uovo.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
     {fifthChar_recovery:
 
         - 8:

@@ -653,9 +653,68 @@
     -> main
 
 === mentor_meltdown
-Mentore sbrocca
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    
+        {charTag(FifthCharacter, "neutral")}:                       Non ce la faccio.
+        {charTag(FifthCharacter, "sorry")}:                         Non ce la faccio.
+        {charTag(FifthCharacter, "bored")}:                         NON CE LA FACCIO!
+        {charTag(FifthCharacter, "sad")}:                           {player_name}, non ce la faccio, mi dispiace.
+                                                                    Con tutto questo.
+        {charTag(FifthCharacter, "neutral")}:                       Doveva solo.
+        {charTag(FifthCharacter, "sorry")}:                         Mi manca l'aria.
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "neutral")}:                   {charNameFive}, stai avendo un attacco d'ansia, respira con me.
+                                                                    Uno.
+                                                                    Due.
+                                                                    Tre.
+            {charTag(FifthCharacter, "bored")}:                     Non ho nessun attacco d'ansia!
+                                                                    Ma è lui che doveva!
+
+        }
+        {charTag(FifthCharacter, "bored")}:                         Doveva solo!
+        {charTag(FifthCharacter, "sad")}:                           Lo facciamo tutti, no?
+                                                                    Le regole.
+        {charTag(FifthCharacter, "neutral")}:                       Ci sono delle regole.
+                                                                    E magari non ci piacciono.
+                                                                    E ci fanno stare male.
+        {charTag(FifthCharacter, "sorry")}:                         Ma è così che funziona, no?
+        {charTag(FifthCharacter, "neutral")}:                       Tu sei tu.
+        {charTag(FifthCharacter, "sad")}:                           Il mondo ti dice cosa non va in te, te lo fa capire.
+        {charTag(FifthCharacter, "neutral")}:                       E se ti adegui il premio è una buona vita.
+        {charTag(FifthCharacter, "sad")}:                           Una vita.
+        {charTag(FifthCharacter, "neutral")}:                       E.
+                                                                    L'aria.
+                                                                    Mi manca l'aria.
+        {charTag(FifthCharacter, "bored")}:                         E CHI E' LUI PER NON FARLO?
+        {charTag(FifthCharacter, "neutral")}:                       Tutti ci adeguiamo a questa sofferenza.
+        {charTag(FifthCharacter, "sad")}:                           Perché è così che si fa.
+                                                                    Ma lui no, lui è speciale.
+        {charTag(FifthCharacter, "bored")}:                         {charNameThree}.
+                                                                    Lui prende e se ne va.
+        {charTag(FifthCharacter, "neutral")}:                       Lui non può seguire le regole.
+                                                                    Lui non può fare come gli altri.
+                                                                    E allora perché io.
+        {charTag(FifthCharacter, "bored")}:                         PERCHE' DOVREI FARLO ANCHE IO {player_name}?!?
+        {charTag(FifthCharacter, "bored")}:                         NON CE LA FACCIO!
+        {charTag(FifthCharacter, "sad")}:                           Non reggo più tutto questo.
+                                                                    Non è giusto.
+        {charTag(FifthCharacter, "neutral")}:                       Devo prendermi una pausa.
+                                                                    Sì, una pausa.
+        {
+            - are_two_entities_together(Franco, PG):
+            {charTag(Franco, "question")}:                          {charNameThree} se ne è andato?
+        }
+        {
+        - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "melanchonic")}:                  Forse {charNameFive} ha bisogno di una vacanza.     
+        }
+
+                                                                                                                   
     -> mentor_closing_storylet ->
     -> main
         
