@@ -177,7 +177,7 @@ TODO: sbloccare dopo preparazione nuovo testing
 
 //Gestione uovo dopo il meltdown
 // {
-//    - are_two_entities_together(FifthCharacter, PG) && grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster < 0:
+//    - are_two_entities_together(FifthCharacterEgg, PG) && grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster < 0:
 //         -> fifth_char_egg_management
 // }
 

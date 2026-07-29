@@ -1281,6 +1281,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimMentorMeltdown
                 //Disattiviamo anche l'attivazione del meltdown
                 ~ fifth_char_meltdown_activated = false
+                //Spostiamo Mentor nel safekeeping, e l'uovo nella serra
+                ~ move_entity(FifthCharacterEgg, Greenhouse)
+                ~ move_entity(Mentor, Safekeeping)
         }
 
         {

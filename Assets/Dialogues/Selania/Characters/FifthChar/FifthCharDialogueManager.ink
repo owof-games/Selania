@@ -1,14 +1,17 @@
 === fifth_character ===
-
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(FifthCharacter, PG) && fifthChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [FifthCharacter]
-            //Se siamo in serra e non è ancora uscita dall'uovo, tracciamo le volte in cui la tocchiamo.
+            -> talk_with_fifth_character
+
+        //L'uovo
+        + {are_two_entities_together(FifthCharacterEgg, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
+            //Tracciamo le volte in cui la tocchiamo.
             {
             - fifthChar_growthMonsterEgg != eggFive:
                 ~ fifthChar_eggTouched = true
             }
-            -> talk_with_fifth_character
+            -> fifth_char_egg_management  
 
         //Chiacchierata in cucina
         + {are_two_entities_together(FifthCharacterCucina, PG) && fifthChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [FifthCharacter]

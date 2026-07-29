@@ -7,8 +7,6 @@
 // Allo stato attuale, Mentor è un oggetto, una variante di FifthCharacter allo stesso modo per cui Franco e FrancoCucina sono comunque due varianti di Franco. L'unica eccezione è per glyph_choice_manager, dove Mentor è qualcosa di gestito in modo totalmente diverso da FifthCharacter: preferisco comunque tenere i contatori separati tra Mentor e FifthCharacter per questioni di possibili scelte di design.
 // cosa a sé invece è Mentore (e non Mentor), che è una voce ad hoc per la parte dei ritratti su Unity, ma è sempre gestita da charTag.
 
-
-
 //Gestione del ritmo della storia
     //Stato della storia 
         //Non avviata, avviata, conclusa
@@ -36,6 +34,23 @@
         VAR fifthChar_slurDetector = 0
         //Stati dell'uovo
         VAR fifthChar_fromEggToMonster = 8
+        //Costanti per leggere lo stato dell'uovo, da comunicare poi a Unity per gli assets.
+        //Uovo integro
+        CONST eggZero = 0
+        //Uovo spezzato
+        CONST eggOne = 1
+        //Uovo spezzato e uscita tentacolo primo step
+        CONST eggTwo = 2
+        //Uovo spezzato e tentacolo ritratto
+        CONST eggThree = 3
+        //Uovo spezzato e tentacolo secondo step
+        CONST eggFour = 4
+        //Mostro liberata
+        CONST eggFive = 5
+        //Variabile per tracciare lo stato dell'uovo
+        VAR fifthChar_growthMonsterEgg = eggZero
+        //Variabile per tracciare lo stato dell'interazione con Mostro
+        VAR fifthChar_eggTouched = false
         //Frasi recovery
         VAR fifthChar_recoveryMaxValue = 8
         VAR fifthChar_recovery = 0
@@ -292,4 +307,33 @@ TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la pr
             - else:
                 ~ move_entity(Mentor, Greenhouse)
             }
+}
+
+=== function fifth_char_egg_evolution()
+{
+//Se siamo nella fase uovo e non l'ho toccato, aumentiamo il suo "stato"
+    - grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster != eggFive && fifthChar_eggTouched == false:
+        {
+            - fifthChar_fromEggToMonster == eggZero:
+                ~  fifthChar_fromEggToMonster = eggOne
+
+            - fifthChar_fromEggToMonster == eggOne:
+                ~  fifthChar_fromEggToMonster = eggTwo
+
+            - fifthChar_fromEggToMonster == eggTwo:
+                ~  fifthChar_fromEggToMonster = eggThree
+
+            - fifthChar_fromEggToMonster == eggThree:
+                ~  fifthChar_fromEggToMonster = eggFour
+
+            - else:
+                ~  fifthChar_fromEggToMonster = eggFive
+                //Aumento il valore di fifthChar_recovery
+                ~ fifthChar_recovery = fifthChar_recoveryMaxValue
+                //Spostiamo l'uovo nel safekeeping e portiamo in serra FifthCharacter
+                ~ move_entity(FifthCharacterEgg, Safekeeping)
+                ~ move_entity(FifthCharacter, Greenhouse)               
+        }
+    - fifthChar_eggTouched == true:
+        ~ fifthChar_eggTouched = false    
 }
