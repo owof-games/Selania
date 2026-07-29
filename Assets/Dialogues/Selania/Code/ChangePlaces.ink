@@ -72,6 +72,8 @@
             ~ move_entity(PG, Pond)
             //Uscendo dalla serra svuotiamo la lista dei TW temporanei dei coltivabili
             -> empty_tempCultTW ->
+            //E verifico se siamo nella condizione per cambiare lo stato dell'uovo/Mostro
+            ~ fifth_char_egg_evolution()
             -> on_movement_events ->
             -> pond
         

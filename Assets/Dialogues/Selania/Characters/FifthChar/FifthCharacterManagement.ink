@@ -34,6 +34,8 @@
     //Altre variabili ad hoc
         //Tracciamento delle parolacce dette da Boccale
         VAR fifthChar_slurDetector = 0
+        //Stati dell'uovo
+        VAR fifthChar_fromEggToMonster = 8
         //Frasi recovery
         VAR fifthChar_recoveryMaxValue = 8
         VAR fifthChar_recovery = 0

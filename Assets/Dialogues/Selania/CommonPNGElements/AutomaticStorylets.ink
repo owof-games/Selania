@@ -175,9 +175,16 @@ TODO: sbloccare dopo preparazione nuovo testing
 
 // }
 
+//Gestione uovo dopo il meltdown
+// {
+//    - are_two_entities_together(FifthCharacter, PG) && grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster < 0:
+//         -> fifth_char_egg_management
+// }
+
 // //Mentore è in recovery ed entriamo in serra
-//     - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
+//{    - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
 //         -> fifth_char_first_steps
+//}
 
 //Speciali della strega
 {

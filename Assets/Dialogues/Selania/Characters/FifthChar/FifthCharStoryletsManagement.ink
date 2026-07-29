@@ -1,7 +1,11 @@
 === knowing_fifth_character
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
     {
-        //Mentore è in recovery ed entriamo in serra
+        //Mostro è un uovo e interagiamo con lui
+        - are_two_entities_together(FifthCharacter, PG) && grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster != eggFive:
+            -> fifth_char_egg_management
+
+        //Mostro è in recovery ed entriamo in serra
         - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
             -> fifth_char_first_steps
 
@@ -26,6 +30,170 @@
         - else:
             -> fifth_character_opinions
     }
+
+
+
+//Costanti per leggere lo stato dell'uovo, da comunicare poi a Unity per gli assets.
+    //Uovo integro
+    CONST eggZero = 0
+    //Uovo spezzato
+    CONST eggOne = 1
+    //Uovo spezzato e uscita tentacolo primo step
+    CONST eggTwo = 2
+    //Uovo spezzato e tentacolo ritratto
+    CONST eggThree = 3
+    //Uovo spezzato e tentacolo secondo step
+    CONST eggFour = 4
+    //Mostro liberata
+    CONST eggFive = 5
+//Variabile per tracciare lo stato dell'uovo
+    VAR fifthChar_growthMonsterEgg = eggZero
+//Variabile per tracciare lo stato dell'interazione con Mostro
+    VAR fifthChar_eggTouched = false
+
+
+=== function fifth_char_egg_evolution()
+{
+//Se siamo nella fase uovo e non l'ho toccato, aumentiamo il suo "stato"
+    - grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster != eggFive && fifthChar_eggTouched == false:
+        {
+           - fifthChar_fromEggToMonster == eggZero:
+                ~  fifthChar_fromEggToMonster = eggOne
+
+           - fifthChar_fromEggToMonster == eggOne:
+                ~  fifthChar_fromEggToMonster = eggTwo
+
+           - fifthChar_fromEggToMonster == eggTwo:
+                ~  fifthChar_fromEggToMonster = eggThree
+
+           - fifthChar_fromEggToMonster == eggThree:
+                ~  fifthChar_fromEggToMonster = eggFour
+            - else:
+                ~  fifthChar_fromEggToMonster = eggFive                   
+        }
+}
+
+
+
+=== fifth_char_egg_management
+//Gestione degli stati dell'uovo
+//La logica è: se non ci interagisco si apre, se ci interagisco si chiude.
+//Sappiamo che, come per le piante nella serra, andremo a utilizzare delle costanti per definire gli stati
+//usare un interact counter
+//Quando si apre uovo, setto fifthChar_recovery su fifthChar_recoveryMaxValue
+//Gli stati saranno: uovo integro, uovo spezzato, uovo spezzato e uscita tentacolo primo step, uovo spezzato e tentacolo ritratto, uovo spezzato e tentacolo secondo step
+
+    {fifthChar_growthMonsterEgg:
+
+        - eggZero:
+            {
+            //Se toccata, abbiamo delle reazioni dall'uovo.
+            - fifthChar_eggTouched == true:
+                {shuffle:
+                    - {charTag(FifthCharacter, "egg")}: xxx
+                    - {charTag(FifthCharacter, "egg")}: YYY
+                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                }
+            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+                {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
+                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
+                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                }
+
+            }
+
+
+        - eggOne:
+            {
+            //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
+            - fifthChar_eggTouched == true:
+                ~  fifthChar_fromEggToMonster = eggZero
+                {shuffle:
+                    - {charTag(FifthCharacter, "egg")}: xxx
+                    - {charTag(FifthCharacter, "egg")}: YYY
+                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                }
+
+            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+                {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
+                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
+                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                }
+            }
+            
+        - eggTwo:
+            {
+            //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
+            - fifthChar_eggTouched == true:
+                ~  fifthChar_fromEggToMonster = eggOne
+                {shuffle:
+                    - {charTag(FifthCharacter, "egg")}: xxx
+                    - {charTag(FifthCharacter, "egg")}: YYY
+                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                }
+                
+            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+                {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
+                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
+                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                }
+            }
+        
+        - eggThree:
+            {
+            //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
+            - fifthChar_eggTouched == true:
+                ~  fifthChar_fromEggToMonster = eggTwo
+                {shuffle:
+                    - {charTag(FifthCharacter, "egg")}: xxx
+                    - {charTag(FifthCharacter, "egg")}: YYY
+                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                }
+                
+            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+                {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
+                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
+                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                }
+            }
+            
+        - eggFour:
+            {
+            //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
+            - fifthChar_eggTouched == true:
+                ~  fifthChar_fromEggToMonster = eggThree
+                {shuffle:
+                    - {charTag(FifthCharacter, "egg")}: xxx
+                    - {charTag(FifthCharacter, "egg")}: YYY
+                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                }
+                
+            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+                {shuffle:
+                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
+                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
+                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                }
+            }
+
+        - eggFive:
+            //Lascia lo spazio alla forma definitiva di Mostro, e aumento il valore di fifthChar_recovery
+                ~ fifthChar_recovery = fifthChar_recoveryMaxValue
+            //Viene spostato l'oggetto MostroUovo a favore di Mostro e basta    
+    }
+
+
+->->
+
 
 
 

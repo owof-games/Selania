@@ -3,6 +3,11 @@
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(FifthCharacter, PG) && fifthChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [FifthCharacter]
+            //Se siamo in serra e non è ancora uscita dall'uovo, tracciamo le volte in cui la tocchiamo.
+            {
+            - fifthChar_growthMonsterEgg != eggFive:
+                ~ fifthChar_eggTouched = true
+            }
             -> talk_with_fifth_character
 
         //Chiacchierata in cucina
