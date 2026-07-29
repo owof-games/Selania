@@ -42,11 +42,8 @@
             {
             //Se toccata, abbiamo delle reazioni dall'uovo.
             - fifthChar_eggTouched == true:
-                {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: xxx
-                    - {charTag(FifthCharacter, "egg")}: YYY
-                    - {charTag(FifthCharacter, "egg")}: ZZZ
-                }
+                {charTag(FifthCharacter, "egg")}: ...
+
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
@@ -64,9 +61,8 @@
             - fifthChar_eggTouched == true:
                 ~  fifthChar_fromEggToMonster = eggZero
                 {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: xxx
-                    - {charTag(FifthCharacter, "egg")}: YYY
-                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                    - {charTag(FifthCharacter, "egg")}: ...
+                    - {charTag(FifthCharacter, "egg")}: !!!
                 }
 
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
@@ -84,9 +80,9 @@
             - fifthChar_eggTouched == true:
                 ~  fifthChar_fromEggToMonster = eggOne
                 {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: xxx
-                    - {charTag(FifthCharacter, "egg")}: YYY
-                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                    - {charTag(FifthCharacter, "egg")}: ...
+                    - {charTag(FifthCharacter, "egg")}: !!!
+                    - {charTag(FifthCharacter, "egg")}: ???
                 }
                 
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
@@ -104,9 +100,10 @@
             - fifthChar_eggTouched == true:
                 ~  fifthChar_fromEggToMonster = eggTwo
                 {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: xxx
-                    - {charTag(FifthCharacter, "egg")}: YYY
-                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                    - {charTag(FifthCharacter, "egg")}: ...
+                    - {charTag(FifthCharacter, "egg")}: !!!
+                    - {charTag(FifthCharacter, "egg")}: ???
+                    - {charTag(FifthCharacter, "egg")}: ?!?
                 }
                 
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
@@ -124,9 +121,11 @@
             - fifthChar_eggTouched == true:
                 ~  fifthChar_fromEggToMonster = eggThree
                 {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: xxx
-                    - {charTag(FifthCharacter, "egg")}: YYY
-                    - {charTag(FifthCharacter, "egg")}: ZZZ
+                    - {charTag(FifthCharacter, "egg")}: ...
+                    - {charTag(FifthCharacter, "egg")}: !!!
+                    - {charTag(FifthCharacter, "egg")}: ???
+                    - {charTag(FifthCharacter, "egg")}: ?!?
+                    - {charTag(FifthCharacter, "egg")}: No!
                 }
                 
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
@@ -151,28 +150,28 @@
     {fifthChar_recovery:
 
         - 8:
-            {charTag(FirstCharacter, "scared")}:           {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            {charTag(FirstCharacter, "scared")}:           {Chissà come sarà messa la casa. Povera Luba, la Generalessa starà sicuramente scaricando su di lei la frustrazione per la mia scomparsa.|Ho bisogno di spazio, {player_name}.}
 
         - 7:
-            {charTag(FirstCharacter, "scared")}:           {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            {charTag(FirstCharacter, "scared")}:           {Immagino che Doris stia gongolando. Ce la vedo a dire ad Elia:"Visto? Tua madre non è capace di reggere nemmeno una festa, mentre io, mentre io!". Oh, non dovrei pensare a queste cose.|Scusami {player_name}, non ancora.}
             
         - 6:
-            {charTag(FirstCharacter, "down")}:           {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+            {charTag(FirstCharacter, "down")}:              {Riccardo, come se la starà passando? Immagino avrà mobilitato tutti i suoi contatti per trovarmi. E io che sono qui, a sperare che non accada. Povero.|Perdonami {player_name}, ho bisogno di tranquillità ora.}
         
         - 5:
-            {charTag(FirstCharacter, "down")}:           {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+            {charTag(FirstCharacter, "down")}:              {Don Pietro avrà deciso che sono davvero pazza, come quella volta durante la confessione.|{player_name}, lascia questa vecchia alle sue riflessioni.}
             
         - 4:
-            {charTag(FirstCharacter, "quiet")}:           {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+            {charTag(FirstCharacter, "quiet")}:             {Sara. Sara apprezzerebbe questi fiori. Sono così fisici, carnali. Passarebbe il tempo a sfiorarli, premerli, baciarli. |Ehi {player_name}, torneresti tra un po'?}
         
         - 3:
-            {charTag(FirstCharacter, "quiet")}:           {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
+            {charTag(FirstCharacter, "quiet")}:             {A volte mi dimentico di quanto mi faccia sentire viva maneggiare le piante, i fiori. Sono i giorni peggiori, quelli in cui mi spengo.|{player_name}, vorrei rimestare ancora un po' tra queste piante in solitudine.}
     
         - 2:
-            {charTag(FirstCharacter, "silly")}:           {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+            {charTag(FirstCharacter, "silly")}:             {Le nubi fuori dai vetri, la luce dorata. Ci fosse il lago, penserei di esser tornata d'estate con Sara, Pietro e Riccardo. Quante rughe in meno, e quante follie.|Questo cuore è un po' più solido, {player_name}, ma ho bisogno di ancora un po' di tranquillità.}
         
         - 1:
-            {charTag(FirstCharacter, "silly")}:           {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+            {charTag(FirstCharacter, "silly")}:             {Non ricoravo più cosa fosse il silenzio, le sue libertà.|{player_name}, godiamoci ancora un attimo questa pace.}
         
         
     }
