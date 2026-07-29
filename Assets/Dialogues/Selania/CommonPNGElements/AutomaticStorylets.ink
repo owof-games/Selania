@@ -175,6 +175,10 @@ TODO: sbloccare dopo preparazione nuovo testing
 
 // }
 
+// //Mentore è in recovery ed entriamo in serra
+//     - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
+//         -> fifth_char_first_steps
+
 //Speciali della strega
 {
     //Apertura di tutti i sigilli

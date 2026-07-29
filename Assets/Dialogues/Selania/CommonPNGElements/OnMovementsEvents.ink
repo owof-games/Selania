@@ -381,7 +381,13 @@ VAR letters_doggoPause = false
     {
         - fifth_char_meltdown_activated == true && fifth_char_meltdown_countdown > 0:
             ~ fifth_char_meltdown_countdown --
-    }    
+    }
+
+    //Gestione del tempo di recovery
+    {   
+        - fifthChar_recovery > 0:
+            ~ fifthChar_recovery --    
+    }
 
     {   
         - mentor_pauseTalking > 0:

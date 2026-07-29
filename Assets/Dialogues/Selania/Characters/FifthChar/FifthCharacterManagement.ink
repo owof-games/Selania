@@ -33,7 +33,10 @@
         VAR fifthChar_mailPauseDuration = 5
     //Altre variabili ad hoc
         //Tracciamento delle parolacce dette da Boccale
-        VAR fifthChar_slurDetector = 0    
+        VAR fifthChar_slurDetector = 0
+        //Frasi recovery
+        VAR fifthChar_recoveryMaxValue = 8
+        VAR fifthChar_recovery = 0
 
 
 //Stato della PNG
