@@ -99,7 +99,35 @@
     }
 
     //Storylets condivisi DA INSERIRE
+    {
+        - grimoire_fourthChar has grimMonsterMolotovOne:
+            ~ grimMonsterMolotovOne_text()
+    }
 
+    {
+        - grimoire_fourthChar has grimMonsterMolotovTwo:
+            ~ grimMonsterMolotovTwo_text()
+    }
+
+    {
+        - grimoire_fourthChar has grimMonsterMolotovThree:
+            ~ grimMonsterMolotovThree_text()
+    }
+
+    {
+        - grimoire_fourthChar has grimMonsterMolotovFour:
+            ~ grimMonsterMolotovFour_text()
+    }
+
+    {
+        - grimoire_fourthChar has grimMonsterMolotovFive:
+            ~ grimMonsterMolotovFive_text()
+    }
+
+    {
+        - grimoire_fourthChar has grimMonsterMolotovSix:
+            ~ grimMonsterMolotovSix_text()
+    }
 
     
     + [Index #bookmark:index]

@@ -38,7 +38,7 @@ VAR listDumpCharActivators = ()
     }
 
     {
-        - grimoire_fifthChar has grimFifthCharTwelve && listDumpCharActivators hasnt FifthCharacter:
+        - grimoire_fifthChar has grimFifthCharSix && listDumpCharActivators hasnt FifthCharacter:
             ~ listDumpGraphics ++
             ~ listDumpCharActivators += FifthCharacter
             {debug: il valore di grimoire_fifthChar ha grimFifthCharTwelve {grimoire_fifthChar}, e per questo ho aumentato il valore di listDumpGraphics e aggiunto FifthCharacter a listDumpCharActivators. listDumpGraphics contiene {listDumpGraphics}, mentre listDumpCharActivators contiene {listDumpCharActivators}}

@@ -713,8 +713,7 @@
         - are_two_entities_together(SecondCharacter, PG):
         {charTag(SecondCharacter, "melanchonic")}:                  Forse {charNameFive} ha bisogno di una vacanza.     
         }
-
-                                                                                                                   
+                                                                                                
     -> mentor_closing_storylet ->
     -> main
         

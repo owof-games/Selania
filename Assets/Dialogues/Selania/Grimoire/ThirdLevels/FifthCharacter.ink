@@ -50,35 +50,6 @@
 
     }
 
-    {
-        - grimoire_fifthChar has grimMentorSeven:
- 
-    } 
-
-    {
-        - grimoire_fifthChar has grimMentorEight:
-
-    }
-
-    {
-        - grimoire_fifthChar has grimMentorNine:
- 
-    }
-
-    {
-        - grimoire_fifthChar has grimMentorTen:
-
-    }
-
-    {
-        - grimoire_fifthChar has grimMentorEleven:
-
-    }
-    
-    {
-        - grimoire_fifthChar has grimMentorTwelve:
-
-    }
 
     //Storylets speciali come Mentore
     {
@@ -208,36 +179,7 @@
 
     }
 
-    {
-        - grimoire_fifthChar has grimFifthCharSeven:
- 
-    } 
 
-    {
-        - grimoire_fifthChar has grimFifthCharEight:
-
-    }
-
-    {
-        - grimoire_fifthChar has grimFifthCharNine:
- 
-    }
-
-    {
-        - grimoire_fifthChar has grimFifthCharTen:
-
-    }
-
-    {
-        - grimoire_fifthChar has grimFifthCharEleven:
-
-    }
-    
-    {
-        - grimoire_fifthChar has grimFifthCharTwelve:
-
-    }
-    
     //Storylets speciali
     {
         - grimoire_fifthChar has grimFifthCharNovel:
@@ -249,10 +191,6 @@
 
     }
 
-    // {
-    //     - grimoire_fifthChar has grimFifthOpenNest:
-
-    // }
 
     {
         - grimoire_fifthChar has grimFifthCharKitchenAlone:
@@ -260,9 +198,38 @@
 
     }
 
+    //Storylets con Nonna 
+    {
+        - grimoire_fifthChar has grimMonsterMolotovOne:
+            ~ grimMonsterMolotovOne_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimMonsterMolotovTwo:
+            ~ grimMonsterMolotovTwo_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimMonsterMolotovThree:
+            ~ grimMonsterMolotovThree_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimMonsterMolotovFour:
+            ~ grimMonsterMolotovFour_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimMonsterMolotovFive:
+            ~ grimMonsterMolotovFive_text()
+    }
+
+    {
+        - grimoire_fifthChar has grimMonsterMolotovSix:
+            ~ grimMonsterMolotovSix_text()
+    }
+
     //Storylets condivisi DA INSERIRE
-
-
     
     + [Index #bookmark:index]
         -> grimoire

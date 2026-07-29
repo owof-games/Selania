@@ -642,8 +642,42 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimFifthCharMentorFeedback    
 
         }
+        //Nonna e Mostro
+        {
+            - monster_and_molotov_one && grimoire_fifthChar hasnt grimMonsterMolotovOne:
+                ~ grimoire_fourthChar += grimMonsterMolotovOne
+                ~ grimoire_fifthChar += grimMonsterMolotovOne   
+        }
 
+        {
+            - monster_and_molotov_two && grimoire_fifthChar hasnt grimMonsterMolotovTwo:
+                ~ grimoire_fourthChar += grimMonsterMolotovTwo
+                ~ grimoire_fifthChar += grimMonsterMolotovTwo   
+        }
 
+        {
+            - monster_and_molotov_three && grimoire_fifthChar hasnt grimMonsterMolotovThree:
+                ~ grimoire_fourthChar += grimMonsterMolotovThree
+                ~ grimoire_fifthChar += grimMonsterMolotovThree   
+        }
+
+        {
+            - monster_and_molotov_four && grimoire_fifthChar hasnt grimMonsterMolotovFour:
+                ~ grimoire_fourthChar += grimMonsterMolotovFour
+                ~ grimoire_fifthChar += grimMonsterMolotovFour   
+        }
+
+        {
+            - monster_and_molotov_five && grimoire_fifthChar hasnt grimMonsterMolotovFive:
+                ~ grimoire_fourthChar += grimMonsterMolotovFive
+                ~ grimoire_fifthChar += grimMonsterMolotovFive   
+        }
+
+        {
+            - monster_and_molotov_six && grimoire_fifthChar hasnt grimMonsterMolotovSix:
+                ~ grimoire_fourthChar += grimMonsterMolotovSix
+                ~ grimoire_fifthChar += grimMonsterMolotovSix   
+        }
 
                         /******************************
 
@@ -1158,7 +1192,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         }
 
 
-            //Main storylets
+        //Main storylets come Mentore
         {
            - fifth_char_intro && grimoire_fifthChar hasnt grimMentorIntro:
             ~ grimoire_fifthChar += grimMentorIntro
@@ -1188,41 +1222,12 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - knowing_mentor_character.five && grimoire_fifthChar hasnt grimMentorFive:
                 ~ grimoire_fifthChar += grimMentorFive
+        }
 
+        {
             - knowing_mentor_character.six && grimoire_fifthChar hasnt grimMentorSix:
                 ~ grimoire_fifthChar += grimMentorSix
         }
-
-        {
-            - knowing_mentor_character.seven && grimoire_fifthChar hasnt grimMentorSeven:
-                ~ grimoire_fifthChar += grimMentorSeven
-        }
-
-        {
-            - knowing_mentor_character.eight && grimoire_fifthChar hasnt grimMentorEight:
-                ~ grimoire_fifthChar += grimMentorEight    
-        }
-
-        {
-            - knowing_mentor_character.nine && grimoire_fifthChar hasnt grimMentorNine:
-                ~ grimoire_fifthChar += grimMentorNine  
-        }
-
-        {
-            - knowing_mentor_character.ten && grimoire_fifthChar hasnt grimMentorEight:
-                ~ grimoire_fifthChar += grimMentorEight 
-        }
-
-        {
-            - knowing_mentor_character.eleven && grimoire_fifthChar hasnt grimMentorEleven:
-                ~ grimoire_fifthChar += grimMentorEleven   
-        }
-
-        {
-            - knowing_mentor_character.twelve && grimoire_fifthChar hasnt grimMentorTwelve:
-                ~ grimoire_fifthChar += grimMentorTwelve
-        }
-
 
 
         {        
@@ -1289,6 +1294,39 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - (first_char_new_mail or second_char_new_mail or third_char_new_mail) && grimoire_fifthChar hasnt grimMentorNewMail:
                 ~ grimoire_fifthChar += grimMentorNewMail    
+        }
+
+        //Main storylets come Mostro
+
+        {
+    
+            - fifth_char_main_storylets.one && grimoire_fifthChar hasnt grimFifthCharOne:
+                ~ grimoire_fifthChar += grimFifthCharOne
+        }
+
+        {
+            - fifth_char_main_storylets.two && grimoire_fifthChar hasnt grimFifthCharTwo:
+                ~ grimoire_fifthChar += grimFifthCharTwo
+        }
+
+        {
+            - fifth_char_main_storylets.three && grimoire_fifthChar hasnt grimFifthCharThree:
+                ~ grimoire_fifthChar += grimFifthCharThree    
+        }
+
+        {
+            - fifth_char_main_storylets.four && grimoire_fifthChar hasnt grimFifthCharFour:
+                ~ grimoire_fifthChar += grimFifthCharFour  
+        }
+
+        {
+            - fifth_char_main_storylets.five && grimoire_fifthChar hasnt grimFifthCharFive:
+                ~ grimoire_fifthChar += grimFifthCharFive
+        }
+        
+        {
+            - fifth_char_main_storylets.six && grimoire_fifthChar hasnt grimFifthCharSix:
+                ~ grimoire_fifthChar += grimFifthCharSix
         }
 
                         /******************************

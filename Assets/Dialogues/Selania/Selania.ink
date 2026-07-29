@@ -39,10 +39,12 @@
     INCLUDE CommonPNGElements\Functions.ink
     INCLUDE CommonPNGElements\AutomaticStorylets.ink
     INCLUDE CommonPNGElements\OpeningPlacesStorylets.ink
+    INCLUDE CommonPNGElements\NonnaEMostroStorylets.ink
     INCLUDE CommonPNGElements\ChoicesManagement\SigilsTranslator.ink
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
+    
     
 
     INCLUDE HorizontalStory\Storylets.ink

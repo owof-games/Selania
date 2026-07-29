@@ -14,7 +14,7 @@
         //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
         VAR fifthChar_storyEndingPosition = ()
         //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
-        VAR fifthChar_minStoryletsForRewriting = grimFifthCharNine
+        VAR fifthChar_minStoryletsForRewriting = grimMonsterMolotovSix
         //Abbiamo l'info speciale su Mentore? Se le condizioni sono corrette, viene messa su true dalla funzione inkLevel(Character)
         VAR fifthChar_specialEvent = false
         //Conteggio totale delle scelte prese con la PNG
@@ -211,7 +211,7 @@
 
     //Aggiorniamo il contatore degli spoons nel caso in cui fosse in conversazione con qualcuno.
         {
-        - are_two_entities_together(Mentor, FourthCharacter):
+        - are_two_entities_together(FifthCharacter, FourthCharacter):
             ~ fifth_char_spoons_decrement(fifthLightEvent)
         }
 
