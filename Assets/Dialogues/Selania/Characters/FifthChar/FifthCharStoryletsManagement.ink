@@ -47,9 +47,9 @@
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
-                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
-                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Un uovo in attesa di sé.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Guscio come tana, uno spazio privato.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Qualcuno si rifugia in sé, in cerca di pace.</i>
                 }
 
             }
@@ -68,9 +68,9 @@
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
-                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
-                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Crepe sul guscio, sguardi verso l'esterno.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Fessure sulla tana, atti di fiducia.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Primo sguardo sul mondo, ma l'uovo è ancora fragile.</i>
                 }
             }
             
@@ -88,9 +88,9 @@
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
-                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
-                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Il nuovo saggia il mondo, ancora timoroso.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Un tentacolo in avanti, un corpo ancora protetto.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>La curiosità fresca va protetta, non forzata.</i>
                 }
             }
         
@@ -109,9 +109,9 @@
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
-                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
-                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Troppa foga spezza i ponti.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>La pazienza è pianta fragile da coltivare.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Un ritirarsi che chiede fiducia.</i>
                 }
             }
             
@@ -131,9 +131,9 @@
             //Se non toccata e non ci sono piante in crescita, il commento è della strega.
             - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
                 {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  XXX
-                    - {charTag(TheWitch, "{witch_state()}")}:  YYY
-                    - {charTag(TheWitch, "{witch_state()}")}:  ZZZ
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>L'aria è colma delle possibilità di un nuovo incontro.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Un respiro, una attimo, una fiducia per far sì che il guscio si spezzi.</i>
+                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Cosa rimarrà dell'uovo? Ce lo dirà l'attesa.</i>
                 }
             }
             
