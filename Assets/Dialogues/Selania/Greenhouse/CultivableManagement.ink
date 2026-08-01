@@ -118,13 +118,37 @@
 //Variabili monitoraggio stato vegetali
     VAR greenhouse_cultivableGrowing = 0 
     
-//Gestione priorità coltivabili -> QUESTA ROBA POTREBBE ESSERE UNA LISTA, CON UN PO' DI CORAGGIO
+//Gestione priorità coltivabili -> non può essere una lista, perché l'ordinamento nelle liste è sulla base dei valori stessi, non dell'ordine di inserimento
     VAR greenhouse_frog_nextCultivableOne = ()
     VAR greenhouse_frog_nextCultivableTwo = ()
     VAR greenhouse_frog_nextCultivableThree = ()
     VAR greenhouse_frog_nextCultivableFour = ()
     VAR greenhouse_frog_nextCultivableFive = ()
     VAR greenhouse_frog_nextCultivableSix = ()
+
+
+
+=== function enqueue_cultivable(cultivable)
+{
+    - not greenhouse_frog_nextCultivableOne:
+        ~ greenhouse_frog_nextCultivableOne = cultivable
+
+    - not greenhouse_frog_nextCultivableTwo:
+        ~ greenhouse_frog_nextCultivableTwo = cultivable
+
+    - not greenhouse_frog_nextCultivableThree:
+        ~ greenhouse_frog_nextCultivableThree = cultivable
+
+    - not greenhouse_frog_nextCultivableFour:
+        ~ greenhouse_frog_nextCultivableFour = cultivable
+
+    - not greenhouse_frog_nextCultivableFive:
+        ~ greenhouse_frog_nextCultivableFive = cultivable
+
+    - not greenhouse_frog_nextCultivableSix:
+        ~ greenhouse_frog_nextCultivableSix = cultivable
+}
+
     
     
     
