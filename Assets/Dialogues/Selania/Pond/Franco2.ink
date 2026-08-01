@@ -1,26 +1,26 @@
+// thread to show and handle Franco
 === franco_pond
-{debug_frog: Entro in franco2}
-+ {are_two_entities_together(Franco, PG) && entity_location(PG) == Pond} [Franco]
+    { debug_frog: Entro in franco2 }
+    + { are_two_entities_together(Franco, PG) && entity_location(PG) == Pond } [Franco]
 
-// check if Franco is tired
-{ frog_tiredValue > 0:
-    -> franco_is_tired
-}
+    // check if Franco is tired
+    { frog_tiredValue > 0:
+        -> franco_is_tired
+    }
 
-// check franco special storylets
--> franco_special_storylets ->
+    // check franco special storylets
+    -> franco_special_storylets ->
 
-// check if it's possible to give a gift
-{ not franco_can_give_a_gift():
-    -> franco_cant_give_a_gift
-}
+    // check if it's possible to give a gift
+    { not franco_can_give_a_gift():
+        -> franco_cant_give_a_gift
+    }
 
-// check if there's a suspended gift
-{ frog_suspended_gift:
-    -> franco_has_a_suspended_gift
-}
+    // check if there's a suspended gift
+    { frog_suspended_gift:
+        -> franco_has_a_suspended_gift
+    }
 
-// end
 -> main
 
 
@@ -31,23 +31,27 @@
     {charTag(Franco, "neutral")}:                   Franco è stanchino ora.
                                                     Torna più tardi e provo a darti una zampa.
     {charTag(Franco, "question")}:                  Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
-                                                    
-                                                        ~ move_entity(Franco, Safekeeping)
+
+    ~ move_entity(Franco, Safekeeping)
+
 -> main
+
 
 
 = franco_cant_give_a_gift
 
-    {charTag(Franco, "party")}:                         Girino!
-    {charTag(Franco, "neutral")}:                       Per ora non ho modo di aiutarti, ma non ti preoccupare: vedo di ricordarmi che ti meriti un premio.
-                                                        E appena la situazione si aggiorna, potrai ritirarlo!
+    {charTag(Franco, "party")}:                     Girino!
+    {charTag(Franco, "neutral")}:                   Per ora non ho modo di aiutarti, ma non ti preoccupare: vedo di ricordarmi che ti meriti un premio.
+                                                    E appena la situazione si aggiorna, potrai ritirarlo!
+
 -> main
+
 
 
 = franco_has_a_suspended_gift
 
     {charTag(Franco, "party")}:                       Ehi girino!
-    {shuffle:
+    { shuffle:
                                                     - Hai ancora quel dono di prima da prendere!
                                                     - Devo ancora darti quel dono!
                                                     - Te lo ricordi che c'ho qui una cosa per te, vero?
@@ -55,13 +59,14 @@
                                                     - Ricordati che se ti serve c'ho qui il tuo dono!
     }
 
-    -> franco_wants_to_give_you_a_gift
+-> franco_wants_to_give_you_a_gift
 
 
 
 /*
  * SPECIAL STORYLETS
  */
+
 
 
 = franco_special_storylets
@@ -71,12 +76,12 @@
     ~ thirdCharDiscrepancy = thirdCharDiscrepancy || frog_third_char_object_ingredient == kitchen_thirdCharExtraIngredient && frog_third_char_object_ingredient != ()
     ~ thirdCharDiscrepancy = thirdCharDiscrepancy || frog_third_char_object_ingredient == universalIngredient
 
-    {   //Prima presentazione
+    {   // Prima presentazione
         - grimoire_franco hasnt grimFrancoFirst:
             -> franco_special_storylets_intro ->
-        
+
         - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoSpecialMissionOneFeedback:
-            -> franco_special_storylets_feedback_mission_one_closed
+            -> franco_special_storylets_feedback_mission_one_closed ->
 
         - thirdCharDiscrepancy && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
             -> franco_special_storylets_third_ingredient_failure ->
@@ -91,17 +96,16 @@
             -> franco_special_storylets_open_nest ->
 
         - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
-            -> franco_special_storylets_allDocumentsFounded    
+            -> franco_special_storylets_allDocumentsFounded ->
     }
 
 ->->
 
 
+
 = franco_special_storylets_intro
 
-    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    
 
     {charTag(Franco, "question")}:                  Ma dove avevo messo quel.
     {charTag(Franco, "party")}:                     Eccola cra!
@@ -114,9 +118,8 @@
                                                         ~ frog_nameDiscovered = true
     {charTag(Franco, "party")}:                     {charNameTwo} mi ha parlato di te.
                                                     Ha una bella testolina quel girino!
-    {
-        - are_two_entities_together(SecondCharacter, PG):
-                                                    {charTag(SecondCharacter, "energy")}:       Anche la tua mi piace, Franco!
+    { are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "energy")}:       Anche la tua mi piace, Franco!
     }
     {charTag(Franco, "neutral")}:                   Sei qui sicuramente qui per il dono.
     {charTag(Franco, "party")}:                     Come si dice: chi dorme non piglia lombrichi.
@@ -135,60 +138,53 @@
     {charTag(Franco, "party")}:                     Insomma: tu aiuti me, e io aiuto te.
                                                     Ad esempio dandoti dei consigli sulle cose da donare a una persona.
     {charTag(Franco, "neutral")}:                   O recuperando una pianta che hai già usato.
-        {
-            - are_two_entities_together(FirstCharacter, PG):
-                                                    {charTag(FirstCharacter, "affectionate")}:       Livello di confusione: sì.
-        }
-        {
-        - are_two_entities_together(ThirdCharacter, PG):
+    { are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "affectionate")}:  Livello di confusione: sì.
+    }
+    { are_two_entities_together(ThirdCharacter, PG):
         {charTag(ThirdCharacter, "jester")}:        Rana: mi sento ubriaco e non ho manco bevuto!
-        }
+    }
 
     ~ grimoire_franco += grimFrancoFirst
 
 ->->
 
 
+
 = franco_special_storylets_third_ingredient_failure
 
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
 
     {charTag(Franco, "question")}:                          Franco si fa delle domande, ma non trova delle risposte.
     {charTag(Franco, "neutral")}:                           Ed è strano girino, perché Franco ha sempre delle risposte.
                                                             Anche se non sono sempre giuste.
     {
-    - frog_third_char_object_gift == thirdChar_giftedObject:
+        - frog_third_char_object_gift == thirdChar_giftedObject:
                                                             Ho visto che hai dato a {charNameThree} il dono che ti ho consigliato, ma ha reagito male.
-
-    - frog_third_char_object_ingredient == universalIngredient:
+        - frog_third_char_object_ingredient == universalIngredient:
                                                             Ho visto che cucinando con {charNameThree} hai aggiunto la Zandelia, che dovrebbe piacere a tutti, ma lui ha reagito male.
-
-    - else:
-                                                            Ho visto che cucinando con {charNameThree} hai aggiunto l'ingrediente che ti ho consigliato, ma ha reagito male.                                                 
-    }                                                
+        - else:
+                                                            Ho visto che cucinando con {charNameThree} hai aggiunto l'ingrediente che ti ho consigliato, ma ha reagito male.
+    }
     {charTag(Franco, "neutral")}:                           Franco è triste per questa cosa, sai?
                                                             Perché vuole davvero aiutare tutti.
                                                             Ed è sicuro di aver dato a {player_name} il giusto consiglio.
-        {
-        - are_two_entities_together(ThirdCharacter, PG):
+    { are_two_entities_together(ThirdCharacter, PG):
         {charTag(ThirdCharacter, "jester")}:                Pensavi di avere davanti un libro aperto, vero Franchì?
-        }                                            
-        {
-        - are_two_entities_together(FirstCharacter, PG):
+    }
+    { are_two_entities_together(FirstCharacter, PG):
         {charTag(FirstCharacter, "annoyed")}:               Franco, non ti crucciare: per sapere di cosa ha bisogno, {charNameThree} dovrebbe farsi delle domande.
                                                             E non credo sia il suo forte.
-            {
-            - are_two_entities_together(ThirdCharacter, PG):
+        { are_two_entities_together(ThirdCharacter, PG):
             {charTag(ThirdCharacter, "bored")}:             Almeno non sono la regina delle paranoie.
-            }                                          
-        }                                            
+        }
+    }
     {charTag(Franco, "question")}:                          Cosa è andato storto?
     {charTag(Franco, "neutral")}:                           A parte il naso di zia Graaak.
     {charTag(Franco, "reading")}:	                        Franco indagherà su questa cosa, promesso.
     {charTag(Franco, "neutral")}:                           Non il naso di zia Graaak, ovvio, ma quell'altra cosa.
                                                             Quella.
-    {charTag(Franco, "question")}:                          Quale?                                                              
+    {charTag(Franco, "question")}:                          Quale?
     {charTag(Franco, "party")}:                             Ma ciao girino!
 
     ~ grimoire_franco += grimFrancoThirdIngredientFailure
@@ -196,23 +192,21 @@
 ->->
 
 
+
 === franco_special_storylets_open_kitchen
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    
 
     {charTag(Franco, "party")}:                     Girino!
     {charTag(Franco, "neutral")}:                   Ora che {charNameOne} ti ha aperto la cucina, posso darti delle dritte anche su quale ingrediente aggiungere quando cucini con una persona!
     {charTag(Franco, "party")}:                     Non è una cosa francosissima?!?
                                                     Che è tipo bellissima, solo più bagnaticcia.
 
-
 ->->
 
+
+
 === franco_special_storylets_open_library
-    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    
 
     {charTag(Franco, "party")}:                     Girino!
     {charTag(Franco, "neutral")}:                   {charNameTwo} ti ha aperto la biblioteca, e io ora ti apro la possibilità di conoscere quale racconto amano le persone che vuoi aiutare!
@@ -223,10 +217,10 @@
 
 ->->
 
+
+
 === franco_special_storylets_open_nest
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    
 
     {charTag(Franco, "party")}:                     Girino!
     {charTag(Franco, "neutral")}:                   Ho saputo che {charNameThree} ha aperto il nido.
@@ -234,15 +228,12 @@
     {charTag(Franco, "party")}:                     Ma posso recuperartene uno che hai utilizzato.
     {charTag(Franco, "neutral")}:                   Uno ce la faccio.
                                                     Poi sono troppo pesanti per le mie zampine.
-      
+
 ->->
 
 
+
 === franco_special_storylets_feedback_mission_one_closed
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    
 
     {charTag(Franco, "party")}:                     Ehi girino, grazie ancora per prima.
     {charTag(Franco, "neutral")}:                   Euforbo all'inizio era confuso, si è portato il sigillo in camera.
@@ -261,16 +252,18 @@
 
                                                     Per il resto della serata l'ho visto più sereno.
     {charTag(Franco, "party")}:                     Ha anche riso a una mia battuta!
-        
+
     ~ grimoire_franco += grimFrancoSpecialMissionOneFeedback
+
 ->->
+
 
 
 === franco_special_storylets_allDocumentsFounded
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         Girino!
                                                         Hai trovato tutti i documenti della vecchia congrega!
@@ -295,7 +288,7 @@
                                                         E visto che sa che a volte mi distraggo, ha fatto tutto lui il lavoro.
                                                         Devo ringraziarlo.
     {charTag(Franco, "party")}:                         Magari gli compro il prossimo "Starview Galley".
-                                
+
         ~ grimoire_franco += grimFrancoAllDocuments
 ->->
 
@@ -304,7 +297,7 @@
  * COMPUTE GIFTS
  */
 
- === function franco_available_potential_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+=== function _franco_available_potential_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     // a char whose story is not ongoing surely has no valid gifts
     {storyStatus != story_storyStarted:
@@ -335,21 +328,21 @@
 
     {character:
         - FirstCharacter:
-            ~ return franco_available_potential_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
         - SecondCharacter:
-            ~ return franco_available_potential_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
         - ThirdCharacter:
-            ~ return franco_available_potential_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
         - FourthCharacter:
-            ~ return franco_available_potential_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
         - FifthCharacter:
-            ~ return franco_available_potential_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
     }
 
 
- === function franco_available_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+=== function _franco_available_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
-    ~ temp potentialGifts = franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+    ~ temp potentialGifts = _franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     {player_accessiblePlaces hasnt Kitchen:
         ~ potentialGifts -= ingredientGift
@@ -366,15 +359,15 @@
 
     {character:
         - FirstCharacter:
-            ~ return franco_available_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
         - SecondCharacter:
-            ~ return franco_available_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
         - ThirdCharacter:
-            ~ return franco_available_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
         - FourthCharacter:
-            ~ return franco_available_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
         - FifthCharacter:
-            ~ return franco_available_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
     }
 
 
@@ -408,7 +401,7 @@
 
     // hint about gifts that cannot yet be given
     { franco_available_potential_gifts_for_char(FirstCharacter) && not franco_available_gifts_for_char(FirstCharacter):
-        {charTag(Franco, "neutral")}:                   Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco! 
+        {charTag(Franco, "neutral")}:                   Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco!
     }
 
     { franco_available_potential_gifts_for_char(SecondCharacter) && not franco_available_gifts_for_char(SecondCharacter):
@@ -423,7 +416,7 @@
 
     // let the player choose which gifts they want (or if they don't want it yet)
                                                             Come vuoi che ti aiuti?
-o
+
 
     +   {charTag(PG, "neutral")}:                           Mi servirebbe un consiglio su {charNameOne}.
         -> franco_wants_to_give_you_a_gift_first_character
@@ -437,17 +430,16 @@ o
         -> main
     +   {charTag(PG, "neutral")}:                           Vorrei pensarci ancora un po'.
         {charTag(Franco, "neutral")}:                       Mi trovi qui girino.
-        {shuffle:
-                                                            -   Continuo a contare tutte le onde!
-                                                            -   Intanto sonnecchio sulla ninfea.
-                                                            -   Nel mentre scrivo a Babbo Navale.
-                                                            -   Continuo a leggere "<i>Lezioni di nuoto per girini</i>".
-                                                            -   Devo decidere cosa cucinare per il compleanno dei gemelli.
-        }                                                
+        { shuffle:
+                                                          - Continuo a contare tutte le onde!
+                                                          - Intanto sonnecchio sulla ninfea.
+                                                          - Nel mentre scrivo a Babbo Navale.
+                                                          - Continuo a leggere "<i>Lezioni di nuoto per girini</i>".
+                                                          - Devo decidere cosa cucinare per il compleanno dei gemelli.
+        }
         ~ frog_suspended_gift = true
+        -> main
 
-
--> main
 
 
 === franco_wants_to_give_you_a_gift_first_character
@@ -455,20 +447,19 @@ o
 {debug_frog: passo da franco_giftsFirstChar.}
     ~ temp charNameOne = translator(firstChar_ActualName)
 
-    {
-        - are_two_entities_together(FirstCharacter, PG):
-            {charTag(FirstCharacter, "neutral")}:               Se resto mi sembra di barare.
-            {charTag(FirstCharacter, "annoyed")}:               Anche se non ha senso, visto che lo stai facendo tu, {player_name}.
-            ~ move_entity(FirstCharacter, Forest)
+    { are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "neutral")}:                   Se resto mi sembra di barare.
+        {charTag(FirstCharacter, "annoyed")}:                   Anche se non ha senso, visto che lo stai facendo tu, {player_name}.
+        ~ move_entity(FirstCharacter, Forest)
     }
 
-    {shuffle once:
+    { shuffle once:
         - {charTag(Franco, "party")}:                           Uh, mi piace {charNameOne}, è sempre così gentile con me!
         - {charTag(Franco, "party")}:                           {charNameOne} ha una bella testolina.
                                                                 Piena di girini che corrono alla svelta.
         - {charTag(Franco, "party")}:                           {charNameOne} andrebbe molto d'accordo con Tullio.
                                                                 Anche lui è un artista.
-        - {charTag(Franco, "party")}:                           Ottimamente!                             
+        - {charTag(Franco, "party")}:                           Ottimamente!
     }
 
     <- franco_wants_to_give_you_a_gift_common_dispatch(FirstCharacter, -> book)
@@ -476,8 +467,7 @@ o
 
     = book
         ~ temp charNameOne = translator(firstChar_ActualName)
-        {
-        - library_readStories has Aza:
+        { library_readStories has Aza:
             {charTag(Franco, "party")}:                         Franco vede, vede vede...
             {charTag(Franco, "neutral")}:                       Uh, devo aprire gli occhi.
                                                                 Ma mi dicevano i topi della biblioteca che prima hai letto <b>Luna vergine</b> di Aza.
@@ -487,8 +477,8 @@ o
             {charTag(Franco, "question")}:                      O vedono.
                                                                 O ascoltano.
             {charTag(Franco, "party")}:                         Per fortuna io parlo poco.
-                ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
-                ~ frog_firstCharAchievableGifts -= bookGift
+            ~ frog_first_novel = "<b>Luna vergine</b> di Aza"
+            ~ frog_firstCharAchievableGifts -= bookGift
 
         - else:
             {charTag(Franco, "neutral")}:                       C'è una lettera dei topi della biblioteca.
@@ -496,30 +486,30 @@ o
                                                                 Ah, e dietro c'è scritto: "Lunga".
             {charTag(Franco, "question")}:                      Forse vogliono diventare zucche?
             {charTag(Franco, "neutral")}:                       Ma magari tu ci capisci qualcosa e allora trovi il racconto che ti serve!
-                ~ frog_first_novel = "una storia lunga che parli di trasformazione"
-                ~ frog_firstCharAchievableGifts -= bookGift
+            ~ frog_first_novel = "una storia lunga che parli di trasformazione"
+            ~ frog_firstCharAchievableGifts -= bookGift
         }
 
-    -> franco_wants_to_give_you_a_gift_close_exchange           
+        ->->
+
 
 
 === franco_wants_to_give_you_a_gift_second_character
     ~ temp charNameTwo = translator(secondChar_ActualName)
 
-    {
-        - are_two_entities_together(SecondCharacter, PG):
-            {charTag(SecondCharacter, "energy")}:               Uh, Franco sa tantissime cose di me!
-            {charTag(SecondCharacter, "emotional")}:            Sicuro che ti aiuta be-nis-si-mo!
-            {charTag(SecondCharacter, "neutral")}:              Ma io vado a fare qualcos'altro.
-                ~ move_entity(SecondCharacter, Forest)
+    { are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "energy")}:                   Uh, Franco sa tantissime cose di me!
+        {charTag(SecondCharacter, "emotional")}:                Sicuro che ti aiuta be-nis-si-mo!
+        {charTag(SecondCharacter, "neutral")}:                  Ma io vado a fare qualcos'altro.
+        ~ move_entity(SecondCharacter, Forest)
     }
 
-    {shuffle once:
+    { shuffle once:
         - {charTag(Franco, "party")}:                           Mi piace {charNameTwo}! Mi ha insegnato tantissime cose!
         - {charTag(Franco, "party")}:                           Sì! Voglio chiedere a {charNameTwo} se facciamo lezioni di nuoto assieme!
         - {charTag(Franco, "party")}:                           {charNameTwo} mi sta tanto simpatico.
                                                                 Anche se non ho ancora capito quella cosa della elettricità.
-        - {charTag(Franco, "party")}:                           Ottimamente!                                   
+        - {charTag(Franco, "party")}:                           Ottimamente!
     }
 
     <- franco_wants_to_give_you_a_gift_common_dispatch(SecondCharacter, -> book)
@@ -527,174 +517,90 @@ o
 
     = book
         ~ temp charNameTwo = translator(secondChar_ActualName)
-        {
-            - library_readStories has Lamia:
-                {charTag(Franco, "party")}:                     Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.
-                {charTag(Franco, "neutral")}:                   Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.
-                {charTag(Franco, "party")}:                     Anche perché è certissimamerrimo che ha già letto <b>Il sassolino</b>!
-                {charTag(Franco, "neutral")}:                   A {charNameTwo} piace parlare.
-                {charTag(Franco, "party")}:                     Ora mi sta insegnando come non annegare!
-                                ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
-                                ~ frog_secondCharAchievableGifts -= bookGift
- 
-            - else:
-                {charTag(Franco, "neutral")}:                   Secondo il manuale della biblioteca, {charNameTwo} è uno da fenotipo "ribellione" combinato con "veloce".
-                {charTag(Franco, "question")}:                  E tu dirai "Franco la rana, cos'è un fenotipo?"
-                {charTag(Franco, "neutral")}:                   E io ti dirò "Un tipo a cui piace tanto il fieno!"
-                                                                E poi aggiungerò "Che è un po' diverso dal topognomastico, che è un topo che mastica gli gnomi."
-                                                                E so che sono tante informazioni anche per una bella testolina come la tua, girino.
-                {charTag(Franco, "party")}:                     Per cui vai pure a cercare questa ribellione in biblioteca e vedrai che farai felice {charNameTwo}!
-                    ~ frog_second_novel = "qualcosa di veloce che parli di ribellione"
-                    ~ frog_secondCharAchievableGifts -= bookGift
+        { library_readStories has Lamia:
+            {charTag(Franco, "party")}:                     Prima Gliberia, una delle topoline della biblioteca, ha visto che stavi leggendo <b>Il sassolino</b>.
+            {charTag(Franco, "neutral")}:                   Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.
+            {charTag(Franco, "party")}:                     Anche perché è certissimamerrimo che ha già letto <b>Il sassolino</b>!
+            {charTag(Franco, "neutral")}:                   A {charNameTwo} piace parlare.
+            {charTag(Franco, "party")}:                     Ora mi sta insegnando come non annegare!
+            ~ frog_second_novel = "<b>Il sassolino</b> di Lamia"
+            ~ frog_secondCharAchievableGifts -= bookGift
+
+        - else:
+            {charTag(Franco, "neutral")}:                   Secondo il manuale della biblioteca, {charNameTwo} è uno da fenotipo "ribellione" combinato con "veloce".
+            {charTag(Franco, "question")}:                  E tu dirai "Franco la rana, cos'è un fenotipo?"
+            {charTag(Franco, "neutral")}:                   E io ti dirò "Un tipo a cui piace tanto il fieno!"
+                                                            E poi aggiungerò "Che è un po' diverso dal topognomastico, che è un topo che mastica gli gnomi."
+                                                            E so che sono tante informazioni anche per una bella testolina come la tua, girino.
+            {charTag(Franco, "party")}:                     Per cui vai pure a cercare questa ribellione in biblioteca e vedrai che farai felice {charNameTwo}!
+            ~ frog_second_novel = "qualcosa di veloce che parli di ribellione"
+            ~ frog_secondCharAchievableGifts -= bookGift
         }
-        -> franco_wants_to_give_you_a_gift_close_exchange
+
+        ->->
+
 
 
 === franco_wants_to_give_you_a_gift_third_character
     ~ temp charNameThree = translator(thirdChar_ActualName)
 
-    {
-    - are_two_entities_together(ThirdCharacter, PG):
+    { are_two_entities_together(ThirdCharacter, PG):
         {charTag(ThirdCharacter, "neutral")}:                   Vi lascio alle vostre chiacchiere, via.
         {charTag(ThirdCharacter, "jester")}:                    Ma se mi fischiano le orecchie vedete che penserò male di voi!
-                ~ move_entity(ThirdCharacter, Forest)
+        ~ move_entity(ThirdCharacter, Forest)
     }
 
-    {shuffle once:
+    { shuffle once:
         - {charTag(Franco, "neutral")}:                         Uh, non ho ancora capito {charNameThree}, ma posso aiutarti lo stesso!
         - {charTag(Franco, "neutral")}:                         Mi parla sempre del fantacalcio ma ancora non ho capito quando devo schierare i draghi.
         - {charTag(Franco, "neutral")}:                         {charNameThree} mi dice sempre che sono una sagoma, non capisco.
-        - {charTag(Franco, "neutral")}:                         Perfetto!                                 
+        - {charTag(Franco, "neutral")}:                         Perfetto!
     }
 
     <- franco_wants_to_give_you_a_gift_common_dispatch(ThirdCharacter, -> book)
     + -> main
-    
-    = book
-        ~ temp charNameThree = translator(thirdChar_ActualName)        
-        {
-            - library_readStories has Maura:
-                {charTag(Franco, "party")}:                     Sembra che tu abbia già letto <b>Polvere</b>.
-                {charTag(Franco, "neutral")}:                   Prova a parlare con lui e sono sicuro che avrà qualcosa da commentare!.
-                {charTag(Franco, "party")}:                     Anche perché è sicuro che ha letto <b>Polvere</b>!
-                {charTag(Franco, "neutral")}:                   L'hanno sentito tutti con quella cosa del licantropo.
-                {charTag(Franco, "party")}:                     Se un licantropo mi morde, divento una rana mannnara?
-                        ~ frog_third_novel = "<b>Polvere</b> di Maura"
-                        ~ frog_thirdCharAchievableGifts -= bookGift
 
-            - else:
-                {charTag(Franco, "neutral")}:                   Secondo l'ultime novità in campo editoriale, {charNameThree} è uno che apprezza le cose rapide, e che bruciano.
-                {charTag(Franco, "question")}:                  Che non è una buona idea per un libro.
+    = book
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        { library_readStories has Maura:
+            {charTag(Franco, "party")}:                         Sembra che tu abbia già letto <b>Polvere</b>.
+            {charTag(Franco, "neutral")}:                       Prova a parlare con lui e sono sicuro che avrà qualcosa da commentare!.
+            {charTag(Franco, "party")}:                         Anche perché è sicuro che ha letto <b>Polvere</b>!
+            {charTag(Franco, "neutral")}:                       L'hanno sentito tutti con quella cosa del licantropo.
+            {charTag(Franco, "party")}:                         Se un licantropo mi morde, divento una rana mannnara?
+            ~ frog_third_novel = "<b>Polvere</b> di Maura"
+            ~ frog_thirdCharAchievableGifts -= bookGift
+
+        - else:
+            {charTag(Franco, "neutral")}:                       Secondo l'ultime novità in campo editoriale, {charNameThree} è uno che apprezza le cose rapide, e che bruciano.
+            {charTag(Franco, "question")}:                      Che non è una buona idea per un libro.
                                                                 Sapevi che i primi libri sapevano volare?
-                {charTag(Franco, "party")}:                     Si libravano in aria.
-                {charTag(Franco, "neutral")}:                   Ma poi era davvero difficile leggerli mentre si muovevano così tanto.
+            {charTag(Franco, "party")}:                         Si libravano in aria.
+            {charTag(Franco, "neutral")}:                       Ma poi era davvero difficile leggerli mentre si muovevano così tanto.
                                                                 Così cugina Sputt li ha addomesticati.
                                                                 E ora sonnecchiano tutto il giorno nelle biblioteche.
                                                                 Che avevano le teche proprio per non farli scappare.
-                {charTag(Franco, "party")}:                     Hai visto quante cose so?
-                    ~ frog_third_novel = "qualcosa di rapido e che brucia"
-                    ~ frog_thirdCharAchievableGifts -= bookGift
+            {charTag(Franco, "party")}:                         Hai visto quante cose so?
+            ~ frog_third_novel = "qualcosa di rapido e che brucia"
+            ~ frog_thirdCharAchievableGifts -= bookGift
         }
-        -> franco_wants_to_give_you_a_gift_close_exchange
+
+        ->->
 
 
 
 === franco_wants_to_give_you_a_gift_fourth_character
     ~ temp charNameFour = translator(fourthChar_ActualName)
     TODO: Da scrivere contenuti corretti quando faccio Nonna.
-    {
-    - are_two_entities_together(FourthCharacter, PG):
-        {charTag(FourthCharacter, "neutral")}:                  Vi lascio alle vostre chiacchiere, via.
-        {charTag(FourthCharacter, "jester")}:                   Ma se mi fischiano le orecchie vedete che penserò male di voi!
-                ~ move_entity(FourthCharacter, Forest)
-    }
+    -> franco_wants_to_give_you_a_gift_close_exchange
 
-    {shuffle once:
-        - {charTag(Franco, "neutral")}:                         Uh, non ho ancora capito {charNameFour}, ma posso aiutarti lo stesso!
-        - {charTag(Franco, "neutral")}:                         Mi parla sempre del fantacalcio ma ancora non ho capito quando devo schierare i draghi.
-        - {charTag(Franco, "neutral")}:                         {charNameFour} mi dice sempre che sono una sagoma, non capisco.
-        - {charTag(Franco, "neutral")}:                         Perfetto!                                 
-    }
-
-    <- franco_wants_to_give_you_a_gift_common_dispatch(FourthCharacter, -> book)
-    + -> main
-    
-    = book
-        ~ temp charNameFour = translator(fourthChar_ActualName)        
-        {
-            - library_readStories has CeciliaFormicola:
-                {charTag(Franco, "party")}:                     Sembra che tu abbia già letto <b>Polvere</b>.
-                {charTag(Franco, "neutral")}:                   Prova a parlare con lui e sono sicuro che avrà qualcosa da commentare!.
-                {charTag(Franco, "party")}:                     Anche perché è sicuro che ha letto <b>Polvere</b>!
-                {charTag(Franco, "neutral")}:                   L'hanno sentito tutti con quella cosa del licantropo.
-                {charTag(Franco, "party")}:                     Se un licantropo mi morde, divento una rana mannnara?
-
-                        ~ frog_fourth_novel = "<b>Fuochino</b> di Cecilia Formicola"
-                        ~ frog_fourthCharAchievableGifts -= bookGift
-
-            - else:
-                {charTag(Franco, "neutral")}:                   Secondo l'ultime novità in campo editoriale, {charNameFour} è uno che apprezza le cose rapide, e che bruciano.
-                {charTag(Franco, "question")}:                  Che non è una buona idea per un libro.
-                                                                Sapevi che i primi libri sapevano volare?
-                {charTag(Franco, "party")}:                     Si libravano in aria.
-                {charTag(Franco, "neutral")}:                   Ma poi era davvero difficile leggerli mentre si muovevano così tanto.
-                                                                Così cugina Sputt li ha addomesticati.
-                                                                E ora sonnecchiano tutto il giorno nelle biblioteche.
-                                                                Che avevano le teche proprio per non farli scappare.
-                {charTag(Franco, "party")}:                     Hai visto quante cose so?
-                    ~ frog_fourth_novel = "qualcosa di rapido e che brucia"
-                    ~ frog_fourthCharAchievableGifts -= bookGift
-        }
-        -> franco_wants_to_give_you_a_gift_close_exchange
 
 
 === franco_wants_to_give_you_a_gift_fifth_character
     ~ temp charNameFive = translator(fifthChar_ActualName)
     TODO: Da scrivere contenuti corretti quando faccio Mostro.
-    {
-    - are_two_entities_together(FifthCharacter, PG):
-        {charTag(FifthCharacter, "neutral")}:                  Vi lascio alle vostre chiacchiere, via.
-        {charTag(FifthCharacter, "jester")}:                   Ma se mi fischiano le orecchie vedete che penserò male di voi!
-                ~ move_entity(FifthCharacter, Forest)
-    }
+    -> franco_wants_to_give_you_a_gift_close_exchange
 
-    {shuffle once:
-        - {charTag(Franco, "neutral")}:                         Uh, non ho ancora capito {charNameFive}, ma posso aiutarti lo stesso!
-        - {charTag(Franco, "neutral")}:                         Mi parla sempre del fantacalcio ma ancora non ho capito quando devo schierare i draghi.
-        - {charTag(Franco, "neutral")}:                         {charNameFive} mi dice sempre che sono una sagoma, non capisco.
-        - {charTag(Franco, "neutral")}:                         Perfetto!                                 
-    }
-
-    <- franco_wants_to_give_you_a_gift_common_dispatch(FifthCharacter, -> book)
-    + -> main
-    
-    = book
-        ~ temp charNameFive = translator(fifthChar_ActualName)        
-        {
-            - library_readStories has Jae:
-                {charTag(Franco, "party")}:                     Sembra che tu abbia già letto <b>Polvere</b>.
-                {charTag(Franco, "neutral")}:                   Prova a parlare con lui e sono sicuro che avrà qualcosa da commentare!.
-                {charTag(Franco, "party")}:                     Anche perché è sicuro che ha letto <b>Polvere</b>!
-                {charTag(Franco, "neutral")}:                   L'hanno sentito tutti con quella cosa del licantropo.
-                {charTag(Franco, "party")}:                     Se un licantropo mi morde, divento una rana mannnara?
-
-                        ~ frog_fifth_novel = "<b>Fuochino</b> di Cecilia Formicola"
-                        ~ frog_fifthCharAchievableGifts -= bookGift
-
-            - else:
-                {charTag(Franco, "neutral")}:                   Secondo l'ultime novità in campo editoriale, {charNameFive} è uno che apprezza le cose rapide, e che bruciano.
-                {charTag(Franco, "question")}:                  Che non è una buona idea per un libro.
-                                                                Sapevi che i primi libri sapevano volare?
-                {charTag(Franco, "party")}:                     Si libravano in aria.
-                {charTag(Franco, "neutral")}:                   Ma poi era davvero difficile leggerli mentre si muovevano così tanto.
-                                                                Così cugina Sputt li ha addomesticati.
-                                                                E ora sonnecchiano tutto il giorno nelle biblioteche.
-                                                                Che avevano le teche proprio per non farli scappare.
-                {charTag(Franco, "party")}:                     Hai visto quante cose so?
-                    ~ frog_fifth_novel = "qualcosa di rapido e che brucia"
-                    ~ frog_fifthCharAchievableGifts -= bookGift
-        }
-        -> franco_wants_to_give_you_a_gift_close_exchange
 
 
 === franco_wants_to_give_you_a_gift_common_dispatch(character, -> book)
@@ -704,7 +610,9 @@ o
     + {achievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:          Che ingrediente dovrei aggiungere mentre cucineremo assieme?
         -> franco_giftsPlants(character, Kitchen)
     + {achievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
-        -> book
+        -> book ->
+    -
+    -> franco_wants_to_give_you_a_gift_close_exchange
 
 
 
@@ -771,9 +679,9 @@ o
                     {
                     - are_two_entities_together(PG, FourthCharacter):
                     {charTag(FourthCharacter, "neutral")}:      Non cambiare mai Franco.
-                    }  
+                    }
 
-    }      
+    }
 
 }
 
