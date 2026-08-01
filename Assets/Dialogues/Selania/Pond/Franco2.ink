@@ -260,11 +260,6 @@
 
 
 === franco_special_storylets_allDocumentsFounded
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-
-
     {charTag(Franco, "party")}:                         Girino!
                                                         Hai trovato tutti i documenti della vecchia congrega!
     {charTag(Franco, "question")}:                      E tu mi dirai: "Come fai a saperlo, Franco?"
@@ -289,14 +284,19 @@
                                                         Devo ringraziarlo.
     {charTag(Franco, "party")}:                         Magari gli compro il prossimo "Starview Galley".
 
-        ~ grimoire_franco += grimFrancoAllDocuments
+    ~ grimoire_franco += grimFrancoAllDocuments
+
 ->->
+
 
 
 /*
  * COMPUTE GIFTS
  */
 
+
+
+// get the available gifts for a character, even those that aren't yet available because the corresponding area is not open
 === function _franco_available_potential_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     // a char whose story is not ongoing surely has no valid gifts
@@ -324,6 +324,7 @@
     ~ return achievableGifts
 
 
+// get the available gifts for a character, even those that aren't yet available because the corresponding area is not open
 === function franco_available_potential_gifts_for_char(character)
 
     {character:
@@ -340,6 +341,8 @@
     }
 
 
+
+// get the available gifts for a character, excluding those that aren't yet available because the corresponding area is not open
 === function _franco_available_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     ~ temp potentialGifts = _franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
@@ -355,6 +358,8 @@
     ~ return potentialGifts
 
 
+
+// get the available gifts for a character, excluding those that aren't yet available because the corresponding area is not open
 === function franco_available_gifts_for_char(character)
 
     {character:
@@ -371,6 +376,8 @@
     }
 
 
+
+// check whether franco can give any kind of gift to the player
 === function franco_can_give_a_gift()
 
 // either a character can receive a gift
@@ -384,10 +391,11 @@
 
 
 
-
 /*
  * GIFT MANAGEMENT
  */
+
+
 
 === franco_wants_to_give_you_a_gift
 
@@ -412,12 +420,13 @@
         {charTag(Franco, "neutral")}:                   Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
         {charTag(Franco, "question")}:                  O smistare?
     }
-    //remind per Marco: non serve fare la stessa cosa per Mostro e Nonna, perché a questo punto tutti i luoghi sono aperti.
+    // non serve fare la stessa cosa per Mostro e Nonna, perché a questo punto tutti i luoghi sono aperti.
 
     // let the player choose which gifts they want (or if they don't want it yet)
                                                             Come vuoi che ti aiuti?
 
 
+    - (top)
     +   {charTag(PG, "neutral")}:                           Mi servirebbe un consiglio su {charNameOne}.
         -> franco_wants_to_give_you_a_gift_first_character
     +   {charTag(PG, "neutral")}:                           Vorrei una mano con {charNameTwo}.
@@ -427,7 +436,25 @@
     +   {charTag(PG, "neutral")}:                           Apprezzerei un aiuto con {charNameFour}.
         -> franco_wants_to_give_you_a_gift_fourth_character
     +   {charTag(PG, "neutral")}:                           Qualche dritta su {charNameFive}?
-        -> main
+        -> franco_wants_to_give_you_a_gift_fifth_character
+    +   {frog_recoverableCultivables && not frog_recoveredCultivables}  \ {charTag(PG, "neutral")}:         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
+        {charTag(Franco, "party")}:                         Certo che craack!
+                                                            Ma.
+                                                            Lo posso fare solo una volta.
+        + + {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
+            -> franco_cultivable_recovery
+        + + {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
+            -> top
+    +   {frog_recoveredSigil == () && glyph_usedSigils != ()}  \ {charTag(PG, "neutral")}:                  Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
+        {charTag(Franco, "party")}:                         Certo che craack!
+                                                            Ma.
+        {charTag(Franco, "neutral")}:                       Lo posso fare solo una volta.
+                                                            E dandotene uno a caso.
+        {charTag(Franco, "question")}:                      I sigilli sono più strani delle capre, e non so fare di meglio.
+        + + {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
+            -> franco_sigil_recovery
+        + + {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
+            -> top
     +   {charTag(PG, "neutral")}:                           Vorrei pensarci ancora un po'.
         {charTag(Franco, "neutral")}:                       Mi trovi qui girino.
         { shuffle:
@@ -606,83 +633,355 @@
 === franco_wants_to_give_you_a_gift_common_dispatch(character, -> book)
     ~ temp achievableGifts = franco_available_gifts_for_char(character)
     + {achievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:                                                 Quale regalo mi consigli?
-        -> franco_giftsPlants(character, Pond)
+        -> franco_pick_plant_gift(character, false) ->
     + {achievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:          Che ingrediente dovrei aggiungere mentre cucineremo assieme?
-        -> franco_giftsPlants(character, Kitchen)
+        -> franco_pick_plant_gift(character, true) ->
     + {achievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
         -> book ->
     -
-    -> franco_wants_to_give_you_a_gift_close_exchange
+    
+-> franco_wants_to_give_you_a_gift_close_exchange
 
 
 
 === franco_wants_to_give_you_a_gift_close_exchange
-{debug_frog: passo closed_exchange.}
+    {debug_frog: passo closed_exchange.}
 
-{charTag(Franco, "party")}:                                     Girino!
+    {charTag(Franco, "party")}:                                     Girino!
 
-{
-    - closed_exchange == 1:                                     Gattino!
-                                                                Bambino!
-    {charTag(Franco, "question")}:                              Hai mai visto quante cose piccole finiscono con "ino?"
-                                                                Tranne il pino.
-                                                                Non dovrebbe chiamarsi "pone"?
-    {charTag(Franco, "neutral")}:                               Ma non Pino il girino, che è grosso come, uh, una lettera da zia Graaak.
-    {charTag(Franco, "reading")}:	                            "Dice Pino di dire a {player_name} quella faccenda delle commissioni finite."
-                                                                "E poi se gli riporti la sua crema solare."
-    {charTag(Franco, "neutral")}:	                            Vero!
-                                                                La crema!
-                                                                Anche per noi è importante proteggere la nostra pelle.
-                                                                Poi ci vengono le bolle.
-    {charTag(Franco, "party")}:                                 Anche se alcune rane le apprezzano.
-    {charTag(Franco, "neutral")}:                               Uh, una lettera di zia Graaak.
-    {charTag(Franco, "reading")}:	                            "LE COMMISSIONI! DEVI DIRE CHE NON SONO INFINITE!"
-                                                                "SENNO' POI COME FA UNA PERSONA A DECIDERE QUALE AIUTO VUOLE DA TE?!?"
-                                                                "E QUINDI DEVI SOLO DIRE "NE HO ALCUNE SPECIALI CHE HANNO LE LORO REGOLE, MA LE COMMISSIONI A DISPOSIZIONE ORA SONO SOLO DIECI!"
-                                                                "E SE LE COMMISSIONI SONO SOLO DIECI, QUANTE VOLTE PUOI AIUTARE QUELLA POVERA ANIMA, FRANCO? QUANTE?"
-    {charTag(Franco, "question")}:	                            Perdonami {player_name}, ma nella mia famiglia tutti si agitano così velocemente.
-                                                                Sai che quasi quasi mi faccio un pisolino ora?
+    { closed_exchange == 1:
+
+                                                                    Gattino!
+                                                                    Bambino!
+        {charTag(Franco, "question")}:                              Hai mai visto quante cose piccole finiscono con "ino?"
+                                                                    Tranne il pino.
+                                                                    Non dovrebbe chiamarsi "pone"?
+        {charTag(Franco, "neutral")}:                               Ma non Pino il girino, che è grosso come, uh, una lettera da zia Graaak.
+        {charTag(Franco, "reading")}:	                            "Dice Pino di dire a {player_name} quella faccenda delle commissioni finite."
+                                                                    "E poi se gli riporti la sua crema solare."
+        {charTag(Franco, "neutral")}:	                            Vero!
+                                                                    La crema!
+                                                                    Anche per noi è importante proteggere la nostra pelle.
+                                                                    Poi ci vengono le bolle.
+        {charTag(Franco, "party")}:                                 Anche se alcune rane le apprezzano.
+        {charTag(Franco, "neutral")}:                               Uh, una lettera di zia Graaak.
+        {charTag(Franco, "reading")}:	                            "LE COMMISSIONI! DEVI DIRE CHE NON SONO INFINITE!"
+                                                                    "SENNO' POI COME FA UNA PERSONA A DECIDERE QUALE AIUTO VUOLE DA TE?!?"
+                                                                    "E QUINDI DEVI SOLO DIRE "NE HO ALCUNE SPECIALI CHE HANNO LE LORO REGOLE, MA LE COMMISSIONI A DISPOSIZIONE ORA SONO SOLO DIECI!"
+                                                                    "E SE LE COMMISSIONI SONO SOLO DIECI, QUANTE VOLTE PUOI AIUTARE QUELLA POVERA ANIMA, FRANCO? QUANTE?"
+        {charTag(Franco, "question")}:	                            Perdonami {player_name}, ma nella mia famiglia tutti si agitano così velocemente.
+                                                                    Sai che quasi quasi mi faccio un pisolino ora?
 
     - else:
 
-    {shuffle once:
-            -   {charTag(Franco, "party")}:                     Facciamo un bel duo noi due.
-                                                                Io il cervello, tu la mano.
-                                                                Hai tantissime dita comunque!
-                                                                A dopo girino!
+        { shuffle once:
+                -   {charTag(Franco, "party")}:                     Facciamo un bel duo noi due.
+                                                                    Io il cervello, tu la mano.
+                                                                    Hai tantissime dita comunque!
+                                                                    A dopo girino!
 
-            -   {charTag(Franco, "party")}:                     Non la senti la soddisfazione di qualcosa di concluso?
-                {charTag(Franco, "question")}:                  E non confuso?
-                                                                Illuso?
-                                                                Escluso?
-                                                                Deluso.
-                                                                Uh, dicevamo?
+                -   {charTag(Franco, "party")}:                     Non la senti la soddisfazione di qualcosa di concluso?
+                    {charTag(Franco, "question")}:                  E non confuso?
+                                                                    Illuso?
+                                                                    Escluso?
+                                                                    Deluso.
+                                                                    Uh, dicevamo?
 
-            -   {charTag(Franco, "neutral")}:                   Come dice sempre Tullio: "Per fortuna che non sai guidare."
-                                                                E come dice sempre Giulio: "Dopo il lavoro bisogna riposare."
-                                                                E ora riposiamo un po', {player_name}!
+                -   {charTag(Franco, "neutral")}:                   Come dice sempre Tullio: "Per fortuna che non sai guidare."
+                                                                    E come dice sempre Giulio: "Dopo il lavoro bisogna riposare."
+                                                                    E ora riposiamo un po', {player_name}!
 
-            -   {charTag(Franco, "party")}:                     Siamo un portento assieme, abbiamo chiuso un'altra commissione!
-                {charTag(Franco, "neutral")}:                   Anche se zia Graaak dice che sono più un tormento.
-                                                                Forse perché da piccolo soffiavo tantissimo.
-                                                                E una volta ho avuto un raffreddore che faceva piovere ovunque.
-                                                                Uh, una lettera di Tullio.
-                {charTag(Franco, "reading")}:	                "Quella è la tormenta, Franco."
-                                                                "Tu sei un tormento di coccole."
-                {charTag(Franco, "party")}:                     Quanto è carino?
-                                                                Devo assolutamente spupazzarlo.
+                -   {charTag(Franco, "party")}:                     Siamo un portento assieme, abbiamo chiuso un'altra commissione!
+                    {charTag(Franco, "neutral")}:                   Anche se zia Graaak dice che sono più un tormento.
+                                                                    Forse perché da piccolo soffiavo tantissimo.
+                                                                    E una volta ho avuto un raffreddore che faceva piovere ovunque.
+                                                                    Uh, una lettera di Tullio.
+                    {charTag(Franco, "reading")}:	                "Quella è la tormenta, Franco."
+                                                                    "Tu sei un tormento di coccole."
+                    {charTag(Franco, "party")}:                     Quanto è carino?
+                                                                    Devo assolutamente spupazzarlo.
 
-            -   {charTag(Franco, "party")}:                     Un'altra commissione chiusa dal dream team Franco e {player_name}!
-                                                                Chi ci ferma più, a noi?
-                {charTag(Franco, "question")}:                  A parte la polizia, {~per quella cosa dei volantini.|dopo quella faccenda della molotov.|per via di quegli adesivi su Mangione.|per via di quel datacenter in fiamme.|dopo la schedatura alla manifestazione per la Palestina.}
-                {charTag(Franco, "neutral")}:                   Ma è un'altra storia.
-                    {
-                    - are_two_entities_together(PG, FourthCharacter):
-                    {charTag(FourthCharacter, "neutral")}:      Non cambiare mai Franco.
+                -   {charTag(Franco, "party")}:                     Un'altra commissione chiusa dal dream team Franco e {player_name}!
+                                                                    Chi ci ferma più, a noi?
+                    {charTag(Franco, "question")}:                  A parte la polizia, {~per quella cosa dei volantini.|dopo quella faccenda della molotov.|per via di quegli adesivi su Mangione.|per via di quel datacenter in fiamme.|dopo la schedatura alla manifestazione per la Palestina.}
+                    {charTag(Franco, "neutral")}:                   Ma è un'altra storia.
+                    { are_two_entities_together(PG, FourthCharacter):
+                        {charTag(FourthCharacter, "neutral")}:      Non cambiare mai Franco.
                     }
+
+        }
 
     }
 
-}
-
 -> main
+
+
+
+/*
+ * PLANT GIFT
+ */
+
+
+
+=== franco_pick_plant_gift(character, isKitchenGift)
+
+    ~ temp characterName = translator(character)
+    ~ temp usedGifts = ()
+
+    { character:
+        - FirstCharacter:
+            ~ usedGifts = kitchen_firstCharExtraIngredient + firstChar_giftedObject
+            { isKitchenGift:
+                -> _franco_pick_plant_gift_internal(characterName, firstChar_favouritesGifts, usedGifts, frog_first_temp_growing_ingredient, frog_first_char_text_ingredient, frog_firstCharAchievableGifts, ingredientGift)
+            - else:
+                -> _franco_pick_plant_gift_internal(characterName, firstChar_favouritesGifts, usedGifts, frog_first_temp_growing_gift, frog_first_char_text_gift, frog_firstCharAchievableGifts, cultivableGift)
+            }
+        TODO fare two, three, ...
+        - else:
+            NON ABBIAMO REPLICATO I VARI PERSONAGGI IN franco_pick_plant_gift
+    }
+
+->->
+
+
+
+= _franco_pick_plant_gift_internal(characterName, favouriteGifts, usedGifts, ref growingFlag, ref text, ref achievableGifts, giftKind)
+
+    // used in teh various branches to compute the perfect gift
+    ~ temp perfectGift = ()
+
+    {
+        // Caso uno: il dono è in crescita:
+        - favouriteGifts has greenhouse_chosenCultivable:
+            {charTag(Franco, "party")}:                                                             Girino!
+            {stopping:
+                                                        -                                           Tu hai i superportieri!
+                                                                                                    Come zia Graaak, che sa sempre quando sto per respirare.
+                                                            {charTag(Franco, "neutral")}:           La pianta che ti serve sta già crescendo in serra.
+
+                                                        -                                           Quello che ti serve sta crescendo proprio ora in serra!
+                                                                                                    Sento l'odore fino a qui.
+                                                            {charTag(Franco, "question")}:          O forse è solo zia Graaak che non si è ancora lavata.
+
+                                                        -                                           Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
+                                                            {charTag(Franco, "question")}:          Forse sai parlare con le formiche?
+                                                                                                    Nel caso chiedi loro di restituirmi il giroscopio?
+                                                            {charTag(Franco, "neutral")}:           Mi serve per girare i girini quando sono a pancia all'aria.
+
+                                                        -                                           Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
+                                                            {charTag(Franco, "neutral")}:           Di nuovo.
+                                                                                                    Povero Franco.
+                                                                                                    Ormai non serve più nemmeno a piantare le piante.
+                                                            {charTag(Franco, "party")}:             Forse potrei fiorare i fiori?
+
+            }
+            ~ text = "sta crescendo ora in serra!"
+            ~ growingFlag = true
+
+        // Caso due: il dono è nello zaino
+        - backpack_findedGifts ^ favouriteGifts != ():
+            ~ temp foundFavourites = backpack_findedGifts ^ favouriteGifts
+            ~ temp foundFavouriteNotUsed = foundFavourites - usedGifts
+            ~ perfectGift = LIST_RANDOM(foundFavouriteNotUsed)
+            -> _franco_get_hint_for_plant(perfectGift, text) ->
+
+        //Caso tre: non abbiamo mai trovato il dono
+        - favouriteGifts ^ greenhouse_findedCultivables == ():
+            {charTag(Franco, "party")}:                     Girino!
+            {stopping:
+                                                        -   {charTag(Franco, "neutral")}:   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
+                                                                                            Ma ora ci penso io.
+                                                            {charTag(Franco, "reading")}:	"Care formiche."
+                                                                                            "Come avrete visto, ora sono vegetariano."
+                                                                                            E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+                                                                                            "Grazie mille."
+                                                                                            "PS.: Vi allego un po' del miele di Dora."
+                                                            {charTag(Franco, "neutral")}:   Ottimo.
+                                                            {charTag(Franco, "party")}:	    La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
+
+                                                        -   {charTag(Franco, "neutral")}:   Di nuovo non hai niente di utile tra le tue cose.
+                                                                                            Mando una lettera alle amiche formiche.
+                                                            {charTag(Franco, "reading")}:	"Care formiche, qui è sempre Franco che vi scrive."
+                                                                                            "Mi diceva Dora che avete passato un periodo difficile."
+                                                                                            "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
+                                                                                            "Così magari il passato vi sembra migliore."
+                                                                                            "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {characterName} possa apprezzare?"
+                                                                                            "Cordialmente."
+                                                                                            "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
+                                                            {charTag(Franco, "party")}:	    Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.
+
+                                                        -   {charTag(Franco, "neutral")}:   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
+                                                                                            Perché ancora non hai nulla di utile.
+                                                            {charTag(Franco, "reading")}:	"Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
+                                                                                            "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
+                                                                                            "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
+                                                                                            "E nemmeno "<i>È l'uovo per me</i>", che poi i girini si spaventano."
+                                                                                            "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
+                                                                                            "Grazie mille."
+                                                                                            "Franco."
+                                                            {charTag(Franco, "neutral")}:	Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {characterName}.
+
+                                                        -   {charTag(Franco, "neutral")}:    Di nuovo senza la pianta giusta.
+                                                            {charTag(Franco, "reading")}:	"Care formiche, la solita richiesta."
+                                                                                            "Una pianta che aiuti {player_name} con {characterName}."
+                                                                                            "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
+                                                                                            Sai già come funziona, girino.
+                                                            {charTag(Franco, "question")}:  Ma come fai ad essere sempre senza piante?
+            }
+            ~ perfectGift = LIST_RANDOM(favouriteGifts)
+            ~ enqueue_cultivable(perfectGift)
+            ~ text = "la prossima cosa che crescerà in serra"
+            ~ growingFlag = true
+
+        //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
+        - else:
+            ~ perfectGift = LIST_RANDOM(favouriteGifts)
+            ~ text = ingredientTranslator(perfectGift)
+    }
+
+    // this kind of gift, regardless of the fact that the gift was obtainable or not, cannot be requested again
+    ~ achievableGifts -= giftKind
+
+->->
+
+
+
+= _franco_get_hint_for_plant(plant, ref text)
+
+    { plant:
+        - BaccaDellaAddolorata:
+            Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa? 
+            ~ text = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento"
+
+        - BarbaDellInciampo:
+            C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve! 
+            ~ text = "qualcosa che parla di colpa e responsabilità"
+
+        - BastoneDellOzioso:
+            Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia? 
+            ~ text = "qualcosa che parli del viversi le cose per il piacere di farle"
+
+        - BrinaDellImpossibile:
+            Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo? 
+            ~ text = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
+
+        - CantoDelleCompagne:
+            Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa. 
+            ~ text = "qualcosa che parli del piacere dello stare con persone amiche"
+
+        - CardoAspinato:
+            C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella. 
+            ~ text = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile."
+
+        - EderaDelleAmanti:
+            Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta. 
+            ~ text = "qualcosa che parli di piacere, cibo e amore."
+
+        - ErbaLiccia:
+            C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta. 
+            ~ text = "qualcosa che colleghi passato, presente e futuro."
+
+        - FalsaPalude:
+            Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa? 
+            ~ text = "qualcosa legato alla collettività, al cambiamento senza capi."
+
+        - LanaNotturna:
+            Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando. 
+            ~ text = "qualcosa legato al vedere la vita anche quando tutto sembra perduto."
+
+        - LicheneDegliAbissi:
+            Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale? 
+            ~ text = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
+
+        - NonTiScordarDiTe:
+            Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo. 
+            ~ text = "qualcosa che parli di chi fa parte di noi, delle nostre radici."
+
+        - Olobino:
+            C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta. 
+            ~ text = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
+
+        - Spazzata:
+            Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella. 
+            ~ text = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."
+    }
+
+->->
+
+
+
+/*
+ * CULTIVABLE RECOVERY
+ */
+
+
+
+=== franco_cultivable_recovery
+    {debug_frog: passo da cultivable_recovery.}
+    {charTag(PG, "neutral")}:      Vorrei recuperare...
+
+    + {frog_recoverableCultivables has BaccaDellaAddolorata}    \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
+            ~  frog_recoveredCultivables += BaccaDellaAddolorata
+    + {frog_recoverableCultivables has BarbaDellInciampo}       \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BarbaDellInciampo)}.
+            ~  frog_recoveredCultivables += BarbaDellInciampo
+    + {frog_recoverableCultivables has BastoneDellOzioso}       \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BastoneDellOzioso)}.
+            ~  frog_recoveredCultivables += BastoneDellOzioso
+    + {frog_recoverableCultivables has BrinaDellImpossibile}    \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BrinaDellImpossibile)}.
+            ~  frog_recoveredCultivables += BrinaDellImpossibile
+    + {frog_recoverableCultivables has CantoDelleCompagne}      \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CantoDelleCompagne)}.
+            ~  frog_recoveredCultivables += CantoDelleCompagne
+    + {frog_recoverableCultivables has CardoAspinato}           \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CardoAspinato)}.
+            ~  frog_recoveredCultivables += CardoAspinato
+    + {frog_recoverableCultivables has EderaDelleAmanti}        \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(EderaDelleAmanti)}.
+            ~  frog_recoveredCultivables += EderaDelleAmanti
+    + {frog_recoverableCultivables has ErbaLiccia}              \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(ErbaLiccia)}.
+            ~  frog_recoveredCultivables += ErbaLiccia
+    + {frog_recoverableCultivables has FalsaPalude}             \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(FalsaPalude)}.
+            ~  frog_recoveredCultivables += FalsaPalude
+    + {frog_recoverableCultivables has LanaNotturna}            \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LanaNotturna)}.
+            ~  frog_recoveredCultivables += LanaNotturna
+    + {frog_recoverableCultivables has LicheneDegliAbissi}      \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LicheneDegliAbissi)}.
+            ~  frog_recoveredCultivables += LicheneDegliAbissi
+    + {frog_recoverableCultivables has NonTiScordarDiTe}        \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(NonTiScordarDiTe)}.
+            ~  frog_recoveredCultivables += NonTiScordarDiTe
+    + {frog_recoverableCultivables has Olobino}                 \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Olobino)}.
+            ~  frog_recoveredCultivables += Olobino
+    + {frog_recoverableCultivables has Spazzata}                \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Spazzata)}.
+            ~  frog_recoveredCultivables += Spazzata
+
+    + Ho cambiato idea
+        -> franco_giftsManagement
+
+    -
+
+    {charTag(Franco, "party")}:                     Signori e signore e signorə, ecco quanto richiesto dal girino: {ingredientTranslator(frog_recoveredCultivables)}!
+                                                    Direttamente nella collezione di {player_name}!
+
+    ~ backpack_findedGifts += frog_recoveredCultivables
+    
+    //Levo la possibilità di recuperare il coltivabile
+    ~ frog_otherGifts -= cultivableRecovery
+
+-> franco_wants_to_give_you_a_gift_close_exchange
+
+
+
+/*
+ * SIGIL RECOVERY
+ */
+
+
+
+=== franco_sigil_recovery
+
+    ~ temp sigil = LIST_RANDOM(glyph_usedSigils)
+    ~ frog_recoveredSigil += sigil
+    ~ glyph_usedSigils -= sigil
+
+    // Levo la possibilità di recuperare il sigillo
+    ~ frog_otherGifts -= sigilRecovery
+    
+    {charTag(Franco, "party")}:                     E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
+                                                    Fanne buon uso!
+
+-> franco_wants_to_give_you_a_gift_close_exchange
