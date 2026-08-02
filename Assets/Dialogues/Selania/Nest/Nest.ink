@@ -21,7 +21,12 @@
 
 === franco_inTheNest
 + {are_two_entities_together(Franco, PG) && entity_location(PG) == Nest} [Franco]
-    -> franco_storyletsManagement -> main
+    {shuffle stopping:
+        - {charTag(Franco, "party")}:                        Girino, continua a divertirti con quei sassi!
+        - {charTag(Franco, "neutral")}:                      Che fastidio la pioggia sulla testa.
+        - {charTag(Franco, "question")}:                     Ma il faro è una cosa che accadra?
+    }
+    -> main
 
 //E qui ci sono tutti i bottoni
 === nest_fireGlyph_button ===

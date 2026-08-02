@@ -25,15 +25,15 @@
         -> franco_giftsManagement
 
     //Mentre siamo al nido
-    - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission has specialMissionOne: 
+    // - are_two_entities_together(PG, Franco) && entity_location(PG) == Nest && frog_currentMission has specialMissionOne: 
         
-        {shuffle stopping:
-           - {charTag(Franco, "party")}:                        Girino, continua a divertirti con quei sassi!
-           - {charTag(Franco, "neutral")}:                      Che fastidio la pioggia sulla testa.
-           - {charTag(Franco, "question")}:                     Ma il faro è una cosa che accadra?
-        }
+    //     {shuffle stopping:
+    //        - {charTag(Franco, "party")}:                        Girino, continua a divertirti con quei sassi!
+    //        - {charTag(Franco, "neutral")}:                      Che fastidio la pioggia sulla testa.
+    //        - {charTag(Franco, "question")}:                     Ma il faro è una cosa che accadra?
+    //     }
         
-        ->->                    
+    //     ->->                    
 
     //Commenti sulle commissioni in corso, NON concluse
     - are_two_entities_together(PG, Franco) && frog_currentMission == missionOne && frog_updatedMissions hasnt missionOne && entity_location(PG) == Pond:
