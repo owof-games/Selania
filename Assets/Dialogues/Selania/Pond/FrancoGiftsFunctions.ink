@@ -61,8 +61,44 @@
         {debug_frog: rimuovo bookGift da frog_thirdCharAchievableGifts.}
     }
 
+    // FOURTH
+    // Ho già fatto il dono (ed è il primo check)
+    { fourthChar_giftedObject != ():
+        ~ frog_fourthCharAchievableGifts -= cultivableGift
+        {debug_frog: rimuovo cultivableGift da frog_fourthCharAchievableGifts.}
+    }
 
-TODO: da fare anche per le altre png
+    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+    { grimoire_fourthChar has grimFourthCharKitchenEnded:
+        ~ frog_fourthCharAchievableGifts -= ingredientGift
+        {debug_frog: rimuovo ingredientGift da frog_fourthCharAchievableGifts.}
+    }
+    
+    // Ho già letto il racconto della personaggia
+    { grimoire_fourthChar has grimFourthCharNovel:
+        ~ frog_fourthCharAchievableGifts -= bookGift
+        {debug_frog: rimuovo bookGift da frog_fourthCharAchievableGifts.}
+    }
+
+    // FIFTH
+    // Ho già fatto il dono (ed è il primo check)
+    { fifthChar_giftedObject != ():
+        ~ frog_fifthCharAchievableGifts -= cultivableGift
+        {debug_frog: rimuovo cultivableGift da frog_fifthCharAchievableGifts.}
+    }
+
+    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+    { grimoire_fifthChar has grimFifthCharKitchenEnded:
+        ~ frog_fifthCharAchievableGifts -= ingredientGift
+        {debug_frog: rimuovo ingredientGift da frog_fifthCharAchievableGifts.}
+    }
+    
+    // Ho già letto il racconto della personaggia
+    { grimoire_fifthChar has grimFifthCharNovel:
+        ~ frog_fifthCharAchievableGifts -= bookGift
+        {debug_frog: rimuovo bookGift da frog_fifthCharAchievableGifts.}
+    }
+
 
 //Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
     {

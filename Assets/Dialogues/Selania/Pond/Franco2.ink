@@ -2109,8 +2109,7 @@
 
     //Commissione dieci richiede che la cucina sia aperta
     //Dato che devo essere sicura di darla quando c'è la possibilità di chiuderla in tempi decenti, per evitare di assegnarla nel primo atto (3 png da riscrivere) quando hanno già concluso il loro percorso in cucina, faccio due calcoli separati.
-    TODO: completare con three, four, five
-    { frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen && ( (grimoire_firstChar hasnt grimFirstCharKitchenEnded && story_endedStories hasnt story_firstCharStoryEnded) or (grimoire_secondChar hasnt grimSecondCharKitchenEnded && story_endedStories hasnt story_secondCharStoryEnded) ):
+    { frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen && ( (grimoire_firstChar hasnt grimFirstCharKitchenEnded && story_endedStories hasnt story_firstCharStoryEnded) or (grimoire_secondChar hasnt grimSecondCharKitchenEnded && story_endedStories hasnt story_secondCharStoryEnded) or (grimoire_thirdChar hasnt grimThirdCharKitchenEnded && story_endedStories hasnt story_thirdCharStoryEnded) or (grimoire_fourthChar hasnt grimFourthCharKitchenEnded && story_endedStories hasnt story_fourthCharStoryEnded) or (grimoire_fifthChar hasnt grimFifthCharKitchenEnded && story_endedStories hasnt story_fifthCharStoryEnded)):
         ~ frog_availableCommonMissions += missionTen
         {debug_frog: ci sono le condizioni per abilitare missionTen.}
     }
