@@ -73,7 +73,8 @@
 <- the_witch
 
 //Elementi dello stagno
-<- welcoming_frog
+// <- welcoming_frog
+<- franco_pond
 
 //Elementi della serra
 
