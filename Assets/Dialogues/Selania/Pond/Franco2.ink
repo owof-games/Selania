@@ -471,7 +471,7 @@
 
 === franco_wants_to_give_you_a_gift_first_character
 
-{debug_frog: passo da franco_giftsFirstChar.}
+    {debug_frog: passo da franco_giftsFirstChar.}
     ~ temp charNameOne = translator(firstChar_ActualName)
 
     { are_two_entities_together(FirstCharacter, PG):
@@ -782,7 +782,11 @@
         - backpack_findedGifts ^ favouriteGifts != ():
             ~ temp foundFavourites = backpack_findedGifts ^ favouriteGifts
             ~ temp foundFavouriteNotUsed = foundFavourites - usedGifts
-            ~ perfectGift = LIST_RANDOM(foundFavouriteNotUsed)
+            { foundFavouriteNotUsed:
+                ~ perfectGift = LIST_RANDOM(foundFavouriteNotUsed)
+            - else:
+                ~ perfectGift = LIST_RANDOM(foundFavourites)
+            }
             -> _franco_get_hint_for_plant(perfectGift, text) ->
 
         //Caso tre: non abbiamo mai trovato il dono
@@ -837,6 +841,21 @@
         - else:
             ~ perfectGift = LIST_RANDOM(favouriteGifts)
             ~ text = ingredientTranslator(perfectGift)
+
+                                                            {charTag(Franco, "party")}:     Girino!
+                                                                                            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
+            { frog_recoverableCultivables && not frog_recoveredCultivables:
+                                                            {charTag(Franco, "neutral")}:   Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
+                                                                                            Ti consiglio di recuperare {ingredientTranslator(perfectGift)}.
+                                                            {charTag(Franco, "question")}:  Ricorda però che posso fare un solo recupero!
+                -> franco_cultivable_recovery
+
+            - else:
+                                                            {charTag(Franco, "neutral")}:   Hai già anche utilizzato il mio superpotere del recupero.
+                                                            {charTag(Franco, "party")}:     Però posso dirti una cosa: ho fiducia in te, davvero.
+                                                                                            E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {characterName}.
+            }
+
     }
 
     // this kind of gift, regardless of the fact that the gift was obtainable or not, cannot be requested again
@@ -921,36 +940,36 @@
     {charTag(PG, "neutral")}:      Vorrei recuperare...
 
     + {frog_recoverableCultivables has BaccaDellaAddolorata}    \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
-            ~  frog_recoveredCultivables += BaccaDellaAddolorata
+            ~  frog_recoveredCultivables = BaccaDellaAddolorata
     + {frog_recoverableCultivables has BarbaDellInciampo}       \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BarbaDellInciampo)}.
-            ~  frog_recoveredCultivables += BarbaDellInciampo
+            ~  frog_recoveredCultivables = BarbaDellInciampo
     + {frog_recoverableCultivables has BastoneDellOzioso}       \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BastoneDellOzioso)}.
-            ~  frog_recoveredCultivables += BastoneDellOzioso
+            ~  frog_recoveredCultivables = BastoneDellOzioso
     + {frog_recoverableCultivables has BrinaDellImpossibile}    \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BrinaDellImpossibile)}.
-            ~  frog_recoveredCultivables += BrinaDellImpossibile
+            ~  frog_recoveredCultivables = BrinaDellImpossibile
     + {frog_recoverableCultivables has CantoDelleCompagne}      \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CantoDelleCompagne)}.
-            ~  frog_recoveredCultivables += CantoDelleCompagne
+            ~  frog_recoveredCultivables = CantoDelleCompagne
     + {frog_recoverableCultivables has CardoAspinato}           \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CardoAspinato)}.
-            ~  frog_recoveredCultivables += CardoAspinato
+            ~  frog_recoveredCultivables = CardoAspinato
     + {frog_recoverableCultivables has EderaDelleAmanti}        \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(EderaDelleAmanti)}.
-            ~  frog_recoveredCultivables += EderaDelleAmanti
+            ~  frog_recoveredCultivables = EderaDelleAmanti
     + {frog_recoverableCultivables has ErbaLiccia}              \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(ErbaLiccia)}.
-            ~  frog_recoveredCultivables += ErbaLiccia
+            ~  frog_recoveredCultivables = ErbaLiccia
     + {frog_recoverableCultivables has FalsaPalude}             \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(FalsaPalude)}.
-            ~  frog_recoveredCultivables += FalsaPalude
+            ~  frog_recoveredCultivables = FalsaPalude
     + {frog_recoverableCultivables has LanaNotturna}            \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LanaNotturna)}.
-            ~  frog_recoveredCultivables += LanaNotturna
+            ~  frog_recoveredCultivables = LanaNotturna
     + {frog_recoverableCultivables has LicheneDegliAbissi}      \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LicheneDegliAbissi)}.
-            ~  frog_recoveredCultivables += LicheneDegliAbissi
+            ~  frog_recoveredCultivables = LicheneDegliAbissi
     + {frog_recoverableCultivables has NonTiScordarDiTe}        \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(NonTiScordarDiTe)}.
-            ~  frog_recoveredCultivables += NonTiScordarDiTe
+            ~  frog_recoveredCultivables = NonTiScordarDiTe
     + {frog_recoverableCultivables has Olobino}                 \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Olobino)}.
-            ~  frog_recoveredCultivables += Olobino
+            ~  frog_recoveredCultivables = Olobino
     + {frog_recoverableCultivables has Spazzata}                \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Spazzata)}.
-            ~  frog_recoveredCultivables += Spazzata
+            ~  frog_recoveredCultivables = Spazzata
 
     + Ho cambiato idea
-        -> franco_giftsManagement
+        -> franco_wants_to_give_you_a_gift
 
     -
 
