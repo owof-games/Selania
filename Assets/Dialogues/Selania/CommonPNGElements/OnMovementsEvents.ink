@@ -20,7 +20,7 @@ VAR letters_doggoPause = false
     ~ on_movement_letters_management()
     ~ on_movement_sounds_effects() 
     //Faccio un check sullo stato delle missioni di franco  
-    ~ franco_missionsStateUpdater()
+    -> franco_update_completed_missions ->
 
 //Poi gli elementi grafici/estetici
     ~ opening_places()    

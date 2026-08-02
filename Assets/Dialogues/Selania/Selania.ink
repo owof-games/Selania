@@ -167,9 +167,9 @@
     INCLUDE Greenhouse\Cultivable.ink
     INCLUDE Greenhouse\CultivableManagement.ink
     
-//Pond    
+//Pond
+    //Vecchio materiale
     INCLUDE Pond\Pond.ink
-    INCLUDE Pond\FrancoVarAndLists.ink
     INCLUDE Pond\Franco.ink
     INCLUDE Pond\FrancoStorylets.ink
     INCLUDE Pond\FrancoStoryletsManagement.ink
@@ -180,7 +180,10 @@
     INCLUDE Pond\FrancoMissionUpdateStorylets.ink
     INCLUDE Pond\FrancoGiftsManagement.ink
 
+    //Nuovo materiale
     INCLUDE Pond\Franco2.ink
+    INCLUDE Pond\FrancoVarAndLists.ink
+    INCLUDE Pond\FrancoSpecialMissionsStorylets.ink
 
 //Nest
     INCLUDE Nest\Nest.ink

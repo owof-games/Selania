@@ -1,696 +1,696 @@
-=== function franco_giftsStateUpdater()
-    {debug_frog: franco_giftsStateUpdater.}
-    // Aggiorno firstChar_giftedObject, secondChar_giftedObject, ecc... con l'effettiva lista di doni che posso fare alla personaggia
+// === function franco_giftsStateUpdater()
+//     {debug_frog: franco_giftsStateUpdater.}
+//     // Aggiorno firstChar_giftedObject, secondChar_giftedObject, ecc... con l'effettiva lista di doni che posso fare alla personaggia
 
-    // FIRST
-    // Ho già fatto il dono (ed è il primo check)
-    { firstChar_giftedObject != ():
-        ~ frog_firstCharAchievableGifts -= cultivableGift
-        {debug_frog: rimuovo cultivableGift da frog_firstCharAchievableGifts.}
-    }
+//     // FIRST
+//     // Ho già fatto il dono (ed è il primo check)
+//     { firstChar_giftedObject != ():
+//         ~ frog_firstCharAchievableGifts -= cultivableGift
+//         {debug_frog: rimuovo cultivableGift da frog_firstCharAchievableGifts.}
+//     }
 
-    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
-    { grimoire_firstChar has grimFirstCharKitchenEnded:
-        ~ frog_firstCharAchievableGifts -= ingredientGift
-        {debug_frog: rimuovo ingredientGift da frog_firstCharAchievableGifts.}
-    }
+//     // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+//     { grimoire_firstChar has grimFirstCharKitchenEnded:
+//         ~ frog_firstCharAchievableGifts -= ingredientGift
+//         {debug_frog: rimuovo ingredientGift da frog_firstCharAchievableGifts.}
+//     }
     
-    // Ho già letto il racconto della personaggia
-    { grimoire_firstChar has grimFirstCharNovel:
-        ~ frog_firstCharAchievableGifts -= bookGift
-        {debug_frog: rimuovo bookGift da frog_firstCharAchievableGifts.}
-    }
+//     // Ho già letto il racconto della personaggia
+//     { grimoire_firstChar has grimFirstCharNovel:
+//         ~ frog_firstCharAchievableGifts -= bookGift
+//         {debug_frog: rimuovo bookGift da frog_firstCharAchievableGifts.}
+//     }
     
 
-    // SECOND
-    // Ho già fatto il dono (ed è il primo check)
-    { secondChar_giftedObject != ():
-        ~ frog_secondCharAchievableGifts -= cultivableGift
-        {debug_frog: rimuovo cultivableGift da frog_secondCharAchievableGifts.}
-    }
+//     // SECOND
+//     // Ho già fatto il dono (ed è il primo check)
+//     { secondChar_giftedObject != ():
+//         ~ frog_secondCharAchievableGifts -= cultivableGift
+//         {debug_frog: rimuovo cultivableGift da frog_secondCharAchievableGifts.}
+//     }
 
-    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
-    { grimoire_secondChar has grimSecondCharKitchenEnded:
-        ~ frog_secondCharAchievableGifts -= ingredientGift
-        {debug_frog: rimuovo ingredientGift da frog_secondCharAchievableGifts.}
-    }
+//     // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+//     { grimoire_secondChar has grimSecondCharKitchenEnded:
+//         ~ frog_secondCharAchievableGifts -= ingredientGift
+//         {debug_frog: rimuovo ingredientGift da frog_secondCharAchievableGifts.}
+//     }
     
-    // Ho già letto il racconto della personaggia
-    { grimoire_secondChar has grimSecondCharNovel:
-        ~ frog_secondCharAchievableGifts -= bookGift
-        {debug_frog: rimuovo bookGift da frog_secondCharAchievableGifts.}
-    }
+//     // Ho già letto il racconto della personaggia
+//     { grimoire_secondChar has grimSecondCharNovel:
+//         ~ frog_secondCharAchievableGifts -= bookGift
+//         {debug_frog: rimuovo bookGift da frog_secondCharAchievableGifts.}
+//     }
 
 
-    // THIRD
-    // Ho già fatto il dono (ed è il primo check)
-    { thirdChar_giftedObject != ():
-        ~ frog_thirdCharAchievableGifts -= cultivableGift
-        {debug_frog: rimuovo cultivableGift da frog_thirdCharAchievableGifts.}
-    }
+//     // THIRD
+//     // Ho già fatto il dono (ed è il primo check)
+//     { thirdChar_giftedObject != ():
+//         ~ frog_thirdCharAchievableGifts -= cultivableGift
+//         {debug_frog: rimuovo cultivableGift da frog_thirdCharAchievableGifts.}
+//     }
 
-    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
-    { grimoire_thirdChar has grimThirdCharKitchenEnded:
-        ~ frog_thirdCharAchievableGifts -= ingredientGift
-        {debug_frog: rimuovo ingredientGift da frog_thirdCharAchievableGifts.}
-    }
+//     // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+//     { grimoire_thirdChar has grimThirdCharKitchenEnded:
+//         ~ frog_thirdCharAchievableGifts -= ingredientGift
+//         {debug_frog: rimuovo ingredientGift da frog_thirdCharAchievableGifts.}
+//     }
     
-    // Ho già letto il racconto della personaggia
-    { grimoire_thirdChar has grimThirdCharNovel:
-        ~ frog_thirdCharAchievableGifts -= bookGift
-        {debug_frog: rimuovo bookGift da frog_thirdCharAchievableGifts.}
-    }
+//     // Ho già letto il racconto della personaggia
+//     { grimoire_thirdChar has grimThirdCharNovel:
+//         ~ frog_thirdCharAchievableGifts -= bookGift
+//         {debug_frog: rimuovo bookGift da frog_thirdCharAchievableGifts.}
+//     }
 
-    // FOURTH
-    // Ho già fatto il dono (ed è il primo check)
-    { fourthChar_giftedObject != ():
-        ~ frog_fourthCharAchievableGifts -= cultivableGift
-        {debug_frog: rimuovo cultivableGift da frog_fourthCharAchievableGifts.}
-    }
+//     // FOURTH
+//     // Ho già fatto il dono (ed è il primo check)
+//     { fourthChar_giftedObject != ():
+//         ~ frog_fourthCharAchievableGifts -= cultivableGift
+//         {debug_frog: rimuovo cultivableGift da frog_fourthCharAchievableGifts.}
+//     }
 
-    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
-    { grimoire_fourthChar has grimFourthCharKitchenEnded:
-        ~ frog_fourthCharAchievableGifts -= ingredientGift
-        {debug_frog: rimuovo ingredientGift da frog_fourthCharAchievableGifts.}
-    }
+//     // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+//     { grimoire_fourthChar has grimFourthCharKitchenEnded:
+//         ~ frog_fourthCharAchievableGifts -= ingredientGift
+//         {debug_frog: rimuovo ingredientGift da frog_fourthCharAchievableGifts.}
+//     }
     
-    // Ho già letto il racconto della personaggia
-    { grimoire_fourthChar has grimFourthCharNovel:
-        ~ frog_fourthCharAchievableGifts -= bookGift
-        {debug_frog: rimuovo bookGift da frog_fourthCharAchievableGifts.}
-    }
+//     // Ho già letto il racconto della personaggia
+//     { grimoire_fourthChar has grimFourthCharNovel:
+//         ~ frog_fourthCharAchievableGifts -= bookGift
+//         {debug_frog: rimuovo bookGift da frog_fourthCharAchievableGifts.}
+//     }
 
-    // FIFTH
-    // Ho già fatto il dono (ed è il primo check)
-    { fifthChar_giftedObject != ():
-        ~ frog_fifthCharAchievableGifts -= cultivableGift
-        {debug_frog: rimuovo cultivableGift da frog_fifthCharAchievableGifts.}
-    }
+//     // FIFTH
+//     // Ho già fatto il dono (ed è il primo check)
+//     { fifthChar_giftedObject != ():
+//         ~ frog_fifthCharAchievableGifts -= cultivableGift
+//         {debug_frog: rimuovo cultivableGift da frog_fifthCharAchievableGifts.}
+//     }
 
-    // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
-    { grimoire_fifthChar has grimFifthCharKitchenEnded:
-        ~ frog_fifthCharAchievableGifts -= ingredientGift
-        {debug_frog: rimuovo ingredientGift da frog_fifthCharAchievableGifts.}
-    }
+//     // Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crash del gioco
+//     { grimoire_fifthChar has grimFifthCharKitchenEnded:
+//         ~ frog_fifthCharAchievableGifts -= ingredientGift
+//         {debug_frog: rimuovo ingredientGift da frog_fifthCharAchievableGifts.}
+//     }
     
-    // Ho già letto il racconto della personaggia
-    { grimoire_fifthChar has grimFifthCharNovel:
-        ~ frog_fifthCharAchievableGifts -= bookGift
-        {debug_frog: rimuovo bookGift da frog_fifthCharAchievableGifts.}
-    }
+//     // Ho già letto il racconto della personaggia
+//     { grimoire_fifthChar has grimFifthCharNovel:
+//         ~ frog_fifthCharAchievableGifts -= bookGift
+//         {debug_frog: rimuovo bookGift da frog_fifthCharAchievableGifts.}
+//     }
 
 
-//Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
-    {
-        - frog_firstCharAchievableGifts != () && grimoire_firstChar has grimFirstCharOne:
-            {
-                - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_firstCharGiftable = false
+// //Poi voglio vedere in generale in questo momento posso dare dei doni alla giocatrice
+//     {
+//         - frog_firstCharAchievableGifts != () && grimoire_firstChar has grimFirstCharOne:
+//             {
+//                 - frog_firstCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_firstCharGiftable = false
 
-                - frog_firstCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_firstCharGiftable = false
+//                 - frog_firstCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+//                     ~ frog_firstCharGiftable = false
 
-                - frog_firstCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_firstCharGiftable = false
+//                 - frog_firstCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_firstCharGiftable = false
 
-                - else:
-                    ~ frog_firstCharGiftable = true
-            }
+//                 - else:
+//                     ~ frog_firstCharGiftable = true
+//             }
 
-        - frog_firstCharAchievableGifts == ():
-                ~ frog_firstCharGiftable = false
-    }
+//         - frog_firstCharAchievableGifts == ():
+//                 ~ frog_firstCharGiftable = false
+//     }
 
-    {
-        - frog_secondCharAchievableGifts != () && grimoire_secondChar has grimSecondCharOne:
-            {
-                - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_secondCharGiftable = false
+//     {
+//         - frog_secondCharAchievableGifts != () && grimoire_secondChar has grimSecondCharOne:
+//             {
+//                 - frog_secondCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_secondCharGiftable = false
 
-                - frog_secondCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_secondCharGiftable = false
+//                 - frog_secondCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+//                     ~ frog_secondCharGiftable = false
 
-                - frog_secondCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_secondCharGiftable = false    
+//                 - frog_secondCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_secondCharGiftable = false    
 
-                - else:
-                    ~ frog_secondCharGiftable = true
-            }
+//                 - else:
+//                     ~ frog_secondCharGiftable = true
+//             }
 
-        - frog_secondCharAchievableGifts == ():
-                ~ frog_secondCharGiftable = false    
-    }
+//         - frog_secondCharAchievableGifts == ():
+//                 ~ frog_secondCharGiftable = false    
+//     }
 
-    {        
-        - frog_thirdCharAchievableGifts != () && grimoire_thirdChar has grimThirdCharOne:
-            {
-                - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_thirdCharGiftable = false
+//     {        
+//         - frog_thirdCharAchievableGifts != () && grimoire_thirdChar has grimThirdCharOne:
+//             {
+//                 - frog_thirdCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_thirdCharGiftable = false
 
-                - frog_thirdCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_thirdCharGiftable = false
+//                 - frog_thirdCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+//                     ~ frog_thirdCharGiftable = false
 
-                - frog_thirdCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_thirdCharGiftable = false     
+//                 - frog_thirdCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_thirdCharGiftable = false     
 
-                - else:
-                    ~ frog_thirdCharGiftable = true
-            }
+//                 - else:
+//                     ~ frog_thirdCharGiftable = true
+//             }
 
-        - frog_thirdCharAchievableGifts == ():
-                ~ frog_thirdCharGiftable = false      
-    }
+//         - frog_thirdCharAchievableGifts == ():
+//                 ~ frog_thirdCharGiftable = false      
+//     }
 
-    {
-        - frog_fourthCharAchievableGifts != () && grimoire_fourthChar has grimFourthCharOne:
-            {
-                - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_fourthCharGiftable = false
-                    //Se la cucina non è aperta ora, non si aprirà più.
-                    ~ frog_fourthCharAchievableGifts -= ingredientGift
+//     {
+//         - frog_fourthCharAchievableGifts != () && grimoire_fourthChar has grimFourthCharOne:
+//             {
+//                 - frog_fourthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_fourthCharGiftable = false
+//                     //Se la cucina non è aperta ora, non si aprirà più.
+//                     ~ frog_fourthCharAchievableGifts -= ingredientGift
 
-                - frog_fourthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_fourthCharGiftable = false
-                    //Se la biblioteca non è aperta ora, non si aprirà più
-                    ~ frog_fourthCharAchievableGifts -= bookGift
+//                 - frog_fourthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+//                     ~ frog_fourthCharGiftable = false
+//                     //Se la biblioteca non è aperta ora, non si aprirà più
+//                     ~ frog_fourthCharAchievableGifts -= bookGift
                 
-                - frog_fourthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_fourthCharGiftable = false
+//                 - frog_fourthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_fourthCharGiftable = false
 
-                - else:
-                    ~ frog_fourthCharGiftable = true
-            }
+//                 - else:
+//                     ~ frog_fourthCharGiftable = true
+//             }
 
-        - frog_fourthCharAchievableGifts == ():
-                ~ frog_fourthCharGiftable = false      
-    }
+//         - frog_fourthCharAchievableGifts == ():
+//                 ~ frog_fourthCharGiftable = false      
+//     }
 
-    {
+//     {
 
-        - frog_fifthCharAchievableGifts != () && grimoire_fifthChar has grimFifthCharOne:
-            {
-                - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_fifthCharGiftable = false
-                    //Se la cucina non è aperta ora, non si aprirà più.
-                    ~ frog_fifthCharAchievableGifts -= ingredientGift
+//         - frog_fifthCharAchievableGifts != () && grimoire_fifthChar has grimFifthCharOne:
+//             {
+//                 - frog_fifthCharAchievableGifts == ingredientGift && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_fifthCharGiftable = false
+//                     //Se la cucina non è aperta ora, non si aprirà più.
+//                     ~ frog_fifthCharAchievableGifts -= ingredientGift
 
-                - frog_fifthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
-                    ~ frog_fifthCharGiftable = false
-                    //Se la biblioteca non è aperta ora, non si aprirà più
-                    ~ frog_fifthCharAchievableGifts -= bookGift
+//                 - frog_fifthCharAchievableGifts == bookGift && player_accessiblePlaces hasnt Library:
+//                     ~ frog_fifthCharGiftable = false
+//                     //Se la biblioteca non è aperta ora, non si aprirà più
+//                     ~ frog_fifthCharAchievableGifts -= bookGift
 
-                - frog_fifthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
-                    ~ frog_fifthCharGiftable = false    
+//                 - frog_fifthCharAchievableGifts == (bookGift,ingredientGift) && player_accessiblePlaces hasnt Library && player_accessiblePlaces hasnt Kitchen:
+//                     ~ frog_fifthCharGiftable = false    
 
-                - else:
-                    ~ frog_fifthCharGiftable = true
-            }
+//                 - else:
+//                     ~ frog_fifthCharGiftable = true
+//             }
         
-        - frog_fifthCharAchievableGifts == ():
-                ~ frog_fifthCharGiftable = false      
-    }
+//         - frog_fifthCharAchievableGifts == ():
+//                 ~ frog_fifthCharGiftable = false      
+//     }
 
-    {
-        - (frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ()):
-            ~ frog_cultivableGiftable = true
+//     {
+//         - (frog_recoverableCultivables != ()) && (frog_recoveredCultivables == ()):
+//             ~ frog_cultivableGiftable = true
 
-        - else:
-            ~ frog_cultivableGiftable = false 
-    }
+//         - else:
+//             ~ frog_cultivableGiftable = false 
+//     }
 
-    {
-        - frog_recoveredSigil == () && glyph_usedSigils != ():
-            ~ frog_sigilGiftable = true
+//     {
+//         - frog_recoveredSigil == () && glyph_usedSigils != ():
+//             ~ frog_sigilGiftable = true
 
-        - else:
-            ~ frog_sigilGiftable = false 
-    }
+//         - else:
+//             ~ frog_sigilGiftable = false 
+//     }
 
 
-    {
-        - frog_firstCharGiftable == true:
-            ~ frog_giftability = true
+//     {
+//         - frog_firstCharGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_secondCharGiftable == true:
-            ~ frog_giftability = true
+//         - frog_secondCharGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_thirdCharGiftable == true:
-            ~ frog_giftability = true
+//         - frog_thirdCharGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_fourthCharGiftable == true:
-            ~ frog_giftability = true
+//         - frog_fourthCharGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_fifthCharGiftable == true:
-            ~ frog_giftability = true
+//         - frog_fifthCharGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_sigilGiftable == true:
-            ~ frog_giftability = true
+//         - frog_sigilGiftable == true:
+//             ~ frog_giftability = true
 
-        - frog_cultivableGiftable == true:
-            ~ frog_giftability = true                        
+//         - frog_cultivableGiftable == true:
+//             ~ frog_giftability = true                        
 
-        - else:
-            ~ frog_giftability = false    
-    }
+//         - else:
+//             ~ frog_giftability = false    
+//     }
 
-    {debug_frog: dopo franco_giftsStateUpdater frog_giftability è {frog_giftability}. frog_firstCharGiftable è {frog_firstCharGiftable}, frog_secondCharGiftable è {frog_secondCharGiftable}, frog_thirdCharGiftable è {frog_thirdCharGiftable}, frog_fourthCharGiftable è {frog_fourthCharGiftable}, frog_fifthCharGiftable è {frog_fifthCharGiftable}.}
+//     {debug_frog: dopo franco_giftsStateUpdater frog_giftability è {frog_giftability}. frog_firstCharGiftable è {frog_firstCharGiftable}, frog_secondCharGiftable è {frog_secondCharGiftable}, frog_thirdCharGiftable è {frog_thirdCharGiftable}, frog_fourthCharGiftable è {frog_fourthCharGiftable}, frog_fifthCharGiftable è {frog_fifthCharGiftable}.}
     
-=== franco_giftsPlants(PNG, Location)
-{debug_frog: passo per franco_giftsPlants}
-//VAR temporanee legate al regalo
-    ~ temp frog_temp_temp_growing_gift = false
+// === franco_giftsPlants(PNG, Location)
+// {debug_frog: passo per franco_giftsPlants}
+// //VAR temporanee legate al regalo
+//     ~ temp frog_temp_temp_growing_gift = false
 
-    ~ temp tempChar_favouritesGifts = ()
-    ~ temp speaker = ()
-    ~ temp frog_temp_object = ()
-    ~ temp frog_temp_text = ""
+//     ~ temp tempChar_favouritesGifts = ()
+//     ~ temp speaker = ()
+//     ~ temp frog_temp_object = ()
+//     ~ temp frog_temp_text = ""
 
-    //Questo mi traccia se ho già usato qualcosa in cucina o è stato donato 
-    ~ temp usedGift = ()
+//     //Questo mi traccia se ho già usato qualcosa in cucina o è stato donato 
+//     ~ temp usedGift = ()
 
-    //Check preliminare    
-    {
-        - PNG == FirstCharacter:
-            ~ tempChar_favouritesGifts = firstChar_favouritesGifts
-            ~ speaker = FirstCharacter
-            ~ usedGift += kitchen_firstCharExtraIngredient
-            ~ usedGift += firstChar_giftedObject
+//     //Check preliminare    
+//     {
+//         - PNG == FirstCharacter:
+//             ~ tempChar_favouritesGifts = firstChar_favouritesGifts
+//             ~ speaker = FirstCharacter
+//             ~ usedGift += kitchen_firstCharExtraIngredient
+//             ~ usedGift += firstChar_giftedObject
 
-        - PNG == SecondCharacter:
-            ~ tempChar_favouritesGifts = secondChar_favouritesGifts
-            ~ speaker = SecondCharacter
-            ~ usedGift += kitchen_secondCharExtraIngredient
-            ~ usedGift += secondChar_giftedObject
+//         - PNG == SecondCharacter:
+//             ~ tempChar_favouritesGifts = secondChar_favouritesGifts
+//             ~ speaker = SecondCharacter
+//             ~ usedGift += kitchen_secondCharExtraIngredient
+//             ~ usedGift += secondChar_giftedObject
 
-        - PNG == ThirdCharacter:
-            ~ tempChar_favouritesGifts = thirdChar_favouritesGifts
-            ~ speaker = ThirdCharacter
-            ~ usedGift += kitchen_thirdCharExtraIngredient
-            ~ usedGift += thirdChar_giftedObject
+//         - PNG == ThirdCharacter:
+//             ~ tempChar_favouritesGifts = thirdChar_favouritesGifts
+//             ~ speaker = ThirdCharacter
+//             ~ usedGift += kitchen_thirdCharExtraIngredient
+//             ~ usedGift += thirdChar_giftedObject
 
-        - PNG == FourthCharacter:
-            ~ tempChar_favouritesGifts = fourthChar_favouritesGifts
-            ~ speaker = FourthCharacter
-            ~ usedGift += kitchen_fourthCharExtraIngredient
-            ~ usedGift += fourthChar_giftedObject
+//         - PNG == FourthCharacter:
+//             ~ tempChar_favouritesGifts = fourthChar_favouritesGifts
+//             ~ speaker = FourthCharacter
+//             ~ usedGift += kitchen_fourthCharExtraIngredient
+//             ~ usedGift += fourthChar_giftedObject
 
             
-        - PNG == FifthCharacter:
-            ~ tempChar_favouritesGifts = fifthChar_favouritesGifts
-            ~ speaker = FifthCharacter
-            ~ usedGift += kitchen_fifthCharExtraIngredient
-            ~ usedGift += fifthChar_giftedObject
+//         - PNG == FifthCharacter:
+//             ~ tempChar_favouritesGifts = fifthChar_favouritesGifts
+//             ~ speaker = FifthCharacter
+//             ~ usedGift += kitchen_fifthCharExtraIngredient
+//             ~ usedGift += fifthChar_giftedObject
               
-    }
+//     }
 
 
 
-   {
-        //Caso uno: il dono è in crescita:
-        - tempChar_favouritesGifts has greenhouse_chosenCultivable:
+//    {
+//         //Caso uno: il dono è in crescita:
+//         - tempChar_favouritesGifts has greenhouse_chosenCultivable:
 
-            {charTag(Franco, "party")}:                                                             Girino!
-            {stopping:
-                                                        -                                           Tu hai i superportieri!
-                                                                                                    Come zia Graaak, che sa sempre quando sto per respirare.
-                                                            {charTag(Franco, "neutral")}:           La pianta che ti serve sta già crescendo in serra.
+//             {charTag(Franco, "party")}:                                                             Girino!
+//             {stopping:
+//                                                         -                                           Tu hai i superportieri!
+//                                                                                                     Come zia Graaak, che sa sempre quando sto per respirare.
+//                                                             {charTag(Franco, "neutral")}:           La pianta che ti serve sta già crescendo in serra.
 
-                                                        -                                           Quello che ti serve sta crescendo proprio ora in serra!
-                                                                                                    Sento l'odore fino a qui.
-                                                            {charTag(Franco, "question")}:          O forse è solo zia Graaak che non si è ancora lavata.
+//                                                         -                                           Quello che ti serve sta crescendo proprio ora in serra!
+//                                                                                                     Sento l'odore fino a qui.
+//                                                             {charTag(Franco, "question")}:          O forse è solo zia Graaak che non si è ancora lavata.
                                                         
-                                                        -                                           Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
-                                                            {charTag(Franco, "question")}:          Forse sai parlare con le formiche?
-                                                                                                    Nel caso chiedi loro di restituirmi il giroscopio?
-                                                            {charTag(Franco, "neutral")}:           Mi serve per girare i girini quando sono a pancia all'aria.
+//                                                         -                                           Non so come fai, ma di nuovo quello che ti serve sta crescendo in serra.
+//                                                             {charTag(Franco, "question")}:          Forse sai parlare con le formiche?
+//                                                                                                     Nel caso chiedi loro di restituirmi il giroscopio?
+//                                                             {charTag(Franco, "neutral")}:           Mi serve per girare i girini quando sono a pancia all'aria.
                                                         
-                                                        -                                           Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
-                                                            {charTag(Franco, "neutral")}:           Di nuovo.
-                                                                                                    Povero Franco.
-                                                                                                    Ormai non serve più nemmeno a piantare le piante.
-                                                            {charTag(Franco, "party")}:             Forse potrei fiorare i fiori?
+//                                                         -                                           Ma che te lo dico a fare: quello che ti serve sta crescendo in serra.
+//                                                             {charTag(Franco, "neutral")}:           Di nuovo.
+//                                                                                                     Povero Franco.
+//                                                                                                     Ormai non serve più nemmeno a piantare le piante.
+//                                                             {charTag(Franco, "party")}:             Forse potrei fiorare i fiori?
 
-            }    
-                ~ frog_temp_text = "sta crescendo ora in serra!"
-                ~ frog_temp_temp_growing_gift = true
-                ~ frog_temp_object = greenhouse_chosenCultivable
+//             }    
+//                 ~ frog_temp_text = "sta crescendo ora in serra!"
+//                 ~ frog_temp_temp_growing_gift = true
+//                 ~ frog_temp_object = greenhouse_chosenCultivable
         
 
-        //Caso due: il dono è nello zaino
-        - backpack_findedGifts ^ tempChar_favouritesGifts != ():
-            ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
-            ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
-            ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
-            ~ frog_temp_object = backGift
+//         //Caso due: il dono è nello zaino
+//         - backpack_findedGifts ^ tempChar_favouritesGifts != ():
+//             ~ temp findedFavourite = backpack_findedGifts ^ tempChar_favouritesGifts
+//             ~ temp findedFavouriteNotUsed = findedFavourite - usedGift
+//             ~ temp backGift = LIST_RANDOM(findedFavouriteNotUsed)
+//             ~ frog_temp_object = backGift
 
-            {debug_frog: il dono è nello zaino ed è {backGift}.}
+//             {debug_frog: il dono è nello zaino ed è {backGift}.}
 
-            {charTag(Franco, "party")}:                     Girino!
-                                                            Sai che hai già la pianta giusta?
-            {charTag(Franco, "neutral")}:                   Ti do un indizio.
+//             {charTag(Franco, "party")}:                     Girino!
+//                                                             Sai che hai già la pianta giusta?
+//             {charTag(Franco, "neutral")}:                   Ti do un indizio.
 
-                //Capire perché aggiorno frog_temp_text ora e non guardo in fondo se devo aggiornare ingredient o frog_temp_char_gift. Avendo sotto per ogni PNG una divisione kitchen/else, avrebbe più senso farlo lì
-                {backGift:
-                    - BaccaDellaAddolorata:
-                        Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
-                            ~ frog_temp_text = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
+//                 //Capire perché aggiorno frog_temp_text ora e non guardo in fondo se devo aggiornare ingredient o frog_temp_char_gift. Avendo sotto per ogni PNG una divisione kitchen/else, avrebbe più senso farlo lì
+//                 {backGift:
+//                     - BaccaDellaAddolorata:
+//                         Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
+//                             ~ frog_temp_text = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
 
-                    - BarbaDellInciampo:
-                        C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve!
-                            ~ frog_temp_text = "qualcosa che parla di colpa e responsabilità"
+//                     - BarbaDellInciampo:
+//                         C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve!
+//                             ~ frog_temp_text = "qualcosa che parla di colpa e responsabilità"
 
-                    - BastoneDellOzioso:
-                        Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
-                            ~ frog_temp_text = "qualcosa che parli del viversi le cose per il piacere di farle"
+//                     - BastoneDellOzioso:
+//                         Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
+//                             ~ frog_temp_text = "qualcosa che parli del viversi le cose per il piacere di farle"
 
-                    - BrinaDellImpossibile: 
-                        Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
-                            ~ frog_temp_text = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
+//                     - BrinaDellImpossibile: 
+//                         Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
+//                             ~ frog_temp_text = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
 
-                    - CantoDelleCompagne:
-                        Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
-                             ~ frog_temp_text = "qualcosa che parli del piacere dello stare con persone amiche"    
+//                     - CantoDelleCompagne:
+//                         Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
+//                              ~ frog_temp_text = "qualcosa che parli del piacere dello stare con persone amiche"    
 
-                    - CardoAspinato:
-                        C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella.
-                             ~ frog_temp_text = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile." 
+//                     - CardoAspinato:
+//                         C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella.
+//                              ~ frog_temp_text = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile." 
 
-                    - EderaDelleAmanti:
-                        Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta.
-                             ~ frog_temp_text = "qualcosa che parli di piacere, cibo e amore."
+//                     - EderaDelleAmanti:
+//                         Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta.
+//                              ~ frog_temp_text = "qualcosa che parli di piacere, cibo e amore."
 
-                    - ErbaLiccia:
-                        C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta.
-                             ~ frog_temp_text = "qualcosa che colleghi passato, presente e futuro."
+//                     - ErbaLiccia:
+//                         C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta.
+//                              ~ frog_temp_text = "qualcosa che colleghi passato, presente e futuro."
 
-                    - FalsaPalude:
-                        Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa?
-                             ~ frog_temp_text = "qualcosa legato alla collettività, al cambiamento senza capi."        
+//                     - FalsaPalude:
+//                         Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa?
+//                              ~ frog_temp_text = "qualcosa legato alla collettività, al cambiamento senza capi."        
 
-                    - LanaNotturna:
-                        Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando.
-                             ~ frog_temp_text = "qualcosa legato al vedere la vita anche quando tutto sembra perduto." 
+//                     - LanaNotturna:
+//                         Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando.
+//                              ~ frog_temp_text = "qualcosa legato al vedere la vita anche quando tutto sembra perduto." 
 
-                    - LicheneDegliAbissi:
-                        Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
-                            ~ frog_temp_text = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
+//                     - LicheneDegliAbissi:
+//                         Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
+//                             ~ frog_temp_text = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
 
-                    - NonTiScordarDiTe: 
-                        Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo.
-                             ~ frog_temp_text = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
+//                     - NonTiScordarDiTe: 
+//                         Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo.
+//                              ~ frog_temp_text = "qualcosa che parli di chi fa parte di noi, delle nostre radici."        
 
-                    - Olobino: 
-                        C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
-                             ~ frog_temp_text = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
+//                     - Olobino: 
+//                         C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
+//                              ~ frog_temp_text = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
 
-                    - Spazzata: 
-                        Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
-                             ~ frog_temp_text = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
+//                     - Spazzata: 
+//                         Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
+//                              ~ frog_temp_text = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."           
 
-                }
-                {debug_frog: frog_temp_text è {frog_temp_text}.}
+//                 }
+//                 {debug_frog: frog_temp_text è {frog_temp_text}.}
 
 
-        //Caso tre: non abbiamo mai trovato il dono
-        - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
+//         //Caso tre: non abbiamo mai trovato il dono
+//         - tempChar_favouritesGifts ^ greenhouse_findedCultivables == ():
 
-            {charTag(Franco, "party")}:                     Girino!
+//             {charTag(Franco, "party")}:                     Girino!
                                                             
-            {stopping:                                                
-                                                        -   {charTag(Franco, "neutral")}:   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
-                                                                                            Ma ora ci penso io.
-                                                            {charTag(Franco, "reading")}:	"Care formiche."
-                                                                                            "Come avrete visto, ora sono vegetariano."
-                                                                                            E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
-                                                                                            "Grazie mille."
-                                                                                            "PS.: Vi allego un po' del miele di Dora."
-                                                            {charTag(Franco, "neutral")}:   Ottimo.
-                                                            {charTag(Franco, "party")}:	    La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
+//             {stopping:                                                
+//                                                         -   {charTag(Franco, "neutral")}:   Scusa se ho spiato tra le tue cose ma no, non hai niente di utile.
+//                                                                                             Ma ora ci penso io.
+//                                                             {charTag(Franco, "reading")}:	"Care formiche."
+//                                                                                             "Come avrete visto, ora sono vegetariano."
+//                                                                                             E in onore di questa nostra nuova amicizia vi chiederei un favore: potreste coltivare qualcosa di utile per {player_name}?"
+//                                                                                             "Grazie mille."
+//                                                                                             "PS.: Vi allego un po' del miele di Dora."
+//                                                             {charTag(Franco, "neutral")}:   Ottimo.
+//                                                             {charTag(Franco, "party")}:	    La prossima volta che coltivi qualcosa in serra vedrai che sarà la pianta giusta!
 
-                                                        -   {charTag(Franco, "neutral")}:   Di nuovo non hai niente di utile tra le tue cose.
-                                                                                            Mando una lettera alle amiche formiche.
-                                                            {charTag(Franco, "reading")}:	"Care formiche, qui è sempre Franco che vi scrive."
-                                                                                            "Mi diceva Dora che avete passato un periodo difficile."
-                                                                                            "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
-                                                                                            "Così magari il passato vi sembra migliore."
-                                                                                            "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
-                                                                                            "Cordialmente."
-                                                                                            "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
-                                                           {charTag(Franco, "party")}:	    Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
+//                                                         -   {charTag(Franco, "neutral")}:   Di nuovo non hai niente di utile tra le tue cose.
+//                                                                                             Mando una lettera alle amiche formiche.
+//                                                             {charTag(Franco, "reading")}:	"Care formiche, qui è sempre Franco che vi scrive."
+//                                                                                             "Mi diceva Dora che avete passato un periodo difficile."
+//                                                                                             "Vi mando quindi un po' di terriccio per il nido e l'ultimo libro di zio Gracco."
+//                                                                                             "Così magari il passato vi sembra migliore."
+//                                                                                             "Non è che potreste inoltre aiutare {player_name}, e coltivare qualcosa che {translator(speaker)} possa apprezzare?"
+//                                                                                             "Cordialmente."
+//                                                                                             "Franco La Rana (non Franco Il Rospo, quello non si vede da mesi)."
+//                                                            {charTag(Franco, "party")}:	    Perfetto: la prossima volta che coltiverai qualcosa, ti arriverà la pianta perfetta.        
 
-                                                        -   {charTag(Franco, "neutral")}:   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
-                                                                                            Perché ancora non hai nulla di utile.
-                                                            {charTag(Franco, "reading")}:	"Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
-                                                                                            "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
-                                                                                            "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
-                                                                                            "E nemmeno "<i>È l'uovo per me</i>", che poi i girini si spaventano."
-                                                                                            "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
-                                                                                            "Grazie mille."
-                                                                                            "Franco."
-                                                            {charTag(Franco, "neutral")}:	Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
+//                                                         -   {charTag(Franco, "neutral")}:   Mi sa che devi coltivare più piante, sennò le formiche poi si arrabbiano con me.
+//                                                                                             Perché ancora non hai nulla di utile.
+//                                                             {charTag(Franco, "reading")}:	"Care formiche, sono qui a chiedervi di nuovo di aiutare {player_name}."
+//                                                                                             "In cambio a questo giro vi invito alla serata karaoke di cugina Sputt."
+//                                                                                             "Ma vi chiedo di non portare di nuovo "<i>Tintarella di muta</i>", che poi attirate tutti i serpenti."
+//                                                                                             "E nemmeno "<i>È l'uovo per me</i>", che poi i girini si spaventano."
+//                                                                                             "Però mi piacerebbe sentire "<i>La canzone di Raganella</i>", se vi va."
+//                                                                                             "Grazie mille."
+//                                                                                             "Franco."
+//                                                             {charTag(Franco, "neutral")}:	Bene: la prossima volta che coltivi qualcosa, ti arriverà la pianta giusta per {translator(speaker)}.
 
-                                                        -   {charTag(Franco, "neutral")}:    Di nuovo senza la pianta giusta.
-                                                           {charTag(Franco, "reading")}:	"Care formiche, la solita richiesta."
-                                                                                            "Una pianta che aiuti {player_name} con {translator(speaker)}."
-                                                                                            "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
-                                                                                            Sai già come funziona, girino.
-                                                            {charTag(Franco, "question")}:  Ma come fai ad essere sempre senza piante?    
+//                                                         -   {charTag(Franco, "neutral")}:    Di nuovo senza la pianta giusta.
+//                                                            {charTag(Franco, "reading")}:	"Care formiche, la solita richiesta."
+//                                                                                             "Una pianta che aiuti {player_name} con {translator(speaker)}."
+//                                                                                             "Ho finito le cose che vi posso offrire, ma spero avrete pazienza con me."
+//                                                                                             Sai già come funziona, girino.
+//                                                             {charTag(Franco, "question")}:  Ma come fai ad essere sempre senza piante?    
 
-            }                                                
+//             }                                                
 
-                ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
-                ~ frog_temp_object = perfectGift
-                ~ frog_temp_temp_growing_gift = true
+//                 ~ temp perfectGift = LIST_RANDOM(tempChar_favouritesGifts)
+//                 ~ frog_temp_object = perfectGift
+//                 ~ frog_temp_temp_growing_gift = true
 
-            {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
+//             {debug_frog: il dono è stato messo in serra ed è {ingredientTranslator(perfectGift)}. La lista tempChar_favouritesGifts contiene {tempChar_favouritesGifts}.}
 
-            {
-                - greenhouse_frog_nextCultivableOne == ():
-                    ~ greenhouse_frog_nextCultivableOne = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//             {
+//                 - greenhouse_frog_nextCultivableOne == ():
+//                     ~ greenhouse_frog_nextCultivableOne = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
-                - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
-                    ~ greenhouse_frog_nextCultivableTwo = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//                 - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+//                     ~ greenhouse_frog_nextCultivableTwo = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
                     
-                - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
-                    ~ greenhouse_frog_nextCultivableThree = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//                 - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+//                     ~ greenhouse_frog_nextCultivableThree = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
-                - greenhouse_frog_nextCultivableFour == () && greenhouse_frog_nextCultivableThree != ():
-                    ~ greenhouse_frog_nextCultivableFour = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//                 - greenhouse_frog_nextCultivableFour == () && greenhouse_frog_nextCultivableThree != ():
+//                     ~ greenhouse_frog_nextCultivableFour = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
 
-                - greenhouse_frog_nextCultivableFive == () && greenhouse_frog_nextCultivableFour != ():
-                    ~ greenhouse_frog_nextCultivableFive = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//                 - greenhouse_frog_nextCultivableFive == () && greenhouse_frog_nextCultivableFour != ():
+//                     ~ greenhouse_frog_nextCultivableFive = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
                 
-                - greenhouse_frog_nextCultivableSix == () && greenhouse_frog_nextCultivableFive != ():
-                    ~ greenhouse_frog_nextCultivableSix = perfectGift
-                    ~ frog_temp_text = "la prossima cosa che crescerà in serra"
+//                 - greenhouse_frog_nextCultivableSix == () && greenhouse_frog_nextCultivableFive != ():
+//                     ~ greenhouse_frog_nextCultivableSix = perfectGift
+//                     ~ frog_temp_text = "la prossima cosa che crescerà in serra"
             
             
-            }
-        //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
-        - else:
+//             }
+//         //Caso quattro: abbiamo trovato tutti i doni, ma li abbiamo già consumati.
+//         - else:
 
-            ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
-            ~ frog_temp_object = perfectGiftTwo
+//             ~ temp perfectGiftTwo = LIST_RANDOM(tempChar_favouritesGifts)
+//             ~ frog_temp_object = perfectGiftTwo
 
-            {charTag(Franco, "party")}:                     Girino!
-                                                            Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
-            {
-                - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
-                {charTag(Franco, "neutral")}:               Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
-                                                            Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
-                {charTag(Franco, "question")}:              Ricorda però che posso fare un solo recupero!
-                                                                -> cultivable_recovery
+//             {charTag(Franco, "party")}:                     Girino!
+//                                                             Credo tu abbia fatto l'impossibile: c'erano un sacchissimo di piante a disposizione, ma le hai già consumate tutte in altre situazioni.
+//             {
+//                 - frog_recoverableCultivables!= () && frog_recoveredCultivables == ():
+//                 {charTag(Franco, "neutral")}:               Però non mi hai ancora chiesto di recuperarne una tra quelle che hai già utilizzato.
+//                                                             Ti consiglio di recuperare {ingredientTranslator(perfectGiftTwo)}.
+//                 {charTag(Franco, "question")}:              Ricorda però che posso fare un solo recupero!
+//                                                                 -> cultivable_recovery
 
-                - else:
-                {charTag(Franco, "neutral")}:              Hai già anche utilizzato il mio superpotere del recupero.
-                {charTag(Franco, "party")}:                Però posso dirti una cosa: ho fiducia in te, davvero.
-                                                            E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.
-            }
+//                 - else:
+//                 {charTag(Franco, "neutral")}:              Hai già anche utilizzato il mio superpotere del recupero.
+//                 {charTag(Franco, "party")}:                Però posso dirti una cosa: ho fiducia in te, davvero.
+//                                                             E so già che riuscirai a trovare altri modi per dimostrare quanto tieni a {translator(speaker)}.
+//             }
 
-} 
+// } 
 
-//Check in uscita    
-    {
-        - PNG == FirstCharacter:
-            {
-                - Location == Kitchen:
-                    ~ frog_first_char_text_ingredient = frog_temp_text
-                    ~ frog_first_char_object_ingredient = frog_temp_object
-                    ~ frog_firstCharAchievableGifts -= ingredientGift
+// //Check in uscita    
+//     {
+//         - PNG == FirstCharacter:
+//             {
+//                 - Location == Kitchen:
+//                     ~ frog_first_char_text_ingredient = frog_temp_text
+//                     ~ frog_first_char_object_ingredient = frog_temp_object
+//                     ~ frog_firstCharAchievableGifts -= ingredientGift
                 
-                - else:
-                    ~ frog_first_char_text_gift = frog_temp_text
-                    ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_first_char_object_gift = frog_temp_object
-                    ~ frog_firstCharAchievableGifts -= cultivableGift
-            }
+//                 - else:
+//                     ~ frog_first_char_text_gift = frog_temp_text
+//                     ~ frog_first_temp_growing_gift = frog_temp_temp_growing_gift
+//                     ~ frog_first_char_object_gift = frog_temp_object
+//                     ~ frog_firstCharAchievableGifts -= cultivableGift
+//             }
 
-        - PNG == SecondCharacter:
+//         - PNG == SecondCharacter:
             
-            {
-                - Location == Kitchen:
-                    ~ frog_second_char_text_ingredient = frog_temp_text
-                    ~ frog_second_char_object_ingredient = frog_temp_object
-                    ~ frog_secondCharAchievableGifts -= ingredientGift
+//             {
+//                 - Location == Kitchen:
+//                     ~ frog_second_char_text_ingredient = frog_temp_text
+//                     ~ frog_second_char_object_ingredient = frog_temp_object
+//                     ~ frog_secondCharAchievableGifts -= ingredientGift
                 
-                - else:
-                    ~ frog_second_char_text_gift = frog_temp_text
-                    ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_second_char_object_gift = frog_temp_object
-                    ~ frog_secondCharAchievableGifts -= cultivableGift
-            }
+//                 - else:
+//                     ~ frog_second_char_text_gift = frog_temp_text
+//                     ~ frog_second_temp_growing_gift = frog_temp_temp_growing_gift
+//                     ~ frog_second_char_object_gift = frog_temp_object
+//                     ~ frog_secondCharAchievableGifts -= cultivableGift
+//             }
 
-        - PNG == ThirdCharacter:
+//         - PNG == ThirdCharacter:
             
-            {
-                - Location == Kitchen:
-                    ~ frog_third_char_text_ingredient = frog_temp_text
-                    ~ frog_third_char_object_ingredient = frog_temp_object
-                    ~ frog_thirdCharAchievableGifts -= ingredientGift
+//             {
+//                 - Location == Kitchen:
+//                     ~ frog_third_char_text_ingredient = frog_temp_text
+//                     ~ frog_third_char_object_ingredient = frog_temp_object
+//                     ~ frog_thirdCharAchievableGifts -= ingredientGift
                 
-                - else:
-                    ~ frog_third_char_text_gift = frog_temp_text
-                    ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_third_char_object_gift = frog_temp_object
-                    ~ frog_thirdCharAchievableGifts -= cultivableGift
-            }
+//                 - else:
+//                     ~ frog_third_char_text_gift = frog_temp_text
+//                     ~ frog_third_temp_growing_gift = frog_temp_temp_growing_gift
+//                     ~ frog_third_char_object_gift = frog_temp_object
+//                     ~ frog_thirdCharAchievableGifts -= cultivableGift
+//             }
     
 
-        - PNG == FourthCharacter:
+//         - PNG == FourthCharacter:
             
-            {
-                - Location == Kitchen:
-                    ~ frog_fourth_char_text_ingredient = frog_temp_text
-                    ~ frog_fourth_char_object_ingredient = frog_temp_object
-                    ~ frog_fourthCharAchievableGifts -= ingredientGift
+//             {
+//                 - Location == Kitchen:
+//                     ~ frog_fourth_char_text_ingredient = frog_temp_text
+//                     ~ frog_fourth_char_object_ingredient = frog_temp_object
+//                     ~ frog_fourthCharAchievableGifts -= ingredientGift
                 
-                - else:
-                    ~ frog_fourth_char_text_gift = frog_temp_text
-                    ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_fourth_char_object_gift = frog_temp_object
-                    ~ frog_fourthCharAchievableGifts -= cultivableGift
-            }
+//                 - else:
+//                     ~ frog_fourth_char_text_gift = frog_temp_text
+//                     ~ frog_fourth_temp_growing_gift = frog_temp_temp_growing_gift
+//                     ~ frog_fourth_char_object_gift = frog_temp_object
+//                     ~ frog_fourthCharAchievableGifts -= cultivableGift
+//             }
 
 
-        - PNG == FifthCharacter:
+//         - PNG == FifthCharacter:
             
-            {
-                - Location == Kitchen:
-                    ~ frog_fifth_char_text_ingredient = frog_temp_text
-                    ~ frog_fifth_char_object_ingredient = frog_temp_object
-                    ~ frog_fifthCharAchievableGifts -= ingredientGift
+//             {
+//                 - Location == Kitchen:
+//                     ~ frog_fifth_char_text_ingredient = frog_temp_text
+//                     ~ frog_fifth_char_object_ingredient = frog_temp_object
+//                     ~ frog_fifthCharAchievableGifts -= ingredientGift
                 
-                - else:
-                    ~ frog_fifth_char_text_gift = frog_temp_text
-                    ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
-                    ~ frog_fifth_char_object_gift = frog_temp_object
-                    ~ frog_fifthCharAchievableGifts -= cultivableGift
-            } 
+//                 - else:
+//                     ~ frog_fifth_char_text_gift = frog_temp_text
+//                     ~ frog_fifth_temp_growing_gift = frog_temp_temp_growing_gift
+//                     ~ frog_fifth_char_object_gift = frog_temp_object
+//                     ~ frog_fifthCharAchievableGifts -= cultivableGift
+//             } 
 
-    }
-
-
--> closed_exchange
+//     }
 
 
-=== cultivable_recovery
-{debug_frog: passo da cultivable_recovery.}
-{charTag(PG, "neutral")}:      Vorrei recuperare...
+// -> closed_exchange
 
-    + {frog_recoverableCultivables has BaccaDellaAddolorata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
-            ~  frog_recoveredCultivables += BaccaDellaAddolorata
-            -> franco_afterRecovery
+
+// === cultivable_recovery
+// {debug_frog: passo da cultivable_recovery.}
+// {charTag(PG, "neutral")}:      Vorrei recuperare...
+
+//     + {frog_recoverableCultivables has BaccaDellaAddolorata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BaccaDellaAddolorata)}.
+//             ~  frog_recoveredCultivables += BaccaDellaAddolorata
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BarbaDellInciampo}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BarbaDellInciampo)}.
-            ~  frog_recoveredCultivables += BarbaDellInciampo
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has BarbaDellInciampo}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BarbaDellInciampo)}.
+//             ~  frog_recoveredCultivables += BarbaDellInciampo
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BastoneDellOzioso}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BastoneDellOzioso)}.
-            ~  frog_recoveredCultivables += BastoneDellOzioso
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has BastoneDellOzioso}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BastoneDellOzioso)}.
+//             ~  frog_recoveredCultivables += BastoneDellOzioso
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has BrinaDellImpossibile}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BrinaDellImpossibile)}.
-            ~  frog_recoveredCultivables += BrinaDellImpossibile
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has BrinaDellImpossibile}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(BrinaDellImpossibile)}.
+//             ~  frog_recoveredCultivables += BrinaDellImpossibile
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has CantoDelleCompagne}   \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CantoDelleCompagne)}.
-            ~  frog_recoveredCultivables += CantoDelleCompagne
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has CantoDelleCompagne}   \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CantoDelleCompagne)}.
+//             ~  frog_recoveredCultivables += CantoDelleCompagne
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has CardoAspinato}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CardoAspinato)}.
-            ~  frog_recoveredCultivables += CardoAspinato
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has CardoAspinato}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(CardoAspinato)}.
+//             ~  frog_recoveredCultivables += CardoAspinato
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has EderaDelleAmanti}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(EderaDelleAmanti)}.
-            ~  frog_recoveredCultivables += EderaDelleAmanti
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has EderaDelleAmanti}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(EderaDelleAmanti)}.
+//             ~  frog_recoveredCultivables += EderaDelleAmanti
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has ErbaLiccia}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(ErbaLiccia)}.
-            ~  frog_recoveredCultivables += ErbaLiccia
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has ErbaLiccia}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(ErbaLiccia)}.
+//             ~  frog_recoveredCultivables += ErbaLiccia
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has FalsaPalude}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(FalsaPalude)}.
-            ~  frog_recoveredCultivables += FalsaPalude
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has FalsaPalude}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(FalsaPalude)}.
+//             ~  frog_recoveredCultivables += FalsaPalude
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LanaNotturna}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LanaNotturna)}.
-            ~  frog_recoveredCultivables += LanaNotturna
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has LanaNotturna}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LanaNotturna)}.
+//             ~  frog_recoveredCultivables += LanaNotturna
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has LicheneDegliAbissi}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LicheneDegliAbissi)}.
-            ~  frog_recoveredCultivables += LicheneDegliAbissi
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has LicheneDegliAbissi}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(LicheneDegliAbissi)}.
+//             ~  frog_recoveredCultivables += LicheneDegliAbissi
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has NonTiScordarDiTe}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(NonTiScordarDiTe)}.
-            ~  frog_recoveredCultivables += NonTiScordarDiTe
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has NonTiScordarDiTe}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(NonTiScordarDiTe)}.
+//             ~  frog_recoveredCultivables += NonTiScordarDiTe
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has Olobino}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Olobino)}.
-            ~  frog_recoveredCultivables += Olobino
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has Olobino}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Olobino)}.
+//             ~  frog_recoveredCultivables += Olobino
+//             -> franco_afterRecovery
             
-    + {frog_recoverableCultivables has Spazzata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Spazzata)}.
-            ~  frog_recoveredCultivables += Spazzata
-            -> franco_afterRecovery
+//     + {frog_recoverableCultivables has Spazzata}  \ {charTag(PG, "neutral")}:         ...{ingredientTranslator(Spazzata)}.
+//             ~  frog_recoveredCultivables += Spazzata
+//             -> franco_afterRecovery
             
     
-    + Ho cambiato idea
-        -> franco_giftsManagement
+//     + Ho cambiato idea
+//         -> franco_giftsManagement
 
 
 
-=== function sigil_recovery()
-    ~ temp sigil = LIST_RANDOM(glyph_usedSigils)
-    ~ frog_recoveredSigil += sigil
-    ~ glyph_usedSigils -= sigil
+// === function sigil_recovery()
+//     ~ temp sigil = LIST_RANDOM(glyph_usedSigils)
+//     ~ frog_recoveredSigil += sigil
+//     ~ glyph_usedSigils -= sigil
 
-    //Levo la possibilità di recuperare il sigillo
-        ~ frog_otherGifts -= sigilRecovery
+//     //Levo la possibilità di recuperare il sigillo
+//         ~ frog_otherGifts -= sigilRecovery
     
-    {charTag(Franco, "party")}:                     E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
-                                                    Fanne buon uso!
+//     {charTag(Franco, "party")}:                     E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
+//                                                     Fanne buon uso!
 
 
 
 
 
-=== franco_afterRecovery
-    //Oggetti
-    {debug_frog: passo mission_objects.}
+// === franco_afterRecovery
+//     //Oggetti
+//     {debug_frog: passo mission_objects.}
         
-    ~ temp recoveredCultivable = LIST_RANDOM(frog_recoveredCultivables)
+//     ~ temp recoveredCultivable = LIST_RANDOM(frog_recoveredCultivables)
 
-        {charTag(Franco, "party")}:                     Signori e signore e signorə, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
-                                                        Direttamente nella collezione di {player_name}!
+//         {charTag(Franco, "party")}:                     Signori e signore e signorə, ecco quanto richiesto dal girino: {ingredientTranslator(recoveredCultivable)}!
+//                                                         Direttamente nella collezione di {player_name}!
 
-            ~ backpack_findedGifts += recoveredCultivable
+//             ~ backpack_findedGifts += recoveredCultivable
             
-            //Levo la possibilità di recuperare il coltivabile
-            ~ frog_otherGifts -= cultivableRecovery
+//             //Levo la possibilità di recuperare il coltivabile
+//             ~ frog_otherGifts -= cultivableRecovery
         
-    -> closed_exchange
+//     -> closed_exchange

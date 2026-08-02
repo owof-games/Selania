@@ -82,11 +82,11 @@
             -> carla_and_second_char_chit_chat
         
         //Primo commento di Franco quando entriamo nel nest con lui
-        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil == () && not special_mission_one_contents:
-            -> special_mission_one_contents
+        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil == () && not franco_assign_special_mission_one_contents:
+            -> franco_assign_special_mission_one_contents
         
         //Missione speciale Franco chiusa
-        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != () && special_mission_one_contents:
+        - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != () && franco_assign_special_mission_one_contents:
             -> special_mission_one_closed 
 }  
 

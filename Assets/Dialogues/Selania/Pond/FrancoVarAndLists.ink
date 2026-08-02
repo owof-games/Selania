@@ -85,3 +85,9 @@
     //pausa dialoghi tra PNG e Franco, così da non farli arrivare tutti assieme
     VAR frog_commonStoryletsPause = 0
     VAR frog_commonStoryletsPauseMaxValue = 8
+
+
+    
+=== function franco_pauseSpecialStorylets()
+{debug_frog: passo franco_pauseSpecialStorylets().}
+    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax

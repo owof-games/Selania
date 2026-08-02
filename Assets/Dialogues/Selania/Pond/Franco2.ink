@@ -108,7 +108,7 @@
         - grimoire_franco hasnt grimFrancoFirst:
             -> franco_special_storylets_intro ->
 
-        - are_two_entities_together(PG, Franco) && special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoSpecialMissionOneFeedback:
+        - are_two_entities_together(PG, Franco) && franco_assign_special_mission_one_contents && entity_location(PG) == Pond && grimoire_franco hasnt grimFrancoSpecialMissionOneFeedback:
             -> franco_special_storylets_feedback_mission_one_closed ->
 
         - thirdCharDiscrepancy && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
@@ -677,7 +677,7 @@
 
     {charTag(Franco, "party")}:                                     Girino!
 
-    { closed_exchange == 1:
+    { franco_wants_to_give_you_a_gift_close_exchange == 1:
 
                                                                     Gattino!
                                                                     Bambino!
