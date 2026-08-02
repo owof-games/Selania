@@ -65,7 +65,8 @@ VAR notification_notificationCounter_Sigils = false
 
     //Notifiche per le commissioni di Franco, che vogliamo vengano notificate SOLO se la missione è stata offerta da Franco
     //Primo step: aggiorniamo lo stato delle missioni
-    ~ franco_missionsStateUpdater()
+    // ~ franco_missionsStateUpdater()
+    -> franco_update_completed_missions ->
 
     {
         //Se c'è una discrepanza tra le missioni ora completate e quelle che avevamo nello storico, aggiorniamo la lista e...
@@ -74,6 +75,7 @@ VAR notification_notificationCounter_Sigils = false
                 {
                     //Se tra le missioni aggiornate c'è quella offerta da Franco, mandiamo la notifica
                     - frog_updatedMissions has frog_currentMission && notification_activeNotifications == true:
+                    TODO: la missione completata potrebbe non essere quella assegnata da Franco, cambiare il testo
                         {charTag(TheWitch, witch_state())}:             <i>{player_name} ha soddisfatto la richiesta fatta da Franco La Rana.</i>
                 }
                 ~ notification_notificationCounter ++

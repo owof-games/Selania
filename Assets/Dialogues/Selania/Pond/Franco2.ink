@@ -741,6 +741,16 @@
 
     }
 
+
+    // resetto lo stato per prepararmi alla nuova commissione (se presente)
+    ~ frog_allMissionsCompleted += frog_currentMission
+    ~ frog_availableCommonMissions -= frog_currentMission
+    ~ frog_updatedMissions -= frog_currentMission
+    ~ frog_currentMission = ()
+    ~ frog_suspended_gift = false
+    ~ frog_justPaused = false
+
+
 -> main
 
 
@@ -1126,6 +1136,11 @@
     ~ completedMissions -= frog_allMissionsCompleted
     ~ completedMissions = completedMissions ^ frog_allAvailableMissions
     ~ frog_updatedMissions += completedMissions
+
+
+    // aggiorna l'achievement di "tutte le missioni di Franco"
+    -> achievements_onGame_statusUpdate_GM ->
+
 
     {debug_frog: dopo franco_missionsStateUpdater frog_updatedMissions contiene {frog_updatedMissions}.}
 
@@ -2094,7 +2109,7 @@
 
     //Commissione dieci richiede che la cucina sia aperta
     //Dato che devo essere sicura di darla quando c'è la possibilità di chiuderla in tempi decenti, per evitare di assegnarla nel primo atto (3 png da riscrivere) quando hanno già concluso il loro percorso in cucina, faccio due calcoli separati.
-    TODO completare con three, four, five
+    TODO: completare con three, four, five
     { frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen && ( (grimoire_firstChar hasnt grimFirstCharKitchenEnded && story_endedStories hasnt story_firstCharStoryEnded) or (grimoire_secondChar hasnt grimSecondCharKitchenEnded && story_endedStories hasnt story_secondCharStoryEnded) ):
         ~ frog_availableCommonMissions += missionTen
         {debug_frog: ci sono le condizioni per abilitare missionTen.}
