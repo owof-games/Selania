@@ -32,6 +32,15 @@
         -> franco_solicit_current_mission
     }
 
+    // check if Franco is tired (again)
+    -> franco_update_tiredness ->
+    { frog_tiredValue > 0:
+        -> franco_is_tired
+    }
+
+    // assign a mission between the available ones
+    -> franco_assign_available_mission
+
 -> main
 
 
@@ -42,8 +51,6 @@
     {charTag(Franco, "neutral")}:                   Franco è stanchino ora.
                                                     Torna più tardi e provo a darti una zampa.
     {charTag(Franco, "question")}:                  Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
-
-    ~ move_entity(Franco, Safekeeping)
 
 -> main
 
@@ -71,6 +78,16 @@
     }
 
 -> franco_wants_to_give_you_a_gift
+
+
+
+= franco_update_tiredness
+    ~ temp dice = RANDOM(1,5)
+    { dice == 5:
+        ~ frog_tiredValue = frog_maxTiredValue
+        ~ frog_justPaused = true
+    }
+->->
 
 
 
@@ -650,7 +667,7 @@
     + {achievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
         -> book ->
     -
-    
+
 -> franco_wants_to_give_you_a_gift_close_exchange
 
 
@@ -760,21 +777,21 @@
                 -> _franco_pick_plant_gift_internal(characterName, thirdChar_favouritesGifts, usedGifts, frog_third_temp_growing_ingredient, frog_third_char_text_ingredient, frog_thirdCharAchievableGifts, ingredientGift)
             - else:
                 -> _franco_pick_plant_gift_internal(characterName, thirdChar_favouritesGifts, usedGifts, frog_third_temp_growing_gift, frog_third_char_text_gift, frog_thirdCharAchievableGifts, cultivableGift)
-            }  
+            }
         - FourthCharacter:
             ~ usedGifts = kitchen_fourthCharExtraIngredient + fourthChar_giftedObject
             { isKitchenGift:
                 -> _franco_pick_plant_gift_internal(characterName, fourthChar_favouritesGifts, usedGifts, frog_fourth_temp_growing_ingredient, frog_fourth_char_text_ingredient, frog_fourthCharAchievableGifts, ingredientGift)
             - else:
                 -> _franco_pick_plant_gift_internal(characterName, fourthChar_favouritesGifts, usedGifts, frog_fourth_temp_growing_gift, frog_fourth_char_text_gift, frog_fourthCharAchievableGifts, cultivableGift)
-            }  
+            }
         - FifthCharacter:
             ~ usedGifts = kitchen_fifthCharExtraIngredient + fifthChar_giftedObject
             { isKitchenGift:
                 -> _franco_pick_plant_gift_internal(characterName, fifthChar_favouritesGifts, usedGifts, frog_fifth_temp_growing_ingredient, frog_fifth_char_text_ingredient, frog_fifthCharAchievableGifts, ingredientGift)
             - else:
                 -> _franco_pick_plant_gift_internal(characterName, fifthChar_favouritesGifts, usedGifts, frog_fifth_temp_growing_gift, frog_fifth_char_text_gift, frog_fifthCharAchievableGifts, cultivableGift)
-            }                 
+            }
 
     }
 
@@ -906,59 +923,59 @@
 
     { plant:
         - BaccaDellaAddolorata:
-            Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa? 
+            Pensa alla difficoltà di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
             ~ text = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento"
 
         - BarbaDellInciampo:
-            C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve! 
+            C'è una pianta che parla di colpa e responsabilità. Quella è la pianta che ti serve!
             ~ text = "qualcosa che parla di colpa e responsabilità"
 
         - BastoneDellOzioso:
-            Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia? 
+            Pensa al piacere di viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
             ~ text = "qualcosa che parli del viversi le cose per il piacere di farle"
 
         - BrinaDellImpossibile:
-            Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo? 
+            Pensa al bisogno di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
             ~ text = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
 
         - CantoDelleCompagne:
-            Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa. 
+            Pensa al piacere di stare con persone amiche, e chiediti cosa ricordi una festa.
             ~ text = "qualcosa che parli del piacere dello stare con persone amiche"
 
         - CardoAspinato:
-            C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella. 
+            C'è una pianta che prima è spinosa e rigida, ma poi morbida e vulnerabile. Ti serve quella.
             ~ text = "qualcosa che prima è spinoso e rigido, poi morbido e vulnerabile."
 
         - EderaDelleAmanti:
-            Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta. 
+            Uh, la mia preferita! Parla di piacere e cibo e amore. Quella è perfetta.
             ~ text = "qualcosa che parli di piacere, cibo e amore."
 
         - ErbaLiccia:
-            C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta. 
+            C'è una pianta che collega passato, presente e futuro per aiutarci a formare la nostra identità. Lei è quella giusta.
             ~ text = "qualcosa che colleghi passato, presente e futuro."
 
         - FalsaPalude:
-            Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa? 
+            Pensa a una situazione in cui non ci sono capi, in cui il cambiamento è collettivo. Quale pianta racconta questa cosa?
             ~ text = "qualcosa legato alla collettività, al cambiamento senza capi."
 
         - LanaNotturna:
-            Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando. 
+            Questa pianta cresce dove non c'è spazio per la vita. Ci ricorda che quando tutto sembra perduto, qualcosa sta sempre cambiando.
             ~ text = "qualcosa legato al vedere la vita anche quando tutto sembra perduto."
 
         - LicheneDegliAbissi:
-            Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale? 
+            Ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?
             ~ text = "ci sono relazioni che non sono sane. E c'è una pianta che le racconta. Quale?"
 
         - NonTiScordarDiTe:
-            Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo. 
+            Una pianta tenera, che parla di chi fa parte di noi, delle nostre radici, di come la nostra storia sia anche la storia di chi incontriamo.
             ~ text = "qualcosa che parli di chi fa parte di noi, delle nostre radici."
 
         - Olobino:
-            C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta. 
+            C'è una pianta che ha tantissimi nomi, difficile da spiegare, e che chiede di essere provata. Quella è la pianta giusta.
             ~ text = "qualcosa che ha tantissimi nomi e che è difficile da spiegare."
 
         - Spazzata:
-            Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella. 
+            Quella pianta che cresce quando hai tanti pensieri che ti sommergono e feriscono. Quella.
             ~ text = "qualcosa che cresce quando hai tanti pensieri che ti sommergono e ti fanno male."
     }
 
@@ -1014,7 +1031,7 @@
                                                     Direttamente nella collezione di {player_name}!
 
     ~ backpack_findedGifts += frog_recoveredCultivables
-    
+
     //Levo la possibilità di recuperare il coltivabile
     ~ frog_otherGifts -= cultivableRecovery
 
@@ -1036,7 +1053,7 @@
 
     // Levo la possibilità di recuperare il sigillo
     ~ frog_otherGifts -= sigilRecovery
-    
+
     {charTag(Franco, "party")}:                     E allora girino, eccoti di nuovo a disposizione {sigils_translator(sigil)}!
                                                     Fanne buon uso!
 
@@ -1159,13 +1176,13 @@
 
     Missioni concluse
 
-****************************/ 
+****************************/
 
 === franco_provide_gift_for_completed_mission_One
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1193,7 +1210,7 @@
 //E poi scrivo la parte comune
 
     {charTag(Franco, "neutral")}:                   Sei capace di leggere quasi quanto {charNameTwo}.
-                                                    
+
         {
             - are_two_entities_together(SecondCharacter, PG):
                 {charTag(SecondCharacter, "energy")}:       Quasi però!
@@ -1202,14 +1219,14 @@
 
     {charTag(Franco, "party")}:                             E come dico sempre: la conoscenza è sapere!
                                                             E il sapere è sapore per cui: dimmi come posso aiutarti.
-        
+
         ->->
 
 === franco_provide_gift_for_completed_mission_Two
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1251,7 +1268,7 @@
                 - are_two_entities_together(FirstCharacter, PG):
                     {charTag(FirstCharacter, "affectionate")}:      Il cibo è sempre una motivazione.
             }
-    {charTag(Franco, "party")}:                     E a proposito di cose buone: vediamo come posso aiutarti! 
+    {charTag(Franco, "party")}:                     E a proposito di cose buone: vediamo come posso aiutarti!
 
             ->->
 
@@ -1261,7 +1278,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1338,7 +1355,7 @@
                                                     }
         {charTag(Franco, "party")}:                 E questo posto è un po' più felice.
                                                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
-        
+
             ->->
 
 === franco_provide_gift_for_completed_mission_Four
@@ -1347,7 +1364,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1406,14 +1423,14 @@
                                                     Per cui grazie per aver parlato con {charNameFive} delle cose insolite che hai incontrato.
                                                     Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
         {charTag(Franco, "party")}:                 Per cui: vediamo come posso aiutarti!
-        
+
         ->->
 
 === franco_provide_gift_for_completed_mission_Five
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1477,7 +1494,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1506,25 +1523,25 @@
                                                     {
                                                         - are_two_entities_together(SecondCharacter, PG):
                                                             {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
-                                                                
+
                                                     }
 
                                                     {
                                                         - are_two_entities_together(FirstCharacter, PG):
                                                             {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro?
-                                                                
+
                                                     }
 
                                                     {
                                                         - are_two_entities_together(ThirdCharacter, PG):
                                                             {charTag(ThirdCharacter, "bored")}:             Questo posto è pieno di donne.
-                                                                
+
                                                     }
 
                                                     {
                                                         - are_two_entities_together(Mentor, PG):
                                                             {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
-                                                                
+
                                                     }
     }
 
@@ -1554,14 +1571,14 @@
                                                     Ed è bello avere una guida, un'alleata così saggia.
         {charTag(TheWitch, witch_state())}:         <i>La saggezza ha molte facce, e una porta il volto di Franco.</i>
         {charTag(Franco, "party")}:                  E ora quindi è il mio momento di aiutarti.
-        
+
         ->->
 
 === franco_provide_gift_for_completed_mission_Seven
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1625,14 +1642,14 @@
                                                     Ora sto scioperando anche io coi gemelli.
         {charTag(Franco, "neutral")}:               Ma non sai quanto ho sonno!
                                                     E se ora ti aiuto col tuo lavoro, magari Giulio capisce che sono un bravo girino, e ci prende il cane!
-        
+
         ->->
 
 === franco_provide_gift_for_completed_mission_Eight
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1700,13 +1717,13 @@
                                                                 - else:
                                                                     {charTag(Franco, "neutral")}:               Mmm.
                                                                                                                 Io non sono sicuro che tu sei un umano.
-                                                                                                                Sei troppo basso.    
+                                                                                                                Sei troppo basso.
                                                             }
                                                     {charTag(Franco, "party")}:                                 Ma quando sei qui mi diverto tanto.
                                                                                                                 Quindi sono in pace.
                                                 }
     {charTag(Franco, "party")}:                     E a proposito di pace: vediamo come posso aiutarti!
-        
+
         ->->
 
 
@@ -1715,7 +1732,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1741,7 +1758,7 @@
                                                     Sono due anni che provo a coronare il sogno di Giulio di diventare pittore.
         {charTag(Franco, "neutral")}:               Tutto questo è crudele.
         {charTag(Franco, "question")}:              Potrei forse andare a parlare loro di persona?
-        {charTag(Franco, "party")}:                 Però so che tu hai già visto una delle sue opere, il nuovo ritratto che è appeso in camera tua!                                                
+        {charTag(Franco, "party")}:                 Però so che tu hai già visto una delle sue opere, il nuovo ritratto che è appeso in camera tua!
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -1756,9 +1773,9 @@
                                                     Perché fai le cose che sai fare come le sai fare e per chi le sai fare.
         {charTag(Franco, "question")}:              E se non vanno bene all'Accademia, magari andranno bene in camera tua, no?
         {charTag(Franco, "party")}:                 Sicuramente va bene in camera tua!
-                                                    
+
         {charTag(Franco, "party")}:                 E a proposito di cose che vanno bene: vediamo come posso aiutarti!
-        
+
         ->->
 
 
@@ -1767,7 +1784,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
 //Prima cosa: dato che posso arrivare qui dopo una commissione, oppure in modo autonomo, creo una differenza che è legata semplicemente alla presenza o meno di questa commissione in frog_currentMission
     {
@@ -1793,7 +1810,7 @@
                                                     Se gli dico che non mi piacciono le nocciole, mi tolgono la tessera?
         {charTag(Franco, "party")}:                 Però so che tu sai fare le scelte giuste, {player_name}.
                                                     E infatti hai già completato una commissione prima ancora che te lo chiedessi, e aggiunto un ingrediente extra in cucina!
-                                                                  
+
     }
 
 //Poi per come funziona il codice, aggiungo comunque la commissione alla current mission, così sono sicura che il resto del codice funzioni correttamente anche se dovesse essere una commissione compiuta in autonomia
@@ -1807,9 +1824,9 @@
                                                     Però con l'ingrediente giusto finisce che magari la persona ti dice anche delle cose molto personali.
         {charTag(Franco, "neutral")}:               Come quando ho messo la grappa nella zuppa di Tullio.
                                                     E poi mi ha detto che vorrebbe comprarsi una moto, ma che le fanno troppo grandi per noi rane.
-                                                    
+
         {charTag(Franco, "party")}:                 E a proposito di cose grandi: vediamo come posso aiutarti!
-        
+
         ->->
 
 
@@ -1862,7 +1879,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         Ehi girino!
     {charTag(Franco, "neutral")}:                       Ricordati di leggere un po' dal tuo libro magico.
@@ -1877,7 +1894,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         {player_name}!
     {charTag(Franco, "question")}:                      Come sta andando con le piante della serra?
@@ -1892,7 +1909,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         Ma ecco di nuovo qui il mio girino preferito!
     {charTag(Franco, "question")}:                      Hai poi chiesto a {charNameFive} come stare bene?
@@ -1904,7 +1921,7 @@
                 - are_two_entities_together(FirstCharacter, PG):
             {charTag(FirstCharacter, "annoyed")}:       Non ne dubitavo {charNameFive}.
             }
-        
+
         }
     {charTag(Franco, "neutral")}:                       Intanto sistemo la posta arretrata.
     {charTag(Franco, "question")}:                      Che poi se deve andare avanti, non dovrebbe essere "avanzata"?
@@ -1920,7 +1937,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         {player_name}!
     {charTag(Franco, "neutral")}:                       Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {charNameFive}!
@@ -1942,7 +1959,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
     {charTag(Franco, "question")}:                      Girino, sapevi che se metto la zampa nell'acqua si spezza?
                                                         Ma se poi la tiro fuori, è intera!
@@ -1968,7 +1985,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+
 
     {charTag(Franco, "neutral")}:                       Parla con la nostra amica comune, girino.
                                                         Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
@@ -1981,7 +1998,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "party")}:                         Girino!
     {charTag(Franco, "neutral")}:                       Come diceva Gambusia de Filippi: c'è fitoplancton per te.
@@ -1995,7 +2012,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "neutral")}:                       {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca.
     {charTag(Franco, "question")}:                      Non è che riesci a farci un salto e smuovere qualche racconto?
@@ -2010,7 +2027,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "reading")}:	                    "E mi rendo conto che le rane non piacciono a tutte le persone."
                                                         "Ma se per questo nemmeno le persone piacciono a tutte le rane."
@@ -2020,20 +2037,651 @@
     {charTag(Franco, "question")}:                      {player_name}, mi sa che ancora non hai guardato la nuova opera di Giulio, vero?
     {charTag(Franco, "neutral")}:                       La trovi in camera tua!
     {charTag(Franco, "reading")}:	                    "PS: ma il vostro campus ha ninfee singole o condivise?"
-                                                    
+
 ->->
 
 === franco_solicit_current_mission_Ten
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    
+
 
     {charTag(Franco, "neutral")}:                       {player_name}, quelli del MENSA mi stanno dicendo che li ho diffamati.
                                                         Solo perché ho scritto sotto un loro post che non è vero che se c'è internet allora uno è tenuto a sapere che la noce moscata non vola.
                                                         Anche perché ci sono un sacco di cose sbagliate su internet.
                                                         Tipo che tutte le rane nuotano.
     {charTag(Franco, "question")}:                      Ma mi sa invece che tu non hai ancora aggiunto un ingrediente extra in cucina, vero?
-                                                    
+
 
 ->->
+
+
+
+/*
+ * ASSIGN MISSION
+ */
+
+
+
+=== franco_assign_available_mission
+
+    //Primo step: verifico se ci sono commissioni da togliere dalla lista perché non sono state raggiunte le condizioni per attivarle.
+
+    //Commissione sei richiede invito strega a parlarle
+    { frog_allMissionsCompleted hasnt missionSix && player_accessiblePlaces has Dump:
+        {debug_frog: ci sono le condizioni per abilitare missionSix.}
+        ~ frog_availableCommonMissions += missionSix
+    }
+
+
+    //Commissione sette richiede la presenza di Ursula alla stazione
+    { frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters):
+        {debug_frog: ci sono le condizioni per abilitare missionSeven.}
+            ~ frog_availableCommonMissions += missionSeven
+    }
+
+    //Commissione otto richiede che la biblioteca sia aperta
+    { frog_allMissionsCompleted hasnt missionEight && player_accessiblePlaces has Library:
+        ~ frog_availableCommonMissions += missionEight
+        {debug_frog: ci sono le condizioni per abilitare missionEight.}
+    }
+
+    //Commissione nove richiede che almeno una riscrittura sia stata conclusa, così che ci sia il ritratto in camera
+    { frog_allMissionsCompleted hasnt missionNine && story_endedStories != ():
+        ~ frog_availableCommonMissions += missionNine
+        {debug_frog: ci sono le condizioni per abilitare missionNine.}
+    }
+
+    //Commissione dieci richiede che la cucina sia aperta
+    //Dato che devo essere sicura di darla quando c'è la possibilità di chiuderla in tempi decenti, per evitare di assegnarla nel primo atto (3 png da riscrivere) quando hanno già concluso il loro percorso in cucina, faccio due calcoli separati.
+    TODO completare con three, four, five
+    { frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen && ( (grimoire_firstChar hasnt grimFirstCharKitchenEnded && story_endedStories hasnt story_firstCharStoryEnded) or (grimoire_secondChar hasnt grimSecondCharKitchenEnded && story_endedStories hasnt story_secondCharStoryEnded) ):
+        ~ frog_availableCommonMissions += missionTen
+        {debug_frog: ci sono le condizioni per abilitare missionTen.}
+    }
+
+    //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
+    { (frog_allMissionsCompleted hasnt specialMissionOne) && (player_accessiblePlaces has Nest) && (glyph_discoveredSigils != ()):
+        ~ frog_availableSpecialMissions += specialMissionOne
+        {debug_frog: ci sono le condizioni per abilitare specialMissionOne.}
+    }
+
+    //Commissione speciale due richiede l'apertura della cucina e che sia vuota.
+    { frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen && kitchen_kitchenOccupied == false:
+        ~ frog_availableSpecialMissions += specialMissionTwo
+        {debug_frog: ci sono le condizioni per abilitare specialMissionTwo.}
+    }
+
+
+    // Secondo step, assegno una commissione a caso, passando prima da quelle prioritarie, e poi dalle altre.
+    {
+        - frog_availableSpecialMissions && frog_pauseSpecialMission <= 0:
+            ~ frog_currentMission = LIST_MIN(frog_availableSpecialMissions)
+
+        - frog_availableCommonMissions:
+            ~ frog_currentMission = LIST_RANDOM(frog_availableCommonMissions)
+
+        - LIST_COUNT(frog_allMissionsCompleted) < LIST_COUNT(frog_allAvailableMissions):
+            {charTag(Franco, "party")}:                         Girino!
+            {shuffle:
+                                                            -   Per ora non ho commissioni da offrirti, ma non ti preoccupare, qualcosa poi me lo invento! Torna più tardi.
+                                                            -   Sono in attesa della carpa che mi porta le commissioni, torna più tardi!
+                                                            -   Sembra che per ora tutto vada bene, ma se torni più tardi magari ho nuove cose da farti fare!
+            }
+            -> main
+
+        - else:
+            {charTag(Franco, "party")}:                     Girino!
+                                                            Ma sai che hai fatto tuuuuuuutte le commissioni che potevo offrirti?
+                                                            Però possiamo rilassarci assieme!
+            -> main
+    }
+
+    ~ frog_availableSpecialMissions -= frog_currentMission
+
+    //Terzo step: faccio il dispatch effettivo delle commissioni.
+    { frog_currentMission:
+
+        - missionOne:
+            -> franco_assign_mission_one
+
+        - missionTwo:
+            -> franco_assign_mission_two
+
+        - missionThree:
+            -> franco_assign_mission_three
+
+        - missionFour:
+            -> franco_assign_mission_four
+
+        - missionFive:
+            -> franco_assign_mission_five
+
+        - missionSix:
+            -> franco_assign_mission_six
+
+        - missionSeven:
+            -> franco_assign_mission_seven
+
+        - missionEight:
+            -> franco_assign_mission_eight
+
+        - missionNine:
+            -> franco_assign_mission_nine
+
+        - missionTen:
+            -> franco_assign_mission_ten
+
+        - specialMissionOne:
+            -> franco_assign_special_mission_one
+
+        - specialMissionTwo:
+            -> franco_assign_special_mission_two
+    }
+
+
+
+/*
+ * DIALOGUES FOR MISSIONS
+ */
+
+
+
+=== franco_assign_mission_one
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "question")}:                  Vediamo vediamo vediamo.
+        {charTag(Franco, "neutral")}:                   Interessante.
+                                                        Ho dimenticato di ordinare del punteruolo.
+                                                        Devo assolutamente passare a prenderlo dal fiorista prima che Tullio se ne accorga.
+        {charTag(Franco, "party")}:                     Ehi, {player_name}!
+        {charTag(Franco, "question")}:                  Volevi qualcosa?
+        {charTag(Franco, "neutral")}:                   Ah sì è vero.
+        {charTag(Franco, "question")}:                  Vediamo un po' cosa farti fare.
+        {charTag(Franco, "neutral")}:                   Questa è facile.
+        {charTag(Franco, "party")}:                     Mi diceva zio Gracco che hai trovato un libro.
+        {charTag(Franco, "question")}:                  Ma che non lo stai leggendo molto.
+        {charTag(Franco, "party")}:                     E come dico sempre ai gemelli: sapere è podere.
+                                                        E se il podere ha uno stagno, allora c'è una rana.
+                                                        E se c'è una rana, sarà felice di sapere anche lei che {player_name} ha letto il suo libro.
+        {charTag(Franco, "neutral")}:                   Per cui girino: leggi un po' del tuo libro e poi torna da me.
+
+            //@animation:RewriterBook
+             -> main
+
+=== franco_assign_mission_two
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "question")}:                  L'avresti mai detto?
+                                                        I girini sono future rane.
+                                                        Ma se si lanciano sulla terra, non sanno respirare.
+        {charTag(Franco, "neutral")}:                   Da piccolo ci ho provato, e mamma Craazia mi ha detto: "Franco, hai il fango sugli occhi! Svegliati!"
+                                                        Poi mi sono lavato via il fango e ci ho riprovato.
+                                                        A quel punto è arrivato zio Gracco, che mi ha detto: "Non ti azzardare a rifare la algonara con la panna!"
+                                                        E mi ha ributtato in acqua.
+        {charTag(Franco, "party")}:                     Ma c'è una lettera delle formiche!
+        {charTag(Franco, "reading")}:	                "Ci servono più piante in serra, è di vitale importanza!"
+        {charTag(Franco, "neutral")}:                   Ah, le formiche.
+                                                        Il rapporto tra me e loro è un po' complicato perché.
+                                                        Insomma.
+                                                        Di solito le rane mangiano le formiche.
+        {charTag(Franco, "party")}:                     Ma poi Giulio mi ha fatto diventare vegetariano.
+        {charTag(Franco, "neutral")}:                   Ma loro comunque non si fidano.
+                                                        Giulio dice sempre: "Con l'arrivo dei gemelli dovremmo fare le formiche, non comprare cose inutili!"
+                                                        E allora scavo dei cunicoli per tutto lo stagno.
+                                                        E lui mi bacia sulla testa e mi dice: "Fortuna che ti amo."
+        {charTag(Franco, "party")}:                     Anche io lo amo tanto.
+                                                        Per cui facciamo le formiche.
+                                                        E facciamole felici: torna quando avrai coltivato almeno tre piante!
+
+            //@animation:RewriterBook
+                -> main
+
+
+
+=== franco_assign_mission_three
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Questa è facile.
+                                                        Mi raccomando Franco, non distrarti.
+        {charTag(Franco, "question")}:                  La nostra amica comune, hai presente no?
+                                                        Quella che ci spiega le cose.
+        {charTag(Franco, "neutral")}:                   La voce.
+                                                        Ecco.
+        {charTag(Franco, "party")}:                     Mi ha raccontato tante cose su {charNameFive}.
+        {charTag(Franco, "question")}:                  Sapevi ad esempio che può respirare fino a due minuti sott'acqua?
+            {
+                - are_two_entities_together(Mentor, PG):
+                    {charTag(FifthCharacter, "hurry")}:         Eh?
+            }
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:       Questa me la voglio godere tutta.
+            }
+        {charTag(Franco, "question")}:                  E che mangia solo pesce?
+                                                        E che le piace giocare?
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+            {charTag(SecondCharacter, "neutral")}:          IM-POS-SI-BI-LE!
+            {
+                - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "hurry")}:             Guarda che sono bravissima a burraco!
+            {charTag(SecondCharacter, "neutral")}:          Ma è una roba da vecchi!
+            }
+            }
+        {charTag(Franco, "question")}:                  E che ha una tasca sotto l'ascella dove conserva le pietre che usa per rompere i gusci?
+            {
+            - are_two_entities_together(Mentor, PG):
+            {charTag(FifthCharacter, "neutral")}:           A dire il vero ne ho anche una in testa, dove raccolgo le sciocchezze dette dalle rane.
+            {charTag(Franco, "neutral")}:                   Ma le rana sono molto sagge, quindi non hai molto da raccogliere.
+            }
+        {charTag(Franco, "neutral")}:                   E.
+                                                        Uh, una lettera di Euforbo.
+                                                        "Papà Franco, quella è la lontra, non {charNameFive}."
+                                                        Uh.
+                                                        Euforbo.
+        {charTag(Franco, "party")}:                     È più furbo di un pesce rosso.
+        {charTag(Franco, "neutral")}:                   Ma {charNameFive}.
+        {charTag(Franco, "question")}:                  Di cosa aveva bisogno {charNameFive}?
+        {charTag(TheWitch, witch_state())}:             <i>{charNameFive} ama dare consigli per far star bene le persone.</i>
+                                                        <i>{charNameFive} crede di potere esistere solo quando si rende utile.</i>
+        {charTag(Franco, "neutral")}:                   Esatto.
+                                                        Quella roba lì.
+        {charTag(Franco, "party")}:                     La farà felice.
+                                                        Fallo.
+                                                        E poi torna pure qui.
+            {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "hurry")}:         Fai cosa? Fai cosa, {player_name}?
+            }
+        {charTag(Franco, "question")}:                  Ma quindi non è {charNameOne} che fa il nido sugli alberi?
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+            {charTag(FirstCharacter, "curious")}:           Esatto!
+                                                            E poi ululo alla luna!
+            {charTag(Franco, "neutral")}:                   Devo subito avvisare Euforbo!
+            }
+
+
+            //@animation:RewriterBook
+                -> main
+
+
+=== franco_assign_mission_four
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Quando ero ancora un girino, mamma Craazia mi diceva sempre:
+                                                        "Tuo fratello Clodoveo ha preso la mia intelligenza."
+                                                        "Tua sorella Boemonda la bellezza di tuo padre."
+                                                        E poi continuava così elencando tuttə lə miə centottantasei fradellə.
+                                                        E infine.
+                                                        "Tu, Franco. Hai delle belle pupille."
+        {charTag(Franco, "party")}:                     Mi piacciono le mie pupille, mi fanno vedere tante cose.
+                                                        Cose strane.
+        {charTag(Franco, "neutral")}:                   E le cose strane vanno condivise, così le persone sanno cosa aspettarsi dal mondo.
+                                                        Come quando ho scoperto che gli umani chiamano la mia pancia "tronco".
+        {charTag(Franco, "party")}:                     Come il tronco degli alberi.
+                                                        E allora ho capito che noi rane nasciamo girini, diventiamo rane, e poi, quando siamo vecchie, alberi.
+                                                        Bello, vero?
+                                                        Il mondo è un po' una grande rana.
+        {charTag(Franco, "question")}:                  E allora stavo pensando: perché non racconti a {charNameFive} qualcosa di strano che hai scoperto?
+        {charTag(Franco, "party")}:                     Sono sicuro che così si diverte, e magari si rilassa un poco.
+    {
+        - are_two_entities_together(Mentor, PG):
+        {charTag(FifthCharacter, "neutral")}:           In effetti non sarebbe male rilassarmi un poco.
+    }
+
+        {charTag(Franco, "neutral")}:                   Io intanto vado a salutare bisnonno Ninfeo.
+
+            //@animation:RewriterBook
+                -> main
+
+
+=== franco_assign_mission_five
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+
+        {charTag(Franco, "neutral")}:                   Tra qualche sera c'è il karaoke di cugina Sputt.
+        {charTag(Franco, "party")}:                     Non hai idea delle cose che accadono durante le sue feste, girino!
+                                                        L'anno scorso ero così ubriaco di grappa d'alghe che ho addirittura...
+                                                        Oh, mi vergogno a dirlo.
+        {charTag(Franco, "neutral")}:                   No, non posso dirlo.
+                                                        Una cosa così stupida.
+        {charTag(Franco, "party")}:                     Ehi, una lettera di Tullio!
+        {charTag(Franco, "reading")}:	                "Diglielo amore, ti supplico, diglielo e lascial{player_pronoun has him:o|{player_pronoun has her:a|ə}} andare."
+        {charTag(Franco, "neutral")}:                   Uh.
+                                                        Insomma, {player_name}!
+        {charTag(Franco, "party")}:                     Ho <b>nuotato</b>!
+        {charTag(Franco, "question")}:                  Non è assurdo?
+        {charTag(Franco, "party")}:                     Una rana che nuota!
+                                                        Quando l'ho raccontato ai girini, mi hanno preso per pazzo!
+        {charTag(Franco, "neutral")}:                   Quest'anno ho promesso che non toccherò la grappa.
+                                                        Niente, zero.
+                                                        Sennò chissà cosa farò.
+        {charTag(Franco, "party")}:                     Magari mi metto addirittura a <b>saltare</b>!
+        {charTag(Franco, "question")}:                  Te la immagini, girino?
+                                                        Una rana che salta?
+        {charTag(Franco, "neutral")}:                   Ma c'è una lettera di Giulio.
+        {charTag(Franco, "reading")}:	                "Da{player_pronoun has him:gli|{player_pronoun has her:lle|llə}} la commissione, Franco, abbi pietà per quella povera creatura!"
+        {charTag(Franco, "question")}:	                Oggi i mariti sono un po' nervosetti.
+        {charTag(Franco, "neutral")}:                   Pensavo comunque {player_name}: perché non provi a parlare con due persone quando sono assieme?
+                                                        Sono abbastanza sicuro che succederà qualcosa di interessante.
+                                                        E a volte, quando non c'è comprensione, una voce esterna può essere di grande aiuto.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    {charTag(SecondCharacter, "energy")}:       Io parlo sempre di cose grandi!
+            }
+
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    {charTag(FirstCharacter, "annoyed")}:       Diremo cose metafisiche proprio.
+
+            }
+        {charTag(Franco, "party")}:                     Magari anche loro si mettono a nuotare!
+
+        //@animation:RewriterBook
+            -> main
+
+
+=== franco_assign_mission_six
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Prima c'è stato l'incontro tra genitori e insegnanti.
+                                                        Non è facilissimo quando ci sono così tanti girini in giro.
+        {charTag(Franco, "party")}:                     "Girini in giro", suona bene!
+                                                        Potrei farci una canzone trap!
+                                                        "Girano i girini col girello nel girotondo".
+                                                        "Girano e si agitano e smuovono il fondo!"
+                                                        "Sono profondo!"
+        {charTag(Franco, "question")}:                  E poi?
+        {charTag(Franco, "party")}:                     "Ah."
+        {charTag(Franco, "question")}:                  O è meglio "Yeah"?
+        {charTag(Franco, "neutral")}:                   Ah no, stavo parlando dell'incontro con gli insegnanti.
+                                                        Ci sono anni in cui un incontro dura settimane.
+                                                        Ora però ci sono classi più piccole.
+                                                        Soprattutto dopo <b>quel</b> fattaccio con l'airone.
+                                                        Glielo avevano detto tutti a zio Gracco che non aveva davvero la faccia da critico gastronomico.
+                                                        Poveri girini.
+        {charTag(Franco, "party")}:                     Però poteva andare peggio, per fortuna ci ha aiutato la nostra amica comune.
+                                                        E visto che alcune cose sono cambiate, perché non provi a parlarle direttamente?
+        {charTag(Franco, "neutral")}:                   La trovi dalle parti della discarica.
+                                                        Credo potrebbe farti del bene conoscerla direttamente.
+            {
+            - are_two_entities_together(SecondCharacter, PG):
+                {charTag(SecondCharacter, "emotional")}:        C'è qualcuno nella discarica?!
+
+            }
+
+            {
+            - are_two_entities_together(FirstCharacter, PG):
+                {charTag(FirstCharacter, "curious")}:           C'è un'altra persona qui in giro?
+
+            }
+
+            {
+            - are_two_entities_together(Mentor, PG):
+                {charTag(FifthCharacter, "bored")}:             C'è una discarica?!?
+
+            }
+            {
+            - are_two_entities_together(ThirdCharacter, PG):
+            {charTag(ThirdCharacter, "jester")}:                Voi la chiamate discarica, ma da me quello è il parco giochi comunale.
+            }
+        {charTag(Franco, "neutral")}:                   Come dice sempre zia Graaak: "Chi va piano non arriva lontano."
+        {charTag(Franco, "question")}:                  O era qualcosa sulla minestra?
+        {charTag(Franco, "neutral")}:                   A dopo girino!
+
+            //@animation:RewriterBook
+                -> main
+
+
+=== franco_assign_mission_seven
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Mannaggina che sonno, girino.
+        {charTag(Franco, "question")}:                  Ma sai una cosa?
+        {charTag(Franco, "neutral")}:                   Mi diceva Dora l'ape che c'è della posta per te in stazione.
+                                                        Perché non vai a vedere, e poi torni da me?
+                                                        Intanto mi faccio un pisolino.
+                                                        Uh, una lettera di zio Gracco!
+        {charTag(Franco, "reading")}:	                "Franco, c'è questo tizio che sembra un recensore magnifico!"
+                                                        "E ha definito i miei lombrichi all'amatriciana "sublimi"!"
+                                                        "Deve avere ovviamente buon gusto."
+                                                        "Avrebbe bisogno di un po' di spazio per dormire, ma qui stiamo attendendo una nuova schiusa."
+                                                        "Non è che puoi ospitarlo tu?"
+                                                        "Si firma Signor Gufo de Predatoris."
+                                                        "Puoi contattarlo tramite la carpa della sera."
+                                                        "Anche se l'ultima è sparita da qualche giorno."
+        {charTag(Franco, "neutral")}:	                Mmm.
+        {charTag(Franco, "question")}:                  Che cosa strana.
+    {
+    - are_two_entities_together(SecondCharacter, PG):
+        {charTag(SecondCharacter, "emotional")}:        Più strana di Franco?
+                                                        Franco la Rana Strana?
+        {charTag(Franco, "party")}:                     Esatto!
+    }
+        {charTag(Franco, "question")}:                  Non dovrebbe essere "Signore Gufo" invece di "Signor Gufo"?
+                                                        Sennò è come se dicessi "Ciao, sono la Ran Franco", no?
+                                                        Mi devo fidare?
+                                                            +  \ {charTag(PG, "neutral")}:         No!
+                                                            +  \ {charTag(PG, "neutral")}:         No?!?
+                                                            +  \ {charTag(PG, "neutral")}:         NO!
+                                                            +  \ {charTag(PG, "neutral")}:         NOOOOOOO!
+                                                            +  \ {charTag(PG, "neutral")}:         Franco, per fortuna che sei divertente. Ma no.
+                                                            -
+        {charTag(Franco, "question")}:                  Come dice il detto?
+                                                        "{player_pronoun has him:Il riscrittore|{player_pronoun has her:La riscrittora|Lə riscrittorə}} ha sempre ragione!"
+        {charTag(Franco, "neutral")}:                   Povero zio Gracco.
+                                                        Spera sempre di diventare famoso.
+                                                        A dopo {player_name}!
+
+            //@animation:RewriterBook
+                -> main
+
+=== franco_assign_mission_eight
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Euforbo ha portato a casa una pulce d'acqua.
+                                                        La maestra vuole che imparino a prendersi cura di altre forme di vita.
+                                                        Gli altri gemelli hanno già divorato le loro pulci, ma Euforbo ha un altro cuore.
+        {charTag(Franco, "question")}:                  Che un po' è ovvio: non è che potrebbe condividere il cuore con un altro gemello.
+        {charTag(Franco, "neutral")}:                   O con Tullio.
+                                                        O con Giulio.
+                                                        O con me.
+                                                        Anche se Tullio mi dice sempre "Ti ho nel cuore".
+        {charTag(Franco, "question")}:                  Che è una cosa che un po' mi confonde.
+        {charTag(Franco, "neutral")}:                   Come quando Giulio dice "Euforbo ha la testa sulle spalle."
+        {charTag(Franco, "question")}:                  Ma è un girino, al massimo ha la testa sull'addome.
+        {charTag(Franco, "neutral")}:                   A volte quando condivido questi dubbi, Euforbo mi bacia sulla fronte e mi dice: "Papà, perché non torni a scuola?"
+                                                        Mamma Craazia diceva sempre che prendo tutto alla lettera.
+                                                        Forse per questo mi scrivono così spesso.
+                                                        Ma a proposito di scrivere!
+                                                        I topi della biblioteca hanno bisogno di un po' di movimento.
+        {charTag(Franco, "question")}:                  Perché non sposti qualche racconto, e magari lo leggi?
+        {charTag(Franco, "party")}:                     Così sono felici.
+                                                        I racconti.
+                                                        E i topi.
+                                                        E forse anche le lettere.
+        {charTag(Franco, "question")}:                  Uh, è da un po' che non mi scrivono.
+
+            //@animation:RewriterBook
+                -> main
+
+=== franco_assign_mission_nine
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Mi è arrivata una lettera dall'Accademia dei Bei Party.
+        {charTag(Franco, "reading")}:	                "Esimio dottor Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino."
+                                                        "Le scriviamo in merito alla sua applicazione fatta per le veci del signor Giulio Igidio Liutprando Rigoberto Odovilio Sulpicio Policarpo Oruccio."
+                                                        "E per l'ottava volta le ripetiamo che, per quanto apprezziamo gli sforzi del signor Giulio Il Rospo, noi siamo un'agenzia di viaggi e NON"
+                                                        "E ripetiamo NON"
+                                                        "Un'accademia di pittura."
+                                                        "Per cui NO, non abbiamo borse di studio per il signor Giulio Il Rospo e"
+                                                        "NO, non doniamo blocchi di marmo di Craackara"
+                                                        "E NO, non è che escludiamo il signor Giulio Il Rospo dai nostri corsi per un pregiudizio contro le rane."
+                                                        "Ma noi non facciamo corsi di alcun tipo perché noi siamo una AGENZIA DI VIAGGI!"
+                                                        "Se le interessa, abbiamo un pacchetto famiglia molto conveniente per l'Isola dei Serpenti."
+                                                        "Cordialmente."
+                                                        "Lo staff ABP."
+                                                        "PS: e comunque i ritratti del signor Giulio Il Rospo sono brutti."
+        {charTag(Franco, "neutral")}:	                {player_name}, questa Accademia è così esclusiva!
+        {charTag(Franco, "party")}:                     Sono due anni che provo a coronare il sogno di Giulio di diventare pittore.
+        {charTag(Franco, "neutral")}:                   Tutto questo è crudele.
+        {charTag(Franco, "question")}:                  Potrei forse andare a parlare loro di persona?
+        {charTag(Franco, "party")}:                     Nel mentre ti chiedo un favore: ho appeso uno dei suoi ritratti nella tua camera.
+        {charTag(Franco, "question")}:                  Ti andrebbe di darci un'occhiata e dirmi cosa ne pensi?
+        {charTag(Franco, "neutral")}:                   Nel mentre rispondo all'Accademia.
+                                                        "Cara Accademia dei Bei Party."
+                                                        "Sono sicuro che possiamo raggiungere un accordo per far accedere mio marito ai vostri corsi."
+                                                        "Vi piacciono le nocciole?"
+
+            //@animation:RewriterBook
+                -> main
+
+
+
+=== franco_assign_mission_ten
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "neutral")}:                   Ti svelo un segreto.
+        {charTag(Franco, "question")}:                  Sapevi che Franco, questo Franco, non un altro Franco, tipo Franco il postino o Franco il cugino di Pino.
+                                                        E neanche quel cugino Franco che ha deciso di fare il poliziotto, e allora zia Graaak l'ha buttato fuori di casa.
+                                                        No no, questo Franco che vedi qui davanti a te, lo sapevi che è un socio MENSA?
+                                                        Non è che la cosa mi rende molto orgoglioso: è un po' snob come posto.
+                                                        E poi non penso capiscano proprio proprio bene che il test per entrare è pieno di limiti.
+                                                        E che magari non è che una rana non ce la fa a superare il test perché è stupida, ma perché è una poveraccia.
+        {charTag(Franco, "neutral")}:                   Però l'ho fatto perché zio Gracco insisteva.
+                                                        Dice che è fondamentale per trovare certi tipi di lavoro.
+                                                        E io continuo a dirglielo che non voglio lavorare.
+                                                        Soprattutto non in cucina.
+                                                        Che è difficilissimo mettere l'ingrediente giusto.
+                                                        E al MENSA hanno i corsi per gli ingredienti.
+                                                        E anche per scegliere i mestoli.
+                                                        Mica per niente si chiama Mestolo, Erbazzone, Nocciola: Scegliere Accuratamente.
+        {charTag(Franco, "question")}:                  Se gli dico che non mi piacciono le nocciole, mi tolgono la tessera?
+        {charTag(Franco, "party")}:                     Però so che tu sai fare le scelte giuste, {player_name}.
+        {charTag(Franco, "neutral")}:                   Per cui la tua prossima commissione è: quando sarai in cucina con un'altra persona, aggiungi un ingrediente extra.
+                                                        E poi torna da me.
+        {charTag(Franco, "party")}:                     Potresti fare molto felice la persona che cucina con te.
+
+            //@animation:RewriterBook
+                -> main
+
+//Missioni speciali, con script ad hoc per dare premi o cose del genere.
+=== franco_assign_special_mission_one
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "party")}:                     Girino!
+                                                        Mi serve un favore enorme, grande almeno quanto il cuore di zia Graaak.
+        {charTag(Franco, "neutral")}:                   Che il medico dice che è un problema.
+                                                        Il cuore, non zia Graaak.
+        {charTag(Franco, "party")}:                     Lei è adorabile, quando non mi sgrida.
+        {charTag(Franco, "neutral")}:                   E ora mi sgriderebbe perché ho perso il filo.
+        {charTag(Franco, "party")}:                     Vediamoci sulla spiaggia!
+
+        ~ move_entity(earthGlyph, Nest)
+        ~ move_entity(Franco, Nest)
+
+    //@animation:RewriterBook
+    -> main
+
+=== franco_assign_special_mission_one_contents
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "party")}:                     Eccoti girino!
+        {charTag(Franco, "neutral")}:                   Questa è una cosa molto delicata, per cui promettimi che la terrai per te.
+                                                        E per me ovviamente, perché se la tieni solo per te me la dimentico, e quello sì che diventerebbe un problema.
+                                                        Si tratta di Euforbo.
+                                                        Le maestre sono preoccupate.
+                                                        Dicono che è molto intelligente.
+        {charTag(Franco, "party")}:                     Sa tipo come respirare sott'acqua e ha anche trovato un modo per gracchiare senza sputare, e conosce tutto delle salamandre.
+        {charTag(Franco, "neutral")}:                   Ma non sa come esprimere bene le sue emozioni, si agita tantissimo quando prova a dirle e poi si zittisce tutto.
+                                                        Mi si rompe il cuore quando lo vedo così.
+                                                        Ma la nostra amica comune mi ha detto che ci sono questi sigilli che non servono per chiudere le cose ma per aprirle.
+        {charTag(Franco, "question")}:                  Che quindi sarebbero delle chiavi, no?
+        {charTag(Franco, "neutral")}:                   Anche se pure le chiavi chiudono e aprono.
+        {charTag(Franco, "question")}:                  Quindi forse dei grimaldelli?
+                                                        Che poi ho visto che mi ha dato un sasso, quel sasso lì nuovo che vedi.
+        {charTag(Franco, "neutral")}:                   E i sassi aprono anche le teste con un po' di forza.
+                                                        Ma non voglio metterci le emozioni dentro a Euforbo, voglio che le sappia dire.
+                                                        E mi ha detto "crediamo che con questo tipo di glifo all'inizio, {player_name} possa scoprire un sigillo adatto per aiutare Euforbo".
+        {charTag(TheWitch, witch_state())}:             <i>Confermiamo.</i>
+        {charTag(Franco, "neutral")}:                   Mi fido di lei, non mi ha detto molto altro.
+                                                        E non so cosa faranno quei sigilli di preciso, ma mi sono ricordato di quando Euforbo era piccolo e non voleva nuotare.
+                                                        Poi l'abbiamo lasciato da solo quando abbiamo traslocato verso la nuova corrente e ha imparato da solo.
+                                                        Un pezzo alla volta.
+                                                        E quindi mi sa che se ci dai un sigillo così, bello o brutto che sia, alla fine è come il primo colpo di pinna, e poi lui sa meglio come dirle le cose.
+                                                        Creane uno, io me lo prendo e poi glielo dono e vediamo che succede.
+        {charTag(Franco, "party")}:                     Grazie, girino!
+
+    //@animation:RewriterBook
+
+    -> main
+
+
+=== franco_assign_special_mission_two
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+
+
+        {charTag(Franco, "party")}:                     Girino!
+                                                        Ho una sorpresa per te!
+                                                        Troviamoci in cucina.
+        {charTag(Franco, "neutral")}:                   Ma non "nella" cucina.
+                                                        Sul pontile.
+                                                        Perché se ci mettiamo nella cucina, poi finisce che si cuoce.
+        {charTag(Franco, "question")}:                  Come la rana nella pentola, hai presente?
+        {charTag(Franco, "neutral")}:                   Quella che era nell'acqua.
+                                                        Poi l'acqua ha iniziato a bollire.
+        {charTag(Franco, "question")}:                  E poi le hai detto "Ma se facessi pagare per questa esperienza?"
+        {charTag(Franco, "neutral")}:                   E così ha aperto degli stabilimenti termali in una vecchia cucina.
+                                                        Ma nessuno ci è andato.
+                                                        Perché nessuna rana vuole davvero bollire.
+        {charTag(Franco, "party")}:                     E perché poi le rane odiano gli imprenditori.
+{
+    - are_two_entities_together(FirstCharacter, PG):
+        {charTag(FirstCharacter, "affectionate")}:      Allora sono una rana.
+        {charTag(Franco, "question")}:                  Ma sai nuotare?
+        {charTag(FirstCharacter, "sad")}:               No.
+        {charTag(Franco, "party")}:                     Allora sei una rana, sicuro!
+
+}
+
+        {charTag(Franco, "party")}:                     Ci vediamo in cucina!
+
+        ~ move_entity(Franco, Safekeeping)
+        ~ move_entity(FrancoCucina, Kitchen)
+        ~ kitchen_kitchenOccupied = true
+        //@animation:RewriterBook
+        -> main
