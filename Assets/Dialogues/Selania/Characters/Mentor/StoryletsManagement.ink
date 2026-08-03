@@ -111,10 +111,6 @@
     
     
     {
-    //Fine demo
-        - not ending_demo && LIST_COUNT(story_endedStories) == 2 && grimoire_thirdChar has grimThirdCharLetterEight:
-                -> ending_demo
-            
     //Commenti sui luoghi aperti
 
         //Sulla funzione della serra, disponibile solo se tutorial mentore == true

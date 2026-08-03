@@ -88,6 +88,10 @@
         //Missione speciale Franco chiusa
         - are_two_entities_together(Franco, PG) && entity_location(PG) == Nest && nest_francoChosenSigil != () && franco_assign_special_mission_one_contents:
             -> special_mission_one_closed 
+
+        //Fine demo
+        - not ending_demo && LIST_COUNT(story_endedStories) == 2 && grimoire_thirdChar has grimThirdCharLetterEight:
+                -> ending_demo    
 }  
 
 /*******************************************

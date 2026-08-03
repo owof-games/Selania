@@ -722,14 +722,11 @@
 //Fine della demo
     === ending_demo
 
-        {charTag(FifthCharacter, "neutral")}:                           Sembra che la demo sia finita qui, {player_name}.
+        {charTag(FifthCharacter, "neutral")}:                           Sembra che il prototipo sia finito qui, {player_name}.
                                                                         Potrai girare ancora per gli spazi aperti.
-                                                                        Continuare a leggere le storie della <b><i>biblioteca</b></i>.
-                                                                        Coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
-                                                                        Creare nuovi sigilli.
+                                                                        Se disponibili, potrai continuare a leggere le storie della <b><i>biblioteca</b></i>, coltivare cosa rimane da coltivare nella <b><i>serra</b></i> o creare nuovi sigilli nel <b><i>nido</i></b>. O ricevere nuove lettere.
                                                                         Ma non compariranno nuove persone bisognose.
-                                                                        Se te la senti, dopo aver chiuso l'esperienza potrai rispondere a qualche domanda su <i>Selanìa</i>.
-                                                                        E aggiungere in wishlist su Steam il gioco.
+                                                                        Se te la senti, dopo aver chiuso l'esperienza ti invito ad aggiungere in wishlist su Steam Selanìa.
                                                                         Un gesto semplice che aiuta i giochi indie a essere più visibili.
                                                                         Grazie di cuore, e buona vita.
                                                                         A presto!
