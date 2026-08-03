@@ -455,23 +455,23 @@
 
 
     - (top)
-    +   {charTag(PG, "neutral")}:                           Mi servirebbe un consiglio su {charNameOne}.
+    +   \ {charTag(PG, "neutral")}:                           Mi servirebbe un consiglio su {charNameOne}.
         -> franco_wants_to_give_you_a_gift_first_character
-    +   {charTag(PG, "neutral")}:                           Vorrei una mano con {charNameTwo}.
+    +   \ {charTag(PG, "neutral")}:                           Vorrei una mano con {charNameTwo}.
         -> franco_wants_to_give_you_a_gift_second_character
-    +   {charTag(PG, "neutral")}:                           Cosa potresti offrirmi per {charNameThree}?
+    +   {grimoire_thirdChar != ()} \ {charTag(PG, "neutral")}:                           Cosa potresti offrirmi per {charNameThree}?
         -> franco_wants_to_give_you_a_gift_third_character
-    +   {charTag(PG, "neutral")}:                           Apprezzerei un aiuto con {charNameFour}.
+    +   {grimoire_fourthChar != ()} \ {charTag(PG, "neutral")}:                           Apprezzerei un aiuto con {charNameFour}.
         -> franco_wants_to_give_you_a_gift_fourth_character
-    +   {charTag(PG, "neutral")}:                           Qualche dritta su {charNameFive}?
+    +   {grimoire_fifthChar has grimFifthCharOne} \ {charTag(PG, "neutral")}:                           Qualche dritta su {charNameFive}?
         -> franco_wants_to_give_you_a_gift_fifth_character
     +   {frog_recoverableCultivables && not frog_recoveredCultivables}  \ {charTag(PG, "neutral")}:         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
         {charTag(Franco, "party")}:                         Certo che craack!
                                                             Ma.
                                                             Lo posso fare solo una volta.
-        + + {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
+        + + \ {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
             -> franco_cultivable_recovery
-        + + {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
+        + + \ {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
             -> top
     +   {frog_recoveredSigil == () && glyph_usedSigils != ()}  \ {charTag(PG, "neutral")}:                  Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
         {charTag(Franco, "party")}:                         Certo che craack!
@@ -479,11 +479,11 @@
         {charTag(Franco, "neutral")}:                       Lo posso fare solo una volta.
                                                             E dandotene uno a caso.
         {charTag(Franco, "question")}:                      I sigilli sono più strani delle capre, e non so fare di meglio.
-        + + {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
+        + + \ {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
             -> franco_sigil_recovery
-        + + {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
+        + + \ {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
             -> top
-    +   {charTag(PG, "neutral")}:                           Vorrei pensarci ancora un po'.
+    +   \ {charTag(PG, "neutral")}:                           Vorrei pensarci ancora un po'.
         {charTag(Franco, "neutral")}:                       Mi trovi qui girino.
         { shuffle:
                                                           - Continuo a contare tutte le onde!
