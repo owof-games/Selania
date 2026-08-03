@@ -270,7 +270,7 @@
                 - witch_actualName == Fiamma:
                     ~ return "Fiamma"
                     
-                - witch_actualName == Parola
+                - witch_actualName == Parola:
                     ~ return "Parola"
         }
 
