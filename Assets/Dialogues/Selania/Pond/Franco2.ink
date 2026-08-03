@@ -325,7 +325,7 @@
 
 
 // get the available gifts for a character, even those that aren't yet available because the corresponding area is not open
-=== function _franco_available_potential_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+=== function _franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, achievableGifts, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     // a char whose story is not ongoing surely has no valid gifts
     {storyStatus != story_storyStarted:
@@ -333,7 +333,7 @@
     }
 
     // check which gifts we can potentially receive
-    ~ temp achievableGifts = (cultivableGift, ingredientGift, bookGift)
+    // ~ temp achievableGifts = (cultivableGift, ingredientGift, bookGift)
 
     // remove the gifts that are no longer needed
     {giftedObject:
@@ -357,23 +357,23 @@
 
     {character:
         - FirstCharacter:
-            ~ return _franco_available_potential_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, frog_firstCharAchievableGifts, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
         - SecondCharacter:
-            ~ return _franco_available_potential_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, frog_secondCharAchievableGifts, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
         - ThirdCharacter:
-            ~ return _franco_available_potential_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, frog_thirdCharAchievableGifts, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
         - FourthCharacter:
-            ~ return _franco_available_potential_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, frog_fourthCharAchievableGifts, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
         - FifthCharacter:
-            ~ return _franco_available_potential_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
+            ~ return _franco_available_potential_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, frog_fifthCharAchievableGifts, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
     }
 
 
 
 // get the available gifts for a character, excluding those that aren't yet available because the corresponding area is not open
-=== function _franco_available_gifts_for_char_internal(storyStatus, ref giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+=== function _franco_available_gifts_for_char_internal(storyStatus, giftedObject, achievableGifts, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
-    ~ temp potentialGifts = _franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, grimoireList, grimoireKitchenItem, grimoireNovelItem)
+    ~ temp potentialGifts = _franco_available_potential_gifts_for_char_internal(storyStatus, giftedObject, achievableGifts, grimoireList, grimoireKitchenItem, grimoireNovelItem)
 
     {player_accessiblePlaces hasnt Kitchen:
         ~ potentialGifts -= ingredientGift
@@ -392,15 +392,15 @@
 
     {character:
         - FirstCharacter:
-            ~ return _franco_available_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(firstChar_storyStatus, firstChar_giftedObject, frog_firstCharAchievableGifts, grimoire_firstChar, grimFirstCharKitchenEnded, grimFirstCharNovel)
         - SecondCharacter:
-            ~ return _franco_available_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(secondChar_storyStatus, secondChar_giftedObject, frog_secondCharAchievableGifts, grimoire_secondChar, grimSecondCharKitchenEnded, grimSecondCharNovel)
         - ThirdCharacter:
-            ~ return _franco_available_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(thirdChar_storyStatus, thirdChar_giftedObject, frog_thirdCharAchievableGifts, grimoire_thirdChar, grimThirdCharKitchenEnded, grimThirdCharNovel)
         - FourthCharacter:
-            ~ return _franco_available_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(fourthChar_storyStatus, fourthChar_giftedObject, frog_fourthCharAchievableGifts, grimoire_fourthChar, grimFourthCharKitchenEnded, grimFourthCharNovel)
         - FifthCharacter:
-            ~ return _franco_available_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
+            ~ return _franco_available_gifts_for_char_internal(fifthChar_storyStatus, fifthChar_giftedObject, frog_fifthCharAchievableGifts, grimoire_fifthChar, grimFifthCharKitchenEnded, grimFifthCharNovel)
     }
 
 
