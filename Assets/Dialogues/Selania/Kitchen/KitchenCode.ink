@@ -341,17 +341,25 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 === kitchen_moon_feedback ===
 //Assegnazione parlante
 {
-    - are_two_entities_together(FirstCharacter,PG) && entity_location(PG) == Kitchen:
+    - are_two_entities_together(FirstCharacterCucina,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = FirstCharacter
         ~ kitchen_actualChefPronouns = her
 
-    - are_two_entities_together(SecondCharacter,PG) && entity_location(PG) == Kitchen:
+    - are_two_entities_together(SecondCharacterCucina,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = SecondCharacter
         ~ kitchen_actualChefPronouns = him
 
-    - are_two_entities_together(ThirdCharacter,PG) && entity_location(PG) == Kitchen:
+    - are_two_entities_together(ThirdCharacterCucina,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = ThirdCharacter
         ~ kitchen_actualChefPronouns = him
+
+    - are_two_entities_together(FourthCharacterCucina,PG) && entity_location(PG) == Kitchen:
+        ~ kitchen_actualChef = FourthCharacter
+        ~ kitchen_actualChefPronouns = her
+
+    - are_two_entities_together(FifthCharacterCucina,PG) && entity_location(PG) == Kitchen:
+        ~ kitchen_actualChef = FifthCharacter
+        ~ kitchen_actualChefPronouns = her        
 
     - are_two_entities_together(FrancoCucina,PG) && entity_location(PG) == Kitchen:
         ~ kitchen_actualChef = Franco
