@@ -447,7 +447,7 @@
             - tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
             {charTag(Carla, "bored")}:          Abbiamo uno script da seguire, per cui non cambierò una virgola rispetto a prima.
             - else:
-            {charTag(Carla, "sad")}:            Mi è stato chiesto di spiegarle come funziona la serra.                                    
+            {charTag(Carla, "sad")}:            Mi è stato chiesto di spiegarle come funziona la serra.                         
             }
 
     

@@ -115,7 +115,7 @@
                   -  tutorial_MentorTutorial && grimoire_appendices has grimRewritingMentor:
                         ~ tutorialRewritingConditions = true
 
-                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialRereading:
+                  -  tutorial_CarlaTutorial && tutorial_CarlaDiscoveredTutorials has tutorialRereading:
                         ~ tutorialRewritingConditions = true
 
                   - tutorial_CarlaTutorial == false && tutorial_MentorTutorial == false:
@@ -187,7 +187,7 @@
                   -  tutorial_MentorTutorial && grimoire_appendices has grimInkMentor:
                         ~ tutorialConditions = true
 
-                  -  tutorial_CarlaTutorial && grimoire_appendices has tutorialGreenhouse:
+                  -  tutorial_CarlaTutorial && tutorial_CarlaDiscoveredTutorials has tutorialGreenhouse:
                         ~ tutorialConditions = true
 
                   - tutorial_CarlaTutorial == false && tutorial_MentorTutorial == false:
