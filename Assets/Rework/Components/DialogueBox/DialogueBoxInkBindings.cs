@@ -22,13 +22,6 @@ namespace Selania.Rework.Components.DialogueBox
         /// </summary>
         private readonly ReactiveProperty<string?> _lastSpeakingCharacter = new(null);
 
-        private string? _currentSpeakingCharacter;
-
-        /// <summary>
-        ///     The display name last used for the speaking character.
-        /// </summary>
-        private string? _lastSpeakingDisplayName;
-
         /// <summary>
         ///     Logger used by this component.
         /// </summary>
@@ -54,6 +47,13 @@ namespace Selania.Rework.Components.DialogueBox
 
         [Inject] internal IStorySigilSupport StorySigilSupport = null!;
 
+        private string? _currentSpeakingCharacter;
+
+        /// <summary>
+        ///     The display name last used for the speaking character.
+        /// </summary>
+        private string? _lastSpeakingDisplayName;
+
         private void Start()
         {
             /* INK => DIALOGUE BOX */
@@ -64,6 +64,12 @@ namespace Selania.Rework.Components.DialogueBox
 
             // update the text whenever it changes, and enrich it with sigil information
             parsedTextInfoObservable
+                .Where(textInfo => string.IsNullOrEmpty(textInfo.ActualText))
+                .Subscribe(OnEmptyTextLines)
+                .AddTo(this);
+
+            parsedTextInfoObservable
+                .Where(textInfo => !string.IsNullOrEmpty(textInfo.ActualText))
                 .CombineLatestWhenFirstChanged(
                     StorySigilSupport.ActiveSigilInfo.Do(info => Logger.ZLogTrace($"Active Sigil Info data received")),
                     StoryGamerMode.GamerMode.Do(info => Logger.ZLogTrace($"Gamer Mode data received")),
@@ -200,6 +206,13 @@ namespace Selania.Rework.Components.DialogueBox
                 out var actualText);
 
             return new ParsedText(character, displayName, mood, actualText);
+        }
+
+        private void OnEmptyTextLines(ParsedText _)
+        {
+            // if we receive an empty line, it means that we are in a case where text and choices got split into two because some text was conditionally removed
+            // for the user, this is still a single block, so skip to the choices immediately, without the need to advance over an (empty) text!
+            dialogueBox.ImmediatelyAddNextChoices();
         }
 
         /// <summary>
