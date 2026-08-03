@@ -459,17 +459,17 @@
 
 
     - (top)
-    +   \ {charTag(PG, "neutral")}:                           Mi servirebbe un consiglio su {charNameOne}.
+    +   {firstChar_storyStatus == story_storyStarted} \ {charTag(PG, "neutral")}:                                                                           Mi servirebbe un consiglio su {charNameOne}.
         -> franco_wants_to_give_you_a_gift_first_character
-    +   \ {charTag(PG, "neutral")}:                           Vorrei una mano con {charNameTwo}.
+    +   {secondChar_storyStatus == story_storyStarted} \ {charTag(PG, "neutral")}:                                                                          Vorrei una mano con {charNameTwo}.
         -> franco_wants_to_give_you_a_gift_second_character
-    +   {grimoire_thirdChar != ()} \ {charTag(PG, "neutral")}:                           Cosa potresti offrirmi per {charNameThree}?
+    +   {thirdChar_storyStatus == story_storyStarted && grimoire_thirdChar != ()} \ {charTag(PG, "neutral")}:                                               Cosa potresti offrirmi per {charNameThree}?
         -> franco_wants_to_give_you_a_gift_third_character
-    +   {grimoire_fourthChar != ()} \ {charTag(PG, "neutral")}:                           Apprezzerei un aiuto con {charNameFour}.
+    +   {fourthChar_storyStatus == story_storyStarted && grimoire_fourthChar != ()} \ {charTag(PG, "neutral")}:                                             Apprezzerei un aiuto con {charNameFour}.
         -> franco_wants_to_give_you_a_gift_fourth_character
-    +   {grimoire_fifthChar has grimFifthCharOne} \ {charTag(PG, "neutral")}:                           Qualche dritta su {charNameFive}?
+    +   {fifthChar_storyStatus == story_storyStarted && grimoire_fifthChar has grimFifthCharOne} \ {charTag(PG, "neutral")}:                                Qualche dritta su {charNameFive}?
         -> franco_wants_to_give_you_a_gift_fifth_character
-    +   {frog_recoverableCultivables && not frog_recoveredCultivables}  \ {charTag(PG, "neutral")}:         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
+    +   {frog_recoverableCultivables && not frog_recoveredCultivables}  \ {charTag(PG, "neutral")}:                                                         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
         {charTag(Franco, "party")}:                         Certo che craack!
                                                             Ma.
                                                             Lo posso fare solo una volta.
@@ -481,7 +481,7 @@
             -> franco_cultivable_recovery
         + + \ {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
             -> top
-    +   {frog_recoveredSigil == () && glyph_usedSigils != ()}  \ {charTag(PG, "neutral")}:                  Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
+    +   {frog_recoveredSigil == () && glyph_usedSigils != ()}  \ {charTag(PG, "neutral")}:                                                                  Puoi aiutarmi a recuperare un sigillo che ho già utilizzato?
         {charTag(Franco, "party")}:                         Certo che craack!
                                                             Ma.
         {charTag(Franco, "neutral")}:                       Lo posso fare solo una volta.
