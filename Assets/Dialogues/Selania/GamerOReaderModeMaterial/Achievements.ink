@@ -320,7 +320,7 @@ VAR achievements_goodReader = notActive
             ~ achievements_fullFranco = notDiscovered
         
         //Se le commissioni sono uguali alle massime, ho completato l'achievement.
-        - achievements_fullFranco_actualValue == LIST_COUNT(frog_allAvailableMissions) && frog_nameDiscovered == true:
+        - achievements_fullFranco_actualValue == LIST_COUNT(frog_allAvailableMissions):
             ~ achievements_fullFranco = Discovered
                 {
                     - achievements_fullFranco_notified == false:
@@ -331,7 +331,7 @@ VAR achievements_goodReader = notActive
                 }
 
         //Completamento maggiore di 0 ma minore di tutte quelle disponibili
-        - achievements_fullFranco_actualValue > 0:
+        - achievements_fullFranco_actualValue > 0 && frog_nameDiscovered == true:
             ~ achievements_fullFranco = inProgress
 
                       
