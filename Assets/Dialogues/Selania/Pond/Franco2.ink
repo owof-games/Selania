@@ -433,7 +433,11 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    {charTag(Franco, "party")}:                         Bene girino, direi che è il momento che Franco ti dia una zampa!
+    {
+        - frog_suspended_gift == false:
+        {charTag(Franco, "party")}:                         Bene girino, direi che è il momento che Franco ti dia una zampa!
+
+    } 
 
     // hint about gifts that cannot yet be given
     { franco_available_potential_gifts_for_char(FirstCharacter) && not franco_available_gifts_for_char(FirstCharacter):
@@ -666,6 +670,8 @@
         -> franco_pick_plant_gift(character, true) ->
     + {achievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
         -> book ->
+    +  \ {charTag(PG, "neutral")}: Ho cambiato idea.
+        -> franco_wants_to_give_you_a_gift.top    
     -
 
 -> franco_wants_to_give_you_a_gift_close_exchange
@@ -745,6 +751,7 @@
     // resetto lo stato per prepararmi alla nuova commissione (se presente)
     ~ frog_allMissionsCompleted += frog_currentMission
     ~ frog_availableCommonMissions -= frog_currentMission
+    ~ frog_availableSpecialMissions -= frog_currentMission
     ~ frog_updatedMissions -= frog_currentMission
     ~ frog_currentMission = ()
     ~ frog_suspended_gift = false
@@ -2081,11 +2088,33 @@
 === franco_assign_available_mission
 
     //Primo step: verifico se ci sono commissioni da togliere dalla lista perché non sono state raggiunte le condizioni per attivarle.
+    //Per non perdermi pezzi, metto anche le commissioni senza condizioni
 
+    //Commissioni senza condizioni
+    { frog_allMissionsCompleted hasnt missionOne:
+        ~ frog_availableCommonMissions += missionOne
+    }
+    { frog_allMissionsCompleted hasnt missionTwo:
+        ~ frog_availableCommonMissions += missionTwo
+    }
+    { frog_allMissionsCompleted hasnt missionThree:
+        ~ frog_availableCommonMissions += missionThree
+    }
+    { frog_allMissionsCompleted hasnt missionFour:
+        ~ frog_availableCommonMissions += missionFour
+    }
+    //Cinque è tra le speciali
+    { frog_allMissionsCompleted hasnt missionFive:
+        ~ frog_availableSpecialMissions += missionFive
+    }
+    
+    //Commissioni con condizioni
     //Commissione sei richiede invito strega a parlarle
     { frog_allMissionsCompleted hasnt missionSix && player_accessiblePlaces has Dump:
         {debug_frog: ci sono le condizioni per abilitare missionSix.}
         ~ frog_availableCommonMissions += missionSix
+    - else:
+        ~ frog_availableCommonMissions -= missionSix    
     }
 
 
@@ -2093,18 +2122,25 @@
     { frog_allMissionsCompleted hasnt missionSeven && (contentsTrainStop has DoggoFirstLetters) or (contentsTrainStop has DoggoSecondLetters) or (contentsTrainStop has DoggoThirdLetters):
         {debug_frog: ci sono le condizioni per abilitare missionSeven.}
             ~ frog_availableCommonMissions += missionSeven
+    - else:
+        ~ frog_availableCommonMissions -= missionSeven        
     }
 
     //Commissione otto richiede che la biblioteca sia aperta
     { frog_allMissionsCompleted hasnt missionEight && player_accessiblePlaces has Library:
         ~ frog_availableCommonMissions += missionEight
         {debug_frog: ci sono le condizioni per abilitare missionEight.}
+    - else:
+        ~ frog_availableCommonMissions -= missionEight    
     }
 
+    TODO: per ora la nove è sempre negativa, andrà poi sistemata quando capiamo come gestire la camera da letto
     //Commissione nove richiede che almeno una riscrittura sia stata conclusa, così che ci sia il ritratto in camera
     { frog_allMissionsCompleted hasnt missionNine && story_endedStories != ():
-        ~ frog_availableCommonMissions += missionNine
+        ~ frog_availableCommonMissions -= missionNine
         {debug_frog: ci sono le condizioni per abilitare missionNine.}
+    - else:
+        ~ frog_availableCommonMissions -= missionNine    
     }
 
     //Commissione dieci richiede che la cucina sia aperta
@@ -2112,18 +2148,24 @@
     { frog_allMissionsCompleted hasnt missionTen && player_accessiblePlaces has Kitchen && ( (grimoire_firstChar hasnt grimFirstCharKitchenEnded && story_endedStories hasnt story_firstCharStoryEnded) or (grimoire_secondChar hasnt grimSecondCharKitchenEnded && story_endedStories hasnt story_secondCharStoryEnded) or (grimoire_thirdChar hasnt grimThirdCharKitchenEnded && story_endedStories hasnt story_thirdCharStoryEnded) or (grimoire_fourthChar hasnt grimFourthCharKitchenEnded && story_endedStories hasnt story_fourthCharStoryEnded) or (grimoire_fifthChar hasnt grimFifthCharKitchenEnded && story_endedStories hasnt story_fifthCharStoryEnded)):
         ~ frog_availableCommonMissions += missionTen
         {debug_frog: ci sono le condizioni per abilitare missionTen.}
+    - else:
+        ~ frog_availableCommonMissions -= missionTen    
     }
 
     //Commissione speciale uno richiede l'apertura del nido e che sia stato creato almeno un sigillo. Strega all'inizio ce ne dona tre, per cui il conto è >3.
     { (frog_allMissionsCompleted hasnt specialMissionOne) && (player_accessiblePlaces has Nest) && (glyph_discoveredSigils != ()):
         ~ frog_availableSpecialMissions += specialMissionOne
         {debug_frog: ci sono le condizioni per abilitare specialMissionOne.}
+       - else:
+        ~ frog_availableSpecialMissions -= specialMissionOne 
     }
 
     //Commissione speciale due richiede l'apertura della cucina e che sia vuota.
     { frog_allMissionsCompleted hasnt specialMissionTwo && player_accessiblePlaces has Kitchen && kitchen_kitchenOccupied == false:
         ~ frog_availableSpecialMissions += specialMissionTwo
         {debug_frog: ci sono le condizioni per abilitare specialMissionTwo.}
+        - else:
+        ~ frog_availableSpecialMissions -= specialMissionTwo    
     }
 
 
