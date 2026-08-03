@@ -237,10 +237,27 @@ namespace Selania.Rework.Components
         {
             Logger.ZLogTrace($"Continuing the story.");
             var story = GetStory();
+            if (!story.canContinue)
+            {
+                Logger.ZLogError($"Requested to continue the story, but it's not possible!");
+                Logger.ZLogInformation($"Current text: {story.currentText}");
+                if (story.currentTags.Count > 0)
+                {
+                    Logger.ZLogInformation($"Tags:");
+                    foreach (var tag in story.currentTags) Logger.ZLogInformation($"    Tag: {tag}");
+                }
+
+                if (story.currentChoices.Count > 0)
+                {
+                    Logger.ZLogInformation($"Choices:");
+                    foreach (var choice in story.currentChoices) Logger.ZLogInformation($"    Choice: {choice.text}");
+                }
+            }
+
             do
             {
                 story.Continue();
-            } while (string.IsNullOrWhiteSpace(story.currentText) && story.currentChoices.Count == 0);
+            } while (string.IsNullOrWhiteSpace(story.currentText) && story.canContinue);
 
             LogAndNotifyCurrentState();
         }
@@ -573,7 +590,7 @@ namespace Selania.Rework.Components
             var actionsAfterUpdate = new ActionsAfterUpdate();
             var story = GetStory();
             var currentText = story.currentText.Trim();
-            if (currentText == "")
+            if (string.IsNullOrWhiteSpace(currentText) && story.canContinue)
             {
                 actionsAfterUpdate.@continue = true;
             }

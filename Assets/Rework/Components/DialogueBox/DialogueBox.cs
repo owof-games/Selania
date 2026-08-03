@@ -235,6 +235,23 @@ namespace Selania.Rework.Components.DialogueBox
             ScrollToBottom();
         }
 
+        /// <summary>
+        ///     Usually, when it's requested to add choices and some text is shown, the UI waits for an "advance" command before
+        ///     displaying the choices. In some corner cases for Ink, it's necessary to immediately show them (see
+        ///     DialogueBoxInkBindings).
+        /// </summary>
+        public void ImmediatelyAddNextChoices()
+        {
+            // just forget about the latest text line: this will allow choices to be immediately added.
+            Logger.ZLogTrace($"Asked to immediately add the next block of choices.");
+            _latestTextLine = null;
+
+            if (_actualAddChoices == null) return;
+            Logger.ZLogTrace($"And we already has some enqueued: showing them.");
+            _actualAddChoices();
+            _actualAddChoices = null;
+        }
+
         public void AddChoices(IList<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
         {
             // either immediately show the choices, or enqueue them, to be display at the next continue operation
