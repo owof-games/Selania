@@ -473,6 +473,10 @@
         {charTag(Franco, "party")}:                         Certo che craack!
                                                             Ma.
                                                             Lo posso fare solo una volta.
+                {greenhouse_findedCultivables has universalIngredient:
+                                                            E non posso recuperare {ingredientTranslator(universalIngredient)}.
+
+                }                                            
         + + \ {charTag(PG, "neutral")}:                       Ok, voglio usare ora questa occasione!
             -> franco_cultivable_recovery
         + + \ {charTag(PG, "neutral")}:                       Mmm, ci ragiono su.
