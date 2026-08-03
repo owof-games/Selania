@@ -64,6 +64,28 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] private TMP_Text sigilTitle = null!;
 
         /// <summary>
+        ///     The audio system used to play sound effects.
+        /// </summary>
+        [Inject] internal IAudioSystem AudioSystem = null!;
+
+        /// <summary>
+        ///     The logger used by this component.
+        /// </summary>
+        [Inject] internal ILogger<DialogueBox> Logger = null!;
+
+        /// <summary>
+        ///     The scope in which this object is created.
+        /// </summary>
+        [Inject] internal LifetimeScope Scope = null!;
+
+        /// <summary>
+        ///     Settings for the dialogue box.
+        /// </summary>
+        [Inject] internal ISettingsDialogueBox Settings = null!;
+
+        [Inject] internal ISettingsSigils SettingsSigils = null!;
+
+        /// <summary>
         ///     An action that has a value if we're waiting to add choices to the box. Calling the action will actually
         ///     add the choices.
         /// </summary>
@@ -88,28 +110,6 @@ namespace Selania.Rework.Components.DialogueBox
         ///     Whether the next portrait change will use portrait 1.
         /// </summary>
         private bool _willUsePortrait1 = true;
-
-        /// <summary>
-        ///     The audio system used to play sound effects.
-        /// </summary>
-        [Inject] internal IAudioSystem AudioSystem = null!;
-
-        /// <summary>
-        ///     The logger used by this component.
-        /// </summary>
-        [Inject] internal ILogger<DialogueBox> Logger = null!;
-
-        /// <summary>
-        ///     The scope in which this object is created.
-        /// </summary>
-        [Inject] internal LifetimeScope Scope = null!;
-
-        /// <summary>
-        ///     Settings for the dialogue box.
-        /// </summary>
-        [Inject] internal ISettingsDialogueBox Settings = null!;
-
-        [Inject] internal ISettingsSigils SettingsSigils = null!;
 
         /// <summary>
         ///     Invoked whenever an actual continue operation in the ink story must be performed.
@@ -235,7 +235,7 @@ namespace Selania.Rework.Components.DialogueBox
             ScrollToBottom();
         }
 
-        public void AddChoices(IEnumerable<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
+        public void AddChoices(IList<DialogueChoices.Choice> choices, Action<int> onChoiceSelected)
         {
             // either immediately show the choices, or enqueue them, to be display at the next continue operation
             if (_latestTextLine == null)
@@ -250,7 +250,7 @@ namespace Selania.Rework.Components.DialogueBox
             }
         }
 
-        private void ActualAddChoices(IEnumerable<DialogueChoices.Choice> choices,
+        private void ActualAddChoices(IList<DialogueChoices.Choice> choices,
             Action<int> onChoiceSelected)
         {
             Logger.ZLogTrace($"Actually adding choices");
@@ -267,9 +267,15 @@ namespace Selania.Rework.Components.DialogueBox
                     _inputActionsDialogueBox?.ChoicesSelectionMap.AddCallbacks(dialogueChoices);
                     _inputActionsDialogueBox?.ChoicesSelectionMap.Enable();
                     _inputActionsDialogueBox?.ContinueMap.Disable();
+                    dialogueChoices.ChoiceSelectingEvent += SelectingChoice;
                     dialogueChoices.ChoiceSelectedEvent += SelectChoice;
                     dialogueChoices.SetChoices(choices);
                     _latestTextLine = null;
+
+                    void SelectingChoice(DialogueChoices.ChoiceSelectingEventArgs args)
+                    {
+                        args.Valid = args.ChoiceNum < choices.Count;
+                    }
 
                     void SelectChoice(int index)
                     {

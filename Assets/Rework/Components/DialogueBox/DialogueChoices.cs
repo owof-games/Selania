@@ -50,6 +50,16 @@ namespace Selania.Rework.Components.DialogueBox
         [SerializeField] private TextMeshProUGUI textMeshProUGUI = null!;
 
         /// <summary>
+        ///     The logger for this object.
+        /// </summary>
+        [Inject] internal ILogger<DialogueChoices> Logger = null!;
+
+        /// <summary>
+        ///     The settings used to read the parameters for the choices.
+        /// </summary>
+        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
+
+        /// <summary>
         ///     The last set of choices given for the components (if any).
         /// </summary>
         private IList<Choice>? _choices;
@@ -70,16 +80,6 @@ namespace Selania.Rework.Components.DialogueBox
         ///     The last selected index (-1 = nothing selected).
         /// </summary>
         private int _selectedIndex = -1;
-
-        /// <summary>
-        ///     The logger for this object.
-        /// </summary>
-        [Inject] internal ILogger<DialogueChoices> Logger = null!;
-
-        /// <summary>
-        ///     The settings used to read the parameters for the choices.
-        /// </summary>
-        [Inject] internal ISettingsDialogueBox SettingsDialogueBox = null!;
 
         protected override void Awake()
         {
@@ -238,6 +238,11 @@ namespace Selania.Rework.Components.DialogueBox
         }
 
         /// <summary>
+        ///     Event raised before a choice is picked.
+        /// </summary>
+        public event Action<ChoiceSelectingEventArgs>? ChoiceSelectingEvent;
+
+        /// <summary>
         ///     Event raised when a choice is picked.
         /// </summary>
         public event Action<int>? ChoiceSelectedEvent;
@@ -374,8 +379,35 @@ namespace Selania.Rework.Components.DialogueBox
         private void ChoiceSelected(int index)
         {
             Logger.ZLogTrace($"Picked choice {index}");
+            var choiceSelectingEventArgs = new ChoiceSelectingEventArgs(index);
+            ChoiceSelectingEvent?.Invoke(choiceSelectingEventArgs);
+            if (!choiceSelectingEventArgs.Valid)
+            {
+                Logger.ZLogTrace($"Choice {index} was considered invalid.");
+                return;
+            }
+
             ChoiceSelectedEvent?.Invoke(index);
             Destroy(gameObject);
+        }
+
+        public class ChoiceSelectingEventArgs
+        {
+            /// <summary>
+            ///     Number of the choice.
+            /// </summary>
+            public readonly int ChoiceNum;
+
+            /// <summary>
+            ///     Whether this choice is valid. Set to <c>false</c> to skip <see cref="DialogueChoices.ChoiceSelectedEvent" /> and
+            ///     dialogue choices destruction.
+            /// </summary>
+            public bool Valid = true;
+
+            public ChoiceSelectingEventArgs(int choiceNum)
+            {
+                ChoiceNum = choiceNum;
+            }
         }
 
         /// <summary>
