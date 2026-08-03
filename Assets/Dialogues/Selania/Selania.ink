@@ -169,18 +169,19 @@
     
 //Pond
     //Vecchio materiale
-    INCLUDE Pond\Pond.ink
-    INCLUDE Pond\Franco.ink
-    INCLUDE Pond\FrancoStorylets.ink
-    INCLUDE Pond\FrancoStoryletsManagement.ink
-    INCLUDE Pond\FrancoOtherFunctions.ink
-    INCLUDE Pond\FrancoMissionsFunction.ink
-    INCLUDE Pond\FrancoGiftsFunctions.ink
-    INCLUDE Pond\FrancoNewMissionStorylets.ink
-    INCLUDE Pond\FrancoMissionUpdateStorylets.ink
-    INCLUDE Pond\FrancoGiftsManagement.ink
+    
+    INCLUDE Pond\FrancoOld\Franco.ink
+    INCLUDE Pond\FrancoOld\FrancoStorylets.ink
+    INCLUDE Pond\FrancoOld\FrancoStoryletsManagement.ink
+    INCLUDE Pond\FrancoOld\FrancoOtherFunctions.ink
+    INCLUDE Pond\FrancoOld\FrancoMissionsFunction.ink
+    INCLUDE Pond\FrancoOld\FrancoGiftsFunctions.ink
+    INCLUDE Pond\FrancoOld\FrancoNewMissionStorylets.ink
+    INCLUDE Pond\FrancoOld\FrancoMissionUpdateStorylets.ink
+    INCLUDE Pond\FrancoOld\FrancoGiftsManagement.ink
 
     //Nuovo materiale
+    INCLUDE Pond\Pond.ink
     INCLUDE Pond\Franco2.ink
     INCLUDE Pond\FrancoVarAndLists.ink
     INCLUDE Pond\FrancoSpecialMissionsStorylets.ink
