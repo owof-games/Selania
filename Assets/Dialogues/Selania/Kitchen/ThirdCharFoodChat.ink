@@ -1432,6 +1432,8 @@
 
             //Dopo di che associo la scelta fatta alla PNG
             ~ kitchen_thirdCharExtraIngredient = grimoire_chosenPlant
+            //E alle piante recuperabili da Franco
+            ~ frog_recoverableCultivables += grimoire_chosenPlant
             //E svuoto la variabile del grimorio
             ~ grimoire_chosenPlant = ()
             //E poi chiamo la funzione per aggiornare i valori

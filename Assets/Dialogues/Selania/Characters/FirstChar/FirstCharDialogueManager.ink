@@ -256,6 +256,8 @@
 
                     //Dopo di che associo la scelta fatta alla PNG
                     ~ firstChar_giftedObject = grimoire_chosenPlant
+                    //E alle piante recuperabili da Franco
+                    ~ frog_recoverableCultivables += grimoire_chosenPlant
                     //E svuoto la variabile del grimorio
                     ~ grimoire_chosenPlant = ()
 
