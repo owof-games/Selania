@@ -81,12 +81,10 @@
 
     - (top3)
             // ~ debug_Franco()
-    {charTag(Carla, "neutral")}:                                        Ma prima devo farle un paio di domande.
-                                                                        Quando arriverà la pensione?
-    {charTag(Carla, "bored")}:                                          Non risponda: è solo una domanda retorica.
-    {charTag(Carla, "neutral")}:                                        Piuttosto: che modalità di gioco vuole attivare?
-    {charTag(Carla, "happy")}:                                          La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
-    {charTag(Carla, "bored")}:                                          La modalità <b>Gamer Mode</b> è pensata per chi preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. L'esperienza è più facile rispetto al Reader Mode.
+    {charTag(Carla, "neutral")}:                                        Ma prima il Ministero prevede che le faccia fare due scelte.
+    {charTag(Carla, "neutral")}:                                        La prima: che modalità di esperienza vuole attivare?
+    {charTag(Carla, "happy")}:                                          La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa, perché dovrà comprendere le persone di questo luogo in autonomia.
+    {charTag(Carla, "bored")}:                                          La modalità <b>Gamer Mode</b> è pensata per chi invece preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. Il viaggio sarà più facile rispetto al Reader Mode, ma comunque con le sue complessità.
 
         //Aggiungere spiegazione delle due modalità per il testing
             + \ {charTag(PG, "neutral")}:                               <i>Voglio la modalità Gamer Mode.</i>
@@ -130,4 +128,5 @@
     {charTag(Carla, "sad")}:                                            Abbiamo finito.
     {charTag(Carla, "neutral")}:                                        Rispettando i protocolli del Ministero della Pubblica Umiliazione, le auguriamo un buon viaggio, e le ricordiamo che l'ufficio Lamentii e Lamentele è chiuso dal 1976.
 
+-> carla_closing_storylet ->
 -> main

@@ -143,9 +143,16 @@
 
         {       
                 
-                //Passaggio dalla camera al safekeeping dopo tutorial interazione
+                //Passaggio dalla camera al safekeeping/stazione dopo tutorial interazione
                 - entity_location(Carla) == Bedroom:
-                        ~ move_entity(Carla, Safekeeping)
+                        {
+                          - tutorial_CarlaTutorial == true:
+                          ~ move_entity(Carla, TrainStop)
+                          - else:
+                          ~ move_entity(Carla, Safekeeping)
+                        }
+
+                        
 
                 //Ritorno alla foresta se in giro per qualche motivo (es: dopo tutorial cucina)
                 - entity_location(Carla) != Forest:

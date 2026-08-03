@@ -10,5 +10,4 @@ VAR settings_gamerMode = false
 === function tutorial_CarlaTutorialActivation()
     //Attivo il tutorial
     ~ tutorial_CarlaTutorial = true
-    //Sposto Carla alla fermata del treno
-    ~ move_entity(Carla, TrainStop)
+    

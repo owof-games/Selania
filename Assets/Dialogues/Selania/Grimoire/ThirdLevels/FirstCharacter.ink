@@ -155,7 +155,7 @@
 
 
 === grimoire_first_character_present
-@grimoireText #style:character #icon:{translator(firstChar_ActualName)} #title:{translator(firstChar_ActualName)} #description:{grimoire_characterDescription(FirstCharacter)}
+@grimoireText #style:character #icon:{translator(firstChar_ActualName)} #title:{translator(firstChar_ActualName)} #description:{grimoire_characterDescription(FirstCharacter)} 
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
