@@ -712,7 +712,7 @@
 
     - else:
 
-        { shuffle once:
+        { shuffle:
                 -   {charTag(Franco, "party")}:                     Facciamo un bel duo noi due.
                                                                     Io il cervello, tu la mano.
                                                                     Hai tantissime dita comunque!
