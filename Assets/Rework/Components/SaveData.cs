@@ -43,6 +43,6 @@ namespace Selania.Rework.Components
         /// <summary>
         /// The list of changed pages still to be seen.
         /// </summary>
-        public required GrimoirePageIdentifierForSave[] changedGrimoirePageIdentifiers;
+        public required GrimoirePageIdentifierForSave[]? changedGrimoirePageIdentifiers;
     }
 }

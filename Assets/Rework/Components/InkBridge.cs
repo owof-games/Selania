@@ -801,7 +801,8 @@ namespace Selania.Rework.Components
 
                 // load the grimoire changed pages
                 _changedGrimoirePageIdentifiers.Clear();
-                foreach (var identifier in saveData.changedGrimoirePageIdentifiers)
+                foreach (var identifier in saveData.changedGrimoirePageIdentifiers ??
+                                           Array.Empty<GrimoirePageIdentifierForSave>())
                 {
                     _changedGrimoirePageIdentifiers.Add(identifier);
                 }
