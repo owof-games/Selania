@@ -34,7 +34,7 @@
     
     {
         - frog_first_novel != "" && grimoire_firstChar hasnt grimFirstCharNovel:
-            Il suo racconto preferito è {frog_first_novel}.
+            Il suo racconto preferito è <b>{frog_first_novel}</b>.
 
         -  grimoire_firstChar has grimFirstCharNovel:
             Il suo racconto preferito è <b>Luna vergine</b> di Aza.
@@ -99,7 +99,7 @@
     
     {
         - frog_second_novel != "" && grimoire_secondChar hasnt grimSecondCharNovel:
-            Il suo racconto preferito è {frog_second_novel}.
+            Il suo racconto preferito è <b>{frog_second_novel}</b>.
 
         -  grimoire_secondChar has grimSecondCharNovel:
             Il suo racconto preferito è <b>Luna vergine</b> di Aza.
@@ -165,7 +165,7 @@
     
     {
         - frog_third_novel != "" && grimoire_thirdChar hasnt grimThirdCharNovel:
-            Il suo racconto preferito è {frog_third_novel}.
+            Il suo racconto preferito è <b>{frog_third_novel}</b>.
 
         -  grimoire_thirdChar has grimThirdCharNovel:
             Il suo racconto preferito è <b>Luna vergine</b> di Aza.
@@ -229,7 +229,7 @@
     
     {
         - frog_fourth_novel != "" && grimoire_fourthChar hasnt grimFourthCharNovel:
-            Il suo racconto preferito è {frog_fourth_novel}.
+            Il suo racconto preferito è <b>{frog_fourth_novel}</b>.
 
         -  grimoire_fourthChar has grimFourthCharNovel:
             Il suo racconto preferito è <b>Luna vergine</b> di Aza.
@@ -294,7 +294,7 @@
     
     {
         - frog_fifth_novel != "" && grimoire_fifthChar hasnt grimFifthCharNovel:
-            Il suo racconto preferito è {frog_fifth_novel}.
+            Il suo racconto preferito è <b>{frog_fifth_novel}</b>.
 
         -  grimoire_fifthChar has grimFifthCharNovel:
             Il suo racconto preferito è <b>Luna vergine</b> di Aza.
