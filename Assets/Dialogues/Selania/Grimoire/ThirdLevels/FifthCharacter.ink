@@ -1,5 +1,5 @@
 === grimoire_fifth_character_conversation
-    @grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)}
+    @grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)} #content:conversation
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -247,7 +247,7 @@
 
 
 === grimoire_fifth_character_present
-@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)}
+@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)} #content:present
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -290,7 +290,7 @@
 
 
 === grimoire_fifth_character_kitchen
-@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)}
+@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)} #content:kitchen
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -375,7 +375,7 @@
 
 
 === grimoire_fifth_character_rewrite
-@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)}
+@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)} #content:rewrite
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -447,7 +447,7 @@
 
 
 === grimoire_fifth_character_letters
-@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)}
+@grimoireText #style:character #icon:{translator(fifthChar_ActualName)} #title:{translator(fifthChar_ActualName)} #description:{grimoire_characterDescription(FifthCharacter)} #content:letters
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

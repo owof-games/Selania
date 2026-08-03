@@ -1,5 +1,5 @@
 === grimoire_fourth_character_conversation
-    @grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)}
+    @grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)} #content:conversation
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -146,7 +146,7 @@
 
 
 === grimoire_fourth_character_present
-@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)}
+@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)} #content:present
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -190,7 +190,7 @@
 
 
 === grimoire_fourth_character_kitchen
-@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)}
+@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)} #content:kitchen
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -276,7 +276,7 @@
 
 
 === grimoire_fourth_character_rewrite
-@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)}
+@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)} #content:rewrite
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -349,7 +349,7 @@
 
 
 === grimoire_fourth_character_letters
-@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)}
+@grimoireText #style:character #icon:{translator(fourthChar_ActualName)} #title:{translator(fourthChar_ActualName)} #description:{grimoire_characterDescription(FourthCharacter)} #content:letters
 
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
