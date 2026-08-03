@@ -201,7 +201,7 @@ TODO: sbloccare dopo preparazione nuovo testing
         -> witch_about_appendices
 
     //Abilitazione/disabilitazione notifiche
-    - notification_notificationCounter >= notification_notificationCounterChoiceProposal && grimoire_witch hasnt grimWitchNotificationChoice:
+    - notification_notificationCounter >= notification_notificationCounterChoiceProposal && grimoire_witch hasnt grimWitchNotificationChoice && frog_nameDiscovered == true:
         -> witch_notification_choice
 
 }
