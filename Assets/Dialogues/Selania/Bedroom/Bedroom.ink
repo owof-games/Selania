@@ -81,8 +81,10 @@
 
     - (top3)
             // ~ debug_Franco()
-    {charTag(Carla, "neutral")}:                                        Il viaggio sta per iniziare.
-                                                                        Che modalità di gioco vuole attivare?
+    {charTag(Carla, "neutral")}:                                        Ma prima devo farle un paio di domande.
+                                                                        Quando arriverà la pensione?
+    {charTag(Carla, "bored")}:                                          Non risponda: è solo una domanda retorica.
+    {charTag(Carla, "neutral")}:                                        Piuttosto: che modalità di gioco vuole attivare?
     {charTag(Carla, "happy")}:                                          La modalità <b>Reader Mode</b> è pensata per chi vuole immergersi nella storia. Ci sono meno indicatori, meno numeri in evidenza, meno achievements. L'esperienza è più complessa.
     {charTag(Carla, "bored")}:                                          La modalità <b>Gamer Mode</b> è pensata per chi preferisce un approccio più logico, e vuole un'esperienza più esplicita e controllabile. L'esperienza è più facile rispetto al Reader Mode.
 
@@ -104,15 +106,25 @@
 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di Mentore.</i>
                     ~ tutorial_MentorTutorial = true
+                {charTag(Carla, "happy")}:                              Oh, finalmente una buona notizia.
+                                                                        Per me.
 
             + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di Carla.</i>
                     ~ tutorial_CarlaTutorialActivation()
+                {charTag(Carla, "bored")}:                              E quando pensavo che la giornata non poteva peggiorare...
+                                                                        Vabbè.          
     
             + \ {charTag(PG, "neutral")}:                               <i>Voglio l'aiuto di entrambe.</i>
                     ~ tutorial_CarlaTutorialActivation()
                     ~ tutorial_MentorTutorial = true
+                {charTag(Carla, "neutral")}:                            Andiamo sul sicuro, noto.
+                                                                        Speriamo sia qualcosa di facile e indolore.
+                {charTag(Carla, "bored")}:                              Per me.
+                {charTag(Carla, "happy")}:                              Per lei dubito seriamente.     
             
-            + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>                                                            
+            + \ {charTag(PG, "neutral")}:                               <i>Non voglio nessun aiuto.</i>
+                {charTag(Carla, "happy")}:                              Mi piace: con sicurezza e decisione verso il burrone!
+                                                                        Almeno mi faccio un riposino.                                                 
             -
                                                     
     {charTag(Carla, "sad")}:                                            Abbiamo finito.

@@ -301,9 +301,11 @@
 
     - (top2)    
     {charTag(Carla, "bored")}:                      Prenda appunti perché odio ripetermi.
-    {charTag(Carla, "neutral")}:                    Uno: può utilizzare mouse, tastiera e controller, e passare da uno strumento all'altro.
-                                                    Col mouse basta passare sopra le cose che deve toccare, e cliccare.
-                                                    Idem con il controller.
+    {charTag(Carla, "neutral")}:                    Uno: può utilizzare il mouse da solo, o con la tastiera.
+                                                    Basta passare sopra le cose che deve toccare col mouse, e cliccare.
+                                                    In futuro verrà implementato anche il controller.
+                                                    Da chi?
+                                                    Lo chieda all'ufficio Gorgoglii e Gargoyles.
 
         @sprite:tutorial_carlaInterfaceStorylets_1
 
