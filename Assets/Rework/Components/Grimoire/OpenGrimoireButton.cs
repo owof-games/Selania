@@ -16,6 +16,10 @@ namespace Selania.Rework.Components.Grimoire
 
         [SerializeField] private GrimoireNotification rootGrimoireNotification = null!;
 
+        [Inject] internal ILogger<OpenGrimoireButton> Logger = null!;
+
+        [Inject] internal IStoryGrimoire StoryGrimoire = null!;
+
         private Animator? _animator;
         private Button? _button;
 
@@ -23,10 +27,6 @@ namespace Selania.Rework.Components.Grimoire
         private bool _isGrimoireEnabled;
 
         private bool _isGrimoireOpened;
-
-        [Inject] internal ILogger<OpenGrimoireButton> Logger = null!;
-
-        [Inject] internal IStoryGrimoire StoryGrimoire = null!;
 
         private void Start()
         {
@@ -137,7 +137,6 @@ namespace Selania.Rework.Components.Grimoire
 
         private void OnGrimoireJustEnabled(Unit _)
         {
-            _grimoireHasNotifications = true;
             UpdateAnimationAndStatus();
         }
     }

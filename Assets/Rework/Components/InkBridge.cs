@@ -824,6 +824,10 @@ namespace Selania.Rework.Components
                     _changedGrimoirePageIdentifiers.Add(identifier);
                 }
 
+                _changedPageIdentifiersLoadedFromSaveFile = true;
+                CleanupNonExistingGrimoireNodes(BuildGrimoireTree());
+                NotifyIfGrimoireChanged();
+
                 // update timestamps
                 _minimumNextSaveTime = DateTime.UtcNow + _minimumTimeBetweenAutomaticSaves;
                 _currentSessionStartTime = DateTime.UtcNow;
@@ -840,6 +844,7 @@ namespace Selania.Rework.Components
                 _numPlayedSecondsAtTheBeginningOfCurrentSession = 0;
                 _currentSessionStartTime = DateTime.UtcNow;
                 _minimumNextSaveTime = DateTime.UtcNow; // will immediately produce a save file at the story start
+                _changedPageIdentifiersLoadedFromSaveFile = false;
                 Logger.ZLogInformation($"New story started.");
                 Continue();
             }
@@ -2505,6 +2510,8 @@ namespace Selania.Rework.Components
 
         #region grimoire changes
 
+        private bool _changedPageIdentifiersLoadedFromSaveFile;
+
         /// <summary>
         ///     The last result of the call to <see cref="BuildGrimoireTree" />, or <c>null</c> if no call to the method has been
         ///     invoked yet.
@@ -2525,28 +2532,34 @@ namespace Selania.Rework.Components
             // navigate the whole grimoire
             var currentGrimoireTree = BuildGrimoireTree();
 
-            // start with the assumption that nothing has changed (but don't clear _changedGrimoirePageIdentifiers
-            // because a page must be left as unseen until it's actually visited)
-            var changed = false;
-
-            // if there's no "previous" grimoire, all the nodes are new
-            if (_latestGrimoireTree == null)
+            // if there's no "previous" grimoire and this is a new save state, all the nodes are new
+            if (_latestGrimoireTree == null && !_changedPageIdentifiersLoadedFromSaveFile)
                 foreach (var id in currentGrimoireTree.IdentifierToContent.Keys)
                 {
                     _changedGrimoirePageIdentifiers.Add(id);
-                    changed = true;
                 }
-
-            // otherwise, we navigate the two trees in parallel and find the differences
-            else
-                changed = CompareGrimoireTrees(_latestGrimoireTree, currentGrimoireTree, _latestGrimoireTree.TreeRoot,
+            else if (_latestGrimoireTree != null)
+                CompareGrimoireTrees(_latestGrimoireTree, currentGrimoireTree, _latestGrimoireTree.TreeRoot,
                     currentGrimoireTree.TreeRoot, 0, new HashSet<GrimoirePageIdentifier>());
 
+            // clean potential identifiers that are no longer in the tree for any reason
+            CleanupNonExistingGrimoireNodes(currentGrimoireTree);
+
             // emit the changed event only if something actually changed
-            if (changed) _grimoireChanged!.OnNext(true);
+            NotifyIfGrimoireChanged();
 
             // remember what was the latest grimoire tree
             _latestGrimoireTree = currentGrimoireTree;
+        }
+
+        private void CleanupNonExistingGrimoireNodes(GrimoireTree currentGrimoireTree)
+        {
+            var numIdentifiers = _changedGrimoirePageIdentifiers.Count;
+            _changedGrimoirePageIdentifiers.RemoveWhere(id =>
+                !currentGrimoireTree.IdentifierToContent.ContainsKey(id));
+            if (_changedGrimoirePageIdentifiers.Count < numIdentifiers)
+                Logger.ZLogInformation(
+                    $"Removed {numIdentifiers - _changedGrimoirePageIdentifiers.Count} identifiers from the list");
         }
 
         private bool CompareGrimoireTrees(GrimoireTree previousTree, GrimoireTree currentTree,
@@ -2662,7 +2675,12 @@ namespace Selania.Rework.Components
         private void MarkAsSeen(GrimoirePageIdentifier identifier)
         {
             _changedGrimoirePageIdentifiers.Remove(identifier);
-            _grimoireChanged!.OnNext(_changedGrimoirePageIdentifiers.Count > 0);
+            NotifyIfGrimoireChanged();
+        }
+
+        private void NotifyIfGrimoireChanged()
+        {
+            _grimoireChanged?.OnNext(_changedGrimoirePageIdentifiers.Count > 0);
         }
 
         private Subject<bool>? _grimoireChanged;
@@ -2672,7 +2690,7 @@ namespace Selania.Rework.Components
         private void SetupGrimoireChanged()
         {
             _grimoireChanged = new Subject<bool>();
-            _grimoireChangedConnectableObservable = _grimoireChanged.DistinctUntilChanged().Replay(1);
+            _grimoireChangedConnectableObservable = _grimoireChanged.Prepend(false).DistinctUntilChanged().Replay(1);
             _grimoireChangedConnectableObservableConnection = _grimoireChangedConnectableObservable.Connect();
         }
 
