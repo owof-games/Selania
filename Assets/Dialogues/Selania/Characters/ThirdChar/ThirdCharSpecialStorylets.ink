@@ -197,7 +197,7 @@
             //Parte subito la spiegazione sui sigilli di Carla
             {
                 -  tutorial_CarlaTutorial == true:
-                    ~ move_entity(Carla, Library)
+                    ~ move_entity(Carla, Nest)
                     -> tutorial_carlaSigilsActivationStorylet
                 - else:
                     ->->
