@@ -240,7 +240,7 @@ namespace Selania.Rework.Components
             do
             {
                 story.Continue();
-            } while (string.IsNullOrWhiteSpace(story.currentText));
+            } while (string.IsNullOrWhiteSpace(story.currentText) && story.currentChoices.Count == 0);
 
             LogAndNotifyCurrentState();
         }
@@ -2717,12 +2717,12 @@ namespace Selania.Rework.Components
                         !linkToIdentifier.TryAdd(lastFollowed, identifier) &&
                         !linkToIdentifier[lastFollowed].Equals(identifier))
                         throw new InvalidOperationException(
-                            "Found the same link pointing to two different identifiers");
+                            $"Found the same link '{lastFollowed}' pointing to two different identifiers: '{identifier}' and '{linkToIdentifier[lastFollowed]}'");
 
                     if (!identifierToContent.TryAdd(identifier, content) &&
                         !identifierToContent[identifier].Equals(content))
                         throw new InvalidOperationException(
-                            "Found the same identifier with two different contents");
+                            $"Found the same identifier '{identifier}' with two different contents");
 
                     // check the first link we can follow that is a forward navigation, and we haven't visited yet
                     if (!visitedLinks.ContainsKey(identifier)) visitedLinks[identifier] = new List<GrimoireLink>();
@@ -2761,7 +2761,7 @@ namespace Selania.Rework.Components
             finally
             {
                 // revert back to the normal flow
-                Logger.ZLogTrace($"Grimoire navigation completed");
+                Logger.ZLogTrace($"Grimoire navigation completed, going back to flow {startingFlowName}");
                 story.SwitchFlow(startingFlowName);
             }
 
