@@ -127,7 +127,7 @@
                     -> name_choice -> support
             
             + \ {charTag(PG, "neutral")}:                                           Vorrei cambiare i miei pronomi.
-                    -> gender -> support
+                    -> gender.top -> support
             
             + \ {charTag(PG, "neutral")}:                                           A dire il vero sono a posto così.
                     -> helping_mentor.top

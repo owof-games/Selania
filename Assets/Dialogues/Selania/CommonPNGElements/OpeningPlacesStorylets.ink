@@ -19,7 +19,7 @@
 
     //Boccale dalla strega
         //Pausa dettata da png_commonPauseTalking, perché è un dialogo.
-        - grimoire_thirdChar hasnt grimWitchThirdChar && ((grimoire_thirdChar has grimThirdCharMentor) or (grimoire_thirdChar has grimFirstThirdChar) or (thirdChar_firstCharRage == true)) && witch_thirdCharSummoned == false && png_commonPauseTalking == false:
+        - grimoire_thirdChar hasnt grimWitchThirdChar && ((grimoire_thirdChar has grimThirdCharMentor) or (grimoire_thirdChar has grimFirstThirdChar) or (thirdChar_firstCharRage == true)) && witch_thirdCharSummoned == false && png_commonPauseTalking == false && entity_location(ThirdCharacter) != Nest:
         //Step uno: sposto Boccale al dump e tutti gli altri altrove
                     ~ move_entity(ThirdCharacter, Dump)
             {

@@ -20,7 +20,8 @@
         -> third_char_closing_storylet ->
         ~ opening_places()
         ~ move_entity(ThirdCharacter, Nest)
-
+        ~ thirdChar_LibraryInvite = true
+        ~ thirdChar_LibraryWaiting = chars_MaxOpenPlacesWaiting
     ->->    
 
     
