@@ -612,11 +612,14 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive= translator(fifthChar_ActualName)
 
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(FifthCharacter)
+
     ~ move_entity(CookingWithFifthCharOBJ, Kitchen)
     ~ move_entity(EatingWithFifthCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
-    ~ recipe_name_creator()
-    ~ recipe_name_storage(FifthCharacter)
+
+    
 
     {charTag(FifthCharacter, "neutral")}:       È stato divertente cucinare assieme, {player_name}.
 

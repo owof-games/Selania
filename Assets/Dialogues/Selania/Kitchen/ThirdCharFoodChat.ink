@@ -1460,11 +1460,13 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive= translator(fifthChar_ActualName)
 
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(ThirdCharacter)
+
     ~ move_entity(CookingWithThirdCharOBJ, Kitchen)
     ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
-    ~ recipe_name_creator()
-    ~ recipe_name_storage(ThirdCharacter)
+    
 
         {charTag(ThirdCharacter, "jester")}:                                        Non l'averei mai detto, ma è stato divertente cucinare assieme {player_name}.
         {charTag(ThirdCharacter, "bored")}:                                         A parte per la fine che ha fatto la mia insalata di patate.

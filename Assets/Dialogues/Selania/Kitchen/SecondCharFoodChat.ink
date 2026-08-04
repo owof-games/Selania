@@ -1209,12 +1209,15 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
+
+    ~ recipe_name_creator()
+    ~ recipe_name_storage(SecondCharacter)
+
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
 
-    ~ recipe_name_creator()
-    ~ recipe_name_storage(SecondCharacter)
+    
     
     {charTag(SecondCharacter, "emotional")}:                    Hai visto che pancia grande che ho ora?
                                                                 Grazie {player_name}, era buonissimo!
