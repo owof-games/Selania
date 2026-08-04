@@ -60,9 +60,9 @@ namespace Selania.Rework.Components.DialogueBox
 
             // parse the lines that arrive from ink
             var parsedTextInfoObservable =
-                StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo).Publish().RefCount();
+                StoryLinear.currentTextObservable.Select(ParseCurrentTextInfo).Replay(1).RefCount();
 
-            // update the text whenever it changes, and enrich it with sigil information
+            // update the text whenever it changes and enrich it with sigil information
             parsedTextInfoObservable
                 .Where(textInfo => string.IsNullOrEmpty(textInfo.ActualText))
                 .Subscribe(OnEmptyTextLines)
