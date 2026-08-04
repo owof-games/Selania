@@ -2758,7 +2758,7 @@ namespace Selania.Rework.Components
                     if (!identifierToContent.TryAdd(identifier, content) &&
                         !identifierToContent[identifier].Equals(content))
                         throw new InvalidOperationException(
-                            $"Found the same identifier '{identifier}' with two different contents");
+                            $"Found the same identifier '{identifier}' with two different contents:\n\nContent 1:\n{content}\n\nContent 2:\n{identifierToContent[identifier]}");
 
                     // check the first link we can follow that is a forward navigation, and we haven't visited yet
                     if (!visitedLinks.ContainsKey(identifier)) visitedLinks[identifier] = new List<GrimoireLink>();
@@ -3014,9 +3014,9 @@ namespace Selania.Rework.Components
             public override string ToString()
             {
                 var sb = new StringBuilder();
-                sb.Append("[GrimoirePageContent ");
+                sb.Append("[GrimoirePageContent '");
                 sb.Append(_text.Replace("\n", "\\n").Replace("\r", "\\r"));
-                sb.Append(" ----------------------- links: ");
+                sb.Append("' ----------------------- links: ");
                 foreach (var link in GrimoireLinks)
                 {
                     link.ToString(sb);
