@@ -1612,8 +1612,8 @@
 
 
         {charTag(Carla, "neutral")}:                                    Per ogni chiarimento richiesto da un minore, è necessaria la presenza di un adulto.
-        {charTag(SecondCharacter, "energy")}:                           Ecco ecco, ora c'è qui {player_name}!
-                                                                        E {player_name} è adult{player_pronoun has him:o|{player_pronoun has her:a|ə}}!
+        {charTag(SecondCharacter, "energy")}:                           Ecco ecco, ora c'è qui {grimoire_secondChar has grimSecondCharPresentation:{player_name}|questa persona}!
+                                                                        E {grimoire_secondChar has grimSecondCharPresentation:{player_name}|questa persona} è {grimoire_secondChar has grimSecondCharPresentation:adult{player_pronoun has him:o|{player_pronoun has her:a|ə}}|una adulta}!
                                                                         Quindi ora puoi rispondermi.
         {charTag(Carla, "neutral")}:                                    Mi ripeta la domanda.
         {charTag(SecondCharacter, "energy")}:                           È vero che le capre recitano?

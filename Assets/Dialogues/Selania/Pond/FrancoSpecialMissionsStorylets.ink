@@ -22,7 +22,7 @@
             ~ glyph_grimoireMainSigilsUpdater()
             //E svuoto glyph_actualActiveSigil
             ~ glyph_actualActiveSigil = ()
-            
+        {charTag(TheWitch, "{witch_state()}")}:     Abbiamo aggiunto qualche indicazione su {sigils_translator(nest_francoChosenSigil)}, ma in futuro {player_name} dovrà scoprirle in autonomia.
         {charTag(Franco, "party")}:                 Ora vado da Euforbo e glielo dono subito.
         {charTag(Franco, "question")}:	            Chissà se lo deve mangiare?
                                                     O metterlo in testa?

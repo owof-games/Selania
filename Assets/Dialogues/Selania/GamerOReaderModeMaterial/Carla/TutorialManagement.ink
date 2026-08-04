@@ -78,7 +78,7 @@ VAR tutorial_CarlaInkIndicator = ink_empty
         - tutorial_CarlaTutorial == true && entity_location(PG) == Kitchen && tutorial_CarlaDiscoveredTutorials hasnt tutorialKitchen && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaKitchenStorylet
 
-        - tutorial_CarlaTutorial == true && tutorial_CarlaDiscoveredTutorials has tutorialNest && tutorial_CarlaDiscoveredTutorials hasnt tutorialSigils && tutorial_CarlaTutorial == true:
+        - are_two_entities_together(PG, Carla) && tutorial_CarlaTutorial == true && tutorial_CarlaDiscoveredTutorials has tutorialNest && tutorial_CarlaDiscoveredTutorials hasnt tutorialSigils && tutorial_CarlaTutorial == true:
                 -> tutorial_carlaSigilsActivationStorylet
 
     }
