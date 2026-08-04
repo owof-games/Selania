@@ -34,7 +34,7 @@
 
                 {
                 - thirdChar_recordedPlayerPronoun != him:
-                {charTag(TheWitch, witch_state())}:                         <i>Avendo conosciuto {player_name} come {thirdChar_recordedPlayerPronoun == they: persona non binaria|donna}, {charNameThree} non è disposto ad approfondire altri temi cucinando con {player_name}.
+                {charTag(TheWitch, witch_state())}:                         <i>Avendo conosciuto {player_name} come {thirdChar_recordedPlayerPronoun == they: persona non binaria|donna}, {charNameThree} è disposto a parlare con {player_name} soltanto di lavoro.
 
                 - else:
                     {
@@ -1487,7 +1487,7 @@
             {charTag(ThirdCharacter, "neutral")}:                                   Però alla fine mi piace, spero si sia capito.                                                                                                                                                
 
             }
-        {charTag(ThirdCharacter, "neutral")}:                                       E poi questo {piatto}!
+        {charTag(ThirdCharacter, "neutral")}:                                       E con {piatto}, mi sono quasi commosso.
         {charTag(ThirdCharacter, "jester")}:                                        {charNameOne} non dovrà mai sapere che ho apprezzato qualcosa di vegano o giuro che ti meno, {player_name}!
         
             {

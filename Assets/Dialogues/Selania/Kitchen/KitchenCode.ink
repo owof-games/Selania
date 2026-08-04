@@ -54,7 +54,7 @@ LIST list_kitchen_comment_steps = oneKitchen, twoKitchen, threeKitchen, fourKitc
 === function recipe_name_creator()
 {debug_kitchen: passo per recipeNameCreator.}
 
-~  kitchen_tempRecipeName = "{kitchen_recipeNoun} della {kitchen_recipeAdjective} con {kitchen_recipeComplement} {kitchen_recipePP}"
+~  kitchen_tempRecipeName = "{kitchen_recipeNoun} della {kitchen_recipeAdjective} con {kitchen_recipeComplement}{ kitchen_recipePP}"
 
     {charTag(TheWitch, witch_state())}:   <i>La cucina si riempie del profumo di <b>{kitchen_tempRecipeName}</b>.</i>
   

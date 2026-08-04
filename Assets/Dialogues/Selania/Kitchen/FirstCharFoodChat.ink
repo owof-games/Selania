@@ -1229,8 +1229,8 @@
         {charTag(FirstCharacter, "affectionate")}:              Grazie mille, sei un tesoro.
 
     }
-    {charTag(FirstCharacter, "affectionate")}:                  E poi questo {piatto}!
-                                                                Spacca, non trovi?
+    {charTag(FirstCharacter, "affectionate")}:                  Nella bocca mi sento ancora il sapore di {piatto}!
+                                                                Ho adorato ama!
     
     {
         - kitchen_firstCharExtraIngredientReaction != notReaction:

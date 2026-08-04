@@ -1221,7 +1221,7 @@
     
     {charTag(SecondCharacter, "emotional")}:                    Hai visto che pancia grande che ho ora?
                                                                 Grazie {player_name}, era buonissimo!
-    {charTag(SecondCharacter, "energy")}:                       E poi questo {piatto} sembra una cosa da cinema.
+    {charTag(SecondCharacter, "energy")}:                       E poi {piatto}: una cosa da cinema!
     {
         - firstChar_storyStatus == story_storyStarted:
             {charTag(SecondCharacter, "emotional")}:            Secondo me a {charNameOne} le sarebbe piaciuto TAN-TIS-SI-MO!
@@ -1350,7 +1350,7 @@
         {charTag(SecondCharacter, "emotional")}:                Mi sa che sono davvero pieno.
         {charTag(SecondCharacter, "neutral")}:                  Abbiamo parlato tanto, vero, qui?
                                                                 Non abbiamo mai passato così tanto tempo assieme.
-                                                                E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
+                                                                E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi {firstChar_storyStatus == story_storyStarted:dice|diceva}: vuoi fare amicizia con {player_name}?
         //Prima di tutto chiamo la funzione per il calcolo dello stato della relazione
         ~ affinity_calc(SecondCharacter)
         //Così poi posso dare il feedback
