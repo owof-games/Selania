@@ -114,13 +114,13 @@
         - thirdCharDiscrepancy && grimoire_franco hasnt grimFrancoThirdIngredientFailure:
             -> franco_special_storylets_third_ingredient_failure ->
 
-        - not franco_special_storylets_open_kitchen && player_accessiblePlaces has Kitchen:
+        - not franco_special_storylets_open_kitchen && grimoire_firstChar has grimFirstOpenKitchen:
             -> franco_special_storylets_open_kitchen ->
 
-        - not franco_special_storylets_open_library && player_accessiblePlaces has Library:
+        - not franco_special_storylets_open_library && grimoire_secondChar has grimSecondOpenLibrary:
             -> franco_special_storylets_open_library ->
 
-        - not franco_special_storylets_open_nest && player_accessiblePlaces has Nest:
+        - not franco_special_storylets_open_nest && grimoire_thirdChar has grimThirdOpenNest:
             -> franco_special_storylets_open_nest ->
 
         - are_two_entities_together(PG, Franco) && achievements_fullLore ==  Discovered && grimoire_franco hasnt grimFrancoAllDocuments:
