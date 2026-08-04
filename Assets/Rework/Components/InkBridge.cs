@@ -1564,7 +1564,7 @@ namespace Selania.Rework.Components
             {
                 case > 1:
                     Logger.ZLogWarning(
-                        $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil}");
+                        $"Ink variable {currentSigilVariableName} should have at most one value, but it has {currentSigil.Count}: {currentSigil.ToString()}");
                     break;
                 case 1:
                 {
