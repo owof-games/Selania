@@ -313,7 +313,12 @@ VAR achievements_goodReader = notActive
     }
 
 //Achievement Franco.
+//Lo aggiorniamo solo quando gli abbiamo parlato.
+{
+- frog_nameDiscovered == true:
 ~  achievements_fullFranco_actualValue = LIST_COUNT(frog_updatedMissions + frog_allMissionsCompleted)
+}
+
     {
         //Completamento a zero, non parto
         - achievements_fullFranco_actualValue == 0:
