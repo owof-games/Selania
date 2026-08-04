@@ -180,13 +180,13 @@
 
     {
         - secondChar_favouritesGifts has secondChar_giftedObject:
-            {player_name} le ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed era entusiasta!
+            {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed era entusiasta!
         
         - secondChar_goodGifts has secondChar_giftedObject:
-            {player_name} le ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
+            {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> ed ha abbastanza apprezzato.
         
         - else:
-            {player_name} le ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
+            {player_name} gli ha donato <b><i>{ingredientTranslator(secondChar_giftedObject)}</b></i> e non ha apprezzato per nulla.
     
     }
         
