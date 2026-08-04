@@ -28,10 +28,6 @@
         }
 
 
-{debug_testing && grimoire_isEnabled:
-<- grimoire
-}
-
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
@@ -106,5 +102,19 @@
 //Impostazioni
 <- settings_management
 
+// Grimoire per testing
+<- grimoire_in_main
+
 
 + -> main
+
+
+
+= grimoire_in_main
+
++ {debug_testing && grimoire_isEnabled} Grimoire
+    Sei nel grimorio.
+    // {debug_testing && grimoire_isEnabled:
+    <- grimoire
+    // }
+    ++ -> main
