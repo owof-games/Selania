@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TaloGameServices;
 using UnityEngine;
+
+// using TaloGameServices;
 
 /// <summary>
 ///     The Analytics manager performs the following tracking.
@@ -13,6 +14,11 @@ using UnityEngine;
 /// </summary>
 public class AnalyticsManager : MonoBehaviour
 {
+    /// <summary>
+    ///     This variable is considered only at Start() time, after that it's ignored.
+    /// </summary>
+    public static bool IsEnabled;
+
     [Tooltip("The dialogue manager from which we read the changes we're interested in")] [SerializeField]
     private DialogueManagerSingleInk dialogueManager;
 
@@ -52,11 +58,6 @@ public class AnalyticsManager : MonoBehaviour
     /// </summary>
     private Dictionary<string, ColorVariable> variableNameToColor;
 
-    /// <summary>
-    ///     This variable is considered only at Start() time, after that it's ignored.
-    /// </summary>
-    public static bool IsEnabled;
-
     private async void Start()
     {
         if (!IsEnabled)
@@ -64,7 +65,7 @@ public class AnalyticsManager : MonoBehaviour
             Debug.Log("Talo has been disabled");
             return;
         }
-        
+
         try
         {
             Debug.Log("Starting first phase of analytics manager initialization.", this);
@@ -79,13 +80,14 @@ public class AnalyticsManager : MonoBehaviour
             // initialize talo by identifying the player in a unique way
             var playerId = PlayerPrefs.GetString("talo-id", Guid.NewGuid().ToString());
             var id = Guid.NewGuid().ToString();
-            await Talo.Players.Identify("custom", id);
-            await Talo.CurrentPlayer.SetProp("player_id", playerId);
+            // await Talo.Players.Identify("custom", id);
+            // await Talo.CurrentPlayer.SetProp("player_id", playerId);
             PlayerPrefs.SetString("talo-id", playerId);
             Debug.Log($"Talo initialized; user id is {playerId}, session id is {id}", this);
 
             // save the internal name of all the stats we can use
-            availableStats = (await Talo.Stats.GetStats()).Select(stat => stat.internalName).ToArray();
+            availableStats = new string[]
+                { }; // (await Talo.Stats.GetStats()).Select(stat => stat.internalName).ToArray();
             Debug.Log("Talo available stats: " + string.Join(", ", availableStats), this);
 
             // map variable names to their color variable (used when we receive a variable change info, to know the color
@@ -207,7 +209,7 @@ public class AnalyticsManager : MonoBehaviour
                 await UpdatePlayerPropForVariable(extraTrackedVariable, true);
 
             // send the updates in block
-            await Talo.Players.Update();
+            // await Talo.Players.Update();
 
             Debug.Log("Second phase of analytics manager initialization completed.", this);
         }
@@ -265,8 +267,8 @@ public class AnalyticsManager : MonoBehaviour
             await UpdateTaloForColorChange(colorVariable.color);
 
             // send an event about the variable change.
-            await Talo.Events.Track("variable_changed", ("type", "color"), ("name", variableName),
-                ("newValue", newValue.ToString()));
+            // await Talo.Events.Track("variable_changed", ("type", "color"), ("name", variableName),
+            //     ("newValue", newValue.ToString()));
 
             // update the choice player props and send events
             if (lastLineWithChoices == null)
@@ -275,12 +277,12 @@ public class AnalyticsManager : MonoBehaviour
                 return;
             }
 
-            await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_text",
-                lastLineWithChoices.CurrentText, false);
-            await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_color",
-                colorVariable.color, false);
-            await Talo.Events.Track("color_choice_taken", ("path", lastLineWithChoices.PreviousPathString),
-                ("text", lastLineWithChoices.CurrentText), ("color", colorVariable.color));
+            // await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_text",
+            //     lastLineWithChoices.CurrentText, false);
+            // await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_color",
+            //     colorVariable.color, false);
+            // await Talo.Events.Track("color_choice_taken", ("path", lastLineWithChoices.PreviousPathString),
+            //     ("text", lastLineWithChoices.CurrentText), ("color", colorVariable.color));
         }
         catch (Exception e)
         {
@@ -305,8 +307,8 @@ public class AnalyticsManager : MonoBehaviour
                 await using var taloPlayersUpdateContext = new TaloPlayersUpdateContext();
 
                 // send an event about the variable change.
-                await Talo.Events.Track("variable_changed", ("type", "extra"), ("name", variableName),
-                    ("newValue", newValue.ToString()));
+                // await Talo.Events.Track("variable_changed", ("type", "extra"), ("name", variableName),
+                //     ("newValue", newValue.ToString()));
 
                 // update the player props
                 await UpdatePlayerPropForVariable(variableName);
@@ -360,7 +362,7 @@ public class AnalyticsManager : MonoBehaviour
         if (availableStats.Contains(statName))
         {
             var delta = newValue - oldValue;
-            if (delta > 0) await Talo.Stats.Track(statName, delta);
+            // if (delta > 0) await Talo.Stats.Track(statName, delta);
         }
         else
         {
@@ -386,12 +388,12 @@ public class AnalyticsManager : MonoBehaviour
         lastObservedVariableValue[variableName] = newValue;
 
         // update player's property and stat
-        if (forceUpdate || oldValue != newValue)
-            await Talo.CurrentPlayer.SetProp(
-                $"variable_{variableName}",
-                FormatForTaloPlayerProp(newValue),
-                false
-            );
+        // if (forceUpdate || oldValue != newValue)
+        //     await Talo.CurrentPlayer.SetProp(
+        //         $"variable_{variableName}",
+        //         FormatForTaloPlayerProp(newValue),
+        //         false
+        //     );
 
         return (oldValue, newValue);
     }
@@ -412,15 +414,15 @@ public class AnalyticsManager : MonoBehaviour
         // check the previous value and update it
         if (!lastComputedColorValue.ContainsKey(color))
         {
-            var stat = await Talo.Stats.FindPlayerStat(statName);
-            lastComputedColorValue[color] = (int)stat.value;
+            // var stat = await Talo.Stats.FindPlayerStat(statName);
+            // lastComputedColorValue[color] = (int)stat.value;
         }
 
         var oldValue = lastComputedColorValue[color];
         lastComputedColorValue[color] = totalColor;
 
         // update Talo prop
-        await Talo.CurrentPlayer.SetProp($"color_{color}", FormatForTaloPlayerProp(totalColor), false);
+        // await Talo.CurrentPlayer.SetProp($"color_{color}", FormatForTaloPlayerProp(totalColor), false);
 
         // update Talo stat
         await UpdateTaloStat(statName, oldValue, totalColor);
@@ -452,7 +454,7 @@ public class AnalyticsManager : MonoBehaviour
         public async ValueTask DisposeAsync()
         {
             if (!_changed) return;
-            await Talo.Players.Update();
+            // await Talo.Players.Update();
         }
 
         public void Changed()
