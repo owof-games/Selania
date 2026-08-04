@@ -166,11 +166,18 @@
     {charTag(Franco, "party")}:                     Insomma: tu aiuti me, e io aiuto te.
                                                     Ad esempio dandoti dei consigli sulle cose da donare a una persona.
     {charTag(Franco, "neutral")}:                   O recuperando una pianta che hai già usato.
+
     { are_two_entities_together(FirstCharacter, PG):
         {charTag(FirstCharacter, "affectionate")}:  Livello di confusione: sì.
     }
     { are_two_entities_together(ThirdCharacter, PG):
         {charTag(ThirdCharacter, "jester")}:        Rana: mi sento ubriaco e non ho manco bevuto!
+    }
+
+    {frog_updatedMissions != ():
+    {charTag(Franco, "party")}:                     Ma ranocchio!
+                                                    Tu hai già iniziato a fare le mie commissioni senza che ti dicessi nulla.
+                                                    Se telemimetico!
     }
 
     ~ grimoire_franco += grimFrancoFirst
@@ -435,27 +442,24 @@
 
     {
         - frog_suspended_gift == false:
-        {charTag(Franco, "party")}:                         Bene girino, direi che è il momento che Franco ti dia una zampa!
+        {charTag(Franco, "party")}:                         Cosa può fare Franco per te?
 
     } 
 
     // hint about gifts that cannot yet be given
     { franco_available_potential_gifts_for_char(FirstCharacter) && not franco_available_gifts_for_char(FirstCharacter):
-        {charTag(Franco, "neutral")}:                   Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco!
+        {charTag(Franco, "neutral")}:                       Ti dico che per ora non ho consigli utili su {charNameOne}, ma mi sto attivando per aiutarti, parola di Franco!
     }
 
     { franco_available_potential_gifts_for_char(SecondCharacter) && not franco_available_gifts_for_char(SecondCharacter):
-        {charTag(Franco, "neutral")}:                   Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
+        {charTag(Franco, "neutral")}:                       Non ho dritte su {charNameTwo}, solo rovesci, ma se torni più avanti sono sicuro che qualcosa di nuovo te lo posso dare.
     }
 
     { franco_available_potential_gifts_for_char(ThirdCharacter) && not franco_available_gifts_for_char(ThirdCharacter):
-        {charTag(Franco, "neutral")}:                   Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
-        {charTag(Franco, "question")}:                  O smistare?
+        {charTag(Franco, "neutral")}:                       Ci sono cose di {charNameThree} che per ora mi sono un mistero misterioso, ma se torni più tardi te le posso smisterare.
+        {charTag(Franco, "question")}:                      O smistare?
     }
     // non serve fare la stessa cosa per Mostro e Nonna, perché a questo punto tutti i luoghi sono aperti.
-
-    // let the player choose which gifts they want (or if they don't want it yet)
-                                                            Come vuoi che ti aiuti?
 
 
     - (top)
