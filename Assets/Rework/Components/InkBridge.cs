@@ -807,6 +807,7 @@ namespace Selania.Rework.Components
                 var jsonPath = GetInkStoryStateFileAbsolutePath(descriptor);
                 var json = await File.ReadAllTextAsync(jsonPath);
                 story.state.LoadJson(json);
+                DisableDebugVariables();
 
                 // load the rest of the save state
                 var savePath = GetSaveFileAbsolutePath(descriptor);
