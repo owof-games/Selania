@@ -2727,6 +2727,7 @@ namespace Selania.Rework.Components
             Dictionary<(GrimoirePageIdentifier, GrimoireLink), GrimoirePageIdentifier> linkToIdentifier = new();
             (GrimoirePageIdentifier, GrimoireLink)? lastFollowedLinkFromIdentifier = null;
             GrimoirePageIdentifier? root = null;
+            Stack<(GrimoirePageIdentifier, GrimoireLink)> visitStack = new();
 
             // get the story
             var story = GetStory();
@@ -2745,9 +2746,9 @@ namespace Selania.Rework.Components
 
                     // get out identifier and content of this node
                     var identifier = GetIdentifier();
-                    var content = GetContent();
+                    var content = GetContent(visitStack.ToArray());
                     Logger.ZLogTrace($"Visiting {identifier}");
-                    // store the root and the correspondences identifier => content and link => identifier, with some runtime checks
+                    // store the root if not done yet, and the correspondences "identifier to content" and "link to identifier", with some runtime checks
                     root ??= identifier;
                     if (lastFollowedLinkFromIdentifier is (not null, not null) lastFollowed &&
                         !linkToIdentifier.TryAdd(lastFollowed, identifier) &&
@@ -2773,23 +2774,25 @@ namespace Selania.Rework.Components
                     {
                         Logger.ZLogTrace($"Found a forward link: {forwardLink}");
                         lastFollowedLinkFromIdentifier = (identifier, forwardLink);
+                        visitStack.Push(lastFollowedLinkFromIdentifier.Value);
                         currentVisitedLinks.Add(forwardLink);
                         story.ChooseChoiceIndex(forwardLink.ChoiceIndex);
                         continue;
                     }
 
-                    // otherwise, try to find a back link
+                    // otherwise, try to find a backlink
                     var backLink =
                         content.GrimoireLinks.FirstOrDefault(link => link.NavigationKind == NavigationKind.Back);
                     if (backLink != null)
                     {
+                        visitStack.Pop();
                         Logger.ZLogTrace($"No more forward links, backtracking: {backLink}");
                         lastFollowedLinkFromIdentifier = null;
                         story.ChooseChoiceIndex(backLink.ChoiceIndex);
                         continue;
                     }
 
-                    // otherwise, we got back to root and we have nothing more to visit!
+                    // otherwise, we got back to root, and we have nothing more to visit!
                     Logger.ZLogTrace($"No more forward links nor back links: stopping.");
                     break;
                 }
@@ -2831,7 +2834,7 @@ namespace Selania.Rework.Components
                 return GetCurrentGrimoirePageIdentifier(story);
             }
 
-            GrimoirePageContent GetContent()
+            GrimoirePageContent GetContent(IList<(GrimoirePageIdentifier, GrimoireLink)> froms)
             {
                 StringBuilder sb = new();
                 while (story.canContinue)
@@ -2865,6 +2868,10 @@ namespace Selania.Rework.Components
                     // back, since it just complicates the topology without any additional benefit
                     if (index == indexChoice?.index && index != backChoiceIndex) continue;
 
+                    // some links cause side effects or whatnot (e.g.: sigil selection). don't visit those links, because
+                    // we're just considering the visualization
+                    if (tags.Contains("grimoire-traversal:dont-visit")) continue;
+
                     // sort and don't consider navigation tags for identity
                     var nonBookmarkTags = (
                         from tag in tags
@@ -2886,7 +2893,7 @@ namespace Selania.Rework.Components
                     links.Add(grimoireLink);
                 }
 
-                return new GrimoirePageContent(sb.ToString(), links.ToArray());
+                return new GrimoirePageContent(sb.ToString(), links.ToArray(), froms);
             }
         }
 
@@ -2944,7 +2951,11 @@ namespace Selania.Rework.Components
 
             public override string ToString()
             {
-                var sb = new StringBuilder();
+                return ToString(new StringBuilder());
+            }
+
+            public string ToString(StringBuilder sb)
+            {
                 sb.Append("[GrimoirePageIdentifier ");
                 sb.Append(_name);
                 foreach (var tag in _tags)
@@ -2959,7 +2970,7 @@ namespace Selania.Rework.Components
 
             public static implicit operator GrimoirePageIdentifierForSave(GrimoirePageIdentifier grimoirePageIdentifier)
             {
-                return new GrimoirePageIdentifierForSave()
+                return new GrimoirePageIdentifierForSave
                 {
                     name = grimoirePageIdentifier._name,
                     tags = grimoirePageIdentifier._tags.ToArray()
@@ -2979,6 +2990,7 @@ namespace Selania.Rework.Components
         /// </summary>
         private class GrimoirePageContent
         {
+            private readonly IList<(GrimoirePageIdentifier, GrimoireLink)> _froms;
             private readonly string _text;
 
             /// <summary>
@@ -2986,8 +2998,10 @@ namespace Selania.Rework.Components
             /// </summary>
             /// <param name="text">The text of the pages, excluding the first line.</param>
             /// <param name="grimoireLinks">The links from this content to other nodes</param>
-            public GrimoirePageContent(string text, GrimoireLink[] grimoireLinks)
+            public GrimoirePageContent(string text, GrimoireLink[] grimoireLinks,
+                IList<(GrimoirePageIdentifier, GrimoireLink)> froms)
             {
+                _froms = froms;
                 _text = text;
                 GrimoireLinks = grimoireLinks;
             }
@@ -3023,7 +3037,16 @@ namespace Selania.Rework.Components
                     sb.Append(", ");
                 }
 
-                sb.Append("and nothing more]");
+                sb.Append("and nothing more ----------------------- path: ");
+                foreach (var f in _froms.Reverse())
+                {
+                    f.Item1.ToString(sb);
+                    sb.Append(" --{");
+                    f.Item2.ToString(sb);
+                    sb.Append("}-> ");
+                }
+
+                sb.Append(']');
                 return sb.ToString();
             }
         }
