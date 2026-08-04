@@ -61,7 +61,7 @@
                 ~ return ""
 
             - thirdChar_ActualName has Boccale:
-                ~ return "frase"
+                ~ return "Schiuma in superficie, depositi sul fondo"
 
             - thirdChar_ActualName has Orso:
                 ~ return "frase"
