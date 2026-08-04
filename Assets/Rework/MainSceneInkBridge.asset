@@ -22,6 +22,7 @@ MonoBehaviour:
   - debug_nest
   - debug_frog
   - debug_stochastic
+  - debug_testing
   pgListName: listCharactersAndVariations
   pgListItemName: PG
   roomListPrefix: contents
