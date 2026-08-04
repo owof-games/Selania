@@ -74,7 +74,7 @@
     
     {
         - grimoire_fifthChar has grimMentorFranco:
-            {charNameFive} e Franco La Rana hanno discusso. E quando {charNameFive} si è allontanata, Franco ha aggiunto di non ricordare l'esistenza di alcun mentore da queste parti.
+            {charNameFive} e {frog_nameDiscovered:Franco La Rana|una rana} hanno discusso. E quando {charNameFive} si è allontanata, {frog_nameDiscovered:Franco|la rana} ha aggiunto di non ricordare l'esistenza di alcun mentore da queste parti.
     }
 
     {

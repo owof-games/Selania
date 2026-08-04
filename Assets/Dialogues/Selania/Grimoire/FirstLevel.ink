@@ -7,15 +7,15 @@
             -> grimoire_firstCharacter
 
         //Apertura: dopo il primo dialogo, o dopo il primo dialogo comune con Chitarra o Boccale
-        + {grimoire_secondChar has grimSecondCharOne or grimoire_secondChar has grimFirstSecondChar or grimoire_secondChar has grimSecondThirdChar}[SecondCharacter]
+        + {grimoire_secondChar has grimSecondCharOne}[SecondCharacter]
             -> grimoire_secondCharacter
 
         //Apertura: dopo il primo dialogo, o dopo il primo dialogo comune con Riccio o Franco
-        + {grimoire_thirdChar has grimThirdCharOne or grimoire_thirdChar has grimThirdCharFranco or grimoire_thirdChar has grimSecondThirdChar}[ThirdCharacter]
+        + {grimoire_thirdChar has grimThirdCharOne}[ThirdCharacter]
             -> grimoire_thirdCharacter
 
         //Apertura??
-        + {grimoire_fourthChar != ()}[FourthCharacter]
+        + {grimoire_fourthChar has grimFourthCharOne}[FourthCharacter]
             -> grimoire_fourthCharacter
 
         //Apertura: dopo primo dialogo, o dopo dialogo comune con Chitarra, Boccale, Franco, Riccio

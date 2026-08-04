@@ -149,8 +149,8 @@
                                                                     <i>Noi siamo sussurro e siamo ascolto. 
                                                                     <i>Un sorriso attento ai bisogni di {player_name}.
                                                                     <i>Ricordiamo il tempo in cui un nome era importante anche per noi.
-                                                                    <i>Ci hanno chiamata Strega, Radice e Fiamma.
-                                                                    <i>Ci hanno chiamata Luna e Parola.
+                                                                    <i>Ci hanno chiamate Strega, Radice e Fiamma.
+                                                                    <i>Ci hanno chiamate Luna e Parola.
                                                                     <i>Con quale nome {player_name} vorrebbe chiamarci?
 
 

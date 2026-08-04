@@ -1020,6 +1020,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             //Main storylets
             - third_char_main_storylets.one && grimoire_thirdChar hasnt grimThirdCharOne:
                 ~ grimoire_thirdChar += grimThirdCharOne
+                //Aggiungiamo anche le presentazioni
+                ~ grimoire_thirdChar += grimThirdCharPresentation
         }
 
         {

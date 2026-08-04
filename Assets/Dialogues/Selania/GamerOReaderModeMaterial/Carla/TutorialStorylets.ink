@@ -614,10 +614,19 @@
                                                 Non sempre in modo chiaro: la gente fa di tutto per incasinare la vita a chi lavora, non trova?
     {charTag(Carla, "bored")}:                  Non sono previsti rimborsi in caso di insuccesso.
     {charTag(Carla, "happy")}:                  Non dovrei dirglielo, ma il signor Franco potrebbe aiutarla in caso di difficoltà.
-    {charTag(Carla, "neutral")}:                Perché?
+
+        {frog_nameDiscovered:
+        {charTag(Carla, "neutral")}:            Perché?
                                                 Perché è un bravo ranocchio.
                                                 Perché è un bravo ranocchio?
-    {charTag(Carla, "bored")}:                  Non è di mia competenza.
+        {charTag(Carla, "bored")}:              Non è di mia competenza.
+        - else:
+        {charTag(Carla, "neutral")}:            Ma a proposito di Franco, dove si è cacciato quel pasticcione?
+        {charTag(Carla, "bored")}:              Non si sarà di nuovo incastrato nella scatola dei biscotti, vero?
+        {charTag(Carla, "neutral")}:            Sarà il caso che vada a sentire quelle dell'ufficio Ranocchi e Rimorsi.
+        } 
+
+    
 
 -> carla_closing_storylet
 
