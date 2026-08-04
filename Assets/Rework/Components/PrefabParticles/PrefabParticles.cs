@@ -104,22 +104,22 @@ namespace Selania.Rework.Components.PrefabParticles
 
             try
             {
-                Debug.Log("Spawn loop started", this);
+                // Debug.Log("Spawn loop started", this);
                 for (;;)
                 {
                     // wait until the next spawn time (or consume prewarm time)
                     var spawnDelay = Random.Range(minimumTimeBetweenSpawns, maximumTimeBetweenSpawns);
-                    Debug.Log($"Waiting {spawnDelay} before the next spawn");
+                    // Debug.Log($"Waiting {spawnDelay} before the next spawn");
                     if (remainingPrewarmTime > spawnDelay)
                     {
-                        Debug.Log("Consuming prewarm time instead of real time");
+                        // Debug.Log("Consuming prewarm time instead of real time");
                         remainingPrewarmTime -= spawnDelay;
                     }
                     else
                     {
                         spawnDelay -= remainingPrewarmTime;
-                        if (remainingPrewarmTime > 0)
-                            Debug.Log($"Consuming prewarm time instead of real time, {spawnDelay} remaining");
+                        // if (remainingPrewarmTime > 0)
+                        //     Debug.Log($"Consuming prewarm time instead of real time, {spawnDelay} remaining");
 
                         remainingPrewarmTime = 0;
                         await UniTask.Delay(TimeSpan.FromSeconds(spawnDelay), cancellationToken: cancellationToken);
@@ -137,14 +137,14 @@ namespace Selania.Rework.Components.PrefabParticles
 
                     // compute the animation duration
                     var actualDuration = animationDuration / speedMultiplier;
-                    Debug.Log(
-                        $"Animation duration {animationDuration}, speed multiplier {speedMultiplier}, actual duration {actualDuration}");
+                    // Debug.Log(
+                    //     $"Animation duration {animationDuration}, speed multiplier {speedMultiplier}, actual duration {actualDuration}");
 
                     // check if we actually have to spawn the object, or if it will be despawned by the time the prewarm
                     // is done
                     if (remainingPrewarmTime > actualDuration)
                     {
-                        Debug.Log("Prewarm time will completely use up the object's duration, continue");
+                        // Debug.Log("Prewarm time will completely use up the object's duration, continue");
                         continue;
                     }
 
@@ -153,8 +153,8 @@ namespace Selania.Rework.Components.PrefabParticles
                         Random.Range(spawnArea.xMin, spawnArea.xMax),
                         Random.Range(spawnArea.yMin, spawnArea.yMax)
                     );
-                    Debug.Log(
-                        $"Spawning at {transform.position} + {spawnCoordinates} = {transform.position + (Vector3)spawnCoordinates}");
+                    // Debug.Log(
+                    //     $"Spawning at {transform.position} + {spawnCoordinates} = {transform.position + (Vector3)spawnCoordinates}");
 
                     // spawn the parent at that location
                     var parentGameObject = new GameObject
@@ -186,7 +186,7 @@ namespace Selania.Rework.Components.PrefabParticles
                     {
                         var animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
                         var normalizedTime = remainingPrewarmTime / actualDuration;
-                        Debug.Log($"Fast forwarding animation to normalized time {normalizedTime}");
+                        // Debug.Log($"Fast forwarding animation to normalized time {normalizedTime}");
                         animator.Play(animatorStateInfo.fullPathHash, 0, normalizedTime);
                     }
 

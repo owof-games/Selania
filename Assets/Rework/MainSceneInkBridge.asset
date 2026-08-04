@@ -109,3 +109,4 @@ MonoBehaviour:
     relationshipInkVariableName: fifthChar_relationshipIndicator
     choicesValuesVariablePrefix: fifthChar
   grimoireIsOpenVariableName: grimoire_isEnabled
+  _mainInkAsset: {fileID: 102900000, guid: e328cefdc4de28f438844db7173a2c34, type: 3}

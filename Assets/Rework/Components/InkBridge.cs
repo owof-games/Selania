@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using Alchemy.Inspector;
 using Cysharp.Threading.Tasks;
+using Ink;
+using Ink.Parsed;
 using Ink.Runtime;
 using Microsoft.Extensions.Logging;
 using R3;
 using Selania.Rework.Interfaces;
+using UnityEditor;
 using UnityEngine;
 using ZLogger;
+using Choice = Ink.Runtime.Choice;
+using Object = Ink.Parsed.Object;
 using Path = System.IO.Path;
+using Story = Ink.Runtime.Story;
 using Tag = Selania.Rework.Interfaces.Tag;
 
 namespace Selania.Rework.Components
@@ -36,7 +42,8 @@ namespace Selania.Rework.Components
         IStoryVariableValues,
         IStoryDebugSupport,
         IStoryRelationshipInfo,
-        IStorySigilSupport
+        IStorySigilSupport,
+        IStoryCodeExecutor
     {
         [Header("Ink Settings")] [SerializeField] [Tooltip("The JSON asset containing the story.")]
         private TextAsset? inkAssetJson;
@@ -270,10 +277,10 @@ namespace Selania.Rework.Components
             var story = GetStory();
 
             // log the current story step
-            Logger.ZLogInformation($"Story text: {story.currentText}");
+            Logger.ZLogInformation($"Story text: {story.currentText} {new TagsPrinter(story.currentTags)}");
             foreach (var choice in story.currentChoices)
             {
-                Logger.ZLogInformation($"  Story choice: {choice.text}");
+                Logger.ZLogInformation($"  Story choice: {choice.text} {new TagsPrinter(choice.tags)}");
                 foreach (var tag in choice.tags ?? new List<string>())
                 {
                     Logger.ZLogDebug($"    Tag: {tag}");
@@ -3460,6 +3467,145 @@ namespace Selania.Rework.Components
             DisposeAndSetToNull(ref _activeSigilUsedSubject);
             DisposeAndSetToNull(ref _publishedActiveSigilInfoConnection);
             DisposeAndSetToNull(ref _sigilInfoStreamsSubject);
+        }
+
+        #endregion
+
+        #region IStoryCodeExecutor
+
+        [Header("Debug panel settings")] [SerializeField]
+        private DefaultAsset _mainInkAsset = null!;
+
+        private class FileHandler : IFileHandler
+        {
+            private readonly string _path;
+
+            public FileHandler(string path)
+            {
+                _path = path;
+            }
+
+            public string ResolveInkFilename(string includeName)
+            {
+                return Path.Join(_path, includeName);
+            }
+
+            public string LoadInkFileContents(string fullFilename)
+            {
+                return File.ReadAllText(fullFilename);
+            }
+        }
+
+        private (List<(string, ErrorType)>, Ink.Parsed.Story, Story, Compiler)? _compilationResult;
+
+        public static (List<(string, ErrorType)>, Ink.Parsed.Story, Story, Compiler) CreateParsedAndRuntimeStory(
+            string path)
+        {
+            var contents = File.ReadAllText(path);
+
+            // create the file handler
+            var fileHandler = new FileHandler(Path.GetDirectoryName(path)!);
+
+            // create the compiler
+            var errors = new List<(string, ErrorType)>();
+            var compiler = new Compiler(
+                contents,
+                new Compiler.Options
+                {
+                    fileHandler = fileHandler,
+                    errorHandler = (message, error) => errors.Add((message, error)),
+                    sourceFilename = Path.GetFileName(path)
+                });
+
+            // compile
+            var runtimeStory = compiler.Compile();
+            var parsedStory = compiler.parsedStory;
+            parsedStory.ResolveReferences(parsedStory);
+            runtimeStory.allowExternalFunctionFallbacks = true;
+
+            // return it
+            return (errors, parsedStory, runtimeStory, compiler);
+        }
+
+        // Valid returned objects:
+        //  - "help"
+        //  - "DebugSource(5)" Lookup debug source for character offset
+        //  - "DebugPath(path)" Lookup debug source for runtime path
+        //  - int: for choice number
+        //  - "-> node" Parsed.Divert
+        //  - "temp a = 3", "a += 5", "a = 3": Variable declaration/assignment
+        //  - "a + 2" Expression
+
+        public IStoryCodeExecutor.ExecutionResult Execute(string expression)
+        {
+            try
+            {
+#if UNITY_EDITOR
+                // parse and compile the story
+                var path = Path.Join(Directory.GetCurrentDirectory(), AssetDatabase.GetAssetPath(_mainInkAsset));
+                _compilationResult?.Item1.Clear();
+                _compilationResult ??= CreateParsedAndRuntimeStory(path);
+                var (errors, parsedStory, runtimeStory, compiler) = _compilationResult.Value;
+                var actualErrors = errors.Where(e => e.Item2 > ErrorType.Warning).ToArray();
+
+                if (actualErrors.Length > 0)
+                {
+                    return new IStoryCodeExecutor.ExecutionResult(
+                        string.Join(", ", actualErrors.Select(e => $"{e.Item2}: {e.Item1}")), null,
+                        _compilationResult.Value.Item1);
+                }
+
+                _compilationResult?.Item1.Clear();
+
+                // create the expression
+                var inputParser = new InkParser(expression);
+                var inputResult = inputParser.CommandLineUserInput();
+                if (inputResult.userImmediateModeStatement is Object o)
+                {
+                    if (o is not Expression)
+                        throw new InvalidOperationException($"o should be an expression, instead it's a {o.GetType()}");
+
+                    o.parent = parsedStory;
+                    o.ResolveReferences(parsedStory);
+
+                    var runtimeObject = o.runtimeObject;
+                    var result = runtimeStory.EvaluateExpression((Container)runtimeObject);
+                    return new IStoryCodeExecutor.ExecutionResult(null,
+                        result == null ? "Expression evaluated to nothing" : result.ToString(),
+                        _compilationResult!.Value.Item1);
+                }
+
+                var compilerResult = compiler.HandleInput(inputResult);
+                if (compilerResult == null)
+                {
+                    return new IStoryCodeExecutor.ExecutionResult(
+                        "Compilation failed", null);
+                }
+
+                if (compilerResult.divertedPath != null)
+                {
+                    GetStory().ChoosePathString(compilerResult.divertedPath);
+                    Continue();
+                    return new IStoryCodeExecutor.ExecutionResult(
+                        null,
+                        $"Diverted to requested destination: {compilerResult.divertedPath}",
+                        _compilationResult!.Value.Item1
+                    );
+                }
+
+                return new IStoryCodeExecutor.ExecutionResult(
+                    null,
+                    compilerResult.output ?? "", _compilationResult!.Value.Item1
+                );
+#else
+            return new IStoryCodeExecutor.ExecutionResult("Not available in a build", null);
+#endif
+            }
+            catch (Exception e)
+            {
+                return new IStoryCodeExecutor.ExecutionResult(e.ToString(), null,
+                    _compilationResult?.Item1 ?? new List<(string, ErrorType)>());
+            }
         }
 
         #endregion
