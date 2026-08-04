@@ -463,15 +463,15 @@
 
 
     - (top)
-    +   {firstChar_storyStatus == story_storyStarted} \ {charTag(PG, "neutral")}:                                                                           Mi servirebbe un consiglio su {charNameOne}.
+    +   {franco_available_gifts_for_char(FirstCharacter)} \ {charTag(PG, "neutral")}:                                                                           Mi servirebbe un consiglio su {charNameOne}.
         -> franco_wants_to_give_you_a_gift_first_character
-    +   {secondChar_storyStatus == story_storyStarted} \ {charTag(PG, "neutral")}:                                                                          Vorrei una mano con {charNameTwo}.
+    +   {franco_available_gifts_for_char(FirstCharacter)} \ {charTag(PG, "neutral")}:                                                                          Vorrei una mano con {charNameTwo}.
         -> franco_wants_to_give_you_a_gift_second_character
-    +   {thirdChar_storyStatus == story_storyStarted && grimoire_thirdChar != ()} \ {charTag(PG, "neutral")}:                                               Cosa potresti offrirmi per {charNameThree}?
+    +   {franco_available_gifts_for_char(FirstCharacter) && grimoire_thirdChar != ()} \ {charTag(PG, "neutral")}:                                               Cosa potresti offrirmi per {charNameThree}?
         -> franco_wants_to_give_you_a_gift_third_character
-    +   {fourthChar_storyStatus == story_storyStarted && grimoire_fourthChar != ()} \ {charTag(PG, "neutral")}:                                             Apprezzerei un aiuto con {charNameFour}.
+    +   {franco_available_gifts_for_char(FirstCharacter) && grimoire_fourthChar != ()} \ {charTag(PG, "neutral")}:                                             Apprezzerei un aiuto con {charNameFour}.
         -> franco_wants_to_give_you_a_gift_fourth_character
-    +   {fifthChar_storyStatus == story_storyStarted && grimoire_fifthChar has grimFifthCharOne} \ {charTag(PG, "neutral")}:                                Qualche dritta su {charNameFive}?
+    +   {franco_available_gifts_for_char(FirstCharacter) && grimoire_fifthChar has grimFifthCharOne} \ {charTag(PG, "neutral")}:                                Qualche dritta su {charNameFive}?
         -> franco_wants_to_give_you_a_gift_fifth_character
     +   {frog_recoverableCultivables && not frog_recoveredCultivables}  \ {charTag(PG, "neutral")}:                                                         Puoi aiutarmi a recuperare una pianta che ho già utilizzato?
         {charTag(Franco, "party")}:                         Certo che craack!
@@ -674,9 +674,9 @@
     ~ temp achievableGifts = franco_available_gifts_for_char(character)
     + {achievableGifts has cultivableGift}  \ {charTag(PG, "neutral")}:                                                 Quale regalo mi consigli?
         -> franco_pick_plant_gift(character, false) ->
-    + {achievableGifts has ingredientGift && player_accessiblePlaces has Kitchen}  \ {charTag(PG, "neutral")}:          Che ingrediente dovrei aggiungere mentre cucineremo assieme?
+    + {achievableGifts has ingredientGift}  \ {charTag(PG, "neutral")}:          Che ingrediente dovrei aggiungere mentre cucineremo assieme?
         -> franco_pick_plant_gift(character, true) ->
-    + {achievableGifts has bookGift && player_accessiblePlaces has Library}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
+    + {achievableGifts has bookGift}  \ {charTag(PG, "neutral")}:                C'è un racconto che ha a cuore?
         -> book ->
     +  \ {charTag(PG, "neutral")}: Ho cambiato idea.
         -> franco_wants_to_give_you_a_gift.top    
