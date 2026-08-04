@@ -560,7 +560,7 @@
 //     ~ frog_currentMission = missionSix
 
 //         {charTag(Franco, "neutral")}:               Non mi è ancora chiaro perché decida di stare in quella discarica.
-//         {charTag(TheWitch, witch_state())}:         La discarica è un promemoria delle nostre responsabilità.
+//         {charTag(TheWitch, witch_state())}:         <i>La discarica è un promemoria delle nostre responsabilità.</i>
 //         {charTag(Franco, "neutral")}:               Un po' come quando Tullio mi mette i promemoria sul cellulare.
 //                                                     Ma poi dimentico il cellulare a casa.
 //         {charTag(Franco, "party")}:                 Ma sono felice che hai parlato con la nostra amica comune!
