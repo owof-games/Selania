@@ -639,10 +639,9 @@
                 Devo recuperare il documento del Ministero.
         }
 
-    {charTag(Carla, "bored")}:                  Quindi {charNameThree} le ha aperto il Nido!
-                                                Ma che gentile.
-    {charTag(Carla, "neutral")}:                Già.
-    {charTag(Carla, "bored")}:                  Mannaggia al.
+    {charTag(Carla, "bored")}:                  Visto che {charNameThree} le ha aperto il Nido, prima le ho spiegato i sassi.
+                                                Maledetto {charNameThree}.
+    {charTag(Carla, "neutral")}:                Ma la superiore mi ha detto che devo pure spiegarle come funzionano le cose che crea coi sassi: i Sigilli.
         {
             - tutorial_CarlaDiscoveredTutorials has tutorialSigils:
                 -> top2

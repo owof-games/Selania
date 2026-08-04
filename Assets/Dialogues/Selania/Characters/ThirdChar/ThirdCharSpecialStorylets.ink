@@ -199,7 +199,7 @@
             {
                 -  tutorial_CarlaTutorial == true:
                     ~ move_entity(Carla, Nest)
-                    -> tutorial_carlaSigilsActivationStorylet
+                    -> tutorial_carlaNestStorylet
                 - else:
                     ->->
             }
