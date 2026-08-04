@@ -220,7 +220,7 @@
         {charTag(FifthCharacter, "sad")}:                       Cavoletti. 
         {charTag(FifthCharacter, "sorry")}:                     Perché dimentico sempre tutto?!?
         {charTag(FifthCharacter, "hurry")}:                     Questo è per te.
-                                                                È un Grimorio: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
+                                                                È un <b>Grimorio</b>: ti aiuterà nel raccogliere tutte le informazioni che incontrerai man mano.
         
                                                                     //Sblocco del grimorio
                                                                     ~ grimoire_isEnabled = true
