@@ -49,6 +49,10 @@
 
         + {grimoire_appendices != ()} [Appendices]
             -> grimoire_appendicesCollection
+
+        + {debug_testing} [Esci dal grimorio]
+            -> main
+
         -
 
 
