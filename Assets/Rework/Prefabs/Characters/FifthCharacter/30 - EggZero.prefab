@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1131149654844477419, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Name
-      value: 30 - Mostro
+      value: 30 - EggZero
       objectReference: {fileID: 0}
     - target: {fileID: 2889362861158594370, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: choiceText
@@ -1407,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 7215676493785075422, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 5cf9a84e3c526fa45932121b8fdb46a2, type: 2}
+      objectReference: {fileID: 22100000, guid: f1df8acf52952d141a22e0d59cd5ec00, type: 2}
     - target: {fileID: 7465546172250548277, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: m_Size.x
       value: 166
@@ -1426,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8235661390823931172, guid: 0f1a688640c53d74893c657fe4343781, type: 3}
       propertyPath: inkName
-      value: FifthCharacter
+      value: FifthCharacterEggZero
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
