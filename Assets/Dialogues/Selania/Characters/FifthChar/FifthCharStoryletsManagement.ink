@@ -64,7 +64,7 @@
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_fromEggToMonster = eggZero
+                ~  fifthChar_growthMonsterEgg = eggZero
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -83,7 +83,7 @@
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_fromEggToMonster = eggOne
+                ~  fifthChar_growthMonsterEgg = eggOne
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -103,7 +103,7 @@
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_fromEggToMonster = eggTwo
+                ~  fifthChar_growthMonsterEgg = eggTwo
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -124,7 +124,7 @@
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_fromEggToMonster = eggThree
+                ~  fifthChar_growthMonsterEgg = eggThree
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
