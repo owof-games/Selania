@@ -5994,7 +5994,6 @@ Transform:
   - {fileID: 6082425492834340024}
   - {fileID: 9111162335839675328}
   - {fileID: 350123399331862521}
-  - {fileID: 3247536899214971836}
   - {fileID: 4791141793978497089}
   - {fileID: 7733473375027421568}
   - {fileID: 8393524010075692985}
@@ -11105,6 +11104,7 @@ Transform:
   - {fileID: 486800774388597809}
   - {fileID: 8038430593108391236}
   - {fileID: 6748513559560061783}
+  - {fileID: 3247536899214971836}
   - {fileID: 556125471060743442}
   - {fileID: 6669757169307409105}
   - {fileID: 2090590558354433938}
@@ -11395,6 +11395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - DoggoFifthLetters
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: f14fd12a81111f0449fae417d7070e9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11421,6 +11425,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: 1ce13745b91207e4cab32ac42bf0c563, type: 3}
       propertyPath: m_Name
       value: 30 - FlautoDolce
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: 1ce13745b91207e4cab32ac42bf0c563, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: 1ce13745b91207e4cab32ac42bf0c563, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11762,6 +11770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Lupo
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: 447904a1985a4604396adc88d0a25a7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11828,6 +11840,10 @@ PrefabInstance:
     - target: {fileID: 4449773367406173467, guid: fe39433e8f0c19044bd2ea8c3252dcd9, type: 3}
       propertyPath: m_Name
       value: 30 - Dolphin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: fe39433e8f0c19044bd2ea8c3252dcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11896,6 +11912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - DoggoFourthLetters
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: b88cf5323253d564382bd6b1fc77647d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11917,7 +11937,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4033213190699239440}
+    m_TransformParent: {fileID: 4791141793978497089}
     m_Modifications:
     - target: {fileID: 859111126649792559, guid: 9e16a787c05a9b945bb117f7ac61316e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11962,6 +11982,10 @@ PrefabInstance:
     - target: {fileID: 4449773367406173467, guid: 9e16a787c05a9b945bb117f7ac61316e, type: 3}
       propertyPath: m_Name
       value: 30 - FourthCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: 9e16a787c05a9b945bb117f7ac61316e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13038,6 +13062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Violino
       objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: bc9e4a922b636e548b26df65b59b2dc8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: bc9e4a922b636e548b26df65b59b2dc8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -633
@@ -13145,6 +13173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Capibara
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: 864a4879fb09bd94ea172aec1dbc1c84, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13171,6 +13203,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Name
       value: 30 - FromTrainStopToForest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2889362861158594370, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: choiceText
@@ -13678,6 +13714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Ocarina
       objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: a925a1fe0777c184b9b723b76f4ade57, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: a925a1fe0777c184b9b723b76f4ade57, type: 3}
       propertyPath: m_LocalPosition.x
       value: -628.2
@@ -13744,6 +13784,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: 3f0158bf70b7bd54b85ea472eba9687f, type: 3}
       propertyPath: m_Name
       value: 30 - Triangolo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: 3f0158bf70b7bd54b85ea472eba9687f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: 3f0158bf70b7bd54b85ea472eba9687f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13852,6 +13896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 30 - Orso
       objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: fc1587389ef50c44997d91c4080c9e89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13949,6 +13997,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: f6397010d0fa9374ea1d0bb41b6ce34a, type: 3}
       propertyPath: m_Name
       value: 30 - Orchestra
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: f6397010d0fa9374ea1d0bb41b6ce34a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4151842594449095391, guid: f6397010d0fa9374ea1d0bb41b6ce34a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14210,6 +14262,10 @@ PrefabInstance:
     - target: {fileID: 4449773367406173467, guid: 1123a33d8e6da974d8031d48cec86714, type: 3}
       propertyPath: m_Name
       value: 30 - Corvo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449773367406173467, guid: 1123a33d8e6da974d8031d48cec86714, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16332,6 +16388,10 @@ PrefabInstance:
     - target: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: m_Name
       value: 30 - FromTrainStopToBedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131149654844477419, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2889362861158594370, guid: 33532f7b4e86c9544a1da7a1331e074f, type: 3}
       propertyPath: choiceText
