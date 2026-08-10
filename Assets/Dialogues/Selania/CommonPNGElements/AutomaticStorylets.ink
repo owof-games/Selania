@@ -179,7 +179,7 @@
 
     }
 
-    Gestione uovo dopo il meltdown
+    //Gestione uovo dopo il meltdown
     {
     - are_two_entities_together(FifthCharacterEggZero, PG) or are_two_entities_together(FifthCharacterEggOne, PG) or are_two_entities_together(FifthCharacterEggTwo, PG) or are_two_entities_together(FifthCharacterEggThree, PG) && grimoire_fifthChar has grimMentorMeltdown:
             -> fifth_char_egg_management

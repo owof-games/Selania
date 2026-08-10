@@ -158,6 +158,37 @@
 
         ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
 
+    //Sigilli random
+    ~ png_random_sigils_opener ()
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()
+
+            ~ png_random_sigils_opener ()
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()
+
+            ~ png_random_sigils_opener ()
+                //Chiamo tre volte l'updater, così aggiorno l'informazione sul grimorio
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                ~ glyph_grimoireTripleSigilsUpdater()
+                //Poi aggiorno il sigillo principale
+                ~ glyph_grimoireMainSigilsUpdater()
+                //E poi svuoto il nuovo sigillo
+                ~ nest_newSigilDiscovered = ()    
+
 
 
 === function debug_Franco()

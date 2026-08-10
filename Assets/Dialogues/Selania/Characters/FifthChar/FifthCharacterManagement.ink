@@ -246,11 +246,11 @@ VAR fifth_char_meltdown_activated = false
 
 //Primo step: diminuire il valore
     
-    {eventValue:
-        - fifthLightEvent: 
+    {
+        - eventValue == fifthLightEvent: 
             ~ fifth_char_spoons_value --
 
-        - fifthMediumEvent: 
+        - eventValue == fifthMediumEvent: 
             ~ fifth_char_spoons_value --
             ~ fifth_char_spoons_value --
         

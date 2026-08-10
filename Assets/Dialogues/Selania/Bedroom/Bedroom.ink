@@ -41,7 +41,7 @@
 
 = settings_and_choices
     //saltiamo direttamente al top3 durante il testing su unity
-    -> top3
+    // -> top3
 
     {charTag(Carla, "bored")}:                                          Il testing è in ink?
             + {!debug_stochastic} \ {charTag(PG, "neutral")}:           <i>Sì.</i>
@@ -68,6 +68,9 @@
             * \ {charTag(PG, "neutral")}:                               <i>Attiva sin da subito Franco.
                 ~ debug_Franco()
 
+            * \ {charTag(PG, "neutral")}:                               <i>Portami alla seconda metà del gioco.
+                ~  debug_secondHalfGame()    
+
             + \ {charTag(PG, "neutral")}:                               <i>Non mi serve nulla.</i>  
                                    
             -
@@ -77,7 +80,6 @@
                 -> top2
             + \ {charTag(PG, "neutral")}:                               <i>No.
     
-
 
     - (top3)
             // ~ debug_Franco()

@@ -60,3 +60,27 @@
     ~ glyph_actualSigilUses = 3
     ~ glyph_discoveredSigils = (FireAetherAir)
     -> debug_knot
+
++ [Seconda parte: Chitarra e Riccio riscritti3, Boccale allontanato]
+   ~  debug_secondHalfGame()
+            + + In modalità Gamer Mode
+                ~ gamerMode_activation ()
+                // //Se non ho sbloccato la parte sotto, attivo anche Carla
+                // ~ tutorial_CarlaTutorialActivation()
+                
+            + + In modalità Reader Mode.</i>
+            --
+            + + Col tutorial di Mentore
+                    ~ tutorial_MentorTutorial = true
+
+            + + Col tutorial di Carla
+                    ~ tutorial_CarlaTutorialActivation()     
+    
+            + + Con entrambi i tutorial
+                    ~ tutorial_CarlaTutorialActivation()
+                    ~ tutorial_MentorTutorial = true
+
+            
+            + + Senza tutorial
+            --                                                            
+   -> debug_knot
