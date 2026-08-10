@@ -150,7 +150,7 @@
     //Main story come Mostro
     {
         - grimoire_fifthChar has grimFifthCharOne:
-            Blah blah blah
+            {charNameFive} racconta a {player_name} della mattina della festa, e di quando ha dimenticato il piccolo Vittorio, il nipote, dalla fiorista. Durante la visita dalla fiorista ha anche incontrato Lucrezia, che ha ricordato a {charNameFive} che gli esiti degli esami erano pronti. E poi Lucrezia aggiunge, davanti a delle rose "Amare rende soli". Mentre {charNameFive} cerca una risposta intelligente, fuori dal negozio passa una macchina con la scorta. {charNameFive} si allontana, e solo a casa scoprirà che Elia nel frattempo ha recuperato Vittorio.
 
     }
 
