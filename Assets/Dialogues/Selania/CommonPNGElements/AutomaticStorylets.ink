@@ -171,24 +171,24 @@
             -> third_char_first_char_departure_comment             
 } 
 //Speciali Mentore
-TODO: sbloccare dopo preparazione nuovo testing
-// {
-//     //Meltdown
-//     - are_two_entities_together(Mentor, PG) && grimoire_fifthChar hasnt grimMentorMeltdown && fifth_char_meltdown_countdown <= 0:
-//         -> mentor_meltdown
 
-// }
+    {
+        //Meltdown
+        - are_two_entities_together(Mentor, PG) && fifth_char_meltdown_countdown <= 0 and grimoire_fifthChar hasnt grimMentorMeltdown:
+            -> mentor_meltdown
 
-//Gestione uovo dopo il meltdown
-// {
-//    - are_two_entities_together(FifthCharacterEgg, PG) && grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster < 0:
-//         -> fifth_char_egg_management
-// }
+    }
 
-// //Mentore è in recovery ed entriamo in serra
-//{    - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
-//         -> fifth_char_first_steps
-//}
+    Gestione uovo dopo il meltdown
+    {
+    - are_two_entities_together(FifthCharacterEggZero, PG) or are_two_entities_together(FifthCharacterEggOne, PG) or are_two_entities_together(FifthCharacterEggTwo, PG) or are_two_entities_together(FifthCharacterEggThree, PG) && grimoire_fifthChar has grimMentorMeltdown:
+            -> fifth_char_egg_management
+    }
+
+    //Mentore è in recovery ed entriamo in serra
+    {    - are_two_entities_together(FifthCharacter, PG) && entity_location(PG) == Greenhouse && fifthChar_recovery > 0:
+            -> fifth_char_first_steps
+    }
 
 //Speciali della strega
 {

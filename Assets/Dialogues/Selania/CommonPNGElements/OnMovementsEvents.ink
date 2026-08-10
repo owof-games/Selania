@@ -383,6 +383,12 @@ VAR letters_doggoPause = false
             ~ fifth_char_meltdown_countdown --
     }
 
+    //Gestione cambio stato uovo
+    {
+        - fifthChar_growthMonsterEggPause > 0:
+                ~  fifthChar_growthMonsterEggPause --
+    }
+
     //Gestione del tempo di recovery
     {   
         - fifthChar_recovery > 0:

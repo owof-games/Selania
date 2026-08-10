@@ -42,8 +42,8 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
 
-    {fifthChar_growthMonsterEgg:
-        - eggZero:
+    {
+        - are_two_entities_together(FifthCharacterEggZero, PG):
             {
             //Se toccata, abbiamo delle reazioni dall'uovo.
             - fifthChar_eggTouched == true:
@@ -60,11 +60,15 @@
             }
 
 
-        - eggOne:
+        - are_two_entities_together(FifthCharacterEggOne, PG):
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_growthMonsterEgg = eggZero
+                //Arretriamo di un valore lo stato dell'uovo, cambiando gli assets
+                ~  move_entity(FifthCharacterEggOne, Safekeeping)
+                ~  move_entity(FifthCharacterEggZero, Greenhouse)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -79,11 +83,15 @@
                 }
             }
             
-        - eggTwo:
+        - are_two_entities_together(FifthCharacterEggTwo, PG):
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_growthMonsterEgg = eggOne
+                //Arretriamo di un valore lo stato dell'uovo, cambiando gli assets
+                ~  move_entity(FifthCharacterEggTwo, Safekeeping)
+                ~  move_entity(FifthCharacterEggOne, Greenhouse)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -99,32 +107,16 @@
                 }
             }
         
-        - eggThree:
+        - are_two_entities_together(FifthCharacterEggThree, PG):
             {
             //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
             - fifthChar_eggTouched == true:
-                ~  fifthChar_growthMonsterEgg = eggTwo
-                {shuffle:
-                    - {charTag(FifthCharacter, "egg")}: ...
-                    - {charTag(FifthCharacter, "egg")}: !!!
-                    - {charTag(FifthCharacter, "egg")}: ???
-                    - {charTag(FifthCharacter, "egg")}: ?!?
-                }
-                
-            //Se non toccata e non ci sono piante in crescita, il commento è della strega.
-            - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
-                {shuffle:
-                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Troppa foga spezza i ponti.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:  <i>La pazienza è pianta fragile da coltivare.</i>
-                    - {charTag(TheWitch, "{witch_state()}")}:  <i>Un ritirarsi che chiede fiducia.</i>
-                }
-            }
-            
-        - eggFour:
-            {
-            //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
-            - fifthChar_eggTouched == true:
-                ~  fifthChar_growthMonsterEgg = eggThree
+                //Arretriamo di un valore lo stato dell'uovo, cambiando gli assets
+                ~  move_entity(FifthCharacterEggThree, Safekeeping)
+                ~  move_entity(FifthCharacterEggTwo, Greenhouse)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
+
                 {shuffle:
                     - {charTag(FifthCharacter, "egg")}: ...
                     - {charTag(FifthCharacter, "egg")}: !!!
@@ -142,10 +134,32 @@
                 }
             }
             
+        // - eggFour:
+        //     {
+        //     //Se toccata, abbiamo delle reazioni dall'uovo, e si abbassa il suo valore fifthChar_growthMonsterEgg
+        //     - fifthChar_eggTouched == true:
+        //         ~  fifthChar_growthMonsterEgg = eggThree
+        //         {shuffle:
+        //             - {charTag(FifthCharacter, "egg")}: ...
+        //             - {charTag(FifthCharacter, "egg")}: !!!
+        //             - {charTag(FifthCharacter, "egg")}: ???
+        //             - {charTag(FifthCharacter, "egg")}: ?!?
+        //             - {charTag(FifthCharacter, "egg")}: No!
+        //         }
+                
+        //     //Se non toccata e non ci sono piante in crescita, il commento è della strega.
+        //     - fifthChar_eggTouched == false && greenhouse_chosenCultivable == ():
+        //         {shuffle:
+        //             - {charTag(TheWitch, "{witch_state()}")}:  <i>L'aria è colma delle possibilità di un nuovo incontro.</i>
+        //             - {charTag(TheWitch, "{witch_state()}")}:  <i>Un respiro, una attimo, una fiducia per far sì che il guscio si spezzi.</i>
+        //             - {charTag(TheWitch, "{witch_state()}")}:  <i>Cosa rimarrà dell'uovo? Ce lo dirà l'attesa.</i>
+        //         }
+        //     }
+            
     }
 
 
-->->
+-> main
 
 
 

@@ -4,14 +4,36 @@
         + {are_two_entities_together(FifthCharacter, PG) && fifthChar_storyStatus == story_storyStarted && entity_location(PG) != Kitchen} [FifthCharacter]
             -> talk_with_fifth_character
 
-        //L'uovo
-        + {are_two_entities_together(FifthCharacterEgg, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
-            //Tracciamo le volte in cui la tocchiamo.
-            {
-            - fifthChar_growthMonsterEgg != eggFive:
-                ~ fifthChar_eggTouched = true
-            }
-            -> fifth_char_egg_management  
+
+
+
+
+        //Le varie fasi dell'uovo
+            //Uovo zero
+            + {are_two_entities_together(FifthCharacterEggZero, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
+                //Tracciamo le volte in cui la tocchiamo.
+                    ~ fifthChar_eggTouched = true
+                -> fifth_char_egg_management
+
+            //Uovo uno
+            + {are_two_entities_together(FifthCharacterEggOne, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
+                //Tracciamo le volte in cui la tocchiamo.
+                    ~ fifthChar_eggTouched = true
+                -> fifth_char_egg_management
+
+            //Uovo due
+            + {are_two_entities_together(FifthCharacterEggTwo, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
+                //Tracciamo le volte in cui la tocchiamo.
+                    ~ fifthChar_eggTouched = true
+                -> fifth_char_egg_management
+
+            //Uovo tre
+            + {are_two_entities_together(FifthCharacterEggThree, PG) && entity_location(PG) == Greenhouse} [FifthCharacter]
+                //Tracciamo le volte in cui la tocchiamo.
+                    ~ fifthChar_eggTouched = true
+                -> fifth_char_egg_management   
+
+
 
         //Chiacchierata in cucina
         + {are_two_entities_together(FifthCharacterCucina, PG) && fifthChar_storyStatus == story_storyStarted && entity_location(PG) == Kitchen} [FifthCharacter]

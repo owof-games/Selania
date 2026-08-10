@@ -47,7 +47,7 @@
     ThirdCharacter, ThirdCharacterCucina, ThirdCharacterForum, ThirdCharacterCanovaccio, ThirdCharacterSigaro, ThirdCharacterGuantone, ThirdCharacterCerchio,
     PaintForum, PaintCanovaccio, PaintSigaro, PaintGuantone, PaintCerchio,
     FourthCharacter, FourthCharacterCucina, 
-    FifthCharacter, Mentor, FifthCharacterCucina, FifthCharacterEgg,
+    FifthCharacter, Mentor, FifthCharacterCucina, FifthCharacterEgg, FifthCharacterEggZero, FifthCharacterEggOne, FifthCharacterEggTwo, FifthCharacterEggThree,
     Franco, FrancoCucina,
     Carla,
     Doggo, DoggoFirstLetters, DoggoSecondLetters, DoggoThirdLetters, DoggoFourthLetters, DoggoFifthLetters,

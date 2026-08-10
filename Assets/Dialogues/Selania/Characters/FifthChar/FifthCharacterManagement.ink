@@ -32,25 +32,12 @@
     //Altre variabili ad hoc
         //Tracciamento delle parolacce dette da Boccale
         VAR fifthChar_slurDetector = 0
-        //Stati dell'uovo
-        VAR fifthChar_fromEggToMonster = 8
-        //Costanti per leggere lo stato dell'uovo, da comunicare poi a Unity per gli assets.
-        //Uovo integro
-        CONST eggZero = 0
-        //Uovo spezzato
-        CONST eggOne = 1
-        //Uovo spezzato e uscita tentacolo primo step
-        CONST eggTwo = 2
-        //Uovo spezzato e tentacolo ritratto
-        CONST eggThree = 3
-        //Uovo spezzato e tentacolo secondo step
-        CONST eggFour = 4
-        //Mostro liberata
-        CONST eggFive = 5
-        //Variabile per tracciare lo stato dell'uovo
-        VAR fifthChar_growthMonsterEgg = eggZero
+        //Variabile che gestisce il tempo di crescita tra uno stato e l'altro
+        VAR fifthChar_growthMonsterEggPause = 0
+        VAR fifthChar_growthMonsterEggMaxPause = 8
         //Variabile per tracciare lo stato dell'interazione con Mostro
         VAR fifthChar_eggTouched = false
+        
         //Frasi recovery
         VAR fifthChar_recoveryMaxValue = 8
         VAR fifthChar_recovery = 0
@@ -310,29 +297,39 @@ VAR fifth_char_meltdown_activated = false
 
 === function fifth_char_egg_evolution()
 {
-//Se siamo nella fase uovo e non l'ho toccato, aumentiamo il suo "stato"
-    - grimoire_fifthChar has grimMentorMeltdown && fifthChar_fromEggToMonster != eggFive && fifthChar_eggTouched == false:
+//Se siamo nella fase uovo e non l'ho toccato, aumentiamo il suo "stato". fifthChar_growthMonsterEggPause ci aiuta a capire se c'è stato un contatto fisico, perché viene riportata al suo valore massimo ad ogni cambiamento (quindi anche se tocchiamo l'uovo)
+    - grimoire_fifthChar has grimMentorMeltdown && ! are_two_entities_together(FifthCharacter, PG) && fifthChar_growthMonsterEggPause <= 0:
         {
-            - fifthChar_fromEggToMonster == eggZero:
-                ~  fifthChar_fromEggToMonster = eggOne
+            - are_two_entities_together(FifthCharacterEggZero, PG):
+                //Spostiamo gli oggetti
+                ~  move_entity(FifthCharacterEggOne, Greenhouse)
+                ~  move_entity(FifthCharacterEggZero, Safekeeping)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
 
-            - fifthChar_fromEggToMonster == eggOne:
-                ~  fifthChar_fromEggToMonster = eggTwo
+            - are_two_entities_together(FifthCharacterEggOne, PG):
+                //Spostiamo gli oggetti
+                ~  move_entity(FifthCharacterEggTwo, Greenhouse)
+                ~  move_entity(FifthCharacterEggOne, Safekeeping)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
 
-            - fifthChar_fromEggToMonster == eggTwo:
-                ~  fifthChar_fromEggToMonster = eggThree
-
-            - fifthChar_fromEggToMonster == eggThree:
-                ~  fifthChar_fromEggToMonster = eggFour
+            - are_two_entities_together(FifthCharacterEggTwo, PG):
+                //Spostiamo gli oggetti
+                ~  move_entity(FifthCharacterEggThree, Greenhouse)
+                ~  move_entity(FifthCharacterEggTwo, Safekeeping)
+                //Attiviamo la pausa "cambiamento"
+                ~  fifthChar_growthMonsterEggPause = fifthChar_growthMonsterEggMaxPause
 
             - else:
-                ~  fifthChar_fromEggToMonster = eggFive
                 //Aumento il valore di fifthChar_recovery
                 ~ fifthChar_recovery = fifthChar_recoveryMaxValue
-                //Spostiamo l'uovo nel safekeeping e portiamo in serra FifthCharacter
-                ~ move_entity(FifthCharacterEgg, Safekeeping)
+                //Spostiamo gli oggetti
+                ~  move_entity(FifthCharacterEggThree, Safekeeping)
                 ~ move_entity(FifthCharacter, Greenhouse)               
         }
-    - fifthChar_eggTouched == true:
-        ~ fifthChar_eggTouched = false    
+    
 }
+
+//A prescindere poi sposto il contatto su falso
+ ~ fifthChar_eggTouched = false 
