@@ -143,8 +143,8 @@
                 -> again_about_olobino 
 
         //Mentore esplode
-        // - are_two_entities_together(Mentor, PG) && LIST_COUNT(story_endedStories) == 3 and grimoire_fifthChar hasnt grimMentorMeltdown:
-        //     -> mentor_meltdown
+        - are_two_entities_together(Mentor, PG) && fifth_char_meltdown_countdown <= 0 and grimoire_fifthChar hasnt grimMentorMeltdown:
+                -> mentor_meltdown
 
 
     //Storylets principali

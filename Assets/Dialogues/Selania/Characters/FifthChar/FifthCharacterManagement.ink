@@ -268,46 +268,37 @@ TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la pr
         - fifthMediumEvent: 
             ~ fifth_char_spoons_value --
             ~ fifth_char_spoons_value --
-
+        
         //Solo per fuga Boccale. Viene fatto un check costante in un link molto frequentato (es: appena parliamo con Mentore).
-        //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci dice qualcosa sul dover stare da sola. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
+        //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci fa un commento sulla partenza di Boccale. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
         - fifthStrongEvent && thirdChar_storyStatus == story_storyRemote && fifth_char_meltdown_activated == false && grimoire_fifthChar hasnt grimMentorMeltdown: 
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            ~ fifth_char_spoons_value --
-            //Poi attiviamo il countdown
             ~ fifth_char_meltdown_activated = true
             TODO: aggiungere frase mentore
     }
 
 
+    //Poi, se il valore di fifth_char_spoons_value è <= di 0 e non siamo in fase countdown meltdown, spostiamo Mentore o Mostro in serra.
+    {
+        //Se non siamo ancora in serra, diminuiamo anche il numero massimo di spoons per Mentore/Mostro.
+        //Non lo faccio se il countdown è stato attivato.
+        - fifth_char_spoons_value <= 0 && fifthLocation == false && fifth_char_meltdown_activated == false:
+            //Prima di tutto diminuisco il valore massimo degli spoons
+                {
+                - fifth_char_restart_value > fifth_char_min_restart_value:
+                    ~ fifth_char_restart_value --
+                }
 
-//Poi, se il valore di fifth_char_spoons_value è <= di 0, spostiamo Mentore o Mostro in serra.
-{
-    //Se non siamo ancora in serra, diminuiamo anche il numero massimo di spoons per Mentore/Mostro.
-    //Non lo faccio se il countdown è stato attivato.
-    - fifth_char_spoons_value <= 0 && fifthLocation == false && fifth_char_meltdown_activated == false:
-        //Prima di tutto diminuisco il valore massimo degli spoons
-            {
-            - fifth_char_restart_value > fifth_char_min_restart_value:
-                ~ fifth_char_restart_value --
-            }
+            //Poi procedo col cambio di luogo
+                {
+                //Se è Mostro    
+                - fifthChar_storyStatus != story_storyNotStarted:
+                    ~ move_entity(FifthCharacter, Greenhouse)
 
-        //Poi procedo col cambio di luogo
-            {
-            //Se è Mostro    
-            - fifthChar_storyStatus != story_storyNotStarted:
-                ~ move_entity(FifthCharacter, Greenhouse)
-
-            //Se è Mentore
-            - else:
-                ~ move_entity(Mentor, Greenhouse)
-            }
-}
+                //Se è Mentore
+                - else:
+                    ~ move_entity(Mentor, Greenhouse)
+                }
+    }
 
 === function fifth_char_egg_evolution()
 {

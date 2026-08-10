@@ -9,7 +9,6 @@
             //Aggiungiamo a lista list_currentActors
             ~ list_currentActors += FifthCharacter
     
-        
         {charTag(FifthCharacter, "quiet")}:             Dissi che i fiori li avrei comprati io.
                                                         Luba aveva già il suo daffare, e poi era la mattinata era ancora fresca, e la luce così dorata.
         {charTag(FifthCharacter, "silly")}:             Dal ritorno dopo il ricovero mi sono trasformata in una lucertolina, {player_name}, sempre alla ricerca di un po' di sole.
@@ -73,7 +72,7 @@
             ~ list_currentActors += FifthCharacter
     
 
-        {charTag(FifthCharacter, "quiet")}:      Frase
+        {charTag(FifthCharacter, "quiet")}:             
 
         
             + \ {charTag(PG, "neutral")}:         Cosa pensi? Qual è la verità intellettuale dietro questa cosa? Cosa significa veramente?
