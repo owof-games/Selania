@@ -5,13 +5,12 @@
                      ----------------------------------*/
     
     INCLUDE main.ink
-    INCLUDE DebugKnot.ink
 
 //File con gli appunti di gestione del progetto, la formattazione etc.
     INCLUDE Notes\FileManagement.ink
 
 //File dedicati alla gestione complessiva del progetto
-    INCLUDE Code\Debug.ink
+    
     INCLUDE Code\ObjectAndCharList.ink
     INCLUDE Code\PGManagement.ink
     INCLUDE Code\ChangePlaces.ink
@@ -27,6 +26,12 @@
     INCLUDE GamerOReaderModeMaterial\Carla\TutorialStorylets.ink
     INCLUDE GamerOReaderModeMaterial\Carla\Carla.ink
     INCLUDE GamerOReaderModeMaterial\VariablesAndFunctions.ink
+
+//Debug
+    INCLUDE Debug\Debug.ink
+    INCLUDE Debug\DebugKnot.ink
+    INCLUDE Debug\DebugFunctions.ink
+
     
 //File dedicati alla gestione delle personagge
     INCLUDE CommonPNGElements\ScheduleFunctions.ink
@@ -44,14 +49,9 @@
     INCLUDE CommonPNGElements\ChoicesManagement\GlyphsVarAndLists.ink
     INCLUDE CommonPNGElements\ChoicesManagement\ChoicesManager.ink
     INCLUDE CommonPNGElements\ChoicesManagement\Glyph&SigilsFunctions.ink
+
+
     
-    
-
-    INCLUDE HorizontalStory\Storylets.ink
-    INCLUDE HorizontalStory\VarAndFunctions.ink
-
-
-
                     /* ---------------------------------
                     
                                 CONTENUTI
@@ -118,7 +118,10 @@
     INCLUDE Characters\FifthChar\FifthCharStoryletsManagement.ink
     INCLUDE Characters\FifthChar\FifthCharRewriting.ink
 
-    
+
+//Storia orizzontale
+    INCLUDE HorizontalStory\Storylets.ink
+    INCLUDE HorizontalStory\VarAndFunctions.ink
 
 //Gestione del Grimorio
     INCLUDE Grimoire\FirstLevel.ink

@@ -317,18 +317,14 @@
     	   {debug: <i>L'elenco di oggetti nella lista endedStories è {story_endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
     		~ player_orderGrowingTreeUpdater = player_firstStepClosed
     
-    		
     	- LIST_COUNT(story_endedStories) == 2:
     		~ player_orderGrowingTreeUpdater = player_secondStepClosed
     	
-    		
     	- LIST_COUNT(story_endedStories) == 3:
     		~ player_orderGrowingTreeUpdater = player_thirdStepClosed
 
-
         - LIST_COUNT(story_endedStories) == 4:
     		~ player_orderGrowingTreeUpdater = player_fourthStepClosed
-
 
         - LIST_COUNT(story_endedStories) == 5:
     		~ player_orderGrowingTreeUpdater = player_fifthStepClosed        

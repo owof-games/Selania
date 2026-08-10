@@ -1,46 +1,174 @@
-    VAR debug_seedRandom = false
+=== function debug_secondHalfGame()
+//Questa funzione ci posiziona come se fossimo nella seconda parte del gioco, con Chitarra e Riccio riscritti e Boccale che se ne è andato
+    //Grimorio abilitato
+    ~ grimoire_isEnabled = true
 
-//Per abilitare o meno i debug
-    VAR debug = false
-    VAR debug_cultivable = false
-    VAR debug_changeName = false
-    VAR debug_kitchen = false
-    VAR debug_nest = false
-    VAR debug_frog = false
-    VAR debug_horizontalS = false
-    VAR debug_achievements = false
-    VAR debug_PNGLocation = false
-    //Testing lo utilizzo per funzioni ed elementi speciali che mi servono in ink, come l'accesso permanente al grimorio.
-    VAR debug_testing = false
+    //Settaggio dati PG
+    ~ player_name = get_random_name()
+    ~ kitchen_PGRecipeNoun = "Pane"
+    ~ kitchen_PGRecipeAdjective = "disperazione"
+    ~ kitchen_PGRecipeComplement = "codice caotico"
+    ~ kitchen_PGRecipe = "Pane della disperazione con codice caotico"
+    ~ frog_currentMission = LIST_RANDOM(frog_availableCommonMissions)
+    ~ grimoire_franco += grimFrancoFirst
 
-    //per testare i luoghi non subito aperti con calma
-    VAR debug_testLibrary = false
-    VAR debug_testKitchen = false
-    VAR debug_testNest = false
-    VAR debug_testFrog = false
-    VAR debug_testDump = false
-    VAR debug_testGreenhouse = false
-    VAR debug_dialogues = false
+    ~ player_pronoun = LIST_RANDOM(possibile_player_pronouns)
+    ~ player_name = get_random_name()
 
-//Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico
-    VAR debug_stochastic = false
+    //E assegniamo anche il nome della strega
+    ~ witch_actualName = LIST_RANDOM(witch_possibleNames)
 
 
-{debug_seedRandom:
-    ~ SEED_RANDOM(246)
-}
+    //Stato Chitarra
+    ~ firstChar_aether = RANDOM(-9,9)
+    ~ firstChar_earth = RANDOM(-9,9)
+    ~ firstChar_air = RANDOM(-9,9)
+    ~ firstChar_water = RANDOM(-9,9)
+    ~ firstChar_fire= RANDOM(-9,9)
+    ~ firstChar_last_aether = RANDOM(-9,9)
+    ~ firstChar_last_earth = RANDOM(-9,9)
+    ~ firstChar_last_air = RANDOM(-9,9)
+    ~ firstChar_last_water = RANDOM(-9,9)
+    ~ firstChar_last_fire= RANDOM(-9,9)
+
+        ~  player_aether_first_char = firstChar_aether
+        ~  player_earth_first_char = firstChar_earth
+        ~  player_air_first_char = firstChar_air
+        ~  player_water_first_char = firstChar_water
+        ~  player_fire_first_char = firstChar_fire
+        ~ updateFirstCharacterRelation()
+
+        ~ firstChar_storyStatus = story_storyPostal
+        ~ newName(FirstCharacter)
+        ~ state_ending_stories(FirstCharacter)
+        ~ tree_advance_management(FirstCharacter)
+
+        ~ grimoire_firstChar = (grimFirstCharOne, grimFirstCharPresentation, grimFirstCharTwo, grimFirstCharThree, grimFirstCharFour, grimFirstCharFive, grimFirstCharSix, grimFirstCharSeven, grimFirstCharEight, grimFirstCharNine, grimFirstCharTen, grimFirstCharEleven, grimFirstCharTwelve, grimFirstOpenKitchen, grimFirstCharNovel, grimFirstCharDog, grimFirstCharKitchenOne, grimFirstCharKitchenTwo, grimFirstCharKitchenThree, grimFirstCharKitchenEnded, grimFirstCharKitchenPositiveReaction, grimFirstCharKitchenNegativeReaction, grimFirstCharKitchenNeutralReaction, grimFirstCharKitchenAlone, grimFirstCharThirdCharDepartureComment, grimFirstCharSecondCharDepartureComment, grimFirstCharProposal, grimFirstCharNewName, grimFirstCharMentorFeedback, grimFirstSecondChar, grimFirstThirdChar, grimFirstCharMentor, grimFirstCharMentorAboutThirdChar, grimFirstCharFranco)
+
+    //Stato Riccio
+    ~ secondChar_aether = RANDOM(-9,9)
+    ~ secondChar_earth = RANDOM(-9,9)
+    ~ secondChar_air = RANDOM(-9,9)
+    ~ secondChar_water = RANDOM(-9,9)
+    ~ secondChar_fire= RANDOM(-9,9)
+    ~ secondChar_last_aether = RANDOM(-9,9)
+    ~ secondChar_last_earth = RANDOM(-9,9)
+    ~ secondChar_last_air = RANDOM(-9,9)
+    ~ secondChar_last_water = RANDOM(-9,9)
+    ~ secondChar_last_fire= RANDOM(-9,9)
+
+        ~  player_aether_second_char = secondChar_aether
+        ~  player_earth_second_char = secondChar_earth
+        ~  player_air_second_char = secondChar_air
+        ~  player_water_second_char = secondChar_water
+        ~  player_fire_second_char = secondChar_fire
+        ~ updateSecondCharacterRelation()
+
+        ~ secondChar_storyStatus = story_storyPostal
+        ~ newName(SecondCharacter)
+        ~ state_ending_stories(SecondCharacter)
+        ~ tree_advance_management(SecondCharacter)
+
+        ~ grimoire_secondChar = (grimSecondCharOne, grimSecondCharPresentation, grimSecondCharTwo, grimSecondCharThreeHim, grimSecondCharThreeHer, grimSecondCharThreeThey, grimSecondCharFour, grimSecondCharFive, grimSecondCharSix, grimSecondCharSeven, grimSecondCharEight, grimSecondCharNine, grimSecondCharTen, grimSecondCharEleven, grimSecondCharTwelve, grimSecondCharCarla, grimSecondOpenLibrary, grimSecondCharNovel, grimSecondCharDog, grimSecondCharKitchenOne, grimSecondCharKitchenTwo, grimSecondCharKitchenThree, grimSecondCharKitchenEnded, grimSecondCharKitchenPositiveReaction, grimSecondCharKitchenNegativeReaction, grimSecondCharKitchenNeutralReaction, grimSecondCharKitchenAlone, grimSecondCharThirdCharDepartureComment, grimSecondCharFirstCharDepartureComment, grimSecondCharProposal, grimSecondCharNewName, grimSecondCharMentorFeedback, grimFirstSecondChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimSecondThirdChar, grimSecondCharFranco)
+
+    //Stato Boccale
+    ~ thirdChar_aether = RANDOM(-9,9)
+    ~ thirdChar_earth = RANDOM(-9,9)
+    ~ thirdChar_air = RANDOM(-9,9)
+    ~ thirdChar_water = RANDOM(-9,9)
+    ~ thirdChar_fire= RANDOM(-9,9)
+    ~ thirdChar_last_aether = RANDOM(-9,9)
+    ~ thirdChar_last_earth = RANDOM(-9,9)
+    ~ thirdChar_last_air = RANDOM(-9,9)
+    ~ thirdChar_last_water = RANDOM(-9,9)
+    ~ thirdChar_last_fire= RANDOM(-9,9)
+
+        ~  player_aether_third_char = thirdChar_aether
+        ~  player_earth_third_char = thirdChar_earth
+        ~  player_air_third_char = thirdChar_air
+        ~  player_water_third_char = thirdChar_water
+        ~  player_fire_third_char = thirdChar_fire
+        ~ updateThirdCharacterRelation()
+
+        ~ firstChar_storyStatus = story_storyRemote
+
+        ~ grimoire_thirdChar = (grimThirdCharOne, grimThirdCharPresentation, grimThirdCharTwo, grimThirdCharThree, grimThirdCharFour, grimThirdCharFive, grimThirdCharSix, grimThirdPreOpenNest, grimThirdOpenNest, grimThirdCharNovel, grimThirdCharDog, grimThirdCharKitchenOne, grimThirdCharKitchenTwo, grimThirdCharKitchenThree, grimThirdCharKitchenEnded, grimThirdCharKitchenPositiveReaction, grimThirdCharKitchenNeutralReaction, grimThirdCharKitchenAlone, grimWitchThirdCharFollowUp, grimThirdCharSecondCharDepartureComment, grimThirdCharFirstCharDepartureComment, grimThirdCharFirstProposal, grimThirdCharFirstRewriting, grimFirstThirdChar, grimSecondThirdChar, grimThirdCharMentor, grimWitchThirdChar)
+
+
+
+    //Stato Mentore
+    ~ mentor_aether = RANDOM(-9,9)
+    ~ mentor_earth = RANDOM(-9,9)
+    ~ mentor_air = RANDOM(-9,9)
+    ~ mentor_water = RANDOM(-9,9)
+    ~ mentor_fire = RANDOM(-9,9)
+
+        ~ grimoire_fifthChar = (grimMentorIntro, grimMentorOne, grimMentorPresentation, grimMentorTwo, grimMentorThree, grimMentorFour, grimMentorFive, grimMentorSix, grimMentorNovel, grimMentorDog, grimMentorLiar, grimMentorViolence, grimMentorOlobinoUno, grimMentorOlobinoDue, grimKitchenMentor, grimMentorNotMandatory, grimMentorNewMail, grimMentorFirstSecretEnding, grimMentorSecondSecretEnding, grimFirstCharMentor, grimFirstCharMentorAboutThirdChar, grimSecondCharMentorOne, grimSecondCharMentorPeace, grimThirdCharMentor, grimMentorFranco, grimMentorWitchOne) 
+
+    //Strega
+    ~ grimoire_witch = (grimWitchIntro, grimWitchFrog, grimWitchBook, grimWitchOpenDump, grimWitchAboutAppendices)
+
+    //Elementi di tutorial etc
+        //Appendici
+        ~ grimoire_appendices += (grimChoicesMentor, grimChoicesWitch, grimGreenhouseMentor, grimFirstOpenKitchen, grimInkMentor, grimRewritingMentor, grimThirdOpenNest, grimSigilsMentor, grimSigilsWitch, tutorialChoicesRelationship, tutorialRereading, tutorialGrimoire, tutorialGreenhouse, tutorialKitchen, tutorialNest, tutorialSigils)
+    
+        //Apriamo tutti i luoghi
+        ~ player_accessiblePlaces += Dump
+        ~ player_accessiblePlaces += Kitchen
+        ~ player_accessiblePlaces += Library
+        ~ player_accessiblePlaces += Nest
+        ~ player_accessiblePlaces += Greenhouse
+
+        ~ move_entity(FromForestToDumpBlocked, Safekeeping)
+        ~ move_entity(FromForestToDump, Forest)
+        ~ move_entity(mapDump, TrainStop)
+        ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
+        ~ move_entity(FromPondToKitchen, Pond)
+        ~ move_entity(kitchenOpened, Bedroom)
+        ~ move_entity(mapKitchen, TrainStop)
+        ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
+        ~ move_entity(FromForestToLibrary, Forest)
+        ~ move_entity(libraryOpened, Bedroom)
+        ~ move_entity(mapLibrary, TrainStop)
+        ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+        ~ move_entity(FromLibraryToNest, Library)
+        ~ move_entity(mapNest, TrainStop)
+        ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+        ~ move_entity(FromPondToGreenhouse, Pond)
+        ~ move_entity(greenhouseOpened, Bedroom)
+        ~ move_entity(mapGreenhouse, TrainStop)
+
+        ~ move_entity(Franco, Pond)
+
+        //Elementi cucina
+        ~ move_entity(CookingWithFirstCharOBJ, Kitchen)
+        ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
+        ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+        ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+        ~ move_entity(CookingWithFranco, Kitchen)
+        ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
+        ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+        ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
+        ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+        ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+        ~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
+        ~ move_entity(EatingWithThirdCharOBJ, Kitchen)
+        ~ move_entity(CookingWithThirdCharOBJ, Kitchen)
+        ~ move_entity(ThirdCharCookingAloneOBJ, Kitchen)
+
+        ~  kitchen_allChefs += (FirstCharacter, SecondCharacter, ThirdCharacter)
+
 
 
 === function debug_Franco()
     ~ debug_testFrog = true
     ~ move_entity(Franco, Pond)
 
-
 === function debugRewriting()
     //Caricamento grimorio
     ~ grimoire_isEnabled = true
 
-    //Settaggio dati PNG
+    //Settaggio dati PG
     ~ player_name = get_random_name()
     ~ kitchen_PGRecipeNoun = "Pane"
     ~ kitchen_PGRecipeAdjective = "disperazione"
@@ -336,7 +464,6 @@
 
 
 ->->
-
 
 
 === function debug_allGraphicsElementsEndingMode()

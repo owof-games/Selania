@@ -120,7 +120,7 @@ VAR relationshipIndicatorNeutralValue = 0
         //Disattivo la variabile glyph_itIsRewriting.
             ~ glyph_itIsRewriting = false
     
-        //E  genero il nome
+        //E genero il nome
             ~ newName(PNG)
 
 
