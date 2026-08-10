@@ -209,12 +209,6 @@
     //Questo è per la gestione delle domande
     ~ fifthChar_justTalked = true
 
-    //Aggiorniamo il contatore degli spoons nel caso in cui fosse in conversazione con qualcuno.
-        {
-        - are_two_entities_together(FifthCharacter, FourthCharacter):
-            ~ fifth_char_spoons_decrement(fifthLightEvent)
-        }
-
     //Aggiornamento storylets
     -> grimoire_storylets_updater ->
 
@@ -240,9 +234,13 @@ LIST list_fifth_char_event_values = fifthLightEvent, fifthMediumEvent, fifthStro
 VAR fifth_char_meltdown_countdown = 8
 VAR fifth_char_meltdown_activated = false
 
-TODO: da integrare in giro dopo il testing per i valori Medium.
-TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la prima volta, o meglio ancora, se ci sono state poche interazioni mentre era uovo), aumenta il valore di fifth_char_restart_value di uno.
-=== function fifth_char_spoons_decrement(eventValue)
+
+=== fifth_char_spoons_decrement(eventValue)
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 //Chiamo questa funzione nei momenti critici di Mostro/Mentore per ridurre lo stato degli spoons e, nel caso, decrementarli
 // Da integrare: SPOONS. Se ci sono litigi, se ci sono rumori improvvisi (es: il treno) o se partecipa a molti dialoghi condivisi, un indicatore interno che traccia il “sensory overload” di Mentore (che chiameremo spoons) si riduce, e quando si azzera finisce che Mentore si ritira in serra, dove fa dei commenti generici tipo Certe cose per me sono davvero difficili a volte, o Vorrei essere più forte ma…. Vediamo anche dei pensieri fortemente negativi e dei commenti che ci fanno capire che questa cosa è stata un problema anche a casa etc. Così rendiamo anche il passaggio in serra poi col meltdown più ovvio.
 
@@ -273,7 +271,13 @@ TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la pr
         //La prima volta che le condizioni sono raggiunte si attiva il "countDown", e Mentore ci fa un commento sulla partenza di Boccale. Da quel momento ogni volta il valore di countdown diminuisce, fino a quando non arriviamo al breakdown
         - fifthStrongEvent && thirdChar_storyStatus == story_storyRemote && fifth_char_meltdown_activated == false && grimoire_fifthChar hasnt grimMentorMeltdown: 
             ~ fifth_char_meltdown_activated = true
-            TODO: aggiungere frase mentore
+            {charTag(FifthCharacter, "down")}:              La partenza di {charNameThree}.
+                                                            In quel modo.
+                                                            Mi sento tradita.
+                                                            Sono una vecchia sciocca.
+                ~ change_entity_place(Mentor) 
+                    -> main                                                                               
+                                                            
     }
 
 
@@ -293,12 +297,16 @@ TODO: in un paio di condizioni (es:quando esce dalla serra come Mostro per la pr
                 //Se è Mostro    
                 - fifthChar_storyStatus != story_storyNotStarted:
                     ~ move_entity(FifthCharacter, Greenhouse)
+                    -> main
 
                 //Se è Mentore
                 - else:
                     ~ move_entity(Mentor, Greenhouse)
+                    -> main
                 }
     }
+
+    ->->
 
 === function fifth_char_egg_evolution()
 {

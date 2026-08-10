@@ -89,7 +89,9 @@
 
             + \ {charTag(PG, "neutral")}:         Qual è la verità? Come sta/starà la comunità per via di questo evento/scelta?
                 -> glyph_choice_manager(false, aetherC)->
-            - 
+            -
+        {charTag(FifthCharacter, "quiet")}:             Comunque mi sento pronta ad uscire da qui.
+            
             -> fifth_char_closing_storylet ->
             -> options_fifth_character
 

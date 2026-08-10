@@ -502,7 +502,6 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
                         ********************************/
 
-
         {
             //First Char
             - first_second_chit_chat && grimoire_firstChar hasnt grimFirstSecondChar:
@@ -514,12 +513,16 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             - first_mentor_chit_chat && grimoire_firstChar hasnt grimFirstCharMentor:
                 ~ grimoire_firstChar += grimFirstCharMentor
                 ~ grimoire_fifthChar += grimFirstCharMentor
+                //Le conversazioni condivise come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->
         }
 
         {
             - first_mentor_about_third_char && grimoire_firstChar hasnt grimFirstCharMentorAboutThirdChar:
                 ~ grimoire_firstChar += grimFirstCharMentorAboutThirdChar
                 ~ grimoire_fifthChar += grimFirstCharMentorAboutThirdChar
+                //Le conversazioni condivise come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->
         }
 
         {
@@ -536,12 +539,20 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_thirdChar += grimFirstThirdChar 
         }
 
+        TODO: controllare se ha senso o meno qui perché mi sa che sono due storylets diversi a generare questo contenuto
         {
             //Second Char
             - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorOne:
                 ~ grimoire_secondChar += grimSecondCharMentorOne
                 ~ grimoire_fifthChar += grimSecondCharMentorOne
+                ~ grimoire_fifthChar += grimSecondCharMentorPeace
+                //A fine discorso, Riccio se ne va
+                ~ change_entity_place(SecondCharacter)
+                //Le conversazioni complicate come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->  
         }
+
+       
 
         {
             - frog_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharFranco:
@@ -562,7 +573,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
             //Third Char
             - third_mentor_chit_chat && grimoire_thirdChar hasnt grimThirdCharMentor:
                 ~ grimoire_thirdChar += grimThirdCharMentor
-                ~ grimoire_fifthChar += grimThirdCharMentor 
+                ~ grimoire_fifthChar += grimThirdCharMentor
+                //Le conversazioni condivise come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->
         }
 
         {   
@@ -604,6 +617,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                         ~ player_somethingStrange -= strangeVase
 
                 }
+            //Le conversazioni condivise come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->    
         }
 
         {
@@ -613,6 +628,8 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ player_somethingStrangeTalkable += strangeMentor
                 //Mettiamo in pausa gli storylets con Franco
                 ~ frog_commonStoryletsPause = frog_commonStoryletsPauseMaxValue
+            //Le conversazioni condivise come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->    
         }
 
 
@@ -646,37 +663,49 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - monster_and_molotov_one && grimoire_fifthChar hasnt grimMonsterMolotovOne:
                 ~ grimoire_fourthChar += grimMonsterMolotovOne
-                ~ grimoire_fifthChar += grimMonsterMolotovOne   
+                ~ grimoire_fifthChar += grimMonsterMolotovOne
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->    
         }
 
         {
             - monster_and_molotov_two && grimoire_fifthChar hasnt grimMonsterMolotovTwo:
                 ~ grimoire_fourthChar += grimMonsterMolotovTwo
-                ~ grimoire_fifthChar += grimMonsterMolotovTwo   
+                ~ grimoire_fifthChar += grimMonsterMolotovTwo
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->     
         }
 
         {
             - monster_and_molotov_three && grimoire_fifthChar hasnt grimMonsterMolotovThree:
                 ~ grimoire_fourthChar += grimMonsterMolotovThree
-                ~ grimoire_fifthChar += grimMonsterMolotovThree   
+                ~ grimoire_fifthChar += grimMonsterMolotovThree
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->     
         }
 
         {
             - monster_and_molotov_four && grimoire_fifthChar hasnt grimMonsterMolotovFour:
                 ~ grimoire_fourthChar += grimMonsterMolotovFour
-                ~ grimoire_fifthChar += grimMonsterMolotovFour   
+                ~ grimoire_fifthChar += grimMonsterMolotovFour
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->     
         }
 
         {
             - monster_and_molotov_five && grimoire_fifthChar hasnt grimMonsterMolotovFive:
                 ~ grimoire_fourthChar += grimMonsterMolotovFive
-                ~ grimoire_fifthChar += grimMonsterMolotovFive   
+                ~ grimoire_fifthChar += grimMonsterMolotovFive
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->     
         }
 
         {
             - monster_and_molotov_six && grimoire_fifthChar hasnt grimMonsterMolotovSix:
                 ~ grimoire_fourthChar += grimMonsterMolotovSix
-                ~ grimoire_fifthChar += grimMonsterMolotovSix   
+                ~ grimoire_fifthChar += grimMonsterMolotovSix
+            //Le conversazioni condivise come Mostro la affaticano un poco
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->     
         }
 
                         /******************************
@@ -989,10 +1018,6 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_secondChar += grimSecondCharDog
         }
 
-        {
-            - about_violence_and_peace && grimoire_secondChar hasnt grimSecondCharMentorPeace:
-                    ~ grimoire_secondChar += grimSecondCharMentorPeace
-        }
 
         {
             - carla_and_second_char_chit_chat && grimoire_secondChar hasnt grimSecondCharCarla:
@@ -1231,12 +1256,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimMentorSix
         }
 
-
-        {        
+   
             //StoryletsSpeciali
-            - the_witch_and_the_mentor && grimoire_fifthChar hasnt grimMentorWitchOne:
-                ~ grimoire_fifthChar += grimMentorWitchOne
-        }
+      
 
         {
             - about_not_mandatory_work && grimoire_fifthChar hasnt grimMentorNotMandatory:
@@ -1246,7 +1268,9 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
 
         {
             - that_little_liar_storylet && grimoire_fifthChar hasnt grimMentorLiar:
-                ~ grimoire_fifthChar += grimMentorLiar    
+                ~ grimoire_fifthChar += grimMentorLiar
+                //Le conversazioni speciali come Mentore la affaticano leggermente
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->
         }
 
         {
@@ -1254,23 +1278,21 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 ~ grimoire_fifthChar += grimMentorViolence
                 //Questo storylet genera uno spostamento di Mentore
                 ~ change_entity_place(Mentor)
+                //Le conversazioni complicate come Mentore la affaticano mediamente
+                -> fifth_char_spoons_decrement(fifthMediumEvent) ->
         }
 
-        {
-            - about_violence_and_peace && grimoire_fifthChar hasnt grimSecondCharMentorPeace:
-                    ~ grimoire_fifthChar += grimSecondCharMentorPeace
-                    //A fine discorso, Riccio se ne va
-                    ~ change_entity_place(SecondCharacter)    
-        }
-
+    
         {
             - a_story_of_transformation && grimoire_fifthChar hasnt grimMentorNovel:
-                ~ grimoire_fifthChar += grimMentorNovel 
+                ~ grimoire_fifthChar += grimMentorNovel
+                //Le conversazioni speciali come Mentore la affaticano leggermente
+                -> fifth_char_spoons_decrement(fifthLightEvent) ->
         }
 
         {
             - dog_mentor && grimoire_fifthChar hasnt grimMentorDog:
-                ~ grimoire_fifthChar += grimMentorDog   
+                ~ grimoire_fifthChar += grimMentorDog
         }
 
         {
@@ -1311,6 +1333,10 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
         {
             - fifth_char_main_storylets.two && grimoire_fifthChar hasnt grimFifthCharTwo:
                 ~ grimoire_fifthChar += grimFifthCharTwo
+                //Aumentiamo di uno il valore massimo di fifth_char_restart perché ha recuperato energie e fiducia verso di noi.
+                ~ fifth_char_restart_value ++
+                //E poi la spostiamo nel pond
+                ~ move_entity(FifthCharacter, Pond)
         }
 
         {
