@@ -1313,7 +1313,7 @@ LIST rewritingPoints = oneR, twoR, threeR, fourR, endR
                 //Resettiamo il valore dei cucchiai
                 ~ fifth_char_spoons_value = fifth_char_restart_value
                 //Spostiamo Mentor nel safekeeping, e l'uovo nella serra
-                ~ move_entity(FifthCharacterEgg, Greenhouse)
+                ~ move_entity(FifthCharacterEggZero, Greenhouse)
                 ~ move_entity(Mentor, Safekeeping)
         }
 
