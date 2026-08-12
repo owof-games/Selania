@@ -329,8 +329,18 @@ MonoBehaviour:
     <grimoirePortrait>k__BackingField: {fileID: 21300000, guid: 992938462a8ff004e882e4e4d7afec11, type: 3}
     <AffectedBySigils>k__BackingField: 1
     <characterMoods>k__BackingField:
-    - <name>k__BackingField: Mostro_neutral
-      <sprite>k__BackingField: {fileID: 21300000, guid: 6e9ab649598c61249a56275663efe151, type: 3}
+    - <name>k__BackingField: Mostro_uovo
+      <sprite>k__BackingField: {fileID: 21300000, guid: 082a3ba88f645524f9aea274d07ef3f7, type: 3}
+    - <name>k__BackingField: Mostro_angry
+      <sprite>k__BackingField: {fileID: 21300000, guid: 46356716c4d9b0f45b56dd00de37e8a8, type: 3}
+    - <name>k__BackingField: Mostro_down
+      <sprite>k__BackingField: {fileID: 21300000, guid: c1b3f6a37bc936f45a40840224ad0678, type: 3}
+    - <name>k__BackingField: Mostro_quiet
+      <sprite>k__BackingField: {fileID: 21300000, guid: bb0301ed60f4d534286651247c62b4d2, type: 3}
+    - <name>k__BackingField: Mostro_stupid
+      <sprite>k__BackingField: {fileID: 21300000, guid: 94d9ed99c074747459b319450ab15e4f, type: 3}
+    - <name>k__BackingField: Mostro_scared
+      <sprite>k__BackingField: {fileID: 21300000, guid: efb9b68b401504844a814e7a27f13d17, type: 3}
     - <name>k__BackingField: writer
       <sprite>k__BackingField: {fileID: 21300000, guid: ee961e7afa221454ba8fd53b2ea5b5f1, type: 3}
   - <listName>k__BackingField: PG
