@@ -163,3 +163,59 @@
             -> DarkLibraryModeOff ->
                      
             -> main
+
+
+=== nico
+
+<b>San Benefizio</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any). Instagram: @romiabatangelo Trigger warning: violenza psicologica.
+
+        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - library_unreadStories has Romi:
+                    ~ library_unreadStories -= Romi
+                    ~ library_readStories += Romi
+                     -> refresh_book_lists ->
+            }  
+        + {library_unreadStories has Romi} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
+            -> tempTW -> book_test_intro
+        + {library_unreadStories has Romi} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
+            ~ library_unreadStories -= Romi
+                -> refresh_book_lists -> book_test_intro
+        -
+    
+    
+
+    “Entriamo in quello che è il vero e proprio cuore del monastero: il chiostro superiore. Nel XV secolo, i monaci commissionano un ciclo di affreschi sulla vita del fondatore della congregazione: San Benefizio Coperni. Nato in una delle famiglie più ricche e potenti del granducato, viene cresciuto nell’agiatezza, costantemente seguito da tutori. Benché fosse stato avviato allo studio del trivio e del quadrivio, il ragazzo non mostrava alcuna propensione verso le scienze, le ar􀆟, la le􀆩eratura, la filosofia… Verso alcunché… Benefizio passò la sua infanzia e la sua adolescenza ad a􀆩endere un’illuminazione, e nonostante l’impegno e la dedizione, dimostrò più volte che… beh… non era roba per lui. 
+    
+    Il padre, Alberico, si convinse comunque a iscrivere Benefizio alla Grande Scuola Urbana. E qui, nel primo affresco del nostro ciclo, incontriamo proprio il santo, poco più che ragazze􀆩o, che lascia la nobile casa paterna per dirigersi nell’Urbe. In questo dipinto murale, la cui didascalia recita “Come lo dimonio fa perdere la Bussola a Benefizio”, possiamo notare come i primi tempi nella scuola risul􀆟no davvero molto travaglia􀆟: il ragazzo non riusciva a integrarsi, comba􀆩uto tra la dissolutezza della grande ci􀆩à e la crescente aspirazione verso l’Al􀆟ssimo. Finché un giorno, in una locanda ges􀆟ta da male femmine, il santo conosce i due giovani che di lì a poco diverranno i suoi più cari amici: Ricco􀆩o Ricco􀆫 e Lombardo Nane􀆫. I prossimi affreschi ci raccontano la via della depravazione che i tre imboccano. Tenta􀆟 costantemente dai piaceri della carne, con una disponibilità pressoché illimitata garan􀆟ta dai fondi della famiglia Coperni, Benefizio, Ricco􀆩o e Lombardo trasformarono quello che doveva essere un percorso di crescita in una lenta discesa verso il peccato. Qui vediamo l’affresco in􀆟tolato “Come Benefizio decide di ges􀆟re il racket delle male femmine”; in questo affresco possiamo ammirare l’episodio di “Come i tre vendono farina tagliata con sabbia ai mugnai della ci􀆩à”; ancora: “Come Ricco􀆩o e Lombardo fanno debi􀆟 con i giocatori d’azzardo”; “Come Lombardo e Benefizio tentano di avvelenare un prete che non pagava il pizzo”; e infine: “Benefizio e lo sfortunato pastorello”. 
+    
+    Ne “Come dei bandi􀆟, guida􀆟 dal demonio e manda􀆟 dal 􀆟zio a cui Ricco􀆩o e Lombardo dovevano dei soldi, fanno violenza molto bru􀆩a ai tre giovani” vediamo Benefizio o􀆩enere la rivelazione. Mentre i bru􀆟 lo percuotono, egli vede una lunga scala, composta da mille e più pioli, che ascende verso l’empireo; lungo questa scala, monaci di bianco ves􀆟􀆟 cercano di raggiungere il Paradiso. Alcuni di loro però scivolano e cadono rovinosamente al suolo, rimanendo immobili nelle polle di sangue. Altri però, assis􀆟􀆟 da figure angeliche, riescono a oltrepassare la barriera delle nubi e scompaiono avvol􀆟 dalla luce. Mentre perde i sensi, Benefizio capisce che quello sarebbe stato il suo des􀆟no. Benefizio, Ricco􀆩o e Lombardo prendono così la decisione di abbandonare gli studi e, ispira􀆟 dalle vite dei Grandi Padri Eremi􀆟, ri􀆟rarsi il più possibile lontano dal mondo… e dagli strozzini. Ma come fare? Come trovare un sito in cui insediarsi per iniziare il proprio percorso anacore􀆟co? La soluzione la vediamo in questo affresco, dove i giovani si recano da Alberico. L’uomo accoglie con dolore la decisione del figlio di farsi monaco eremita… Conviene a questo punto soffermarsi sulla maestria del pi􀆩ore, in grado di tra􀆩eggiare la pena paterna in poche linee, racchiudendola tu􀆩a nello sguardo sofferente di Alberico.
+    
+    Vero è che per alcuni cri􀆟ci negli occhi del genitore sembra annidarsi più… diciamo… del sollievo. Ma a noi piace a􀆩enerci alla versione canonica, che si concre􀆟zza con la scelta da parte di Alberico di donare ai tre un appezzamento di terreno improdu􀆫vo e arido, situato in cima a una collina nel bel mezzo del deserto di Cappona, a poca distanza dal villaggio di Garba􀆟: il nome di quel luogo era ed è Colle Vigneto di Sopra. E giungiamo alla trasfigurazione di Benefizio, il miracolo a cui dobbiamo la fortuna della congregazione vignetana. Durante il primo inverno sul Colle, egli lamenta i sintomi di una febbre molto violenta, a sua de􀆩a causata dal demonio. Il santo ordina ai confratelli di aiutarlo portandogli carne ben co􀆩a e vino speziato, sopra􀆩u􀆩o vino speziato. Durante la no􀆩e, il giovane abate si sveglia di soprassalto e dice agli altri di aver sognato una gro􀆩a circondata da arbus􀆟 di pungitopo e sambuco: l’ingresso è sigillato da un grande masso, ma dall’interno filtra una luce pura e intensa. Benefizio inizia così la ricerca di tale misterioso speco, convinto che quello avuto sia stato un sogno rivelatore. Arrancando nella neve, seguito dai suoi compagni, Benefizio avanza nella tormenta. Stremato, il santo ode un rumore, un rantolo sordo che echeggia poco distante. Seguendo quel suono, la comi􀆟va raggiunge l’accesso a un antro buio. Senza indugio, il nostro entra nell’anfra􀆩o e chiede agli altri monaci di sigillare l’ingresso con una grande roccia, proprio come nel suo sogno. I compagni obbediscono, manifestando la loro preoccupazione: Benefizio allora li redarguisce “Mi è stato dato un segno inequivocabile che in questa gro􀆩a risiede la Luce. Serrate questo foro nella montagna e lasciatelo chiuso finché non riceverete un segno altre􀆩anto chiaro”. I monaci, colpi􀆟 dalla risolutezza del santo, fanno rotolare il grande masso nell’ingresso della gro􀆩a. Inizia così la loro veglia di fronte a quello che verrà chiamato, nei secoli a venire, l’Orifizio di San Benefizio, o il San Buco, da cui si dice derivi appunto il nome della pianta. Discesa la sera, i monaci si preparano a trascorrere la no􀆩e al freddo e al gelo, quando tu􀆩o d’un tra􀆩o dall’interno dell’Orifizio giungono urla belluine alternate a ruggi􀆟 spaventosi. Poi, all’improvviso, dalla gro􀆩a, solo silenzio. I monaci spostano dunque la grossa pietra: a terra, brandelli di stoffa bianca, di carne e pelle, ovunque schizzi di sangue e in mezzo a questo spe􀆩acolo si erge maestoso un orso. I vignetani, a􀆩erri􀆟 e al contempo estasia􀆟, si rendono conto di aver assis􀆟to all’incredibile trasformazione di Benefizio in una bes􀆟a: il corpo originario si era aperto, dischiuso, facendo emergere la possente creatura dal suo interno. Mentre i monaci rifle􀆩ono sul senso di tu􀆩o questo, l’orso aggredisce con i suoi ar􀆟gli due di loro, uccidendoli sul colpo. 
+    
+    La tradizione vuole che ques􀆟 due fossero i peccatori della comunità. Anche Ricco􀆩o perde una gamba, tranciata di ne􀆩o dall’animale, e si ri􀆟ene che questo gesto significasse che il giovane aveva perso la re􀆩a via e che dovesse tornarci… anche zoppicando in caso… Dopo ques􀆟 cruen􀆟 accadimen􀆟, l’orso si volta e torna nel San Buco, mentre i monaci rimas􀆟 in piedi richiudono les􀆟 l’ingresso con il masso: un semplice fugace sguardo dell’animale è sufficiente per far capire loro le intenzioni di Benefizio, ovvero proseguire la sua santa mutazione in solitaria, lontano dal mondo. I confratelli decidono così di restare lì, a vegliare quel luogo sacro, cercando di capire cosa fare, perché senza il fondatore sarebbe mancata la guida spirituale, il sostegno alla fede nei momen􀆟 di sconforto, l’infinito amore verso tu􀆩a la comunità. E, aggiungo, sarebbe venuto a mancare anche il supporto economico della famiglia Coperni, con il rischio dell’annullamento della concessione del terreno alla congregazione. 
+    
+    Con il passare dei giorni però, nonostante il freddo, una piccola folla in adorazione si raduna proprio di fronte all’Orifizio: il racconto della sacra metamorfosi aveva raggiunto anche le campagne circostan􀆟, a􀆫rando l’a􀆩enzione di contadini e popolani che in poco tempo si riversano sul Colle per ammirare il miracolo, portandosi appresso soldi e regalie. I monaci ricevono no􀆟zie anche da Alberico il quale, avendo perso il figlio, pare aver perso anche la fede e reclama a gran voce i suoi terreni. Sembra davvero una situazione difficile da ges􀆟re, con i fedeli che esigono di vedere il prodigio da una parte e le pressioni del vecchio Coperni dall’altra. Ma ancora una volta è proprio lo stesso Benefizio a sciogliere il nodo formatosi nelle gole dei vignetani. 
+    
+    Un ma􀆫no, da dietro il colle, ricompare proprio lui, il santo! Nudo, decisamente più basso, con occhi cerulei anziché castani, con capelli rossi anziché mori, con una lunga barba, affamato, con un naso più adunco, con lineamen􀆟 germanici, con voce diversa, incapace di parlare bene la nostra lingua e probabilmente più giovane di almeno una decina di anni. Ma è indubbiamente Benefizio! Inizialmente è disorientato, pare non capire cosa sta succedendo, e nella sua infinita modes􀆟a con􀆟nua a ripetere “Io no Benefizio, io no Benefizio”, ma poi i confratelli lo lavano, lo vestono e lo mostrano al popolo, che si genufle􀆩e. Nell’ul􀆟mo affresco, vediamo la congregazione portare Benefizio al cospe􀆩o di Alberico il quale, dopo la sorpresa e la perplessità iniziale, apre di nuovo il suo cuore alla fede, perme􀆩endo ai monaci di restare a Colle Vigneto. Alcune fon􀆟, mai confermate, parlano di un ravvedimento del Coperni padre dopo aver saputo la quan􀆟tà di donazioni, regalie e contribu􀆟 che l’Orifizio di San Benefizio a􀆫rava ogni giorno sulle sue proprietà e su cui poteva chiedere una percentuale… Ma sono solo fon􀆟 apocrife… 
+    
+    Da quel momento la congregazione di Colle Vigneto di Sopra cresce in numero, in grazia… e in ricchezza… tu􀆩o nel nome di San Benefizio Coperni, colui che nell’Orifizio si trasfigurò insegnandoci che chi vive nella luce di Nostro Signore potrà anche morire nel peccato, ma rinascerà a nuova vita, trasformandosi, mutando, ma restando sempre fedele all’Al􀆟ssimo.
+    
+    E pure a se stesso direi…
+
+    //Check per achievement racconti
+    -> achievements_onGame_statusUpdate_RM ->
+    
+        +  \ {charTag(PG, "neutral")}:       <i>Vorrei leggere ancora.
+            
+           -> book_test_intro
+        +  \ {charTag(PG, "neutral")}:       <i>Me ne vado.
+            
+            -> DarkLibraryModeOff ->
+                     
+            -> main
+
+
+
+
