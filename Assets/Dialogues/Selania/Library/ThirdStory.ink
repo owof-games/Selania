@@ -10,9 +10,6 @@
         }  
         
     
-    
-
-
     È iniziato tutto in una giornata mediocre. Il sole era coperto da nuvole scialbe, e nell'aria ancora si sentiva l'olezzo dei campi fertilizzati di fresco. Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così. Di colpo, uno dei sassolini del fondo dell'acquario ha iniziato a saltare.
     
     
@@ -165,24 +162,17 @@
             -> main
 
 
-=== nico
+=== nicola
 
-<b>San Benefizio</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any). Instagram: @romiabatangelo Trigger warning: violenza psicologica.
+<b>San Benefizio</b> di ??? (they/them). 
 
-        +  \ {charTag(PG, "neutral")}:       <i>Inizio la lettura.
-        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - library_unreadStories has Romi:
-                    ~ library_unreadStories -= Romi
-                    ~ library_readStories += Romi
+                - library_unreadStories has Nicola:
+                    ~ library_unreadStories -= Nicola
+                    ~ library_readStories += Nicola
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Romi} \ {charTag(PG, "neutral")}:       <i>Per ora non me la sento di affrontare questo tema.
-            -> tempTW -> book_test_intro
-        + {library_unreadStories has Romi} \ {charTag(PG, "neutral")}:       <i>Non voglio più incontrare questa storia.
-            ~ library_unreadStories -= Romi
-                -> refresh_book_lists -> book_test_intro
-        -
+
     
     
 

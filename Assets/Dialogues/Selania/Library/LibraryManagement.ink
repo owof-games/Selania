@@ -1,5 +1,5 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (B), (BeatriceYBottura), (CeciliaFormicola), (FrancescaToscaRaimondi), (Jae), (Lamia), (LorisCasagrandi), (Kayleig), (ValFaustoLattanzio), (Romi), (Salvo), (Maura), (Beatrice), (LetiziaVaccarella), (Simo)
+LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (B), (BeatriceYBottura), (CeciliaFormicola), (FrancescaToscaRaimondi), (Jae), (Lamia), (LorisCasagrandi), (Kayleig), (ValFaustoLattanzio), (Romi), (Salvo), (Maura), (Beatrice), (LetiziaVaccarella), (Simo), (Nicola)
 
     //Tracking per l'achievement
     VAR library_allAchievementStories = ()   
@@ -25,12 +25,12 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
     VAR library_shortStories = (StenoArtico, B, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Maura, Jae)
     VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi, Simo)
-    VAR library_longStories = (Aza, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
+    VAR library_longStories = (Aza, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella, Nicola)
     
 //Books about...
-    VAR library_aboutTransformation = (Aza, AlexiasDAvino, B, FrancescaToscaRaimondi, Kayleig, LorisCasagrandi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
+    VAR library_aboutTransformation = (Aza, AlexiasDAvino, B, FrancescaToscaRaimondi, Kayleig, LorisCasagrandi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella, Nicola)
     VAR library_aboutQuestions = (AdriAllora, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo, Jae)
-    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo, Jae)
+    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo, Jae, Nicola)
     VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola, Simo)
     VAR library_aboutFire= (Aza, CeciliaFormicola, Kayleig, BeatriceYBottura, Romi, Maura, LetiziaVaccarella)
     VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, LorisCasagrandi)
@@ -381,6 +381,8 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
         -> letizia_vaccarella
     // - QueerginiaWolf:
     //     -> queerginia_wolf
+    - Nicola:
+        -> nicola
 
     - else: {charTag(TheWitch, witch_state())}:   <i>La biblioteca non riesce a trovare un racconto adatto.</i>
         -> book_test_intro
@@ -417,6 +419,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     - {library_readStories has Maura: -> reread_maura| -> reread}
     - {library_readStories has Simo: -> reread_simo| -> reread}
     - {library_readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
+    - {library_readStories has Nicola: -> reread_nicola| -> reread}
     // - {library_readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
 }
 
@@ -614,7 +617,17 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
         +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
-                -> book_test_intro     
+                -> book_test_intro
+
+    = reread_nicola
+    {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
+    
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>San Benefizio</b> di ??? (they/them).</i>
+                -> letizia_vaccarella
+        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
+                -> reread
+        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
+                -> book_test_intro               
     
     // = reread_queerginia_wolf
     // {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
