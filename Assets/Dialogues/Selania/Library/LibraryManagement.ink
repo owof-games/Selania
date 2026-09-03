@@ -622,7 +622,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     = reread_nicola
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>San Benefizio</b> di ??? (they/them).</i>
+        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>San Benefizio</b> di garak_the_tailor (they/them).</i>
                 -> letizia_vaccarella
         +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
                 -> reread
