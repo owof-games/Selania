@@ -164,7 +164,7 @@
 
 === nicola
 
-<b>San Benefizio</b> di ??? (they/them). 
+<b>San Benefizio</b> di garak_the_tailor (they/them). 
 
             {
                 - library_unreadStories has Nicola:
