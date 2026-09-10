@@ -1,5 +1,5 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (B), (BeatriceYBottura), (CeciliaFormicola), (FrancescaToscaRaimondi), (Jae), (Lamia), (LorisCasagrandi), (Kayleig), (ValFaustoLattanzio), (Romi), (Salvo), (Maura), (Beatrice), (LetiziaVaccarella), (Simo), (Nicola)
+LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (B), (BeatriceYBottura), (CeciliaFormicola), (FrancescaToscaRaimondi), (Jae), (Lamia), (LorisCasagrandi), (Kayleig), (ValFaustoLattanzio), (Romi), (Salvo), (Maura), (LetiziaVaccarella), (Simo), (Nicola)
 
     //Tracking per l'achievement
     VAR library_allAchievementStories = ()   
@@ -25,12 +25,12 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     
     VAR library_shortStories = (StenoArtico, B, LorisCasagrandi, Kayleig, ValFaustoLattanzio, Maura, Jae)
     VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi, Simo)
-    VAR library_longStories = (Aza, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella, Nicola)
+    VAR library_longStories = (Aza, AlexiasDAvino,  FrancescaToscaRaimondi, Salvo, LetiziaVaccarella, Nicola)
     
 //Books about...
     VAR library_aboutTransformation = (Aza, AlexiasDAvino, B, FrancescaToscaRaimondi, Kayleig, LorisCasagrandi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella, Nicola)
-    VAR library_aboutQuestions = (AdriAllora, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo, Jae)
-    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo, Jae, Nicola)
+    VAR library_aboutQuestions = (AdriAllora, AlexiasDAvino, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo, Jae)
+    VAR library_aboutUnprepared = (StenoArtico, Lamia, Simo, Jae, Nicola)
     VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola, Simo)
     VAR library_aboutFire= (Aza, CeciliaFormicola, Kayleig, BeatriceYBottura, Romi, Maura, LetiziaVaccarella)
     VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, LorisCasagrandi)
@@ -347,8 +347,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
         -> steno_artico
     - B:
         -> b
-    - Beatrice:
-        -> beatrice
+
     - BeatriceYBottura:
         -> beatrice_y_bottura
 
@@ -402,7 +401,6 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
     - {library_readStories has Aza: -> reread_aza| -> reread}    
     - {library_readStories has StenoArtico: -> reread_steno_artico| -> reread}
     - {library_readStories has B: -> reread_b| -> reread}     
-    - {library_readStories has Beatrice: -> reread_beatrice| -> reread}    
     - {library_readStories has BeatriceYBottura: -> reread_beatrice_y_bottura| -> reread}
     
     - {library_readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}
@@ -473,16 +471,7 @@ LIST library_allStories = (AdriAllora), (AlexiasDAvino), (Aza), (StenoArtico), (
                 -> reread
         +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
                 -> book_test_intro 
-                
-    = reread_beatrice
-    {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
     
-        +  \ {charTag(PG, "neutral")}:       <i>Rileggo <b>La rete non esiste</b> di Beatrice (she/her).</i>
-                -> beatrice
-        +  {LIST_COUNT(library_readStories) > 1}\ {charTag(PG, "neutral")}: <i>Vorrei rileggere qualcosa di diverso.</i>
-                -> reread
-        +  \ {charTag(PG, "neutral")}:       <i>Ho cambiato idea, voglio una storia nuova.</i>
-                -> book_test_intro 
                 
     = reread_beatrice_y_bottura
     {charTag(TheWitch, witch_state())}:   <i>La biblioteca si chiede cosa {player_name} voglia rileggere.</i>
