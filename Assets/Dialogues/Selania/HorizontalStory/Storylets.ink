@@ -82,8 +82,8 @@
 === function docNine_storylet
 //G.M.
     
-                                                O uno strego? Non mi piace l'idea dello stregone. Qualche mese fa l'ho aiutata con gli uccellini della stazione, e da lì mi sono affezionato a loro, a quel posto. Ho anche iniziato anche a sistemare la vecchia pensilina, la mappa, forse sperando che arrivi qualcuno di nuovo, per rompere questa routine. Magari una carina della mia età. O uno. L'ho detto? L'ho detto. Ma non è quella la scoperta. Questa estate S.C. si è concentrata a lungo su questa idea che tutto in questo luogo sia raggruppabile in cinque gruppi. E col pane in bocca ho commentato "Come i cinque elementi intendi?". Ha fatto la faccia di una lasciata sull'altare, ed è corsa via. O.U.J. ha detto che la mia mente fresca è una manna, e mi sono sentito una brava strega. E allora ho iniziato ad applicare quello che ricordo dei miei studi nel rapporto con gli uccellini. Non è stato facile, ma una volta trovata la logica, la relazione con loro si è consolidata. E una mattina mi hanno dato dell'inchiostro. Inchiostro. L'ho portato a W.R.per capire se ha qualcosa di speciale, ed è presa benissimo. G.M.
-                                                PS: K. stamattina mi ha regalato una scopa di saggina. L'ha fatta con le sue mani. Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega". Comunque sia, la adoro.
+                                                O uno strego? Non mi piace l'idea dello stregone. Qualche mese fa l'ho aiutata con gli uccellini della stazione, e da lì mi sono affezionato a loro, a quel posto. Ho anche iniziato anche a sistemare la vecchia pensilina, la mappa, forse sperando che arrivi qualcuno di nuovo, per rompere questa routine. Magari una carina della mia età. Vabbè. Questa estate S.C. si è concentrata a lungo su questa idea che tutto in questo luogo sia raggruppabile in cinque gruppi. E col pane in bocca ho commentato "Come i cinque elementi intendi?". Ha fatto la faccia di una lasciata sull'altare, ed è corsa via. O.U.J. ha detto che la mia mente fresca è una manna, e mi sono sentito una brava strega. E allora ho iniziato ad applicare quello che ricordo dei miei studi nel rapporto con gli uccellini. Non è stato facile, ma una volta trovata la logica, la relazione con loro si è consolidata. E una mattina mi hanno dato dell'inchiostro. Inchiostro. L'ho portato a W.R.per capire se ha qualcosa di speciale, ed è presa benissimo. G.M.
+                                                PS: K. stamattina mi ha regalato una scopa di saggina. L'ha fatta con le sue mani. Devo ancora capire se è una presa in giro, o se è un modo per dire "Benvenuto nella congrega". Mi piace tantissimo.
 
     
     
@@ -146,13 +146,13 @@
 //G.M. 
 
     
-                                                1. O.U.J. mi ha fatto una paternale dicendomi che "la differenza d'età è un coltello in amore, e non sono io dalla parte del manico".
+                                                1. O.U.J. mi ha fatto una paternale dicendomi che "la differenza d'età è un coltello in amore, e non sei tu dalla parte del manico".
                                                 2. Non sto imparando niente di nuovo su glifi o che, e tutte le mie intuizioni sono servite solo a Y. ed S.C..
                                                 3. Mi sento isolato. Solo. Inascoltato.
                                                 4. C'è stato un altro attentato a Milano, a maggio. L'ho scoperto solo ora perché sono settimane che ogni tanto fuggo da qui per andare al paese più vicino. Tanto non se ne accorgono.
                                                 5. Sono stanco di mangiare riso e funghi.
                                                 6. Non sarò mai una strega.
-                                                7. Mi manca mia madre. Temo sarà davvero preoccupata.
+                                                7. Per la prima volta mi manca mia madre. Spero si sia liberata di mio padre.
                                                 8. La roba successa a Y., il modo in cui è cambiata, mi terrorizza. Si vede che è felice, ma boh, no. Non voglio che accada anche a me.
 
                                                 Pro di questa esperienza.
@@ -231,7 +231,7 @@
 
 === function docTwentyFour_storylet
 //S.C.
-    lui non è più qui con me.
+                                                lui non è più qui con me.
 
     
     
@@ -241,6 +241,3 @@
 //OUJ
   
                                                 Starai mangiando? So che sei viva perché l'altro ieri sono passata lungo la riva ed eri a prendere appunti sotto la tua tenda improvvisata. Questo biglietto è qui per dirti che me ne vado, come le altre. Siamo partite assieme in questo viaggio, ce ne siamo andate separate. E non riesco a non dartene la colpa. Io non so cosa ci farai con quello che hai scoperto, e ne ho molta paura: nessun tipo di potere è fatto per stare in una sola mano. Credo tu sia davanti a una scelta: continuare a raccogliere il sapere per il piacere di accumularlo, come se fosse un giochino per sentirti importante, facendo del male agli altri. O capire cos'è davvero questo luogo, perché questo luogo e non altri hanno generato questo potere, e a quel punto forse saprai cosa farne di buono. Ricorda: qui come altrove, tutto è relazione. Spero di vederti di nuovo, spero di ritrovarti come la persona che eri. Ti voglio bene. O.U.J.
-
-    
-       
