@@ -598,10 +598,10 @@
                     Oh.
                     All'inizio ho pensato che questo idiota fosse completamente impazzito.
                     Ma poi ho visto il cane, le tue lettere.
-                    Ma soprattutto: G.M. è ancora lì?
+                    Ma soprattutto: N.M. è tornata lì?
                     Mi hanno parlato di lei nella congrega, ma sono anni che non sanno dove sia finita.
-                    Ed è la mia SUPEREROINA.
-                    La amo davvero la amo la 
+                    E visto che c'era già stata da giovane, insomma.
+                    Lei è la mia SUPEREROINA, ha una casa rifugio per persone trans e  
                     XXXXXXXXXXXXXXXXXXX
                     Ho dovuto strappargli la lettera dalle mani XD
                     Ora sono a casa perché Petra ha passato il resto della sera a chiedermi come sono arrivato lì e come sono tornato e se ricordo dei dettagli e il treno e di che colore era Franco e.
