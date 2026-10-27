@@ -599,7 +599,7 @@
                     All'inizio ho pensato che questo idiota fosse completamente impazzito.
                     Ma poi ho visto il cane, le tue lettere.
                     Ma soprattutto: N.M. è tornata lì?
-                    Mi hanno parlato di lei nella congrega, ma sono anni che non sanno dove sia finita.
+                    Mi hanno parlato di lei nella congrega, ma sono settimane che non risponde alle loro chiamate.
                     E visto che c'era già stata da giovane, insomma.
                     Lei è la mia SUPEREROINA, ha una casa rifugio per persone trans e  
                     XXXXXXXXXXXXXXXXXXX
