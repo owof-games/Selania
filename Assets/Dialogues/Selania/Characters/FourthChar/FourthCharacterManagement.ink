@@ -199,3 +199,12 @@
     -> grimoire_storylets_updater ->
 
 ->->
+
+
+//Funzione che andiamo a chiamare quando la giocatrice si dimostra troppo indecisa
+=== function mi_sono_rotta()
+{shuffle:
+- Mi sono rotta.
+- Prendi una decisione!
+- Vabbè, con calma proprio!
+}

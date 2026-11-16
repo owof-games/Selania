@@ -1,5 +1,62 @@
 === fourth_char_main_storylets
 
+//Modello da cui partire per sistemare la logica dei dialoghi
+// Cose Uno
+
+// - (top)
+// * Scelta uno
+//     Sicuro?
+//     ** Sì
+//     ** No
+//         {
+//         - top > 2:
+//             ~ mi_sono_rotta()
+//         - else:
+//             -> top
+//         }
+// * Scelta due
+//     Sicuro?
+//     ** Sì
+//     ** No
+//     {
+//         - top > 2:
+//             ~ mi_sono_rotta()
+//         - else:
+//             -> top
+//         }
+// * Scelta tre
+//     Sicuro?
+//     ** Sì
+//     ** No
+//     {
+//         - top > 2:
+//             ~ mi_sono_rotta()
+//         - else:
+//             -> top
+//         }
+// * Scelta quattro
+//     Sicuro?
+//     ** Sì
+//     ** No
+//     {
+//         - top > 2:
+//             ~ mi_sono_rotta()
+//         - else:
+//             -> top
+//         }
+// * Scelta cinque
+//     Sicuro?
+//     ** Sì
+//     ** No
+//     {
+//         - top > 2:
+//             ~ mi_sono_rotta()
+//         - else:
+//             -> top
+//         }
+// -
+// Bene!
+
 = one
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
